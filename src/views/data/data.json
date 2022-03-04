@@ -1,14 +1,14 @@
 {
-  "title": "chesnakov-html",
-
+  "title": "slt-html",
+  "phone": "8 800 444-72-37",
   "routes": [
     {
       "href": "/main",
       "title": "Главная"
     },
     {
-      "href": "/about",
-      "title": "О компании"
+      "href": "/catalog",
+      "title": "Каталог"
     }
   ]
 }
