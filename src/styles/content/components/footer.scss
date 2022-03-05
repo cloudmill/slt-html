@@ -1,3 +1,235 @@
 .footer {
+
+  border-top: 1px solid $rgba-borders;
+
+  &__inner {
+    padding: 60px 0;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 49px 0;
+    }
+  }
+
+  &__top {
+    padding-bottom: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-bottom: 32px;
+    }
+    border-bottom: 1px solid $rgba-borders;
+  }
+
+  &__row {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
   
+  &__col {
+    flex-shrink: 0;
+    width: calc(#{$col-part-d} * 3);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: auto;
+    }
+
+    &:nth-child(1) {
+      width: calc(#{$col-part-d} * 5);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+      }
+    }
+
+    &:nth-child(4) {
+      width: calc(#{$col-width-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+      }
+    }
+
+    &:not(:first-child) {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 32px;
+      }
+    }
+  }
+
+  &__label {
+    margin-bottom: 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 12px;
+    }
+
+    color: var(--color-gray);
+    @include fsl(12px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(10px);
+    }
+
+    &--sm {
+      margin-bottom: 8px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-bottom: 2px;
+      }
+    }
+  }
+
+  &__products {}
+  &__products-item {
+    display: flex;
+    &:not(:first-child) {
+      margin-top: 16px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 8px;
+      }
+    }
+  }
+  &__products-link {
+    font-weight: 500;
+    @include fsl(24px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px);
+    }
+  }
+
+  &__section {
+
+    &:not(:first-child) {
+      margin-top: 80px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 32px;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    &:not(:first-child) {
+      margin-top: 12px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &__link {
+    max-width: 357px;
+    @media (max-width: ($breakpoint - 1px)) {
+      max-width: none;
+      @include fsl(12px);
+    }
+    @include fsl(14px, 130%);
+  }
+
+  &__bot {
+    padding-top: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-top: 32px;
+    }
+  }
+  &__bot-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      height: auto;
+      flex-direction: row;
+    }
+  }
+
+  &__phone {
+    font-weight: 500;
+    @include fsl(36px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(18px);
+    }
+  }
+
+  &__socials {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      width: calc(#{$col-part-m} * 2 - #{$col-gap});
+    }
+  }
+  &__socials-item {
+    --size: 48px;
+    @media (max-width: ($breakpoint - 1px)) {
+      --size: 36px;
+    }
+
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-borders);
+    border-radius: 50%;
+
+    &:not(:first-child) {
+      margin-left: 4px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  &__contacts {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__contacts-item {
+    @media (max-width: ($breakpoint - 1px)) {
+      width: calc(#{$col-part-m} * 2 - #{$col-gap});
+    }
+    &:not(:first-child) {
+      margin-top: 40px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__mail {
+    font-weight: 500;
+    @include fsl(24px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px);
+    }
+  }
+
+  &__policy {
+    @include fsl(14px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
+  }
+
+  &__corps {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+      width: calc(#{$col-part-m} * 2 - #{$col-gap});
+    }
+  }
+
+  &__corp {
+    color: var(--color-gray);
+    @include fsl(14px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
+
+    &:not(:first-child) {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 4px;
+      }
+    }
+  }
+
+  &__span {
+    color: var(--color-black);
+  }
 }
