@@ -11,9 +11,11 @@ $ff-main: 'SuisseIntl', sans-serif;
   --color-gray: #979797;
   --color-black: #3F3F40;
   --color-borders: #E8E9E9;
+  // --color-inner-borders: rgba(#3F3F40, 0.1);
   --color-green: #1B5B71;
   --color-red: #E53B10;
 }
+$rgba-borders: rgba(#3F3F40, 0.1);
 
 // media breakpoints
 $breakpoint-xs: 375px;

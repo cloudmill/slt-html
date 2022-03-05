@@ -1,3 +1,99 @@
 mixin header
+  -
+    var ddata = {
+      nav: [
+        {text: 'О компании', isAccordion: true},
+        {text: 'Объекты', isAccordion: false},
+        {text: 'Техническая информация', isAccordion: true},
+        {text: 'Сотрудничество', isAccordion: true},
+      ]
+    }
   header.header
-    |header
+    .header__inner
+      .container 
+        .header__desktop 
+          .header__top
+            .header__row
+              .header__col
+                ul.header__links 
+                  li.header__links-item 
+                    .header__links-button 
+                      .header__text 
+                        |Сервисы расчета
+                      .header__links-icon 
+                        +arrow-svg.header__links-svg
+                    .header__links-dropdown
+                  each item in ['События', 'Контакты'] 
+                    li.header__links-item 
+                      a.header__links-link(href="#") 
+                        |#{item}
+              .header__col
+                .header__feedback 
+                  .header__feedback-col
+                    a.header__feedback-link(href="#")
+                      .header__feedback-svg 
+                        +geo-svg
+                      .header__text 
+                        |Где купить
+                  .header__feedback-col
+                    .header__feedback-buttons 
+                      .header__feedback-item
+                        .button.button--sm
+                          |Обратный звонок
+                      .header__feedback-item
+                        .button.button--sm.button--gray 
+                          .button__text 
+                            |Написать нам
+                          .button__icon 
+                            +arrow-svg
+                    a.header__phone(href="tel:" + data.phone) 
+                      |#{data.phone}
+          .header__bot 
+            .header__row 
+              .header__col
+                .header__logo
+                  a.header__logo-link(href="#") 
+                    +logo-svg.header__logo-svg
+                .header__button 
+                  .header__button-icon 
+                    +header-catalog-svg
+                  .header__button-text 
+                    |Каталог
+              .header__col
+                .header__nav 
+                  ul.header__list 
+                    each item in ddata.nav
+                      li.header__item 
+                        if (item.isAccordion)
+                          .header__accordion
+                            .header__accordion-text 
+                              |#{item.text}
+                            .header__accordion-icon 
+                              +arrow-svg.header__accordion-svg 
+                          .header__accordion-dropdown
+                        else 
+                          a.header__link(href="#") 
+                            |#{item.text}
+                  .header__buttons 
+                    a.header__buttons-item(href="#")
+                      +search-svg
+                    a.header__buttons-item.header__cart(href="#")
+                      +basket-svg
+                      .header__cart-count
+                        |0
+        .header__mobile 
+          .header__row 
+            .header__col
+              .header__logo 
+                a.header__logo-link(href="#") 
+                  +logo-svg.header__logo-svg
+            .header__col
+              .header__buttons 
+                a.header__buttons-item(href="#")
+                  +search-svg.header__search
+                a.header__buttons-item.header__cart(href="#")
+                  +basket-svg.header__cart-icon
+                  .header__cart-count
+                    |0
+                .header__menu 
+                  |menu
