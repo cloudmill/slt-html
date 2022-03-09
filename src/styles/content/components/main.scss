@@ -1,0 +1,6 @@
+.main {
+  margin-bottom: 120px;
+  @media (max-width: ($breakpoint - 1px)) {
+    margin-bottom: 48px;
+  }
+}

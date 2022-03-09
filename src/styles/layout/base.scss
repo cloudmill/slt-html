@@ -27,7 +27,7 @@ body {
   
   @include f-main();
   color: var(--color-black);
-  @include fsl(16px, 140%);
+  @include fsl(16px, 130%);
   background: var(--color-white);
 }
 
@@ -36,12 +36,12 @@ img {
   max-height: 100%;
 }
 
-// h1, h2, h3, h4, h5 {
-//   font-weight: 500;
-// }
+h1, h2, h3, h4, h5 {
+  font-weight: 500;
+}
 
 // h1 {
-//   @include fsl(40px, 100%);
+//   @include fsl(44px, 100%);
 //   @media (max-width: ($breakpoint - 1px)) {
 //     @include fsl(20px, 100%);
 //   }
@@ -54,16 +54,16 @@ img {
 //   }
 // }
 
-// h3 {
-//   @include fsl(24px, 120%);
-//   @media (max-width: ($breakpoint - 1px)) {
-//     @include fsl(16px, 120%);
-//   }
+h3 {
+  @include fsl(44px, 110%);
+  @media (max-width: ($breakpoint - 1px)) {
+    @include fsl(20px);
+  }
 
 //   @media print {
 //     @include fsl(16px, 120%);
 //   }
-// }
+}
 
 // h4 {
 //   @include fsl(14px, 120%);

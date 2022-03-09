@@ -43,3 +43,33 @@ mixin instagram-svg
 mixin facebook-svg 
   svg(class=attributes.class width='7' height='16' viewbox='0 0 7 16' fill='none' xmlns='http://www.w3.org/2000/svg')
     path(d='M4.65426 3.4302V4.98575H7L6.70213 7.77778H4.65426V15.5556H1.45213V7.77778H0V4.98575H1.45213V3.4302C1.45213 3.4302 1.19149 0.478632 3.79787 0H7V2.51282H5.54787C5.54787 2.47293 4.72872 2.43305 4.65426 3.4302Z' fill='#3F3F40')
+
+mixin use-svg 
+  svg(class=attributes.class width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+    g(clip-path='url(#clip0_185_8429)')
+      path(d='M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z' fill='white')
+      path(d='M42 25V15H28H11.6H-6V25H11.6H28H42Z' fill='#E8E9E9')
+      path(d='M17.25 25.25V14.75H11.75V25.25H17.25Z' fill='white' stroke='#07A8D7' stroke-width='1.5')
+      rect(x='16.3496' y='12.75' width='11.3' height='14.5' fill='white' stroke='#07A8D7' stroke-width='1.5')
+    path(d='M20 38.5C9.78273 38.5 1.5 30.2173 1.5 20H-1.5C-1.5 31.8741 8.12588 41.5 20 41.5V38.5ZM38.5 20C38.5 30.2173 30.2173 38.5 20 38.5V41.5C31.8741 41.5 41.5 31.8741 41.5 20H38.5ZM20 1.5C30.2173 1.5 38.5 9.78273 38.5 20H41.5C41.5 8.12588 31.8741 -1.5 20 -1.5V1.5ZM20 -1.5C8.12588 -1.5 -1.5 8.12588 -1.5 20H1.5C1.5 9.78273 9.78273 1.5 20 1.5V-1.5Z' fill='#E8E9E9')
+    defs
+      clippath#clip0_185_8429
+        path(d='M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z' fill='white')
+
+mixin colors-light-svg 
+  svg(class=attributes.class width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+    circle(cx='20' cy='20' r='19.6' stroke='#07A8D7' stroke-width='0.8')
+    circle(opacity='0.1' cx='20.0004' cy='20.0004' r='9.2' fill='white' stroke='#3F3F40' stroke-width='0.8')
+
+mixin colors-dark-svg 
+  svg(class=attributes.class width='40' height='40' viewbox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+    circle(opacity='0.1' cx='20' cy='20' r='19.6' stroke='#3F3F40' stroke-width='0.8')
+    circle(cx='20.0004' cy='20.0004' r='9.6' fill='#D7D7D7')
+
+mixin plus-svg 
+  svg(class=attributes.class width='16' height='16' viewbox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+    path(fill-rule='evenodd' clip-rule='evenodd' d='M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z' fill='#07A8D7')
+
+mixin tech-svg 
+  svg(class=attributes.class width='397' height='196' viewbox='0 0 397 196' fill='none' xmlns='http://www.w3.org/2000/svg')
+    path(d='M186.829 74.7112L158.051 27.7257L0 281.955H58.5509L186.829 74.7112ZM228.05 231.888L254.972 186.171L225.561 138.098L140.947 282H448L229.407 -86L199.634 -38.5161L360.355 231.888H228.05Z' fill='#363638')

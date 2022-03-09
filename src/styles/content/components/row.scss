@@ -1,0 +1,25 @@
+.row {
+  display: flex;
+  @media (max-width: ($breakpoint - 1px)) {
+    display: block;
+  }
+
+  &__col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      width: calc(#{$col-part-d} * 6);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+      }
+    }
+
+    &:nth-child(2) {
+      width: calc(#{$col-part-d} * 4 - #{$col-gap});
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 12px;
+        width: auto ;
+      }
+    }
+  }
+}
