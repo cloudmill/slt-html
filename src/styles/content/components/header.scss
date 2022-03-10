@@ -37,7 +37,7 @@
   }
   
   &__col {
-    flex-shrink: 0;
+    
 
     &:nth-child(1) {
       width: calc(#{$col-part-d} * 6);
@@ -48,7 +48,8 @@
       }
     }
     &:nth-child(2) {
-      width: calc(#{$col-part-d} * 6 - #{$col-gap});
+      flex-shrink: 0;
+      min-width: calc(#{$col-part-d} * 6 - #{$col-gap});
       @media (max-width: ($breakpoint - 1px)) {
         width: calc(#{$col-part-m} * 2 - #{$col-gap});
       }
@@ -92,6 +93,8 @@
   }
   &__feedback-col {
     &:nth-child(2) {
+      margin-left: 30px;
+      
       display: flex;
       align-items: center;
     }
@@ -176,10 +179,10 @@
   }
 
   &__item {
-
-    // &:not(:first-child) {
-    //   margin-left: 40px;
-    // }
+    white-space: nowrap;
+    &:not(:first-child) {
+      margin-left: 40px;
+    }
   }
 
   &__accordion {
