@@ -3,11 +3,11 @@
   "phone": "8 800 444-72-37",
   "routes": [
     {
-      "href": "/main",
+      "href": "main",
       "title": "Главная"
     },
     {
-      "href": "/catalog",
+      "href": "catalog",
       "title": "Каталог"
     }
   ]

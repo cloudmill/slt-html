@@ -182,6 +182,9 @@
     white-space: nowrap;
     &:not(:first-child) {
       margin-left: 40px;
+      @media (max-width: ($breakpoint-ll - 1px)) {
+        margin-left: 20px;
+      }
     }
   }
 
@@ -193,6 +196,9 @@
   }
   &__accordion-text {
     @include fsl(18px, 120%);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      @include fsl(16px);
+    }
   }
   &__accordion-icon {
     margin-left: 8px;
@@ -203,6 +209,9 @@
 
   &__link {
     @include fsl(18px, 120%);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      @include fsl(16px);
+    }
   }
 
   &__buttons {

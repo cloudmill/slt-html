@@ -210,6 +210,17 @@
     display: flex;
 
     border-bottom: 1px solid var(--color-borders);
+    transition: $transition;
+
+    &:focus-within {
+      background: var(--color-light-gray);
+      border-color: var(--color-blue);
+
+      #{$comp}__table-button {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
   }
   &__table-text {
     font-weight: 400;
@@ -233,6 +244,7 @@
     cursor: pointer;
     opacity: 0.5;
     pointer-events: none;
+    transition: $transition;
   }
   &__table-add {
     font-weight: 500;
