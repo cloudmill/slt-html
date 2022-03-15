@@ -62,6 +62,9 @@
 
     &:not(:first-child) {
       margin-left: getRem(40px);
+      @media (max-width: ($breakpoint-ll - 1px)) {
+        margin-left: getStatic(40px, 14.4px);
+      }
     }
   }
   &__links-button {
@@ -72,6 +75,9 @@
   }
   &__text {
     @include fsl(14px, 120%);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      font-size: getStatic(14px, 14.4px);
+    }
   }
   &__links-icon {
     margin-left: getRem(6px);
@@ -81,6 +87,10 @@
     justify-content: center;
     width: getRem(16px);
     height: getRem(16px);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      width: getStatic(16px, 14.4px);
+      height: getStatic(16px, 14.4px);
+    }
   }
   &__links-svg {
     width: 100%;
@@ -88,6 +98,9 @@
   }
   &__links-link {
     @include fsl(14px, 120%);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      font-size: getStatic(14px, 14.4px);
+    }
   }
 
   &__feedback {
@@ -109,12 +122,19 @@
   }
   &__feedback-icon {
     margin-right: getRem(4px);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      margin-right: getStatic(4px, 14.4px);
+    }
 
     display: flex;
     align-items: center;
     justify-content: center;
     width: getRem(19px);
     height: getRem(19px);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      width: getStatic(19px, 14.4px);
+      height: getStatic(19px, 14.4px);
+    }
   }
   &__feedback-svg {
     width: 100%;
@@ -132,6 +152,7 @@
 
   &__phone {
     @include fsl(18px, 120%);
+    font-weight: 500;
   }
 
   &__bot {
@@ -160,6 +181,9 @@
 
   &__button {
     padding: getRem(13px) getRem(20px);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      padding: getStatic(13px, 14.4px) getStatic(20px, 14.4px);
+    }
 
     display: flex;
     align-items: center;
@@ -170,12 +194,18 @@
   }
   &__button-icon {
     margin-right: getRem(20px);
-
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      margin-right: getStatic(20px, 14.4px);
+    }
     display: flex;
     align-items: center;
     justify-content: center;
     width: getRem(28px);
     height: getRem(12px);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      width: getStatic(28px, 14.4px);
+      height: getStatic(28px, 14.4px);
+    }
   }
   &__button-svg {
     width: 100%;
@@ -184,6 +214,9 @@
   &__button-text {
     color: var(--color-white);
     @include fsl(18px, 120%);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      font-size: getStatic(18px, 14.4px);
+    }
   }
 
   &__nav {
@@ -200,9 +233,6 @@
 
   &__item {
     white-space: nowrap;
-    &:not(:first-child) {
-      // margin-left: getRem(48px);
-    }
   }
 
   &__accordion {
@@ -213,9 +243,10 @@
   }
   &__accordion-text {
     @include fsl(18px, 120%);
-    @media (max-width: ($breakpoint-ll - 1px)) {
-      @include fsl(16px);
-    }
+    letter-spacing: -0.5px;
+    // @media (max-width: ($breakpoint-ll - 1px)) {
+    //   @include fsl(16px);
+    // }
   }
   &__accordion-icon {
     margin-left: getRem(8px);
@@ -233,9 +264,10 @@
 
   &__link {
     @include fsl(18px, 120%);
-    @media (max-width: ($breakpoint-ll - 1px)) {
-      @include fsl(16px);
-    }
+    letter-spacing: -0.5px;
+    // @media (max-width: ($breakpoint-ll - 1px)) {
+    //   @include fsl(16px);
+    // }
   }
 
   &__buttons {
@@ -247,12 +279,12 @@
     }
   }
   &__buttons-item {
-    @media (max-width: ($breakpoint - 1px)) {
-      --size: 32px;
-    }
-
     width: getRem(48px);
     height: getRem(48px);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      width: getStatic(48px, 14.4px);
+      height: getStatic(48px, 14.4px);
+    }
     display: flex;
     flex-shrink: 0;
     align-items: center;
@@ -263,6 +295,9 @@
 
     &:not(:first-child) {
       margin-left: getRem(8px);
+      @media (max-width: ($breakpoint-ll - 1px)) {
+        margin-left: getStatic(8px, 14.4px);
+      }
       @media (max-width: ($breakpoint - 1px)) {
         margin-left: 0;
       }
@@ -281,6 +316,10 @@
 
     width: getRem(16px);
     height: getRem(16px);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      width: getStatic(16px, 14.4px);
+      height: getStatic(16px, 14.4px);
+    }
     display: flex;
     align-items: center;
     justify-content: center;
@@ -289,6 +328,9 @@
     background-color: var(--color-blue);
     border-radius: 50%;
     @include fsl(11px, 110%);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      font-size: getStatic(11px, 14.4px);
+    }
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(7px);
     }
@@ -296,6 +338,10 @@
   &__cart-svg {
     width: getRem(20px);
     height: getRem(19px);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      width: getStatic(20px, 14.4px);
+      height: getStatic(19px, 14.4px);
+    }
     @media (max-width: ($breakpoint - 1px)) {
       width: 13px;
       height: 12px;
@@ -305,6 +351,10 @@
   &__search {
     width: getRem(24px);
     height: getRem(24px);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      width: getStatic(24px, 14.4px);
+      height: getStatic(24px, 14.4px);
+    }
     @media (max-width: ($breakpoint - 1px)) {
       width: 16px;
       height: 16px;

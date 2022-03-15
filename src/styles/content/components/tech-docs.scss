@@ -21,8 +21,6 @@
     }
 
     color: var(--color-white);
-    font-weight: 500;
-    letter-spacing: -3px;
     @media (max-width: ($breakpoint - 1px)) {
       letter-spacing: -0.5px;
     }
@@ -58,9 +56,9 @@
 
   &__bg {
     position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    right: getRem(40px);
+    top: getRem(20px);
+    bottom: getRem(20px);
 
     display: flex;
     align-items: center;
@@ -68,6 +66,7 @@
   }
 
   &__img {
+    width: getRem(192px);
     height: 100%;
     @media (max-width: ($breakpoint - 1px)) {
       width: 197px;

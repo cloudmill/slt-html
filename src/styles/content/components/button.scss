@@ -1,5 +1,8 @@
 .button {
   padding: getRem(16px) getRem(24px);
+  @media (max-width: ($breakpoint-ll - 1px)) {
+    padding: getStatic(16px, 14.4px) getStatic(24px, 14.4px);
+  }
   @media (max-width: ($breakpoint - 1px)) {
     padding: 10px 12px;
   }
@@ -8,6 +11,9 @@
   align-items: center;
 
   @include fsl(14px, 120%);
+  @media (max-width: ($breakpoint-ll - 1px)) {
+    font-size: getStatic(14px, 14.4px);
+  }
   @media (max-width: ($breakpoint - 1px)) {
     @include fsl(10px);
   }
@@ -15,18 +21,32 @@
   border: 1px solid var(--color-blue);
   border-radius: 60px;
 
+  &__text {
+    font-weight: 500;
+  }
+
   &__icon {
     margin-left: getRem(16px);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      margin-left: getStatic(16px, 14.4px);
+    }
 
     display: flex;
     align-items: center;
     justify-content: center;
     width: getRem(16px);
     height: getRem(16px);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      width: getStatic(16px, 14.4px);
+      height: getStatic(16px, 14.4px);
+    }
   }
 
   &--sm {
     padding: getRem(10px) getRem(24px);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      padding: getStatic(10px, 14.4px) getStatic(24px, 14.4px);
+    }
   }
 
   &--gray {

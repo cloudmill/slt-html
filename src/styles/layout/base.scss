@@ -56,21 +56,21 @@ h1, h2, h3, h4, h5 {
 
 h3 {
   @include fsl(44px, 110%);
+  letter-spacing: -2px;
   @media (max-width: ($breakpoint - 1px)) {
     @include fsl(20px);
   }
-
-//   @media print {
-//     @include fsl(16px, 120%);
-//   }
 }
 
-// h4 {
-//   @include fsl(14px, 120%);
-//   @media (min-width: $breakpoint) {
-//     @include fsl(18px);
-//   }
-// }
+h4 {
+  @include fsl(36px, 110%);
+  letter-spacing: -2px;
+}
+
+h5 {  
+  @include fsl(24px, 110%);
+  letter-spacing: -1px;
+}
 
 ul,
 ol {

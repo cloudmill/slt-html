@@ -54,18 +54,27 @@
 
   &__label {
     margin-bottom: getRem(24px);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      margin-bottom: getStatic(24px, 14.4px);
+    }
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 12px;
     }
 
     color: var(--color-gray);
     @include fsl(12px, 130%);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      font-size: getStatic(12px, 14.4px);
+    }
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(10px);
     }
 
     &--sm {
       margin-bottom: getRem(8px);
+      @media (max-width: ($breakpoint-ll - 1px)) {
+        margin-bottom: getStatic(8px, 14.4px);
+      }
       @media (max-width: ($breakpoint - 1px)) {
         margin-bottom: 2px;
       }
@@ -94,6 +103,9 @@
 
     &:not(:first-child) {
       margin-top: getRem(80px);
+      @media (max-width: ($breakpoint-ll - 1px)) {
+        margin-top: getStatic(80px, 14.4px);
+      }
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: 32px;
       }
@@ -104,6 +116,9 @@
     display: flex;
     &:not(:first-child) {
       margin-top: getRem(12px);
+      @media (max-width: ($breakpoint-ll - 1px)) {
+        margin-top: getStatic(12px, 14.4px);
+      }
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: 8px;
       }
@@ -117,6 +132,9 @@
       @include fsl(12px);
     }
     @include fsl(14px, 130%);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      font-size: getStatic(14px, 14.4px);
+    }
   }
 
   &__bot {
@@ -184,6 +202,9 @@
     }
     &:not(:first-child) {
       margin-top: getRem(40px);
+      @media (max-width: ($breakpoint-ll - 1px)) {
+        margin-top: getStatic(40px, 14.4px);
+      }
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: 0;
       }
@@ -193,6 +214,9 @@
   &__mail {
     font-weight: 500;
     @include fsl(24px, 110%);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      font-size: getStatic(24px, 14.4px);
+    }
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(16px);
     }
@@ -200,6 +224,9 @@
 
   &__policy {
     @include fsl(14px, 130%);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      font-size: getStatic(14px, 14.4px);
+    }
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px);
     }
@@ -217,6 +244,9 @@
   &__corp {
     color: var(--color-gray);
     @include fsl(14px, 130%);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      font-size: getStatic(14px, 14.4px);
+    }
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px);
     }

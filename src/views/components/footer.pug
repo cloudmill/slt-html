@@ -11,7 +11,8 @@ mixin footer
                 each item in ['SLT AQUA', 'SLT BLOCKFIRE', 'SLT PE-RT', 'Инструменты']
                   li.footer__products-item 
                     a.footer__products-link(href="#") 
-                      |#{item}
+                      h5
+                        |#{item}
             .footer__col
               .footer__section 
                 .footer__label
@@ -57,7 +58,8 @@ mixin footer
             .footer__col
               .footer__bot-item 
                 a.footer__phone(href="tel:" + data.phone) 
-                  |#{data.phone}
+                  h4
+                    |#{data.phone}
                 .footer__socials 
                   a.footer__socials-item(href="#")
                     +facebook-svg.footer__socials-svg
@@ -69,18 +71,20 @@ mixin footer
                   .footer__label.footer__label--sm
                     |По вопросам сотрудничества
                   a.footer__mail(href="mailto:info@slt-aqua.ru") 
-                    |info@slt-aqua.ru
+                    h5
+                      |info@slt-aqua.ru
                 .footer__contacts-item 
                   .footer__label.footer__label--sm
                     |Для заявок на продукцию
                   a.footer__mail(href="mailto:order@slt-aqua.ru") 
-                    |order@slt-aqua.ru
+                    h5
+                      |order@slt-aqua.ru
             .footer__col 
               .footer__bot-item 
                 a.footer__policy(href="#") 
                   |Политика конфиденциальности
                 .footer__corps 
                   .footer__corp 
-                    |© SLT AQUA 2022
+                    |© СЛТ Аква 2022
                   .footer__corp 
                     |Сделано в #[span.footer__span CloudMill]
