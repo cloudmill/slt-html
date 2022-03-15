@@ -1,5 +1,5 @@
 .button {
-  padding: 16px 24px;
+  padding: getRem(16px) getRem(24px);
   @media (max-width: ($breakpoint - 1px)) {
     padding: 10px 12px;
   }
@@ -16,15 +16,17 @@
   border-radius: 60px;
 
   &__icon {
-    margin-left: 16px;
+    margin-left: getRem(16px);
 
     display: flex;
     align-items: center;
     justify-content: center;
+    width: getRem(16px);
+    height: getRem(16px);
   }
 
   &--sm {
-    padding: 10px 24px;
+    padding: getRem(10px) getRem(24px);
   }
 
   &--gray {

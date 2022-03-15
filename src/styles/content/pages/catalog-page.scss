@@ -2,7 +2,7 @@
   $comp: &;
 
   &__section {
-    padding-bottom: 20px;
+    padding-bottom: getRem(20px);
     @media (max-width: ($breakpoint - 1px)) {
       padding-bottom: 24px;
     }
@@ -25,7 +25,7 @@
     }
 
     &:nth-child(1) {
-      margin-top: 60px;
+      margin-top: getRem(60px);
       margin-right: calc(#{$col-gap});
       @media (max-width: ($breakpoint - 1px)) {
         margin: 0;
@@ -41,7 +41,7 @@
     }
 
     &:nth-child(3) {
-      margin-top: 60px;
+      margin-top: getRem(60px);
       width: calc(#{$col-part-d} * 3 - #{$col-gap});
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: 16px;
@@ -51,7 +51,7 @@
   }
 
   &__text {
-    margin-top: 32px;
+    margin-top: getRem(32px);
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 16px;
     }
@@ -67,7 +67,7 @@
   }
 
   &__button {
-    margin-top: 32px;
+    margin-top: getRem(32px);
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 16px;
     }
@@ -81,7 +81,7 @@
   }
 
   &__label {
-    margin-bottom: 32px;
+    margin-bottom: getRem(32px);
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 12px;
     }
@@ -95,7 +95,7 @@
   &__types-item {
 
     &:not(:first-child) {
-      margin-top: 8px;
+      margin-top: getRem(8px);
     }
   }
 
@@ -104,11 +104,17 @@
     align-items: center;
   }
   &__type-icon {
-    margin-right: 16px;
+    margin-right: getRem(16px);
 
     display: flex;
     align-items: center;
     justify-content: center;
+    width: getRem(40px);
+    height: getRem(40px);
+  }
+  &__type-svg {
+    width: 100%;
+    height: 100%; 
   }
   &__type-text {
     @media (max-width: ($breakpoint - 1px)) {
@@ -140,7 +146,7 @@
     }
   }
   &__colors-icon {
-    margin-left: 40px;
+    margin-left: getRem(40px);
     @media (max-width: ($breakpoint - 1px)) {
       margin-left: 12px;
     }
@@ -148,10 +154,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: getRem(50px);
+    height: getRem(50px);
   }
   &__colors-svg {
     --size-m: 40px;
-
+    width: 100%;
+    height: 100%;
     @media (max-width: ($breakpoint - 1px)) {
       width: var(--size-m);
       height: var(--size-m);
@@ -172,11 +181,11 @@
     color: var(--color-gray);
   }
   &__table-cell {
-    padding: 32px 0;
+    padding: getRem(32px) 0;
     flex-shrink: 0;
 
     &:nth-child(1) {
-      padding: 32px;
+      padding: getRem(32px);
       width: calc(#{$col-part-d});
 
       background: var(--color-light-gray);
@@ -200,7 +209,7 @@
     font-weight: 500;
 
     &:last-child {
-      padding-right: 32px;
+      padding-right: getRem(32px);
 
       width: calc(#{$col-part-d} * 3 - #{$col-gap});
       color: var(--color-black);
@@ -254,7 +263,7 @@
     }
   }
   &__table-icon {
-    margin-left: 16px;
+    margin-left: getRem(16px);
     @media (max-width: ($breakpoint)) {
       margin-left: 10px;
     }
@@ -262,8 +271,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: getRem(16px);
+    height: getRem(16px);
   }
   &__table-svg {
+    width: 100%;
+    height: 100%;
     @media (max-width: ($breakpoint - 1px)) {
       --size: 14px;
 

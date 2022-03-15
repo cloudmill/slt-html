@@ -3,14 +3,14 @@
   border-top: 1px solid $rgba-borders;
 
   &__inner {
-    padding: 60px 0;
+    padding: getRem(60px) 0;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 49px 0;
     }
   }
 
   &__top {
-    padding-bottom: 60px;
+    padding-bottom: getRem(60px);
     @media (max-width: ($breakpoint - 1px)) {
       padding-bottom: 32px;
     }
@@ -53,7 +53,7 @@
   }
 
   &__label {
-    margin-bottom: 24px;
+    margin-bottom: getRem(24px);
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 12px;
     }
@@ -65,7 +65,7 @@
     }
 
     &--sm {
-      margin-bottom: 8px;
+      margin-bottom: getRem(8px);
       @media (max-width: ($breakpoint - 1px)) {
         margin-bottom: 2px;
       }
@@ -76,7 +76,7 @@
   &__products-item {
     display: flex;
     &:not(:first-child) {
-      margin-top: 16px;
+      margin-top: getRem(16px);
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: 8px;
       }
@@ -93,7 +93,7 @@
   &__section {
 
     &:not(:first-child) {
-      margin-top: 80px;
+      margin-top: getRem(80px);
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: 32px;
       }
@@ -103,7 +103,7 @@
   &__item {
     display: flex;
     &:not(:first-child) {
-      margin-top: 12px;
+      margin-top: getRem(12px);
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: 8px;
       }
@@ -120,7 +120,7 @@
   }
 
   &__bot {
-    padding-top: 60px;
+    padding-top: getRem(60px);
     @media (max-width: ($breakpoint - 1px)) {
       padding-top: 32px;
     }
@@ -151,13 +151,12 @@
     }
   }
   &__socials-item {
-    --size: 48px;
     @media (max-width: ($breakpoint - 1px)) {
       --size: 36px;
     }
 
-    width: var(--size);
-    height: var(--size);
+    width: getRem(48px);
+    height: getRem(48px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -166,7 +165,7 @@
     border-radius: 50%;
 
     &:not(:first-child) {
-      margin-left: 4px;
+      margin-left: getRem(4px);
       @media (max-width: ($breakpoint - 1px)) {
         margin-left: 8px;
       }
@@ -184,7 +183,7 @@
       width: calc(#{$col-part-m} * 2 - #{$col-gap});
     }
     &:not(:first-child) {
-      margin-top: 40px;
+      margin-top: getRem(40px);
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: 0;
       }

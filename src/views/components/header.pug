@@ -31,8 +31,8 @@ mixin header
                 .header__feedback 
                   .header__feedback-col
                     a.header__feedback-link(href="#")
-                      .header__feedback-svg 
-                        +geo-svg
+                      .header__feedback-icon 
+                        +geo-svg.header__feedback-svg
                       .header__text 
                         |Где купить
                   .header__feedback-col
@@ -56,7 +56,7 @@ mixin header
                     +logo-svg.header__logo-svg
                 .header__button 
                   .header__button-icon 
-                    +header-catalog-svg
+                    +header-catalog-svg.header__button-svg
                   .header__button-text 
                     |Каталог
               .header__col
@@ -76,9 +76,9 @@ mixin header
                             |#{item.text}
                   .header__buttons 
                     a.header__buttons-item(href="#")
-                      +search-svg
+                      +search-svg.header__search
                     a.header__buttons-item.header__cart(href="#")
-                      +basket-svg
+                      +basket-svg.header__cart-svg
                       .header__cart-count
                         |0
         .header__mobile 
@@ -92,7 +92,7 @@ mixin header
                 a.header__buttons-item(href="#")
                   +search-svg.header__search
                 a.header__buttons-item.header__cart(href="#")
-                  +basket-svg.header__cart-icon
+                  +basket-svg.header__cart-svg
                   .header__cart-count
                     |0
                 .header__menu 

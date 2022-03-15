@@ -9,7 +9,7 @@
   border-bottom: 1px solid var(--color-borders);
 
   &__inner {
-    padding: 32px 0 40px;
+    padding: getRem(32px) 0 getRem(40px);
     @media (max-width: ($breakpoint - 1px)) {
       padding: 13px 0;
     }
@@ -37,8 +37,7 @@
   }
   
   &__col {
-    
-
+    flex-shrink: 0;
     &:nth-child(1) {
       width: calc(#{$col-part-d} * 6);
       display: flex;
@@ -48,8 +47,7 @@
       }
     }
     &:nth-child(2) {
-      flex-shrink: 0;
-      min-width: calc(#{$col-part-d} * 6 - #{$col-gap});
+      width: calc(#{$col-part-d} * 6 - #{$col-gap});
       @media (max-width: ($breakpoint - 1px)) {
         width: calc(#{$col-part-m} * 2 - #{$col-gap});
       }
@@ -63,7 +61,7 @@
   &__links-item {
 
     &:not(:first-child) {
-      margin-left: 40px;
+      margin-left: getRem(40px);
     }
   }
   &__links-button {
@@ -76,11 +74,17 @@
     @include fsl(14px, 120%);
   }
   &__links-icon {
-    margin-left: 6px;
+    margin-left: getRem(6px);
 
     display: flex;
     align-items: center;
     justify-content: center;
+    width: getRem(16px);
+    height: getRem(16px);
+  }
+  &__links-svg {
+    width: 100%;
+    height: 100%;
   }
   &__links-link {
     @include fsl(14px, 120%);
@@ -93,7 +97,7 @@
   }
   &__feedback-col {
     &:nth-child(2) {
-      margin-left: 30px;
+      margin-left: getRem(30px);
       
       display: flex;
       align-items: center;
@@ -103,20 +107,26 @@
     display: flex;
     align-items: center;
   }
-  &__feedback-svg {
-    margin-right: 4px;
+  &__feedback-icon {
+    margin-right: getRem(4px);
 
     display: flex;
     align-items: center;
     justify-content: center;
+    width: getRem(19px);
+    height: getRem(19px);
+  }
+  &__feedback-svg {
+    width: 100%;
+    height: 100%;
   }
   &__feedback-buttons {
-    margin-right: 60px;
+    margin-right: getRem(60px);
     display: flex;
   }
   &__feedback-item {
     &:not(:first-child) {
-      margin-left: 12px;
+      margin-left: getRem(12px);
     }
   }
 
@@ -125,7 +135,7 @@
   }
 
   &__bot {
-    margin-top: 32px;
+    margin-top: getRem(32px);
   }
 
   &__logo {
@@ -136,8 +146,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: getRem(162px);
+    height: getRem(28px);
   }
   &__logo-svg {
+    width: 100%;
+    height: 100%;
     @media (max-width: ($breakpoint - 1px)) {
       width: 104px;
       height: 18px;
@@ -145,7 +159,7 @@
   }
 
   &__button {
-    padding: 13px 20px;
+    padding: getRem(13px) getRem(20px);
 
     display: flex;
     align-items: center;
@@ -155,11 +169,17 @@
     cursor: pointer;
   }
   &__button-icon {
-    margin-right: 20px;
+    margin-right: getRem(20px);
 
     display: flex;
     align-items: center;
     justify-content: center;
+    width: getRem(28px);
+    height: getRem(12px);
+  }
+  &__button-svg {
+    width: 100%;
+    height: 100%;
   }
   &__button-text {
     color: var(--color-white);
@@ -181,10 +201,7 @@
   &__item {
     white-space: nowrap;
     &:not(:first-child) {
-      margin-left: 40px;
-      @media (max-width: ($breakpoint-ll - 1px)) {
-        margin-left: 20px;
-      }
+      // margin-left: getRem(48px);
     }
   }
 
@@ -201,10 +218,17 @@
     }
   }
   &__accordion-icon {
-    margin-left: 8px;
+    margin-left: getRem(8px);
+
     display: flex;
     align-items: center;
     justify-content: center;
+    width: getRem(16px);
+    height: getRem(16px);
+  }
+  &__accordion-svg {
+    width: 100%;
+    height: 100%;
   }
 
   &__link {
@@ -215,21 +239,20 @@
   }
 
   &__buttons {
-    margin-left: 40px;
+    margin-left: getRem(40px);
     display: flex;
-    @media (max-width: ($breakpoint)) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-left: 0;
       justify-content: space-between;
     }
   }
   &__buttons-item {
-    --size: 48px;
     @media (max-width: ($breakpoint - 1px)) {
       --size: 32px;
     }
 
-    width: var(--size);
-    height: var(--size);
+    width: getRem(48px);
+    height: getRem(48px);
     display: flex;
     flex-shrink: 0;
     align-items: center;
@@ -239,7 +262,7 @@
     border: 1px solid $rgba-borders;
 
     &:not(:first-child) {
-      margin-left: 8px;
+      margin-left: getRem(8px);
       @media (max-width: ($breakpoint - 1px)) {
         margin-left: 0;
       }
@@ -251,17 +274,13 @@
     z-index: 0;
   }
   &__cart-count {
-    --size: 16px;
-    @media (max-width: ($breakpoint - 1px)) {
-      --size: 10px;
-    }
     position: absolute;
     z-index: 1;
     top: 0;
     right: 0;
 
-    width: var(--size);
-    height: var(--size);
+    width: getRem(16px);
+    height: getRem(16px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -274,7 +293,9 @@
       @include fsl(7px);
     }
   }
-  &__cart-icon {
+  &__cart-svg {
+    width: getRem(20px);
+    height: getRem(19px);
     @media (max-width: ($breakpoint - 1px)) {
       width: 13px;
       height: 12px;
@@ -282,6 +303,8 @@
   }
 
   &__search {
+    width: getRem(24px);
+    height: getRem(24px);
     @media (max-width: ($breakpoint - 1px)) {
       width: 16px;
       height: 16px;
