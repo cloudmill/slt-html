@@ -40,12 +40,13 @@ h1, h2, h3, h4, h5 {
   font-weight: 500;
 }
 
-// h1 {
-//   @include fsl(44px, 100%);
-//   @media (max-width: ($breakpoint - 1px)) {
-//     @include fsl(20px, 100%);
-//   }
-// }
+h1 {
+  @include fsl(80px, 90%);
+  letter-spacing: -3px;
+  @media (max-width: ($breakpoint - 1px)) {
+    @include fsl(20px, 100%);
+  }
+}
 
 // h2 {
 //   @include fsl(32px, 100%);
