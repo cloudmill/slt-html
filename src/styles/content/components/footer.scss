@@ -61,6 +61,7 @@
       margin-bottom: 12px;
     }
 
+    font-weight: 500;
     color: var(--color-gray);
     @include fsl(12px, 130%);
     @media (max-width: ($breakpoint-ll - 1px)) {

@@ -214,6 +214,7 @@
   &__button-text {
     color: var(--color-white);
     @include fsl(18px, 120%);
+    letter-spacing: -0.5px;
     @media (max-width: ($breakpoint-ll - 1px)) {
       font-size: getStatic(18px, 14.4px);
     }
