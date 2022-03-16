@@ -40,6 +40,10 @@
       width: getStatic(16px, 14.4px);
       height: getStatic(16px, 14.4px);
     }
+
+    &--right {
+      transform: rotate(-90deg);
+    }
   }
 
   &--sm {

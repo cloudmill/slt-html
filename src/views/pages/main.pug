@@ -2,6 +2,7 @@ extends ../layouts/master
 
 include ../components/breadcrumbs
 include ../components/tech-docs
+include ../components/product-card
 
 block content
   .main-page 
@@ -12,4 +13,12 @@ block content
             h1 
               |Производство полимерных трубопроводных систем 
           .main-page__hero-col
-            
+            +link-right
+              |О компании
+    section.section.section--md 
+      .main-page__image 
+        img.main-page__img(src="assets/images/main.jpg", alt="")
+    section.main-page__section 
+      .main-page__section-grid 
+        - for (i = 0; i < 4; i++)
+          +product-card

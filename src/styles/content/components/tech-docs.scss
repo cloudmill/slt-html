@@ -30,29 +30,7 @@
     display: flex;
   }
 
-  &__button {
-    padding: getRem(18px) getRem(25px);
-    @media (max-width: ($breakpoint - 1px)) {
-      padding: 12px 13px;
-    }
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid var(--color-white);
-    border-radius: 60px;
-  }
   
-  &__svg {
-    width: getRem(16px);
-    height: getRem(16px);
-    transform: rotate(-90deg);
-
-    path {
-      fill: var(--color-white);
-    }
-  }
 
   &__bg {
     position: absolute;

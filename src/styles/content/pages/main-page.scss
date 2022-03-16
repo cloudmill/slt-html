@@ -1,3 +1,47 @@
 .main-page {
   
+
+  &__hero {
+    margin-top: getRem(308px);
+  }
+  &__hero-row {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+  &__hero-col {
+
+    &:nth-child(1) {
+      flex-shrink: 0;
+      width: calc(#{$col-part-d} * 6 - #{$col-gap});
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+      }
+    }
+
+    &:nth-child(2) {
+      display: flex;
+      align-items: flex-end;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  &__section {
+    margin-top: getRem(20px);
+    padding: 0 20px;
+  }
+  &__section-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @media (max-width: ($breakpoint - 1px)) {
+      grid-template-columns: 1fr;
+      row-gap: 12px;
+    }
+    row-gap: 20px;
+    column-gap: 20px;
+  }
 }
