@@ -56,4 +56,8 @@
   &--gray {
     border-color: rgba(26, 31, 33, 0.1);
   }
+
+  &--color-white {
+    color: var(--color-white);
+  }
 }

@@ -44,4 +44,121 @@
     row-gap: 20px;
     column-gap: 20px;
   }
+
+  &__cooperation {
+    height: getRem(800px);
+    @media (max-width: ($breakpoint - 1px)) {
+      height: getRem(485px);
+    }
+
+    background: url("assets/images/cooperation.jpg") center no-repeat;
+    background-size: cover;
+  }
+  &__cooperation-container {
+    padding: getRem(50px) getRem(40px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 20px;
+    }
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__cooperation-row {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+  &__cooperation-col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      width: calc(#{$col-part-d} * 6);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+      }
+    }
+
+    &:nth-child(2) {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 12px;
+      }
+    }
+  }
+  &__cooperation-title {
+    max-width: getRem(560px);
+
+    font-weight: 500;
+    color: var(--color-white);
+    letter-spacing: -3px;
+    @include fsl(44px, 110%);
+  }
+  &__cooperation-span {
+    color: var(--color-blue);
+  }
+  &__cooperation-text {
+    max-width: getRem(372px);
+
+    color: var(--color-white);
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @include fsl(18px, 130%);
+  }
+  &__cooperation-bot {
+    display: flex;
+  }
+
+  &__top {
+    margin-bottom: getRem(80px);
+  }
+  &__top-row {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+  &__top-col {
+
+    &:nth-child(2) {
+      padding-right: calc(#{$col-gap});
+      width: calc(#{$col-part-d} * 3);
+      @media (max-width: ($breakpoint - 1px)) {
+        padding-right: 0;
+        margin-top: 12px;
+
+        width: auto;
+      }
+    }
+  } 
+  &__top-title {
+    letter-spacing: -3px;
+  }
+  &__top-text {
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @include fsl(18px, 130%);
+    color: var(--color-gray);
+  }
+  &__top-button {
+    margin-top: 11px;
+    
+    display: flex;
+  }
+
+  &__slider {}
+  &__slider-slide {
+    width: calc(#{$col-part-d} * 4 - #{$col-gap});
+  }
+  &__slider-image {
+    margin-bottom: getRem(16px);
+
+    display: flex;
+    align-items: center;
+  }
+  &__slider-title {
+    
+  }
 }

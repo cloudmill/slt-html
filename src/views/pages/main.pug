@@ -5,6 +5,23 @@ include ../components/tech-docs
 include ../components/product-card
 
 block content
+  -
+    var ddata = {
+      slider: [
+        {
+          img: "assets/images/main-slide-1.jpg",
+          title: "Гостиничные и торгово-развлекательные комплексы"
+        },
+        {
+          img: "assets/images/main-slide-2.jpg",
+          title: "Жилые комплексы"
+        },
+        {
+          img: "assets/images/main-slide-3.jpg",
+          title: "Общественные здания"
+        },
+      ]
+    }
   .main-page 
     section.main-page__hero
       .container 
@@ -22,3 +39,41 @@ block content
       .main-page__section-grid 
         - for (i = 0; i < 4; i++)
           +product-card
+    section.main-page__section 
+      .main-page__cooperation
+        .main-page__cooperation-container 
+          .main-page__cooperation-top
+            .main-page__cooperation-row 
+              .main-page__cooperation-col
+                .main-page__cooperation-title 
+                  |Развитая логистическая инфраструктура позволяет доставлять продукцию в самые отдаленные регионы #[span.main-page__cooperation-span России и страны СНГ]
+              .main-page__cooperation-col
+                p.main-page__cooperation-text 
+                  |Мы активно сотрудничаем с торговыми компаниями, проектными, монтажными и строительными организациями
+          .main-page__cooperation-bot
+            +link-right.button--color-white
+              |Сотрудничество
+    section.section
+      .container 
+        .main-page__top
+          .main-page__top-row 
+            .main-page__top-col
+              h3.main-page__top-title 
+                |Продукция СЛТ Аква на объектах
+            .main-page__top-col
+              p.main-page__top-text 
+                |Наши трубопроводные системы установлены на многих объектах строительства жилого, общественного и промышленного назначения
+          .main-page__top-button 
+            +link-right 
+              |Все объекты
+        .main-page__slider
+          .main-page__controls
+          .swiper-container.swiper-container--visible.swiper-container--visible.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='10' data-slider-prev='11' data-slider-next='12')
+            .swiper-wrapper 
+              each item in ddata.slider
+                .swiper-slide 
+                  .main-page__slider-slide 
+                    .main-page__slider-image 
+                      img(src=item.img, alt="")
+                    h5.main-page__slider-title 
+                      |#{item.title}
