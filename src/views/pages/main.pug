@@ -2,7 +2,7 @@ extends ../layouts/master
 
 include ../components/breadcrumbs
 include ../components/tech-docs
-include ../components/product-card
+include ../components/product-cards
 
 block content
   -
@@ -37,8 +37,7 @@ block content
         img.main-page__img(src="assets/images/main.jpg", alt="")
     section.main-page__section 
       .main-page__section-grid 
-        - for (i = 0; i < 4; i++)
-          +product-card
+        +product-cards
     section.main-page__section 
       .main-page__cooperation
         .main-page__cooperation-container 
@@ -58,7 +57,7 @@ block content
         .main-page__top
           .main-page__top-row 
             .main-page__top-col
-              h3.main-page__top-title 
+              h3.main-page__title 
                 |Продукция СЛТ Аква на объектах
             .main-page__top-col
               p.main-page__top-text 
@@ -77,3 +76,16 @@ block content
                       img(src=item.img, alt="")
                     h5.main-page__slider-title 
                       |#{item.title}
+    section.section 
+      .container 
+        h3.main-page__title 
+          |Помощь в инженерных расчетах
+        .section__block 
+          .main-page__calculator 
+            each item, i in ['Расчет компенсаторов #[br] для систем SLT AQUA', 'Расчет компенсаторов #[br] для систем BLOCKFIRE', 'Расчета удельных гидравлических потерь трубопроводов  SLT AQUA']
+              a.main-page__calculator-link(href="#" class=(i < 2 ? 'red' : 'blue'))
+                .main-page__calculator-col
+                  .main-page__calculator-icon
+                    +button-icon.button-icon--white
+                  .main-page__calculator-title 
+                    |#{item}

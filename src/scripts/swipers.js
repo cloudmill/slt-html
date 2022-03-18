@@ -33,7 +33,6 @@ const BREAKPOINT = 1280;
             slider_options = {
               ...slider_options,
               
-              // slidesPerView: 3,
               loop: true,
               centeredSlides: true,
             }

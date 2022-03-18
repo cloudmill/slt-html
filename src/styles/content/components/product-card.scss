@@ -27,13 +27,56 @@
     }
 
     .button-icon {
-      background: var(--color-blue);
-      border-color: var(--color-blue);
+      background: var(--color-black);
+      border-color: var(--color-black);
     }
 
     .button-icon__svg {
       path {
         fill: var(--color-white);
+      }
+    }
+  }
+
+  &--blue {
+    &:hover {
+      .button-icon {
+        background: var(--color-blue);
+        border-color: var(--color-blue);
+      }
+
+      .button-icon__svg {
+        path {
+          fill: var(--color-white);
+        }
+      }
+    }
+  }
+  &--red {
+    &:hover {
+      .button-icon {
+        background: var(--color-red);
+        border-color: var(--color-red);
+      }
+
+      .button-icon__svg {
+        path {
+          fill: var(--color-white);
+        }
+      }
+    }
+  }
+  &--green {
+    &:hover {
+      .button-icon {
+        background: var(--color-green);
+        border-color: var(--color-green);
+      }
+
+      .button-icon__svg {
+        path {
+          fill: var(--color-white);
+        }
       }
     }
   }
