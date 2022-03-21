@@ -3,6 +3,9 @@
 
   &__hero {
     margin-top: getRem(308px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(108px);
+    }
   }
   &__hero-row {
     display: flex;
@@ -52,17 +55,20 @@
   &__cooperation {
     height: getRem(800px);
     @media (max-width: ($breakpoint - 1px)) {
-      // height: getRem(485px);
-      height: 485px;
+      height: getRem(485px);
     }
 
     background: url("assets/images/cooperation.jpg") center no-repeat;
+    @media (max-width: ($breakpoint-m - 1px)) {
+      background: url("assets/images/cooperation-mobile.jpg") center no-repeat;
+      background-size: cover;
+    }
     background-size: cover;
   }
   &__cooperation-container {
     padding: getRem(50px) getRem(40px);
     @media (max-width: ($breakpoint - 1px)) {
-      padding: 20px;
+      padding: getRem(20px);
     }
 
     height: 100%;
@@ -98,10 +104,11 @@
     font-weight: 500;
     color: var(--color-white);
     letter-spacing: -3px;
+    @include fsl(44px, 110%);
     @media (max-width: ($breakpoint - 1px)) {
       letter-spacing: -0.5px;
+      @include fsl(20px);
     }
-    @include fsl(44px, 110%);
   }
   &__cooperation-span {
     color: var(--color-blue);
@@ -113,6 +120,10 @@
     font-weight: 500;
     letter-spacing: -0.5px;
     @include fsl(18px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px);
+      letter-spacing: 0; 
+    }
   }
   &__cooperation-bot {
     display: flex;
@@ -120,6 +131,9 @@
 
   &__top {
     margin-bottom: getRem(80px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(32px);
+    }
   }
   &__top-row {
     display: flex;
@@ -147,12 +161,15 @@
     @include fsl(18px, 130%);
     @media (max-width: ($breakpoint - 1px)) {
       letter-spacing: 0;
+      @include fsl(14px);
     }
     color: var(--color-gray);
   }
   &__top-button {
     margin-top: 11px;
-    
+    @media (max-width: ($breakpoint)) {
+      margin-top: 16px;
+    }
     display: flex;
   }
 
@@ -180,6 +197,9 @@
   }
   &__slider-slide {
     width: calc(#{$col-part-d} * 4 - #{$col-gap});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(266px);
+    }
   }
   &__slider-image {
     margin-bottom: getRem(16px);
@@ -196,18 +216,34 @@
 
   &__calculator {
     height: getRem(742px);
+    @media (max-width: ($breakpoint - 1px)) {
+      height: auto;
+    }
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
 
     background: url('assets/images/calculator-bg.jpg') center no-repeat;
     background-size: cover;
+    @media (max-width: ($breakpoint - 1px)) {
+      background: url("assets/images/calculator-bg-mobile.jpg") center no-repeat;
+      background-size: cover;
+    }
   }
   &__calculator-link {
     position: relative;
     z-index: 0;
     padding: getRem(40px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(20px);
+    }
 
     height: 100%;
+    @media (max-width: ($breakpoint - 1px)) {
+      min-height: getRem(335px);
+    }
     display: flex;
     align-items: flex-end;
 
@@ -216,6 +252,10 @@
 
     &:not(:first-child) {
       border-left: 1px solid $rgba-white;
+      @media (max-width: ($breakpoint - 1px)) {
+        border-left: none;
+        border-top: 1px solid $rgba-white;
+      }
     }
 
     &::after {
@@ -225,6 +265,9 @@
       right: 0;
       bottom: 0;
       transform: translateY(getRem(24px));
+      @media (max-width: ($breakpoint - 1px)) {
+        display: none;
+      }
 
       height: getRem(24px);
 
@@ -257,24 +300,49 @@
     }
 
     &:hover::after {
-      transform: none;
+      @media (min-width: $breakpoint) {
+        transform: none;
+      }
     }
 
     &:hover {
-      background: rgba(#060606, 0.2);
-      #{$comp}__calculator-title {
-        transform: translateY(getRem(-24px));
+      @media (min-width: $breakpoint) {
+        background: rgba(#060606, 0.2);
+        #{$comp}__calculator-title {
+          transform: translateY(getRem(-24px));
+        }
       }
     }
   }
   &__calculator-col {
     height: getRem(208px);
+    @media (max-width: ($breakpoint - 1px)) {
+      position: relative;
+      z-index: 0;
+      height: auto;
+      width: 100%;
+    }
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: getRem(-20px);
+      right: getRem(-20px);
+      bottom: getRem(-20px);
+      top: 0;
+
+      background: linear-gradient(180deg, rgba(52, 52, 54, 0) 0%, #333335 100%);
+    }
   }
   &__calculator-icon {
     margin-bottom: getRem(40px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(24px);
+    }
     display: flex;
   }
   &__calculator-title {
@@ -282,6 +350,10 @@
     letter-spacing: -2px;
     font-weight: 500;
     @include fsl(36px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: -0.5px;
+      @include fsl(18px);
+    }
     transition: $transition;
   }
 }

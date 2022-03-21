@@ -1,27 +1,27 @@
 .section {
   margin-top: getRem(120px);
   @media (max-width: ($breakpoint - 1px)) {
-    margin-top: 48px;
+    margin-top: getRem(48px);
   }
 
   &--first {
     margin-top: getRem(248px);
     @media (max-width: ($breakpoint - 1px)) {
-      margin-top: 83px;
+      margin-top: getRem(83px);
     }
   }
 
   &--md {
     margin-top: getRem(60px);
     @media (max-width: ($breakpoint - 1px)) {
-      margin-top: 25px;
+      margin-top: getRem(25px);
     }
   }
 
   &__block {
     margin-top: getRem(60px);
     @media (max-width: ($breakpoint - 1px)) {
-      margin-top: 25px;
+      margin-top: getRem(25px);
     }
   }
 }

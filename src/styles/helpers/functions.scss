@@ -1,5 +1,5 @@
-@function getVw($px) {
-  @return $px / 19.2px * 1vw;
+@function getVw($px, $width) {
+  @return $px / $width * 1vw;
 }
 
 @function getRem($px) {

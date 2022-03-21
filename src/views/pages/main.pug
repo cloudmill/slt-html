@@ -5,6 +5,10 @@ include ../components/tech-docs
 include ../components/product-cards
 include ../components/slider-buttons
 
+
+block loader 
+
+
 block content
   -
     var ddata = {
@@ -51,7 +55,7 @@ block content
                 p.main-page__cooperation-text 
                   |Мы активно сотрудничаем с торговыми компаниями, проектными, монтажными и строительными организациями
           .main-page__cooperation-bot
-            +link-right.button--color-white
+            +link-right.button--color-white 
               |Сотрудничество
     section.section
       .container 

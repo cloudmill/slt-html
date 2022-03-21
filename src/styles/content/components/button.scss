@@ -4,7 +4,7 @@
     padding: getStatic(16px, 14.4px) getStatic(24px, 14.4px);
   }
   @media (max-width: ($breakpoint - 1px)) {
-    padding: 10px 12px;
+    padding: getRem(10px) getRem(16px);
   }
 
   display: flex;
@@ -15,11 +15,14 @@
     font-size: getStatic(14px, 14.4px);
   }
   @media (max-width: ($breakpoint - 1px)) {
-    @include fsl(10px);
+    @include fsl(12px);
   }
   cursor: pointer;
   border: 1px solid var(--color-blue);
   border-radius: 60px;
+  @media (max-width: ($breakpoint - 1px)) {
+    border-radius: 45px;
+  }
 
   &__text {
     font-weight: 500;

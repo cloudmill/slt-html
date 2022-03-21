@@ -17,7 +17,22 @@ button:active, button:focus {outline: none;}
 button::-moz-focus-inner {border: 0;}
 
 html {
-  font-size: getVw($fs);
+  font-size: getVw($fs, 19.2px);
+  @media (max-width: ($breakpoint - 1px)) {
+    font-size: getVw($fs, 12.8px);
+  }
+  @media (max-width: ($breakpoint-t - 1px)) {
+    font-size: getVw($fs, 10.24px);
+  }
+  @media (max-width: ($breakpoint-m - 1px)) {
+    font-size: getVw($fs, 7.68px);
+  }
+  @media (max-width: ($breakpoint-s - 1px)) {
+    font-size: getVw($fs, 5.76px);
+  }
+  @media (max-width: ($breakpoint-xs)) {
+    font-size: getVw($fs, 3.75px);
+  }
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -44,7 +59,7 @@ h1 {
   @include fsl(80px, 90%);
   letter-spacing: -3px;
   @media (max-width: ($breakpoint - 1px)) {
-    @include fsl(20px, 100%);
+    @include fsl(32px, 100%);
     letter-spacing: -1px;
   }
 }
@@ -75,6 +90,10 @@ h4 {
 h5 {  
   @include fsl(24px, 110%);
   letter-spacing: -1px;
+  @media (max-width: ($breakpoint - 1px)) {
+    letter-spacing: -0.5px;
+    @include fsl(16px);
+  }
 }
 
 ul,
