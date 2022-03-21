@@ -19,20 +19,21 @@ const BREAKPOINT = 1280;
         let slider_options = {
           slidesPerView: 'auto',
 
-          spaceBetween: 8,
+          spaceBetween: 20,
 
-          breakpoints: {
-            [BREAKPOINT]: {
-              spaceBetween: 20,
-            },
-          },
+          // breakpoints: {
+          //   [BREAKPOINT]: {
+          //     spaceBetween: 20,
+          //   },
+          // },
         };
 
         switch (slider_id) {
           case 10:
             slider_options = {
-              ...slider_options,
-              
+              // ...slider_options,
+              slidesPerView: 'auto',
+              spaceBetween: 150,
               loop: true,
               centeredSlides: true,
             }

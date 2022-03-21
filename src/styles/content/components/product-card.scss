@@ -10,30 +10,32 @@
   transition: $transition;
 
   &:hover {
-    padding: 20px;
-
-    #{$comp}__container {
-      background: var(--color-darken-white);
-    }
-    #{$comp}__content {
-      opacity: 0;
-    }
-    #{$comp}__hidden {
-      transform: none;
-      opacity: 1;
-    }
-    #{$comp}__image {
-      transform: scale(1.1);
-    }
-
-    .button-icon {
-      background: var(--color-black);
-      border-color: var(--color-black);
-    }
-
-    .button-icon__svg {
-      path {
-        fill: var(--color-white);
+    @media (min-width: $breakpoint) {
+      padding: 20px;
+  
+      #{$comp}__container {
+        background: var(--color-darken-white);
+      }
+      #{$comp}__content {
+        opacity: 0;
+      }
+      #{$comp}__hidden {
+        transform: none;
+        opacity: 1;
+      }
+      #{$comp}__image {
+        transform: scale(1.1);
+      }
+  
+      .button-icon {
+        background: var(--color-black);
+        border-color: var(--color-black);
+      }
+  
+      .button-icon__svg {
+        path {
+          fill: var(--color-white);
+        }
       }
     }
   }

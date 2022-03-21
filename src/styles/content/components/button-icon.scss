@@ -43,4 +43,10 @@
   &--green {
     border-color: var(--color-green);
   }
+
+  &--left {
+    #{$comp}__svg {
+      transform: rotate(90deg);
+    }
+  }
 }

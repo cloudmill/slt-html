@@ -61,10 +61,10 @@ mixin header
               .header__col
                 .header__nav 
                   ul.header__list 
-                    each item in ddata.nav
+                    each item, i in ddata.nav
                       li.header__item 
                         if (item.isAccordion)
-                          .header__accordion
+                          .header__accordion(data-accordion-header=i)
                             .header__accordion-text 
                               |#{item.text}
                             .header__accordion-icon 
@@ -96,3 +96,27 @@ mixin header
                     |0
                 .header__menu 
                   |menu
+    .header__panel
+      .container 
+        .header__panel-overlay
+        .header__panel-spoiler(data-header-modal='0')
+          .header__panel-inner 
+            ul.header__panel-list
+              each item in ['СЛТ Аква', 'Производство', 'Работа у нас',]
+                li.header__panel-item 
+                  a.header__panel-link(href="#")
+                    |#{item}
+        .header__panel-spoiler(data-header-modal='2')
+          .header__panel-inner 
+            ul.header__panel-list
+              each item in ['Разрешительная документация', 'Программы для проектировщиков', 'Информационные материалы',]
+                li.header__panel-item 
+                  a.header__panel-link(href="#")
+                    |#{item}
+        .header__panel-spoiler(data-header-modal='3')
+          .header__panel-inner 
+            ul.header__panel-list
+              each item in ['Условия сотрудничества', 'Рекламная поддержка',]
+                li.header__panel-item 
+                  a.header__panel-link(href="#")
+                    |#{item}

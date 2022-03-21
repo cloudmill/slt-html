@@ -1,0 +1,21 @@
+.slider-buttons {
+  $comp: &;
+  position: absolute;
+  z-index: 2;
+  left: calc(#{$col-part-d} * 3);
+  right: calc(#{$col-part-d} * 3);
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 getRem(44px);
+
+  display: flex;
+  justify-content: space-between;
+
+  .button-icon {
+    background: var(--color-white);
+  }
+
+  &__item {
+    cursor: pointer;
+  }
+}

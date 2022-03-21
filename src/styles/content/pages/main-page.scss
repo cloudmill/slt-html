@@ -33,6 +33,10 @@
   &__section {
     margin-top: getRem(20px);
     padding: 0 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 12px;
+      padding: 0 12px;
+    }
   }
   &__section-grid {
     display: grid;
@@ -48,7 +52,8 @@
   &__cooperation {
     height: getRem(800px);
     @media (max-width: ($breakpoint - 1px)) {
-      height: getRem(485px);
+      // height: getRem(485px);
+      height: 485px;
     }
 
     background: url("assets/images/cooperation.jpg") center no-repeat;
@@ -93,6 +98,9 @@
     font-weight: 500;
     color: var(--color-white);
     letter-spacing: -3px;
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: -0.5px;
+    }
     @include fsl(44px, 110%);
   }
   &__cooperation-span {
@@ -137,6 +145,9 @@
     font-weight: 500;
     letter-spacing: -0.5px;
     @include fsl(18px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+    }
     color: var(--color-gray);
   }
   &__top-button {
@@ -147,14 +158,34 @@
 
   &__title {
     letter-spacing: -3px;
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: -0.5px;
+    }
   }
 
-  &__slider {}
+  &__slider {
+    position: relative;
+    z-index: 0;
+  }
+  &__slider-desktop {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
+  &__slider-mobile {
+    display: none;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
   &__slider-slide {
     width: calc(#{$col-part-d} * 4 - #{$col-gap});
   }
   &__slider-image {
     margin-bottom: getRem(16px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 12px;
+    }
 
     display: flex;
     align-items: center;
