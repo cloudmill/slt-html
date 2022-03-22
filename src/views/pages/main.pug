@@ -1,12 +1,14 @@
 extends ../layouts/master
 
 include ../components/breadcrumbs
+include ../components/loader
 include ../components/tech-docs
 include ../components/product-cards
 include ../components/slider-buttons
 
 
 block loader 
+  +loader
 
 
 block content
@@ -30,7 +32,7 @@ block content
   .main-page 
     section.main-page__hero
       .container 
-        .main-page__hero-row 
+        .main-page__hero-row(data-aos='fade-up')
           .main-page__hero-col
             h1 
               |Производство полимерных трубопроводных систем 
@@ -38,7 +40,7 @@ block content
             +link-right
               |О компании
     section.section.section--md 
-      .main-page__image 
+      .main-page__image(data-aos='fade-up')
         img.main-page__img(src="assets/images/main.jpg", alt="")
     section.main-page__section 
       .main-page__section-grid 
