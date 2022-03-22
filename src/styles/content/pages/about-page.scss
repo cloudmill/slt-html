@@ -1,3 +1,64 @@
 .about-page {
-  
+
+  &__nav {
+    display: flex;
+  }
+  &__nav-item {
+    display: flex;
+
+    &:not(:first-child) {
+      margin-left: getRem(20px);
+    }
+  }
+  &__nav-link {
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @include fsl(20px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(14px);
+    }
+
+    &.active {
+      color: var(--color-blue);
+    }
+  }
+
+  &__intro {}
+  &__intro-row {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+  &__intro-col {
+    flex-shrink: 0;
+
+    &:nth-child(2) {
+      width: calc(#{$col-part-d} * 4 - #{$col-gap});
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 16px;
+        width: auto;
+      }
+    }
+  }
+  &__intro-title {
+    font-weight: 500;
+    letter-spacing: -3px;
+    @include fsl(110px, 90%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(48px, 100%);
+      letter-spacing: -1px;
+    }
+  }
+  &__intro-text {
+    font-weight: 500;
+    letter-spacing: -1px;
+    @include fsl(20px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(14px);
+    }
+  }
 }

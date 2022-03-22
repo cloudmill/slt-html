@@ -28,5 +28,10 @@ window.addEventListener("load", () => {
     }, DELAY * layers.length);
   } else {
     document.body.classList.remove('body--hidden')
+    AOS.init({
+      once: true,
+      offset: 0,
+      duration: 1000,
+    });
   }
 })
