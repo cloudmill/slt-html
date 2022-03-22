@@ -24,7 +24,7 @@ window.addEventListener("load", () => {
         offset: 0,
         duration: 1000,
       });
-
+      document.querySelector('.main-page__video').play()
     }, DELAY * layers.length);
   } else {
     document.body.classList.remove('body--hidden')
