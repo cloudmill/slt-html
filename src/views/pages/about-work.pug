@@ -1,0 +1,79 @@
+extends ../layouts/master
+
+include ../components/breadcrumbs
+include ../components/button-icon
+include ../components/about-comp
+
+
+block variables 
+  -
+    var isDefault = true
+
+block content
+  .about-page 
+    section.section.section--first
+      .container 
+        +breadcrumbs(items = ['о компании'] page = "СЛТ Аква")
+    section.section.section--md 
+      .container 
+        ul.about-page__nav
+          each item, i in ['СЛТ Аква', 'Производство', 'Работа у нас']
+            li.about-page__nav-item 
+              a.about-page__nav-link(href="#" class=(i === 0 ? 'active' : '')) 
+                |#{item}
+    section.section 
+      .container  
+        .about-page__intro 
+          .about-page__intro-row 
+            .about-page__intro-col
+              .about-page__intro-title 
+                |СЛТ Аква
+            .about-page__intro-col
+              p.about-page__intro-text 
+                |От качества наших трубопроводных систем зависит безопасность и комфорт жизни людей, поэтому мы с большой ответственностью относимся к продуктам, которые производим и поставляем нашему потребителю.
+          .about-page__intro-image 
+            img(src="assets/images/about-intro.jpg", alt="")
+            +about-logo-svg.about-page__intro-svg
+    section.section 
+      .container 
+        h1.about-page__title
+          |Миссия и ценности
+        .about-page__section 
+          .about-page__section-row 
+            .about-page__section-col 
+              h5.about-page__label 
+                |Наша миссия
+            .about-page__section-col
+              ul.about-page__list 
+                each item in ['Обеспечивать надежными трубопроводными системами объекты строительства', 'Развивать культуру взаимоотношений и профессиональный подход в области инженерных сетей, создавать комфортную среду для жизни людей']
+                  li.about-page__list-item 
+                    h4
+                      |#{item}
+        .section
+          .about-page__section 
+            .about-page__section-row 
+              .about-page__section-col
+                h5.about-page__label 
+                  |Наша философия
+              .about-page__section-col
+                .about-page__section-grid 
+                  each item in ['Предоставлять клиенту комплексное решение, которое отличается качеством и надежностью, простотой и удобством, технологичностью и инновационностью', 'Направлять наши действия и устремления на повышение уровня взаимоотношений и профессионализма участников рынка', 'Разрабатывать современные решения для создания комфортных условий жизни людей']
+                    .about-page__section-item 
+                      |#{item}
+    section.section 
+      |QWESLIDER
+    section.section 
+      .container 
+        .about-page__section 
+          .about-page__section-row 
+            .about-page__section-col 
+              h5.about-page__label 
+                |Наши принципы
+            .about-page__section-col
+              ul.about-page__list 
+                each item in ['Ценить каждого клиента и выстраивать с ним долгосрочные доверительные отношения', 'Ставить перед собой амбициозные цели, реализовывать их и поднимать планку еще выше', 'Взаимодействовать с коллегами эффективно', 'Стремиться создавать новое', 'Безопасность превыше всего']
+                  li.about-page__list-item 
+                    h4
+                      |#{item}
+    section.section.section--big 
+      +about-bot

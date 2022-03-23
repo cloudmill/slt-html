@@ -1,6 +1,10 @@
 .main {
   margin-bottom: getRem(120px);
   @media (max-width: ($breakpoint - 1px)) {
-    margin-bottom: 48px;
+    margin-bottom: getRem(48px);
+  }
+
+  &--default {
+    margin-bottom: 0;
   }
 }

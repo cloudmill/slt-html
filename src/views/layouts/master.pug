@@ -27,14 +27,14 @@ html(lang='ru')
   
   body.body
 
+    block loader
+    
     .wrapper
-
-      block loader
-
+      block variables
       block header
         +header
 
-      main.main
+      main.main(class=(isDefault ? "main--default" : ""))
         block content
 
       block footer

@@ -18,6 +18,13 @@
     }
   }
 
+  &--big {
+    margin-top: getRem(240px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(48px);
+    }
+  }
+
   &__block {
     margin-top: getRem(60px);
     @media (max-width: ($breakpoint - 1px)) {
