@@ -51,7 +51,7 @@ img {
   max-height: 100%;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
@@ -97,6 +97,15 @@ h5 {
   @media (max-width: ($breakpoint - 1px)) {
     letter-spacing: -0.5px;
     @include fsl(16px);
+  }
+}
+
+h6 {
+  letter-spacing: -0.5px;
+  @include fsl(18px, 110%);
+  @media (max-width: ($breakpoint - 1px)) {
+    @include fsl(14px);
+    letter-spacing: 0;
   }
 }
 

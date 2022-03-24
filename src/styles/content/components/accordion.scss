@@ -1,0 +1,203 @@
+.accordion {
+  $comp: &;
+
+  background: var(--color-white);
+  border: 1px solid var(--color-borders);
+  transition: $transition;
+
+  &.active {
+    border-color: var(--color-blue);
+
+    #{$comp}__icon {
+      transform: rotate(-180deg);
+    }
+
+    #{$comp}__svg {
+      path {
+        fill: var(--color-black);
+      }
+    }
+  }
+
+  &__head {
+    padding: getRem(36px) getRem(32px) getRem(36px) getRem(24px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(20px);
+    }
+
+    cursor: pointer;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    @media (max-width: ($breakpoint - 1px)) {
+      align-items: stretch;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      width: calc(#{$col-part-d} * 4 - 2.5rem);
+      @media (max-width: ($breakpoint - 1px)) {
+        order: 1;
+        width: calc(#{$col-part-m} * 3 - 1.25rem);
+      }
+    }
+    &:nth-child(2) {
+      width: calc(#{$col-part-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(12px);
+        width: calc(#{$col-part-m} * 3 - 1.25rem);
+        order: 3;
+      }
+    }
+    &:nth-child(3) {
+      width: calc(#{$col-part-d} * 2);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(12px);
+        width: calc(#{$col-part-m} * 3 - 1.25rem);
+        order: 4;
+      }
+    }
+    &:nth-child(4) {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      @media (max-width: ($breakpoint - 1px)) {
+        order: 2;
+        width: calc(#{$col-width-m} - 1.5rem);
+        flex-grow: 0;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @include fsl(20px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(16px);
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @include fsl(16px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+  }
+  &__location-icon {
+    margin-right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: getRem(19px);
+    height: getRem(19px);
+  }
+  &__location-svg {
+    width: 100%;
+    height: 100%;
+  }
+  &__location-text {
+    letter-spacing: -0.5px;
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(12px, 110%);
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    
+    transition: $transition;
+  }
+  
+  &__svg {
+    path {
+      fill: var(--color-blue);
+      transition: $transition;
+    }
+  }
+
+  &__body {
+    display: none;
+  }
+
+  &__container {
+    padding: getRem(24px) calc(#{$col-part-d}) getRem(60px) calc(#{$col-part-d} * 2);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(12px) getRem(20px) getRem(20px);
+    }
+  }
+
+  &__block {
+    
+    &:not(:first-child) {
+      margin-top: getRem(60px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(32px);
+      }
+    }
+  }
+
+  &__list {
+    margin-top: getRem(32px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(16px);
+    }
+  }
+
+  &__item {
+    padding-left: getRem(40px);
+    position: relative;
+    z-index: 0;
+
+    letter-spacing: -0.5px;
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(12px, 160%);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 2px;
+
+      width: getRem(16px);
+      height: getRem(16px);
+
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.80385 11L7 2L12.1962 11H1.80385Z' stroke='%2307A8D7' stroke-width='2'/%3E%3C/svg%3E%0A");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &:not(:first-child) {
+      margin-top: getRem(12px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(10px);
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+  }
+}

@@ -3,7 +3,7 @@
 
   padding: getRem(18px) getRem(25px);
   @media (max-width: ($breakpoint - 1px)) {
-    padding: getRem(12px) getRem(17px);
+    padding: getRem(10px) getRem(16px);
   }
 
   display: flex;

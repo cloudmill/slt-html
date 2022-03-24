@@ -9,6 +9,18 @@
     {
       "href": "catalog",
       "title": "Каталог"
+    },
+    {
+      "href": "about",
+      "title": "[О нас] СЛТ Аква"
+    },
+    {
+      "href": "about-production",
+      "title": "[О нас] Производство"
+    },
+    {
+      "href": "about-work",
+      "title": "[О нас] Работа у нас"
     }
   ]
 }

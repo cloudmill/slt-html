@@ -1,0 +1,42 @@
+mixin accordion 
+  .accordion(data-accordion='')
+    .accordion__head(data-accordion-button='')
+      .accordion__row 
+        .accordion__col
+          .accordion__title 
+            |Менеджер по продажам
+        .accordion__col
+          .accordion__text 
+            |от 50000 ₽
+        .accordion__col
+          .accordion__location 
+            .accordion__location-icon 
+              +geo-svg.accordion__location-svg
+            .accordion__location-text 
+              |Санкт-Петербург
+        .accordion__col
+          .accordion__icon 
+            +arrow-svg.accordion__svg
+    .accordion__body(data-accordion-dropdown='')
+      .accordion__container 
+        .accordion__block 
+          h6
+            |Что будет делать наш SMM-щик
+          ul.accordion__list
+            each item in ['Социальные сети компании: планирование, создание, наполнение, развитие, ведение, общение', 'CRM и рассылки', 'Взять на себя заботу о нашем сайте', 'Программа лояльности: ведение, развитие и совершенствование', 'Участие в организации выставок, семинаров, вебинаров и акций для клиентов компании', 'Разработка видео- и фотоматериалов самостоятельно и с помощью подрядчиков', 'Организовывать и контролировать представленность компании, ТМ-к в сети интернет, на интернет-площадках дистрибьюторов']
+              li.accordion__item 
+                |#{item}
+        .accordion__block 
+          h6
+            |Для реализации задач понадобится
+          ul.accordion__list
+            each item in ['Навыки писать интересные, нестандартные тексты грамотно', 'Понимать принципы работы социальных сетей', 'Разбираться в основах фирменного стиля, CRM, CMS, Google Analytics и Yandex.Metrika', 'Владеть необходимыми для работы программами и видео/фото-редакторами', 'Иметь опыт в проведении вебинаров или знать точный план организации процесса', 'Уметь работать «руками» и «головой»', ]
+              li.accordion__item 
+                |#{item}
+        .accordion__block 
+          h6
+            |Ждем тебя, наш СЛТшник!
+        .accordion__block 
+          .accordion__button 
+            +link-right 
+              |Откликнуться

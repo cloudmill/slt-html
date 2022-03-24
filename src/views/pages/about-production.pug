@@ -10,6 +10,15 @@ block variables
     var isDefault = true
 
 block content
+  -
+    var ddata = {
+      quality: [
+        {title: "Сырье", text: "Входной контроль качества и регулярный контроль изменения параметров сырья после изготовления в собственной лаборатории."},
+        {title: "Производство", text: "Проверка внешнего диаметра, толщины стенки, длины трубы, внешнего вида с помощью ручных и автоматизированных инструментов. На линиях установлены лазерные измерители диаметра и ультразвуковые толщиномеры."},
+        {title: "Маркировка", text: "Проверка соответствия маркировки с выпускаемой продукцией, соответствие штрихкода, расстояние между маркировкой."},
+        {title: "Упаковка", text: "Соответствие упаковки, количество штук/метров в упаковке, соответствие этикетки."},
+      ]
+    }
   .about-page 
     section.section.section--first
       .container 
@@ -75,19 +84,89 @@ block content
                   .about-page__stats-caption 
                     |Фитингов в год 
     section.section 
-      |QWESLIDER
+      +about-slider
     section.section 
       .container 
         .about-page__section 
           .about-page__section-row 
             .about-page__section-col 
               h5.about-page__label 
-                |Наши принципы
+                |Контроль качества
+            .about-page__section-col
+              h2 
+                |Мы выпускаем продукцию под собственными торговыми марками
+          .section 
+            .about-page__cards
+              a.about-page__card.aqua(href="#") 
+                .about-page__card-container 
+                  h4 
+                    |SLT AQUA
+                  .about-page__card-bot 
+                    .about-page__card-button
+                      +button-icon 
+                    .about-page__card-logo 
+                      +card-logo.about-page__card-svg
+              a.about-page__card.blockfire(href="#") 
+                .about-page__card-container 
+                  h4 
+                    |SLT BLOCKFIRE
+                  .about-page__card-bot 
+                    .about-page__card-button
+                      +button-icon 
+                    .about-page__card-logo 
+                      +blockfire-svg.about-page__card-svg
+              a.about-page__card.pert(href="#") 
+                .about-page__card-container 
+                  h4 
+                    |SLT  PE-RT
+                  .about-page__card-bot 
+                    .about-page__card-button
+                      +button-icon 
+                    .about-page__card-logo 
+                      +pe-rt-svg.about-page__card-svg
+    section.section 
+      .container 
+        .about-page__section 
+          .about-page__section-row 
+            .about-page__section-col 
+              h5.about-page__label 
+                |Контроль качества
+            .about-page__section-col
+              h4.about-page__heading 
+                |Обеспечивается на каждом этапе технологического цикла при производстве, хранении и последующей отгрузки продукции
+              .about-page__grid 
+                each item in ddata.quality
+                  .about-page__grid-item 
+                    h5.about-page__grid-title
+                      |#{item.title}
+                    p.about-page__grid-text 
+                      |#{item.text}
+    section.section 
+      .container 
+        .about-page__section 
+          .about-page__section-row 
+            .about-page__section-col 
+              h5.about-page__label 
+                |Тестирование
             .about-page__section-col
               ul.about-page__list 
-                each item in ['Ценить каждого клиента и выстраивать с ним долгосрочные доверительные отношения', 'Ставить перед собой амбициозные цели, реализовывать их и поднимать планку еще выше', 'Взаимодействовать с коллегами эффективно', 'Стремиться создавать новое', 'Безопасность превыше всего']
+                each item in ['Регулярное тестирование трубопроводных сборок на собственном гидравлическом стенде и стенде для испытаний на пожаростойкость (по ГОСТ Р 58832)', 'Регулярные испытания и сертификация выпускаемой продукции в независимых аккредитованных лабораториях', 'От каждой партии выпущенной продукции отбирается арбитражная проба, которая хранится весь гарантийный срок',]
                   li.about-page__list-item 
                     h4
                       |#{item}
-    section.section.section--big 
+    section.section 
+      .container 
+        .about-page__section 
+          .about-page__section-row 
+            .about-page__section-col 
+              h5.about-page__label 
+                |Сертификация
+            .about-page__section-col
+              h4.about-page__heading.about-page__heading--sm
+                |Наша продукция имеет полный пакет документов соответствия требованиям технических нормативов регулирующих органов.
+          .about-page__partners
+            - for (i = 0; i < 7; i++)
+              .about-page__partners-item 
+                img(src=`assets/images/partners-${i+1}.png`, alt="")
+    section.section
       +about-bot

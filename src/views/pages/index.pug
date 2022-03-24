@@ -11,7 +11,7 @@ block grid-test
 
 block content
   .container
-    ul
+    ul.routes
       each route in data.routes
-        li
-          a(href=route.href)= route.title
+        li.routes__item
+          a.button(href=route.href)= route.title

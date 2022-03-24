@@ -25,6 +25,10 @@
     }
   }
 
+  &--default {
+    margin-top: 0;
+  }
+
   &__block {
     margin-top: getRem(60px);
     @media (max-width: ($breakpoint - 1px)) {

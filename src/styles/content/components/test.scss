@@ -1,69 +1,11 @@
-.test {
-}
-
-.test-container {
-  margin: 50px;
-  display: flex;
+.routes {
+  margin-top: 30px;
   
-}
+  &__item {
+    display: flex;
 
-.test-parent {
-  position: relative;
-  z-index: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
-}
-
-.test-layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition: 1s;
-  overflow: hidden;
-
-  svg {
-    transition: 1s;
-  }
-}
-
-.test-first {
-
-  &.hidden {
-    transform: translateY(-100%);
-
-    .test-first-layer {
-      transform: translateY(100%);
-    }
-  }
-}
-.test-second {
-
-  &.hidden {
-    transform: translateX(100%);
-
-    .test-second-layer {
-      transform: translateX(-100%);
-    }
-  }
-}
-.test-third {
-
-  &.hidden {
-    transform: translateY(100%);
-
-    .test-third-layer {
-      transform: translateY(-100%);
+    &:not(:first-child) {
+      margin-top: 10px;
     }
   }
 }

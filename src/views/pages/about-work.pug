@@ -1,6 +1,7 @@
 extends ../layouts/master
 
 include ../components/breadcrumbs
+include ../components/accordion
 include ../components/button-icon
 include ../components/about-comp
 
@@ -32,7 +33,7 @@ block content
               p.about-page__intro-text 
                 |От качества наших трубопроводных систем зависит безопасность и комфорт жизни людей, поэтому мы с большой ответственностью относимся к продуктам, которые производим и поставляем нашему потребителю.
           .about-page__intro-image 
-            img(src="assets/images/about-intro.jpg", alt="")
+            img(src="assets/images/about-work.jpg", alt="")
             +about-logo-svg.about-page__intro-svg
     section.section 
       .container 
@@ -42,38 +43,47 @@ block content
           .about-page__section-row 
             .about-page__section-col 
               h5.about-page__label 
-                |Наша миссия
+                |ВСЕ ЛУЧШИЕ — НАШИ!
             .about-page__section-col
               ul.about-page__list 
-                each item in ['Обеспечивать надежными трубопроводными системами объекты строительства', 'Развивать культуру взаимоотношений и профессиональный подход в области инженерных сетей, создавать комфортную среду для жизни людей']
+                each item in ['Как компания мы #[span.about-page__list-span надежный] поставщик и партнер', 'Как производитель мы устанавливаем высокие стандарты #[span.about-page__list-span качества] для нашей продукции', 'Как команда мы ценим #[span.about-page__list-span профессионализм] коллег и готовность делать больше, чем от тебя ожидают', 'Как социальная система мы несем полную #[span.about-page__list-span ответственность] перед своими сотрудниками, партнерами и потребителями', 'Как производственная организация мы следим за #[span.about-page__list-span технологическими] разработками и используем только передовое оборудование и сырье']
                   li.about-page__list-item 
                     h4
                       |#{item}
-        .section
-          .about-page__section 
-            .about-page__section-row 
-              .about-page__section-col
-                h5.about-page__label 
-                  |Наша философия
-              .about-page__section-col
+    section.section 
+      +about-slider
+    section.section
+      .container
+        .about-page__section 
+          .about-page__section-row 
+            .about-page__section-col
+              h5.about-page__label 
+                |Условия
+            .about-page__section-col
+              h2.about-page__heading 
+                |Офис в Москве
+              .about-page__section-grid 
+                each item in ['Слаженная команда профессионалов', 'Комфортный офис класс А с зоной Coffee Point в БЦ Melnikoff House (в пешей доступности от м. Комсомольская/Бауманская)', 'Полный пакет технического и программного обеспечения для продуктивной работы', 'Компенсация мобильной связи', 'Участие в семинарах и тренингах по повышению квалификации', 'Официальное трудоустройство согласно ТК РФ', 'Пятидневная рабочая неделя 9:00 – 18:00 (комбинированный формат работы удаленно/офис)', 'Ежегодный оплачиваемый отпуск — 28 календарных дней ', 'Выплата заработной платы всегда в срок (2 раза в месяц)', 'Перспективы карьерного роста', 'Корпоративные праздники и новогодние подарки для детей сотрудников']
+                  .about-page__section-item 
+                    |#{item}
+              .section
+                h2.about-page__heading 
+                  |Производство в Тольятти
                 .about-page__section-grid 
-                  each item in ['Предоставлять клиенту комплексное решение, которое отличается качеством и надежностью, простотой и удобством, технологичностью и инновационностью', 'Направлять наши действия и устремления на повышение уровня взаимоотношений и профессионализма участников рынка', 'Разрабатывать современные решения для создания комфортных условий жизни людей']
+                  each item in ['Слаженная команда профессионалов', 'Завод располагается на территории индустриального парка «Тольяттисинтез»', 'Компенсация мобильной связи', 'Бесплатные обеды', 'В зависимости от категории задач выдается рабочая одежда', 'Участие в семинарах и тренингах по повышению квалификации', 'Официальное трудоустройство согласно ТК РФ', 'Пятидневная рабочая неделя 9:00 – 18:00', 'Ежегодный оплачиваемый отпуск — 28 календарных дней', 'Выплата заработной платы всегда в срок (2 раза в месяц)', 'Перспективы карьерного роста', 'Корпоративные праздники и новогодние подарки для детей сотрудников']
                     .about-page__section-item 
                       |#{item}
     section.section 
-      |QWESLIDER
-    section.section 
-      .container 
-        .about-page__section 
+      .about-page__vacancies
+        .container
           .about-page__section-row 
-            .about-page__section-col 
-              h5.about-page__label 
-                |Наши принципы
             .about-page__section-col
-              ul.about-page__list 
-                each item in ['Ценить каждого клиента и выстраивать с ним долгосрочные доверительные отношения', 'Ставить перед собой амбициозные цели, реализовывать их и поднимать планку еще выше', 'Взаимодействовать с коллегами эффективно', 'Стремиться создавать новое', 'Безопасность превыше всего']
-                  li.about-page__list-item 
-                    h4
-                      |#{item}
-    section.section.section--big 
+              h5.about-page__label 
+                |Открытые вакансии
+            .about-page__section-col
+              ul.about-page__vacancies-page__list
+                - for (i = 0; i < 2; i++)
+                  li.about-page__vacancies-item 
+                    +accordion
+    section.section.section--default
       +about-bot
