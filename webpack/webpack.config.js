@@ -107,7 +107,7 @@ module.exports = (env) => {
           ],
         },
         {
-          test: /\.(png|jpe?g|gif|svg|ico)(\?.*)?$/,
+          test: /\.(png|jpe?g|gif|svg|ico|webp)(\?.*)?$/,
           use: [
             {
               loader: "url-loader",

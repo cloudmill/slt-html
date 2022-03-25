@@ -21,6 +21,10 @@
     {
       "href": "about-work",
       "title": "[О нас] Работа у нас"
+    },
+    {
+      "href": "events",
+      "title": "События"
     }
   ]
 }

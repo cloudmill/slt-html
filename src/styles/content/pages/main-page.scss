@@ -53,9 +53,12 @@
   }
 
   &__video {
+    display: block;
     height: getRem(900px);
     @media (max-width: ($breakpoint - 1px)) {
-      height: getRem(375px);
+      max-height: getRem(375px);
+      height: 100%;
+      width: 100%;
     }
   }
 
@@ -235,7 +238,7 @@
     background: url('assets/images/calculator-bg.jpg') center no-repeat;
     background-size: cover;
     @media (max-width: ($breakpoint - 1px)) {
-      background: url("assets/images/calculator-bg-mobile.jpg") center no-repeat;
+      background: url("assets/images/calculator-bg-mobile.webp") center no-repeat;
       background-size: cover;
     }
   }

@@ -130,11 +130,13 @@
     max-width: 357px;
     @media (max-width: ($breakpoint - 1px)) {
       max-width: none;
-      @include fsl(12px);
     }
     @include fsl(14px, 130%);
     @media (max-width: ($breakpoint-ll - 1px)) {
       font-size: getStatic(14px, 14.4px);
+    }
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
     }
   }
 

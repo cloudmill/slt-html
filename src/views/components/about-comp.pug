@@ -3,12 +3,20 @@ mixin about-slider
   .container
     .about-page__slider
       .about-page__slider-top
-      .swiper-container.swiper-container--visible.swiper-container--visible.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='21' data-slider-prev='22' data-slider-next='23')
-        .swiper-wrapper 
-          - for (i = 0; i < 6; i++)
-            .swiper-slide 
-              .about-page__slider-slide 
-                img.about-page__slider-img(src=`assets/images/about-slide-${i+1}.webp`, alt="")
+      .about-page__slider-desktop
+        .swiper-container.swiper-container--visible.swiper-container--visible.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='21' data-slider-prev='22' data-slider-next='23')
+          .swiper-wrapper 
+            - for (i = 0; i < 6; i++)
+              .swiper-slide 
+                .about-page__slider-slide 
+                  img.about-page__slider-img(src=`assets/images/about-slide-${i+1}.webp`, alt="")
+      .about-page__slider-mobile 
+        .swiper-container.swiper-container--visible.swiper-container--visible.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='3' data-slider-prev='22' data-slider-next='23')
+          .swiper-wrapper 
+            - for (i = 0; i < 6; i++)
+              .swiper-slide 
+                .about-page__slider-slide 
+                  img.about-page__slider-img(src=`assets/images/about-slide-${i+1}.webp`, alt="")
 
 mixin about-bot 
   .about-page__bot 

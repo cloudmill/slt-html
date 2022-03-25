@@ -1,0 +1,24 @@
+.nav {
+  display: flex;
+
+  &__item {
+    display: flex;
+
+    &:not(:first-child) {
+      margin-left: getRem(20px);
+    }
+  }
+  &__link {
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @include fsl(20px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(14px);
+    }
+
+    &.active {
+      color: var(--color-blue);
+    }
+  }
+}

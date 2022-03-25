@@ -29,6 +29,10 @@
     margin-top: 0;
   }
 
+  &--overflow {
+    overflow-x: hidden;
+  }
+
   &__block {
     margin-top: getRem(60px);
     @media (max-width: ($breakpoint - 1px)) {

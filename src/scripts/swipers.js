@@ -29,6 +29,14 @@ const BREAKPOINT = 1280;
         };
 
         switch (slider_id) {
+          case 3:
+          slider_options = {
+            loop: true,
+            slidesPerView: 'auto',
+            spaceBetween: 12,
+            centeredSlides: true,
+          }
+            break;
           case 10:
             slider_options = {
               // ...slider_options,

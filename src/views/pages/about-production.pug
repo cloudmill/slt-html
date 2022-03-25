@@ -3,6 +3,7 @@ extends ../layouts/master
 include ../components/breadcrumbs
 include ../components/button-icon
 include ../components/about-comp
+include ../components/nav
 
 
 block variables 
@@ -25,11 +26,7 @@ block content
         +breadcrumbs(items = ['о компании'] page = "СЛТ Аква")
     section.section.section--md 
       .container 
-        ul.about-page__nav
-          each item, i in ['СЛТ Аква', 'Производство', 'Работа у нас']
-            li.about-page__nav-item 
-              a.about-page__nav-link(href="#" class=(i === 0 ? 'active' : '')) 
-                |#{item}
+        +nav(items = ['СЛТ Аква', 'Производство', 'Работа у нас'] active = 1)
     section.section 
       .container  
         .about-page__intro 

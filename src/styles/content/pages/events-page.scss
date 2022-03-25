@@ -1,0 +1,107 @@
+.events-page {
+
+
+  &__inner {
+    margin-top: getRem(24px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(12px);
+    }
+  }
+
+  &__event {
+
+    border-top: 1px solid var(--color-borders);
+    border-bottom: 1px solid var(--color-borders);
+    @media (max-width: ($breakpoint - 1px)) {
+      border: 0;
+    }
+
+    &:not(:first-child) {
+      margin-top: getRem(20px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(24px);
+      }
+    }
+  }
+  &__event-container {
+    padding: getRem(20px) 0;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 0;
+    }
+  }
+  &__event-row {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+  &__event-col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      width: calc(#{$col-part-d} * 7 - #{$col-gap});
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(12px);
+
+        width: auto;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &:nth-child(2) {
+      width: calc(#{$col-part-d} * 3 - #{$col-gap});
+      @media (max-width: ($breakpoint - 1px)) {
+        order: -1;
+        width: auto;
+      }
+    }
+  }
+  &__event-top {
+    margin-bottom: getRem(20px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(12px);
+    }
+
+    display: flex;
+    align-items: center;
+  }
+  &__event-label {
+    font-weight: 500;
+    color: var(--color-gray);
+    letter-spacing: -0.5px;
+    @include fsl(16px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 100%);
+      letter-spacing: 0;
+    }
+  }
+  &__event-category {
+    margin-left: getRem(20px);
+    padding: getRem(6px) getRem(20px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: getRem(12px);
+    }
+
+    font-weight: 500;
+    color: var(--color-gray);
+    letter-spacing: -0.5px;
+    @include fsl(16px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(14px, 100%);
+    }
+  }
+  &__event-button {
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(13px);
+    }
+    display: flex;
+  }
+  &__event-image {
+    display: flex;
+    align-items: center;
+  }
+}

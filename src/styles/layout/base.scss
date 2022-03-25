@@ -59,7 +59,7 @@ h1 {
   @include fsl(80px, 90%);
   letter-spacing: -3px;
   @media (max-width: ($breakpoint - 1px)) {
-    @include fsl(32px, 100%);
+    @include fsl(28px, 100%);
     letter-spacing: -1px;
   }
 }
