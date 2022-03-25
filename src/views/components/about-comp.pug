@@ -1,6 +1,14 @@
 
 mixin about-slider 
-  |qweSLIDer
+  .container
+    .about-page__slider
+      .about-page__slider-top
+      .swiper-container.swiper-container--visible.swiper-container--visible.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='21' data-slider-prev='22' data-slider-next='23')
+        .swiper-wrapper 
+          - for (i = 0; i < 6; i++)
+            .swiper-slide 
+              .about-page__slider-slide 
+                img.about-page__slider-img(src=`assets/images/about-slide-${i+1}.webp`, alt="")
 
 mixin about-bot 
   .about-page__bot 
@@ -14,7 +22,7 @@ mixin about-bot
           .about-page__bot-count 
             |1
         .about-page__bot-bg 
-          img(src="assets/images/production.jpg", alt="")
+          img.about-page__bot-img(src="assets/images/production.jpg", alt="")
       a.about-page__bot-card(href="#")
         .about-page__bot-container 
           h4.about-page__bot-title
@@ -24,7 +32,7 @@ mixin about-bot
           .about-page__bot-count 
             |2
         .about-page__bot-bg 
-          img(src="assets/images/production.jpg", alt="")
+          img.about-page__bot-img(src="assets/images/production.jpg", alt="")
     .about-page__bot-item
       a.about-page__bot-line(href="#")
         .about-page__bot-container 

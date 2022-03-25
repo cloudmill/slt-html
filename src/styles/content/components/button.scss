@@ -1,4 +1,6 @@
 .button {
+  $comp: &;
+  
   padding: getRem(16px) getRem(24px);
   @media (max-width: ($breakpoint-ll - 1px)) {
     padding: getStatic(16px, 14.4px) getStatic(24px, 14.4px);
@@ -62,5 +64,16 @@
 
   &--color-white {
     color: var(--color-white);
+  }
+
+  &--blue {
+    background: var(--color-blue);
+    color: var(--color-white);
+
+    #{$comp}__svg {
+      path {
+        fill: var(--color-white);
+      }
+    }
   }
 }

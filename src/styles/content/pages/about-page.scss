@@ -712,4 +712,27 @@
       margin-top: 8px;
     }
   }
+
+  &__slider {
+
+  }
+  &__slider-slide {
+    position: relative;
+    z-index: 0;
+
+    width: calc(#{$col-part-d} * 2 - #{$col-gap});
+    height: getRem(620px);
+
+    overflow: hidden;
+    transition: $transition;
+  }
+  &__slider-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: none;
+    max-height: none;
+  }
 }

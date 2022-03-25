@@ -1,0 +1,20 @@
+.modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  height: 100%;
+  width: getRem(611px);
+  display: none;
+
+  &__container {
+    padding: getRem(60px) getRem(24px) getRem(60px) getRem(60px);
+  }
+}
+
+.vacancies-modal {
+
+  &__title {
+    margin-bottom: getRem(60px);
+  }
+}

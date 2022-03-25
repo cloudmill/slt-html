@@ -1,6 +1,6 @@
 .routes {
   margin-top: 30px;
-  
+
   &__item {
     display: flex;
 
@@ -8,4 +8,8 @@
       margin-top: 10px;
     }
   }
+}
+
+.test-container {
+  margin: 50px;
 }

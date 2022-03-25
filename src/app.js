@@ -4,3 +4,4 @@ import "./scripts/swipers";
 import "./scripts/header";
 import "./scripts/loader";
 import "./scripts/accordion";
+import "./scripts/fancybox";

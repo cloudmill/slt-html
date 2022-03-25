@@ -38,6 +38,13 @@ const BREAKPOINT = 1280;
               centeredSlides: true,
             }
             break;
+          case 21:
+            slider_options = {
+              // ...slider_options,
+              slidesPerView: 'auto',
+              spaceBetween: 20,
+              loop: true,
+            }
         }
 
         const slider_swiper = new Swiper(slider_el[0], slider_options);

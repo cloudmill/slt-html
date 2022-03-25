@@ -1,0 +1,47 @@
+.form {
+
+  &__item {
+
+    &:not(:first-child) {
+      margin-top: getRem(16px);
+    }
+  }
+
+  &__inner {
+    margin-top: getRem(24px);
+  }
+
+  &__input {
+    padding: getRem(20px);
+
+    width: 100%;
+
+    @include f-main();
+    background: var(--color-white);
+    border: 1px solid var(--color-borders);
+    @include fsl(16px, 130%);
+    letter-spacing: -0.5px;
+
+    @include placeholder {
+      color: var(--color-gray);
+    }
+  }
+
+  &__textarea {
+    padding: getRem(20px);
+
+    width: 100%;
+    height: getRem(160px);
+
+    @include f-main();
+    background: var(--color-white);
+    border: 1px solid var(--color-borders);
+    @include fsl(16px, 130%);
+    letter-spacing: -0.5px;
+    resize: none;
+
+    @include placeholder {
+      color: var(--color-gray);
+    }
+  }
+}
