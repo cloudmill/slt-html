@@ -4,6 +4,7 @@ include ../components/breadcrumbs
 include ../components/button-icon
 include ../components/about-comp
 include ../components/nav
+include ../components/small-cards
 
 
 block variables 
@@ -93,33 +94,7 @@ block content
                 |Мы выпускаем продукцию под собственными торговыми марками
           .section 
             .about-page__cards
-              a.about-page__card.aqua(href="#") 
-                .about-page__card-container 
-                  h4 
-                    |SLT AQUA
-                  .about-page__card-bot 
-                    .about-page__card-button
-                      +button-icon 
-                    .about-page__card-logo 
-                      +card-logo.about-page__card-svg
-              a.about-page__card.blockfire(href="#") 
-                .about-page__card-container 
-                  h4 
-                    |SLT BLOCKFIRE
-                  .about-page__card-bot 
-                    .about-page__card-button
-                      +button-icon 
-                    .about-page__card-logo 
-                      +blockfire-svg.about-page__card-svg
-              a.about-page__card.pert(href="#") 
-                .about-page__card-container 
-                  h4 
-                    |SLT  PE-RT
-                  .about-page__card-bot 
-                    .about-page__card-button
-                      +button-icon 
-                    .about-page__card-logo 
-                      +pe-rt-svg.about-page__card-svg
+              +cards
     section.section 
       .container 
         .about-page__section 

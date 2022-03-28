@@ -37,6 +37,15 @@ const BREAKPOINT = 1280;
             centeredSlides: true,
           }
             break;
+          case 5:
+          slider_options = {
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            pagination: {
+              el: '.swiper-pagination',
+            },
+          }
+            break;
           case 10:
             slider_options = {
               // ...slider_options,

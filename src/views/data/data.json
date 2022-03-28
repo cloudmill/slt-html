@@ -25,6 +25,18 @@
     {
       "href": "events",
       "title": "События"
+    },
+    {
+      "href": "events-detail",
+      "title": "События детальная"
+    },
+    {
+      "href": "objects",
+      "title": "Объекты"
+    },
+    {
+      "href": "objects-detail",
+      "title": "Объекты детальная"
     }
   ]
 }

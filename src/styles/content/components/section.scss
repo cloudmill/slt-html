@@ -39,4 +39,11 @@
       margin-top: getRem(25px);
     }
   }
+
+  &__inner {
+    margin-top: getRem(24px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(12px);
+    }
+  }
 }
