@@ -9,3 +9,16 @@ mixin tech-docs
         +button-icon.button-icon--white
       .tech-docs__bg 
         +tech-svg.tech-docs__img
+
+mixin follow
+  .tech-docs
+    .tech-docs__container 
+      h2.tech-docs__caption
+        |Техническая документация
+      form.tech-docs__form(action="/")
+        input.tech-docs__input(type="email" placeholder='E-mail*' required) 
+        .tech-docs__button 
+          button.tech-docs__btn 
+            +send-svg.tech-docs__icon
+      .tech-docs__bg 
+        +tech-svg.tech-docs__img

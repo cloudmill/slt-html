@@ -1,8 +1,6 @@
 .about-page {
   $comp: &;
 
-  
-
   &__intro {}
   &__intro-row {
     margin-bottom: getRem(60px);
@@ -37,6 +35,11 @@
     }
   }
   &__intro-text {
+    // max-width: getRem(528px);
+    // @media (max-width: ($breakpoint - 1px)) {
+    //   max-width: none;
+    // }
+
     font-weight: 500;
     letter-spacing: -1px;
     @include fsl(20px, 130%);
@@ -55,6 +58,18 @@
     }
     display: flex;
     align-items: center;
+  }
+  &__intro-img {
+    @media (max-width: ($breakpoint-m - 1px)) {
+      display: none;
+    }
+  }
+  &__intro-mobile {
+    display: none;
+    @media (max-width: ($breakpoint-m - 1px)) {
+      display: block;
+      width: 100%;
+    }
   }
   &__intro-svg {
     position: absolute;
@@ -77,9 +92,7 @@
 
   &__title {
     margin-bottom: getRem(48px);
-    @media (max-width: ($breakpoint - 1px)) {
-      margin-bottom: getRem(20px);
-    }
+    
   }
 
   &__label {
@@ -89,10 +102,13 @@
   &__section {
     padding-top: getRem(120px);
     @media (max-width: ($breakpoint - 1px)) {
-      padding-top: getRem(48px);
+      padding-top: 0;
     }
 
     border-top: 1px solid var(--color-borders);
+    @media (max-width: ($breakpoint - 1px)) {
+      border-top: none;
+    }
   }
   &__section-row {
     display: flex;
@@ -640,6 +656,11 @@
 
   &__caption {
     margin-left: calc(#{$col-part-d} * 2);
+    margin-right: calc(#{$col-part-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: 0;
+      margin-right: 0;
+    }
     
     color: var(--color-gray);
     font-weight: 500;

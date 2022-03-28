@@ -1,4 +1,9 @@
-
+mixin link-left 
+  a.button(href="#")&attributes(attributes)
+    .button__icon.button__icon--left
+      +big-arrow-svg.button__svg
+    .button__text
+      block
 
 mixin link-right 
   a.button(href="#")&attributes(attributes)

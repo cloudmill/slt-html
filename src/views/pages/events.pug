@@ -16,28 +16,29 @@ block content
             |События
     section.section
       .container 
-        +nav(items = ['СЛТ Аква', 'Производство', 'Работа у нас'] active = 0)
+        +nav(items = ['Все', 'Новости', 'Публикации'] active = 0)
     section.section.section--md 
       .container 
         ul.events-page__events 
           - for (i = 0; i < 5; i++)
-            li.events-page__event 
-              .events-page__event-container 
-                .events-page__event-row 
-                  .events-page__event-col
-                    .events-page__event-content 
-                      .events-page__event-top 
-                        .events-page__event-label 
-                          |29 февраля 2022
-                        .events-page__event-category 
-                          |Публикации
-                      h4
-                        |Инновации в пожаротушении
-                    .events-page__event-button 
-                      +button-icon.button-icon--blue
-                  .events-page__event-col
-                    .events-page__event-image 
-                      img(src="assets/images/event-1.webp", alt="")
+            li.events-page__events-item 
+              a.events-page__event(href="#") 
+                .events-page__event-container 
+                  .events-page__event-row 
+                    .events-page__event-col
+                      .events-page__event-content 
+                        .events-page__event-top 
+                          .events-page__event-label 
+                            |29 февраля 2022
+                          .events-page__event-category 
+                            |Публикации
+                        h4
+                          |Инновации в пожаротушении
+                      .events-page__event-button 
+                        +button-icon.button-icon--blue
+                    .events-page__event-col
+                      .events-page__event-image 
+                        img(src="assets/images/event-1.webp", alt="")
     section.section
       .container
-        +tech-docs
+        +follow

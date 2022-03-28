@@ -38,12 +38,11 @@ block content
               p.about-page__intro-text 
                 |Наши мощности позволяют выпускать более 11 000 тонн готовой продукции в год. Мы используем сырье крупнейшего российского нефтехимического холдинга СИБУР.
           .about-page__intro-image 
-            img(src="assets/images/about-production.jpg", alt="")
+            img.about-page__intro-img(src="assets/images/about-production.jpg", alt="")
+            img.about-page__intro-mobile(src="assets/images/about-production-mobile.webp", alt="")
             +about-logo-svg.about-page__intro-svg
     section.section 
       .container 
-        h1.about-page__title
-          |Миссия и ценности
         .about-page__section 
           .about-page__section-row 
             .about-page__section-col 
@@ -161,6 +160,8 @@ block content
             .about-page__section-col
               h4.about-page__heading.about-page__heading--sm
                 |Наша продукция имеет полный пакет документов соответствия требованиям технических нормативов регулирующих органов.
+              p.about-page__caption 
+                |В том числе для проектирования согласован и зарегистрирован в ФГБУ ВНИИПО МЧС России СТО (Стандарт организации) 22.21.29-015-17207509-2019 в качестве нормативного документа по пожарной безопасности с присвоением шифра ВНПБ 102-20.
           .about-page__partners
             - for (i = 0; i < 7; i++)
               .about-page__partners-item 

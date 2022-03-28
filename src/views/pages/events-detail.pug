@@ -1,0 +1,131 @@
+extends ../layouts/master
+
+include ../components/breadcrumbs
+include ../components/tech-docs
+include ../components/button-icon
+include ../components/nav
+
+
+block content
+  .events-page 
+    section.section.section--first
+      .container 
+        +breadcrumbs( items = ['События'] page = "Инновации в пожаротушении")
+        .events-page__inner
+          .events-page__top 
+            .events-page__top-col 
+              +link-left.button--wide--mobile
+                |Все события
+            .events-page__top-col 
+              h2 
+                |Инновации в пожаротушении
+    section.section.section--default.events-page__inner
+      .container 
+        .events-page__container
+          .events-page__event-top 
+            .events-page__event-label 
+              |29 февраля 2022
+            .events-page__event-category 
+              |Публикации
+          .section__block
+            .events-page__image 
+              img.events-page__img(src="assets/images/event-1.webp", alt="")
+            a.events-page__download(href="#") 
+              .events-page__download-top
+                .events-page__download-title 
+                  |Скачать презентацию
+                .events-page__download-label
+                  |.rar
+              .events-page__download-bot
+                .events-page__download-label 
+                  |342 кб
+                .events-page__download-icon 
+                  +download-svg.events-page__download__svg
+          .section__block 
+            p.events-page__caption 
+              |Системы пожаротушения на основе полимеров могут заметно потеснить традиционные решения. Однако пока этому мешают устаревшие нормы законодательства, уверены представители компании «СЛТ Аква»: технический директор Михаил Базилевский и генеральный директор Михаил Товмасян.
+            .events-page__inner
+              p.event-page__text 
+                |Компания «СЛТ Аква» выпускает две линейки продукции под собственными торговыми марками SLT AQUA (полипропиленовые трубопроводные системы для водоснабжения и отопления) и SLT BLOCKFIRE (полипропиленовые трубопроводные системы для пожаротушения). Полимерные трубопроводы, применяемые в системах пожаротушения (АУПТ и ВПВ), являются новинкой для России. К ним пока насторожено относятся участники строительного рынка. Однако зарубежный опыт эксплуатации аналогов говорит о перспективности этой технологии как с точки зрения экономики, так и эксплуатации.
+          .section__block 
+            p.events-page__caption 
+              |Системы пожаротушения на основе полимеров могут заметно потеснить традиционные решения. Однако пока этому мешают устаревшие нормы законодательства, уверены представители компании «СЛТ Аква»: технический директор Михаил Базилевский и генеральный директор Михаил Товмасян.
+            .events-page__inner
+              blockquote.events-page__quote.events-page__wrapper
+                p.events-page__text 
+                  |Ключевыми требованиями, которые предъявляются к любым системам пожаротушения, являются: возможность их монтажа на действующих объектах, снижение влияния человеческого фактора, надежность срабатывания на начальной стадии пожара и неизменность гидравлических характеристик. Требования к трубопроводам систем пожаротушения определены в своде правил МЧС от 2009 года. Трубопроводная сеть с применением полимерных труб и фитингов должна соответствовать параметрам по расходу и давлению, нормативной пожаростойкости, быть удобной при монтаже, эксплуатации и техническом обслуживании. Всем перечисленным требованиям отвечает техническое решение, которое предлагает наша компания.
+                p.events-page__text 
+                  |Существующие тренды на рынке, определяются, с одной стороны, совершенствованием нормативной базы по проектированию систем пожаротушения, а с другой – стремлением потребителей иметь техническое решение с более низкими затратами на монтаж систем и более высокими ее эксплуатационными свойствами.
+                .events-page__inner 
+                  .events-page__caption 
+                    |— Михаил Базилевский
+                  .events-page__label
+                    |Технический директор «СЛТ Аква»
+          .section__block 
+            .events-page__image 
+              img.events-page__img(src="assets/images/events-img.webp", alt="")
+          .section__block 
+            p.events-page__caption 
+              |— В чем преимущества и недостатки полимерных систем пожаротушения?
+            .events-page__inner
+              blockquote.events-page__quote.events-page__wrapper
+                p.events-page__text 
+                  |Очевидные преимущества вытекают из технических свойств материалов. Например, низкое гидравлическое сопротивление. Оно позволяет увеличить скорость потока при тех же значениях потерь напора. Меньший вес трубопроводов и систем крепления, что снижает нагрузку на конструктивные элементы сооружений. Химическая стойкость материала предотвращает засорений жиклеров разбрызгивателей. 
+                p.events-page__text 
+                  |Монтаж систем можно выполнять на работающем предприятии, за более короткие сроки и он обходится значительно дешевле. Полимеры не только в наших системах снижают себестоимость проекта и упрощают эксплуатацию, такое происходит во всех сферах их применения.
+                .events-page__inner 
+                  .events-page__caption 
+                    |— Михаил Базилевский
+                  .events-page__label
+                    |Технический директор «СЛТ Аква»
+          .section__block
+            .events-page__future 
+              .events-page__future-title 
+                |В долгосрочной перспективе с ростом доверия к полимерным противопожарным системам спрос на них будет расти
+              .events-page__future-icon 
+                +tech-svg.events-page__future-svg
+          .section__block
+            p.events-page__caption 
+              |Тем не менее те проектировщики, кто уже работает с техническими решениями на основе полипропиленовых трубопроводов, оценивают их положительно:
+            .events-page__wrapper.events-page__inner
+              ul.events-page__list
+                each item in ['Но есть и недостатки, которые связаны с уровнем проникновения технологии на рынок', 'Количество проектных наработок и апробированных технических решений в России незначительно', 'Монтажные организации отмечают возможность более гибкого построения графика, так как нет необходимости в открытии наряд-допусков на проведение огневых работ, специальной подготовке мест их проведения и прочее', 'Система пожаротушения нашего производства под брендом SLT BLOCKFIRE смонтирована уже на 16 объектах'] 
+                  li.events-page__list-item 
+                    .list-item
+                      |#{item}
+          .section__block
+            p.events-page__caption 
+              |Основным фактором, ограничивающим распространение полимерных систем пожаротушения, является устаревшая нормативная база:
+            .events-page__wrapper.events-page__inner
+              ul.events-page__list
+                each item in ['Компания осуществляет многоступенчатый контроль качества выпускаемой продукции', 'Но есть и недостатки, которые связаны с уровнем проникновения технологии на рынок', 'Применение нашей системы возможно на объектах социально-культурной сферы', 'С пожарной нагрузкой не более 1400 МДж/м² и на складах с трудносгораемыми материалами.'] 
+                  li.events-page__list-item 
+                    .events-page__list-num
+                      |#{item}
+    section.section
+      .container 
+        h2.events-page__title
+          |Похожие публикации
+        ul.events-page__events 
+          - for (i = 0; i < 3; i++)
+            li.events-page__events-item 
+              a.events-page__event(href="#") 
+                .events-page__event-container 
+                  .events-page__event-row 
+                    .events-page__event-col
+                      .events-page__event-content 
+                        .events-page__event-top 
+                          .events-page__event-label 
+                            |29 февраля 2022
+                          .events-page__event-category 
+                            |Публикации
+                        h4
+                          |Инновации в пожаротушении
+                      .events-page__event-button 
+                        +button-icon.button-icon--blue
+                    .events-page__event-col
+                      .events-page__event-image 
+                        img(src="assets/images/event-1.webp", alt="")
+    section.section
+      .container
+        +follow

@@ -35,6 +35,9 @@
     @media (max-width: ($breakpoint-ll - 1px)) {
       margin-left: getStatic(16px, 14.4px);
     }
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: 8px;
+    }
 
     display: flex;
     align-items: center;
@@ -48,6 +51,19 @@
 
     &--right {
       transform: rotate(-90deg);
+    }
+
+    &--left {
+      margin-left: 0;
+      margin-right: getRem(16px);
+      @media (max-width: ($breakpoint-ll - 1px)) {
+        margin-right: getStatic(16px, 14.4px);
+      }
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-right: 8px;
+      }
+
+      transform: rotate(90deg);
     }
   }
 
@@ -73,6 +89,17 @@
     #{$comp}__svg {
       path {
         fill: var(--color-white);
+      }
+    }
+  }
+
+  &--wide {
+
+    &--mobile {
+      width: auto;
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 100%;
+        justify-content: center;
       }
     }
   }
