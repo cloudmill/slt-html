@@ -1,4 +1,5 @@
 .breadcrumbs {
+  $comp: &;
 
   @media (max-width: ($breakpoint - 1px)) {
     padding: 0 20px;
@@ -9,6 +10,70 @@
 
     overflow-y: scroll;
     @include scrollbar-hidden;
+  }
+
+  &--small {
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 0;
+      margin-left: 0;
+
+      width: auto;
+      overflow-y: visible;
+    }
+
+    #{$comp}__list {
+      padding-bottom: 0;
+      gap: getRem(21px);
+      @media (max-width: ($breakpoint - 1px)) {
+        column-gap: 17px;
+        row-gap: 4px;
+        flex-wrap: wrap;
+        flex-shrink: 1;
+      }
+
+      border-bottom: none;
+    }
+    #{$comp}__item {
+
+      &:not(:first-child) {
+        padding-left: 0;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: calc(100% + 8px);
+        @media (max-width: ($breakpoint  - 1px)) {
+          left: calc(100% + 4px);
+        }
+
+        width: 5px;
+        height: 14px;
+
+        background-image: url("data:image/svg+xml,%3Csvg width='5' height='9' viewBox='0 0 5 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.092 9L4.524 0.3H3.42L0 9H1.092Z' fill='%23979797'/%3E%3C/svg%3E%0A");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      &:last-child {
+        &::after {
+          display: none;
+          @media (max-width: ($breakpoint - 1px)) {
+            display: block;
+          }
+        }
+      }
+    }
+    #{$comp}__link {
+      text-transform: none;
+    }
   }
 
   &__list {
@@ -27,6 +92,9 @@
   }
 
   &__item {
+    position: relative;
+    z-index: 0;
+
 
     display: flex;
 
@@ -34,9 +102,7 @@
 
     &:not(:first-child) {
       padding-left: getRem(29px);
-      position: relative;
-      z-index: 0;
-
+      
       &::before {
         content: "";
         position: absolute;

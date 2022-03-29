@@ -5,6 +5,7 @@ include ../components/slider-buttons
 include ../components/button-icon
 include ../components/nav
 include ../components/small-cards
+include ../components/accordion
 
 
 block content
@@ -67,7 +68,7 @@ block content
       .container 
         .objects-page__row  
           .objects-page__col
-            h4.
+            h4
               |Категории продукции
             .objects-page__inner
               .objects-page__cards
@@ -80,3 +81,40 @@ block content
                 |Электродепо в Московском метрополитене работают как гаражи, где поезда отстаиваются ночью и куда прибывают на ремонт в случае поломки. В «Лихоборах», которые строятся для обслуживания растущей Люблинско-Дмитровской линии, смогут оставаться на стоянку 38 составов.
               p.objects-page__text 
                 |Электродепо «Лихоборы» строится для обслуживания поездов Люблинско-Дмитровской линии Московского метрополитена. Строительство депо началось в 2012 году и должно завершиться в 2018 году. Обратите внимание — цвет строящихся сейчас в Москве электродепо совпадает с цветом той линии, которую они будут обслуживать. Депо «Солнцево» жёлтое, депо «Руднёво» розовое, а депо «Лихоборы» салатовое! И ещё — в правой части верхнего кадра видна новая эстакада для 3-го главного пути, построенная во время реконструкции МК МЖД (МЦК).
+    section.section 
+      .container 
+        h4 
+          |Поставщик
+        .objects-page__inner 
+          .objects-page__block 
+            .objects-page__headings
+              .objects-page__headings-col
+                .objects-page__label 
+                  |Выполнены работы
+              .objects-page__headings-col
+                .objects-page__section-item 
+                  .objects-page__section-text 
+                    |Проектирование
+              .objects-page__headings-col
+                .objects-page__section-item 
+                  .objects-page__section-text 
+                    |Поставка продукции
+              .objects-page__headings-col
+                .objects-page__section-item 
+                  .objects-page__section-text 
+                    |Монтаж
+            +accordion-big
+          .objects-page__block 
+            .objects-page__headings
+              .objects-page__headings-col
+                .objects-page__label 
+                  |Выполнены работы
+              .objects-page__headings-col
+                .objects-page__section-item 
+                  .objects-page__section-text 
+                    |Проектирование
+              .objects-page__headings-col
+                .objects-page__section-item 
+                  .objects-page__section-text 
+                    |Поставка продукции
+            +accordion-big

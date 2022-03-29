@@ -232,6 +232,7 @@
 
     .swiper-pagination-bullet {
       background: var(--color-borders);
+      opacity: 1;
 
       &-active {
         background: var(--color-blue);
@@ -308,5 +309,36 @@
     grid-template-columns: repeat(var(--itemsCount), 1fr);
     row-gap: var(--gap);
     column-gap: var(--gap);
+  }
+
+  &__headings {
+    margin-bottom: getRem(32px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(16px);
+    }
+
+    display: flex;
+    align-items: center;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+  &__headings-col {
+    flex-shrink: 0;
+
+    width: calc(#{$col-part-d} * 2);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: auto;
+    }
+
+    &:nth-child(1) {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-bottom: 8px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
   }
 }
