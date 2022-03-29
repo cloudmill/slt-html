@@ -11,3 +11,10 @@ mixin link-right
       block
     .button__icon.button__icon--right 
       +big-arrow-svg.button__svg
+
+mixin download-btn 
+  a.button(href="#")&attributes(attributes)
+    .button__text
+      block
+    .button__icon
+      +download-svg.button__svg

@@ -67,6 +67,11 @@
     }
   }
 
+  &__svg {
+    width: 100%;
+    height: 100%;
+  }
+
   &--sm {
     padding: getRem(10px) getRem(24px);
     @media (max-width: ($breakpoint-ll - 1px)) {

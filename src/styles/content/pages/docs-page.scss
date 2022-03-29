@@ -1,0 +1,347 @@
+.docs-page {
+  $comp: &;
+
+  &__block {
+    padding: getRem(40px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(20px);
+    }
+
+    background: var(--color-light-gray);
+  }
+  &__block-item {
+
+    &:not(:first-child) {
+      margin-top: getRem(60px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(24px);
+      }
+    }
+  }
+
+  &__top {
+    margin-bottom: getRem(24px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(12px);
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__top-button {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
+  &__top-row {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+  &__top-title {
+    @media (max-width: ($breakpoint - 1px)) {
+      order: -1;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: getRem(20px);
+    @media (max-width: ($breakpoint - 1px)) {
+      gap: getRem(12px);
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: ($breakpoint-m - 1px)) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__button {
+    margin-top: 24px;
+
+    display: none;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+
+  &__row {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+
+  &__col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      width: calc(#{$col-part-d} * 3 - 2.5rem);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+      }
+    }
+
+    &:nth-child(2) {
+      width: calc(#{$col-part-d} * 8 - #{$col-gap});
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(12px);
+        width: auto;
+      }
+    }
+  }
+
+  &__heading {
+    max-width: getRem(243px);
+    @media (max-width: ($breakpoint - 1px)) {
+      max-width: none;
+    }
+
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @include fsl(20px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(14px);
+    }
+  }
+
+  &__list {}
+  &__list-item {
+    &:not(:first-child) {
+      margin-top: getRem(40px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(24px);
+      }
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @media (max-width: ($breakpoint - 1px)) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-top: getRem(20px);
+    }
+
+    &.aqua {
+      #{$comp}__svg {
+        width: getRem(133px);
+        height: getRem(30px);
+        @media (max-width: ($breakpoint - 1px)) {
+          width: getRem(69px);
+          height: getRem(16px);
+        }
+      }
+    }
+
+    &.blockfire {
+      #{$comp}__svg {
+        width: getRem(182px);
+        height: getRem(30px);
+        @media (max-width: ($breakpoint - 1px)) {
+          width: getRem(97px);
+          height: getRem(16px);
+        }
+      }
+
+      .button {
+        border-color: var(--color-red);
+      }
+
+      .button__svg {
+        path {
+          fill: var(--color-red);
+        }
+      }
+
+      .download-card__svg {
+        path {
+          fill: var(--color-red);
+        }
+      }
+    }
+
+    &.pert {
+      #{$comp}__svg {
+        width: getRem(126px);
+        height: getRem(30px);
+        @media (max-width: ($breakpoint - 1px)) {
+          width: getRem(67px);
+          height: getRem(16px);
+        }
+      }
+
+      .button {
+        border-color: var(--color-green);
+      }
+
+      .button__svg {
+        path {
+          fill: var(--color-green);
+        }
+      }
+
+      .download-card__svg {
+        path {
+          fill: var(--color-green);
+        }
+      }
+    }
+  }
+  &__item-row {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+  &__item-col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      width: calc(#{$col-part-d} * 3 - 2.5rem);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+      }
+    }
+    &:nth-child(2) {
+      width: calc(#{$col-part-d} * 5);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(24px);
+        width: auto;
+      }
+    }
+    &:nth-child(3) {
+      width: calc(#{$col-part-d} * 3 - #{$col-gap});
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(24px);
+        width: auto;
+      }
+    }
+  }
+  &__item-container {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: flex;
+    }
+  }
+  &__item-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: getRem(160px);
+    height: getRem(160px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(69px);
+      height: getRem(69px);
+      flex-shrink: 0;
+    }
+  }
+  &__item-image {
+    width: 100%;
+    height: 100%;
+  }
+  &__item-mobile {
+    display: none;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: getRem(20px);
+      display: block;
+    }
+  }
+  &__item-desktop {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
+  &__item-title {
+    margin-bottom: getRem(8px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(4px);
+    }
+  }
+  &__item-caption {
+    font-weight: 500;
+    color: var(--color-gray);
+    letter-spacing: -1px;
+    @include fsl(20px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px);
+      letter-spacing: 0;
+    }
+  }
+  &__item-buttons {
+    margin-top: getRem(40px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 0;
+    }
+
+    display: flex;
+  }
+  &__item-button {
+
+    &:not(:first-child) {
+      margin-left: getRem(8px);
+    }
+  }
+  &__item-btn {
+    padding: getRem(17px) getRem(24px);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      padding: getStatic(17px, 14.4px) getStatic(24px, 14.4px);
+    }
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(12px) getRem(29px);
+    }
+
+    background: var(--color-white);
+    border-radius: 30px;
+    font-weight: 500;
+    @include fsl(14px, 120%);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      font-size: getStatic(14px, 14.4px);
+    }
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px, 100%);
+      border-radius: 45px;
+    }
+  }
+  &__item-text {
+    letter-spacing: -0.5px;
+    @include fsl(14px, 160%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(12px);
+    }
+  }
+
+  &__download {
+    margin-top: getRem(40px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(20px);
+    }
+  }
+  &__download-grid {
+    --itemsCount: 6;
+    --gap: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      --itemsCount: 3;
+      --gap: 12px;
+    }
+    @media (max-width: ($breakpoint-m - 1px)) {
+      --itemsCount: 1;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(var(--itemsCount), 1fr);
+    gap: var(--gap);
+  }
+}

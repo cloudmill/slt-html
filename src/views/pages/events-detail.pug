@@ -4,6 +4,7 @@ include ../components/breadcrumbs
 include ../components/tech-docs
 include ../components/button-icon
 include ../components/nav
+include ../components/download-card
 
 
 block content
@@ -30,17 +31,8 @@ block content
           .section__block
             .events-page__image 
               img.events-page__img(src="assets/images/event-1.webp", alt="")
-            a.events-page__download(href="#") 
-              .events-page__download-top
-                .events-page__download-title 
-                  |Скачать презентацию
-                .events-page__download-label
-                  |.rar
-              .events-page__download-bot
-                .events-page__download-label 
-                  |342 кб
-                .events-page__download-icon 
-                  +download-svg.events-page__download__svg
+            .events-page__download
+              +download-card(title = 'Скачать презентацию')
           .section__block 
             p.events-page__caption 
               |Системы пожаротушения на основе полимеров могут заметно потеснить традиционные решения. Однако пока этому мешают устаревшие нормы законодательства, уверены представители компании «СЛТ Аква»: технический директор Михаил Базилевский и генеральный директор Михаил Товмасян.

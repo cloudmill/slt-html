@@ -1,0 +1,159 @@
+.docs-card {
+  $comp: &;
+  
+  display: flex;
+  min-height: getRem(140px);
+  @media (max-width: ($breakpoint - 1px)) {
+    min-height: getRem(92px);
+  }
+
+  background: var(--color-white);
+  border: 1px solid var(--color-borders);
+
+  &__col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      width: 33%;
+    }
+    &:nth-child(2) {
+      width: 67%;
+    }
+  }
+
+  &__container {
+    padding: getRem(20px) getRem(20px) getRem(20px) getRem(18px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(12px);
+    }
+
+    height: 100%;
+  }
+
+  &__column {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(14px);
+    }
+  }
+
+  &__bot {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__labels {
+    display: flex;
+  }
+
+  &__label {
+    color: var(--color-gray);
+    text-transform: uppercase;
+    font-weight: 500;
+    @include fsl(12px, 110%);
+
+    &:not(:first-child) {
+      margin-left: getRem(10px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__svg {
+    width: getRem(24px);
+    height: getRem(24px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(16px);
+      height: getRem(16px);
+    }
+  }
+
+  &__pert {
+    padding: getRem(8px) getRem(10px) getRem(10px) getRem(8px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(4px) getRem(6px) getRem(6px) getRem(4px);
+    }
+
+    height: 100%;
+
+    background: var(--color-green);
+
+    #{$comp}__logo-svg {
+      width: getRem(51px);
+      height: getRem(12px);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: getRem(34px);
+        height: getRem(8px);
+      }
+
+      path {
+        fill: var(--color-white);
+      }
+    }
+  }
+  
+  &__logo {
+    margin-bottom: 7px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__heading {
+    color: var(--color-white);
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @include fsl(10px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(7px);
+    }
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__blockfire {
+    padding: getRem(8px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(4px);
+    }
+
+    height: 100%;
+
+    background: var(--color-red);
+
+    #{$comp}__logo-svg {
+      width: getRem(73px);
+      height: getRem(12px);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: getRem(48px);
+        height: getRem(8px);
+      }
+
+      path {
+        fill: var(--color-white);
+      }
+    }
+  }
+}

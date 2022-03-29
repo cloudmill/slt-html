@@ -156,57 +156,12 @@
   }
 
   &__download {
-    padding: getRem(20px);
     margin-top: getRem(40px);
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: getRem(20px);
     }
-
-    display: block;
-
-    border: 1px solid var(--color-borders);
   }
-  &__download-top {
-    display: flex;
-    justify-content: space-between;
-  }
-  &__download-title {
-    font-weight: 500;
-    letter-spacing: -0.5px;
-    @media (max-width: ($breakpoint - 1px)) {
-      @include fsl(14px, 130%);
-      letter-spacing: 0;
-    }
-  }
-  &__download-label {
-    text-transform: uppercase;
-    font-weight: 500;
-    color: var(--color-gray);
-    @include fsl(12px, 110%);
-    @media (max-width: ($breakpoint - 1px)) {
-      @include fsl(10px, 100%);
-    }
-  }
-  &__download-bot {
-    margin-top: getRem(24px);
-
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-  &__download-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  &__download-svg {
-    width: getRem(24px);
-    height: getRem(24px);
-    @media (max-width: ($breakpoint - 1px)) {
-      width: getRem(16px);
-      height: getRem(16px);
-    }
-  }
+  
 
   &__caption {
     font-weight: 500;

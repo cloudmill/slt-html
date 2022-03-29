@@ -1,0 +1,40 @@
+extends ../layouts/master
+
+include ../components/breadcrumbs
+include ../components/docs-cards
+include ../components/nav
+
+block content
+  .docs-page
+    section.section.section--first
+      .container 
+        +breadcrumbs(items = ['Техническая информация'] page = "Информационные материалы")
+        .section__inner 
+          h1 
+            |Техническая информация
+    section.section 
+      .container 
+        +nav(items = ['Разрешительная документация', 'Программы для проектировщиков', 'Информационные материалы'] active = 2)
+        .section__block 
+          .docs-page__block
+            .docs-page__block-item
+              .docs-page__top 
+                h4 
+                  |Каталоги
+                .docs-page__top-button 
+                  +download-btn
+                    |Скачать все документы
+              .docs-page__grid 
+                +docs-pe-rt 
+                +docs-blockfire
+            .docs-page__block-item
+              .docs-page__top 
+                h4 
+                  |Презентационные материалы
+              .docs-page__grid 
+                - for (i = 0; i < 4; i++)
+                  +docs-pe-rt 
+                  +docs-blockfire
+            .docs-page__button 
+              +download-btn.button--wide--mobile
+                |Скачать все документы
