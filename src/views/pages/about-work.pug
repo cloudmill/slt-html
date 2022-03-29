@@ -36,12 +36,12 @@ block content
             +about-logo-svg.about-page__intro-svg
     section.section 
       .container 
-        .about-page__section 
-          .about-page__section-row 
-            .about-page__section-col 
+        .section__wrapper 
+          .section__row 
+            .section__col 
               h5.about-page__label 
                 |ВСЕ ЛУЧШИЕ — НАШИ!
-            .about-page__section-col
+            .section__col
               ul.about-page__list 
                 each item in ['Как компания мы #[span.about-page__list-span надежный] поставщик и партнер', 'Как производитель мы устанавливаем высокие стандарты #[span.about-page__list-span качества] для нашей продукции', 'Как команда мы ценим #[span.about-page__list-span профессионализм] коллег и готовность делать больше, чем от тебя ожидают', 'Как социальная система мы несем полную #[span.about-page__list-span ответственность] перед своими сотрудниками, партнерами и потребителями', 'Как производственная организация мы следим за #[span.about-page__list-span технологическими] разработками и используем только передовое оборудование и сырье']
                   li.about-page__list-item 
@@ -51,12 +51,12 @@ block content
       +about-slider
     section.section
       .container
-        .about-page__section 
-          .about-page__section-row 
-            .about-page__section-col
+        .section__wrapper 
+          .section__row 
+            .section__col
               h5.about-page__label 
                 |Условия
-            .about-page__section-col
+            .section__col
               h2.about-page__heading 
                 |Офис в Москве
               .about-page__section-grid 
@@ -73,11 +73,11 @@ block content
     section.section 
       .about-page__vacancies
         .container
-          .about-page__section-row 
-            .about-page__section-col
+          .section__row 
+            .section__col
               h5.about-page__label 
                 |Открытые вакансии
-            .about-page__section-col
+            .section__col
               ul.about-page__vacancies-page__list
                 - for (i = 0; i < 2; i++)
                   li.about-page__vacancies-item 

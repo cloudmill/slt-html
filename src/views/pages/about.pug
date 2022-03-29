@@ -36,24 +36,24 @@ block content
       .container 
         h1.about-page__title
           |Миссия и ценности
-        .about-page__section 
-          .about-page__section-row 
-            .about-page__section-col 
+        .section__wrapper 
+          .section__row 
+            .section__col 
               h5.about-page__label 
                 |Наша миссия
-            .about-page__section-col
+            .section__col
               ul.about-page__list 
                 each item in ['Обеспечивать надежными трубопроводными системами объекты строительства', 'Развивать культуру взаимоотношений и профессиональный подход в области инженерных сетей, создавать комфортную среду для жизни людей']
                   li.about-page__list-item 
                     h4
                       |#{item}
         .section
-          .about-page__section 
-            .about-page__section-row 
-              .about-page__section-col
+          .section__wrapper 
+            .section__row 
+              .section__col
                 h5.about-page__label 
                   |Наша философия
-              .about-page__section-col
+              .section__col
                 .about-page__section-grid 
                   each item in ['Предоставлять клиенту комплексное решение, которое отличается качеством и надежностью, простотой и удобством, технологичностью и инновационностью', 'Разрабатывать современные решения для создания комфортных условий жизни людей', 'Направлять наши действия и устремления на повышение уровня взаимоотношений и профессионализма участников рынка',]
                     .about-page__section-item 
@@ -62,12 +62,12 @@ block content
       +about-slider
     section.section 
       .container 
-        .about-page__section 
-          .about-page__section-row 
-            .about-page__section-col 
+        .section__wrapper 
+          .section__row 
+            .section__col 
               h5.about-page__label 
                 |Наши принципы
-            .about-page__section-col
+            .section__col
               ul.about-page__list 
                 each item in ['Ценить каждого клиента и выстраивать с ним долгосрочные доверительные отношения', 'Ставить перед собой амбициозные цели, реализовывать их и поднимать планку еще выше', 'Взаимодействовать с коллегами эффективно', 'Стремиться создавать новое', 'Безопасность превыше всего']
                   li.about-page__list-item 

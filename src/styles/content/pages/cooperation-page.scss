@@ -1,0 +1,56 @@
+.cooperation-page {
+
+  &__selects {
+    margin-top: getRem(40px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(20px);
+    }
+  }
+
+  &__list {
+    padding-right: calc(#{$col-part-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-right: 0;
+    }
+  }
+  &__list-item {
+
+    &:not(:first-child) {
+      margin-top: getRem(120px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(48px);
+      }
+    }
+  }
+  &__list-title {
+    margin-bottom: getRem(40px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(20px);
+    }
+  }
+  &__list-wrapper {
+    margin-left: calc(#{$col-part-d} * 2);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: 0;
+    }
+  }
+  &__list-text {
+    color: var(--color-gray);
+    font-weight: 500;
+    @include fsl(24px, 130%);
+    letter-spacing: -1px;
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(16px);
+    }
+  }
+
+  &__section {
+    padding: getRem(120px) 0;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(48px) 0;
+    }
+
+    background: var(--color-light-gray);
+  }
+}

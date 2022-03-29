@@ -45,3 +45,20 @@ mixin docs-blockfire
                   |#{item}
             .docs-card__icon 
               +download-svg.docs-card__svg
+
+mixin docs-img 
+  a.docs-card(href="#")
+    .docs-card__col
+      img.docs-card__image(src="assets/images/" + attributes.img, alt="")
+    .docs-card__col
+      .docs-card__container
+        .docs-card__column 
+          .docs-card__title 
+            |Каталог фитингов
+          .docs-card__bot 
+            .docs-card__labels 
+              each item in ['342 кб', '.pdf']
+                .docs-card__label 
+                  |#{item}
+            .docs-card__icon 
+              +download-svg.docs-card__svg

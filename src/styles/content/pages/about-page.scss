@@ -110,28 +110,6 @@
       border-top: none;
     }
   }
-  &__section-row {
-    display: flex;
-    @media (max-width: ($breakpoint - 1px)) {
-      display: block;
-    }
-  }
-  &__section-col {
-    flex-shrink: 0;
-    &:nth-child(1) {
-      width: calc(#{$col-part-d} * 4);
-      @media (max-width: ($breakpoint - 1px)) {
-        width: auto;
-      }
-    }
-    &:nth-child(2) {
-      width: calc(#{$col-part-d} * 8 - #{$col-gap});
-      @media (max-width: ($breakpoint - 1px)) {
-        margin-top: getRem(16px);
-        width: auto;
-      }
-    }
-  }
   &__section-grid {
     display: grid;
     grid-template-columns: repeat(2, getRem(566px));
