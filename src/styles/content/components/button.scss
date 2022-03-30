@@ -77,6 +77,9 @@
     @media (max-width: ($breakpoint-ll - 1px)) {
       padding: getStatic(10px, 14.4px) getStatic(24px, 14.4px);
     }
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(9px) getRem(26px);
+    }
   }
 
   &--gray {
