@@ -2,7 +2,14 @@ extends ../layouts/master
 
 include ../components/breadcrumbs
 include ../components/docs-cards
+include ../components/form-components
 include ../components/nav
+include ../components/about-comp
+include ../components/accordion
+
+block variables 
+  -
+    var isDefault = true
 
 block content
   -
@@ -11,6 +18,36 @@ block content
         {title: 'Прозрачная политика продаж и взаимоотношений с партнерам', text: 'Партнерские отношения строятся на принципах: слушать и понимать клиента, полное включение в задачи клиента, предоставлять клиенту лучшие решения, нести ответственность за предложенные клиенту решения. Соблюдение деловой этики.'},
         {title: 'Высокое качество клиентского сервиса', text: 'Мы уделяем большое внимание скорости ответа на входящие заявки, постоянно находимся рядом, ведем совместные проекты, оказываем техническую поддержку и выстраиваем сотрудничество, при котором мы можем обеспечить партнеру полный комплекс услуг, который ему требуется для успешной работ.'},
         {title: 'Развитая логистическая инфраструктура', text: 'Равноудаленность расположения производственной площадки от севера и юга центральной части России позволяет осуществлять эффективную логистику в любом направлении.'},
+      ],
+      inputs: [
+        {type: 'text', placeholder: 'Имя*'},
+        {type: 'mail', placeholder: 'E-mail*'},
+        {type: 'number', placeholder: 'Телефон*'},
+        {type: 'text', placeholder: 'Название компании*'},
+        {type: 'text', placeholder: 'Город*'},
+        {type: 'text', placeholder: 'ИНН*'},
+        {type: 'text', placeholder: 'Адрес компании*'},
+        {type: 'text', placeholder: 'Сайт компании'},
+        {type: 'text', placeholder: 'Территория продаж*'},
+        {type: 'text', placeholder: 'Оборот компании по полипропиленовым системам в год, руб.'},
+      ],
+      right: [
+        {
+          title: 'Направление деятельности вашей компании',
+          items: ['Торговая компания', 'Монтажная организация', 'Строительная компания', 'Проектная организация']
+        },
+        {
+          title: 'Какая продукция завода СЛТ Аква вас интересует',
+          items: ['SLT AQUA PP-R для водоснабжения и отопления', 'SLT BLOCKFIRE PP-R для пожаротушения', 'SLT PE-RT гибкая система для водоснабжения и отопления']
+        },
+        {
+          title: 'Наличие склада у вашей компании',
+          name: 'storage',
+        },
+        {
+          title: 'Использую систему электронного документооборота',
+          name: 'doc',
+        },
       ]
     }
   .docs-page.cooperation-page
@@ -48,8 +85,46 @@ block content
             .section__col
               ul.cooperation-page__accordions
                 li.cooperation-page__accordion
-                  |accordion
+                  +accordion-simple
     section.section 
       .container 
         h3.cooperation-page__title
           |Оставить заявку на сотрудничество
+        .section__block 
+          form.form(action="/") 
+            .cooperation-page__row
+              .cooperation-page__col
+                each item in ddata.inputs 
+                  .form__item 
+                    +input(type = item.type placeholder = item.placeholder)
+                .form__item
+                  +textarea(placeholder = "Как вы о нас узнали?")
+                .form__wrapper
+                  .form__row 
+                    .form__col
+                      +checkbox 
+                    .form__col
+                      +link-right.button--blue
+                        |Отправить
+              .cooperation-page__col
+                h6.cooperation-page__label 
+                  |Укажите
+                each item, i in ddata.right
+                  div(class=(i === 0 ? "form__wrapper" : "section__block")) 
+                    h5 
+                      |#{item.title}
+                    if (item.items)
+                      .cooperation-page__inner 
+                        ul.form__list
+                          each text in item.items 
+                            li.form__box 
+                              +checkbox(text = text)
+                    else  
+                      .form__wrapper
+                        .cooperation-page__buttons 
+                          .cooperation-page__buttons-item
+                            +radio-button(name = item.name text = 'Да')
+                          .cooperation-page__buttons-item
+                            +radio-button(name = item.name text = 'Нет')
+    section.section 
+      +about-bot

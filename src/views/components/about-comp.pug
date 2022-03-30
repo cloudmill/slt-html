@@ -1,3 +1,4 @@
+include ./button-icon
 
 mixin about-slider 
   .container
@@ -19,36 +20,36 @@ mixin about-slider
                   img.about-page__slider-img(src=`assets/images/about-slide-${i+1}.webp`, alt="")
 
 mixin about-bot 
-  .about-page__bot 
-    .about-page__bot-item 
-      a.about-page__bot-card(href="#")
-        .about-page__bot-container 
-          h4.about-page__bot-title
+  .about-bot 
+    .about-bot__item 
+      a.about-bot__card(href="#")
+        .about-bot__container 
+          h4.about-bot__title
             |Производство
-          .about-page__bot-button 
+          .about-bot__button 
             +button-icon.button-icon--blue
-          .about-page__bot-count 
+          .about-bot__count 
             |1
-        .about-page__bot-bg 
-          img.about-page__bot-img(src="assets/images/production.jpg", alt="")
-      a.about-page__bot-card(href="#")
-        .about-page__bot-container 
-          h4.about-page__bot-title
+        .about-bot__bg 
+          img.about-bot__img(src="assets/images/production.jpg", alt="")
+      a.about-bot__card(href="#")
+        .about-bot__container 
+          h4.about-bot__title
             |Работа у нас
-          .about-page__bot-button 
+          .about-bot__button 
             +button-icon.button-icon--blue
-          .about-page__bot-count 
+          .about-bot__count 
             |2
-        .about-page__bot-bg 
-          img.about-page__bot-img(src="assets/images/production.jpg", alt="")
-    .about-page__bot-item
-      a.about-page__bot-line(href="#")
-        .about-page__bot-container 
-          h4.about-page__bot-title
+        .about-bot__bg 
+          img.about-bot__img(src="assets/images/production.jpg", alt="")
+    .about-bot__item
+      a.about-bot__line(href="#")
+        .about-bot__container 
+          h4.about-bot__title
             |Производство
-          .about-page__bot-button 
+          .about-bot__button 
             +button-icon.button-icon--blue
-          .about-page__bot-count 
+          .about-bot__count 
             |3
-        .about-page__bot-bg 
-          img.about-page__bot-img(src="assets/images/production.jpg", alt="")
+        .about-bot__bg 
+          img.about-bot__img(src="assets/images/production.jpg", alt="")

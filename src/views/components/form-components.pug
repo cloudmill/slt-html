@@ -20,5 +20,17 @@ mixin checkbox
       input.checkbox__input(type="checkbox" required)
       .checkbox__box 
         +check-svg.checkbox__svg
-      .checkbox__text 
-        |Даю согласие на обработку #[a.checkbox__link(href="#") персональных данных]
+      if (attributes.text)
+        .checkbox__caption
+          |#{attributes.text}
+      else
+        .checkbox__text 
+          |Даю согласие на обработку #[a.checkbox__link(href="#") персональных данных]
+
+mixin radio-button 
+  .radio
+    label.radio__label
+      input.radio__input(type="radio" name=attributes.name)
+      .radio__text 
+        |#{attributes.text}
+      .radio__icon

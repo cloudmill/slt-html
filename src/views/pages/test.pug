@@ -3,7 +3,7 @@ extends ../layouts/master
 include ../components/breadcrumbs
 include ../components/tech-docs
 include ../components/product-cards
-include ../components/slider-buttons
+include ../components/form-components
 
 
 block header
@@ -11,3 +11,6 @@ block header
 block footer
 
 block content
+  .test-container
+    +radio-button(text = "HELLO" name = 'al')
+    +radio-button(text = "qwe" name = 'al')

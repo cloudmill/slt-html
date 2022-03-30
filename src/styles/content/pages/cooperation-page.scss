@@ -53,4 +53,55 @@
 
     background: var(--color-light-gray);
   }
+
+  &__row {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+
+  &__col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      margin-right: calc(#{$col-part-d} + #{$col-gap});
+      width: calc(#{$col-part-d} * 5 - #{$col-gap});
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-right: 0;
+        width: auto;
+      }
+    }
+    &:nth-child(1) {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(32px);
+      }
+    }
+  }
+
+  &__label {
+    color: var(--color-gray);
+  }
+
+  &__inner {
+    margin-top: getRem(32px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(16px);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+  }
+  &__buttons-item {
+
+    width: getRem(132px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: calc(50% - 4px);
+    }
+
+    &:not(:first-child) {
+      margin-left: getRem(8px);
+    }
+  }
 }

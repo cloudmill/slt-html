@@ -93,3 +93,28 @@ mixin accordion-big
           .accordion__button 
             +link-right.button--wide--mobile(data-fancy-button='work1')
               |Откликнуться
+
+mixin accordion-simple
+  .accordion.accordion--simple(data-accordion='')
+    .accordion__head(data-accordion-button='')
+      .accordion__row 
+        .accordion__col
+          .accordion__img 
+            +bag-svg.accordion__img-svg
+          .accordion__title 
+            |Торговым компаниям
+        .accordion__col
+          .accordion__icon 
+            +arrow-svg.accordion__svg
+    .accordion__body(data-accordion-dropdown='')
+      .accordion__container 
+        h6 
+          |Одним из приоритетных направлений в своем развитии мы видим расширение зоны присутствия нашей продукции на рынке в динамично развивающихся регионах, поэтому мы всегда открыты к сотрудничеству
+        .accordion__inner
+          h6
+            |Что будет делать наш SMM-щик
+          ul.accordion__list
+            each item in ['Высокое качество продукции', 'Индивидуальное предложение по вашему региону', 'Доставку в любую точку Российской Федерации', 'Всестороннюю поддержку на объектах строительства', 'Эксклюзивные продуктовые решения', 'Подбор удобных логистических решений', 'Мотивационные программы для сотрудников и клиентов партнера', 'Техническую и рекламную поддержку', 'Помощь в расширении клиентской базы', 'Долгосрочное сотрудничество', 'Строгое соблюдение политики продаж',]
+              li.accordion__item 
+                .list-item
+                  |#{item}

@@ -49,6 +49,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 
     transition: $transition;
     border: 1px solid var(--color-borders);
@@ -72,5 +73,13 @@
 
   &__link {
     color: var(--color-blue);
+  }
+
+  &__caption {
+    letter-spacing: -0.5px;
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(12px, 100%);
+    }
   }
 }

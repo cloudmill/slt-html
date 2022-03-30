@@ -44,4 +44,38 @@
       color: var(--color-gray);
     }
   }
+
+  &__wrapper {
+    margin-top: getRem(40px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(20px);
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+
+  &__col {
+    &:nth-child(2) {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(20px);
+      }
+    }
+  }
+
+  &__box {
+
+    &:not(:first-child) {
+      margin-top: getRem(12px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(8px);
+      }
+    }
+  }
 }
