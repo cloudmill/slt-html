@@ -1,0 +1,35 @@
+extends ../layouts/master
+
+include ../components/breadcrumbs
+include ../components/card
+
+block content
+  .docs-page.cooperation-page
+    section.section.section--first
+      .container 
+        +breadcrumbs(page = "Рекламная поддержка")
+        .section__inner 
+          h1 
+            |SLT AQUA
+        .section__block 
+          .filters 
+            ul.filters__headings 
+              li.filters__headings-item.active 
+                .filters__heading
+                  |Все 
+              each item in ['Трубы', 'Фитинги', 'Фитинги комбинированные', 'Компенсаторы', 'Крепления', 'Запорная арматура']
+                li.filters__headings-item
+                  .filters__heading
+                    |#{item}
+                  .filters__icon 
+                    +arrow-svg.filters__svg
+        .section__block 
+          a.button.button--wide(href="#")
+            .button__text
+              |Области применения
+            .button__icon.button__icon--right 
+              +plus-svg.button__svg
+        .section__block
+          .catalog-page__grid 
+            - for (i = 0; i < 16; i++)
+              +card

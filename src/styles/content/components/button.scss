@@ -102,6 +102,8 @@
   }
 
   &--wide {
+    width: 100%;
+    justify-content: center;
 
     &--mobile {
       width: auto;

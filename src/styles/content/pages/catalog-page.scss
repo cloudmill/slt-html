@@ -37,6 +37,9 @@
       @media (max-width: ($breakpoint - 1px)) {
         margin-right: 0;
         order: -1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
 
@@ -53,7 +56,7 @@
   &__text {
     margin-top: getRem(32px);
     @media (max-width: ($breakpoint - 1px)) {
-      margin-top: 16px;
+      margin-top: getRem(16px);
     }
 
     max-width: calc(#{$col-part-d} * 3 - #{$col-gap});
@@ -69,7 +72,7 @@
   &__button {
     margin-top: getRem(32px);
     @media (max-width: ($breakpoint - 1px)) {
-      margin-top: 16px;
+      margin-top: getRem(16px);
     }
 
     display: flex;
@@ -78,12 +81,16 @@
   &__img {
     display: block;
     width: 100%;
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(217px);
+      height: getRem(217px);
+    }
   }
 
   &__label {
     margin-bottom: getRem(32px);
     @media (max-width: ($breakpoint - 1px)) {
-      margin-bottom: 12px;
+      margin-bottom: getRem(12px);
     }
 
     font-weight: 500;
@@ -134,12 +141,19 @@
   }
 
   &__colors {
-    
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(16px);
+    }
   }
   &__colors-item {
     display: flex;
   }
   &__colors-text {
+    margin-right: getRem(40px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-right: getRem(12px);
+    }
+
     font-weight: 500;
     letter-spacing: -0.5px;
     @media (max-width: ($breakpoint - 1px)) {
@@ -147,9 +161,9 @@
     }
   }
   &__colors-icon {
-    margin-left: getRem(40px);
+    margin-left: getRem(16px);
     @media (max-width: ($breakpoint - 1px)) {
-      margin-left: 12px;
+      margin-left: getRem(12px);
     }
 
     display: flex;
@@ -157,14 +171,39 @@
     justify-content: center;
     width: getRem(50px);
     height: getRem(50px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(40px);
+      height: getRem(40px);
+    }
+
+    &.black {
+      #{$comp}__colors-border {
+        stroke: var(--color-borders);
+      }
+      #{$comp}__colors-circle {
+        fill: var(--color-black);
+        opacity: 1;
+        stroke: var(--color-black);
+      }
+    }
+    &.red {
+      #{$comp}__colors-border {
+        stroke: var(--color-borders);
+      }
+      #{$comp}__colors-circle {
+        fill: var(--color-red);
+        opacity: 1;
+        stroke: var(--color-red);
+      }
+    }
   }
   &__colors-svg {
     --size-m: 40px;
     width: 100%;
     height: 100%;
     @media (max-width: ($breakpoint - 1px)) {
-      width: var(--size-m);
-      height: var(--size-m);
+      width: getRem(40px);
+      height: getRem(40px);
     }
   }
 
@@ -330,11 +369,11 @@
   &__block-item {
 
     &:not(:first-child) {
-      margin-top: 12px;
+      margin-top: getRem(12px);
     }
   }
   &__block-top {
-    padding: 20px;
+    padding: getRem(20px);
 
     background: var(--color-light-gray);
   }
@@ -347,12 +386,16 @@
     @include fsl(14px);
     font-weight: 500;
     color: var(--color-gray);
+
+    &.darken {
+      color: var(--color-black)
+    }
   }
   &__block-text {
     @include fsl(18px);
   }
   &__block-body {
-    padding: 16px 20px 20px;
+    padding: getRem(16px) getRem(20px) getRem(20px);
 
     display: grid;
     grid-template-columns: 1fr;
@@ -360,5 +403,21 @@
 
     border: 1px solid var(--color-borders);
     border-top: none;
+  }
+
+  &__grid {
+    --itemsCount: 4;
+    --gap: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      --itemsCount: 3;
+      --gap: 12px;
+    }
+    @media (max-width: ($breakpoint-m - 1px)) {
+      --itemsCount: 2;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(var(--itemsCount), 1fr);
+    gap: var(--gap);
   }
 }

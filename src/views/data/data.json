@@ -11,6 +11,10 @@
       "title": "Каталог"
     },
     {
+      "href": "catalog-category",
+      "title": "Каталог категория"
+    },
+    {
       "href": "about",
       "title": "[О нас] СЛТ Аква"
     },

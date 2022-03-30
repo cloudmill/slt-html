@@ -47,6 +47,10 @@ block content
               |Цветовое #[br] исполнение
             .catalog-page__colors-icon 
               +colors-light-svg.catalog-page__colors-svg
+            .catalog-page__colors-icon.black
+              +colors-light-svg.catalog-page__colors-svg
+            .catalog-page__colors-icon.red
+              +colors-light-svg.catalog-page__colors-svg
         .section__block
           .catalog-page__table 
             .catalog-page__table-head 
@@ -96,7 +100,7 @@ block content
                         .catalog-page__block-text
                           |#{item.text}
                     .catalog-page__block-cell 
-                      .catalog-page__block-label 
+                      .catalog-page__block-label.darken
                         |Добавить в заказ,шт
                       .catalog-page__block-input
                         input.catalog-page__table-input(type="number" placeholder="Кол-во")

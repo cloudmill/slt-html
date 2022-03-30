@@ -1,0 +1,55 @@
+.filters {
+
+  &__headings {
+    display: flex;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: -20px;
+      padding: 0 20px;
+
+      overflow-x: scroll;
+      @include scrollbar-hidden;
+    }
+  }
+  &__headings-item {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    &:not(:first-child) {
+      margin-left: getRem(28px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: getRem(20px);
+      }
+    }
+  }
+
+  &__heading {
+    white-space: nowrap;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @include fsl(20px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(14px); 
+    }
+  }
+
+  &__icon {
+    margin-left: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__svg {
+    width: getRem(20px);
+    height: getRem(20px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(12px);
+      height: getRem(12px);
+    }
+  }
+}
