@@ -110,6 +110,10 @@
   background-color: var(--color-light-gray);
   padding: getRem(40px);
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
     padding: getRem(20px);
@@ -140,8 +144,28 @@
     }
   }
 
+  &__btn {
+    margin-top: getRem(16px);
+    padding: getRem(10px) getRem(24px);
+    width: fit-content;
+
+    .button__icon {
+      margin: 0 getRem(8px) 0 0;
+    }
+
+    .button__text {
+      @include fsl(14px);
+      font-weight: 400;
+    }
+  }
+
   &__bottom {
-    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -165,6 +189,33 @@
 .form-bottom {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: getRem(40px);
+
+  @media (max-width: ($breakpoint - 1px)) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: getRem(20px);
+  }
+
+  .form__inner {
+    margin-top: 0;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+
+      &:last-child {
+        margin-top: getRem(20px);
+      }
+    }
+  }
+
+  .button {
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
 }
 
 .contacts-requisites {
@@ -179,9 +230,17 @@
     margin: getRem(60px) 0 getRem(30px);
     width: calc(#{$col-part-d} * 4 - #{$col-gap});
     @include fsl(14px, 160%);
+
+    @media (max-width: ($breakpoint - 1px)) {
+      margin: getRem(24px) 0 getRem(16px);
+      width: 100%;
+      @include fsl(12px, 160%);
+    }
   }
 
   .button {
-    width: fit-content;
+    @media (min-width: $breakpoint) {
+      width: fit-content;
+    }
   }
 }

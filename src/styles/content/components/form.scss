@@ -4,6 +4,10 @@
 
     &:not(:first-child) {
       margin-top: getRem(16px);
+
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(8px);
+      }
     }
   }
 
@@ -25,6 +29,11 @@
     @include placeholder {
       color: var(--color-gray);
     }
+
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(16px);
+      @include fsl(14px, 100%);
+    }
   }
 
   &__textarea {
@@ -42,6 +51,13 @@
 
     @include placeholder {
       color: var(--color-gray);
+    }
+
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(16px);
+      @include fsl(14px, 100%);
+
+      height: getRem(120px);
     }
   }
 }
