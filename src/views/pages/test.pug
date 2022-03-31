@@ -12,5 +12,7 @@ block footer
 
 block content
   .test-container
-    +radio-button(text = "HELLO" name = 'al')
-    +radio-button(text = "qwe" name = 'al')
+    .test-grid 
+      - for (i = 0; i < 27; i++)
+        .test-item
+          |#{i}

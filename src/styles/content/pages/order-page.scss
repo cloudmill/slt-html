@@ -1,0 +1,257 @@
+.order-page {
+
+  &__title {
+    margin-bottom: getRem(40px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(20px);
+    }
+  }
+
+  &__heading {
+    margin-bottom: getRem(32px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(16px);
+    }
+  }
+
+  &__caption {
+    margin-bottom: getRem(47px);
+    width: calc(#{$col-part-d} * 4 - #{$col-gap});
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 0;
+      width: auto;
+    }
+
+    color: var(--color-gray);
+    font-weight: 500;
+    letter-spacing: -1px;
+    @include fsl(18px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(14px);
+    }
+  }
+
+  &__button {
+    display: flex;
+  }
+  
+  &__section {
+    margin-bottom: getRem(245px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin: getRem(80px) 0;
+    }
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__section-icon {
+    width: getRem(274px);
+    height: getRem(224px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(184px);
+      height: getRem(151px);
+    }
+  }
+
+  &__grid {
+    --itemsCount: 2;
+    --gap: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      --itemsCount: 1;
+      --gap: 12px;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(var(--itemsCount), 1fr);
+    gap: var(--gap);
+  }
+
+  &__card {
+    padding: getRem(20px) 0;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(10px) 0 getRem(20px);
+    }
+
+    border: 1px solid var(--color-borders);
+  }
+  &__card-row {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+  &__card-col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      padding-left: getRem(20px);
+      width: calc(#{$col-part-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        padding: 0 getRem(10px);
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    &:nth-child(2) {
+      width: calc(#{$col-part-d} * 4);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(20px);
+        padding: 0 getRem(20px);
+        width: auto;
+      }
+    }
+
+    &:nth-child(3) {
+      padding-right: getRem(20px);
+      width: calc(#{$col-width-d});
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media (max-width: ($breakpoint - 1px)) {
+        display: none;
+      }
+    }
+  }
+  &__card-img {
+    width: getRem(92px);
+    height: getRem(92px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(50px);
+      height: getRem(50px);
+      margin-right: getRem(27px);
+    }
+  }
+  &__card-title {
+    margin-bottom: getRem(20px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 0;
+
+      width: calc(#{$col-part-m} * 2 - #{$col-gap});
+    }
+
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(14px, 140%);
+    }
+  }
+  &__card-grid {
+    width: calc(#{$col-part-d} * 3);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $col-gap;
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+      grid-template-columns: 1fr;
+      column-gap: $col-gap;
+      row-gap: getRem(16px);
+    }
+  }
+  &__card-list {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__card-item {
+    @media (max-width: ($breakpoint - 1px)) {
+      width: calc(50% - 10px);
+    }
+    &:not(:first-child) {
+      margin-top: getRem(20px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin: 0;
+      }
+    }
+  }
+  &__card-label {
+    margin-bottom: getRem(4px);
+
+    color: var(--color-gray);
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @include fsl(12px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(10px);
+    }
+  }
+  &__card-text {
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @include fsl(14px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(12px);
+    }
+  }
+  &__card-close {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    cursor: pointer;
+  }
+  &__card-svg {
+    width: getRem(24px);
+    height: getRem(24px);
+  }
+  &__card-input {
+    padding: getRem(14px) getRem(20px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(10px);
+    }
+
+    width: 100%;
+
+    font-weight: 500;
+    @include f-main;
+    border: 1px solid var(--color-borders);
+    letter-spacing: -0.5px;
+    @include fsl(16px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(14px);
+    }
+  }
+  &__card-content {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: flex;
+      align-items: flex-end;
+      width: calc(#{$col-part-m} * 3 - #{$col-gap} - 0.625rem);
+    }
+  }
+
+  &__desktop {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
+
+  &__mobile {
+    display: none;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__svg {
+    width: getRem(24px);
+    height: getRem(24px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(16px);
+      height: getRem(16px);
+    }
+  }
+}

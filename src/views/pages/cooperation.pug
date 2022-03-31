@@ -99,13 +99,14 @@ block content
                     +input(type = item.type placeholder = item.placeholder)
                 .form__item
                   +textarea(placeholder = "Как вы о нас узнали?")
-                .form__wrapper
-                  .form__row 
-                    .form__col
-                      +checkbox 
-                    .form__col
-                      +link-right.button--blue
-                        |Отправить
+                .cooperation-page__desktop
+                  .form__wrapper
+                    .form__row 
+                      .form__col
+                        +checkbox 
+                      .form__col
+                        +form-button
+                          |Отправить
               .cooperation-page__col
                 h6.cooperation-page__label 
                   |Укажите
@@ -126,5 +127,13 @@ block content
                             +radio-button(name = item.name text = 'Да')
                           .cooperation-page__buttons-item
                             +radio-button(name = item.name text = 'Нет')
+                .cooperation-page__mobile
+                  .form__wrapper
+                    .form__row 
+                      .form__col
+                        +checkbox 
+                      .form__col
+                        +form-button
+                          |Отправить
     section.section 
       +about-bot

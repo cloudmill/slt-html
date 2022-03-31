@@ -25,3 +25,10 @@ mixin address-btn
       +address-label.button__svg
     .button__text
       block
+
+mixin form-button
+  button.button.button--blue.button--wide--mobile&attributes(attributes)
+    .button__text
+      block
+    .button__icon.button__icon--right 
+      +big-arrow-svg.button__svg

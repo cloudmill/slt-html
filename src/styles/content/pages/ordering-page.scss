@@ -1,0 +1,78 @@
+.ordering-page {
+
+  &__row {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      flex-direction: column;
+    }
+  }
+  
+  &__col {
+    &:nth-child(1) {
+      flex-shrink: 0;
+      width: calc(#{$col-part-d} * 6);
+      display: flex;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(12px);
+        width: auto;
+      }
+    }
+
+    &:nth-child(2) {
+      width: 100%;
+      @media (max-width: ($breakpoint - 1px)) {
+        order: -1;
+      }
+    }
+  }
+
+  &__heading {
+    margin-bottom: getRem(40px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(20px);
+    }
+  }
+
+  &__inner {
+    margin-top: getRem(80px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(32px);
+    }
+  }
+
+  &__grid {
+    --itemsCount: 3;
+    --gap: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      --itemsCount: 1;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(var(--itemsCount), 1fr);
+    gap: var(--gap);
+  }
+
+  &__title {
+    margin-bottom: getRem(24px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(16px);
+    }
+  }
+
+  &__item {
+
+    &:not(:first-child) {
+      margin-top: getRem(8px);
+    }
+  }
+
+  &__hidden {
+    display: none;
+  }
+
+  &__button {
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
+  }
+}

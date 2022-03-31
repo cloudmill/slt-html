@@ -1,0 +1,22 @@
+extends ../layouts/master
+
+include ../components/breadcrumbs
+
+block variables 
+  -
+    var isDefault = true
+
+
+block content
+  .order-page
+    section.section.section--first
+      .container 
+        +breadcrumbs(page = "Заказ")
+        .section__inner 
+          h1.order-page__title
+            |В заказ ничего #[br] не добавлено
+          .order-page__button
+            +link-right.button--wide--mobile 
+              |Каталог
+    section.order-page__section
+      +order-empty-svg.order-page__section-icon

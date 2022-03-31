@@ -72,7 +72,7 @@
         width: auto;
       }
     }
-    &:nth-child(1) {
+    &:nth-child(2) {
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: getRem(32px);
       }
@@ -102,6 +102,19 @@
 
     &:not(:first-child) {
       margin-left: getRem(8px);
+    }
+  }
+
+  &__desktop {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
+
+  &__mobile {
+    display: none;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
     }
   }
 }

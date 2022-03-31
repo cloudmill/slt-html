@@ -1,0 +1,74 @@
+extends ../layouts/master
+
+include ../components/breadcrumbs
+include ../components/form-components
+
+block content
+  -
+    var ddata = {
+      inputs: [
+        {type: 'text', placeholder: 'Имя*'},
+        {type: 'mail', placeholder: 'E-mail*'},
+        {type: 'number', placeholder: 'Телефон*'},
+      ]
+    }
+  .ordering-page
+    section.section.section--first
+      .container 
+        +breadcrumbs(page = "Оформление заказа")
+        .section__inner 
+          h1 
+            |Оформление заказа
+    section.section 
+      .container
+        .ordering-page__row
+          .ordering-page__col
+            .ordering-page__button
+              +link-left.button--wide--mobile
+                |Редактировать заказ
+          .ordering-page__col
+            h5.ordering-page__heading 
+              |Контактные данные
+            form.form(action="/") 
+              each item in ddata.inputs
+                .form__item 
+                  +input(type = item.type placeholder = item.placeholder)
+              .ordering-page__inner 
+                h5.ordering-page__heading 
+                  |Контактные данные
+                .ordering-page__grid 
+                  .ordering-page__grid-item
+                    h6.ordering-page__title 
+                      |Проектирование
+                    ul.ordering-page__list  
+                      each item in ['Системы водоснабжения', 'Системы отопления', 'Системы пожаротушения',]
+                        li.ordering-page__item 
+                          +checkbox(text = item)
+                  .ordering-page__grid-item
+                    h6.ordering-page__title 
+                      |Монтаж
+                    ul.ordering-page__list  
+                      each item in ['Системы водоснабжения', 'Системы отопления', 'Системы пожаротушения',]
+                        li.ordering-page__item 
+                          +checkbox(text = item)
+                  .ordering-page__grid-item
+                    ul.ordering-page__list  
+                      li.ordering-page__item 
+                        +checkbox(text = 'Доставка')
+              .ordering-page__hidden
+                .ordering-page__inner
+                  .form__item 
+                    +input(type = 'text' placeholder = 'Город*')
+                  .form__item 
+                    +input(type = 'text' placeholder = 'Адрес*')
+              .ordering-page__inner
+                h5.ordering-page__heading 
+                  |Дополнительная информация к заказу
+                +textarea(placeholder = 'Комментарий')
+                .form__wrapper 
+                  .form__row 
+                    .form__col
+                      +checkbox
+                    .form__col
+                      +form-button
+                        |Оформить заказ
