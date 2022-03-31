@@ -18,3 +18,10 @@ mixin download-btn
       block
     .button__icon
       +download-svg.button__svg
+
+mixin address-btn
+  a.button(href="#")&attributes(attributes)
+    .button__icon
+      +address-label.button__svg
+    .button__text
+      block
