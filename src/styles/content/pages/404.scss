@@ -1,0 +1,67 @@
+.error-page {
+  display: flex;
+
+  @media (max-width: ($breakpoint - 1px)) {
+    flex-direction: column;
+  }
+
+  &__col {
+    &:first-child {
+      width: calc(#{$col-part-d} * 5);
+
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 100%;
+      }
+    }
+    &:nth-child(2) {
+      width: calc(#{$col-part-d} * 2 - #{$col-gap});
+      display: flex;
+      justify-content: center;
+      padding: getRem(185px) 0 getRem(115px);
+
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 100%;
+        padding: getRem(97px) 0 getRem(49px);
+      }
+
+      svg {
+        @media (max-width: ($breakpoint - 1px)) {
+          width: 156px;
+          height: 160px;
+        }
+      }
+    }
+  }
+
+  &__ttl {
+    @include fsl(200px, 90%);
+    letter-spacing: -3px;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(80px, 100%);
+      letter-spacing: -1px;
+    }
+  }
+
+  &__subttl {
+    @include fsl(36px, 110%);
+    letter-spacing: -2px;
+    margin-top: getRem(8px);
+    color: var(--color-gray);
+
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(18px, 110%);
+      letter-spacing: -0.5px;
+      margin-top: getRem(12px);
+    }
+  }
+
+  &__btn {
+    margin-top: getRem(48px);
+    width: fit-content;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(20px);
+    }
+  }
+}

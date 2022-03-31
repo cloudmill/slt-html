@@ -9,7 +9,7 @@ include ../components/modals
 
 
 block content
-  .events-page 
+  .contacts-page 
     section.section.section--first
       .container 
         +breadcrumbs( page = "Контакты")
@@ -138,10 +138,10 @@ block content
           .contacts-form
             h2.vacancies-modal__title
               |Связаться с нами
-            form.form(action="/") 
+            form.form(action="/" data-parsley-validate) 
               each item in ddata
                 .form__item 
-                  +input(type = item.type placeholder = item.placeholder)
+                  +input(type = item.type placeholder = item.placeholder required)
               .form__item 
                 +textarea(placeholder="Комментарий")
 
