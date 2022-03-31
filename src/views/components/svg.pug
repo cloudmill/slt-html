@@ -196,3 +196,25 @@ mixin convert-svg
 mixin address-label
   svg(class=attributes.class width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg")
     path(fill-rule="evenodd" clip-rule="evenodd" d="M13.9998 0L0.666504 5.71429L6.1567 7.84314L8.28555 13.3333L13.9998 0ZM8.34729 9.8045L7.18719 6.81265L4.19534 5.65255L11.4612 2.53859L8.34729 9.8045Z" fill="#07A8D7")
+
+mixin order-empty-svg 
+  svg(class=attributes.class width='275' height='226' viewbox='0 0 275 226' fill='none' xmlns='http://www.w3.org/2000/svg')
+    path(d='M128.306 200.415V112.149M234 112V170.084L128.306 223.051L26 170.084V112' stroke='#979797' stroke-width='1.5')
+    path(d='M116.013 131.144L100 155.164L2 98.9286L25.4043 57.0472M25.4043 57.0472L128.71 1L235.132 57.0472M25.4043 57.0472L128.71 112.051M235.132 57.0472L261 98.9286L158.274 155.164L128.71 112.051M235.132 57.0472L128.71 112.051' stroke='#979797' stroke-width='1.5')
+    circle(cx='235.5' cy='185.551' r='38.75' fill='white' stroke='#07A8D7' stroke-width='1.5')
+    path(d='M218 168.051L235.5 185.551M253 203.051L235.5 185.551M235.5 185.551L253 168.051L218 203.051' stroke='#07A8D7' stroke-width='1.5')
+
+mixin order-ready-svg 
+  svg(class=attributes.class width='248' height='221' viewbox='0 0 248 221' fill='none' xmlns='http://www.w3.org/2000/svg')
+    path(d='M1 57V166L103 220L209 166V57M1 57L103 1L156 29M1 57L52 84M209 57L103 111M209 57L156 29M103 111L52 84M103 111V198.5M52 84L156 29' stroke='#979797' stroke-width='1.5')
+    circle(cx='208.5' cy='167.5' r='38.75' fill='white' stroke='#07A8D7' stroke-width='1.5')
+    path(d='M192 165.365L204.122 177L226 156' stroke='#07A8D7' stroke-width='1.5')
+
+mixin close-svg 
+  svg(class=attributes.class width='24' height='24' viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+    path(fill-rule='evenodd' clip-rule='evenodd' d='M13.4142 12L19.7782 18.3639L18.364 19.7782L12 13.4142L5.63604 19.7782L4.22183 18.3639L10.5858 12L4.22183 5.63602L5.63604 4.22181L12 10.5858L18.364 4.22181L19.7782 5.63602L13.4142 12Z' fill='#979797')
+
+mixin order-color-svg 
+  svg(class=attributes.class width='24' height='24' viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+    circle(cx='12' cy='12' r='11.5' fill='white' stroke='#E8E9E9')
+

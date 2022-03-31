@@ -420,4 +420,72 @@
     grid-template-columns: repeat(var(--itemsCount), 1fr);
     gap: var(--gap);
   }
+
+  &__heading {
+    margin-bottom: getRem(80px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(20px);
+    }
+  }
+
+  &__list {
+    margin-left: calc(#{$col-part-d} * 3);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: 0;
+    }
+  }
+  &__list-item {
+    padding-bottom: getRem(20px);
+    @media (max-width: ($breakpoint - 1px)) {
+      page-break-before: getRem(12px);
+    }
+
+    border-bottom: 1px solid var(--color-borders);
+
+    &:not(:first-child) {
+      margin-top: getRem(32px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(12px);
+      }
+    }
+  }
+  &__list-row {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+  &__list-col {
+    &:nth-child(1) {
+      flex-shrink: 0;
+      width: calc(#{$col-part-d} * 3);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+      }
+    }
+    &:nth-child(2) {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(8px);
+      }
+    }
+  }
+  &__list-label {
+    color: var(--color-gray);
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @include fsl(18px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(12px);
+    }
+  }
+  &__list-text {
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @include fsl(20px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(14px, 110%);
+    }
+  }
 }
