@@ -1,14 +1,15 @@
 extends ../layouts/master
 
 include ../components/breadcrumbs
-include ../components/tech-docs
+//- include ../components/tech-docs
 include ../components/button-icon
 include ../components/nav
 include ../components/form-components
+include ../components/modals
 
 
 block content
-  .events-page 
+  .contacts-page 
     section.section.section--first
       .container 
         +breadcrumbs( page = "Контакты")
@@ -87,7 +88,7 @@ block content
                 .contacts-card__txt-ttl Адрес
                 |445007, Самарская обл., г. Тольятти, Центральный район, ул. Новозаводская, д.8, стр. 156
 
-              +address-btn.contacts-card__btn
+              +address-btn.contacts-card__btn(data-fancy-button='contacts1')
                 |Схема проезда
 
             .contacts-card__bottom
@@ -110,7 +111,7 @@ block content
                 .contacts-card__txt-ttl Адрес
                 |г. Москва, ул. 1-я Вольская, влад. 23
 
-              +address-btn.contacts-card__btn
+              +address-btn.contacts-card__btn(data-fancy-button='contacts2')
                 |Схема проезда
 
             .contacts-card__bottom
@@ -137,10 +138,10 @@ block content
           .contacts-form
             h2.vacancies-modal__title
               |Связаться с нами
-            form.form(action="/") 
+            form.form(action="/" data-parsley-validate) 
               each item in ddata
                 .form__item 
-                  +input(type = item.type placeholder = item.placeholder)
+                  +input(type = item.type placeholder = item.placeholder required)
               .form__item 
                 +textarea(placeholder="Комментарий")
 
@@ -178,3 +179,6 @@ block content
 
             +download-btn.button--wide--mobile
               |Скачать файлом
+
+  +contacts-modal1
+  +contacts-modal2

@@ -1,0 +1,19 @@
+extends ../layouts/master
+
+include ../components/breadcrumbs
+include ../components/card
+
+block content
+  .search-page 
+    section.section.section--first
+      .container 
+        +breadcrumbs( page = "Результаты поиска")
+        .events-page__inner 
+          h1 
+            |Результаты поиска
+    section.section
+      .container
+        .section__block
+          .catalog-page__grid 
+            - for (i = 0; i < 8; i++)
+              +card

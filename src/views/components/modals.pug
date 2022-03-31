@@ -27,3 +27,60 @@ mixin vacancies-modal
               |Отправить
             .button__icon.button__icon--right 
               +big-arrow-svg.button__svg
+
+mixin contacts-modal1
+  .modal.contacts-modal(data-fancy-modal='contacts1')
+    .modal__container
+      h4.contacts-modal__ttl
+        |Схема проезда
+      .contacts-modal__subttl Завод и центральный склад
+      .contacts-modal__block
+        .contacts-modal__map
+          img(src="assets/images/contact-map1.jpeg", alt="")
+        .contacts-modal__bottom
+          .contacts-modal__logo-box
+            +logo-svg
+            p производство полимерных #[br] трубопроводных систем
+
+          .contacts-modal__info
+
+            .contacts-modal__info-col
+              .contacts-modal__info-ttl Заказ пропуска:
+              .contacts-modal__info-item Мочалова Марина
+              a.contacts-modal__info-item(href="tel:+79179687750") +7 917 968 77 50
+              a.contacts-modal__info-item(href="mailto:mochalova@slt-aqua.ru") mochalova@slt-aqua.ru
+
+            .contacts-modal__info-col
+              .contacts-modal__info-ttl Склад:
+              .contacts-modal__info-item Ковшов Никита
+              a.contacts-modal__info-item(href="tel:+79278932960") +7 927 893 29 60
+              a.contacts-modal__info-item(href="mailto:kovshov@slt-aqua.ru") kovshov@slt-aqua.ru
+
+
+mixin contacts-modal2
+  .modal.contacts-modal(data-fancy-modal='contacts2')
+    .modal__container
+      h4.contacts-modal__ttl
+        |Схема проезда
+      .contacts-modal__subttl Склад
+      .contacts-modal__block
+        .contacts-modal__map
+          img(src="assets/images/contact-map1.jpeg", alt="")
+        .contacts-modal__bottom
+          .contacts-modal__logo-box
+            +logo-svg
+            p производство полимерных #[br] трубопроводных систем
+
+          .contacts-modal__info
+
+            .contacts-modal__info-col
+              .contacts-modal__info-ttl Заказ пропуска:
+              .contacts-modal__info-item Мочалова Марина
+              a.contacts-modal__info-item(href="tel:+79179687750") +7 917 968 77 50
+              a.contacts-modal__info-item(href="mailto:mochalova@slt-aqua.ru") mochalova@slt-aqua.ru
+
+            .contacts-modal__info-col
+              .contacts-modal__info-ttl Склад:
+              .contacts-modal__info-item Ковшов Никита
+              a.contacts-modal__info-item(href="tel:+79278932960") +7 927 893 29 60
+              a.contacts-modal__info-item(href="mailto:kovshov@slt-aqua.ru") kovshov@slt-aqua.ru

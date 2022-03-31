@@ -9,6 +9,10 @@
 
   &__container {
     padding: getRem(60px) getRem(24px) getRem(60px) getRem(60px);
+
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(20px);
+    }
   }
 }
 
@@ -19,6 +23,81 @@
 
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: getRem(24px);
+    }
+  }
+}
+
+.contacts-modal {
+  width: calc(#{$col-part-d} * 6 + 40px);
+
+  @media (max-width: ($breakpoint - 1px)) {
+    width: calc(#{$col-part-m} * 4);
+  }
+
+  &__ttl {
+    margin-bottom: getRem(20px);
+
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(8px);
+    }
+  }
+
+  &__subttl {
+    @include fsl(18px, 110%);
+    margin-bottom: getRem(60px);
+
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 110%);
+      margin-bottom: getRem(24px);
+    }
+  }
+
+  &__block {
+    border: 1px solid var(--color-borders);
+  }
+
+  &__bottom {
+    padding: getRem(40px) getRem(30px);
+
+    display: flex;
+  }
+
+  &__logo-box {
+    border-right: 1px solid var(--color-border-dark);
+    padding-right: getRem(30px);
+
+    svg {
+      max-width: 175px;
+      width: 100%;
+    }
+
+    p {
+      text-transform: uppercase;
+      text-align: center;
+      @include fsl(12px);
+
+      margin-top: getRem(20px);
+    }
+  }
+
+  &__info {
+    display: flex;
+    padding-left: getRem(30px);
+
+    &-col {
+      display: flex;
+      flex-direction: column;
+  
+      margin-right: getRem(40px);
+    }
+
+    &-ttl {
+      font-weight: bold;
+      margin-bottom: getRem(10px);
+    }
+
+    &-item {
+      margin-bottom: getRem(5px);
     }
   }
 }

@@ -145,9 +145,7 @@
   }
 
   &__btn {
-    margin-top: getRem(16px);
-    padding: getRem(10px) getRem(24px);
-    width: fit-content;
+    
 
     .button__icon {
       margin: 0 getRem(8px) 0 0;
@@ -156,6 +154,17 @@
     .button__text {
       @include fsl(14px);
       font-weight: 400;
+    }
+
+    @media (max-width: ($breakpoint - 1px)) {
+      justify-content: center;
+      margin-top: getRem(8px);
+    }
+
+    @media (min-width: $breakpoint) {
+      width: fit-content;
+      padding: getRem(10px) getRem(24px);
+      margin-top: getRem(16px);
     }
   }
 
