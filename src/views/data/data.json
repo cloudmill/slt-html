@@ -15,6 +15,14 @@
       "title": "Каталог категория"
     },
     {
+      "href": "catalog-general",
+      "title": "Каталог общий"
+    },
+    {
+      "href": "catalog-card",
+      "title": "Каталог карточка"
+    },
+    {
       "href": "about",
       "title": "[О нас] СЛТ Аква"
     },
@@ -25,6 +33,14 @@
     {
       "href": "about-work",
       "title": "[О нас] Работа у нас"
+    },
+    {
+      "href": "cooperation",
+      "title": "Сотруднечество"
+    },
+    {
+      "href": "cooperation-ad",
+      "title": "[Сотруднечество] Рекламная поддрежка"
     },
     {
       "href": "events",
@@ -47,24 +63,32 @@
       "title": "Техническая информация"
     },
     {
-      "href": "objects",
+      "href": "docs-program",
       "title": "[Техническая информация] Программы"
     },
     {
-      "href": "objects-detail",
+      "href": "docs-info",
       "title": "[Техническая информация] Информационные материалы"
-    },
-    {
-      "href": "cooperation",
-      "title": "Сотруднечество"
-    },
-    {
-      "href": "cooperation-ad",
-      "title": "[Сотруднечество] Рекламная поддрежка"
     },
     {
       "href": "contacts",
       "title": "Контакты"
+    },
+    {
+      "href": "order",
+      "title": "Заказ"
+    },
+    {
+      "href": "order-empty",
+      "title": "Заказ пустой"
+    },
+    {
+      "href": "order-success",
+      "title": "Заказ успешно оформлен"
+    },
+    {
+      "href": "ordering",
+      "title": "Оформление заказа"
     }
   ]
 }
