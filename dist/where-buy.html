@@ -1,0 +1,1179 @@
+<!doctype html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<title>slt-html</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<script defer="defer" src="assets/vendor.js"></script>
+		<script defer="defer" src="assets/app.js"></script>
+		<link href="styles.css" rel="stylesheet">
+		<link href="app.css" rel="stylesheet">
+	</head>
+
+	<body class="body">
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__inner">
+					<div class="container">
+						<div class="header__desktop" data-aos="fade-up">
+							<div class="header__top">
+								<div class="header__row">
+									<div class="header__col">
+										<ul class="header__links">
+											<li class="header__links-item">
+												<div class="header__links-button">
+													<div class="header__text">Сервисы расчета</div>
+													<div class="header__links-icon"><svg class="header__links-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+														</svg></div>
+												</div>
+												<div class="header__links-dropdown"></div>
+											</li>
+											<li class="header__links-item"><a class="header__links-link" href="#">События</a></li>
+											<li class="header__links-item"><a class="header__links-link" href="#">Контакты</a></li>
+										</ul>
+									</div>
+									<div class="header__col">
+										<div class="header__feedback">
+											<div class="header__feedback-col"><a class="header__feedback-link" href="#">
+													<div class="header__feedback-icon"><svg class="header__feedback-svg" width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M9.49967 1.58301C6.43909 1.58301 3.95801 4.06409 3.95801 7.12467C3.95801 12.6663 9.49967 17.4163 9.49967 17.4163C9.49967 17.4163 15.0413 12.6663 15.0413 7.12467C15.0413 4.06409 12.5603 1.58301 9.49967 1.58301ZM9.49967 16.3318C8.17363 15.0283 4.74967 11.2615 4.74967 7.12467C4.74967 4.50545 6.88045 2.37467 9.49967 2.37467C12.1189 2.37467 14.2497 4.50545 14.2497 7.12467C14.2497 11.2619 10.8253 15.0287 9.49967 16.3318Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
+															<path d="M9.49967 7.91634C9.9369 7.91634 10.2913 7.5619 10.2913 7.12467C10.2913 6.68745 9.9369 6.33301 9.49967 6.33301C9.06245 6.33301 8.70801 6.68745 8.70801 7.12467C8.70801 7.5619 9.06245 7.91634 9.49967 7.91634Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
+														</svg></div>
+													<div class="header__text">Где купить</div>
+												</a></div>
+											<div class="header__feedback-col">
+												<div class="header__feedback-buttons">
+													<div class="header__feedback-item">
+														<div class="button button--sm">Обратный звонок</div>
+													</div>
+													<div class="header__feedback-item">
+														<div class="button button--sm button--gray">Написать нам<div class="button__icon"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+																</svg></div>
+														</div>
+													</div>
+												</div><a class="header__phone" href="tel:8 800 444-72-37">8 800 444-72-37</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="header__bot">
+								<div class="header__row">
+									<div class="header__col">
+										<div class="header__logo"><a class="header__logo-link" href="#"><svg class="header__logo-svg" width="163" height="28" viewbox="0 0 163 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_285_10681)">
+														<path d="M48.2505 5.49833H55.0559V27.668H59.9526V5.49833H66.7996V0.674324H48.2505V5.49833ZM138.807 17.4183C139.865 16.4016 139.99 15.0322 139.99 14.0571C139.99 11.9822 139.077 8.48611 132.935 8.48611H125.206V27.668H133.869C138.454 27.668 141.193 25.4998 141.193 21.8688C141.183 19.877 140.342 18.3105 138.807 17.4183ZM129.875 12.6358H133.153C134.595 12.6358 135.321 13.2271 135.321 14.389C135.321 15.4887 134.595 16.0697 133.153 16.1112H129.875V12.6358ZM134.004 23.508H129.875V19.6591H134.014C136.255 19.6591 136.514 20.7692 136.514 21.5991C136.504 22.8544 135.684 23.4768 134.004 23.508ZM157.564 8.48611V9.5754C156.225 8.66247 154.617 8.18525 152.874 8.18525C147.262 8.18525 143.029 12.4387 143.029 18.0719C143.029 23.7051 147.262 27.9585 152.874 27.9585C154.648 27.9585 156.256 27.4917 157.564 26.6099V27.668H162.242V8.48611H157.564ZM157.564 21.153C156.578 22.595 154.804 23.4768 152.906 23.4768C149.949 23.4768 147.801 21.2049 147.801 18.0719C147.801 14.9389 149.949 12.6669 152.906 12.6669C154.804 12.6669 156.578 13.5591 157.564 14.9907V21.153ZM13.8288 5.03149C16.2564 5.03149 18.5698 6.01704 20.1778 7.73916L20.3957 7.96739H20.4061L22.9996 3.89033C22.8751 3.77621 22.7506 3.64135 22.6158 3.52723C20.7899 1.91923 18.5802 0.912931 16.1008 0.529085C15.9348 0.497962 15.7688 0.477214 15.6028 0.456465C15.4161 0.435717 15.2293 0.414968 15.0426 0.39422C14.6484 0.363097 14.2542 0.342349 13.8496 0.342349C13.8185 0.342349 13.7977 0.342349 13.7666 0.342349C6.02742 0.383846 0 6.44239 0 14.1712C0 21.9 6.02742 27.9585 13.7458 28C13.777 28 13.7977 28 13.8288 28C14.223 28 14.6173 27.9793 15.0011 27.9481C15.1982 27.9274 15.385 27.917 15.5717 27.8859C15.7584 27.8651 15.9452 27.834 16.1319 27.8029C18.601 27.419 20.8003 26.4024 22.6158 24.7944C22.7092 24.7114 22.8025 24.618 22.9063 24.535L20.4061 20.375H20.3853L20.1675 20.6032C18.5595 22.3253 16.246 23.3109 13.8184 23.3109C8.77658 23.3109 4.96925 19.379 4.96925 14.1712C4.97962 8.95294 8.78696 5.03149 13.8288 5.03149ZM121.472 8.49648H115.672L109.666 15.0634V8.49648H105.018V27.6784H109.676L109.645 21.568L110.693 20.4165L117.716 27.6784H123.878L113.722 17.076L121.472 8.49648ZM75.7214 27.6576H80.9811L83.7303 21.7858H88.7929H90.2556L88.1289 17.2627H87.4442H85.8777L89.0937 10.4365L91.4383 15.4265L94.3638 21.651L97.196 27.668H102.456L89.0834 0.0207484L75.7214 27.6576ZM32.6995 9.52353L23.9333 27.668H29.2345L35.1893 14.9492L33.9755 12.2727L32.6995 9.52353ZM34.8262 5.13523L38.9344 13.8496L38.924 13.8599L45.4183 27.668H50.678L37.3057 0L34.8262 5.13523Z" fill="#07A8D7"></path>
+													</g>
+													<defs>
+														<clippath id="clip0_285_10681">
+															<rect width="162.232" height="28" fill="white"></rect>
+														</clippath>
+													</defs>
+												</svg></a></div>
+										<div class="header__button">
+											<div class="header__button-icon"><svg class="header__button-svg" width="28" height="12" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M1 0H28L27 2H0L1 0Z" fill="white"></path>
+													<path d="M1 10H28L27 12H0L1 10Z" fill="white"></path>
+												</svg></div>
+											<div class="header__button-text">Каталог</div>
+										</div>
+									</div>
+									<div class="header__col">
+										<div class="header__nav">
+											<ul class="header__list">
+												<li class="header__item">
+													<div class="header__accordion" data-accordion-header="0">
+														<div class="header__accordion-text">О компании</div>
+														<div class="header__accordion-icon"><svg class="header__accordion-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+															</svg></div>
+													</div>
+													<div class="header__accordion-dropdown"></div>
+												</li>
+												<li class="header__item"><a class="header__link" href="#">Объекты</a></li>
+												<li class="header__item">
+													<div class="header__accordion" data-accordion-header="2">
+														<div class="header__accordion-text">Техническая информация</div>
+														<div class="header__accordion-icon"><svg class="header__accordion-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+															</svg></div>
+													</div>
+													<div class="header__accordion-dropdown"></div>
+												</li>
+												<li class="header__item">
+													<div class="header__accordion" data-accordion-header="3">
+														<div class="header__accordion-text">Сотрудничество</div>
+														<div class="header__accordion-icon"><svg class="header__accordion-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+															</svg></div>
+													</div>
+													<div class="header__accordion-dropdown"></div>
+												</li>
+											</ul>
+											<div class="header__buttons"><a class="header__buttons-item" href="#"><svg class="header__search" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M5 11.1455C4.99956 8.21437 7.06975 5.69108 9.94452 5.11883C12.8193 4.54659 15.698 6.08477 16.82 8.79267C17.9421 11.5006 16.995 14.624 14.558 16.2528C12.121 17.8815 8.87287 17.562 6.8 15.4895C5.64763 14.3376 5.00014 12.775 5 11.1455Z" stroke="#3F3F40" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														<path d="M16.0196 14.9599L15.4893 14.4296L14.4286 15.4902L14.9589 16.0206L16.0196 14.9599ZM18.4699 19.5316L19.0003 20.0619L20.0609 19.0012L19.5306 18.4709L18.4699 19.5316ZM14.9589 16.0206L18.4699 19.5316L19.5306 18.4709L16.0196 14.9599L14.9589 16.0206Z" fill="#3F3F40"></path>
+													</svg></a><a class="header__buttons-item header__cart" href="#"><svg class="header__cart-svg" width="22" height="21" viewbox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M1 6H21L18.1429 20H3.85714L1 6Z" stroke="#3F3F40" stroke-width="1.5"></path>
+														<path d="M14 4V1H8V4" stroke="#3F3F40" stroke-width="1.5"></path>
+													</svg>
+													<div class="header__cart-count">0</div>
+												</a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="header__mobile">
+							<div class="header__row">
+								<div class="header__col">
+									<div class="header__logo"><a class="header__logo-link" href="#"><svg class="header__logo-svg" width="163" height="28" viewbox="0 0 163 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_285_10681)">
+													<path d="M48.2505 5.49833H55.0559V27.668H59.9526V5.49833H66.7996V0.674324H48.2505V5.49833ZM138.807 17.4183C139.865 16.4016 139.99 15.0322 139.99 14.0571C139.99 11.9822 139.077 8.48611 132.935 8.48611H125.206V27.668H133.869C138.454 27.668 141.193 25.4998 141.193 21.8688C141.183 19.877 140.342 18.3105 138.807 17.4183ZM129.875 12.6358H133.153C134.595 12.6358 135.321 13.2271 135.321 14.389C135.321 15.4887 134.595 16.0697 133.153 16.1112H129.875V12.6358ZM134.004 23.508H129.875V19.6591H134.014C136.255 19.6591 136.514 20.7692 136.514 21.5991C136.504 22.8544 135.684 23.4768 134.004 23.508ZM157.564 8.48611V9.5754C156.225 8.66247 154.617 8.18525 152.874 8.18525C147.262 8.18525 143.029 12.4387 143.029 18.0719C143.029 23.7051 147.262 27.9585 152.874 27.9585C154.648 27.9585 156.256 27.4917 157.564 26.6099V27.668H162.242V8.48611H157.564ZM157.564 21.153C156.578 22.595 154.804 23.4768 152.906 23.4768C149.949 23.4768 147.801 21.2049 147.801 18.0719C147.801 14.9389 149.949 12.6669 152.906 12.6669C154.804 12.6669 156.578 13.5591 157.564 14.9907V21.153ZM13.8288 5.03149C16.2564 5.03149 18.5698 6.01704 20.1778 7.73916L20.3957 7.96739H20.4061L22.9996 3.89033C22.8751 3.77621 22.7506 3.64135 22.6158 3.52723C20.7899 1.91923 18.5802 0.912931 16.1008 0.529085C15.9348 0.497962 15.7688 0.477214 15.6028 0.456465C15.4161 0.435717 15.2293 0.414968 15.0426 0.39422C14.6484 0.363097 14.2542 0.342349 13.8496 0.342349C13.8185 0.342349 13.7977 0.342349 13.7666 0.342349C6.02742 0.383846 0 6.44239 0 14.1712C0 21.9 6.02742 27.9585 13.7458 28C13.777 28 13.7977 28 13.8288 28C14.223 28 14.6173 27.9793 15.0011 27.9481C15.1982 27.9274 15.385 27.917 15.5717 27.8859C15.7584 27.8651 15.9452 27.834 16.1319 27.8029C18.601 27.419 20.8003 26.4024 22.6158 24.7944C22.7092 24.7114 22.8025 24.618 22.9063 24.535L20.4061 20.375H20.3853L20.1675 20.6032C18.5595 22.3253 16.246 23.3109 13.8184 23.3109C8.77658 23.3109 4.96925 19.379 4.96925 14.1712C4.97962 8.95294 8.78696 5.03149 13.8288 5.03149ZM121.472 8.49648H115.672L109.666 15.0634V8.49648H105.018V27.6784H109.676L109.645 21.568L110.693 20.4165L117.716 27.6784H123.878L113.722 17.076L121.472 8.49648ZM75.7214 27.6576H80.9811L83.7303 21.7858H88.7929H90.2556L88.1289 17.2627H87.4442H85.8777L89.0937 10.4365L91.4383 15.4265L94.3638 21.651L97.196 27.668H102.456L89.0834 0.0207484L75.7214 27.6576ZM32.6995 9.52353L23.9333 27.668H29.2345L35.1893 14.9492L33.9755 12.2727L32.6995 9.52353ZM34.8262 5.13523L38.9344 13.8496L38.924 13.8599L45.4183 27.668H50.678L37.3057 0L34.8262 5.13523Z" fill="#07A8D7"></path>
+												</g>
+												<defs>
+													<clippath id="clip0_285_10681">
+														<rect width="162.232" height="28" fill="white"></rect>
+													</clippath>
+												</defs>
+											</svg></a></div>
+								</div>
+								<div class="header__col">
+									<div class="header__buttons"><a class="header__buttons-item" href="#"><svg class="header__search" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M5 11.1455C4.99956 8.21437 7.06975 5.69108 9.94452 5.11883C12.8193 4.54659 15.698 6.08477 16.82 8.79267C17.9421 11.5006 16.995 14.624 14.558 16.2528C12.121 17.8815 8.87287 17.562 6.8 15.4895C5.64763 14.3376 5.00014 12.775 5 11.1455Z" stroke="#3F3F40" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M16.0196 14.9599L15.4893 14.4296L14.4286 15.4902L14.9589 16.0206L16.0196 14.9599ZM18.4699 19.5316L19.0003 20.0619L20.0609 19.0012L19.5306 18.4709L18.4699 19.5316ZM14.9589 16.0206L18.4699 19.5316L19.5306 18.4709L16.0196 14.9599L14.9589 16.0206Z" fill="#3F3F40"></path>
+											</svg></a><a class="header__buttons-item header__cart" href="#"><svg class="header__cart-svg" width="22" height="21" viewbox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1 6H21L18.1429 20H3.85714L1 6Z" stroke="#3F3F40" stroke-width="1.5"></path>
+												<path d="M14 4V1H8V4" stroke="#3F3F40" stroke-width="1.5"></path>
+											</svg>
+											<div class="header__cart-count">0</div>
+										</a>
+										<div class="header__menu">
+											<div class="header__burger"><span class="header__burger-span"></span><span class="header__burger-span"></span><span class="header__burger-span"></span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header__panel">
+					<div class="container">
+						<div class="header__panel-overlay"></div>
+						<div class="header__panel-spoiler" data-header-modal="0">
+							<div class="header__panel-inner">
+								<ul class="header__panel-list">
+									<li class="header__panel-item"><a class="header__panel-link" href="#">СЛТ Аква</a></li>
+									<li class="header__panel-item"><a class="header__panel-link" href="#">Производство</a></li>
+									<li class="header__panel-item"><a class="header__panel-link" href="#">Работа у нас</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="header__panel-spoiler" data-header-modal="2">
+							<div class="header__panel-inner">
+								<ul class="header__panel-list">
+									<li class="header__panel-item"><a class="header__panel-link" href="#">Разрешительная документация</a></li>
+									<li class="header__panel-item"><a class="header__panel-link" href="#">Программы для проектировщиков</a></li>
+									<li class="header__panel-item"><a class="header__panel-link" href="#">Информационные материалы</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="header__panel-spoiler" data-header-modal="3">
+							<div class="header__panel-inner">
+								<ul class="header__panel-list">
+									<li class="header__panel-item"><a class="header__panel-link" href="#">Условия сотрудничества</a></li>
+									<li class="header__panel-item"><a class="header__panel-link" href="#">Рекламная поддержка</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-menu">
+					<ul class="mobile-menu__list">
+						<li class="mobile-menu__item active" data-modal-btn="0">
+							<div class="mobile-menu__item-text">Каталог</div>
+							<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+								</svg></div>
+						</li>
+						<li class="mobile-menu__item" data-modal-btn="1">
+							<div class="mobile-menu__item-text">О компании</div>
+							<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+								</svg></div>
+						</li>
+						<li class="mobile-menu__item" data-modal-btn="1">
+							<div class="mobile-menu__item-text">Техническая информация</div>
+							<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+								</svg></div>
+						</li>
+						<li class="mobile-menu__item" data-modal-btn="1">
+							<div class="mobile-menu__item-text">Сотрудничество</div>
+							<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+								</svg></div>
+						</li>
+						<li class="mobile-menu__item" data-modal-btn="1">
+							<div class="mobile-menu__item-text">Сервисы расчета</div>
+							<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+								</svg></div>
+						</li>
+					</ul>
+					<div class="container">
+						<div class="mobile-menu__container">
+							<ul class="mobile-menu__nav">
+								<li class="mobile-menu__nav-item"><a class="header__feedback-link" href="#">
+										<div class="header__feedback-icon"><svg class="header__feedback-svg" width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M9.49967 1.58301C6.43909 1.58301 3.95801 4.06409 3.95801 7.12467C3.95801 12.6663 9.49967 17.4163 9.49967 17.4163C9.49967 17.4163 15.0413 12.6663 15.0413 7.12467C15.0413 4.06409 12.5603 1.58301 9.49967 1.58301ZM9.49967 16.3318C8.17363 15.0283 4.74967 11.2615 4.74967 7.12467C4.74967 4.50545 6.88045 2.37467 9.49967 2.37467C12.1189 2.37467 14.2497 4.50545 14.2497 7.12467C14.2497 11.2619 10.8253 15.0287 9.49967 16.3318Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
+												<path d="M9.49967 7.91634C9.9369 7.91634 10.2913 7.5619 10.2913 7.12467C10.2913 6.68745 9.9369 6.33301 9.49967 6.33301C9.06245 6.33301 8.70801 6.68745 8.70801 7.12467C8.70801 7.5619 9.06245 7.91634 9.49967 7.91634Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
+											</svg></div>
+										<div class="header__text">Где купить</div>
+									</a></li>
+								<li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">Объекты</a></li>
+								<li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">События</a></li>
+								<li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">Контакты</a></li>
+							</ul>
+							<div class="mobile-menu__inner"><a class="header__phone" href="tel:8 800 444-72-37">8 800 444-72-37</a>
+								<div class="button button--sm">Обратный звонок</div>
+							</div>
+							<div class="mobile-menu__bot">
+								<div class="mobile-menu__label">Написать нам</div>
+								<ul class="mobile-menu__nav">
+									<li class="mobile-menu__nav-item"><a class="mobile-menu__link" href="#">
+											<div class="mobile-menu__link-icon"><svg class="mobile-menu__link-svg" width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M11.0258 1.06453L0.39439 5.18547C-0.0334337 5.37736 -0.178139 5.76169 0.290966 5.97025L3.01841 6.84149L9.61296 2.74486C9.97302 2.48767 10.3417 2.55625 10.0245 2.83916L4.36062 7.99388L4.1827 10.1754C4.3475 10.5122 4.64924 10.5137 4.8417 10.3463L6.40869 8.85597L9.0924 10.876C9.7157 11.2469 10.0549 11.0075 10.189 10.3277L11.9493 1.94949C12.132 1.11263 11.8203 0.74391 11.0258 1.06453Z" fill="#3F3F40"></path>
+												</svg></div>
+											<div class="mobile-menu__link-text">Telegram</div>
+										</a></li>
+									<li class="mobile-menu__nav-item"><a class="mobile-menu__link" href="#">
+											<div class="mobile-menu__link-icon"><svg class="mobile-menu__link-svg" width="12" height="13" viewbox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_561_37206)">
+														<path d="M5.90527 2.63623C6.33226 2.62631 6.7566 2.70575 7.15107 2.86946C7.54554 3.03318 7.90144 3.27755 8.19591 3.5869C8.49039 3.89625 8.71694 4.26374 8.86104 4.66579C9.00513 5.06785 9.06359 5.49559 9.03265 5.92156M6.41071 4.31049C6.5405 4.30608 6.66981 4.3284 6.79061 4.37606C6.91141 4.42371 7.02113 4.49569 7.11296 4.58751C7.20479 4.67934 7.27676 4.78906 7.32442 4.90987C7.37207 5.03067 7.39439 5.15998 7.38999 5.28977L6.41071 4.31049ZM6.18958 3.45757C6.46325 3.45727 6.73412 3.51253 6.9858 3.62C7.23748 3.72748 7.46471 3.88493 7.65374 4.08282C7.84277 4.28071 7.98966 4.51492 8.0855 4.77125C8.18134 5.02759 8.22415 5.30071 8.21132 5.57407L6.18958 3.45757Z" stroke="#3F3F40" stroke-width="0.315897" stroke-linecap="round"></path>
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M0.914487 5.76349C0.914487 2.88883 1.45151 1.11981 6.00043 1.11981C10.5493 1.11981 11.0864 2.88883 11.0864 5.76349C11.0864 8.63815 10.5493 10.4072 6.00043 10.4072L5.17909 10.3756L3.50484 12.3657C3.37848 12.4921 3.25212 12.3973 3.25212 12.271V10.0913C3.06259 10.0913 2.27284 9.7122 2.05172 9.49107C1.35674 8.76451 0.914487 8.22749 0.914487 5.76349ZM-0.0332031 5.76349C-0.0332031 1.78319 1.70423 0.172119 6.00043 0.172119C10.2966 0.172119 12.0341 1.78319 12.0341 5.76349C12.0341 9.74379 10.2966 11.3549 6.00043 11.3549C5.68453 11.3549 5.43181 11.3549 4.98956 11.2917L3.78915 12.65C3.56802 12.9028 2.90464 12.9975 2.90464 12.2394V10.9126C2.7151 10.9126 2.27284 10.7231 1.67264 10.344C1.07244 9.93333 -0.0332031 8.95405 -0.0332031 5.76349ZM7.0113 7.09026C7.22189 6.81648 7.47461 6.77436 7.76945 6.9639L8.90668 7.81682C9.07515 8.02742 9.00144 8.32226 8.68555 8.70133C8.36965 9.08041 8.07481 9.23836 7.80104 9.17518C6.68487 8.92246 5.61082 8.29067 4.57889 7.2798C3.54696 6.26893 2.90464 5.17382 2.65192 3.99447C2.65192 3.57327 2.91517 3.21526 3.44166 2.92042C3.71544 2.73088 3.9471 2.78353 4.13663 3.07837L4.92638 4.18401C5.05274 4.43673 4.97903 4.66838 4.70525 4.87898C3.47325 5.35283 6.31632 8.41703 7.0113 7.09026Z" fill="#3F3F40"></path>
+													</g>
+													<defs>
+														<clippath id="clip0_561_37206">
+															<rect width="12" height="13" fill="white"></rect>
+														</clippath>
+													</defs>
+												</svg></div>
+											<div class="mobile-menu__link-text">Viber</div>
+										</a></li>
+									<li class="mobile-menu__nav-item"><a class="mobile-menu__link" href="#">
+											<div class="mobile-menu__link-icon"><svg class="mobile-menu__link-svg" width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 5.84547C12 9.07387 9.3628 11.6909 6.10907 11.6909C5.07613 11.6909 4.10573 11.4269 3.26147 10.9636L0 12L1.06333 8.86373C0.526933 7.98293 0.218 6.94987 0.218 5.84547C0.218 2.61707 2.85547 0 6.10907 0C9.36307 0 12 2.61707 12 5.84547ZM6.10907 0.930933C3.37787 0.930933 1.15627 3.1356 1.15627 5.84547C1.15627 6.9208 1.5068 7.91667 2.09973 8.7268L1.48093 10.552L3.38427 9.94707C4.16627 10.4605 5.10307 10.76 6.1092 10.76C8.84 10.76 11.062 8.5556 11.062 5.84573C11.062 3.13587 8.84013 0.930933 6.10907 0.930933ZM9.08387 7.19173C9.04747 7.13213 8.95133 7.09613 8.80707 7.02453C8.66253 6.95293 7.9524 6.60613 7.8204 6.55853C7.688 6.5108 7.59147 6.4868 7.49533 6.63013C7.3992 6.7736 7.1224 7.09613 7.038 7.19173C6.95373 7.2876 6.8696 7.2996 6.72507 7.22787C6.5808 7.15627 6.1156 7.0048 5.564 6.5168C5.1348 6.13707 4.84493 5.66827 4.76067 5.52467C4.67653 5.38133 4.75187 5.30387 4.824 5.23253C4.88907 5.16827 4.96853 5.0652 5.04067 4.9816C5.11307 4.89787 5.13707 4.83827 5.18493 4.74253C5.23333 4.64693 5.2092 4.56333 5.17293 4.49147C5.13693 4.41987 4.84787 3.7148 4.7276 3.42787C4.60733 3.1412 4.4872 3.18893 4.4028 3.18893C4.31867 3.18893 4.22227 3.17693 4.126 3.17693C4.02973 3.17693 3.8732 3.2128 3.7408 3.35613C3.60853 3.4996 3.2356 3.84627 3.2356 4.5512C3.2356 5.25627 3.7528 5.93747 3.8252 6.03293C3.89733 6.1284 4.82387 7.62227 6.29187 8.196C7.76 8.76947 7.76 8.57813 8.0248 8.55413C8.28933 8.53027 8.87893 8.2076 8.99973 7.8732C9.11973 7.53827 9.11973 7.25147 9.08387 7.19173Z" fill="#3F3F40"></path>
+												</svg></div>
+											<div class="mobile-menu__link-text">WhatsApp</div>
+										</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="mobile-menu__modals">
+						<div class="mobile-menu__modal" data-modal-menu="0">
+							<div class="container">
+								<div class="mobile-menu__modal-back" data-modal-close="0">
+									<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+										</svg></div>
+									<div class="mobile-menu__modal-text">Каталог</div>
+								</div>
+							</div>
+							<ul class="mobile-menu__modal-wrapper">
+								<li class="mobile-menu__item" data-modal-btn="q0">
+									<div class="mobile-menu__item-content">
+										<div class="mobile-menu__title">SLT AQUA</div>
+										<div class="mobile-menu__caption">Полипропиленовые трубопроводные системы для водоснабжения и отопления</div>
+									</div>
+									<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+										</svg></div>
+								</li>
+								<li class="mobile-menu__item" data-modal-btn="q0">
+									<div class="mobile-menu__item-content">
+										<div class="mobile-menu__title">SLT BLOCKFIRE</div>
+										<div class="mobile-menu__caption">Полипропиленовые трубопроводные системы для пожаротушения</div>
+									</div>
+									<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+										</svg></div>
+								</li>
+								<li class="mobile-menu__item" data-modal-btn="q0">
+									<div class="mobile-menu__item-content">
+										<div class="mobile-menu__title">SLT PE-RT</div>
+										<div class="mobile-menu__caption">Гибкие трубопроводные системы из термостойкого полиэтилена для водоснабжения и отопления</div>
+									</div>
+									<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+										</svg></div>
+								</li>
+								<li class="mobile-menu__item" data-modal-btn="q0">
+									<div class="mobile-menu__item-content">
+										<div class="mobile-menu__title">Инструменты</div>
+										<div class="mobile-menu__caption">Для монтажа полимерных трубопроводных систем</div>
+									</div>
+									<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+										</svg></div>
+								</li>
+							</ul>
+							<div class="mobile-menu__modal" data-modal-menu="q0">
+								<div class="container">
+									<div class="mobile-menu__modal-back" data-modal-close="q0">
+										<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+											</svg></div>
+										<div class="mobile-menu__modal-text">Меню</div>
+									</div>
+									<ul class="mobile-menu__modal-list">
+										<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Трубы</a></li>
+										<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Фитинги</a></li>
+										<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Фитинги комбинированные</a></li>
+										<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Компенсаторы</a></li>
+										<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Крепления</a></li>
+										<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Запорная арматура</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="mobile-menu__modal" data-modal-menu="1">
+							<div class="container">
+								<div class="mobile-menu__modal-back" data-modal-close="1">
+									<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+										</svg></div>
+									<div class="mobile-menu__modal-text">Меню</div>
+								</div>
+								<ul class="mobile-menu__modal-list">
+									<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Трубы</a></li>
+									<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Фитинги</a></li>
+									<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Фитинги комбинированные</a></li>
+									<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Компенсаторы</a></li>
+									<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Крепления</a></li>
+									<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Запорная арматура</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+				<div class="where-buy">
+					<section class="section section--first">
+						<div class="container">
+							<div class="breadcrumbs">
+								<ul class="breadcrumbs__list">
+									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+									<li class="breadcrumbs__item">
+										<div class="breadcrumbs__text">Где купить</div>
+									</li>
+								</ul>
+							</div>
+							<div class="events-page__inner">
+								<h1>Где купить</h1>
+							</div>
+						</div>
+					</section>
+					<section class="section">
+						<div class="container">
+							<div class="where-buy__top">
+								<div class="search-page-tabs">
+									<div class="search-page-tabs__item is-active">Списком</div>
+									<div class="search-page-tabs__item">На карте</div>
+								</div>
+							</div>
+							<div class="where-buy__filters">
+								<div class="where-buy__filters-item">Все</div>
+								<div class="where-buy__filters-item">Интернет-магазин</div>
+								<div class="where-buy__filters-item">Доставка</div>
+								<div class="where-buy__filters-item">Самовывоз со склада</div>
+								<div class="where-buy__filters-item">Услуги монтажа</div>
+								<div class="where-buy__filters-item">В продаже SLT AQUA</div>
+								<div class="where-buy__filters-item">В продаже SLT BLOCKFIRE</div>
+								<div class="where-buy__filters-item">В продаже SLT PE-RT</div>
+								<div class="where-buy__filters-item">Сопутствующие товары</div>
+							</div>
+							<div class="where-buy-list">
+								<div class="where-buy-list__item">
+									<div class="accordion" data-accordion="">
+										<div class="accordion__head" data-accordion-button="">
+											<div class="accordion__row">
+												<div class="accordion__col">
+													<div class="accordion__title">Менеджер по продажам</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__text">от 50000 ₽</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__location">
+														<div class="accordion__location-icon"><svg class="accordion__location-svg" width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M9.49967 1.58301C6.43909 1.58301 3.95801 4.06409 3.95801 7.12467C3.95801 12.6663 9.49967 17.4163 9.49967 17.4163C9.49967 17.4163 15.0413 12.6663 15.0413 7.12467C15.0413 4.06409 12.5603 1.58301 9.49967 1.58301ZM9.49967 16.3318C8.17363 15.0283 4.74967 11.2615 4.74967 7.12467C4.74967 4.50545 6.88045 2.37467 9.49967 2.37467C12.1189 2.37467 14.2497 4.50545 14.2497 7.12467C14.2497 11.2619 10.8253 15.0287 9.49967 16.3318Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
+																<path d="M9.49967 7.91634C9.9369 7.91634 10.2913 7.5619 10.2913 7.12467C10.2913 6.68745 9.9369 6.33301 9.49967 6.33301C9.06245 6.33301 8.70801 6.68745 8.70801 7.12467C8.70801 7.5619 9.06245 7.91634 9.49967 7.91634Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
+															</svg></div>
+														<div class="accordion__location-text">Санкт-Петербург</div>
+													</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__icon"><svg class="accordion__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+														</svg></div>
+												</div>
+											</div>
+										</div>
+										<div class="accordion__body" data-accordion-dropdown="">
+											<div class="accordion__container">
+												<div class="accordion__block">
+													<h6>Что будет делать наш SMM-щик</h6>
+													<ul class="accordion__list">
+														<li class="accordion__item">
+															<div class="list-item">Социальные сети компании: планирование, создание, наполнение, развитие, ведение, общение</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">CRM и рассылки</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Взять на себя заботу о нашем сайте</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Программа лояльности: ведение, развитие и совершенствование</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Участие в организации выставок, семинаров, вебинаров и акций для клиентов компании</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Разработка видео- и фотоматериалов самостоятельно и с помощью подрядчиков</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Организовывать и контролировать представленность компании, ТМ-к в сети интернет, на интернет-площадках дистрибьюторов</div>
+														</li>
+													</ul>
+												</div>
+												<div class="accordion__block">
+													<h6>Для реализации задач понадобится</h6>
+													<ul class="accordion__list">
+														<li class="accordion__item">
+															<div class="list-item">Навыки писать интересные, нестандартные тексты грамотно</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Понимать принципы работы социальных сетей</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Разбираться в основах фирменного стиля, CRM, CMS, Google Analytics и Yandex.Metrika</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Владеть необходимыми для работы программами и видео/фото-редакторами</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Иметь опыт в проведении вебинаров или знать точный план организации процесса</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Уметь работать «руками» и «головой»</div>
+														</li>
+													</ul>
+												</div>
+												<div class="accordion__block">
+													<h6>Ждем тебя, наш СЛТшник!</h6>
+												</div>
+												<div class="accordion__block">
+													<div class="accordion__button"><a class="button button--wide--mobile" href="#" data-fancy-button="work1">
+															<div class="button__text">Откликнуться</div>
+															<div class="button__icon button__icon--right"><svg class="button__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path fill-rule="evenodd" clip-rule="evenodd" d="M7.33328 11.7239L7.33328 2L8.66662 2L8.66662 11.7239L12.8619 7.5286L13.8047 8.4714L7.99995 14.2761L2.19521 8.4714L3.13802 7.5286L7.33328 11.7239Z" fill="#07A8D7"></path>
+																</svg></div>
+														</a></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="where-buy-list__item">
+									<div class="accordion" data-accordion="">
+										<div class="accordion__head" data-accordion-button="">
+											<div class="accordion__row">
+												<div class="accordion__col">
+													<div class="accordion__title">Менеджер по продажам</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__text">от 50000 ₽</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__location">
+														<div class="accordion__location-icon"><svg class="accordion__location-svg" width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M9.49967 1.58301C6.43909 1.58301 3.95801 4.06409 3.95801 7.12467C3.95801 12.6663 9.49967 17.4163 9.49967 17.4163C9.49967 17.4163 15.0413 12.6663 15.0413 7.12467C15.0413 4.06409 12.5603 1.58301 9.49967 1.58301ZM9.49967 16.3318C8.17363 15.0283 4.74967 11.2615 4.74967 7.12467C4.74967 4.50545 6.88045 2.37467 9.49967 2.37467C12.1189 2.37467 14.2497 4.50545 14.2497 7.12467C14.2497 11.2619 10.8253 15.0287 9.49967 16.3318Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
+																<path d="M9.49967 7.91634C9.9369 7.91634 10.2913 7.5619 10.2913 7.12467C10.2913 6.68745 9.9369 6.33301 9.49967 6.33301C9.06245 6.33301 8.70801 6.68745 8.70801 7.12467C8.70801 7.5619 9.06245 7.91634 9.49967 7.91634Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
+															</svg></div>
+														<div class="accordion__location-text">Санкт-Петербург</div>
+													</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__icon"><svg class="accordion__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+														</svg></div>
+												</div>
+											</div>
+										</div>
+										<div class="accordion__body" data-accordion-dropdown="">
+											<div class="accordion__container">
+												<div class="accordion__block">
+													<h6>Что будет делать наш SMM-щик</h6>
+													<ul class="accordion__list">
+														<li class="accordion__item">
+															<div class="list-item">Социальные сети компании: планирование, создание, наполнение, развитие, ведение, общение</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">CRM и рассылки</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Взять на себя заботу о нашем сайте</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Программа лояльности: ведение, развитие и совершенствование</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Участие в организации выставок, семинаров, вебинаров и акций для клиентов компании</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Разработка видео- и фотоматериалов самостоятельно и с помощью подрядчиков</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Организовывать и контролировать представленность компании, ТМ-к в сети интернет, на интернет-площадках дистрибьюторов</div>
+														</li>
+													</ul>
+												</div>
+												<div class="accordion__block">
+													<h6>Для реализации задач понадобится</h6>
+													<ul class="accordion__list">
+														<li class="accordion__item">
+															<div class="list-item">Навыки писать интересные, нестандартные тексты грамотно</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Понимать принципы работы социальных сетей</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Разбираться в основах фирменного стиля, CRM, CMS, Google Analytics и Yandex.Metrika</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Владеть необходимыми для работы программами и видео/фото-редакторами</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Иметь опыт в проведении вебинаров или знать точный план организации процесса</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Уметь работать «руками» и «головой»</div>
+														</li>
+													</ul>
+												</div>
+												<div class="accordion__block">
+													<h6>Ждем тебя, наш СЛТшник!</h6>
+												</div>
+												<div class="accordion__block">
+													<div class="accordion__button"><a class="button button--wide--mobile" href="#" data-fancy-button="work1">
+															<div class="button__text">Откликнуться</div>
+															<div class="button__icon button__icon--right"><svg class="button__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path fill-rule="evenodd" clip-rule="evenodd" d="M7.33328 11.7239L7.33328 2L8.66662 2L8.66662 11.7239L12.8619 7.5286L13.8047 8.4714L7.99995 14.2761L2.19521 8.4714L3.13802 7.5286L7.33328 11.7239Z" fill="#07A8D7"></path>
+																</svg></div>
+														</a></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="where-buy-list__item">
+									<div class="accordion" data-accordion="">
+										<div class="accordion__head" data-accordion-button="">
+											<div class="accordion__row">
+												<div class="accordion__col">
+													<div class="accordion__title">Менеджер по продажам</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__text">от 50000 ₽</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__location">
+														<div class="accordion__location-icon"><svg class="accordion__location-svg" width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M9.49967 1.58301C6.43909 1.58301 3.95801 4.06409 3.95801 7.12467C3.95801 12.6663 9.49967 17.4163 9.49967 17.4163C9.49967 17.4163 15.0413 12.6663 15.0413 7.12467C15.0413 4.06409 12.5603 1.58301 9.49967 1.58301ZM9.49967 16.3318C8.17363 15.0283 4.74967 11.2615 4.74967 7.12467C4.74967 4.50545 6.88045 2.37467 9.49967 2.37467C12.1189 2.37467 14.2497 4.50545 14.2497 7.12467C14.2497 11.2619 10.8253 15.0287 9.49967 16.3318Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
+																<path d="M9.49967 7.91634C9.9369 7.91634 10.2913 7.5619 10.2913 7.12467C10.2913 6.68745 9.9369 6.33301 9.49967 6.33301C9.06245 6.33301 8.70801 6.68745 8.70801 7.12467C8.70801 7.5619 9.06245 7.91634 9.49967 7.91634Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
+															</svg></div>
+														<div class="accordion__location-text">Санкт-Петербург</div>
+													</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__icon"><svg class="accordion__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+														</svg></div>
+												</div>
+											</div>
+										</div>
+										<div class="accordion__body" data-accordion-dropdown="">
+											<div class="accordion__container">
+												<div class="accordion__block">
+													<h6>Что будет делать наш SMM-щик</h6>
+													<ul class="accordion__list">
+														<li class="accordion__item">
+															<div class="list-item">Социальные сети компании: планирование, создание, наполнение, развитие, ведение, общение</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">CRM и рассылки</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Взять на себя заботу о нашем сайте</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Программа лояльности: ведение, развитие и совершенствование</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Участие в организации выставок, семинаров, вебинаров и акций для клиентов компании</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Разработка видео- и фотоматериалов самостоятельно и с помощью подрядчиков</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Организовывать и контролировать представленность компании, ТМ-к в сети интернет, на интернет-площадках дистрибьюторов</div>
+														</li>
+													</ul>
+												</div>
+												<div class="accordion__block">
+													<h6>Для реализации задач понадобится</h6>
+													<ul class="accordion__list">
+														<li class="accordion__item">
+															<div class="list-item">Навыки писать интересные, нестандартные тексты грамотно</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Понимать принципы работы социальных сетей</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Разбираться в основах фирменного стиля, CRM, CMS, Google Analytics и Yandex.Metrika</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Владеть необходимыми для работы программами и видео/фото-редакторами</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Иметь опыт в проведении вебинаров или знать точный план организации процесса</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Уметь работать «руками» и «головой»</div>
+														</li>
+													</ul>
+												</div>
+												<div class="accordion__block">
+													<h6>Ждем тебя, наш СЛТшник!</h6>
+												</div>
+												<div class="accordion__block">
+													<div class="accordion__button"><a class="button button--wide--mobile" href="#" data-fancy-button="work1">
+															<div class="button__text">Откликнуться</div>
+															<div class="button__icon button__icon--right"><svg class="button__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path fill-rule="evenodd" clip-rule="evenodd" d="M7.33328 11.7239L7.33328 2L8.66662 2L8.66662 11.7239L12.8619 7.5286L13.8047 8.4714L7.99995 14.2761L2.19521 8.4714L3.13802 7.5286L7.33328 11.7239Z" fill="#07A8D7"></path>
+																</svg></div>
+														</a></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="where-buy-list__item">
+									<div class="accordion" data-accordion="">
+										<div class="accordion__head" data-accordion-button="">
+											<div class="accordion__row">
+												<div class="accordion__col">
+													<div class="accordion__title">Менеджер по продажам</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__text">от 50000 ₽</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__location">
+														<div class="accordion__location-icon"><svg class="accordion__location-svg" width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M9.49967 1.58301C6.43909 1.58301 3.95801 4.06409 3.95801 7.12467C3.95801 12.6663 9.49967 17.4163 9.49967 17.4163C9.49967 17.4163 15.0413 12.6663 15.0413 7.12467C15.0413 4.06409 12.5603 1.58301 9.49967 1.58301ZM9.49967 16.3318C8.17363 15.0283 4.74967 11.2615 4.74967 7.12467C4.74967 4.50545 6.88045 2.37467 9.49967 2.37467C12.1189 2.37467 14.2497 4.50545 14.2497 7.12467C14.2497 11.2619 10.8253 15.0287 9.49967 16.3318Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
+																<path d="M9.49967 7.91634C9.9369 7.91634 10.2913 7.5619 10.2913 7.12467C10.2913 6.68745 9.9369 6.33301 9.49967 6.33301C9.06245 6.33301 8.70801 6.68745 8.70801 7.12467C8.70801 7.5619 9.06245 7.91634 9.49967 7.91634Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
+															</svg></div>
+														<div class="accordion__location-text">Санкт-Петербург</div>
+													</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__icon"><svg class="accordion__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+														</svg></div>
+												</div>
+											</div>
+										</div>
+										<div class="accordion__body" data-accordion-dropdown="">
+											<div class="accordion__container">
+												<div class="accordion__block">
+													<h6>Что будет делать наш SMM-щик</h6>
+													<ul class="accordion__list">
+														<li class="accordion__item">
+															<div class="list-item">Социальные сети компании: планирование, создание, наполнение, развитие, ведение, общение</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">CRM и рассылки</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Взять на себя заботу о нашем сайте</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Программа лояльности: ведение, развитие и совершенствование</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Участие в организации выставок, семинаров, вебинаров и акций для клиентов компании</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Разработка видео- и фотоматериалов самостоятельно и с помощью подрядчиков</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Организовывать и контролировать представленность компании, ТМ-к в сети интернет, на интернет-площадках дистрибьюторов</div>
+														</li>
+													</ul>
+												</div>
+												<div class="accordion__block">
+													<h6>Для реализации задач понадобится</h6>
+													<ul class="accordion__list">
+														<li class="accordion__item">
+															<div class="list-item">Навыки писать интересные, нестандартные тексты грамотно</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Понимать принципы работы социальных сетей</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Разбираться в основах фирменного стиля, CRM, CMS, Google Analytics и Yandex.Metrika</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Владеть необходимыми для работы программами и видео/фото-редакторами</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Иметь опыт в проведении вебинаров или знать точный план организации процесса</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Уметь работать «руками» и «головой»</div>
+														</li>
+													</ul>
+												</div>
+												<div class="accordion__block">
+													<h6>Ждем тебя, наш СЛТшник!</h6>
+												</div>
+												<div class="accordion__block">
+													<div class="accordion__button"><a class="button button--wide--mobile" href="#" data-fancy-button="work1">
+															<div class="button__text">Откликнуться</div>
+															<div class="button__icon button__icon--right"><svg class="button__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path fill-rule="evenodd" clip-rule="evenodd" d="M7.33328 11.7239L7.33328 2L8.66662 2L8.66662 11.7239L12.8619 7.5286L13.8047 8.4714L7.99995 14.2761L2.19521 8.4714L3.13802 7.5286L7.33328 11.7239Z" fill="#07A8D7"></path>
+																</svg></div>
+														</a></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="where-buy-list__item">
+									<div class="accordion" data-accordion="">
+										<div class="accordion__head" data-accordion-button="">
+											<div class="accordion__row">
+												<div class="accordion__col">
+													<div class="accordion__title">Менеджер по продажам</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__text">от 50000 ₽</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__location">
+														<div class="accordion__location-icon"><svg class="accordion__location-svg" width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M9.49967 1.58301C6.43909 1.58301 3.95801 4.06409 3.95801 7.12467C3.95801 12.6663 9.49967 17.4163 9.49967 17.4163C9.49967 17.4163 15.0413 12.6663 15.0413 7.12467C15.0413 4.06409 12.5603 1.58301 9.49967 1.58301ZM9.49967 16.3318C8.17363 15.0283 4.74967 11.2615 4.74967 7.12467C4.74967 4.50545 6.88045 2.37467 9.49967 2.37467C12.1189 2.37467 14.2497 4.50545 14.2497 7.12467C14.2497 11.2619 10.8253 15.0287 9.49967 16.3318Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
+																<path d="M9.49967 7.91634C9.9369 7.91634 10.2913 7.5619 10.2913 7.12467C10.2913 6.68745 9.9369 6.33301 9.49967 6.33301C9.06245 6.33301 8.70801 6.68745 8.70801 7.12467C8.70801 7.5619 9.06245 7.91634 9.49967 7.91634Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
+															</svg></div>
+														<div class="accordion__location-text">Санкт-Петербург</div>
+													</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__icon"><svg class="accordion__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+														</svg></div>
+												</div>
+											</div>
+										</div>
+										<div class="accordion__body" data-accordion-dropdown="">
+											<div class="accordion__container">
+												<div class="accordion__block">
+													<h6>Что будет делать наш SMM-щик</h6>
+													<ul class="accordion__list">
+														<li class="accordion__item">
+															<div class="list-item">Социальные сети компании: планирование, создание, наполнение, развитие, ведение, общение</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">CRM и рассылки</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Взять на себя заботу о нашем сайте</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Программа лояльности: ведение, развитие и совершенствование</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Участие в организации выставок, семинаров, вебинаров и акций для клиентов компании</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Разработка видео- и фотоматериалов самостоятельно и с помощью подрядчиков</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Организовывать и контролировать представленность компании, ТМ-к в сети интернет, на интернет-площадках дистрибьюторов</div>
+														</li>
+													</ul>
+												</div>
+												<div class="accordion__block">
+													<h6>Для реализации задач понадобится</h6>
+													<ul class="accordion__list">
+														<li class="accordion__item">
+															<div class="list-item">Навыки писать интересные, нестандартные тексты грамотно</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Понимать принципы работы социальных сетей</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Разбираться в основах фирменного стиля, CRM, CMS, Google Analytics и Yandex.Metrika</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Владеть необходимыми для работы программами и видео/фото-редакторами</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Иметь опыт в проведении вебинаров или знать точный план организации процесса</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Уметь работать «руками» и «головой»</div>
+														</li>
+													</ul>
+												</div>
+												<div class="accordion__block">
+													<h6>Ждем тебя, наш СЛТшник!</h6>
+												</div>
+												<div class="accordion__block">
+													<div class="accordion__button"><a class="button button--wide--mobile" href="#" data-fancy-button="work1">
+															<div class="button__text">Откликнуться</div>
+															<div class="button__icon button__icon--right"><svg class="button__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path fill-rule="evenodd" clip-rule="evenodd" d="M7.33328 11.7239L7.33328 2L8.66662 2L8.66662 11.7239L12.8619 7.5286L13.8047 8.4714L7.99995 14.2761L2.19521 8.4714L3.13802 7.5286L7.33328 11.7239Z" fill="#07A8D7"></path>
+																</svg></div>
+														</a></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="where-buy-list__item">
+									<div class="accordion" data-accordion="">
+										<div class="accordion__head" data-accordion-button="">
+											<div class="accordion__row">
+												<div class="accordion__col">
+													<div class="accordion__title">Менеджер по продажам</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__text">от 50000 ₽</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__location">
+														<div class="accordion__location-icon"><svg class="accordion__location-svg" width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M9.49967 1.58301C6.43909 1.58301 3.95801 4.06409 3.95801 7.12467C3.95801 12.6663 9.49967 17.4163 9.49967 17.4163C9.49967 17.4163 15.0413 12.6663 15.0413 7.12467C15.0413 4.06409 12.5603 1.58301 9.49967 1.58301ZM9.49967 16.3318C8.17363 15.0283 4.74967 11.2615 4.74967 7.12467C4.74967 4.50545 6.88045 2.37467 9.49967 2.37467C12.1189 2.37467 14.2497 4.50545 14.2497 7.12467C14.2497 11.2619 10.8253 15.0287 9.49967 16.3318Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
+																<path d="M9.49967 7.91634C9.9369 7.91634 10.2913 7.5619 10.2913 7.12467C10.2913 6.68745 9.9369 6.33301 9.49967 6.33301C9.06245 6.33301 8.70801 6.68745 8.70801 7.12467C8.70801 7.5619 9.06245 7.91634 9.49967 7.91634Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
+															</svg></div>
+														<div class="accordion__location-text">Санкт-Петербург</div>
+													</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__icon"><svg class="accordion__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+														</svg></div>
+												</div>
+											</div>
+										</div>
+										<div class="accordion__body" data-accordion-dropdown="">
+											<div class="accordion__container">
+												<div class="accordion__block">
+													<h6>Что будет делать наш SMM-щик</h6>
+													<ul class="accordion__list">
+														<li class="accordion__item">
+															<div class="list-item">Социальные сети компании: планирование, создание, наполнение, развитие, ведение, общение</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">CRM и рассылки</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Взять на себя заботу о нашем сайте</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Программа лояльности: ведение, развитие и совершенствование</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Участие в организации выставок, семинаров, вебинаров и акций для клиентов компании</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Разработка видео- и фотоматериалов самостоятельно и с помощью подрядчиков</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Организовывать и контролировать представленность компании, ТМ-к в сети интернет, на интернет-площадках дистрибьюторов</div>
+														</li>
+													</ul>
+												</div>
+												<div class="accordion__block">
+													<h6>Для реализации задач понадобится</h6>
+													<ul class="accordion__list">
+														<li class="accordion__item">
+															<div class="list-item">Навыки писать интересные, нестандартные тексты грамотно</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Понимать принципы работы социальных сетей</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Разбираться в основах фирменного стиля, CRM, CMS, Google Analytics и Yandex.Metrika</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Владеть необходимыми для работы программами и видео/фото-редакторами</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Иметь опыт в проведении вебинаров или знать точный план организации процесса</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Уметь работать «руками» и «головой»</div>
+														</li>
+													</ul>
+												</div>
+												<div class="accordion__block">
+													<h6>Ждем тебя, наш СЛТшник!</h6>
+												</div>
+												<div class="accordion__block">
+													<div class="accordion__button"><a class="button button--wide--mobile" href="#" data-fancy-button="work1">
+															<div class="button__text">Откликнуться</div>
+															<div class="button__icon button__icon--right"><svg class="button__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path fill-rule="evenodd" clip-rule="evenodd" d="M7.33328 11.7239L7.33328 2L8.66662 2L8.66662 11.7239L12.8619 7.5286L13.8047 8.4714L7.99995 14.2761L2.19521 8.4714L3.13802 7.5286L7.33328 11.7239Z" fill="#07A8D7"></path>
+																</svg></div>
+														</a></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="where-buy-list__item">
+									<div class="accordion" data-accordion="">
+										<div class="accordion__head" data-accordion-button="">
+											<div class="accordion__row">
+												<div class="accordion__col">
+													<div class="accordion__title">Менеджер по продажам</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__text">от 50000 ₽</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__location">
+														<div class="accordion__location-icon"><svg class="accordion__location-svg" width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M9.49967 1.58301C6.43909 1.58301 3.95801 4.06409 3.95801 7.12467C3.95801 12.6663 9.49967 17.4163 9.49967 17.4163C9.49967 17.4163 15.0413 12.6663 15.0413 7.12467C15.0413 4.06409 12.5603 1.58301 9.49967 1.58301ZM9.49967 16.3318C8.17363 15.0283 4.74967 11.2615 4.74967 7.12467C4.74967 4.50545 6.88045 2.37467 9.49967 2.37467C12.1189 2.37467 14.2497 4.50545 14.2497 7.12467C14.2497 11.2619 10.8253 15.0287 9.49967 16.3318Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
+																<path d="M9.49967 7.91634C9.9369 7.91634 10.2913 7.5619 10.2913 7.12467C10.2913 6.68745 9.9369 6.33301 9.49967 6.33301C9.06245 6.33301 8.70801 6.68745 8.70801 7.12467C8.70801 7.5619 9.06245 7.91634 9.49967 7.91634Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
+															</svg></div>
+														<div class="accordion__location-text">Санкт-Петербург</div>
+													</div>
+												</div>
+												<div class="accordion__col">
+													<div class="accordion__icon"><svg class="accordion__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+														</svg></div>
+												</div>
+											</div>
+										</div>
+										<div class="accordion__body" data-accordion-dropdown="">
+											<div class="accordion__container">
+												<div class="accordion__block">
+													<h6>Что будет делать наш SMM-щик</h6>
+													<ul class="accordion__list">
+														<li class="accordion__item">
+															<div class="list-item">Социальные сети компании: планирование, создание, наполнение, развитие, ведение, общение</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">CRM и рассылки</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Взять на себя заботу о нашем сайте</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Программа лояльности: ведение, развитие и совершенствование</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Участие в организации выставок, семинаров, вебинаров и акций для клиентов компании</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Разработка видео- и фотоматериалов самостоятельно и с помощью подрядчиков</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Организовывать и контролировать представленность компании, ТМ-к в сети интернет, на интернет-площадках дистрибьюторов</div>
+														</li>
+													</ul>
+												</div>
+												<div class="accordion__block">
+													<h6>Для реализации задач понадобится</h6>
+													<ul class="accordion__list">
+														<li class="accordion__item">
+															<div class="list-item">Навыки писать интересные, нестандартные тексты грамотно</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Понимать принципы работы социальных сетей</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Разбираться в основах фирменного стиля, CRM, CMS, Google Analytics и Yandex.Metrika</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Владеть необходимыми для работы программами и видео/фото-редакторами</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Иметь опыт в проведении вебинаров или знать точный план организации процесса</div>
+														</li>
+														<li class="accordion__item">
+															<div class="list-item">Уметь работать «руками» и «головой»</div>
+														</li>
+													</ul>
+												</div>
+												<div class="accordion__block">
+													<h6>Ждем тебя, наш СЛТшник!</h6>
+												</div>
+												<div class="accordion__block">
+													<div class="accordion__button"><a class="button button--wide--mobile" href="#" data-fancy-button="work1">
+															<div class="button__text">Откликнуться</div>
+															<div class="button__icon button__icon--right"><svg class="button__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path fill-rule="evenodd" clip-rule="evenodd" d="M7.33328 11.7239L7.33328 2L8.66662 2L8.66662 11.7239L12.8619 7.5286L13.8047 8.4714L7.99995 14.2761L2.19521 8.4714L3.13802 7.5286L7.33328 11.7239Z" fill="#07A8D7"></path>
+																</svg></div>
+														</a></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</main>
+			<footer class="footer">
+				<div class="footer__inner">
+					<div class="container">
+						<div class="footer__top">
+							<div class="footer__row">
+								<div class="footer__col">
+									<div class="footer__label">Продукция</div>
+									<ul class="footer__products">
+										<li class="footer__products-item"><a class="footer__products-link" href="#">
+												<h5>SLT AQUA</h5>
+											</a></li>
+										<li class="footer__products-item"><a class="footer__products-link" href="#">
+												<h5>SLT BLOCKFIRE</h5>
+											</a></li>
+										<li class="footer__products-item"><a class="footer__products-link" href="#">
+												<h5>SLT PE-RT</h5>
+											</a></li>
+										<li class="footer__products-item"><a class="footer__products-link" href="#">
+												<h5>Инструменты</h5>
+											</a></li>
+									</ul>
+								</div>
+								<div class="footer__col">
+									<div class="footer__section">
+										<div class="footer__label">О компании</div>
+										<ul class="footer__list">
+											<li class="footer__item"><a class="footer__link" href="#">СЛТ Аква</a></li>
+											<li class="footer__item"><a class="footer__link" href="#">Производство</a></li>
+										</ul>
+									</div>
+									<div class="footer__section">
+										<div class="footer__label">Техническая информация</div>
+										<ul class="footer__list">
+											<li class="footer__item"><a class="footer__link" href="#">Разрешительная документация</a></li>
+											<li class="footer__item"><a class="footer__link" href="#">Программы для проектировщиков</a></li>
+											<li class="footer__item"><a class="footer__link" href="#">Информационные материалы</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="footer__col">
+									<div class="footer__section">
+										<div class="footer__label">Сотрудничество</div>
+										<ul class="footer__list">
+											<li class="footer__item"><a class="footer__link" href="#">Условия сотрудничества</a></li>
+											<li class="footer__item"><a class="footer__link" href="#">Рекламная поддержка</a></li>
+										</ul>
+									</div>
+									<div class="footer__section">
+										<div class="footer__label">Сервисы расчета</div>
+										<ul class="footer__list">
+											<li class="footer__item"><a class="footer__link" href="#">Расчет компенсаторов для систем SLT AQUA</a></li>
+											<li class="footer__item"><a class="footer__link" href="#">Расчет компенсаторов для систем BLOCKFIRE</a></li>
+											<li class="footer__item"><a class="footer__link" href="#">Расчета удельных гидравлических потерь трубопроводов SLT AQUA</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="footer__col">
+									<ul class="footer__list">
+										<li class="footer__item"><a class="footer__link" href="#">События</a></li>
+										<li class="footer__item"><a class="footer__link" href="#">Объекты</a></li>
+										<li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
+										<li class="footer__item"><a class="footer__link" href="#">Где купить?</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="footer__bot">
+							<div class="footer__row">
+								<div class="footer__col">
+									<div class="footer__bot-item"><a class="footer__phone" href="tel:8 800 444-72-37">
+											<h4>8 800 444-72-37</h4>
+										</a>
+										<div class="footer__socials"><a class="footer__socials-item" href="#"><svg class="footer__socials-svg" width="7" height="16" viewbox="0 0 7 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M4.65426 3.4302V4.98575H7L6.70213 7.77778H4.65426V15.5556H1.45213V7.77778H0V4.98575H1.45213V3.4302C1.45213 3.4302 1.19149 0.478632 3.79787 0H7V2.51282H5.54787C5.54787 2.47293 4.72872 2.43305 4.65426 3.4302Z" fill="#3F3F40"></path>
+												</svg></a><a class="footer__socials-item" href="#"><svg class="footer__socials-svg" width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M7.4998 4.9502C6.1123 4.9502 4.9873 6.07519 4.9873 7.46269C4.9873 8.85019 6.1123 9.97519 7.4998 9.97519C8.8873 9.97519 10.0123 8.85019 10.0123 7.46269C10.0123 6.07519 8.8873 4.9502 7.4998 4.9502Z" fill="#3F3F40"></path>
+													<path d="M10.125 0H4.875C2.2125 0 0 2.2125 0 4.875V10.0875C0 12.7875 2.2125 14.9625 4.875 14.9625H10.0875C12.7875 14.9625 14.9625 12.75 14.9625 10.0875V4.875C15 2.2125 12.7875 0 10.125 0ZM7.5 11.4C5.3625 11.4 3.6 9.675 3.6 7.5C3.6 5.325 5.3625 3.6 7.5 3.6C9.6375 3.6 11.4 5.325 11.4 7.5C11.4 9.6375 9.675 11.4 7.5 11.4ZM11.325 4.5375C10.8 4.5375 10.3875 4.0875 10.3875 3.6C10.3875 3.1125 10.8375 2.625 11.325 2.625C11.85 2.625 12.2625 3.075 12.2625 3.5625C12.2625 4.125 11.85 4.5375 11.325 4.5375Z" fill="#3F3F40"></path>
+												</svg></a></div>
+									</div>
+								</div>
+								<div class="footer__col">
+									<div class="footer__contacts">
+										<div class="footer__contacts-item">
+											<div class="footer__label footer__label--sm">По вопросам сотрудничества</div><a class="footer__mail" href="mailto:info@slt-aqua.ru">
+												<h5>info@slt-aqua.ru</h5>
+											</a>
+										</div>
+										<div class="footer__contacts-item">
+											<div class="footer__label footer__label--sm">Для заявок на продукцию</div><a class="footer__mail" href="mailto:order@slt-aqua.ru">
+												<h5>order@slt-aqua.ru</h5>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="footer__col">
+									<div class="footer__bot-item"><a class="footer__policy" href="#">Политика конфиденциальности</a>
+										<div class="footer__corps">
+											<div class="footer__corp">© СЛТ Аква 2022</div>
+											<div class="footer__corp">Сделано в <span class="footer__span">CloudMill</span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<div class="grid-test">
+				<div class="container">
+					<div class="grid-test__row">
+						<div class="grid-test__col"></div>
+						<div class="grid-test__col"></div>
+						<div class="grid-test__col"></div>
+						<div class="grid-test__col"></div>
+						<div class="grid-test__col"></div>
+						<div class="grid-test__col"></div>
+						<div class="grid-test__col"></div>
+						<div class="grid-test__col"></div>
+						<div class="grid-test__col"></div>
+						<div class="grid-test__col"></div>
+						<div class="grid-test__col"></div>
+						<div class="grid-test__col"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
