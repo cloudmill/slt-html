@@ -64,5 +64,6 @@
       letter-spacing: 0;
       @include fsl(12px, 120%);
     }
+    @include cropText(2);
   }
 }

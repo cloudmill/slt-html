@@ -113,4 +113,14 @@
       }
     }
   }
+
+  &--black {
+    border-color: var(--color-black);
+
+    #{$comp}__svg {
+      path {
+        fill: var(--color-black);
+      }
+    }
+  }
 }

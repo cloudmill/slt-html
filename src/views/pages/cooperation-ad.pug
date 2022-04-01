@@ -3,6 +3,7 @@ extends ../layouts/master
 include ../components/breadcrumbs
 include ../components/docs-cards
 include ../components/nav
+include ../components/select
 
 block content
   .docs-page.cooperation-page
@@ -18,7 +19,7 @@ block content
         .cooperation-page__selects 
           .section__selects
             .section__select 
-              |select
+              +select(options = ['qwe', 'zxc', 'asd'])
         .section__block 
           .docs-page__block
             .docs-page__block-item

@@ -51,6 +51,7 @@
     "normalize.css": "^8.0.1",
     "parsleyjs": "^2.9.2",
     "reset-css": "^5.0.1",
+    "select2": "^4.1.0-rc.0",
     "swiper": "^7.3.2"
   }
 }
