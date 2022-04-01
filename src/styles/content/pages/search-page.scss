@@ -1,0 +1,121 @@
+.search-page {
+  
+  &__count {
+    margin-top: getRem(30px);
+    @include fsl(20px);
+    color: var(--color-gray);
+
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(16px);
+      @include fsl(14px, 100%);
+    }
+
+    @media (min-width: $breakpoint) {
+      letter-spacing: -0.5px;
+    }
+
+    span {
+      color: var(--color-black);
+    }
+  }
+
+  &__input {
+    margin: getRem(60px) 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      margin: getRem(25px) 0;
+    }
+
+    .button {
+      margin-left: getRem(20px);
+
+      @media (max-width: ($breakpoint - 1px)) {
+        display: none;
+      }
+    }
+  }
+
+  &-tabs {
+    margin: getRem(60px) 0;
+
+    display: flex;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      margin: getRem(25px) 0;
+    }
+
+    &__item {
+      @include fsl(20px);
+      position: relative;
+      cursor: pointer;
+      transition: $transition;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        @include fsl(14px);
+      }
+
+      @media (min-width: $breakpoint) {
+        letter-spacing: -0.5px;
+      }
+
+      &:not(:first-child) {
+        margin-left: getRem(30px);
+      }
+
+      sup {
+        @include fsl(12px);
+        letter-spacing: -0.5px;
+        position: absolute;
+      }
+
+      &.is-active {
+        color: var(--color-blue);
+      }
+    }
+  }
+}
+
+.search-body-container {
+  display: grid;
+  grid-template-areas: 'a';
+
+  position: relative;
+}
+
+.search-body-item {
+  grid-area: a;
+  opacity: 0;
+  pointer-events: none;
+
+  position: absolute;
+
+  transition: $transition;
+
+  &.is-active {
+    opacity: 1;
+    pointer-events: all;
+    position: relative;
+  }
+}
+
+.search-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: getRem(77px) 0;
+
+  @media (min-width: $breakpoint) {
+    padding: getRem(110px) 0;
+  }
+
+  svg {
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 193px;
+      height: 145px;
+    }
+  }
+}
