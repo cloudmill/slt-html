@@ -1,8 +1,9 @@
 const searchTabs = document.querySelector('.search-page-tabs');
-const searchContainer = document.querySelector('.search-body-container');
-const searchGroups = searchContainer.querySelectorAll('.search-body-item');
 
 if (searchTabs) {
+
+  const searchContainer = document.querySelector('.search-body-container');
+  const searchGroups = searchContainer.querySelectorAll('.search-body-item');
 
   searchTabs.querySelectorAll('.search-page-tabs__item').forEach((item, index) => {
 

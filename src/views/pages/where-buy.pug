@@ -1,0 +1,44 @@
+extends ../layouts/master
+
+include ../components/breadcrumbs
+include ../components/accordion
+
+block content
+  .where-buy
+    section.section.section--first
+      .container 
+        +breadcrumbs( page = "Где купить")
+        .events-page__inner 
+          h1 
+            |Где купить
+    section.section
+      .container
+        .where-buy__top
+
+          .search-page-tabs
+            .search-page-tabs__item.is-active Списком
+            .search-page-tabs__item На карте
+
+        -
+          const filters = [
+            'Интернет-магазин',
+            'Доставка',
+            'Самовывоз со склада',
+            'Услуги монтажа',
+            'В продаже SLT AQUA ',
+            'В продаже SLT BLOCKFIRE',
+            'В продаже SLT PE-RT',
+            'Сопутствующие товары',
+          ]
+
+        .where-buy__filters
+          .where-buy__filters-item Все
+
+          each item in filters
+            .where-buy__filters-item
+              |#{item}
+
+        .where-buy-list
+          - for (i=0;i<7;i++)
+            .where-buy-list__item
+              +accordion
