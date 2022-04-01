@@ -1,0 +1,29 @@
+.where-buy {
+
+  &__filters {
+    margin: getRem(40px) 0 getRem(30px);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+      padding: getRem(12px) getRem(20px);
+      margin-bottom: getRem(10px);
+      border: 1px solid var(--color-borders);
+      border-radius: 40px;
+
+      &:not(:last-child) {
+        margin-right: getRem(4px);
+      }
+    }
+  }
+}
+
+.where-buy-list {
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: getRem(8px);
+    }
+  }
+}

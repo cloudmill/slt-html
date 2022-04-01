@@ -7,3 +7,4 @@ import "./scripts/accordion";
 import "./scripts/fancybox";
 import "./scripts/select";
 import "./scripts/mobile-menu/MobileMenu";
+import "./scripts/search-tabs";
