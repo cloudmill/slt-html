@@ -107,6 +107,14 @@
       "title": "Оформление заказа"
     },
     {
+      "href": "searching-results",
+      "title": "Результаты поиска"
+    },
+    {
+      "href": "contacts",
+      "title": "Контакты"
+    },
+    {
       "href": "404",
       "title": "404"
     }
