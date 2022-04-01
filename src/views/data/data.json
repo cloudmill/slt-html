@@ -43,6 +43,22 @@
       "title": "[Сотруднечество] Рекламная поддрежка"
     },
     {
+      "href": "calculator",
+      "title": "Калькулятор"
+    },
+    {
+      "href": "calculator-2",
+      "title": "Калькулятор 2"
+    },
+    {
+      "href": "calculator-3",
+      "title": "Калькулятор 3"
+    },
+    {
+      "href": "calculator-4",
+      "title": "Калькулятор 4"
+    },
+    {
       "href": "events",
       "title": "События"
     },
