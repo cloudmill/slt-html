@@ -33,6 +33,10 @@
     overflow-x: hidden;
   }
 
+  &--hidden {
+    overflow: hidden;
+  }
+
   &__block {
     margin-top: getRem(60px);
     @media (max-width: ($breakpoint - 1px)) {

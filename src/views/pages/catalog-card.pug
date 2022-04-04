@@ -115,6 +115,198 @@ block content
         items: ['9,6']
       },
     ]
+  -
+    let tableMobile = [
+      {
+        top: true,
+        text: 'Класс #[br] эксплуатации'
+      },
+      {
+        items: ['1'],
+      },
+      {
+        items: ['2'],
+      },
+      {
+        items: ['4'],
+        class: 'table__item--big'
+      },
+      {
+        items: ['5'],
+        class: 'table__item--big'
+      },
+      {
+        items: ['ХВ'],
+      },
+      {
+        top: true,
+        text: 'Т#[span.table__span раб], ℃'
+      },
+      {
+        items: ['60'],
+      },
+      {
+        items: ['60'],
+      },
+      {
+        items: ['20', '40', '60'],
+        class: 'table__item--big'
+      },
+      {
+        items: ['20', '60', '80'],
+        class: 'table__item--big'
+      },
+      {
+        items: ['20'],
+      },
+      {
+        top: true,
+        text: 'Время при Т#[span.table__span раб], год'
+      },
+      {
+        items: ['49'],
+      },
+      {
+        items: ['49'],
+      },
+      {
+        items: ['2,5', '20', '25'],
+        class: 'table__item--big'
+      },
+      {
+        items: ['14', '25', '10'],
+        class: 'table__item--big'
+      },
+      {
+        items: ['50'],
+      },
+      {
+        top: true,
+        text: 'Т#[span.table__span max], ℃'
+      },
+      {
+        items: ['80'],
+      },
+      {
+        items: ['80'],
+      },
+      {
+        items: ['70'],
+        class: 'table__item--big'
+      },
+      {
+        items: ['90'],
+        class: 'table__item--big'
+      },
+      {
+        items: ['-'],
+      },
+      {
+        top: true,
+        text: 'Время при Т#[span.table__span max], год'
+      },
+      {
+        items: ['1'],
+      },
+      {
+        items: ['1'],
+      },
+      {
+        items: ['2,5'],
+        class: 'table__item--big'
+      },
+      {
+        items: ['1'],
+        class: 'table__item--big'
+      },
+      {
+        items: ['-'],
+      },
+      {
+        top: true,
+        text: 'Т#[span.table__span авар], ℃'
+      },
+      {
+        items: ['95'],
+      },
+      {
+        items: ['95'],
+      },
+      {
+        items: ['100'],
+        class: 'table__item--big'
+      },
+      {
+        items: ['100'],
+        class: 'table__item--big'
+      },
+      {
+        items: ['-'],
+      },
+      {
+        top: true,
+        text: 'Время при Т#[span.table__span авар], час'
+      },
+      {
+        items: ['100'],
+      },
+      {
+        items: ['100'],
+      },
+      {
+        items: ['100'],
+        class: 'table__item--big'
+      },
+      {
+        items: ['100'],
+        class: 'table__item--big'
+      },
+      {
+        items: ['-'],
+      },
+      {
+        top: true,
+        text: 'Область #[br] применения'
+      },
+      {
+        items: ['ГВС (60 ℃)'],
+      },
+      {
+        items: ['ГВС (60 ℃)'],
+      },
+      {
+        items: ['Низкотемпературное радиаторное отопление (60 ℃)'],
+        class: 'table__item--big'
+      },
+      {
+        items: ['Низкотемпературное радиаторное отопление (60 ℃)'],
+        class: 'table__item--big'
+      },
+      {
+        items: ['ХВС'],
+      },
+      {
+        top: true,
+        text: 'P#[span.table__span max], МПа'
+      },
+      {
+        items: ['9,6'],
+      },
+      {
+        items: ['6,6'],
+      },
+      {
+        items: ['21,6'],
+        class: 'table__item--big'
+      },
+      {
+        items: ['21,6'],
+        class: 'table__item--big'
+      },
+      {
+        items: ['21,6'],
+      },
+    ]
   .catalog-page
     section.section.section--first.catalog-page__section 
       .container 
@@ -156,18 +348,32 @@ block content
                   .catalog-page__type-text 
                     |Соединение
     section.section.section--md 
-      .container 
-        .table 
-          each item in ['Класс #[br] эксплуатации', 'Т     , ℃', 'Время при Т      , год', 'Т      , ℃', 'Время при Т      , год', 'Т       , час', 'Время при Т       , час', 'Область #[br] применения', 'P       , МПа',]
-            .table__top 
-              |#{item}
-          each item in ddata 
-            .table__item 
-              ul.table__list 
-                each text in item.items
-                  li.table__list-item 
-                    .table__text 
-                      |#{text}
+      .container
+        .catalog-page__container 
+          .table 
+            .table__grid
+              each item in ['Класс #[br] эксплуатации', 'Т#[span.table__span раб], ℃', 'Время при Т#[span.table__span раб], год', 'Т#[span.table__span max], ℃', 'Время при Т#[span.table__span max], год', 'Т#[span.table__span авар], час', 'Время при Т#[span.table__span авар], час', 'Область #[br] применения', 'P#[span.table__span max], МПа',]
+                .table__top 
+                  |#{item}
+              each item in ddata 
+                .table__item 
+                  ul.table__list 
+                    each text in item.items
+                      li.table__list-item 
+                        .table__text 
+                          |#{text}
+            .table__mobile
+              each item in tableMobile 
+                if (item.top)
+                  .table__top 
+                    |#{item.text}
+                else 
+                  .table__item(class=item.class)
+                    ul.table__list 
+                      each el in item.items
+                        li.table__list-item 
+                          .table__text 
+                            |#{el}
     section.section 
       .container 
         h3.catalog-page__heading

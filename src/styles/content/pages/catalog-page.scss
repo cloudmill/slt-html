@@ -762,4 +762,24 @@
       display: block;
     }
   }
+
+  &__container {
+    @media (max-width: ($breakpoint - 1px)) {
+      position: relative;
+      z-index: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        left: -20px;
+        top: 0;
+        bottom: 0;
+  
+        width: 20px;
+  
+        background-color: var(--color-white);
+      }
+    }
+  }
 }
