@@ -1,0 +1,128 @@
+.spoiler {
+  $comp: &;
+  --color: var(--color-black);
+
+  padding: getRem(24px) 0;
+  @media (max-width: ($breakpoint - 1px)) {
+    padding: getRem(12px) 0;
+  }
+
+  color: var(--color);
+
+  border-top: 1px solid var(--color-black);
+  border-bottom: 1px solid var(--color-black);
+  transition: $transition;
+
+  #{$comp}__svg {
+    path {
+      fill: var(--color);
+    }
+  }
+
+  &.active {
+    #{$comp}__svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &[data-spoiler-color='aqua'] {
+    --color: var(--color-blue);
+  }
+  &[data-spoiler-color='blockfire'] {
+    --color: var(--color-red);
+  }
+  &[data-spoiler-color='pert'] {
+    --color: var(--color-green);
+  }
+  &[data-spoiler-color='tool'] {
+    --color: var(--color-gray);
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+  }
+
+  &__icon {
+    margin-left: getRem(24px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: getRem(12px);
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__svg {
+    width: getRem(24px);
+    height: getRem(24px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(16px);
+      height: getRem(16px);
+    }
+
+    transition: $transition;
+
+    path {
+      transition: $transition;
+    }
+  }
+
+  &__dropdown {
+    margin-top: getRem(24px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(12px);
+    }
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+
+  &__item {
+    --hoverColor: var(--color-black);
+
+    color: var(--color-black);
+    font-weight: 500;
+    cursor: pointer;
+    transition: $transition;
+    letter-spacing: -0.5px;
+    @include fsl(20px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(14px);
+    }
+
+    &:not(:first-child) {
+      margin-left: getRem(20px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 0;
+        margin-top: getRem(10px);
+      }
+    }
+
+    &:hover {
+      color: var(--hoverColor);
+    }
+
+    &.aqua {
+      --hoverColor: var(--color-blue);
+    }
+    &.blockfire {
+      --hoverColor: var(--color-red);
+    }
+    &.pert {
+      --hoverColor: var(--color-green);
+    }
+    &.tool {
+      --hoverColor: var(--color-gray);
+    }
+  }
+}

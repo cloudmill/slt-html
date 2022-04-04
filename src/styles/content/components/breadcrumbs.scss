@@ -128,6 +128,7 @@
     @include fsl(12px, 120%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(10px);
+      letter-spacing: 0;
     }
   }
 
@@ -137,6 +138,7 @@
     @include fsl(12px, 120%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(10px);
+      letter-spacing: 0;
     }
   }
 }

@@ -8,9 +8,24 @@ block content
     section.section.section--first
       .container 
         +breadcrumbs(page = "Рекламная поддержка")
-        .section__inner 
-          h1 
-            |SLT AQUA
+        .spoiler(data-spoiler-color='aqua')
+          .spoiler__button
+            h1 
+              |SLT AQUA
+            .spoiler__icon 
+              +arrow-svg.spoiler__svg
+          .spoiler__dropdown 
+            ul.spoiler__list
+              -
+                var items = [
+                  {class: 'aqua', text: 'SLT AQUA'},
+                  {class: 'blockfire', text: 'SLT BLOCKFIRE'},
+                  {class: 'pert', text: 'SLT  PE-RT'},
+                  {class: 'tool', text: 'Инструменты'},
+                ] 
+              each item in items
+                li.spoiler__item(class=item.class data-spoiler-item=item.class)
+                  |#{item.text}
         .section__block 
           .filters 
             ul.filters__headings 

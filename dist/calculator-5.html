@@ -363,144 +363,391 @@
 				</div>
 			</header>
 			<main class="main">
-				<div class="ordering-page">
+				<div class="calculator-page">
 					<section class="section section--first">
 						<div class="container">
 							<div class="breadcrumbs">
 								<ul class="breadcrumbs__list">
 									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
 									<li class="breadcrumbs__item">
-										<div class="breadcrumbs__text">Оформление заказа</div>
+										<div class="breadcrumbs__text">Расчет компенсаторов для систем SLT AQUA</div>
 									</li>
 								</ul>
 							</div>
 							<div class="section__inner">
-								<h1>Оформление заказа</h1>
+								<h1>Расчет удельных гидравлических<br>потерь трубопроводов СЛТ Аква</h1>
+								<div class="calculator-page__text">С учетом местных сопротивлений по СП 40 102</div>
 							</div>
 						</div>
 					</section>
 					<section class="section">
 						<div class="container">
-							<div class="ordering-page__row">
-								<div class="ordering-page__col">
-									<div class="ordering-page__button"><a class="button button--wide--mobile sticky" href="#">
-											<div class="button__icon button__icon--left"><svg class="button__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M7.33328 11.7239L7.33328 2L8.66662 2L8.66662 11.7239L12.8619 7.5286L13.8047 8.4714L7.99995 14.2761L2.19521 8.4714L3.13802 7.5286L7.33328 11.7239Z" fill="#07A8D7"></path>
-												</svg></div>
-											<div class="button__text">Редактировать заказ</div>
-										</a></div>
-								</div>
-								<div class="ordering-page__col">
-									<h5 class="ordering-page__heading">Контактные данные</h5>
-									<form class="form" action="/">
-										<div class="form__item"><input class="form__input" placeholder="Имя*" /></div>
-										<div class="form__item"><input class="form__input" type="mail" placeholder="E-mail*" /></div>
-										<div class="form__item"><input class="form__input" type="number" placeholder="Телефон*" /></div>
-										<div class="ordering-page__inner">
-											<h5 class="ordering-page__heading">Контактные данные</h5>
-											<div class="ordering-page__grid">
-												<div class="ordering-page__grid-item">
-													<h6 class="ordering-page__title">Проектирование</h6>
-													<ul class="ordering-page__list">
-														<li class="ordering-page__item">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" required="required" />
-																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
-																		</svg></div>
-																	<div class="checkbox__caption">Системы водоснабжения</div>
-																</label></div>
-														</li>
-														<li class="ordering-page__item">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" required="required" />
-																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
-																		</svg></div>
-																	<div class="checkbox__caption">Системы отопления</div>
-																</label></div>
-														</li>
-														<li class="ordering-page__item">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" required="required" />
-																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
-																		</svg></div>
-																	<div class="checkbox__caption">Системы пожаротушения</div>
-																</label></div>
-														</li>
-													</ul>
+							<ul class="calculator-page__list">
+								<li class="calculator-page__list-item">
+									<div class="calculator-page__caption">SLT Aqua PP-R однослойные</div>
+									<div class="calculator-page__list-text">SDR 11, SDR 7,4, SDR 6</div>
+								</li>
+								<li class="calculator-page__list-item">
+									<div class="calculator-page__caption">SLT Aqua PP-R GF армированные стекловолокном</div>
+									<div class="calculator-page__list-text">SDR 7,4, SDR 6</div>
+								</li>
+								<li class="calculator-page__list-item">
+									<div class="calculator-page__caption">SLT Aqua PP-R AL армированные алюминием</div>
+									<div class="calculator-page__list-text">SDR 6</div>
+								</li>
+							</ul>
+							<form class="calculator-page__calculate form" action="/">
+								<div class="calculator-page__calculate-col">
+									<div class="calculator-page__calculate-grid">
+										<div class="calculator-page__calculate-item">
+											<div class="calculator-page__caption">Расход, л/с</div>
+											<div class="calculator-page__features-inner"><input class="form__input" type="number" placeholder="0" /></div>
+										</div>
+										<div class="calculator-page__calculate-item">
+											<div class="calculator-page__caption">Температура, °C</div>
+											<div class="calculator-page__features-inner"><input class="form__input" type="number" placeholder="0" /></div>
+										</div>
+										<div class="calculator-page__calculate-item">
+											<div class="calculator-page__caption">Приемлемый диаметр и SDR труб</div>
+											<div class="calculator-page__features-inner"><input class="form__input" type="number" placeholder="0" /></div>
+										</div>
+										<div class="calculator-page__calculate-item">
+											<div class="calculator-page__caption">Длина трубопровода, м</div>
+											<div class="calculator-page__features-inner"><input class="form__input" type="number" placeholder="0" /></div>
+										</div>
+										<div class="calculator-page__calculate-item">
+											<div class="calculator-page__caption">Процент, учитывающий местные потери</div>
+											<div class="calculator-page__features-inner"><input class="form__input" type="number" placeholder="0" /></div>
+										</div>
+										<div class="calculator-page__calculate-label">* Согласно СП 40-102-2000 «Примечание - Допускается сумму местных потерь h м.с. принимать равной 20-30% суммы удельных потерь i»</div>
+									</div>
+									<div class="section__block">
+										<div class="calculator-page__block">
+											<div class="calculator-page__block-row">
+												<div class="calculator-page__block-col">
+													<div class="calculator-page__caption">Удельные потери по длине трубопровода без учета местных потерь, м/м</div>
+													<div class="calculator-page__block-title">1056,5</div>
 												</div>
-												<div class="ordering-page__grid-item">
-													<h6 class="ordering-page__title">Монтаж</h6>
-													<ul class="ordering-page__list">
-														<li class="ordering-page__item">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" required="required" />
-																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
-																		</svg></div>
-																	<div class="checkbox__caption">Системы водоснабжения</div>
-																</label></div>
-														</li>
-														<li class="ordering-page__item">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" required="required" />
-																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
-																		</svg></div>
-																	<div class="checkbox__caption">Системы отопления</div>
-																</label></div>
-														</li>
-														<li class="ordering-page__item">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" required="required" />
-																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
-																		</svg></div>
-																	<div class="checkbox__caption">Системы пожаротушения</div>
-																</label></div>
-														</li>
-													</ul>
-												</div>
-												<div class="ordering-page__grid-item">
-													<ul class="ordering-page__list">
-														<li class="ordering-page__item">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" required="required" />
-																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
-																		</svg></div>
-																	<div class="checkbox__caption">Доставка</div>
-																</label></div>
-														</li>
-													</ul>
+												<div class="calculator-page__block-col">
+													<div class="calculator-page__caption">Местные потери по длине трубопровода по «Примечанию» СП 40-102-2000, м/м</div>
+													<div class="calculator-page__block-title">0,8778</div>
 												</div>
 											</div>
-										</div>
-										<div class="ordering-page__hidden">
-											<div class="ordering-page__inner">
-												<div class="form__item"><input class="form__input" placeholder="Город*" /></div>
-												<div class="form__item"><input class="form__input" placeholder="Адрес*" /></div>
-											</div>
-										</div>
-										<div class="ordering-page__inner">
-											<h5 class="ordering-page__heading">Дополнительная информация к заказу</h5><textarea class="form__textarea" name="area" placeholder="Комментарий"></textarea>
-											<div class="form__wrapper">
-												<div class="form__row">
-													<div class="form__col">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" required="required" />
-																<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
-																	</svg></div>
-																<div class="checkbox__text">Даю согласие на обработку <a class="checkbox__link" href="#">персональных данных</a></div>
-															</label></div>
+											<div class="calculator-page__block-inner">
+												<div class="calculator-page__block-row">
+													<div class="calculator-page__block-col">
+														<div class="calculator-page__caption">Потери по длине трубопровода с учетом суммы местных потерь, м/м</div>
+														<div class="calculator-page__block-title">5,2667</div>
 													</div>
-													<div class="form__col"><button class="button button--blue button--wide--mobile">
-															<div class="button__text">Оформить заказ</div>
-															<div class="button__icon button__icon--right"><svg class="button__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path fill-rule="evenodd" clip-rule="evenodd" d="M7.33328 11.7239L7.33328 2L8.66662 2L8.66662 11.7239L12.8619 7.5286L13.8047 8.4714L7.99995 14.2761L2.19521 8.4714L3.13802 7.5286L7.33328 11.7239Z" fill="#07A8D7"></path>
-																</svg></div>
-														</button></div>
+													<div class="calculator-page__block-col"></div>
+												</div>
+											</div>
+											<div class="calculator-page__block-inner">
+												<div class="calculator-page__block-row">
+													<div class="calculator-page__block-col">
+														<div class="calculator-page__button"><a class="button button--wide--mobile" href="#">
+																<div class="button__text">Скачать расчет в PDF</div>
+																<div class="button__icon"><svg class="button__svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M16.2929 9.29289L13 12.5858V2H11V12.5858L7.70711 9.29289L6.29289 10.7071L12 16.4142L17.7071 10.7071L16.2929 9.29289ZM22 20V16H20V20H4V16H2V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20Z" fill="#07A8D7"></path>
+																	</svg></div>
+															</a></div>
+													</div>
 												</div>
 											</div>
 										</div>
-									</form>
+									</div>
 								</div>
-							</div>
+								<div class="calculator-page__calculate-col">
+									<div class="calculator-page__grid">
+										<div class="calculator-page__grid-heading">
+											<div class="calculator-page__caption">Диаметр</div>
+										</div>
+										<div class="calculator-page__grid-heading calculator-page__grid-long">
+											<div class="calculator-page__gird-wrapper">
+												<div class="calculator-page__caption">Скорости V, м/с</div>
+												<div class="calculator-page__grid-label">Рекомендуемые скорости ХВС, ГВС от 0,5 до 1 м/с.</div>
+											</div>
+										</div>
+										<div class="calculator-page__grid-heading calculator-page__grid-long">
+											<div class="calculator-page__caption">Потери i, м/м.</div>
+										</div>
+										<div class="calculator-page__grid-item">
+											<div class="calculator-page__grid-title"></div>
+										</div>
+										<div class="calculator-page__grid-item">
+											<div class="calculator-page__grid-title">SDR 11</div>
+										</div>
+										<div class="calculator-page__grid-item">
+											<div class="calculator-page__grid-title">SDR 7,4</div>
+										</div>
+										<div class="calculator-page__grid-item">
+											<div class="calculator-page__grid-title">SDR 6</div>
+										</div>
+										<div class="calculator-page__grid-item">
+											<div class="calculator-page__grid-title">SDR 11</div>
+										</div>
+										<div class="calculator-page__grid-item">
+											<div class="calculator-page__grid-title">SDR 7,4</div>
+										</div>
+										<div class="calculator-page__grid-item">
+											<div class="calculator-page__grid-title">SDR 6</div>
+										</div>
+										<div class="calculator-page__grid-item">
+											<div class="calculator-page__grid-title">D20</div>
+										</div>
+										<div class="calculator-page__grid-item">73,7174</div>
+										<div class="calculator-page__grid-item">96,1133</div>
+										<div class="calculator-page__grid-item">118,4716</div>
+										<div class="calculator-page__grid-item">6,24482</div>
+										<div class="calculator-page__grid-item">12,13625</div>
+										<div class="calculator-page__grid-item">20,52237</div>
+										<div class="calculator-page__grid-item">
+											<div class="calculator-page__grid-title">D20</div>
+										</div>
+										<div class="calculator-page__grid-item">73,7174</div>
+										<div class="calculator-page__grid-item">96,1133</div>
+										<div class="calculator-page__grid-item">118,4716</div>
+										<div class="calculator-page__grid-item">6,24482</div>
+										<div class="calculator-page__grid-item">12,13625</div>
+										<div class="calculator-page__grid-item">20,52237</div>
+										<div class="calculator-page__grid-item">
+											<div class="calculator-page__grid-title">D20</div>
+										</div>
+										<div class="calculator-page__grid-item">73,7174</div>
+										<div class="calculator-page__grid-item">96,1133</div>
+										<div class="calculator-page__grid-item">118,4716</div>
+										<div class="calculator-page__grid-item">6,24482</div>
+										<div class="calculator-page__grid-item">12,13625</div>
+										<div class="calculator-page__grid-item">20,52237</div>
+										<div class="calculator-page__grid-item">
+											<div class="calculator-page__grid-title">D20</div>
+										</div>
+										<div class="calculator-page__grid-item">73,7174</div>
+										<div class="calculator-page__grid-item">96,1133</div>
+										<div class="calculator-page__grid-item">118,4716</div>
+										<div class="calculator-page__grid-item">6,24482</div>
+										<div class="calculator-page__grid-item">12,13625</div>
+										<div class="calculator-page__grid-item">20,52237</div>
+										<div class="calculator-page__grid-item">
+											<div class="calculator-page__grid-title">D20</div>
+										</div>
+										<div class="calculator-page__grid-item">73,7174</div>
+										<div class="calculator-page__grid-item">96,1133</div>
+										<div class="calculator-page__grid-item">118,4716</div>
+										<div class="calculator-page__grid-item">6,24482</div>
+										<div class="calculator-page__grid-item">12,13625</div>
+										<div class="calculator-page__grid-item">20,52237</div>
+										<div class="calculator-page__grid-item">
+											<div class="calculator-page__grid-title">D20</div>
+										</div>
+										<div class="calculator-page__grid-item">73,7174</div>
+										<div class="calculator-page__grid-item">96,1133</div>
+										<div class="calculator-page__grid-item">118,4716</div>
+										<div class="calculator-page__grid-item">6,24482</div>
+										<div class="calculator-page__grid-item">12,13625</div>
+										<div class="calculator-page__grid-item">20,52237</div>
+										<div class="calculator-page__grid-item">
+											<div class="calculator-page__grid-title">D20</div>
+										</div>
+										<div class="calculator-page__grid-item">73,7174</div>
+										<div class="calculator-page__grid-item">96,1133</div>
+										<div class="calculator-page__grid-item">118,4716</div>
+										<div class="calculator-page__grid-item">6,24482</div>
+										<div class="calculator-page__grid-item">12,13625</div>
+										<div class="calculator-page__grid-item">20,52237</div>
+										<div class="calculator-page__grid-item">
+											<div class="calculator-page__grid-title">D20</div>
+										</div>
+										<div class="calculator-page__grid-item">73,7174</div>
+										<div class="calculator-page__grid-item">96,1133</div>
+										<div class="calculator-page__grid-item">118,4716</div>
+										<div class="calculator-page__grid-item">6,24482</div>
+										<div class="calculator-page__grid-item">12,13625</div>
+										<div class="calculator-page__grid-item">20,52237</div>
+										<div class="calculator-page__grid-item">
+											<div class="calculator-page__grid-title">D20</div>
+										</div>
+										<div class="calculator-page__grid-item">73,7174</div>
+										<div class="calculator-page__grid-item">96,1133</div>
+										<div class="calculator-page__grid-item">118,4716</div>
+										<div class="calculator-page__grid-item">6,24482</div>
+										<div class="calculator-page__grid-item">12,13625</div>
+										<div class="calculator-page__grid-item">20,52237</div>
+									</div>
+									<div class="calculator-page__container">
+										<div class="calculator-page__grid-mobile">
+											<div class="calculator-page__grid-heading">
+												<div class="calculator-page__grid-caption">Диаметр</div>
+											</div>
+											<div class="calculator-page__grid-item calculator-page__grid-item--small">
+												<div class="calculator-page__grid-title"></div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">D20</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">D25</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">D32</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">D40</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">D50</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">D63</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">D75</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">D90</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">D110</div>
+											</div>
+											<div class="calculator-page__grid-heading calculator-page__grid-long">
+												<div class="calculator-page__gird-wrapper">
+													<div class="calculator-page__grid-caption">Скорости V, м/с</div>
+													<div class="calculator-page__grid-label">Рекомендуемые скорости ХВС, ГВС от 0,5 до 1 м/с.</div>
+												</div>
+											</div>
+											<div class="calculator-page__grid-item calculator-page__grid-item--small">
+												<div class="calculator-page__grid-title">SDR 11</div>
+											</div>
+											<div class="calculator-page__grid-item">73,7174</div>
+											<div class="calculator-page__grid-item">47,2966</div>
+											<div class="calculator-page__grid-item">28,9305</div>
+											<div class="calculator-page__grid-item">18,3154</div>
+											<div class="calculator-page__grid-item">11,7074</div>
+											<div class="calculator-page__grid-item">7,2892</div>
+											<div class="calculator-page__grid-item">5,2033</div>
+											<div class="calculator-page__grid-item">3,7066</div>
+											<div class="calculator-page__grid-item">2,4342</div>
+											<div class="calculator-page__grid-item calculator-page__grid-item--small">
+												<div class="calculator-page__grid-title">SDR 11</div>
+											</div>
+											<div class="calculator-page__grid-item">73,7174</div>
+											<div class="calculator-page__grid-item">47,2966</div>
+											<div class="calculator-page__grid-item">28,9305</div>
+											<div class="calculator-page__grid-item">18,3154</div>
+											<div class="calculator-page__grid-item">11,7074</div>
+											<div class="calculator-page__grid-item">7,2892</div>
+											<div class="calculator-page__grid-item">5,2033</div>
+											<div class="calculator-page__grid-item">3,7066</div>
+											<div class="calculator-page__grid-item">2,4342</div>
+											<div class="calculator-page__grid-item calculator-page__grid-item--small">
+												<div class="calculator-page__grid-title">SDR 11</div>
+											</div>
+											<div class="calculator-page__grid-item">73,7174</div>
+											<div class="calculator-page__grid-item">47,2966</div>
+											<div class="calculator-page__grid-item">28,9305</div>
+											<div class="calculator-page__grid-item">18,3154</div>
+											<div class="calculator-page__grid-item">11,7074</div>
+											<div class="calculator-page__grid-item">7,2892</div>
+											<div class="calculator-page__grid-item">5,2033</div>
+											<div class="calculator-page__grid-item">3,7066</div>
+											<div class="calculator-page__grid-item">2,4342</div>
+											<div class="calculator-page__grid-heading calculator-page__grid-long">
+												<div class="calculator-page__grid-caption">Потери i, м/м.</div>
+											</div>
+											<div class="calculator-page__grid-item calculator-page__grid-item--small">
+												<div class="calculator-page__grid-title">SDR 11</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">73,7174</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">47,2966</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">28,9305</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">18,3154</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">11,7074</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">7,2892</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">5,2033</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">3,7066</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">2,4342</div>
+											</div>
+											<div class="calculator-page__grid-item calculator-page__grid-item--small">
+												<div class="calculator-page__grid-title">SDR 11</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">73,7174</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">47,2966</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">28,9305</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">18,3154</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">11,7074</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">7,2892</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">5,2033</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">3,7066</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">2,4342</div>
+											</div>
+											<div class="calculator-page__grid-item calculator-page__grid-item--small">
+												<div class="calculator-page__grid-title">SDR 11</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">73,7174</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">47,2966</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">28,9305</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">18,3154</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">11,7074</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">7,2892</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">5,2033</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">3,7066</div>
+											</div>
+											<div class="calculator-page__grid-item">
+												<div class="calculator-page__grid-title">2,4342</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
 						</div>
 					</section>
 				</div>
