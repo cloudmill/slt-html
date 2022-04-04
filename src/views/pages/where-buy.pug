@@ -19,7 +19,7 @@ block content
             .search-page-tabs__item.is-active Списком
             .search-page-tabs__item На карте
 
-          select(name="city")
+          select.where-buy__select(name="city")
             option(value="") Город
             option(value="") Город2
             option(value="") Город3
@@ -50,5 +50,5 @@ block content
               .where-buy-list__item
                 +accordion-big
           
-          .search-body-item
-            img(src="assets/images/where-buy-map.jpeg", alt="")
+          .search-body-item.where-buy__map-container
+            img.where-buy__map(src="assets/images/where-buy-map.jpeg", alt="")
