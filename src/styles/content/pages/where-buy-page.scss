@@ -1,5 +1,19 @@
 .where-buy {
 
+  &__top {
+
+    margin-bottom: getRem(40px);
+
+    display: flex;
+    justify-content: space-between;
+
+    
+
+    .search-page-tabs {
+      margin: 0;
+    }
+  }
+
   &__filters {
     margin: getRem(40px) 0 getRem(30px);
 
@@ -12,8 +26,16 @@
       border: 1px solid var(--color-borders);
       border-radius: 40px;
 
+      cursor: pointer;
+
       &:not(:last-child) {
         margin-right: getRem(4px);
+      }
+
+      &.is-active {
+        background-color: var(--color-blue);
+        border: 1px solid var(--color-blue);
+        color: #fff;
       }
     }
   }

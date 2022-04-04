@@ -19,6 +19,11 @@ block content
             .search-page-tabs__item.is-active Списком
             .search-page-tabs__item На карте
 
+          select(name="city")
+            option(value="") Город
+            option(value="") Город2
+            option(value="") Город3
+
         -
           const filters = [
             'Интернет-магазин',
@@ -32,13 +37,18 @@ block content
           ]
 
         .where-buy__filters
-          .where-buy__filters-item Все
+          .where-buy__filters-item.is-active Все
 
           each item in filters
             .where-buy__filters-item
               |#{item}
 
-        .where-buy-list
-          - for (i=0;i<7;i++)
-            .where-buy-list__item
-              +accordion
+        .where-buy-list.search-body-container
+
+          .search-body-item.is-active
+            - for (i=0;i<7;i++)
+              .where-buy-list__item
+                +accordion-big
+          
+          .search-body-item
+            img(src="assets/images/where-buy-map.jpeg", alt="")
