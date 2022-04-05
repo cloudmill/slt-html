@@ -19,10 +19,6 @@
         @include fsl(14px, 100%);
       }
     }
-
-    // .footer__mail h4 {
-    //   @include fsl(36px, 110%);
-    // }
   }
 
   &__right-col {
@@ -89,6 +85,16 @@
 
   .download-card__icon {
     justify-content: flex-end;
+  }
+
+  .download-card__svg {
+    width: auto;
+    height: auto;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(28px);
+      height: getRem(28px);
+    }
   }
 }
 

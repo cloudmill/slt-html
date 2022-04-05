@@ -13,9 +13,10 @@ mixin link-right
       +big-arrow-svg.button__svg
 
 mixin download-btn 
-  a.button(href="#")&attributes(attributes)
-    .button__text
-      block
+  a.button.button--download(href="#")&attributes(attributes)
+    span.button__text
+      span
+        block
     .button__icon
       +download-svg.button__svg
 
@@ -28,7 +29,8 @@ mixin address-btn
 
 mixin form-button
   button.button.button--blue.button--wide--mobile&attributes(attributes)
-    .button__text
-      block
-    .button__icon.button__icon--right 
-      +big-arrow-svg.button__svg
+    span.button__text
+      span
+        block
+    .button__icon
+      +btn-arrow-right.button__svg
