@@ -101,7 +101,12 @@
     overflow: hidden;
     position: relative;
 
-    #{$comp}__text,#{$comp}__icon {
+    #{$comp}__text, #{$comp}__icon {
+      position: relative;
+      overflow: hidden;
+    }
+
+    #{$comp}__text span {
       position: relative;
       overflow: hidden;
     }
@@ -221,6 +226,53 @@
       }
     }
   }
+
+  &-animate {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-blue);
+
+    &::before {
+      content: '';
+      background: var(--color-white);
+      transition: transform $transition-duration $transition-timing-function;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .button__text, .button__icon {
+      position: relative;
+      overflow: hidden;
+    }
+    .button__text span {
+      display: block;
+    }
+
+    &:hover {
+      &::before {
+        transform: translate3d(0,-101%,0);
+      }
+      .button__text span {
+        animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+        color: var(--color-white);
+      }
+      .button__svg {
+        animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+
+        path {
+          fill: var(--color-white);
+        }
+      }
+    }
+  }
+}
+
+.arrow-blue path {
+  fill: var(--color-blue);
 }
 
 @keyframes MoveUpInitial {

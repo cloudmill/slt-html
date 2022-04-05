@@ -6,11 +6,12 @@ mixin link-left
       block
 
 mixin link-right 
-  a.button(href="#")&attributes(attributes)
+  a.button.button-animate(href="#")&attributes(attributes)
     .button__text
-      block
-    .button__icon.button__icon--right 
-      +big-arrow-svg.button__svg
+      span
+        block
+    .button__icon
+      +btn-arrow-right.button__svg.arrow-blue
 
 mixin download-btn 
   a.button.button--download(href="#")&attributes(attributes)
