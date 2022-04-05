@@ -25,10 +25,35 @@
 
       items.on('click', function() {
         const value = $(this).data('spoiler-item')
+
         spoiler.attr('data-spoiler-color', value)
+        $('.spoiler__title').text($(this).text())
         spoiler.removeClass('active')
         dropdown.slideUp()
         isClose = true
+      })
+    }
+  })
+}
+
+// filters
+{
+  $(() => {
+    const filters = $('.filters')
+
+    if (filters.length) {
+      const filtersTop = filters.find('.filters__headings')
+
+      window.addEventListener('click', event => {
+        const button = $(event.target).closest('[data-filters-button]')
+
+        if (button.length) {
+          const id = button.closest('[data-filters-button]').attr('data-filters-button')
+
+          button.toggleClass('visible')
+          filtersTop.toggleClass('darken')
+          $(`[data-filters-dropdown=${id}]`).slideToggle()
+        }
       })
     }
   })

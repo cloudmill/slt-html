@@ -10,7 +10,7 @@ block content
         +breadcrumbs(page = "Рекламная поддержка")
         .spoiler(data-spoiler-color='aqua')
           .spoiler__button
-            h1 
+            h1.spoiler__title
               |SLT AQUA
             .spoiler__icon 
               +arrow-svg.spoiler__svg
@@ -33,11 +33,17 @@ block content
                 .filters__heading
                   |Все 
               each item in ['Трубы', 'Фитинги', 'Фитинги комбинированные', 'Компенсаторы', 'Крепления', 'Запорная арматура']
-                li.filters__headings-item
+                li.filters__headings-item(data-filters-button='q1')
                   .filters__heading
                     |#{item}
                   .filters__icon 
                     +arrow-svg.filters__svg
+            .filters__container
+              .filters__dropdown(data-filters-dropdown='q1')
+                ul.filters__list
+                  each item in ['Муфты', 'Отоводы', 'Тройники', 'Крестовины', 'Обвод', 'Бурт', 'Фланец', 'Загрушка']
+                    li.filters__item
+                      |#{item}
         .section__block 
           a.button.button--wide(href="#")
             .button__text

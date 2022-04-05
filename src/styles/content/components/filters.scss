@@ -1,4 +1,5 @@
 .filters {
+  $comp: &;
 
   &__headings {
     display: flex;
@@ -7,8 +8,17 @@
       margin-left: -20px;
       padding: 0 20px;
 
+      width: calc(100% + 40px);
+
       overflow-x: scroll;
       @include scrollbar-hidden;
+    }
+
+    &.darken {
+      #{$comp}__headings-item:not(.visible) {
+        opacity: 0.5;
+        pointer-events: none;
+      }
     }
   }
   &__headings-item {
@@ -16,11 +26,33 @@
     align-items: center;
 
     cursor: pointer;
+    transition: $transition;
+
+    &.active {
+      color: var(--color-blue);
+
+      #{$comp}__svg {
+        path {
+          fill: var(--color-blue);
+        }
+      }
+    }
 
     &:not(:first-child) {
       margin-left: getRem(28px);
       @media (max-width: ($breakpoint - 1px)) {
         margin-left: getRem(20px);
+      }
+    }
+
+    &.visible {
+      
+      #{$comp}__svg {
+        transform: rotate(180deg);
+        
+        path {
+          fill: var(--color-blue);
+        }
       }
     }
   }
@@ -50,6 +82,51 @@
     @media (max-width: ($breakpoint - 1px)) {
       width: getRem(12px);
       height: getRem(12px);
+    }
+    transition: $transition;
+
+    path {
+      transition: $transition;
+    }
+  }
+
+  &__dropdown {
+    margin-top: getRem(32px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(16px);
+    }
+
+    display: none;
+  }
+
+  &__list {
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: -20px;
+      padding: 0 20px;
+
+      width: calc(100% + 40px);
+
+      overflow-x: scroll;
+      @include scrollbar-hidden;
+    }
+
+    display: flex;
+  }
+
+  &__item {
+    font-weight: 500;
+    cursor: pointer;
+    transition: $transition;
+    letter-spacing: -0.5px;
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px, 100%);
+    }
+
+    &:not(:first-child) {
+      margin-left: getRem(20px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: getRem(12px);
+      }
     }
   }
 }

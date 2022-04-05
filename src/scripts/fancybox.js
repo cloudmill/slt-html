@@ -14,6 +14,13 @@ import '@fancyapps/fancybox';
       '<div class="fancybox-stage"></div>' +
       '</div>'
     );
+    $.fancybox.defaults.afterShow = function(instance, slide) {
+      $(slide.src).addClass('active')
+    }
+    $.fancybox.defaults.beforeClose = function(instance, slide) {
+      $(slide.src).removeClass('active')
+    }
+    
     // $.fancybox.defaults.afterClose = formReset;
 
     $('[data-fancy-button]').on('click', function (event) {
@@ -23,12 +30,8 @@ import '@fancyapps/fancybox';
       const modal = $(`[data-fancy-modal="${id}"]`);
 
       switch (id) {
-        case 10:
-          $.fancybox.defaults.animationEffect = 'slide-in-out'
-          $.fancybox.defaults.animationDuration = 500
-          break
-        case 'p1':
-          $.fancybox.defaults.animationEffect = 'slide-in-out'
+        case 'work1':
+          $.fancybox.defaults.animationEffect = 'left'
           $.fancybox.defaults.animationDuration = 500
           break
         default:

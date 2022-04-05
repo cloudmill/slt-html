@@ -7,6 +7,9 @@
   width: getRem(611px);
   display: none;
 
+  // transform-origin: left;
+  // transition: $transition;
+
   &__container {
     padding: getRem(60px) getRem(24px) getRem(60px) getRem(60px);
 
@@ -17,13 +20,41 @@
 }
 
 .vacancies-modal {
+  $comp: &;
 
+  transition: $transition;
+  transform-origin: left;
+
+  &.active {
+    #{$comp}__title {
+      opacity: 1;
+    }
+
+    .form > div {
+      opacity: 1;
+    }
+  }
+
+  .form > div {
+    opacity: 0;
+    transition: opacity 0.3s $transition-timing-function;
+    @for $i from 1 to 8 {
+      &:nth-child(#{$i}) {
+        transition-delay: #{0.05 * $i}s;
+      }
+    }
+  }
+  
   &__title {
     margin-bottom: getRem(60px);
 
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: getRem(24px);
     }
+
+    transition: opacity .4s;
+    // transition-delay: .3s;
+    opacity: 0;
   }
 }
 
@@ -99,5 +130,24 @@
     &-item {
       margin-bottom: getRem(5px);
     }
+  }
+}
+
+/* Custom animation slide-in-out */
+.fancybox-fx-left.fancybox-slide--previous {
+  .vacancies-modal {
+    transform: translateX(-100%);
+  }
+}
+
+.fancybox-fx-left.fancybox-slide--next {
+  .vacancies-modal {
+    transform: translateX(-100%);
+  }
+}
+
+.fancybox-fx-left.fancybox-slide--current {
+  .vacancies-modal {
+    transform: translateX(0);
   }
 }
