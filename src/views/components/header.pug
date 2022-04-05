@@ -39,10 +39,12 @@ mixin header
                     .header__feedback-buttons 
                       .header__feedback-item
                         .button.button--sm
-                          |Обратный звонок
+                          span
+                            span Обратный звонок
                       .header__feedback-item
                         .button.button--sm.button--gray 
-                          |Написать нам
+                          span
+                            span Написать нам
                           .button__icon 
                             +arrow-svg
                     a.header__phone(href="tel:" + data.phone) 
@@ -56,8 +58,9 @@ mixin header
                 .header__button 
                   .header__button-icon 
                     +header-catalog-svg.header__button-svg
-                  .header__button-text 
-                    |Каталог
+                  .header__button-text
+                    span
+                      |Каталог
               .header__col
                 .header__nav 
                   ul.header__list 
@@ -75,9 +78,13 @@ mixin header
                             |#{item.text}
                   .header__buttons 
                     a.header__buttons-item(href="#")
-                      +search-svg.header__search
+                      .header__buttons-bg
+                      .header__buttons-container
+                        +search-svg.header__search
                     a.header__buttons-item.header__cart(href="#")
-                      +basket-svg.header__cart-svg
+                      .header__buttons-bg
+                      .header__buttons-container
+                        +basket-svg.header__cart-svg
                       .header__cart-count
                         |0
         .header__mobile 

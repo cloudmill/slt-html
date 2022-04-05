@@ -40,25 +40,29 @@ block content
 
             .footer__socials 
               a.footer__socials-item(href="#")
-                +facebook-svg.footer__socials-svg
+                .footer__socials-container
+                  +facebook-svg.footer__socials-svg
               a.footer__socials-item(href="#")
-                +instagram-svg.footer__socials-svg
+                .footer__socials-container
+                  +instagram-svg.footer__socials-svg
 
           .contacts-white-row__right-col
 
-            -
-              const titles = [
-                'Отправить заявку на тендер',
-                'Предложить рекламу',
-                'Поучаствовать в благотворительности',
-              ]
+            .contacts-mail-box
+              h6.only-desktop Отправить заявку #[br] на тендер
+              h6.only-mobile Отправить заявку на тендер
+              .download-card__icon 
+                +convert-svg.download-card__svg
 
-            each item in titles
+            .contacts-mail-box
+              h6 Предложить рекламу
+              .download-card__icon 
+                +convert-svg.download-card__svg
 
-              .contacts-mail-box
-                h6 #{item}
-                .download-card__icon 
-                  +convert-svg.download-card__svg
+            .contacts-mail-box
+              h6 Поучаствовать #[br] в благотворительности
+              .download-card__icon 
+                +convert-svg.download-card__svg
 
         .contacts-grey-row
 
@@ -150,12 +154,9 @@ block content
                 .form__inner 
                   +checkbox
 
-                .form__inner 
-                  button.button.button--blue
-                    .button__text
-                      |Отправить
-                    .button__icon.button__icon--right 
-                      +big-arrow-svg.button__svg
+                .form__inner
+                  +form-button
+                    |Отправить
 
           .contacts-requisites
             h2 Наши реквизиты
