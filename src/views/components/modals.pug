@@ -84,3 +84,46 @@ mixin contacts-modal2
               .contacts-modal__info-item Ковшов Никита
               a.contacts-modal__info-item(href="tel:+79278932960") +7 927 893 29 60
               a.contacts-modal__info-item(href="mailto:kovshov@slt-aqua.ru") kovshov@slt-aqua.ru
+
+mixin catalog-modal 
+  .catalog-modal(data-fancy-modal='c1')
+    .catalog-modal__container 
+      h4.catalog-modal__title
+        |Области применения
+      .catalog-modal__row 
+        .catalog-modal__col
+          h5.catalog-modal__heading 
+            |Трубы
+          ul.catalog-modal__list 
+            each item in ['Холодное водоснабжение', 'Горячее водоснабжение', 'Питьевая вода']
+              li.catalog-modal__item 
+                label.catalog-modal__button 
+                  .catalog-modal__content 
+                    .catalog-modal__img
+                      +use-svg.catalog-modal__icon
+                    .catalog-modal__text 
+                      |#{item}
+                  input.catalog-modal__input(type="checkbox")
+                  .catalog-modal__box 
+                    +check-svg.catalog-modal__svg
+        .catalog-modal__col
+          h5.catalog-modal__heading 
+            |Фитинги
+          ul.catalog-modal__list 
+            each item in ['Холодное водоснабжение', 'Горячее водоснабжение', 'Питьевая вода','Холодное водоснабжение', 'Горячее водоснабжение', 'Питьевая вода','Холодное водоснабжение', 'Горячее водоснабжение', 'Питьевая вода']
+              li.catalog-modal__item 
+                label.catalog-modal__button 
+                  .catalog-modal__content 
+                    .catalog-modal__img
+                      +use-svg.catalog-modal__icon
+                    .catalog-modal__text 
+                      |#{item}
+                  input.catalog-modal__input(type="checkbox")
+                  .catalog-modal__box 
+                    +check-svg.catalog-modal__svg
+      .catalog-modal__panel
+        h5.catalog-modal__panel-title 
+          |Подходит позиций: 0
+        .catalog-modal__panel-button 
+          +link-right.button--wide 
+            |Показать

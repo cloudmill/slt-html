@@ -2,6 +2,7 @@ extends ../layouts/master
 
 include ../components/breadcrumbs
 include ../components/card
+include ../components/modals
 
 block content
   .docs-page.cooperation-page
@@ -45,7 +46,7 @@ block content
                     li.filters__item
                       |#{item}
         .section__block 
-          a.button.button--wide(href="#")
+          .button.button--wide(data-fancy-button='c1')
             .button__text
               |Области применения
             .button__icon.button__icon--right 
@@ -54,3 +55,4 @@ block content
           .catalog-page__grid 
             - for (i = 0; i < 16; i++)
               +card
+  +catalog-modal

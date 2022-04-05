@@ -19,19 +19,21 @@ window.addEventListener("load", () => {
       loader.classList.add('loader--hidden')
       document.body.classList.remove('body--hidden')
       window.scrollTo(0, 0);
-      AOS.init({
-        once: true,
-        offset: 0,
-        duration: 1000,
-      });
-      document.querySelector('.main-page__video').play()
+      setTimeout(() => {
+        AOS.init({
+          once: true,
+          offset: 0,
+          duration: 1200,
+        });
+        document.querySelector('.main-page__video-player').play()
+      }, 1400);
     }, DELAY * layers.length);
   } else {
     document.body.classList.remove('body--hidden')
     AOS.init({
       once: true,
       offset: 0,
-      duration: 1000,
+      duration: 1200,
     });
   }
 })

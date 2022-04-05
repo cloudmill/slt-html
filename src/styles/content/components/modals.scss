@@ -133,6 +133,183 @@
   }
 }
 
+.catalog-modal {
+  $comp: &;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  @media (max-width: ($breakpoint - 1px)) {
+    right: getRem(20px);
+  }
+
+  width: getRem(950px);
+  height: 100%;
+  @media (max-width: ($breakpoint - 1px)) {
+    width: 100%;
+  }
+  display: none;
+
+  background: var(--color-white);
+
+  &__container {
+    position: relative;
+    z-index: 0;
+    padding: getRem(60px) getRem(60px) getRem(150px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(20px) getRem(20px) getRem(150px);
+    }
+
+    height: 100%;
+    overflow-y: scroll;
+    @include scrollbar-hidden;
+  }
+
+  &__title {
+    margin-bottom: getRem(60px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(28px);
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+
+  &__col {
+    flex-shrink: 0;
+
+    width: calc(375px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: auto;
+    }
+
+    &:nth-child(2) {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(24px);
+      }
+    }
+  }
+
+  &__heading {
+    margin-bottom: getRem(40px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(20px);
+    }
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-top: getRem(8px);
+    }
+  }
+
+  &__button {
+    padding: getRem(12px) getRem(20px);
+    position: relative;
+    z-index: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer;
+    border: 1px solid var(--color-borders);
+  }
+
+  &__input {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    visibility: hidden;
+
+    &:checked {
+      ~#{$comp}__box {
+        border-color: var(--color-blue);
+
+        #{$comp}__svg {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__content {
+    margin-right: getRem(15px);
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    margin-right: getRem(16px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    width: getRem(40px);
+    height: getRem(40px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(32px);
+      height: getRem(32px);
+    }
+  }
+
+  &__text {
+    letter-spacing: -1px;
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px);
+      letter-spacing: 0;
+    }
+  }
+
+  &__box {
+    width: getRem(28px);
+    height: getRem(28px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--color-borders);
+    border-radius: 2px;
+    transition: $transition;
+  }
+
+  &__svg {
+    transition: $transition;
+    opacity: 0;
+  }
+
+  &__panel {
+    padding: getRem(27px) getRem(60px);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--color-white);
+    border-top: 1px solid var(--color-borders);
+    box-shadow: 0px -6px 34px rgba(0, 0, 0, 0.06);
+  }
+  &__panel-button {
+    margin-left: getRem(40px);
+
+    width: getRem(376px);
+  }
+}
+
 /* Custom animation slide-in-out */
 .fancybox-fx-left.fancybox-slide--previous {
   .vacancies-modal {

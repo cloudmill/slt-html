@@ -40,13 +40,19 @@ block content
             +link-right
               |О компании
     section.section.section--md 
-      .main-page__image(data-aos='fade-up')
-        video.main-page__video(src="assets/videos/slt_company_2.mp4" loop muted)
+      .main-page__video(data-aos='fade-up')
+        .main-page__video-left
+        .main-page__video-right
+        video.main-page__video-player(src="assets/videos/slt_company_2.mp4" loop muted)
     section.main-page__section 
       .main-page__section-grid 
         +product-cards
     section.main-page__section 
       .main-page__cooperation
+        .main-page__cooperation-bg(data-parallax='1')
+          +cooperation-bg-svg.main-page__cooperation-svg
+        .main-page__cooperation-image 
+          img(src="assets/images/truck.webp", alt="")
         .main-page__cooperation-container 
           .main-page__cooperation-top
             .main-page__cooperation-row 
@@ -59,7 +65,7 @@ block content
           .main-page__cooperation-bot
             +link-right.button--color-white 
               |Сотрудничество
-    section.section.section--overflow
+    section.section.section--overflow(data-parallax-container='1')
       .container 
         .main-page__top
           .main-page__top-row 
@@ -96,12 +102,14 @@ block content
                           img(src=item.img, alt="")
                         h5.main-page__slider-title 
                           |#{item.title}
-    section.section 
+    section.section
       .container 
         h3.main-page__title 
           |Помощь в инженерных расчетах
-        .section__block 
+        .section__block(data-parallax-container='2') 
           .main-page__calculator 
+            .main-page__calculator-img(data-parallax='2')
+              img.main-page__calculator-bg(src="assets/images/calculator-bg.webp", alt="")
             each item, i in ['Расчет компенсаторов #[br] для систем SLT AQUA', 'Расчет компенсаторов #[br] для систем BLOCKFIRE', 'Расчета удельных гидравлических потерь трубопроводов  SLT AQUA']
               a.main-page__calculator-link(href="#" class=(i < 2 ? 'red' : 'blue'))
                 .main-page__calculator-col

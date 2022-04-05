@@ -13,8 +13,8 @@
   justify-content: center;
 
   background: var(--color-blue);
-  transition: opacity 0.8s;
-  transition-delay: 0.5s;
+  transition: opacity 0.5s $transition-timing-function;
+  transition-delay: 1s;
 
   &--hidden {
     opacity: 0;
@@ -23,9 +23,14 @@
     #{$comp}__icon {
       width: 100vw;
       height: 100vw;
+      @media (max-width: ($breakpoint - 1px)) {
+        flex-shrink: 0;
+        width: 100vh;
+        height: 100vh;
+      }
       transform: scale(1.2);
-      transition: width 1s, height 1s;
-      transition-delay: 0s, 0s, 0.5s;
+      transition: width 1.6s  $transition-timing-function, height 1.6s  $transition-timing-function;
+      transition-delay: 0s, 0s;
     }
 
     #{$comp}__container {
@@ -57,8 +62,8 @@
     justify-content: center;
 
     overflow: hidden;
-    transition: transform 1s, opacity 0.1s;
-    transition-delay: 0s, 0.8s;
+    transition: transform 1.6s $transition-timing-function, opacity 0.1s  $transition-timing-function;
+    transition-delay: 0s, 1.4s;
     transform-origin: center;
   }
 
@@ -82,11 +87,11 @@
 
       &.active {
         transform: none;
-        transition: 1s;
+        transition: 1s $transition-timing-function;
 
         #{$comp}__first-svg {
           transform: none;
-          transition: 1s;
+          transition: 1s $transition-timing-function;
         }
       }
     // }
@@ -100,11 +105,11 @@
 
     &.active {
       transform: none;
-      transition: 1s;
+      transition: 1s $transition-timing-function;
 
       #{$comp}__second-svg {
         transform: none;
-        transition: 1s;
+        transition: 1s $transition-timing-function;
       }
     }
   }
@@ -117,11 +122,11 @@
 
     &.active {
       transform: none;
-      transition: 1s;
+      transition: 1s $transition-timing-function;
 
       #{$comp}__third-svg {
         transform: none;
-        transition: 1s;
+        transition: 1s $transition-timing-function;
       }
     }
   }
