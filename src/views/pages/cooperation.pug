@@ -20,16 +20,10 @@ block content
         {title: 'Развитая логистическая инфраструктура', text: 'Равноудаленность расположения производственной площадки от севера и юга центральной части России позволяет осуществлять эффективную логистику в любом направлении.'},
       ],
       inputs: [
-        {type: 'text', placeholder: 'Имя*'},
-        {type: 'mail', placeholder: 'E-mail*'},
-        {type: 'number', placeholder: 'Телефон*'},
         {type: 'text', placeholder: 'Название компании*'},
         {type: 'text', placeholder: 'Город*'},
         {type: 'text', placeholder: 'ИНН*'},
         {type: 'text', placeholder: 'Адрес компании*'},
-        {type: 'text', placeholder: 'Сайт компании'},
-        {type: 'text', placeholder: 'Территория продаж*'},
-        {type: 'text', placeholder: 'Оборот компании по полипропиленовым системам в год, руб.'},
       ],
       right: [
         {
@@ -91,14 +85,34 @@ block content
         h3.cooperation-page__title
           |Оставить заявку на сотрудничество
         .section__block 
-          form.form(action="/") 
+          form.form(action="/" data-parsley-validate) 
             .cooperation-page__row
               .cooperation-page__col
+
+                .form__item
+                  +input#input(type="text" placeholder="Имя*" required)
+                
+                .form__item
+                  +input#input(type="mail" placeholder="E-mail*" required)
+
+                .form__item
+                  +input#input(type="tel" placeholder="Телефон*" data-tel-input required)
+
                 each item in ddata.inputs 
                   .form__item 
-                    +input(type = item.type placeholder = item.placeholder)
+                    +input#input(type = item.type placeholder = item.placeholder required)
+
                 .form__item
-                  +textarea(placeholder = "Как вы о нас узнали?")
+                  +input#input(type="text" placeholder="Сайт компании")
+
+                .form__item
+                  +input#input(type="text" placeholder="Территория продаж*" required)
+
+                .form__item
+                  +input#input(type="text" placeholder="Оборот компании по полипропиленовым системам в год, руб.")
+
+                .form__item
+                  +textarea#input(placeholder = "Как вы о нас узнали?")
                 .cooperation-page__desktop
                   .form__wrapper
                     .form__row 

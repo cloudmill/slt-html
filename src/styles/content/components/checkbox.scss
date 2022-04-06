@@ -1,9 +1,6 @@
 .checkbox {
   $comp: &;
 
-  position: relative;
-  padding-bottom: 14px;
-
   &__label {
     position: relative;
     z-index: 0;
