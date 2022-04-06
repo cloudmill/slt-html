@@ -27,16 +27,28 @@
     margin: getRem(40px) 0 getRem(30px);
 
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
 
     @media (max-width: ($breakpoint - 1px)) {
-      margin: getRem(20px) -20px;
-      flex-wrap: nowrap;
-      overflow-x: scroll;
+      margin: getRem(20px) 0;
+      
+      flex-direction: column;
+    }
 
-      padding: 0 20px;
+    &-col {
+      &:first-child {
+        display: flex;
+        flex-wrap: wrap;
 
-      @include scrollbar-hidden;
+        @media (max-width: ($breakpoint - 1px)) {
+          flex-wrap: nowrap;
+          overflow-x: scroll;
+          @include scrollbar-hidden;
+
+          margin: 0 -20px getRem(8px);
+          padding: 0 20px;
+        }
+      }
     }
 
     &-item {
@@ -44,13 +56,56 @@
       margin-bottom: getRem(10px);
       border: 1px solid var(--color-borders);
       border-radius: 40px;
+      background: var(--color-blue);
+      background-clip: padding-box;
+
       @include fsl(14px);
       white-space: nowrap;
+      flex-shrink: 0;
       cursor: pointer;
+
+      position: relative;
+      overflow: hidden;
+      transition: $transition;
 
       @media (max-width: ($breakpoint - 1px)) {
         @include fsl(12px);
         margin-bottom: 0;
+      }
+
+      &::before {
+        content: '';
+        background: var(--color-white);
+        transition: transform $transition-duration $transition-timing-function;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover {
+        @media (min-width: $breakpoint) {
+          border: 1px solid var(--color-blue);
+
+          &::before {
+            transform: translate3d(0,-101%,0);
+          }
+
+          .button__text span {
+            animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+            color: var(--color-white);
+          }
+
+          .button__svg {
+            animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+
+            path {
+              fill: var(--color-white);
+            }
+          }
+        }
       }
 
       &:not(:last-child) {
@@ -58,9 +113,41 @@
       }
 
       &.is-active {
-        background-color: var(--color-blue);
         border: 1px solid var(--color-blue);
-        color: #fff;
+
+        &::before {
+          transform: translate3d(0,-101%,0);
+        }
+
+        .button__text span {
+          color: #fff;
+        }
+      }
+
+      .button__text {
+        overflow: hidden;
+
+        span {
+          display: block;
+          transition: $transition;
+        }
+      }
+    }
+
+    &-reset {
+      border: 1px solid var(--color-blue);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.reset-disabled {
+        @media (min-width: $breakpoint) {
+          opacity: 0;
+          pointer-events: none;
+        }
+        @media (max-width: ($breakpoint - 1px)) {
+          display: none;
+        }
       }
     }
   }
