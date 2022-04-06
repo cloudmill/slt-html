@@ -59,22 +59,6 @@
       "title": "Калькулятор 4"
     },
     {
-      "href": "events",
-      "title": "События"
-    },
-    {
-      "href": "events-detail",
-      "title": "События детальная"
-    },
-    {
-      "href": "objects",
-      "title": "Объекты"
-    },
-    {
-      "href": "objects-detail",
-      "title": "Объекты детальная"
-    },
-    {
       "href": "where-buy",
       "title": "Где купить"
     },
@@ -91,10 +75,6 @@
       "title": "[Техническая информация] Информационные материалы"
     },
     {
-      "href": "contacts",
-      "title": "Контакты"
-    },
-    {
       "href": "order",
       "title": "Заказ"
     },
@@ -109,6 +89,22 @@
     {
       "href": "ordering",
       "title": "Оформление заказа"
+    },
+    {
+      "href": "objects",
+      "title": "Объекты"
+    },
+    {
+      "href": "objects-detail",
+      "title": "Объекты детальная"
+    },
+    {
+      "href": "events",
+      "title": "События"
+    },
+    {
+      "href": "events-detail",
+      "title": "События детальная"
     },
     {
       "href": "searching-results",

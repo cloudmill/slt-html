@@ -20,9 +20,47 @@
       }
     }
 
-    // .footer__mail h4 {
-    //   @include fsl(36px, 110%);
-    // }
+    .footer__socials-item {
+      position: relative;
+      overflow: hidden;
+      // background: var(--color-blue);
+
+      &::before {
+        content: '';
+        background: var(--color-borders);
+        transition: transform $transition-duration $transition-timing-function;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .footer__socials-svg {
+        position: relative;
+      }
+      .footer__socials-container {
+        height: fit-content;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &:hover {
+        background: var(--color-blue);
+
+        &::before {
+          transform: translate3d(0,-101%,0);
+        }
+
+        .footer__socials-svg {
+          animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+        }
+      }
+    }
   }
 
   &__right-col {
@@ -89,6 +127,16 @@
 
   .download-card__icon {
     justify-content: flex-end;
+  }
+
+  .download-card__svg {
+    width: auto;
+    height: auto;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(28px);
+      height: getRem(28px);
+    }
   }
 }
 

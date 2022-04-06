@@ -88,11 +88,35 @@
 
   &__products {}
   &__products-item {
+
+    $comp: &;
+
     display: flex;
     &:not(:first-child) {
       margin-top: getRem(16px);
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: 8px;
+      }
+    }
+
+    &:nth-child(1) {
+      .footer__products-link:hover {
+        color: var(--color-blue);
+      }
+    }
+    &:nth-child(2) {
+      .footer__products-link:hover {
+        color: var(--color-red);
+      }
+    }
+    &:nth-child(3) {
+      .footer__products-link:hover {
+        color: var(--color-blue-dark);
+      }
+    }
+    &:nth-child(4) {
+      .footer__products-link:hover {
+        color: var(--color-gray);
       }
     }
   }
@@ -102,6 +126,8 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(16px);
     }
+
+    transition: $transition;
   }
 
   &__section {
@@ -142,6 +168,12 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px);
     }
+
+    transition: $transition;
+
+    &:hover {
+      color: var(--color-blue);
+    }
   }
 
   &__bot {
@@ -166,6 +198,12 @@
     @include fsl(36px, 110%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(18px);
+    }
+
+    transition: $transition;
+
+    &:hover {
+      color: var(--color-blue);
     }
   }
 
@@ -194,6 +232,21 @@
       @media (max-width: ($breakpoint - 1px)) {
         margin-left: 8px;
       }
+    }
+
+    transition: $transition;
+
+    &:hover {
+      background-color: var(--color-blue);
+
+      .footer__socials-svg path {
+        fill: var(--color-white);
+      }
+    }
+  }
+  &__socials-svg {
+    path {
+      transition: $transition;
     }
   }
 
@@ -227,6 +280,12 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(16px);
     }
+
+    transition: $transition;
+
+    &:hover {
+      color: var(--color-blue);
+    }
   }
 
   &__policy {
@@ -236,6 +295,12 @@
     }
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px);
+    }
+
+    transition: $transition;
+
+    &:hover {
+      color: var(--color-blue);
     }
   }
 
@@ -267,5 +332,11 @@
 
   &__span {
     color: var(--color-black);
+    
+    transition: $transition;
+
+    &:hover {
+      color: var(--color-blue);
+    }
   }
 }
