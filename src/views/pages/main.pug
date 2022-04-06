@@ -7,7 +7,7 @@ include ../components/product-cards
 include ../components/slider-buttons
 
 
-block loader 
+//- block loader 
   +loader
 
 
@@ -80,24 +80,35 @@ block content
               |Все объекты
         .main-page__slider
           .main-page__slider-desktop
-            .main-page__controls
-              +slider-buttons(prev = 11 next = 12)
-            .swiper-container.swiper-container--visible.swiper-container--visible.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='10' data-slider-prev='11' data-slider-next='12')
-              .swiper-wrapper 
+            .template
+              .template__slides
                 each item in ddata.slider
-                  .swiper-slide 
-                    .main-page__slider-slide 
-                      .main-page__slider-image 
-                        img(src=item.img, alt="")
-                      h5.main-page__slider-title 
-                        |#{item.title}
+                  a.main-page__slider-frame(href='#')
+                    .main-page__slider-slide
+                      img.main-page__slider-image(src=item.img)
+              .template__titles
+                each item in ddata.slider
+                  h5.main-page__slider-title
+                    span.main-page__slider-span
+                      |#{item.title}
+            .main-page__controls
+              .slider-buttons
+                .slider-buttons__item(data-slider-arrow='prev')
+                  +button-icon.button-icon--blue.button-icon--left
+                .slider-buttons__item(data-slider-arrow='next')
+                  +button-icon.button-icon--blue
+            .main-page__slider-row
+              - for (i = 0; i < 3; i++)
+                .main-page__slider-col
+                  .main-page__slider-container  
+                  .main-page__slider-wrapper
           .main-page__slider-mobile 
             .swiper-container.swiper-container--visible.swiper-container--visible.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='1' data-slider-prev='11' data-slider-next='12')
               .swiper-wrapper 
                 - for (i = 0; i < 3; i++)
                   each item in ddata.slider
                     .swiper-slide 
-                      .main-page__slider-slide 
+                      a.main-page__slider-slide(href="#")
                         .main-page__slider-image 
                           img(src=item.img, alt="")
                         h5.main-page__slider-title 

@@ -8,6 +8,8 @@ import "./scripts/fancybox";
 import "./scripts/video-scroll";
 import "./scripts/parallax";
 import "./scripts/select";
+import "./scripts/main-slider";
+import "./scripts/about-slider";
 import "./scripts/order-panel";
 import "./scripts/catalog-spoilers";
 import "./scripts/mobile-menu/MobileMenu";

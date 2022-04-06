@@ -280,23 +280,134 @@
       display: block;
     }
   }
+  &__slider-row {
+    margin-left: getRem(-150px);
+
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% + (9.4rem * 2));
+  }
+  &__slider-col {
+    position: relative;
+    z-index: 0;
+
+    display: block;
+    width: calc(#{$col-part-d} * 4 - #{$col-gap});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(266px);
+    }
+
+    overflow: hidden;
+  }
+  &__slider-container {
+    height: getRem(420px);
+  }
+  &__slider-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    transition: 0.6s $transition-timing-function;
+    pointer-events: none;
+
+    &.left {
+      transform: translateX(-100%);
+
+      #{$comp}__slider-slide {
+        transform: translateX(100%);
+      }
+    }
+
+    &.right {
+      transform: translateX(100%);
+
+      #{$comp}__slider-slide {
+        transform: translateX(-100%);
+      }
+    }
+
+    &.active {
+      transform: translateX(0);
+      pointer-events: all;
+      z-index: 2;
+
+      #{$comp}__slider-slide {
+        transform: translateX(0);
+      }
+    }
+
+    &.front {
+      z-index: 10;
+    }
+  }
   &__slider-slide {
+    display: block;
+
     width: calc(#{$col-part-d} * 4 - #{$col-gap});
     @media (max-width: ($breakpoint - 1px)) {
       width: getRem(266px);
     }
   }
   &__slider-image {
-    margin-bottom: getRem(16px);
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 12px;
     }
 
     display: flex;
     align-items: center;
+    height: getRem(420px);
+    @media (max-width: ($breakpoint - 1px)) {
+      height: auto;
+    }
+  }
+  &__slider-wrapper {
+    margin-top: getRem(16px);
+    position: relative;
   }
   &__slider-title {
-    
+    opacity: 0;
+    pointer-events: none;
+
+    overflow: hidden;
+    transition: opacity 0s .3s;
+    @media (max-width: ($breakpoint - 1px)) {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    &.active {
+      opacity: 1;
+      pointer-events: all;
+      transition-delay: 0.1s;
+
+      #{$comp}__slider-span {
+        animation: textIn 0.3s $transition-timing-function;
+        transform: translateY(0);
+        transition: transform, opacity 0s;
+      }
+    }
+
+    &:not(:first-child) {
+      position: absolute;
+      top: 0;
+      @media (max-width: ($breakpoint - 1px)) {
+        position: static;
+      }
+    }
+  }
+  &__slider-span {
+    display: block;
+    animation: textOut 0.3s $transition-timing-function;
+    transform: translateY(100%);
+    transition: transform, opacity 0s;
+    @media (max-width: ($breakpoint - 1px)) {
+      animation: none;
+      transform: none;
+    }
   }
 
   &__calculator {
