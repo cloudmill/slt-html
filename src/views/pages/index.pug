@@ -2,16 +2,11 @@ extends ../layouts/master
 
 
 
-block header
-block footer
-
-block grid-test
+include ../components/test
 
 
 
 block content
   .container
-    ul.routes
-      each route in data.routes
-        li.routes__item
-          a.button(href=route.href)= route.title
+    each item in [1, 2, 3]
+      +test

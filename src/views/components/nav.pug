@@ -1,7 +1,0 @@
-mixin nav 
-  .nav
-    ul.nav__list
-      each item, i in attributes.items
-        li.nav__item 
-          a.nav__link(href="#" class=(i === attributes.active ? 'active' : '')) 
-            |#{item}

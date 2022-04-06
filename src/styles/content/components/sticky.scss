@@ -1,7 +1,0 @@
-.sticky {
-  @media (max-width: ($breakpoint)) {
-    position: static;
-  }
-  position: sticky;
-  top: getRem(120px);
-}

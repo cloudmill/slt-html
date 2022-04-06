@@ -1,8 +1,0 @@
-include ./button-icon
-
-mixin slider-buttons 
-  .slider-buttons(class = attributes.class) 
-    .slider-buttons__item 
-      +button-icon.button-icon--blue.button-icon--left(data-slider-button = attributes.prev)
-    .slider-buttons__item 
-      +button-icon.button-icon--blue(data-slider-button = attributes.next)
