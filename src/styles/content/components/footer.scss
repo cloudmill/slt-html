@@ -2,6 +2,10 @@
 
   border-top: 1px solid $rgba-borders;
 
+  &--order {
+    padding-bottom: getRem(105px);
+  }
+
   &__inner {
     padding: getRem(60px) 0;
     @media (max-width: ($breakpoint - 1px)) {

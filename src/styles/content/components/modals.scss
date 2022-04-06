@@ -290,7 +290,7 @@
 
   &__panel {
     padding: getRem(27px) getRem(60px);
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
@@ -302,11 +302,27 @@
     background: var(--color-white);
     border-top: 1px solid var(--color-borders);
     box-shadow: 0px -6px 34px rgba(0, 0, 0, 0.06);
+
+    &.hidden {
+      #{$comp}__panel-title {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+      #{$comp}__panel-button {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    }
+  }
+  &__panel-title {
+    transition: $transition
   }
   &__panel-button {
     margin-left: getRem(40px);
 
     width: getRem(376px);
+
+    transition: $transition
   }
 }
 

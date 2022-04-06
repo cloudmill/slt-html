@@ -110,7 +110,7 @@ mixin catalog-modal
           h5.catalog-modal__heading 
             |Фитинги
           ul.catalog-modal__list 
-            each item in ['Холодное водоснабжение', 'Горячее водоснабжение', 'Питьевая вода','Холодное водоснабжение', 'Горячее водоснабжение', 'Питьевая вода','Холодное водоснабжение', 'Горячее водоснабжение', 'Питьевая вода']
+            each item in ['Холодное водоснабжение', 'Горячее водоснабжение', 'Питьевая вода','Холодное водоснабжение', 'Горячее водоснабжение',]
               li.catalog-modal__item 
                 label.catalog-modal__button 
                   .catalog-modal__content 
@@ -121,9 +121,9 @@ mixin catalog-modal
                   input.catalog-modal__input(type="checkbox")
                   .catalog-modal__box 
                     +check-svg.catalog-modal__svg
-      .catalog-modal__panel
-        h5.catalog-modal__panel-title 
-          |Подходит позиций: 0
-        .catalog-modal__panel-button 
-          +link-right.button--wide 
-            |Показать
+    .catalog-modal__panel.hidden
+      h5.catalog-modal__panel-title 
+        |Подходит позиций: 0
+      .catalog-modal__panel-button 
+        +link-right.button--wide 
+          |Показать

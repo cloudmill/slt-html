@@ -26,7 +26,7 @@ block content
       .container 
         .order-page__grid
           - for (i = 0; i < 4; i++) 
-            .order-page__card 
+            .order-page__card(data-order-card='')
               .order-page__card-row 
                 .order-page__card-col
                   .order-page__card-content
@@ -71,3 +71,18 @@ block content
                     .order-page__card-label 
                       |Заказано, м
                     input.order-page__card-input(type = "number" value = "25")
+    .order-page__panel.hidden(data-order-panel='')
+      .order-page__panel-col
+        h5.order-page__panel-title
+          |Товарных позиций в заказе: 
+      .order-page__panel-col
+        .order-page__panel-buttons 
+          .order-page__panel-item 
+            .button
+              .button__text
+                |Очистить
+              .button__icon
+                +refresh-svg.button__svg
+          .order-page__panel-item 
+            +link-right.button--blue
+              |Перейти к оформлению
