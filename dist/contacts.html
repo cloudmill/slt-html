@@ -499,13 +499,13 @@
 								<div class="contacts-form">
 									<h2 class="vacancies-modal__title">Связаться с нами</h2>
 									<form class="form" action="/" data-parsley-validate>
-										<div class="form__item"><input class="form__input" placeholder="Имя*" required="required" /></div>
-										<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" required="required" /></div>
-										<div class="form__item"><input class="form__input" type="number" placeholder="Телефон*" required="required" /></div>
-										<div class="form__item"><textarea class="form__textarea" name="area" placeholder="Комментарий"></textarea></div>
+										<div class="form__item"><input class="form__input" id="input" placeholder="Имя*" required="required" /></div>
+										<div class="form__item"><input class="form__input" id="input" type="email" placeholder="E-mail*" required="required" /></div>
+										<div class="form__item"><input class="form__input" id="input" type="tel" placeholder="Телефон*" required="required" data-tel-input="data-tel-input" /></div>
+										<div class="form__item"><textarea class="form__textarea" name="area" id="input" placeholder="Комментарий"></textarea></div>
 										<div class="form-bottom">
 											<div class="form__inner">
-												<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" required="required" />
+												<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="required" />
 														<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
 															</svg></div>
