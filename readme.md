@@ -7,7 +7,7 @@
 ### Стек
 
 ```
-Pug, SCSS, JavaScript, Webpack
+Pug, SCSS, BEM, JavaScript, Webpack
 ```
 
 ### Структура
