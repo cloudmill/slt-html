@@ -1,4 +1,3 @@
-// Libraries
 const path = require("path");
 const webpack = require("webpack");
 const WebpackNotifierPlugin = require("webpack-notifier");
@@ -8,27 +7,29 @@ const globImporter = require("node-sass-glob-importer");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlBeautifyPlugin = require("beautify-html-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-
-// Files
 const utils = require("./utils");
 
-// Configuration
 module.exports = (env) => {
   return {
     context: path.resolve(__dirname, "../src"),
+
     entry: {
       app: "./app.js",
     },
+
     output: {
       path: path.resolve(__dirname, "../dist"),
       publicPath: "",
       filename: "assets/[name].js",
     },
+
     devServer: {
       contentBase: path.resolve(__dirname, "../src"),
       openPage: "index",
     },
+
     devtool: env.NODE_ENV === "development" ? "source-map" : false,
+
     resolve: {
       modules: [path.resolve(__dirname, "../src"), "node_modules"],
       extensions: [".js", ".css", ".scss"],
@@ -39,23 +40,22 @@ module.exports = (env) => {
       maxEntrypointSize: 512000,
       maxAssetSize: 512000,
     },
-    /*
-      Loaders with configurations
-    */
+
     module: {
       rules: [
         {
-          test: /\.(js|ts)$/,
+          test: /\.js$/,
           exclude: [/node_modules/],
           use: [
             {
               loader: "babel-loader",
               options: {
-                presets: ["@babel/preset-env", "@babel/preset-typescript"],
+                presets: ["@babel/preset-env"],
               },
             },
           ],
         },
+
         {
           test: /\.css$/,
           use: [
@@ -71,6 +71,7 @@ module.exports = (env) => {
             },
           ],
         },
+
         {
           test: /\.scss$/,
           use: [
@@ -92,6 +93,7 @@ module.exports = (env) => {
             },
           ],
         },
+
         {
           test: /\.pug$/,
           use: [
@@ -100,12 +102,13 @@ module.exports = (env) => {
               loader: "pug-html-loader",
               options: {
                 data: {
-                  data: require("../src/views/data/data.json"),
+                  data: require("../src/data/data.json"),
                 },
               },
             },
           ],
         },
+
         {
           test: /\.(png|jpe?g|gif|svg|ico|webp)(\?.*)?$/,
           use: [
@@ -118,6 +121,7 @@ module.exports = (env) => {
             },
           ],
         },
+
         {
           test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
           loader: "url-loader",
@@ -126,6 +130,7 @@ module.exports = (env) => {
             name: "assets/fonts/[name].[hash:7].[ext]",
           },
         },
+
         {
           test: /\.(mp4)(\?.*)?$/,
           loader: "url-loader",
@@ -136,6 +141,7 @@ module.exports = (env) => {
         },
       ],
     },
+
     optimization: {
       minimizer: [
         new TerserPlugin({
@@ -144,16 +150,14 @@ module.exports = (env) => {
           sourceMap: true,
         }),
       ],
+
       splitChunks: {
         cacheGroups: {
           default: false,
           vendors: false,
-          // vendor chunk
           vendor: {
             filename: "assets/vendor.js",
-            // sync + async chunks
             chunks: "all",
-            // import file path containing node_modules
             test: /node_modules/,
           },
           styles: {
@@ -191,9 +195,6 @@ module.exports = (env) => {
         chunkFilename: "vendors.css",
       }),
 
-      /*
-        Pages
-      */
       ...utils.pages(env.NODE_ENV),
 
       new HtmlBeautifyPlugin({
