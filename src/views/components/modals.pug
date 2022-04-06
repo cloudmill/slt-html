@@ -5,22 +5,23 @@ mixin vacancies-modal
     var ddata = [
       {type: "text", placeholder: "Имя*",},
       {type: "email", placeholder: "E-mail*",},
-      {type: "number", placeholder: "Телефон*",},
     ]
   .modal.vacancies-modal(data-fancy-modal='work1')
     .modal__container 
       h4.vacancies-modal__title
         |Отклик на вакансию #[br] SMM-менеджер
-      form.form(action="/") 
+      form.form(action="/" data-parsley-validate) 
         each item in ddata
           .form__item 
-            +input(type = item.type placeholder = item.placeholder)
+            +input#input(type = item.type placeholder = item.placeholder required)
+          .form__item 
+            +input#input(type="tel" placeholder="Телефон*" data-tel-input required)
         .form__item 
-          +textarea(placeholder="Текст сопроводительного письма")
+          +textarea#input(placeholder="Текст сопроводительного письма")
         .form__inner 
           +input-file 
         .form__inner 
-          +checkbox 
+          +checkbox(id="checkbox" required="")
         .form__inner 
           button.button.button--blue
             .button__text

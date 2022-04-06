@@ -9,7 +9,6 @@ block content
       inputs: [
         {type: 'text', placeholder: 'Имя*'},
         {type: 'mail', placeholder: 'E-mail*'},
-        {type: 'number', placeholder: 'Телефон*'},
       ]
     }
   .ordering-page
@@ -29,10 +28,12 @@ block content
           .ordering-page__col
             h5.ordering-page__heading 
               |Контактные данные
-            form.form(action="/") 
+            form.form(action="/" data-parsley-validate) 
               each item in ddata.inputs
                 .form__item 
-                  +input(type = item.type placeholder = item.placeholder)
+                  +input#input(type = item.type placeholder = item.placeholder required)
+              .form__item 
+                +input#input(type="tel" placeholder="Телефон*" data-tel-input required)
               .ordering-page__inner 
                 h5.ordering-page__heading 
                   |Контактные данные
@@ -68,7 +69,7 @@ block content
                 .form__wrapper 
                   .form__row 
                     .form__col
-                      +checkbox
+                      +checkbox(id="checkbox" required="")
                     .form__col
                       +form-button
                         |Оформить заказ
