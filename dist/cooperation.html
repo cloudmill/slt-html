@@ -512,25 +512,25 @@
 						<div class="container">
 							<h3 class="cooperation-page__title">Оставить заявку на сотрудничество</h3>
 							<div class="section__block">
-								<form class="form" action="/">
+								<form class="form" action="/" data-parsley-validate>
 									<div class="cooperation-page__row">
 										<div class="cooperation-page__col">
-											<div class="form__item"><input class="form__input" placeholder="Имя*" /></div>
-											<div class="form__item"><input class="form__input" type="mail" placeholder="E-mail*" /></div>
-											<div class="form__item"><input class="form__input" type="number" placeholder="Телефон*" /></div>
-											<div class="form__item"><input class="form__input" placeholder="Название компании*" /></div>
-											<div class="form__item"><input class="form__input" placeholder="Город*" /></div>
-											<div class="form__item"><input class="form__input" placeholder="ИНН*" /></div>
-											<div class="form__item"><input class="form__input" placeholder="Адрес компании*" /></div>
-											<div class="form__item"><input class="form__input" placeholder="Сайт компании" /></div>
-											<div class="form__item"><input class="form__input" placeholder="Территория продаж*" /></div>
-											<div class="form__item"><input class="form__input" placeholder="Оборот компании по полипропиленовым системам в год, руб." /></div>
-											<div class="form__item"><textarea class="form__textarea" name="area" placeholder="Как вы о нас узнали?"></textarea></div>
+											<div class="form__item"><input class="form__input" id="input" placeholder="Имя*" required="required" /></div>
+											<div class="form__item"><input class="form__input" id="input" type="mail" placeholder="E-mail*" required="required" /></div>
+											<div class="form__item"><input class="form__input" id="input" type="tel" placeholder="Телефон*" data-tel-input="data-tel-input" required="required" /></div>
+											<div class="form__item"><input class="form__input" id="input" placeholder="Название компании*" required="required" /></div>
+											<div class="form__item"><input class="form__input" id="input" placeholder="Город*" required="required" /></div>
+											<div class="form__item"><input class="form__input" id="input" placeholder="ИНН*" required="required" /></div>
+											<div class="form__item"><input class="form__input" id="input" placeholder="Адрес компании*" required="required" /></div>
+											<div class="form__item"><input class="form__input" id="input" placeholder="Сайт компании" /></div>
+											<div class="form__item"><input class="form__input" id="input" placeholder="Территория продаж*" required="required" /></div>
+											<div class="form__item"><input class="form__input" id="input" placeholder="Оборот компании по полипропиленовым системам в год, руб." /></div>
+											<div class="form__item"><textarea class="form__textarea" name="area" id="input" placeholder="Как вы о нас узнали?"></textarea></div>
 											<div class="cooperation-page__desktop">
 												<div class="form__wrapper">
 													<div class="form__row">
 														<div class="form__col">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="required" />
+															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="" />
 																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
 																		</svg></div>
@@ -553,7 +553,7 @@
 												<div class="cooperation-page__inner">
 													<ul class="form__list">
 														<li class="form__box">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="required" />
+															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" text="Торговая компания" />
 																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
 																		</svg></div>
@@ -561,7 +561,7 @@
 																</label></div>
 														</li>
 														<li class="form__box">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="required" />
+															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" text="Монтажная организация" />
 																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
 																		</svg></div>
@@ -569,7 +569,7 @@
 																</label></div>
 														</li>
 														<li class="form__box">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="required" />
+															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" text="Строительная компания" />
 																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
 																		</svg></div>
@@ -577,7 +577,7 @@
 																</label></div>
 														</li>
 														<li class="form__box">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="required" />
+															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" text="Проектная организация" />
 																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
 																		</svg></div>
@@ -592,7 +592,7 @@
 												<div class="cooperation-page__inner">
 													<ul class="form__list">
 														<li class="form__box">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="required" />
+															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" text="SLT AQUA PP-R для водоснабжения и отопления" />
 																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
 																		</svg></div>
@@ -600,7 +600,7 @@
 																</label></div>
 														</li>
 														<li class="form__box">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="required" />
+															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" text="SLT BLOCKFIRE PP-R для пожаротушения" />
 																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
 																		</svg></div>
@@ -608,7 +608,7 @@
 																</label></div>
 														</li>
 														<li class="form__box">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="required" />
+															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" text="SLT PE-RT гибкая система для водоснабжения и отопления" />
 																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
 																		</svg></div>
@@ -660,7 +660,7 @@
 												<div class="form__wrapper">
 													<div class="form__row">
 														<div class="form__col">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="required" />
+															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
 																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
 																		</svg></div>

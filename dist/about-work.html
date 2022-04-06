@@ -803,11 +803,12 @@
 				<div class="modal vacancies-modal" data-fancy-modal="work1">
 					<div class="modal__container">
 						<h4 class="vacancies-modal__title">Отклик на вакансию<br />SMM-менеджер</h4>
-						<form class="form" action="/">
-							<div class="form__item"><input class="form__input" placeholder="Имя*" /></div>
-							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" /></div>
-							<div class="form__item"><input class="form__input" type="number" placeholder="Телефон*" /></div>
-							<div class="form__item"><textarea class="form__textarea" name="area" placeholder="Текст сопроводительного письма"></textarea></div>
+						<form class="form" action="/" data-parsley-validate="data-parsley-validate">
+							<div class="form__item"><input class="form__input" id="input" placeholder="Имя*" required="required" /></div>
+							<div class="form__item"><input class="form__input" id="input" type="tel" placeholder="Телефон*" data-tel-input="data-tel-input" required="required" /></div>
+							<div class="form__item"><input class="form__input" id="input" type="email" placeholder="E-mail*" required="required" /></div>
+							<div class="form__item"><input class="form__input" id="input" type="tel" placeholder="Телефон*" data-tel-input="data-tel-input" required="required" /></div>
+							<div class="form__item"><textarea class="form__textarea" name="area" id="input" placeholder="Текст сопроводительного письма"></textarea></div>
 							<div class="form__inner">
 								<div class="file"><label class="file__label"><input class="file__input" type="file" />
 										<div class="file__icon"><svg class="file__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -817,7 +818,7 @@
 									</label></div>
 							</div>
 							<div class="form__inner">
-								<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="required" />
+								<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="" />
 										<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
 											</svg></div>

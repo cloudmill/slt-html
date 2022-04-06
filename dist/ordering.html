@@ -398,10 +398,10 @@
 								</div>
 								<div class="ordering-page__col">
 									<h5 class="ordering-page__heading">Контактные данные</h5>
-									<form class="form" action="/">
-										<div class="form__item"><input class="form__input" placeholder="Имя*" /></div>
-										<div class="form__item"><input class="form__input" type="mail" placeholder="E-mail*" /></div>
-										<div class="form__item"><input class="form__input" type="number" placeholder="Телефон*" /></div>
+									<form class="form" action="/" data-parsley-validate>
+										<div class="form__item"><input class="form__input" id="input" placeholder="Имя*" required="required" /></div>
+										<div class="form__item"><input class="form__input" id="input" type="mail" placeholder="E-mail*" required="required" /></div>
+										<div class="form__item"><input class="form__input" id="input" type="tel" placeholder="Телефон*" data-tel-input="data-tel-input" required="required" /></div>
 										<div class="ordering-page__inner">
 											<h5 class="ordering-page__heading">Контактные данные</h5>
 											<div class="ordering-page__grid">
@@ -409,7 +409,7 @@
 													<h6 class="ordering-page__title">Проектирование</h6>
 													<ul class="ordering-page__list">
 														<li class="ordering-page__item">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="required" />
+															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" text="Системы водоснабжения" />
 																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
 																		</svg></div>
@@ -417,7 +417,7 @@
 																</label></div>
 														</li>
 														<li class="ordering-page__item">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="required" />
+															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" text="Системы отопления" />
 																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
 																		</svg></div>
@@ -425,7 +425,7 @@
 																</label></div>
 														</li>
 														<li class="ordering-page__item">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="required" />
+															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" text="Системы пожаротушения" />
 																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
 																		</svg></div>
@@ -438,7 +438,7 @@
 													<h6 class="ordering-page__title">Монтаж</h6>
 													<ul class="ordering-page__list">
 														<li class="ordering-page__item">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="required" />
+															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" text="Системы водоснабжения" />
 																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
 																		</svg></div>
@@ -446,7 +446,7 @@
 																</label></div>
 														</li>
 														<li class="ordering-page__item">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="required" />
+															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" text="Системы отопления" />
 																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
 																		</svg></div>
@@ -454,7 +454,7 @@
 																</label></div>
 														</li>
 														<li class="ordering-page__item">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="required" />
+															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" text="Системы пожаротушения" />
 																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
 																		</svg></div>
@@ -466,7 +466,7 @@
 												<div class="ordering-page__grid-item">
 													<ul class="ordering-page__list">
 														<li class="ordering-page__item">
-															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="required" />
+															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" text="Доставка" />
 																	<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 																			<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
 																		</svg></div>
@@ -488,7 +488,7 @@
 											<div class="form__wrapper">
 												<div class="form__row">
 													<div class="form__col">
-														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="required" />
+														<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" id="checkbox" required="" />
 																<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
 																	</svg></div>
