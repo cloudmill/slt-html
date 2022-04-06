@@ -57,10 +57,13 @@ const BREAKPOINT = 1280;
             break;
           case 21:
             slider_options = {
-              // ...slider_options,
               slidesPerView: 'auto',
               spaceBetween: 20,
+              // slidesPerGroup: 2,
+              allowTouchMove: false,
+              // loopFillGroupWithBlank: true,
               loop: true,
+              speed: 300,
             }
         }
 

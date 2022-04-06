@@ -1,11 +1,20 @@
 include ./button-icon
+include ./slider-buttons
 
 mixin about-slider 
   .container
-    .about-page__slider
+    .about-page__slider(data-about-slider='')
       .about-page__slider-top
+        .about-page__slider-col
+        .about-page__slider-col
+          .about-page__slider-controls
+            .slider-buttons.slider-buttons--default
+              .slider-buttons__item 
+                +button-icon.button-icon--blue.button-icon--left(data-about-prev='')
+              .slider-buttons__item 
+                +button-icon.button-icon--blue(data-about-next='')
       .about-page__slider-desktop
-        .swiper-container.swiper-container--visible.swiper-container--visible.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='21' data-slider-prev='22' data-slider-next='23')
+        .swiper-container.swiper-container--visible.swiper-container--visible.swiper-container--slide-width-auto.swiper-container--slide-height-max
           .swiper-wrapper 
             - for (i = 0; i < 6; i++)
               .swiper-slide 
