@@ -1,12 +1,13 @@
 .form {
 
   &__item {
+    position: relative;
 
-    &:not(:first-child) {
-      margin-top: getRem(16px);
+    &:not(:last-child) {
+      padding-bottom: getRem(16px);
 
       @media (max-width: ($breakpoint - 1px)) {
-        margin-top: getRem(8px);
+        padding-bottom: getRem(8px);
       }
     }
   }
@@ -30,9 +31,19 @@
       color: var(--color-gray);
     }
 
+    transition: $transition;
+
     @media (max-width: ($breakpoint - 1px)) {
       padding: getRem(16px);
       @include fsl(14px, 100%);
+    }
+
+    &:hover {
+      border: 1px solid var(--color-blue);
+    }
+
+    &.is-active {
+      border: 1px solid var(--color-blue);
     }
   }
 
@@ -53,11 +64,21 @@
       color: var(--color-gray);
     }
 
+    transition: $transition;
+
     @media (max-width: ($breakpoint - 1px)) {
       padding: getRem(16px);
       @include fsl(14px, 100%);
 
       height: getRem(120px);
+    }
+
+    &:hover {
+      border: 1px solid var(--color-blue);
+    }
+
+    &.is-active {
+      border: 1px solid var(--color-blue);
     }
   }
 
@@ -93,5 +114,19 @@
         margin-top: getRem(8px);
       }
     }
+  }
+}
+
+.parsley-errors-list {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+
+  @include fsl(12px, 100%);
+  color: var(--color-red);
+
+  @media (max-width: ($breakpoint - 1px)) {
+    @include fsl(8px, 100%);
+    bottom: 0;
   }
 }
