@@ -1,1 +1,5 @@
-console.log("test");
+import AOS from "aos";
+
+AOS.init({
+  offset: 0,
+});
