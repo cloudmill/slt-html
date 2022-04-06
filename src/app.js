@@ -4,7 +4,6 @@ import "./scripts/swipers";
 import "./scripts/header";
 import "./scripts/loader";
 import "./scripts/accordion";
-import "./scripts/fancybox";
 import "./scripts/video-scroll";
 import "./scripts/parallax";
 import "./scripts/select";
