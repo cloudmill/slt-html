@@ -17,7 +17,7 @@ mixin input-file
 mixin checkbox 
   .checkbox 
     label.checkbox__label
-      input.checkbox__input(type="checkbox" required)
+      input.checkbox__input(type="checkbox" id="checkbox" required)
       .checkbox__box 
         +check-svg.checkbox__svg
       if (attributes.text)

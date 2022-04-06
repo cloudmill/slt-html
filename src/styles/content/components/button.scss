@@ -26,11 +26,13 @@
     border-radius: 45px;
   }
 
+  position: relative;
   transition: $transition;
 
   &__text {
     font-weight: 500;
 
+    position: relative;
     transition: $transition;
   }
 
@@ -43,6 +45,7 @@
       margin-left: 8px;
     }
 
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;

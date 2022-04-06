@@ -14,3 +14,5 @@ import "./scripts/order-panel";
 import "./scripts/catalog-spoilers";
 import "./scripts/mobile-menu/MobileMenu";
 import "./scripts/search-tabs";
+import "./scripts/where-buy-filter";
+import "./scripts/forms";
