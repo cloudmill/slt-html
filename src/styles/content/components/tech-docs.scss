@@ -66,8 +66,15 @@
 
   &__form {
     display: flex;
+    flex-wrap: wrap;
+
     @media (max-width: ($breakpoint - 1px)) {
       justify-content: space-between;
+    }
+
+    .parsley-errors-list {
+      order: 1;
+      width: 100%;
     }
   }
   
@@ -80,7 +87,7 @@
     width: getRem(730px);
     height: getRem(80px);
     @media (max-width: ($breakpoint - 1px)) {
-      width: 100%;
+      width: calc(100% - 66px);
       height: getRem(46px);
     }
 
