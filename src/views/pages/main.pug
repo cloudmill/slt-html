@@ -32,11 +32,11 @@ block content
   .main-page 
     section.main-page__hero
       .container 
-        .main-page__hero-row(data-aos='fade-up')
+        .main-page__hero-row
           .main-page__hero-col
-            h1 
-              |Производство полимерных трубопроводных систем 
-          .main-page__hero-col
+            h1.words
+              |#[span.words__span #[span(data-aos='fade-up') Производство]] #[span.words__span #[span(data-aos='fade-up') полимерных]] #[span.words__span #[span(data-aos='fade-up') трубопроводных]] #[span.words__span #[span(data-aos='fade-up') систем]] 
+          .main-page__hero-col(data-aos='fade-up')
             +link-right
               |О компании
     section.section.section--md 

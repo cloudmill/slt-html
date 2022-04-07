@@ -30,12 +30,13 @@ block content
             .about-page__intro-col
               p.about-page__intro-text 
                 |Команда СЛТ Аква — ключевой актив компании. #[br] Мы создаем условия, в которых каждый сотрудник компании может раскрыть свои таланты, самореализоваться, непрерывно развиваться.
-          .about-page__intro-image 
-            img.about-page__intro-img(src="assets/images/about-work.jpg", alt="")
-            img.about-page__intro-mobile(src="assets/images/about-work-mobile.webp", alt="")
+          .about-page__intro-container
+            .about-page__intro-image
+              img.about-page__intro-img(src="assets/images/about-work.jpg", alt=""  data-parallax='w2')
+              img.about-page__intro-mobile(src="assets/images/about-work-mobile.webp", alt="" data-parallax='w2')
             .about-page__intro-icon(data-decrease='')
               +about-logo-svg.about-page__intro-svg
-    section.section 
+    section.section(data-parallax-container='w2')
       .container 
         .section__wrapper 
           .section__row 

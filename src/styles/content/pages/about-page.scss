@@ -48,7 +48,7 @@
       @include fsl(14px);
     }
   }
-  &__intro-image {
+  &__intro-container {
     position: relative;
     z-index: 0;
     
@@ -56,8 +56,13 @@
       margin-left: -20px;
       width: calc(100% + (20px * 2));
     }
+    
+  }
+  &__intro-image {
     display: flex;
     align-items: center;
+
+    overflow: hidden;
   }
   &__intro-img {
     @media (max-width: ($breakpoint-m - 1px)) {

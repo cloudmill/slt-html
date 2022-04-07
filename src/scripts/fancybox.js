@@ -3,10 +3,9 @@ import '@fancyapps/fancybox';
 // fancybox
 {
   $(() => {
-    
-
     $.fancybox.defaults.closeExisting = true;
     $.fancybox.defaults.touch = false;
+    $.fancybox.defaults.closeClick = false;
     $.fancybox.defaults.hideScrollbar = false;
     $.fancybox.defaults.baseTpl = (
       '<div class="fancybox-container" role="dialog" tabindex="-1">' +

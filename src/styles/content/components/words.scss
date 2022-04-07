@@ -1,0 +1,14 @@
+.words {
+
+  &__span {
+    padding: 10px 0;
+    margin: -10px 0;
+
+    display: inline-block;
+    overflow: hidden;
+    
+    span {
+      display: inline-block;
+    }
+  }
+}
