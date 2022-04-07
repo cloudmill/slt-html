@@ -40,10 +40,10 @@ import Swiper from "swiper"
         if (index === 5) {
           currentElem = target
           currentElem.addClass('active')
-          setTimeout(() => {
-            swiper.slideNext(750)
+          swiper.slideNext(750)
+          // setTimeout(() => {
             
-          }, 250);
+          // }, 250);
         } else if (index) {
           console.log(swiper.activeIndex);
           // let i = swiper.activeIndex + 1

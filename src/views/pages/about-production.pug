@@ -30,7 +30,7 @@ block content
         +nav(items = ['СЛТ Аква', 'Производство', 'Работа у нас'] active = 1)
     section.section 
       .container  
-        .about-page__intro 
+        .about-page__intro(data-decrease-container='') 
           .about-page__intro-row 
             .about-page__intro-col
               .about-page__intro-title 
@@ -41,7 +41,8 @@ block content
           .about-page__intro-image 
             img.about-page__intro-img(src="assets/images/about-production.jpg", alt="")
             img.about-page__intro-mobile(src="assets/images/about-production-mobile.webp", alt="")
-            +about-logo-svg.about-page__intro-svg
+            .about-page__intro-icon(data-decrease='')
+              +about-logo-svg.about-page__intro-svg
     section.section 
       .container 
         .section__wrapper 
