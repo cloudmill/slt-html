@@ -10,6 +10,12 @@
   border: 1px solid var(--color-borders);
   background: var(--color-white);
 
+  transition: $transition;
+
+  &:hover {
+    border: 1px solid var(--color-blue);
+  }
+
   &--big {
     min-height: getRem(140px);
     @media (max-width: ($breakpoint - 1px)) {

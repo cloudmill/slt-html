@@ -1,9 +1,10 @@
 mixin link-left 
-  a.button(href="#")&attributes(attributes)
+  a.button.button-animate(href="#")&attributes(attributes)
     .button__icon.button__icon--left
-      +big-arrow-svg.button__svg
+      +btn-arrow-left.button__svg.arrow-blue
     .button__text
-      block
+      span
+        block
 
 mixin link-right 
   a.button.button-animate(href="#")&attributes(attributes)
