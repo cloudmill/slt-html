@@ -93,6 +93,27 @@
       width: 100%;
     }
   }
+  &__video-icon {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    mix-blend-mode: multiply;
+  }
+  &__video-svg {
+    width: getRem(498px);
+    height: getRem(410px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(97px);
+      height: getRem(80px);
+    }
+  }
 
   &__cooperation {
     position: relative;

@@ -11,6 +11,7 @@ import "./scripts/select";
 import "./scripts/main-slider";
 import "./scripts/about-slider";
 import "./scripts/order-panel";
+import "./scripts/scroll-decrease";
 import "./scripts/catalog-spoilers";
 import "./scripts/mobile-menu/MobileMenu";
 import "./scripts/search-tabs";
