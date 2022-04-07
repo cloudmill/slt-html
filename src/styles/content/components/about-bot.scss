@@ -7,26 +7,16 @@
 
     &:hover {
       @media (min-width: $breakpoint) {
-        #{$comp}__title {
-          color: var(--color-white);
+        #{$comp}__hover {
+          transform: none;
         }
-        #{$comp}__count {
-          border-color: var(--color-white);
-          color: var(--color-white);
-        }
-  
-        .button-icon {
-          background: var(--color-blue);
-        }
-  
-        .button-icon__svg {
-          path {
-            fill: var(--color-white);
-          }
-        }
-  
+
         #{$comp}__bg {
-          opacity: 1;
+          transform: none;
+        }
+
+        #{$comp}__img {
+          transform: scale(1.1);
         }
       }
     }
@@ -48,7 +38,7 @@
     width: 50%;
     @media (max-width: ($breakpoint - 1px)) {
       width: auto;
-      height: getRem(190px);
+      height: getRem(100px);
     }
 
     @extend .about-bot__link;
@@ -88,8 +78,8 @@
     width: getRem(269px);
     height: getRem(269px);
     @media (max-width: ($breakpoint - 1px)) {
-      width: getRem(95px);
-      height: getRem(95px);
+      width: getRem(47px);
+      height: getRem(47px);
     }
     display: flex;
     align-items: center;
@@ -101,7 +91,7 @@
     color: var(--color-blue);
     @include fsl(96px, 110%);
     @media (max-width: ($breakpoint - 1px)) {
-      @include fsl(44px);
+      @include fsl(24px, 110%);
     }
   }
   &__line {
@@ -109,22 +99,49 @@
     z-index: 0;
     width: 100%;
     @media (max-width: ($breakpoint - 1px)) {
-      height: getRem(190px);
+      height: getRem(100px);
     }
 
     @extend .about-bot__link;
   }
-  &__bg {
+  &__hover {
     @include cover;
-    z-index: -1;
+    z-index: 1;
+    transform: translateY(100%);
     
-    display: flex;
-    align-items: center;
+    overflow: hidden;
+    transition: 1s $transition-timing-function;
 
-    transition: $transition;
-    opacity: 0;
+    #{$comp}__title {
+      color: var(--color-white);
+    }
+    #{$comp}__count {
+      border-color: var(--color-white);
+      color: var(--color-white);
+    }
+
+    .button-icon {
+      background: var(--color-blue);
+    }
+
+    .button-icon__svg {
+      path {
+        fill: var(--color-white);
+      }
+    }
+  }
+  &__bg {
+    height: 100%;
+
+    transform: translateY(-100%);
+    transition: 1s $transition-timing-function;
+    overflow: hidden;
   }
   &__img {
+    @include cover;
+    z-index: -1;
     width: 100%;
+
+    transition: 1s $transition-timing-function;
   }
 }

@@ -98,7 +98,7 @@ mixin catalog-modal
           ul.catalog-modal__list 
             each item in ['Холодное водоснабжение', 'Горячее водоснабжение', 'Питьевая вода']
               li.catalog-modal__item 
-                label.catalog-modal__button 
+                label.catalog-modal__button(data-catalog-item='')
                   .catalog-modal__content 
                     .catalog-modal__img
                       +use-svg.catalog-modal__icon
@@ -113,7 +113,7 @@ mixin catalog-modal
           ul.catalog-modal__list 
             each item in ['Холодное водоснабжение', 'Горячее водоснабжение', 'Питьевая вода','Холодное водоснабжение', 'Горячее водоснабжение',]
               li.catalog-modal__item 
-                label.catalog-modal__button 
+                label.catalog-modal__button(data-catalog-item='') 
                   .catalog-modal__content 
                     .catalog-modal__img
                       +use-svg.catalog-modal__icon
@@ -126,5 +126,5 @@ mixin catalog-modal
       h5.catalog-modal__panel-title 
         |Подходит позиций: 0
       .catalog-modal__panel-button 
-        +link-right.button--wide 
+        +link-right.button--wide(data-catalog-show='')
           |Показать

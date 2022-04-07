@@ -51,6 +51,19 @@ block content
               |Области применения
             .button__icon.button__icon--right 
               +plus-svg.button__svg
+        .category-list 
+          .category-list__row 
+            .category-list__col
+              .category-list__button
+                +refresh-button.button--wide--mobile(data-clear-categories='')
+                  |Сбросить
+            .category-list__col
+              template(data-catalog-template='')
+                li.category-list__item(data-category='')
+                  .category-list__text 
+                  .category-list__icon(data-delete-category='')
+                    +close-svg.category-list__svg
+              ul.category-list__list(data-catalog-list='')
         .section__block
           .catalog-page__grid 
             - for (i = 0; i < 16; i++)

@@ -35,3 +35,11 @@ mixin form-button
         block
     .button__icon
       +btn-arrow-right.button__svg
+
+mixin refresh-button 
+  .button&attributes(attributes)
+    span.button__text
+      span
+        block
+    .button__icon
+      +refresh-svg.button__svg
