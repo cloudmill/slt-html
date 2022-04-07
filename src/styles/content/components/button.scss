@@ -70,7 +70,7 @@
         margin-right: 8px;
       }
 
-      transform: rotate(90deg);
+      // transform: rotate(90deg);
     }
   }
 
@@ -98,7 +98,7 @@
   }
 
   &--blue {
-    background: var(--color-blue-dark);
+    background: var(--color-blue);
     color: var(--color-white);
 
     overflow: hidden;
@@ -110,8 +110,7 @@
     }
 
     #{$comp}__text span {
-      position: relative;
-      overflow: hidden;
+      display: block;
     }
 
     #{$comp}__svg {
@@ -122,24 +121,19 @@
 
     &::before {
       content: '';
-      background: var(--color-blue);
-      transition: transform $transition-duration $transition-timing-function;
-
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      background: var(--color-blue-dark);
+      
+      @include btn-before;
     }
 
     &:hover {
       border: 1px solid var(--color-blue-dark);
 
       &::before {
-        transform: translate3d(0,-101%,0);
+        transform: none;
       }
 
-      span, .button__svg {
+      .button__text span, .button__svg {
         animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
       }
     }
@@ -171,7 +165,6 @@
   &--download {
     overflow: hidden;
     position: relative;
-    background: var(--color-blue-dark);
 
     #{$comp}__text, #{$comp}__icon {
       position: relative;
@@ -185,7 +178,6 @@
         position: relative;
         display: block;
         overflow: hidden;
-        // mix-blend-mode: difference;
       }
     }
 
@@ -197,14 +189,9 @@
 
     &::before {
       content: '';
-      background: var(--color-white);
-      transition: transform $transition-duration $transition-timing-function;
-
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      background: var(--color-blue-dark);
+      
+      @include btn-before;
     }
 
     &:hover {
@@ -215,7 +202,7 @@
       }
 
       &::before {
-        transform: translate3d(0,-101%,0);
+        transform: none;
       }
 
       #{$comp}__svg {
@@ -233,18 +220,12 @@
   &-animate {
     position: relative;
     overflow: hidden;
-    background: var(--color-blue);
 
     &::before {
       content: '';
-      background: var(--color-white);
-      transition: transform $transition-duration $transition-timing-function;
-
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      background: var(--color-blue);
+      
+      @include btn-before;
     }
 
     .button__text, .button__icon {
@@ -253,11 +234,15 @@
     }
     .button__text span {
       display: block;
+      transition: $transition;
+    }
+    .button__svg path {
+      transition: $transition;
     }
 
     &:hover {
       &::before {
-        transform: translate3d(0,-101%,0);
+        transform: none;
       }
       .button__text span {
         animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
@@ -276,19 +261,4 @@
 
 .arrow-blue path {
   fill: var(--color-blue);
-}
-
-@keyframes MoveUpInitial {
-	to {
-		transform: translate3d(0,-105%,0);
-	}
-}
-
-@keyframes MoveUpEnd {
-	from {
-		transform: translate3d(0,100%,0);
-	}
-	to {
-		transform: translate3d(0,0,0);
-	}
 }

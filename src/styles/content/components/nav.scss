@@ -36,5 +36,9 @@
     &.active {
       color: var(--color-blue);
     }
+
+    &:hover {
+      color: var(--color-blue);
+    }
   }
 }

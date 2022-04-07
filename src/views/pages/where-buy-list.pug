@@ -1,0 +1,62 @@
+extends ../layouts/master
+
+include ../components/breadcrumbs
+include ../components/accordion
+include ../components/nav
+
+block content
+  .where-buy
+    section.section.section--first
+      .container 
+        +breadcrumbs( page = "Где купить")
+        .events-page__inner 
+          h1 
+            |Где купить
+    section.section
+      .container
+        .where-buy__top
+
+          +nav(items = ['Списком', 'На карте'] active = 0)
+
+          select.where-buy__select(name="city")
+            option(value="") Город
+            option(value="") Город2
+            option(value="") Город3
+
+        -
+          const filters = [
+            'Интернет-магазин',
+            'Доставка',
+            'Самовывоз со склада',
+            'Услуги монтажа',
+            'В продаже SLT AQUA ',
+            'В продаже SLT BLOCKFIRE',
+            'В продаже SLT PE-RT',
+            'Сопутствующие товары',
+
+            'Услуги монтажа',
+            'В продаже SLT AQUA ',
+            'В продаже SLT BLOCKFIRE',
+            'В продаже SLT PE-RT',
+            'Сопутствующие товары',
+          ]
+
+        .where-buy__filters
+
+          .where-buy__filters-col#filters-container
+            each item in filters
+              .where-buy__filters-item.filter-btn
+                .button__text
+                  span #{item}
+
+          .where-buy__filters-col
+            .where-buy__filters-item.where-buy__filters-reset.reset-disabled
+              .button__text
+                span Очистить
+              .button__icon
+                +refresh-svg.button__svg
+
+        .where-buy-list
+          - for (i=0;i<7;i++)
+            .where-buy-list__item
+              +accordion-big
