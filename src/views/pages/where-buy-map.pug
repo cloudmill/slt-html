@@ -2,6 +2,7 @@ extends ../layouts/master
 
 include ../components/breadcrumbs
 include ../components/accordion
+include ../components/nav
 
 block content
   .where-buy
@@ -15,9 +16,7 @@ block content
       .container
         .where-buy__top
 
-          .search-page-tabs
-            .search-page-tabs__item.is-active Списком
-            .search-page-tabs__item На карте
+          +nav(items = ['Списком', 'На карте'] active = 1)
 
           select.where-buy__select(name="city")
             option(value="") Город
@@ -57,12 +56,5 @@ block content
               .button__icon
                 +refresh-svg.button__svg
 
-        .where-buy-list.search-body-container
-
-          .search-body-item.is-active
-            - for (i=0;i<7;i++)
-              .where-buy-list__item
-                +accordion-big
-          
-          .search-body-item.where-buy__map-container
-            img.where-buy__map(src="assets/images/where-buy-map.jpeg", alt="")
+        .where-buy__map-container
+          img.where-buy__map(src="assets/images/where-buy-map.jpeg", alt="")

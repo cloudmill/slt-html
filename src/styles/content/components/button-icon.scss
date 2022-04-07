@@ -10,6 +10,9 @@
   align-items: center;
   justify-content: center;
 
+  position: relative;
+  overflow: hidden;
+
   border: 1px solid var(--color-black);
   border-radius: 60px;
   transition: $transition;
@@ -17,12 +20,21 @@
   &__svg {
     width: getRem(16px);
     height: getRem(16px);
-    transform: rotate(-90deg);
+    // transform: rotate(-90deg);
 
     path {
       fill: var(--color-black);
       transition: $transition;
     }
+  }
+
+  &__container-svg {
+    overflow: hidden;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &--white {
@@ -36,6 +48,27 @@
   }
   &--blue {
     border-color: var(--color-blue);
+
+    &::before {
+      content: '';
+      background: var(--color-blue);
+
+      @include btn-before;
+    }
+
+    &:hover {
+      &::before {
+        transform: none;
+      }
+
+      .button-icon__svg {
+        animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+
+        path {
+          fill: var(--color-white);
+        }
+      }
+    }
   }
   &--red {
     border-color: var(--color-red);

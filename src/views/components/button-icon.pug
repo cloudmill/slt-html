@@ -1,3 +1,9 @@
 mixin button-icon 
   .button-icon&attributes(attributes)
-    +big-arrow-svg.button-icon__svg
+    .button-icon__container-svg
+      +btn-arrow-right.button-icon__svg
+
+mixin button-icon-left
+  .button-icon&attributes(attributes)
+    .button-icon__container-svg
+      +btn-arrow-left.button-icon__svg

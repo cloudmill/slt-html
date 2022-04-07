@@ -59,8 +59,12 @@
       "title": "Калькулятор 4"
     },
     {
-      "href": "where-buy",
-      "title": "Где купить"
+      "href": "where-buy-list",
+      "title": "[Где купить] Списком"
+    },
+    {
+      "href": "where-buy-map",
+      "title": "[Где купить] На карте"
     },
     {
       "href": "docs",

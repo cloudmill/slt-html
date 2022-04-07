@@ -1,5 +1,3 @@
-import { mediaQuery } from "./mediaQueries";
-
 const filtersPanel = document.querySelector('.where-buy__filters');
 
 if (filtersPanel) {
@@ -20,15 +18,11 @@ if (filtersPanel) {
       }
     }
 
-    // if (mediaQuery.matches) {
-
     if (filtersContainer.querySelector('.is-active')) {
       resetBtn.classList.remove('reset-disabled');
     } else {
       resetBtn.classList.add('reset-disabled');
     }
-
-    // }
   })
 
   resetBtn.addEventListener('click', () => {
