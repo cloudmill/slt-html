@@ -35,6 +35,12 @@
 
   &--hidden {
     overflow: hidden;
+
+    &--mobile {
+      @media (max-width: ($breakpoint - 1px)) {
+        overflow: hidden;
+      }
+    }
   }
 
   &__block {

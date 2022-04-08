@@ -121,8 +121,6 @@ block content
           |Помощь в инженерных расчетах
         .section__block(data-parallax-container='2') 
           .main-page__calculator 
-            .main-page__calculator-img(data-parallax='2')
-              img.main-page__calculator-bg(src="assets/images/calculator-bg.webp", alt="")
             each item, i in ['Расчет компенсаторов #[br] для систем SLT AQUA', 'Расчет компенсаторов #[br] для систем BLOCKFIRE', 'Расчета удельных гидравлических потерь трубопроводов  SLT AQUA']
               a.main-page__calculator-link(href="#" class=(i < 2 ? 'red' : 'blue'))
                 .main-page__calculator-col
@@ -130,3 +128,5 @@ block content
                     +button-icon.button-icon--white
                   .main-page__calculator-title 
                     |#{item}
+            .main-page__calculator-img(data-parallax='2')
+              img.main-page__calculator-bg(src="assets/images/calculator-bg.webp", alt="")

@@ -38,7 +38,7 @@ mixin header
                   .header__feedback-col
                     .header__feedback-buttons 
                       .header__feedback-item
-                        .button.button--sm.button-animate
+                        .button.button--sm.button-animate(data-fancy-button='call')
                           .button__text
                             span Обратный звонок
                       .header__feedback-item
@@ -77,7 +77,7 @@ mixin header
                           a.header__link(href="#") 
                             |#{item.text}
                   .header__buttons 
-                    a.header__buttons-item(href="#")
+                    a.header__buttons-item(href="#" data-fancy-button='search')
                       .header__buttons-bg
                       .header__buttons-container
                         +search-svg.header__search
@@ -131,86 +131,99 @@ mixin header
                   a.header__panel-link(href="#")
                     |#{item}
     .mobile-menu
-      ul.mobile-menu__list
-        li.mobile-menu__item.active(data-modal-btn='0')
-          .mobile-menu__item-text 
-            |Каталог
-          .mobile-menu__icon 
-            +arrow-svg.mobile-menu__svg
-        each item in ['О компании', 'Техническая информация', 'Сотрудничество', 'Сервисы расчета',]
-          li.mobile-menu__item(data-modal-btn='1')
+      .mobile-menu__wrapper
+        ul.mobile-menu__list
+          li.mobile-menu__item.active(data-modal-btn='0')
             .mobile-menu__item-text 
-              |#{item}
+              |Каталог
             .mobile-menu__icon 
               +arrow-svg.mobile-menu__svg
-      .container 
-        .mobile-menu__container
-          ul.mobile-menu__nav 
-            li.mobile-menu__nav-item 
-              a.header__feedback-link(href="#")
-                .header__feedback-icon 
-                  +geo-svg.header__feedback-svg
-                .header__text 
-                  |Где купить
-            each item in ['Объекты', 'События', 'Контакты']
-              li.mobile-menu__nav-item 
-                a.mobile-menu__nav-link(href="#") 
-                  |#{item}
-          .mobile-menu__inner 
-            a.header__phone(href="tel:" + data.phone) 
-              |#{data.phone}
-            .button.button--sm
-              |Обратный звонок
-          .mobile-menu__bot 
-            .mobile-menu__label 
-              |Написать нам
+          each item in ['О компании', 'Техническая информация', 'Сотрудничество', 'Сервисы расчета',]
+            li.mobile-menu__item(data-modal-btn='1')
+              .mobile-menu__item-text 
+                |#{item}
+              .mobile-menu__icon 
+                +arrow-svg.mobile-menu__svg
+        .container 
+          .mobile-menu__container
             ul.mobile-menu__nav 
               li.mobile-menu__nav-item 
-                a.mobile-menu__link(href="#") 
-                  .mobile-menu__link-icon 
-                    +tg-svg.mobile-menu__link-svg
-                  .mobile-menu__link-text
-                    |Telegram
-              li.mobile-menu__nav-item 
-                a.mobile-menu__link(href="#") 
-                  .mobile-menu__link-icon 
-                    +viber-svg.mobile-menu__link-svg
-                  .mobile-menu__link-text
-                    |Viber
-              li.mobile-menu__nav-item 
-                a.mobile-menu__link(href="#") 
-                  .mobile-menu__link-icon 
-                    +whatsapp-svg.mobile-menu__link-svg
-                  .mobile-menu__link-text
-                    |WhatsApp
-      .mobile-menu__modals 
-        .mobile-menu__modal(data-modal-menu='0')
-          .container
-            .mobile-menu__modal-back(data-modal-close='0')
-              .mobile-menu__modal-icon
-                +arrow-svg.mobile-menu__modal-svg 
-              .mobile-menu__modal-text 
-                |Каталог
-          ul.mobile-menu__modal-wrapper
-            -
-              var ddata = [
-                {title: 'SLT AQUA', caption: 'Полипропиленовые трубопроводные системы для водоснабжения и отопления'},
-                {title: 'SLT BLOCKFIRE', caption: 'Полипропиленовые трубопроводные системы для пожаротушения'},
-                {title: 'SLT PE-RT', caption: 'Гибкие трубопроводные системы из термостойкого полиэтилена для водоснабжения и отопления'},
-                {title: 'Инструменты', caption: 'Для монтажа полимерных трубопроводных систем'},
-              ]
-            each item in ddata
-              li.mobile-menu__item(data-modal-btn='q0')
-                .mobile-menu__item-content
-                  .mobile-menu__title
-                    |#{item.title}
-                  .mobile-menu__caption 
-                    |#{item.caption}
-                .mobile-menu__icon 
-                  +arrow-svg.mobile-menu__svg
-          .mobile-menu__modal(data-modal-menu='q0')
+                a.header__feedback-link(href="#")
+                  .header__feedback-icon 
+                    +geo-svg.header__feedback-svg
+                  .header__text 
+                    |Где купить
+              each item in ['Объекты', 'События', 'Контакты']
+                li.mobile-menu__nav-item 
+                  a.mobile-menu__nav-link(href="#") 
+                    |#{item}
+            .mobile-menu__inner 
+              a.header__phone(href="tel:" + data.phone) 
+                |#{data.phone}
+              .button.button--sm(data-fancy-button='call')
+                |Обратный звонок
+            .mobile-menu__bot 
+              .mobile-menu__label 
+                |Написать нам
+              ul.mobile-menu__nav 
+                li.mobile-menu__nav-item 
+                  a.mobile-menu__link(href="#") 
+                    .mobile-menu__link-icon 
+                      +tg-svg.mobile-menu__link-svg
+                    .mobile-menu__link-text
+                      |Telegram
+                li.mobile-menu__nav-item 
+                  a.mobile-menu__link(href="#") 
+                    .mobile-menu__link-icon 
+                      +viber-svg.mobile-menu__link-svg
+                    .mobile-menu__link-text
+                      |Viber
+                li.mobile-menu__nav-item 
+                  a.mobile-menu__link(href="#") 
+                    .mobile-menu__link-icon 
+                      +whatsapp-svg.mobile-menu__link-svg
+                    .mobile-menu__link-text
+                      |WhatsApp
+        .mobile-menu__modals 
+          .mobile-menu__modal(data-modal-menu='0')
             .container
-              .mobile-menu__modal-back(data-modal-close='q0')
+              .mobile-menu__modal-back(data-modal-close='0')
+                .mobile-menu__modal-icon
+                  +arrow-svg.mobile-menu__modal-svg 
+                .mobile-menu__modal-text 
+                  |Каталог
+            ul.mobile-menu__modal-wrapper
+              -
+                var ddata = [
+                  {title: 'SLT AQUA', caption: 'Полипропиленовые трубопроводные системы для водоснабжения и отопления'},
+                  {title: 'SLT BLOCKFIRE', caption: 'Полипропиленовые трубопроводные системы для пожаротушения'},
+                  {title: 'SLT PE-RT', caption: 'Гибкие трубопроводные системы из термостойкого полиэтилена для водоснабжения и отопления'},
+                  {title: 'Инструменты', caption: 'Для монтажа полимерных трубопроводных систем'},
+                ]
+              each item in ddata
+                li.mobile-menu__item(data-modal-btn='q0')
+                  .mobile-menu__item-content
+                    .mobile-menu__title
+                      |#{item.title}
+                    .mobile-menu__caption 
+                      |#{item.caption}
+                  .mobile-menu__icon 
+                    +arrow-svg.mobile-menu__svg
+            .mobile-menu__modal(data-modal-menu='q0')
+              .container
+                .mobile-menu__modal-back(data-modal-close='q0')
+                  .mobile-menu__modal-icon
+                    +arrow-svg.mobile-menu__modal-svg 
+                  .mobile-menu__modal-text 
+                    |Меню
+                ul.mobile-menu__modal-list
+                  each item in ['Трубы', 'Фитинги', 'Фитинги комбинированные', 'Компенсаторы', 'Крепления', 'Запорная арматура']
+                    li.mobile-menu__modal-item 
+                      a.mobile-menu__nav-link(href="#") 
+                        |#{item}
+          .mobile-menu__modal(data-modal-menu='1')
+            .container
+              .mobile-menu__modal-back(data-modal-close='1')
                 .mobile-menu__modal-icon
                   +arrow-svg.mobile-menu__modal-svg 
                 .mobile-menu__modal-text 
@@ -220,15 +233,3 @@ mixin header
                   li.mobile-menu__modal-item 
                     a.mobile-menu__nav-link(href="#") 
                       |#{item}
-        .mobile-menu__modal(data-modal-menu='1')
-          .container
-            .mobile-menu__modal-back(data-modal-close='1')
-              .mobile-menu__modal-icon
-                +arrow-svg.mobile-menu__modal-svg 
-              .mobile-menu__modal-text 
-                |Меню
-            ul.mobile-menu__modal-list
-              each item in ['Трубы', 'Фитинги', 'Фитинги комбинированные', 'Компенсаторы', 'Крепления', 'Запорная арматура']
-                li.mobile-menu__modal-item 
-                  a.mobile-menu__nav-link(href="#") 
-                    |#{item}

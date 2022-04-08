@@ -2,9 +2,15 @@
   position: absolute;
   left: 0;
   top: 0;
+  @media (max-width: ($breakpoint - 1px)) {
+    right: getRem(20px);
+  }
 
   height: 100%;
   width: getRem(611px);
+  @media (max-width: ($breakpoint - 1px)) {
+    width: auto;
+  }
   display: none;
 
   // transform-origin: left;
@@ -12,7 +18,6 @@
 
   &__container {
     padding: getRem(60px) getRem(24px) getRem(60px) getRem(60px);
-
     @media (max-width: ($breakpoint - 1px)) {
       padding: getRem(20px);
     }
@@ -148,7 +153,7 @@
   width: getRem(950px);
   height: 100%;
   @media (max-width: ($breakpoint - 1px)) {
-    width: 100%;
+    width: auto;
   }
   display: none;
 
@@ -337,21 +342,230 @@
   }
 }
 
+.call-modal {
+  $comp: &;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  @media (max-width: ($breakpoint - 1px)) {
+    right: getRem(20px);
+  }
+
+  width: getRem(611px);
+  height: 100%;
+  @media (max-width: ($breakpoint - 1px)) {
+    width: auto;
+  }
+  display: none;
+
+  background: var(--color-white);
+
+  &__container {
+    position: relative;
+    z-index: 0;
+    padding: getRem(60px) getRem(60px) getRem(150px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(20px) getRem(20px) getRem(150px);
+    }
+
+    height: 100%;
+    overflow-y: scroll;
+    @include scrollbar-hidden;
+  }
+
+  &__title {
+    margin-bottom: getRem(60px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(28px);
+    }
+  }
+}
+
+.response {
+  width: getRem(586px);
+  @media (max-width: ($breakpoint - 1px)) {
+    width: calc(100% - 40px);
+  }
+  display: none;
+
+  text-align: center;
+  background: var(--color-white);
+
+  &__container {
+    padding: getRem(60px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(32px);
+    }
+  }
+
+  &__icon {
+    margin-bottom: getRem(35px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(20px);
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__svg {
+    width: getRem(97px);
+    height: getRem(97px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(54px);
+      height: getRem(54px);
+    }
+  }
+
+  &__title {
+    margin-bottom: getRem(12px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(8px);
+    }
+  }
+
+  &__text {
+    letter-spacing: -0.5px;
+    @include fsl(18px, 160%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px);
+    }
+  }
+
+  &__button {
+    margin-top: getRem(24px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(12px);
+    }
+
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.search-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: none;
+
+  background: var(--color-white);
+
+  &__container {
+    padding: getRem(60px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(20px);
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      width: calc(#{$col-part-d} * 11 - #{$col-gap});
+      @media (max-width: ($breakpoint - 1px)) {
+        position: relative;
+        z-index: 0;
+        margin-right: getRem(46px);
+        width: 100%;
+      }
+    }
+
+    &:nth-child(2) {
+      width: calc(#{$col-width-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        display: none;
+      }
+    }
+  }
+
+  &__input {
+    padding: getRem(24px) getRem(20px) getRem(21px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(16px);
+    }
+
+    width: 100%;
+
+    @include f-main;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-borders);
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @include fsl(20px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(14px, 100%);
+    }
+
+    @include placeholder {
+      color: var(--color-gray);
+    }
+  }
+  
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: getRem(15px);
+    transform: translateY(-50%);
+    z-index: 2;
+
+    display: none;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  &__svg {
+    width: getRem(16px);
+    height: getRem(16px);
+  }
+}
+
 /* Custom animation slide-in-out */
 .fancybox-fx-left.fancybox-slide--previous {
+  transform: translateX(-100%);
   .vacancies-modal {
-    transform: translateX(-100%);
   }
 }
 
 .fancybox-fx-left.fancybox-slide--next {
+  transform: translateX(-100%);
   .vacancies-modal {
-    transform: translateX(-100%);
   }
 }
 
 .fancybox-fx-left.fancybox-slide--current {
+  transform: translateX(0);
   .vacancies-modal {
-    transform: translateX(0);
+  }
+}
+
+.fancybox-fx-top.fancybox-slide--previous {
+  transform: translateY(-100%);
+  .vacancies-modal {
+  }
+}
+
+.fancybox-fx-top.fancybox-slide--next {
+  transform: translateY(-100%);
+  .vacancies-modal {
+  }
+}
+
+.fancybox-fx-top.fancybox-slide--current {
+  transform: translateY(0);
+  .vacancies-modal {
   }
 }

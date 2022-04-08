@@ -12,11 +12,17 @@
     display: none;
   }
 
-  overflow-y: scroll;
+  
   transition: $transition;
   pointer-events: none;
   transform: translateX(100%);
   background: var(--color-white);
+
+  &__wrapper {
+    padding-bottom: getRem(59px);
+    
+    overflow-y: scroll;
+  }
 
   &__item {
     padding: getRem(14px) getRem(20px);

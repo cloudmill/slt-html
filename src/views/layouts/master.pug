@@ -13,6 +13,7 @@ include ../components/footer
 
 include ../components/grid-test
 include ../components/buttons
+include ../components/modals
 
 
 
@@ -36,6 +37,8 @@ html(lang='ru')
 
       main.main(class=(isDefault ? "main--default" : ""))
         block content
+        +call-modal
+        +search-modal
 
       block footer
         +footer

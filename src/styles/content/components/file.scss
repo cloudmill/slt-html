@@ -10,8 +10,9 @@
     display: flex;
     align-items: center;
     @media (max-width: ($breakpoint - 1px)) {
-    width: 100%;
-  }
+      justify-content: center;
+      width: 100%;
+    }
 
     border: 1px solid $rgba-borders;
     border-radius: 60px;

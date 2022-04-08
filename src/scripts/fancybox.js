@@ -33,6 +33,14 @@ import '@fancyapps/fancybox';
           $.fancybox.defaults.animationEffect = 'left'
           $.fancybox.defaults.animationDuration = 500
           break
+        case 'call':
+          $.fancybox.defaults.animationEffect = 'left'
+          $.fancybox.defaults.animationDuration = 500
+          break
+        case 'search':
+          $.fancybox.defaults.animationEffect = 'top'
+          $.fancybox.defaults.animationDuration = 500
+          break
         default:
           $.fancybox.defaults.closeExisting = true;
           $.fancybox.defaults.touch = false;
