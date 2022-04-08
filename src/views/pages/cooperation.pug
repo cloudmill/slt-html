@@ -1,7 +1,7 @@
 extends ../layouts/master
 
 include ../components/breadcrumbs
-include ../components/docs-cards
+//- include ../components/docs-cards
 include ../components/form-components
 include ../components/nav
 include ../components/about-comp
@@ -136,7 +136,7 @@ block content
                               +checkbox(text = text)
                     else  
                       .form__wrapper
-                        .cooperation-page__buttons 
+                        .cooperation-page__buttons#radio-group
                           .cooperation-page__buttons-item
                             +radio-button(name = item.name text = 'Да')
                           .cooperation-page__buttons-item

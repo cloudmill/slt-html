@@ -207,7 +207,7 @@
 
       #{$comp}__svg {
         path {
-          fill: var(--color-white);
+          fill: var(--color-white) !important;
         }
       }
 

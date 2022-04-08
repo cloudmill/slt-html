@@ -126,26 +126,47 @@ import parsley from "parsleyjs";
 
 // выделение активного инпута
 
-const input = document.querySelectorAll('#input');
+document.addEventListener('DOMContentLoaded', () => {
 
-if (input) {
-  input.forEach(item => {
-    item.addEventListener('click', event => {
-      const currentInput = event.target.closest('#input');
+  const input = document.querySelectorAll('#input');
 
-      input.forEach(item => {
-        item.classList.remove('is-active')
-      });
+  if (input) {
+    input.forEach(item => {
+      item.addEventListener('click', event => {
+        const currentInput = event.target.closest('#input');
 
-      currentInput.classList.add('is-active');
-    })
-  })
+        input.forEach(item => {
+          item.classList.remove('is-active')
+        });
 
-  window.addEventListener('click', event => {
-    if (!event.target.closest('#input')) {
-      input.forEach(item => {
-        item.classList.remove('is-active')
+        currentInput.classList.add('is-active');
       })
-    }
-  })
-}
+    })
+
+    window.addEventListener('click', event => {
+      if (!event.target.closest('#input')) {
+        input.forEach(item => {
+          item.classList.remove('is-active')
+        })
+      }
+    })
+  }
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const radioGroup = document.querySelectorAll('#radio-group');
+
+  if (radioGroup) {
+    radioGroup.forEach(item => {
+      item.addEventListener('click', event => {
+
+        item.querySelectorAll('.radio').forEach(radio => {
+          radio.classList.remove('active')
+        })
+
+        event.target.closest('.radio').classList.add('active');
+      })
+    })
+  }
+})
