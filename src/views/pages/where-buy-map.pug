@@ -18,10 +18,14 @@ block content
 
           +nav(items = ['Списком', 'На карте'] active = 1)
 
-          select.where-buy__select(name="city")
-            option(value="") Город
-            option(value="") Город2
-            option(value="") Город3
+          //- select.where-buy__select(name="city")
+          //-   option(value="") Город
+          //-   option(value="") Город2
+          //-   option(value="") Город3
+
+          .section__selects
+            .section__select 
+              +select(options = ['qwe', 'zxc', 'asd'])
 
         -
           const filters = [
