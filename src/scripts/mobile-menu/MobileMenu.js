@@ -5,7 +5,7 @@ export class MobileMenu {
     this.isOpen = false
 
     this.clickHander(button)
-  }
+  } 
 
   clickHander(button) {
 
@@ -22,11 +22,6 @@ export class MobileMenu {
         }
 
         this.isOpen = !this.isOpen
-      }
-
-      if (target.classList.contains('mobile-menu__overlay')) {
-        this.isOpen = false
-        this.closeMenu()
       }
 
       if (target.closest('[data-modal-btn]')) {

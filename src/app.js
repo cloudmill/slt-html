@@ -8,7 +8,7 @@ import "./scripts/fancybox";
 import "./scripts/video-scroll";
 import "./scripts/parallax";
 import "./scripts/select";
-import "./scripts/CatalogModal";
+import "./scripts/catalog-category";
 import "./scripts/main-slider";
 import "./scripts/about-slider";
 import "./scripts/order-panel";

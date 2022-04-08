@@ -2,19 +2,22 @@
   $comp: &;
 
   margin-top: getRem(32px);
+  @media (max-width: ($breakpoint - 1px)) {
+    margin-top: 8px;
+  }
 
   &.active {
     #{$comp}__row {
       display: flex;
+      @media (max-width: ($breakpoint - 1px)) {
+        display: block;
+      }
     }
   }
 
   &__row {
     display: none;
     align-items: center;
-    @media (max-width: ($breakpoint - 1px)) {
-      display: block;
-    }
   }
 
   &__col {
