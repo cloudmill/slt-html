@@ -19,3 +19,4 @@ import "./scripts/mobile-menu/MobileMenu";
 import "./scripts/search-tabs";
 import "./scripts/where-buy-filter";
 import "./scripts/forms";
+import "./scripts/catalog-table";

@@ -143,6 +143,16 @@
           height: getRem(16px);
         }
       }
+
+      .button {
+        &::before {
+          background: var(--color-blue) !important;
+        }
+
+        &:hover {
+          border: 1px solid var(--color-blue) !important;
+        }
+      }   
     }
 
     &.blockfire {
@@ -157,6 +167,10 @@
 
       .button {
         border-color: var(--color-red);
+
+        &::before {
+          background: var(--color-red) !important;
+        }
       }
 
       .button__svg {
@@ -169,6 +183,10 @@
         path {
           fill: var(--color-red);
         }
+      }
+
+      .download-card:hover {
+        border: 1px solid var(--color-red) !important;
       }
     }
 
@@ -184,6 +202,10 @@
 
       .button {
         border-color: var(--color-green);
+
+        &::before {
+          background: var(--color-green) !important;
+        }
       }
 
       .button__svg {
@@ -196,6 +218,10 @@
         path {
           fill: var(--color-green);
         }
+      }
+
+      .download-card:hover {
+        border: 1px solid var(--color-green) !important;
       }
     }
   }
