@@ -46,7 +46,7 @@
 											<div class="header__feedback-col">
 												<div class="header__feedback-buttons">
 													<div class="header__feedback-item">
-														<div class="button button--sm button-animate">
+														<div class="button button--sm button-animate" data-fancy-button="call">
 															<div class="button__text"><span>Обратный звонок</span></div>
 														</div>
 													</div>
@@ -117,7 +117,7 @@
 													<div class="header__accordion-dropdown"></div>
 												</li>
 											</ul>
-											<div class="header__buttons"><a class="header__buttons-item" href="#">
+											<div class="header__buttons"><a class="header__buttons-item" href="#" data-fancy-button="search">
 													<div class="header__buttons-bg"></div>
 													<div class="header__buttons-container"><svg class="header__search" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<path fill-rule="evenodd" clip-rule="evenodd" d="M5 11.1455C4.99956 8.21437 7.06975 5.69108 9.94452 5.11883C12.8193 4.54659 15.698 6.08477 16.82 8.79267C17.9421 11.5006 16.995 14.624 14.558 16.2528C12.121 17.8815 8.87287 17.562 6.8 15.4895C5.64763 14.3376 5.00014 12.775 5 11.1455Z" stroke="#3F3F40" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -201,139 +201,159 @@
 					</div>
 				</div>
 				<div class="mobile-menu">
-					<ul class="mobile-menu__list">
-						<li class="mobile-menu__item active" data-modal-btn="0">
-							<div class="mobile-menu__item-text">Каталог</div>
-							<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
-								</svg></div>
-						</li>
-						<li class="mobile-menu__item" data-modal-btn="1">
-							<div class="mobile-menu__item-text">О компании</div>
-							<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
-								</svg></div>
-						</li>
-						<li class="mobile-menu__item" data-modal-btn="1">
-							<div class="mobile-menu__item-text">Техническая информация</div>
-							<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
-								</svg></div>
-						</li>
-						<li class="mobile-menu__item" data-modal-btn="1">
-							<div class="mobile-menu__item-text">Сотрудничество</div>
-							<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
-								</svg></div>
-						</li>
-						<li class="mobile-menu__item" data-modal-btn="1">
-							<div class="mobile-menu__item-text">Сервисы расчета</div>
-							<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
-								</svg></div>
-						</li>
-					</ul>
-					<div class="container">
-						<div class="mobile-menu__container">
-							<ul class="mobile-menu__nav">
-								<li class="mobile-menu__nav-item"><a class="header__feedback-link" href="#">
-										<div class="header__feedback-icon"><svg class="header__feedback-svg" width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M9.49967 1.58301C6.43909 1.58301 3.95801 4.06409 3.95801 7.12467C3.95801 12.6663 9.49967 17.4163 9.49967 17.4163C9.49967 17.4163 15.0413 12.6663 15.0413 7.12467C15.0413 4.06409 12.5603 1.58301 9.49967 1.58301ZM9.49967 16.3318C8.17363 15.0283 4.74967 11.2615 4.74967 7.12467C4.74967 4.50545 6.88045 2.37467 9.49967 2.37467C12.1189 2.37467 14.2497 4.50545 14.2497 7.12467C14.2497 11.2619 10.8253 15.0287 9.49967 16.3318Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
-												<path d="M9.49967 7.91634C9.9369 7.91634 10.2913 7.5619 10.2913 7.12467C10.2913 6.68745 9.9369 6.33301 9.49967 6.33301C9.06245 6.33301 8.70801 6.68745 8.70801 7.12467C8.70801 7.5619 9.06245 7.91634 9.49967 7.91634Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
-											</svg></div>
-										<div class="header__text">Где купить</div>
-									</a></li>
-								<li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">Объекты</a></li>
-								<li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">События</a></li>
-								<li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">Контакты</a></li>
-							</ul>
-							<div class="mobile-menu__inner"><a class="header__phone" href="tel:8 800 444-72-37">8 800 444-72-37</a>
-								<div class="button button--sm">Обратный звонок</div>
-							</div>
-							<div class="mobile-menu__bot">
-								<div class="mobile-menu__label">Написать нам</div>
+					<div class="mobile-menu__wrapper">
+						<ul class="mobile-menu__list">
+							<li class="mobile-menu__item active" data-modal-btn="0">
+								<div class="mobile-menu__item-text">Каталог</div>
+								<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+									</svg></div>
+							</li>
+							<li class="mobile-menu__item" data-modal-btn="1">
+								<div class="mobile-menu__item-text">О компании</div>
+								<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+									</svg></div>
+							</li>
+							<li class="mobile-menu__item" data-modal-btn="1">
+								<div class="mobile-menu__item-text">Техническая информация</div>
+								<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+									</svg></div>
+							</li>
+							<li class="mobile-menu__item" data-modal-btn="1">
+								<div class="mobile-menu__item-text">Сотрудничество</div>
+								<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+									</svg></div>
+							</li>
+							<li class="mobile-menu__item" data-modal-btn="1">
+								<div class="mobile-menu__item-text">Сервисы расчета</div>
+								<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+									</svg></div>
+							</li>
+						</ul>
+						<div class="container">
+							<div class="mobile-menu__container">
 								<ul class="mobile-menu__nav">
-									<li class="mobile-menu__nav-item"><a class="mobile-menu__link" href="#">
-											<div class="mobile-menu__link-icon"><svg class="mobile-menu__link-svg" width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M11.0258 1.06453L0.39439 5.18547C-0.0334337 5.37736 -0.178139 5.76169 0.290966 5.97025L3.01841 6.84149L9.61296 2.74486C9.97302 2.48767 10.3417 2.55625 10.0245 2.83916L4.36062 7.99388L4.1827 10.1754C4.3475 10.5122 4.64924 10.5137 4.8417 10.3463L6.40869 8.85597L9.0924 10.876C9.7157 11.2469 10.0549 11.0075 10.189 10.3277L11.9493 1.94949C12.132 1.11263 11.8203 0.74391 11.0258 1.06453Z" fill="#3F3F40"></path>
+									<li class="mobile-menu__nav-item"><a class="header__feedback-link" href="#">
+											<div class="header__feedback-icon"><svg class="header__feedback-svg" width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M9.49967 1.58301C6.43909 1.58301 3.95801 4.06409 3.95801 7.12467C3.95801 12.6663 9.49967 17.4163 9.49967 17.4163C9.49967 17.4163 15.0413 12.6663 15.0413 7.12467C15.0413 4.06409 12.5603 1.58301 9.49967 1.58301ZM9.49967 16.3318C8.17363 15.0283 4.74967 11.2615 4.74967 7.12467C4.74967 4.50545 6.88045 2.37467 9.49967 2.37467C12.1189 2.37467 14.2497 4.50545 14.2497 7.12467C14.2497 11.2619 10.8253 15.0287 9.49967 16.3318Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
+													<path d="M9.49967 7.91634C9.9369 7.91634 10.2913 7.5619 10.2913 7.12467C10.2913 6.68745 9.9369 6.33301 9.49967 6.33301C9.06245 6.33301 8.70801 6.68745 8.70801 7.12467C8.70801 7.5619 9.06245 7.91634 9.49967 7.91634Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
 												</svg></div>
-											<div class="mobile-menu__link-text">Telegram</div>
+											<div class="header__text">Где купить</div>
 										</a></li>
-									<li class="mobile-menu__nav-item"><a class="mobile-menu__link" href="#">
-											<div class="mobile-menu__link-icon"><svg class="mobile-menu__link-svg" width="12" height="13" viewbox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<g clip-path="url(#clip0_561_37206)">
-														<path d="M5.90527 2.63623C6.33226 2.62631 6.7566 2.70575 7.15107 2.86946C7.54554 3.03318 7.90144 3.27755 8.19591 3.5869C8.49039 3.89625 8.71694 4.26374 8.86104 4.66579C9.00513 5.06785 9.06359 5.49559 9.03265 5.92156M6.41071 4.31049C6.5405 4.30608 6.66981 4.3284 6.79061 4.37606C6.91141 4.42371 7.02113 4.49569 7.11296 4.58751C7.20479 4.67934 7.27676 4.78906 7.32442 4.90987C7.37207 5.03067 7.39439 5.15998 7.38999 5.28977L6.41071 4.31049ZM6.18958 3.45757C6.46325 3.45727 6.73412 3.51253 6.9858 3.62C7.23748 3.72748 7.46471 3.88493 7.65374 4.08282C7.84277 4.28071 7.98966 4.51492 8.0855 4.77125C8.18134 5.02759 8.22415 5.30071 8.21132 5.57407L6.18958 3.45757Z" stroke="#3F3F40" stroke-width="0.315897" stroke-linecap="round"></path>
-														<path fill-rule="evenodd" clip-rule="evenodd" d="M0.914487 5.76349C0.914487 2.88883 1.45151 1.11981 6.00043 1.11981C10.5493 1.11981 11.0864 2.88883 11.0864 5.76349C11.0864 8.63815 10.5493 10.4072 6.00043 10.4072L5.17909 10.3756L3.50484 12.3657C3.37848 12.4921 3.25212 12.3973 3.25212 12.271V10.0913C3.06259 10.0913 2.27284 9.7122 2.05172 9.49107C1.35674 8.76451 0.914487 8.22749 0.914487 5.76349ZM-0.0332031 5.76349C-0.0332031 1.78319 1.70423 0.172119 6.00043 0.172119C10.2966 0.172119 12.0341 1.78319 12.0341 5.76349C12.0341 9.74379 10.2966 11.3549 6.00043 11.3549C5.68453 11.3549 5.43181 11.3549 4.98956 11.2917L3.78915 12.65C3.56802 12.9028 2.90464 12.9975 2.90464 12.2394V10.9126C2.7151 10.9126 2.27284 10.7231 1.67264 10.344C1.07244 9.93333 -0.0332031 8.95405 -0.0332031 5.76349ZM7.0113 7.09026C7.22189 6.81648 7.47461 6.77436 7.76945 6.9639L8.90668 7.81682C9.07515 8.02742 9.00144 8.32226 8.68555 8.70133C8.36965 9.08041 8.07481 9.23836 7.80104 9.17518C6.68487 8.92246 5.61082 8.29067 4.57889 7.2798C3.54696 6.26893 2.90464 5.17382 2.65192 3.99447C2.65192 3.57327 2.91517 3.21526 3.44166 2.92042C3.71544 2.73088 3.9471 2.78353 4.13663 3.07837L4.92638 4.18401C5.05274 4.43673 4.97903 4.66838 4.70525 4.87898C3.47325 5.35283 6.31632 8.41703 7.0113 7.09026Z" fill="#3F3F40"></path>
-													</g>
-													<defs>
-														<clippath id="clip0_561_37206">
-															<rect width="12" height="13" fill="white"></rect>
-														</clippath>
-													</defs>
-												</svg></div>
-											<div class="mobile-menu__link-text">Viber</div>
-										</a></li>
-									<li class="mobile-menu__nav-item"><a class="mobile-menu__link" href="#">
-											<div class="mobile-menu__link-icon"><svg class="mobile-menu__link-svg" width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M12 5.84547C12 9.07387 9.3628 11.6909 6.10907 11.6909C5.07613 11.6909 4.10573 11.4269 3.26147 10.9636L0 12L1.06333 8.86373C0.526933 7.98293 0.218 6.94987 0.218 5.84547C0.218 2.61707 2.85547 0 6.10907 0C9.36307 0 12 2.61707 12 5.84547ZM6.10907 0.930933C3.37787 0.930933 1.15627 3.1356 1.15627 5.84547C1.15627 6.9208 1.5068 7.91667 2.09973 8.7268L1.48093 10.552L3.38427 9.94707C4.16627 10.4605 5.10307 10.76 6.1092 10.76C8.84 10.76 11.062 8.5556 11.062 5.84573C11.062 3.13587 8.84013 0.930933 6.10907 0.930933ZM9.08387 7.19173C9.04747 7.13213 8.95133 7.09613 8.80707 7.02453C8.66253 6.95293 7.9524 6.60613 7.8204 6.55853C7.688 6.5108 7.59147 6.4868 7.49533 6.63013C7.3992 6.7736 7.1224 7.09613 7.038 7.19173C6.95373 7.2876 6.8696 7.2996 6.72507 7.22787C6.5808 7.15627 6.1156 7.0048 5.564 6.5168C5.1348 6.13707 4.84493 5.66827 4.76067 5.52467C4.67653 5.38133 4.75187 5.30387 4.824 5.23253C4.88907 5.16827 4.96853 5.0652 5.04067 4.9816C5.11307 4.89787 5.13707 4.83827 5.18493 4.74253C5.23333 4.64693 5.2092 4.56333 5.17293 4.49147C5.13693 4.41987 4.84787 3.7148 4.7276 3.42787C4.60733 3.1412 4.4872 3.18893 4.4028 3.18893C4.31867 3.18893 4.22227 3.17693 4.126 3.17693C4.02973 3.17693 3.8732 3.2128 3.7408 3.35613C3.60853 3.4996 3.2356 3.84627 3.2356 4.5512C3.2356 5.25627 3.7528 5.93747 3.8252 6.03293C3.89733 6.1284 4.82387 7.62227 6.29187 8.196C7.76 8.76947 7.76 8.57813 8.0248 8.55413C8.28933 8.53027 8.87893 8.2076 8.99973 7.8732C9.11973 7.53827 9.11973 7.25147 9.08387 7.19173Z" fill="#3F3F40"></path>
-												</svg></div>
-											<div class="mobile-menu__link-text">WhatsApp</div>
-										</a></li>
+									<li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">Объекты</a></li>
+									<li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">События</a></li>
+									<li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">Контакты</a></li>
 								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="mobile-menu__modals">
-						<div class="mobile-menu__modal" data-modal-menu="0">
-							<div class="container">
-								<div class="mobile-menu__modal-back" data-modal-close="0">
-									<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
-										</svg></div>
-									<div class="mobile-menu__modal-text">Каталог</div>
+								<div class="mobile-menu__inner"><a class="header__phone" href="tel:8 800 444-72-37">8 800 444-72-37</a>
+									<div class="button button--sm" data-fancy-button="call">Обратный звонок</div>
+								</div>
+								<div class="mobile-menu__bot">
+									<div class="mobile-menu__label">Написать нам</div>
+									<ul class="mobile-menu__nav">
+										<li class="mobile-menu__nav-item"><a class="mobile-menu__link" href="#">
+												<div class="mobile-menu__link-icon"><svg class="mobile-menu__link-svg" width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M11.0258 1.06453L0.39439 5.18547C-0.0334337 5.37736 -0.178139 5.76169 0.290966 5.97025L3.01841 6.84149L9.61296 2.74486C9.97302 2.48767 10.3417 2.55625 10.0245 2.83916L4.36062 7.99388L4.1827 10.1754C4.3475 10.5122 4.64924 10.5137 4.8417 10.3463L6.40869 8.85597L9.0924 10.876C9.7157 11.2469 10.0549 11.0075 10.189 10.3277L11.9493 1.94949C12.132 1.11263 11.8203 0.74391 11.0258 1.06453Z" fill="#3F3F40"></path>
+													</svg></div>
+												<div class="mobile-menu__link-text">Telegram</div>
+											</a></li>
+										<li class="mobile-menu__nav-item"><a class="mobile-menu__link" href="#">
+												<div class="mobile-menu__link-icon"><svg class="mobile-menu__link-svg" width="12" height="13" viewbox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g clip-path="url(#clip0_561_37206)">
+															<path d="M5.90527 2.63623C6.33226 2.62631 6.7566 2.70575 7.15107 2.86946C7.54554 3.03318 7.90144 3.27755 8.19591 3.5869C8.49039 3.89625 8.71694 4.26374 8.86104 4.66579C9.00513 5.06785 9.06359 5.49559 9.03265 5.92156M6.41071 4.31049C6.5405 4.30608 6.66981 4.3284 6.79061 4.37606C6.91141 4.42371 7.02113 4.49569 7.11296 4.58751C7.20479 4.67934 7.27676 4.78906 7.32442 4.90987C7.37207 5.03067 7.39439 5.15998 7.38999 5.28977L6.41071 4.31049ZM6.18958 3.45757C6.46325 3.45727 6.73412 3.51253 6.9858 3.62C7.23748 3.72748 7.46471 3.88493 7.65374 4.08282C7.84277 4.28071 7.98966 4.51492 8.0855 4.77125C8.18134 5.02759 8.22415 5.30071 8.21132 5.57407L6.18958 3.45757Z" stroke="#3F3F40" stroke-width="0.315897" stroke-linecap="round"></path>
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M0.914487 5.76349C0.914487 2.88883 1.45151 1.11981 6.00043 1.11981C10.5493 1.11981 11.0864 2.88883 11.0864 5.76349C11.0864 8.63815 10.5493 10.4072 6.00043 10.4072L5.17909 10.3756L3.50484 12.3657C3.37848 12.4921 3.25212 12.3973 3.25212 12.271V10.0913C3.06259 10.0913 2.27284 9.7122 2.05172 9.49107C1.35674 8.76451 0.914487 8.22749 0.914487 5.76349ZM-0.0332031 5.76349C-0.0332031 1.78319 1.70423 0.172119 6.00043 0.172119C10.2966 0.172119 12.0341 1.78319 12.0341 5.76349C12.0341 9.74379 10.2966 11.3549 6.00043 11.3549C5.68453 11.3549 5.43181 11.3549 4.98956 11.2917L3.78915 12.65C3.56802 12.9028 2.90464 12.9975 2.90464 12.2394V10.9126C2.7151 10.9126 2.27284 10.7231 1.67264 10.344C1.07244 9.93333 -0.0332031 8.95405 -0.0332031 5.76349ZM7.0113 7.09026C7.22189 6.81648 7.47461 6.77436 7.76945 6.9639L8.90668 7.81682C9.07515 8.02742 9.00144 8.32226 8.68555 8.70133C8.36965 9.08041 8.07481 9.23836 7.80104 9.17518C6.68487 8.92246 5.61082 8.29067 4.57889 7.2798C3.54696 6.26893 2.90464 5.17382 2.65192 3.99447C2.65192 3.57327 2.91517 3.21526 3.44166 2.92042C3.71544 2.73088 3.9471 2.78353 4.13663 3.07837L4.92638 4.18401C5.05274 4.43673 4.97903 4.66838 4.70525 4.87898C3.47325 5.35283 6.31632 8.41703 7.0113 7.09026Z" fill="#3F3F40"></path>
+														</g>
+														<defs>
+															<clippath id="clip0_561_37206">
+																<rect width="12" height="13" fill="white"></rect>
+															</clippath>
+														</defs>
+													</svg></div>
+												<div class="mobile-menu__link-text">Viber</div>
+											</a></li>
+										<li class="mobile-menu__nav-item"><a class="mobile-menu__link" href="#">
+												<div class="mobile-menu__link-icon"><svg class="mobile-menu__link-svg" width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 5.84547C12 9.07387 9.3628 11.6909 6.10907 11.6909C5.07613 11.6909 4.10573 11.4269 3.26147 10.9636L0 12L1.06333 8.86373C0.526933 7.98293 0.218 6.94987 0.218 5.84547C0.218 2.61707 2.85547 0 6.10907 0C9.36307 0 12 2.61707 12 5.84547ZM6.10907 0.930933C3.37787 0.930933 1.15627 3.1356 1.15627 5.84547C1.15627 6.9208 1.5068 7.91667 2.09973 8.7268L1.48093 10.552L3.38427 9.94707C4.16627 10.4605 5.10307 10.76 6.1092 10.76C8.84 10.76 11.062 8.5556 11.062 5.84573C11.062 3.13587 8.84013 0.930933 6.10907 0.930933ZM9.08387 7.19173C9.04747 7.13213 8.95133 7.09613 8.80707 7.02453C8.66253 6.95293 7.9524 6.60613 7.8204 6.55853C7.688 6.5108 7.59147 6.4868 7.49533 6.63013C7.3992 6.7736 7.1224 7.09613 7.038 7.19173C6.95373 7.2876 6.8696 7.2996 6.72507 7.22787C6.5808 7.15627 6.1156 7.0048 5.564 6.5168C5.1348 6.13707 4.84493 5.66827 4.76067 5.52467C4.67653 5.38133 4.75187 5.30387 4.824 5.23253C4.88907 5.16827 4.96853 5.0652 5.04067 4.9816C5.11307 4.89787 5.13707 4.83827 5.18493 4.74253C5.23333 4.64693 5.2092 4.56333 5.17293 4.49147C5.13693 4.41987 4.84787 3.7148 4.7276 3.42787C4.60733 3.1412 4.4872 3.18893 4.4028 3.18893C4.31867 3.18893 4.22227 3.17693 4.126 3.17693C4.02973 3.17693 3.8732 3.2128 3.7408 3.35613C3.60853 3.4996 3.2356 3.84627 3.2356 4.5512C3.2356 5.25627 3.7528 5.93747 3.8252 6.03293C3.89733 6.1284 4.82387 7.62227 6.29187 8.196C7.76 8.76947 7.76 8.57813 8.0248 8.55413C8.28933 8.53027 8.87893 8.2076 8.99973 7.8732C9.11973 7.53827 9.11973 7.25147 9.08387 7.19173Z" fill="#3F3F40"></path>
+													</svg></div>
+												<div class="mobile-menu__link-text">WhatsApp</div>
+											</a></li>
+									</ul>
 								</div>
 							</div>
-							<ul class="mobile-menu__modal-wrapper">
-								<li class="mobile-menu__item" data-modal-btn="q0">
-									<div class="mobile-menu__item-content">
-										<div class="mobile-menu__title">SLT AQUA</div>
-										<div class="mobile-menu__caption">Полипропиленовые трубопроводные системы для водоснабжения и отопления</div>
-									</div>
-									<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
-										</svg></div>
-								</li>
-								<li class="mobile-menu__item" data-modal-btn="q0">
-									<div class="mobile-menu__item-content">
-										<div class="mobile-menu__title">SLT BLOCKFIRE</div>
-										<div class="mobile-menu__caption">Полипропиленовые трубопроводные системы для пожаротушения</div>
-									</div>
-									<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
-										</svg></div>
-								</li>
-								<li class="mobile-menu__item" data-modal-btn="q0">
-									<div class="mobile-menu__item-content">
-										<div class="mobile-menu__title">SLT PE-RT</div>
-										<div class="mobile-menu__caption">Гибкие трубопроводные системы из термостойкого полиэтилена для водоснабжения и отопления</div>
-									</div>
-									<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
-										</svg></div>
-								</li>
-								<li class="mobile-menu__item" data-modal-btn="q0">
-									<div class="mobile-menu__item-content">
-										<div class="mobile-menu__title">Инструменты</div>
-										<div class="mobile-menu__caption">Для монтажа полимерных трубопроводных систем</div>
-									</div>
-									<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
-										</svg></div>
-								</li>
-							</ul>
-							<div class="mobile-menu__modal" data-modal-menu="q0">
+						</div>
+						<div class="mobile-menu__modals">
+							<div class="mobile-menu__modal" data-modal-menu="0">
 								<div class="container">
-									<div class="mobile-menu__modal-back" data-modal-close="q0">
+									<div class="mobile-menu__modal-back" data-modal-close="0">
+										<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+											</svg></div>
+										<div class="mobile-menu__modal-text">Каталог</div>
+									</div>
+								</div>
+								<ul class="mobile-menu__modal-wrapper">
+									<li class="mobile-menu__item" data-modal-btn="q0">
+										<div class="mobile-menu__item-content">
+											<div class="mobile-menu__title">SLT AQUA</div>
+											<div class="mobile-menu__caption">Полипропиленовые трубопроводные системы для водоснабжения и отопления</div>
+										</div>
+										<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+											</svg></div>
+									</li>
+									<li class="mobile-menu__item" data-modal-btn="q0">
+										<div class="mobile-menu__item-content">
+											<div class="mobile-menu__title">SLT BLOCKFIRE</div>
+											<div class="mobile-menu__caption">Полипропиленовые трубопроводные системы для пожаротушения</div>
+										</div>
+										<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+											</svg></div>
+									</li>
+									<li class="mobile-menu__item" data-modal-btn="q0">
+										<div class="mobile-menu__item-content">
+											<div class="mobile-menu__title">SLT PE-RT</div>
+											<div class="mobile-menu__caption">Гибкие трубопроводные системы из термостойкого полиэтилена для водоснабжения и отопления</div>
+										</div>
+										<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+											</svg></div>
+									</li>
+									<li class="mobile-menu__item" data-modal-btn="q0">
+										<div class="mobile-menu__item-content">
+											<div class="mobile-menu__title">Инструменты</div>
+											<div class="mobile-menu__caption">Для монтажа полимерных трубопроводных систем</div>
+										</div>
+										<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+											</svg></div>
+									</li>
+								</ul>
+								<div class="mobile-menu__modal" data-modal-menu="q0">
+									<div class="container">
+										<div class="mobile-menu__modal-back" data-modal-close="q0">
+											<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
+												</svg></div>
+											<div class="mobile-menu__modal-text">Меню</div>
+										</div>
+										<ul class="mobile-menu__modal-list">
+											<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Трубы</a></li>
+											<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Фитинги</a></li>
+											<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Фитинги комбинированные</a></li>
+											<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Компенсаторы</a></li>
+											<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Крепления</a></li>
+											<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Запорная арматура</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="mobile-menu__modal" data-modal-menu="1">
+								<div class="container">
+									<div class="mobile-menu__modal-back" data-modal-close="1">
 										<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
 											</svg></div>
@@ -348,24 +368,6 @@
 										<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Запорная арматура</a></li>
 									</ul>
 								</div>
-							</div>
-						</div>
-						<div class="mobile-menu__modal" data-modal-menu="1">
-							<div class="container">
-								<div class="mobile-menu__modal-back" data-modal-close="1">
-									<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
-										</svg></div>
-									<div class="mobile-menu__modal-text">Меню</div>
-								</div>
-								<ul class="mobile-menu__modal-list">
-									<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Трубы</a></li>
-									<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Фитинги</a></li>
-									<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Фитинги комбинированные</a></li>
-									<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Компенсаторы</a></li>
-									<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Крепления</a></li>
-									<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Запорная арматура</a></li>
-								</ul>
 							</div>
 						</div>
 					</div>
@@ -754,6 +756,44 @@
 							</div>
 						</div>
 					</section>
+				</div>
+				<div class="call-modal" data-fancy-modal="call">
+					<div class="call-modal__container">
+						<h4 class="call-modal__title">Обратный звонок</h4>
+						<form class="form" action="/">
+							<div class="form__item"><input class="form__input" placeholder="Имя*" /></div>
+							<div class="form__item"><input class="form__input" type="number" placeholder="Телефон*" /></div>
+							<div class="form__inner">
+								<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+										<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.5 4.5L6 9L14 1" stroke="#07A8D7" stroke-width="1.5"></path>
+											</svg></div>
+										<div class="checkbox__text">Даю согласие на обработку <a class="checkbox__link" href="#">персональных данных</a></div>
+									</label></div>
+							</div>
+							<div class="form__inner"><button class="button button--blue button--wide--mobile"><span class="button__text"><span>Отправить</span></span>
+									<div class="button__icon"><svg class="button__svg" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M9.72386 6.66672H0V5.33338H9.72386L5.5286 1.13812L6.4714 0.195312L12.2761 6.00005L6.4714 11.8048L5.5286 10.862L9.72386 6.66672Z" fill="white"></path>
+										</svg></div>
+								</button></div>
+						</form>
+					</div>
+				</div>
+				<div class="search-modal" data-fancy-modal="search">
+					<div class="search-modal__container">
+						<form class="search-modal__form" action="/">
+							<div class="search-modal__col"><input class="search-modal__input" placeholder="Что вы хотите найти?" />
+								<div class="search-modal__icon"><svg class="search-modal__svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M13.4142 12L19.7782 18.3639L18.364 19.7782L12 13.4142L5.63604 19.7782L4.22183 18.3639L10.5858 12L4.22183 5.63602L5.63604 4.22181L12 10.5858L18.364 4.22181L19.7782 5.63602L13.4142 12Z" fill="#979797"></path>
+									</svg></div>
+							</div>
+							<div class="search-modal__col"><button class="button button--wide--mobile"><span class="button__text"><span>Поиск</span></span>
+									<div class="button__icon"><svg class="button__svg arrow-blue" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M9.72386 6.66672H0V5.33338H9.72386L5.5286 1.13812L6.4714 0.195312L12.2761 6.00005L6.4714 11.8048L5.5286 10.862L9.72386 6.66672Z" fill="white"></path>
+										</svg></div>
+								</button></div>
+						</form>
+					</div>
 				</div>
 			</main>
 			<footer class="footer">
