@@ -513,11 +513,21 @@
       &::after {
         background: var(--color-red);
       }
+      .button-icon::before {
+        background: var(--color-red);
+      }
 
       &:hover {
         .button-icon {
-          background: var(--color-red);
           border-color: var(--color-red);
+
+          &::before {
+            transform: none;
+          }
+
+          .button-icon__svg {
+            animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+          }
         }
       }
     }
@@ -525,11 +535,21 @@
       &::after {
         background: var(--color-blue);
       }
+      .button-icon::before {
+        background: var(--color-blue);
+      }
 
       &:hover {
         .button-icon {
-          background: var(--color-blue);
           border-color: var(--color-blue);
+
+          &::before {
+            transform: none;
+          }
+
+          .button-icon__svg {
+            animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+          }
         }
       }
     }
