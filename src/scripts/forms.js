@@ -153,6 +153,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })
 
+// выделение активной радиокнопки
+
 document.addEventListener('DOMContentLoaded', () => {
 
   const radioGroup = document.querySelectorAll('#radio-group');

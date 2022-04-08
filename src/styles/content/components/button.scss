@@ -189,13 +189,13 @@
 
     &::before {
       content: '';
-      background: var(--color-blue-dark);
+      background: var(--color-blue);
       
       @include btn-before;
     }
 
     &:hover {
-      border: 1px solid var(--color-blue-dark);
+      border: 1px solid var(--color-blue);
 
       #{$comp}__text {
         color: var(--color-white);

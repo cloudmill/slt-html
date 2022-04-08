@@ -43,6 +43,24 @@
     align-items: center;
 
     cursor: pointer;
+
+    transition: $transition;
+
+    &:hover {
+
+      .spoiler__title {
+        color: var(--color-black);
+      }
+
+      .spoiler__icon path {
+        fill: var(--color-black);
+      }
+      
+    }
+  }
+
+  &__title {
+    transition: $transition;
   }
 
   &__icon {
