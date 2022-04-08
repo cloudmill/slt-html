@@ -128,3 +128,44 @@ mixin catalog-modal
       .catalog-modal__panel-button 
         +link-right.button--wide(data-catalog-show='')
           |Показать
+
+mixin objects-menu 
+  .objects-menu.mobile-menu(data-objects-menu='')
+    ul.mobile-menu__list
+      li.mobile-menu__item(data-menu-close='')
+        .mobile-menu__modal-back
+          .mobile-menu__modal-icon
+            +arrow-svg.mobile-menu__modal-svg 
+          .mobile-menu__modal-text 
+            |Меню
+      each item in ['Местоположение', 'Категория продукции', 'Тип объекта',]
+        li.mobile-menu__item(data-modal-btn='ob1')
+          .mobile-menu__item-text 
+            |#{item}
+          .mobile-menu__icon 
+            +arrow-svg.mobile-menu__svg
+    .mobile-menu__modal(data-modal-menu='ob1')
+      .container
+        .mobile-menu__modal-back(data-modal-close='ob1')
+          .mobile-menu__modal-icon
+            +arrow-svg.mobile-menu__modal-svg 
+          .mobile-menu__modal-text 
+            |Местоположение
+        ul.objects-menu__list
+          each item in ['Санкт-Петербург', 'Москва', 'Нижний Новгород', 'Химки', 'Краснодар',]
+            li.objects-menu__item(data-objects-item='')
+              .checkbox 
+                label.checkbox__label
+                  input.checkbox__input(type="checkbox" data-item-checkbox='')
+                  .checkbox__box 
+                    +check-svg.checkbox__svg
+                  .checkbox__caption(data-item-text='')
+                    |#{item}
+    .objects-menu__bot(data-menu-panel='')
+      .objects-menu__row 
+        .objects-menu__col
+          .button.button--wide(data-menu-clear='')
+            |Сбросить
+        .objects-menu__col
+          +link-right.button--wide.button--blue(data-menu-accept='')
+            |Применить

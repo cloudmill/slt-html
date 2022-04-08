@@ -25,7 +25,7 @@ export class CategoriesList {
     items.forEach(item => {
       if (item.text === text) {
         item.element.classList.remove('active')
-        item.element.querySelector('.catalog-modal__input').checked = false
+        item.element.querySelector('[data-item-checkbox]').checked = false
       }
     })
 

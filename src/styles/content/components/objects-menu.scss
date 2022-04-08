@@ -1,0 +1,55 @@
+.objects-menu {
+  position: fixed;
+  top: getRem(59px);
+
+  // @media (max-width: ($breakpoint - 1px)) {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: space-between;
+  // }
+
+  &.menu {
+    transform: none;
+    pointer-events: all;
+  }
+
+  &__list {
+    margin-top: getRem(28px);
+  }
+
+  &__item {
+
+    &:not(:first-child) {
+      margin-top: getRem(12px);
+    }
+  }
+
+  &__bot {
+    position: absolute;
+    bottom: getRem(59px);
+    left: 0;
+    right: 0;
+    padding: getRem(20px);
+    transform: translateY(100%);
+
+    width: 100%;
+
+    border-top: 1px solid var(--color-borders);
+    box-shadow: 0px -6px 34px rgba(0, 0, 0, 0.06);
+    transition: $transition;
+
+    &.active {
+      transform: none;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__col {
+    flex-shrink: 0;
+    width: calc(50% - 4px);
+  }
+}

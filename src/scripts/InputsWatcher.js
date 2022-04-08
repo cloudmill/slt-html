@@ -32,7 +32,7 @@ export class InputsWatcher {
 
   clearItems() {
     this.selectedItems.forEach(item => {
-      item.element.querySelector('.catalog-modal__input').checked = false
+      item.element.querySelector('[data-item-checkbox]').checked = false
       item.element.classList.remove('active')
     })
     this.selectedItems = []
