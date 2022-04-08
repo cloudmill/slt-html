@@ -1,9 +1,28 @@
 .objects-page {
 
   &__top {
+    display: flex;
+    justify-content: space-between;
+
     margin-bottom: getRem(60px);
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: getRem(24px);
+
+      border: 1px solid var(--color-borders);
+      padding: getRem(16px);
+      cursor: pointer;
+    }
+
+    &-col {
+      display: flex;
+    }
+
+    &-select {
+      width: calc(#{$col-part-d} * 3 - #{$col-gap});
+
+      &:not(:first-child) {
+        margin-left: calc(#{$col-gap});
+      }
     }
   }
 

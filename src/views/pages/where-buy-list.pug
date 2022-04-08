@@ -50,11 +50,9 @@ block content
                   span #{item}
 
           .where-buy__filters-col
-            .where-buy__filters-item.where-buy__filters-reset.reset-disabled
-              .button__text
-                span Очистить
-              .button__icon
-                +refresh-svg.button__svg
+
+            +refresh-button.where-buy__filters-reset.reset-disabled
+              |Очистить
 
         .where-buy-list
           - for (i=0;i<7;i++)

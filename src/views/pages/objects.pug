@@ -13,11 +13,37 @@ block content
         +breadcrumbs(page = "Объекты")
         .section__inner 
           h1 
-            |События
+            |Объекты
     section.section
-      .container 
-        .objects-page__top 
-          |TOP
+      .container
+
+        .objects-page__top.only-mobile
+          span Фильтр
+          span +
+
+        .objects-page__top.only-desktop
+   
+          .objects-page__top-col
+
+            select.objects-page__top-select(name="city")
+              option(value="") Местоположение
+              option(value="") Местоположение2
+              option(value="") Местоположение3
+
+            select.objects-page__top-select(name="city")
+              option(value="") Категория продукции
+              option(value="") Категория продукции2
+              option(value="") Категория продукции3
+
+            select.objects-page__top-select(name="city")
+              option(value="") Тип объекта
+              option(value="") Тип объекта2
+              option(value="") Тип объекта3
+
+          .objects-page__top-col
+            +refresh-button
+              |Сбросить
+
         .objects-page__grid 
           - for (i = 0; i < 12; i++)
             a.objects-page__card(href="#")
