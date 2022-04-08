@@ -62,9 +62,11 @@ mixin footer
                     |#{data.phone}
                 .footer__socials 
                   a.footer__socials-item(href="#")
-                    +facebook-svg.footer__socials-svg
+                    .footer__socials-container
+                      +facebook-svg.footer__socials-svg
                   a.footer__socials-item(href="#")
-                    +instagram-svg.footer__socials-svg
+                    .footer__socials-container
+                      +instagram-svg.footer__socials-svg
             .footer__col 
               .footer__contacts 
                 .footer__contacts-item 

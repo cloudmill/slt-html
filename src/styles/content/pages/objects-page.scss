@@ -26,6 +26,18 @@
 
   &__card {
     display: block;
+
+    &:hover {
+      .objects-page__card-title {
+        color: var(--color-blue);
+      }
+      .objects-page__card-img {
+        transform: scale(1.1);
+      }
+      .objects-page__card-img-container::after {
+        transform: none;
+      }
+    }
   }
   &__card-container {
     position: relative;
@@ -36,6 +48,27 @@
   }
   &__card-img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: $transition;
+  }
+  &__card-img-container {
+    width: 100%;
+    height: getRem(312px);
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+      content: '';
+      background: var(--color-blue);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 4px;
+      transform: translateY(100%);
+      transition: $transition;
+    }
   }
   &__card-category {
     padding: getRem(6px) getRem(20px);
@@ -71,6 +104,8 @@
       letter-spacing: 0;
       @include fsl(14px);
     }
+
+    transition: $transition;
   }
   &__card-text {
     margin-top: getRem(8px);

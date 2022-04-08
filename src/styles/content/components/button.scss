@@ -220,6 +220,7 @@
   &-animate {
     position: relative;
     overflow: hidden;
+    transition: $transition;
 
     &::before {
       content: '';
@@ -236,11 +237,13 @@
       display: block;
       transition: $transition;
     }
-    .button__svg path {
+    .button__icon path {
       transition: $transition;
     }
 
     &:hover {
+      border: 1px solid var(--color-blue);
+
       &::before {
         transform: none;
       }
@@ -248,12 +251,16 @@
         animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
         color: var(--color-white);
       }
-      .button__svg {
+      .button__icon svg {
         animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
 
         path {
           fill: var(--color-white);
         }
+      }
+
+      .header__button-icon svg, .header__button-text span {
+        animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
       }
     }
   }

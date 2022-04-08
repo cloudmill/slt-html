@@ -227,6 +227,9 @@
     background-color: var(--color-borders);
     border-radius: 50%;
 
+    position: relative;
+    overflow: hidden;
+
     &:not(:first-child) {
       margin-left: getRem(4px);
       @media (max-width: ($breakpoint - 1px)) {
@@ -236,8 +239,21 @@
 
     transition: $transition;
 
+    &::before {
+      content: '';
+      background: var(--color-blue);
+
+      @include btn-before;
+    }
+
     &:hover {
-      background-color: var(--color-blue);
+      &::before {
+        transform: none;
+      }
+
+      .footer__socials-svg {
+        animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+      }
 
       .footer__socials-svg path {
         fill: var(--color-white);
@@ -248,6 +264,15 @@
     path {
       transition: $transition;
     }
+  }
+  &__socials-container {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
   }
 
   &__contacts {

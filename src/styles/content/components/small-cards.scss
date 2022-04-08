@@ -67,13 +67,22 @@
     }
     .button-icon {
       border-color: var(--color-blue);
+
+      &::before {
+        background: var(--color-blue);
+      }
     }
 
     &:hover {
       .button-icon {
-        background: var(--color-blue);
+        &::before {
+          transform: none;
+        }
+        
       }
       .button-icon__svg {
+        animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+
         path {
           fill: var(--color-white);
         }
@@ -95,14 +104,23 @@
 
     .button-icon {
       border-color: var(--color-red);
+
+      &::before {
+        background: var(--color-red);
+      }
     }
 
     &:hover {
       .button-icon {
-        background: var(--color-red);
         border-color: var(--color-red);
+
+        &::before {
+          transform: none;
+        }
       }
       .button-icon__svg {
+        animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+
         path {
           fill: var(--color-white);
         }
@@ -124,14 +142,23 @@
 
     .button-icon {
       border-color: var(--color-green);
+
+      &::before {
+        background: var(--color-green);
+      }
     }
 
     &:hover {
       .button-icon {
-        background: var(--color-green);
         border-color: var(--color-green);
+
+        &::before {
+          transform: none;
+        }
       }
       .button-icon__svg {
+        animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+
         path {
           fill: var(--color-white);
         }

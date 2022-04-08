@@ -38,12 +38,12 @@ mixin header
                   .header__feedback-col
                     .header__feedback-buttons 
                       .header__feedback-item
-                        .button.button--sm
-                          span
+                        .button.button--sm.button-animate
+                          .button__text
                             span Обратный звонок
                       .header__feedback-item
-                        .button.button--sm.button--gray 
-                          span
+                        .button.button--sm.button--gray.button-animate
+                          .button__text
                             span Написать нам
                           .button__icon 
                             +arrow-svg
@@ -55,7 +55,7 @@ mixin header
                 .header__logo
                   a.header__logo-link(href="#") 
                     +logo-svg.header__logo-svg
-                .header__button 
+                .header__button.button-animate
                   .header__button-icon 
                     +header-catalog-svg.header__button-svg
                   .header__button-text
