@@ -18,6 +18,16 @@
         #{$comp}__img {
           transform: scale(1.1);
         }
+
+        .button-icon {
+          .button-icon__svg {
+            animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+          }
+
+          &::before {
+            transform: none;
+          }
+        }
       }
     }
   }

@@ -3,6 +3,7 @@ extends ../layouts/master
 include ../components/breadcrumbs
 include ../components/accordion
 include ../components/nav
+include ../components/select
 
 block content
   .where-buy
@@ -18,10 +19,14 @@ block content
 
           +nav(items = ['Списком', 'На карте'] active = 0)
 
-          select.where-buy__select(name="city")
-            option(value="") Город
-            option(value="") Город2
-            option(value="") Город3
+          //- select.where-buy__select(name="city")
+          //-   option(value="") Город
+          //-   option(value="") Город2
+          //-   option(value="") Город3
+
+          .section__selects
+            .section__select 
+              +select(options = ['qwe', 'zxc', 'asd'])
 
         -
           const filters = [

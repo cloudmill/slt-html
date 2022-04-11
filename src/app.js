@@ -20,3 +20,4 @@ import "./scripts/search-tabs";
 import "./scripts/where-buy-filter";
 import "./scripts/forms";
 import "./scripts/form-response";
+import "./scripts/catalog-table";

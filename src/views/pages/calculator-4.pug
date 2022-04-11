@@ -43,7 +43,7 @@ block content
                     .calculator-page__caption 
                       |Тип трубы
                     .calculator-page__features-inner 
-                      ul.calculator-page__features-list 
+                      ul.calculator-page__features-list#radio-group
                         each item in ['SLT AQUA PP-R', 'SLT AQUA PP-R-GF', 'SLT AQUA PP-R-AL']
                           li.calculator-page__features-item 
                             +radio-button(name = 'type' text = item)
@@ -51,7 +51,7 @@ block content
                     .calculator-page__caption 
                       |Внешний диаметр трубы D, мм
                     .calculator-page__features-inner 
-                      .calculator-page__features-row
+                      .calculator-page__features-row#radio-group
                         ul.calculator-page__features-buttons 
                           each item in ['40', '50',]
                             li.calculator-page__features-button 
@@ -60,19 +60,19 @@ block content
                     .calculator-page__caption 
                       |Длина участка компенсиции, м 
                     .calculator-page__features-inner 
-                      +input(type = 'number' placeholder = '0')
+                      +input#input(type = 'number' placeholder = '0')
                 .section__block
                   .calculator-page__features
                     .calculator-page__features-col
                       .calculator-page__caption 
                         |Общая длина трубы, м
                       .calculator-page__features-inner 
-                        +input(type = 'number' placeholder = '0')
+                        +input#input(type = 'number' placeholder = '0')
                     .calculator-page__features-col
                       .calculator-page__caption 
                         |Температура монтажа, °C
                       .calculator-page__features-inner 
-                        +input(type = 'number' placeholder = '0')
+                        +input#input(type = 'number' placeholder = '0')
                     .calculator-page__features-col
                 .section__block 
                   .calculator-page__block

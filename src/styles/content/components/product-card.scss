@@ -9,6 +9,10 @@
 
   transition: $transition;
 
+  .button-icon::before {
+    background: var(--color-black);
+  }
+
   &:hover {
     @media (min-width: $breakpoint) {
       padding: 20px;
@@ -28,11 +32,16 @@
       }
   
       .button-icon {
-        background: var(--color-black);
         border-color: var(--color-black);
+
+        &::before {
+          transform: none;
+        }
       }
   
       .button-icon__svg {
+        animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+
         path {
           fill: var(--color-white);
         }
@@ -43,10 +52,13 @@
   &--blue {
     .button-icon {
       border-color: var(--color-blue);
+
+      &::before {
+        background: var(--color-blue);
+      }
     }
     &:hover {
       .button-icon {
-        background: var(--color-blue);
         border-color: var(--color-blue);
       }
 
@@ -60,10 +72,13 @@
   &--red {
     .button-icon {
       border-color: var(--color-red);
+
+      &::before {
+        background: var(--color-red);
+      }
     }
     &:hover {
       .button-icon {
-        background: var(--color-red);
         border-color: var(--color-red);
       }
 
@@ -77,10 +92,13 @@
   &--green {
     .button-icon {
       border-color: var(--color-green);
+
+      &::before {
+        background: var(--color-green);
+      }
     }
     &:hover {
       .button-icon {
-        background: var(--color-green);
         border-color: var(--color-green);
       }
 
