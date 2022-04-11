@@ -21,14 +21,23 @@
 								<div class="header__row">
 									<div class="header__col">
 										<ul class="header__links">
-											<li class="header__links-item">
-												<div class="header__links-button">
+											<li class="header__links-item" data-header-menu="">
+												<div class="header__links-button" data-header-button="">
 													<div class="header__text">Сервисы расчета</div>
 													<div class="header__links-icon"><svg class="header__links-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
 														</svg></div>
 												</div>
-												<div class="header__links-dropdown"></div>
+												<div class="header__dropdown-overlay" data-header-overlay=""></div>
+												<div class="header__dropdown" data-header-dropdown="">
+													<div class="header__dropdown-container">
+														<ul class="header__dropdown-list">
+															<li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Расчет компенсаторов для систем SLT AQUA</a></li>
+															<li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Расчет компенсаторов для систем BLOCKFIRE</a></li>
+															<li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Расчета удельных гидравлических потерь трубопроводов SLT AQUA</a></li>
+														</ul>
+													</div>
+												</div>
 											</li>
 											<li class="header__links-item"><a class="header__links-link" href="#">События</a></li>
 											<li class="header__links-item"><a class="header__links-link" href="#">Контакты</a></li>
@@ -151,7 +160,7 @@
 											</svg></a></div>
 								</div>
 								<div class="header__col">
-									<div class="header__buttons"><a class="header__buttons-item" href="#"><svg class="header__search" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<div class="header__buttons"><a class="header__buttons-item" href="#" data-fancy-button="search"><svg class="header__search" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path fill-rule="evenodd" clip-rule="evenodd" d="M5 11.1455C4.99956 8.21437 7.06975 5.69108 9.94452 5.11883C12.8193 4.54659 15.698 6.08477 16.82 8.79267C17.9421 11.5006 16.995 14.624 14.558 16.2528C12.121 17.8815 8.87287 17.562 6.8 15.4895C5.64763 14.3376 5.00014 12.775 5 11.1455Z" stroke="#3F3F40" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
 												<path d="M16.0196 14.9599L15.4893 14.4296L14.4286 15.4902L14.9589 16.0206L16.0196 14.9599ZM18.4699 19.5316L19.0003 20.0619L20.0609 19.0012L19.5306 18.4709L18.4699 19.5316ZM14.9589 16.0206L18.4699 19.5316L19.5306 18.4709L16.0196 14.9599L14.9589 16.0206Z" fill="#3F3F40"></path>
 											</svg></a><a class="header__buttons-item header__cart" href="#"><svg class="header__cart-svg" width="22" height="21" viewbox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -172,6 +181,68 @@
 				<div class="header__panel">
 					<div class="container">
 						<div class="header__panel-overlay"></div>
+						<div class="header__cards">
+							<div class="catalog-card aqua">
+								<div class="catalog-card__container">
+									<div class="catalog-card__title">SLT AQUA</div>
+									<div class="catalog-card__caption">Полипропиленовые трубопроводные системы<br />для водоснабжения и отопления</div>
+									<ul class="catalog-card__list">
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Трубы</a></li>
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Фитинги</a></li>
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Фитинги комбинированные</a></li>
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Компенсаторы</a></li>
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Крепления</a></li>
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Запорная арматура</a></li>
+									</ul>
+									<div class="catalog-card__images"><img class="catalog-card__img" src="assets/images/catalog-card-1.webp" alt="" /><img class="catalog-card__img" src="assets/images/catalog-card-2.webp" alt="" /><img class="catalog-card__img" src="assets/images/catalog-card-3.webp" alt="" /><img class="catalog-card__img" src="assets/images/catalog-card-4.webp" alt="" /><img class="catalog-card__img" src="assets/images/catalog-card-5.webp" alt="" /><img class="catalog-card__img" src="assets/images/catalog-card-6.webp" alt="" /></div>
+								</div>
+							</div>
+							<div class="catalog-card blockfire">
+								<div class="catalog-card__container">
+									<div class="catalog-card__title">SLT AQUA</div>
+									<div class="catalog-card__caption">Полипропиленовые трубопроводные системы<br />для водоснабжения и отопления</div>
+									<ul class="catalog-card__list">
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Трубы</a></li>
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Фитинги</a></li>
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Фитинги комбинированные</a></li>
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Компенсаторы</a></li>
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Крепления</a></li>
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Запорная арматура</a></li>
+									</ul>
+									<div class="catalog-card__images"><img class="catalog-card__img" src="assets/images/catalog-card-1.webp" alt="" /><img class="catalog-card__img" src="assets/images/catalog-card-2.webp" alt="" /><img class="catalog-card__img" src="assets/images/catalog-card-3.webp" alt="" /><img class="catalog-card__img" src="assets/images/catalog-card-4.webp" alt="" /><img class="catalog-card__img" src="assets/images/catalog-card-5.webp" alt="" /><img class="catalog-card__img" src="assets/images/catalog-card-6.webp" alt="" /></div>
+								</div>
+							</div>
+							<div class="catalog-card pert">
+								<div class="catalog-card__container">
+									<div class="catalog-card__title">SLT AQUA</div>
+									<div class="catalog-card__caption">Полипропиленовые трубопроводные системы<br />для водоснабжения и отопления</div>
+									<ul class="catalog-card__list">
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Трубы</a></li>
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Фитинги</a></li>
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Фитинги комбинированные</a></li>
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Компенсаторы</a></li>
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Крепления</a></li>
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Запорная арматура</a></li>
+									</ul>
+									<div class="catalog-card__images"><img class="catalog-card__img" src="assets/images/catalog-card-1.webp" alt="" /><img class="catalog-card__img" src="assets/images/catalog-card-2.webp" alt="" /><img class="catalog-card__img" src="assets/images/catalog-card-3.webp" alt="" /><img class="catalog-card__img" src="assets/images/catalog-card-4.webp" alt="" /><img class="catalog-card__img" src="assets/images/catalog-card-5.webp" alt="" /><img class="catalog-card__img" src="assets/images/catalog-card-6.webp" alt="" /></div>
+								</div>
+							</div>
+							<div class="catalog-card">
+								<div class="catalog-card__container">
+									<div class="catalog-card__title">SLT AQUA</div>
+									<div class="catalog-card__caption">Полипропиленовые трубопроводные системы<br />для водоснабжения и отопления</div>
+									<ul class="catalog-card__list">
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Трубы</a></li>
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Фитинги</a></li>
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Фитинги комбинированные</a></li>
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Компенсаторы</a></li>
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Крепления</a></li>
+										<li class="catalog-card__item"><a class="catalog-card__link" href="#">Запорная арматура</a></li>
+									</ul>
+									<div class="catalog-card__images"><img class="catalog-card__img" src="assets/images/catalog-card-1.webp" alt="" /><img class="catalog-card__img" src="assets/images/catalog-card-2.webp" alt="" /><img class="catalog-card__img" src="assets/images/catalog-card-3.webp" alt="" /><img class="catalog-card__img" src="assets/images/catalog-card-4.webp" alt="" /><img class="catalog-card__img" src="assets/images/catalog-card-5.webp" alt="" /><img class="catalog-card__img" src="assets/images/catalog-card-6.webp" alt="" /></div>
+								</div>
+							</div>
+						</div>
 						<div class="header__panel-spoiler" data-header-modal="0">
 							<div class="header__panel-inner">
 								<ul class="header__panel-list">
@@ -863,9 +934,8 @@
 				<div class="modal vacancies-modal" data-fancy-modal="work1">
 					<div class="modal__container">
 						<h4 class="vacancies-modal__title">Отклик на вакансию<br />SMM-менеджер</h4>
-						<form class="form" action="/" data-parsley-validate="data-parsley-validate">
+						<form class="form" action="/" data-parsley-validate="data-parsley-validate" data-form="2">
 							<div class="form__item"><input class="form__input" id="input" placeholder="Имя*" required="required" /></div>
-							<div class="form__item"><input class="form__input" id="input" type="tel" placeholder="Телефон*" data-tel-input="data-tel-input" required="required" /></div>
 							<div class="form__item"><input class="form__input" id="input" type="email" placeholder="E-mail*" required="required" /></div>
 							<div class="form__item"><input class="form__input" id="input" type="tel" placeholder="Телефон*" data-tel-input="data-tel-input" required="required" /></div>
 							<div class="form__item"><textarea class="form__textarea" name="area" id="input" placeholder="Текст сопроводительного письма"></textarea></div>
@@ -892,6 +962,19 @@
 										</svg></div>
 								</button></div>
 						</form>
+					</div>
+				</div>
+				<div class="response" data-fancy-modal="response" data-response="2">
+					<div class="response__container">
+						<div class="response__icon"><svg class="response__svg" width="97" height="97" viewbox="0 0 97 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="48.5" cy="48.5" r="47.75" fill="white" stroke="#07A8D7" stroke-width="1.5"></circle>
+								<path d="M28.2402 45.8784L43.1239 60.1646L69.9871 34.3798" stroke="#07A8D7" stroke-width="1.5"></path>
+							</svg></div>
+						<h5 class="response__title">Отправлено</h5>
+						<div class="response__text">Благодарим за проявленный интерес к нашей компании. В ближайшее время мы рассмотрим ваше резюме и ответим.</div>
+						<div class="response__button">
+							<div class="button" data-fancybox-close="">Закрыть</div>
+						</div>
 					</div>
 				</div>
 				<div class="call-modal" data-fancy-modal="call">
