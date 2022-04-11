@@ -644,9 +644,19 @@
   }
   &__panel-spoiler {
     display: none;
+
+    &.active {
+      #{$comp}__panel-item {
+        opacity: 1;
+      }
+    }
   }
-  &__panel-item {
+  &__panel-item { 
     display: flex;
+
+    transition: $transition;
+    transition-delay: 0.5s;
+    opacity: 0;
 
     &:not(:first-child) {
       margin-top: getRem(16px);

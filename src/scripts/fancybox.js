@@ -5,7 +5,6 @@ import '@fancyapps/fancybox';
   $(() => {
     $.fancybox.defaults.closeExisting = true;
     $.fancybox.defaults.touch = false;
-    $.fancybox.defaults.closeClick = false;
     $.fancybox.defaults.hideScrollbar = false;
     $.fancybox.defaults.baseTpl = (
       '<div class="fancybox-container" role="dialog" tabindex="-1">' +
@@ -14,22 +13,24 @@ import '@fancyapps/fancybox';
       '</div>'
     );
     $.fancybox.defaults.afterShow = function(instance, slide) {
+      $(slide.src).closest('.fancybox-slide--current').addClass('open')
       $(slide.src).addClass('active')
     }
     $.fancybox.defaults.beforeClose = function(instance, slide) {
       $(slide.src).removeClass('active')
     }
-    
-    // $.fancybox.defaults.afterClose = formReset;
 
     $('[data-fancy-button]').on('click', function (event) {
       event.preventDefault();
-
       const id = $(this).data('fancy-button');
       const modal = $(`[data-fancy-modal="${id}"]`);
 
       switch (id) {
         case 'work1':
+          $.fancybox.defaults.animationEffect = 'left'
+          $.fancybox.defaults.animationDuration = 500
+          break
+        case 'c1':
           $.fancybox.defaults.animationEffect = 'left'
           $.fancybox.defaults.animationDuration = 500
           break

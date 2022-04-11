@@ -65,8 +65,9 @@ import { mediaQuery } from './mediaQueries'
   
       const stateManager = {
         closeAll: () => {
-          modals.slideUp()
+          modals.removeClass('active')
           headerButton.removeClass('active')
+          modals.slideUp(500)
         },
         classRemove: () => {
           $('.body').removeClass('body--hidden')
@@ -80,10 +81,12 @@ import { mediaQuery } from './mediaQueries'
   
         if (button) {
           const id = button.getAttribute('data-accordion-header')
+          const headerModal = $(`[data-header-modal=${id}]`)
   
           if (button.classList.contains('active')) {
             button.classList.remove('active')
-            $(`[data-header-modal=${id}]`).slideUp()
+            headerModal.slideUp(500)
+            headerModal.removeClass('active')
             stateManager.classRemove()
           } else {
             stateManager.closeAll()
@@ -91,7 +94,8 @@ import { mediaQuery } from './mediaQueries'
             button.classList.add('active')
             $('.body').addClass('body--hidden')
             $('.header__panel').addClass('header__panel--active')
-            $(`[data-header-modal=${id}]`).slideDown()
+            headerModal.slideDown(500)
+            headerModal.addClass('active')
             $('.header__nav').addClass('header__nav--active')
           }
         }
