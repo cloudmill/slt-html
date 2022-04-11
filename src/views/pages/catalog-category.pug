@@ -9,13 +9,13 @@ block content
     section.section.section--first
       .container 
         +breadcrumbs(page = "Рекламная поддержка")
-        .spoiler(data-spoiler-color='aqua')
-          .spoiler__button
+        .spoiler(data-spoiler-color='aqua' data-accordion='')
+          .spoiler__button(data-accordion-button='')
             h1.spoiler__title
               |SLT AQUA
             .spoiler__icon 
               +arrow-svg.spoiler__svg
-          .spoiler__dropdown 
+          .spoiler__dropdown(data-accordion-dropdown='')
             ul.spoiler__list
               -
                 var items = [
@@ -26,7 +26,8 @@ block content
                 ] 
               each item in items
                 li.spoiler__item(class=item.class data-spoiler-item=item.class)
-                  |#{item.text}
+                  a.spoiler__link(href="#") 
+                    |#{item.text}
         .section__block 
           .filters 
             ul.filters__headings 
@@ -44,7 +45,8 @@ block content
                 ul.filters__list
                   each item in ['Муфты', 'Отоводы', 'Тройники', 'Крестовины', 'Обвод', 'Бурт', 'Фланец', 'Загрушка']
                     li.filters__item
-                      |#{item}
+                      a.filters__link(href="#") 
+                        |#{item}
         .section__block 
           .button.button--wide(data-fancy-button='c1')
             .button__text

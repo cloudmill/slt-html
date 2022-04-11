@@ -16,13 +16,20 @@ mixin header
             .header__row
               .header__col
                 ul.header__links 
-                  li.header__links-item 
-                    .header__links-button 
+                  li.header__links-item(data-header-menu='')
+                    .header__links-button(data-header-button='') 
                       .header__text 
                         |Сервисы расчета
                       .header__links-icon 
                         +arrow-svg.header__links-svg
-                    .header__links-dropdown
+                    .header__dropdown-overlay(data-header-overlay='')
+                    .header__dropdown(data-header-dropdown='')
+                      .header__dropdown-container
+                        ul.header__dropdown-list
+                          each item in ['Расчет компенсаторов для систем SLT AQUA', 'Расчет компенсаторов для систем BLOCKFIRE', 'Расчета удельных гидравлических потерь трубопроводов  SLT AQUA', ]
+                            li.header__dropdown-item 
+                              a.header__dropdown-link(href="#") 
+                                |#{item}
                   each item in ['События', 'Контакты'] 
                     li.header__links-item 
                       a.header__links-link(href="#") 
@@ -109,6 +116,22 @@ mixin header
     .header__panel
       .container 
         .header__panel-overlay
+        .header__cards
+          each item in ['aqua', 'blockfire', 'pert', '']
+            .catalog-card(class=item)
+              .catalog-card__container 
+                .catalog-card__title 
+                  |SLT AQUA
+                .catalog-card__caption 
+                  |Полипропиленовые трубопроводные системы #[br] для водоснабжения и отопления
+                ul.catalog-card__list
+                  each item in ['Трубы', 'Фитинги', 'Фитинги комбинированные', 'Компенсаторы', 'Крепления', 'Запорная арматура', ]
+                    li.catalog-card__item 
+                      a.catalog-card__link(href="#") 
+                        |#{item}
+                .catalog-card__images 
+                  - for (j = 1; j < 7; j++)
+                    img.catalog-card__img(src=`assets/images/catalog-card-${j}.webp`, alt="")
         .header__panel-spoiler(data-header-modal='0')
           .header__panel-inner 
             ul.header__panel-list

@@ -22,6 +22,13 @@
   &.active {
     #{$comp}__svg {
       transform: rotate(180deg);
+      path {
+        fill: var(--color-black);
+      }
+    }
+
+    #{$comp}__title {
+      color: var(--color-black);
     }
   }
 
@@ -45,18 +52,6 @@
     cursor: pointer;
 
     transition: $transition;
-
-    &:hover {
-
-      .spoiler__title {
-        color: var(--color-black);
-      }
-
-      .spoiler__icon path {
-        fill: var(--color-black);
-      }
-      
-    }
   }
 
   &__title {
@@ -127,7 +122,9 @@
     }
 
     &:hover {
-      color: var(--hoverColor);
+      #{$comp}__link {
+        color: var(--hoverColor);
+      }
     }
 
     &.aqua {
@@ -142,5 +139,10 @@
     &.tool {
       --hoverColor: var(--color-gray);
     }
+  }
+
+  &__link {
+    color: inherit;
+    transition: $transition;
   }
 }

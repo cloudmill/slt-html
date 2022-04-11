@@ -108,3 +108,27 @@ import { mediaQuery } from './mediaQueries'
     }
   })
 }
+
+// header сервисы расчета
+{
+  document.addEventListener('DOMContentLoaded', () => {
+    const menu = document.querySelector('[data-header-menu]')
+    const button = menu.querySelector('[data-header-button]')
+    const dropdown = menu.querySelector('[data-header-dropdown]')
+
+    window.addEventListener('click', event => {
+      const target = event.target
+
+      if (target.closest('[data-header-button]')) {
+        menu.classList.toggle('active')
+      }
+
+      if (target.closest('[data-header-overlay]')) {
+        menu.classList.remove('active')
+      }
+    })
+    button.onclick = function() {
+      
+    }
+  })
+}
