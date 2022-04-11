@@ -3,7 +3,7 @@ include ./form-components
 mixin select
   .select-wrapper 
     .select
-      select.select__mobile(name='cat-mob' data-select-mobile='' multiple='multiple') 
+      select.select__mobile(name='cat-mob' data-select-mobile='') 
         option(value="" selected disabled)
           |Выбрать
         each item in attributes.options

@@ -29,6 +29,7 @@
 
     @include placeholder {
       color: var(--color-gray);
+      font-weight: 500;
     }
 
     transition: $transition;

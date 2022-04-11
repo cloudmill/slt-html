@@ -1,10 +1,25 @@
 extends ../layouts/master
 
 include ../components/breadcrumbs
-include ../components/modals
+include ../components/form-components
 
 
 block content
+  -
+    var ddata = [
+      {
+        title: 'Местоположение',
+        items: ['Санкт-Петербург', 'Москва', 'Нижний Новгород', 'Химки', 'Краснодар'],
+      },
+      {
+        title: 'Категория продукции',
+        items: ['Санкт-Петербург', 'Москва', 'Нижний Новгород', 'Химки', 'Краснодар'],
+      },
+      {
+        title: 'Тип объекта',
+        items: ['Санкт-Петербург', 'Москва', 'Нижний Новгород', 'Химки', 'Краснодар'],
+      },
+    ]
   .objects-page 
     section.section.section--first
       .container 
@@ -14,34 +29,26 @@ block content
             |Объекты
     section.section
       .container
-
-        .objects-page__top.only-mobile(data-menu-button='')
-          span Фильтр
-          span +
-
-        .objects-page__top.only-desktop
-   
-          .objects-page__top-col
-
-            select.objects-page__top-select(name="city")
-              option(value="") Местоположение
-              option(value="") Местоположение2
-              option(value="") Местоположение3
-
-            select.objects-page__top-select(name="city")
-              option(value="") Категория продукции
-              option(value="") Категория продукции2
-              option(value="") Категория продукции3
-
-            select.objects-page__top-select(name="city")
-              option(value="") Тип объекта
-              option(value="") Тип объекта2
-              option(value="") Тип объекта3
-
-          .objects-page__top-col
-            +refresh-button
-              |Сбросить
-
+        .objects-page__top
+          .objects-page__top-button(data-menu-button='')
+            .objects-page__top-text 
+              |Фильтр
+            .objects-page__top-icon 
+              +plus-svg.objects-page__top-svg
+          .objects-page__top-grid
+            each item in ddata
+              .objects-page__top-item
+                .select-custom(data-accordion='')
+                  .select-custom__button(data-accordion-button='')
+                    .select-custom__text 
+                      |#{item.title}
+                    .select-custom__icon 
+                      +arrow-svg.select-custom__svg
+                  .select-custom__dropdown(data-accordion-dropdown='')
+                    ul.select-custom__list 
+                      each box in item.items
+                        li.select-custom__item 
+                          +checkbox(text = box)
         .category-list(data-list-container='')
           .category-list__row 
             .category-list__col

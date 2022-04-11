@@ -25,7 +25,6 @@
 
     &.select2-container--open {
       .select2-selection {
-        // border-bottom: 0;
         border-color: var(--color-blue);
 
         &__arrow {
@@ -38,7 +37,7 @@
       padding: getRem(16px);
 
       @media (min-width: $breakpoint) {
-        padding: getRem(14px) getRem(24px);
+        padding: getRem(20px) getRem(24px);
       }
 
       height: auto;
@@ -48,6 +47,7 @@
 
       border: 1px solid var(--color-borders);
       transition: $transition;
+      border-radius: 0;
 
       &:hover {
         border-color: var(--color-blue);
@@ -113,7 +113,6 @@
 .select-wrapper {
 
   .select2-container {
-    margin-top: 4px;
 
     @media (max-width: ($breakpoint - 1px)) {
       pointer-events: none;
@@ -122,6 +121,7 @@
 
   .select2-dropdown {
     padding: getRem(20px);
+    margin-top: 4px;
 
     border: 1px solid var(--color-borders);
     box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.08);
@@ -130,15 +130,18 @@
   .select2-container--default .select2-results>.select2-results__options {
     max-height: 100%;
     @include scrollbar-hidden;
-    // border-top: 1px solid $color-light-gray;
-    border-radius: 0 0 4px 4px;
   }
 
   .select2-results__option {
     // padding: 6px 19px;
 
+    font-weight: 500;
     @include fsl(16px, 130%);
     transition: $transition;
+
+    &--selected {
+      background-color: var(--color-white);
+    }
 
     &--highlighted[aria-selected] {
       color: var(--color-black);

@@ -3,6 +3,7 @@ extends ../layouts/master
 include ../components/breadcrumbs
 include ../components/nav
 include ../components/form-components
+include ../components/select
 
 block content
   -
@@ -12,6 +13,13 @@ block content
         {caption: 'SLT Aqua PP-R GF армированные стекловолокном', text: 'SDR 7,4, SDR 6'},
         {caption: 'SLT Aqua PP-R AL армированные алюминием', text: 'SDR 6'},
       ],
+      form: [
+        {text: 'Расход, л/с', isSelect: false},
+        {text: 'Температура, °C', isSelect: false},
+        {text: 'Приемлемый диаметр и SDR труб', isSelect: true},
+        {text: 'Длина трубопровода, м', isSelect: false},
+        {text: 'Процент, учитывающий местные потери', isSelect: true},
+      ]
     }
   .calculator-page
     section.section.section--first
@@ -34,12 +42,15 @@ block content
         form.calculator-page__calculate.form(action="/")
           .calculator-page__calculate-col
             .calculator-page__calculate-grid
-              each item in ['Расход, л/с', 'Температура, °C', 'Приемлемый диаметр и SDR труб', 'Длина трубопровода, м', 'Процент, учитывающий местные потери']
+              each item in ddata.form
                 .calculator-page__calculate-item 
                   .calculator-page__caption 
-                    |#{item}
+                    |#{item.text}
                   .calculator-page__features-inner 
-                    +input#input(type = 'number' placeholder = '0') 
+                    if (item.isSelect)
+                      +select(options = ['D63 SDR 7,4', 'D64 SDR 7,4', 'D65 SDR 7,4', 'D66 SDR 7,4',])
+                    else
+                      +input#input(type = 'number' placeholder = '0') 
               .calculator-page__calculate-label 
                 |* Согласно СП 40-102-2000 «Примечание - Допускается  сумму местных потерь h м.с. принимать равной 20-30% суммы удельных потерь i»
             .section__block

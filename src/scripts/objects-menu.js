@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (target.closest('[data-menu-close]')) {
         menu.closeMenu()
+        menu.isOpen = false
       }
 
       if (target.closest('[data-menu-clear]')) {

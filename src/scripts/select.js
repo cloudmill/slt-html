@@ -16,12 +16,9 @@ import {mediaQuery} from './mediaQueries'
 
       select.select2({
         dropdownParent: selectWrapper,
-        // selectOnClose: true,
-        closeOnSelect : false,
-        allowHtml: true,
+        selectOnClose: true,
         minimumResultsForSearch: Infinity,
         placeholder: selectPlaceholder,
-        // tags: true
       });
 
       select.on('select2:open', () => {
@@ -78,17 +75,17 @@ import {mediaQuery} from './mediaQueries'
     const select = $('.select')
     if (select.length && !mediaQuery.matches) {
       
-      const selectMobile = select.find('.select__mobile')
+      // const selectMobile = select.find('.select__mobile')
 
-      if (selectMobile.is('[data-select-mobile]')) {
+      // if (selectMobile.is('[data-select-mobile]')) {
 
-        selectMobile.one('change', function() {
-          const parent = $(this).closest('[data-select-parent]')
-          const controlled = parent.find('[data-select-controlled]')
+      //   selectMobile.one('change', function() {
+      //     const parent = $(this).closest('[data-select-parent]')
+      //     const controlled = parent.find('[data-select-controlled]')
 
-          controlled.removeClass('disabled')
-        })
-      }
+      //     controlled.removeClass('disabled')
+      //   })
+      // }
 
       select.each(function() {
         const selectMobile = $(this).find('.select__mobile')
