@@ -587,6 +587,229 @@
   }
 }
 
+.map-modal {
+  $comp: &;
+  position: absolute;
+  left: 0;
+  top: 0;
+  @media (max-width: ($breakpoint - 1px)) {
+    right: 20px;
+  }
+
+  display: none;
+
+  width: getRem(647px);
+  height: 100%;
+  @media (max-width: ($breakpoint - 1px)) {
+    width: auto;
+  }
+
+  background: var(--color-white);
+
+  &.active {
+    #{$comp}__inner {
+      opacity: 1;
+    }
+  }
+
+  &__inner {
+    padding: getRem(60px) 0;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(20px) 0;
+    }
+
+    height: 100%;
+
+    overflow-y: scroll;
+    @include scrollbar-hidden;
+    opacity: 0;
+    transition: $transition;
+  }
+
+  &__top {
+    padding-bottom: getRem(60px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-bottom: getRem(16px);
+    }
+  }
+
+  &__container {
+    padding: 0 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 0 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: getRem(8px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 2px;
+    }
+  }
+
+  &__site {
+    font-weight: 500;
+    color: var(--color-blue);
+    letter-spacing: -0.5px;
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(12px, 110%);
+    }
+  }
+
+  &__offset {
+    margin-top: getRem(24px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(16px);
+    }
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: getRem(8px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__svg {
+    width: getRem(19px);
+    height: getRem(19px);
+  }
+
+  &__caption {
+    letter-spacing: -0.5px;
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(12px);
+    }
+  }
+
+  &__row {
+    margin-top: getRem(60px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(16px);
+    }
+
+    display: flex;
+  }
+  &__row-item {
+
+    &:not(:first-child) {
+      margin-top: getRem(32px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(16px);
+      }
+    }
+  }
+  
+  &__col {
+    &:nth-child(1) {
+      flex-shrink: 0;
+      width: calc(#{$col-part-d} * 2 - #{$col-gap});
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+      }
+    }
+    &:nth-child(2) {
+      margin-left: getRem(40px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 0;
+        margin-top: getRem(16px);
+      }
+    }
+  }
+
+  &__label {
+    margin-bottom: getRem(8px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 4px;
+    }
+
+    font-weight: 500;
+    color: var(--color-gray);
+    letter-spacing: -0.5px;
+    @include fsl(14px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(12px);
+    }
+  }
+
+  &__item {
+    
+    &:not(:first-child) {
+      margin-top: getRem(4px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(14px);
+    }
+  }
+
+  &__bot {
+    padding-top: getRem(60px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-top: getRem(16px);
+    }
+
+    border-top: 1px solid var(--color-borders);
+  }
+
+  &__heading {
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @include fsl(20px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(14px);
+    }
+  }
+
+  &__slider {}
+  &__slider-slide {
+    display: block;
+  }
+  &__slider-img {
+    display: flex;
+    align-items: center;
+  }
+  &__slider-title {
+    margin-top: getRem(8px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 4px;
+    }
+
+    font-weight: 500;
+    letter-spacing: -1px;
+    @include fsl(14px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(12px);
+    }
+  }
+
+  &__controls {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
+}
+
 /* Custom animation slide-in-out */
 .fancybox-fx-left.fancybox-slide--previous {
   

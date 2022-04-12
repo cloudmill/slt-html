@@ -32,7 +32,6 @@ if ($('.where-buy').length) {
       })
 
       // добавление точек
-      // const placemarks = new ymaps.GeoObjectCollection();
       const placemarks = [];
 
       $(".placemarks__item").each(function () {
@@ -40,6 +39,7 @@ if ($('.where-buy').length) {
         const balloon = $(this).find(".placemarks__balloon").text().trim();
         const latitude = $(this).find(".placemarks__latitude").text().trim();
         const longitude = $(this).find(".placemarks__longitude").text().trim();
+        const id = $(this).data('modal-id')
 
         // placemark
         const coordinates = [latitude, longitude];
@@ -59,14 +59,17 @@ if ($('.where-buy').length) {
             hideIconOnBalloonOpen: false,
           }
         );
-        // placemarks.add(placemark);
+        placemark.events.add(['click'], () => {
+          $.fancybox.defaults.animationEffect = 'left'
+          $.fancybox.defaults.animationDuration = 500
+          $.fancybox.open($(`[data-map-modal=${id}]`))
+        })
         placemarks.push(placemark);
       });
 
       // добавление на карту
       clusterer.add(placemarks)
       map.geoObjects.add(clusterer)
-      // map.geoObjects.add(placemarks);
 
       // позиционирование на точках
       map

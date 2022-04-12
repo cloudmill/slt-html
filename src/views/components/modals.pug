@@ -1,4 +1,5 @@
 include ./form-components
+include ./slider-buttons
 
 mixin vacancies-modal
   -
@@ -216,3 +217,131 @@ mixin search-modal
                 |Поиск
             .button__icon
               +btn-arrow-right.button__svg.arrow-blue
+
+mixin map-modal
+  -
+    var ddata = {
+      top: [
+        {
+          label: 'Адрес',
+          items: [
+            {isLink: false, text: 'пр.Ветеранов 109 к4, ТЦ Стройдвор цокольный этаж'},
+          ]
+        },
+        {
+          label: 'Телефон',
+          items: [
+            {isLink: true, text: '+7 (812) 244-01-44 (доб. 510)', href: 'tel:+78122440144'},
+            {isLink: true, text: '+7 (812) 244-01-44 (доб. 510)', href: 'tel:+78122440144'},
+            {isLink: true, text: '+7 (812) 244-01-44 (доб. 510)', href: 'tel:+78122440144'},
+          ]
+        },
+        {
+          label: 'E-mail',
+          items: [
+            {isLink: true, text: 'mag@teksneva.ru', href: 'mailto:mag@teksneva.ru'},
+          ]
+        },
+        {
+          label: 'Время работы',
+          items: [
+            {isLink: false, text: 'ПН – ПТ, 10 - 20',},
+            {isLink: false, text: 'СБ – ВС, 11 - 19',},
+          ]
+        },
+      ],
+      bot: [
+        {
+          text: 'ЖК Апарт-отель YE’S',
+          src: 'accordion-1.webp'
+        },
+        {
+          text: 'ЖК Среда',
+          src: 'accordion-2.webp'
+        },
+        {
+          text: 'ЖК Три Кита',
+          src: 'accordion-3.webp'
+        },
+        {
+          text: 'Ресторан Макдональдс',
+          src: 'accordion-4.webp'
+        },
+        {
+          text: 'НИИ Радиосвязь',
+          src: 'accordion-5.webp'
+        },
+      ]
+    }
+  .map-modal(data-fancy-modal="map" data-map-modal=attributes.id)
+    .map-modal__inner
+      .map-modal__top
+        .map-modal__container 
+          h5.map-modal__title 
+            |ООО «Текс-Нева»
+          a.map-modal__site(href="#")
+            |teksneva.ru
+          .map-modal__offset
+            .map-modal__location
+              .map-modal__icon 
+                +geo-svg.map-modal__svg 
+              .map-modal__caption
+                |Санкт-Петербург
+          .map-modal__breadcrumbs 
+            .breadcrumbs.breadcrumbs--small 
+              ul.breadcrumbs__list 
+                each item in ['Интернет-магазин', 'В продаже SLT BLOCKFIRE', 'Самовывоз со склада', 'Услуги монтажа']
+                  li.breadcrumbs__item 
+                    .breadcrumbs__link
+                      |#{item}
+          .map-modal__row
+            .map-modal__col 
+              .map-modal__row-item
+                .map-modal__label 
+                  |Адрес
+                ul.map-modal__list 
+                  li.map-modal__item 
+                    .map-modal__text
+                      |пр.Ветеранов 109 к4, ТЦ Стройдвор цокольный этаж
+              .map-modal__row-item
+                .map-modal__label 
+                  |Телефон
+                ul.map-modal__list 
+                  - for (i = 0; i < 3; i++)
+                    li.map-modal__item 
+                      a.map-modal__text(href="tel:+78122440144") 
+                        |+7 (812) 244-01-44 (доб. 510)
+            .map-modal__col 
+              .map-modal__row-item
+                .map-modal__label 
+                  |E-mail
+                ul.map-modal__list 
+                  li.map-modal__item 
+                    a.map-modal__text(href="mailto:mag@teksneva.ru") 
+                        |mag@teksneva.ru
+              .map-modal__row-item
+                .map-modal__label 
+                  |Время работы
+                ul.map-modal__list 
+                  li.map-modal__item 
+                    .map-modal__text
+                      |ПН – ПТ, 10 - 20
+                  li.map-modal__item 
+                    .map-modal__text
+                      |СБ – ВС, 11 - 19
+      .map-modal__bot 
+        .map-modal__container
+          .map-modal__heading
+            |Реализованные объекты
+          .map-modal__slider.map-modal__offset
+            .swiper-container.swiper-container--visible.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='1' data-slider-prev='11' data-slider-next='12')
+                .swiper-wrapper 
+                  each item in ddata.bot
+                    .swiper-slide 
+                      a.map-modal__slider-slide(href="#")
+                        .map-modal__slider-img 
+                          img(src=`assets/images/${item.src}`, alt="")
+                        .map-modal__slider-title 
+                          |#{item.text}
+          .map-modal__controls.map-modal__offset 
+            +slider-buttons.slider-buttons--default(prev = '11' next = '12')
