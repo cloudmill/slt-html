@@ -53,6 +53,13 @@
         }
       }
     }
+
+    #{$comp}__container {
+      padding: getRem(40px) getRem(24px);
+      @media (max-width: ($breakpoint - 1px)) {
+        padding: 0 getRem(20px) getRem(16px);
+      }
+    }
   }
 
   &--simple {
@@ -277,6 +284,122 @@
     margin-top: getRem(40px);
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: getRem(20px);
+    }
+  }
+
+  &__top {}
+  &__top-row {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+  &__top-col {
+    flex-shrink: 0;
+
+    width: calc(#{$col-part-d} * 3);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: auto;
+    }
+
+    &:nth-child(1),
+    &:nth-child(4) {
+      width: calc(#{$col-part-d} * 3 - 1.5rem);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+      }
+    }
+
+    &:not(:first-child) {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(16px);
+      }
+    }
+  }
+  &__top-label {
+    margin-bottom: getRem(8px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 4px;
+    }
+
+    font-weight: 500;
+    color: var(--color-gray);
+    @include fsl(14px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
+  }
+  &__top-item {
+    display: flex;
+
+    &:not(:first-child) {
+      margin-top: 4px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 0pc;
+      }
+    }
+  }
+  &__top-text {
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(14px);
+    }
+  }
+
+  &__bot {
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-top: getRem(16px);
+    }
+
+    border-top: 1px solid var(--color-borders);
+  }
+  &__bot-title {
+    margin-bottom: getRem(24px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(12px);
+    }
+
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @include fsl(20px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(14px);
+    }
+  }
+  &__bot-grid {
+    display: flex;
+    gap: $col-gap;
+    flex-wrap: wrap;
+    @media (max-width: ($breakpoint - 1px)) {
+      gap: 10px;
+      flex-wrap: nowrap;
+      overflow-y: scroll;
+      @include scrollbar-hidden;
+    }
+  }
+  &__bot-item {
+    @media (max-width: ($breakpoint - 1px)) {
+      flex-shrink: 0;
+    }
+  }
+  &__bot-img {
+    display: flex;
+    align-items: center;
+  }
+  &__bot-text {
+    margin-top: getRem(8px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 4px;
+    }
+
+    letter-spacing: -0.5px;
+    @include fsl(14px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(12px);
     }
   }
 }

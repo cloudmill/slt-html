@@ -44,6 +44,60 @@ mixin accordion
               |Откликнуться
 
 mixin accordion-big
+  -
+    var ddata = {
+      top: [
+        {
+          label: 'Адрес',
+          items: [
+            {isLink: false, text: 'пр.Ветеранов 109 к4, ТЦ Стройдвор цокольный этаж'},
+          ]
+        },
+        {
+          label: 'Телефон',
+          items: [
+            {isLink: true, text: '+7 (812) 244-01-44 (доб. 510)', href: 'tel:+78122440144'},
+            {isLink: true, text: '+7 (812) 244-01-44 (доб. 510)', href: 'tel:+78122440144'},
+            {isLink: true, text: '+7 (812) 244-01-44 (доб. 510)', href: 'tel:+78122440144'},
+          ]
+        },
+        {
+          label: 'E-mail',
+          items: [
+            {isLink: true, text: 'mag@teksneva.ru', href: 'mailto:mag@teksneva.ru'},
+          ]
+        },
+        {
+          label: 'Время работы',
+          items: [
+            {isLink: false, text: 'ПН – ПТ, 10 - 20',},
+            {isLink: false, text: 'СБ – ВС, 11 - 19',},
+          ]
+        },
+      ],
+      bot: [
+        {
+          text: 'ЖК Апарт-отель YE’S',
+          src: 'accordion-1.webp'
+        },
+        {
+          text: 'ЖК Среда',
+          src: 'accordion-2.webp'
+        },
+        {
+          text: 'ЖК Три Кита',
+          src: 'accordion-3.webp'
+        },
+        {
+          text: 'Ресторан Макдональдс',
+          src: 'accordion-4.webp'
+        },
+        {
+          text: 'НИИ Радиосвязь',
+          src: 'accordion-5.webp'
+        },
+      ]
+    }
   .accordion.accordion--big(data-accordion='')
     .accordion__head(data-accordion-button='')
       .accordion__row 
@@ -69,30 +123,33 @@ mixin accordion-big
           .accordion__icon 
             +arrow-svg.accordion__svg
     .accordion__body(data-accordion-dropdown='')
-      .accordion__container 
-        .accordion__block 
-          h6
-            |Что будет делать наш SMM-щик
-          ul.accordion__list
-            each item in ['Социальные сети компании: планирование, создание, наполнение, развитие, ведение, общение', 'CRM и рассылки', 'Взять на себя заботу о нашем сайте', 'Программа лояльности: ведение, развитие и совершенствование', 'Участие в организации выставок, семинаров, вебинаров и акций для клиентов компании', 'Разработка видео- и фотоматериалов самостоятельно и с помощью подрядчиков', 'Организовывать и контролировать представленность компании, ТМ-к в сети интернет, на интернет-площадках дистрибьюторов']
-              li.accordion__item 
-                .list-item
-                  |#{item}
-        .accordion__block 
-          h6
-            |Для реализации задач понадобится
-          ul.accordion__list
-            each item in ['Навыки писать интересные, нестандартные тексты грамотно', 'Понимать принципы работы социальных сетей', 'Разбираться в основах фирменного стиля, CRM, CMS, Google Analytics и Yandex.Metrika', 'Владеть необходимыми для работы программами и видео/фото-редакторами', 'Иметь опыт в проведении вебинаров или знать точный план организации процесса', 'Уметь работать «руками» и «головой»', ]
-              li.accordion__item 
-                .list-item
-                  |#{item}
-        .accordion__block 
-          h6
-            |Ждем тебя, наш СЛТшник!
-        .accordion__block 
-          .accordion__button 
-            +link-right.button--wide--mobile(data-fancy-button='work1')
-              |Откликнуться
+      .accordion__top
+        .accordion__container 
+          .accordion__top-row 
+            each item in ddata.top
+              .accordion__top-col 
+                .accordion__top-label 
+                  |#{item.label}
+                ul.accordion__top-list 
+                  each el in item.items
+                    li.accordion__top-item
+                      if (el.isLink)
+                        a.accordion__top-text(href=el.href) 
+                          |#{el.text}
+                      else 
+                        .accordion__top-text 
+                          |#{el.text}
+      .accordion__bot 
+        .accordion__container 
+          .accordion__bot-title 
+            |Реализованные объекты
+          .accordion__bot-grid 
+            each item in ddata.bot
+              a.accordion__bot-item(href="#") 
+                .accordion__bot-img 
+                  img(src=`assets/images/${item.src}`, alt="")
+                .accordion__bot-text 
+                  |#{item.text}
 
 mixin accordion-simple
   .accordion.accordion--simple(data-accordion='')

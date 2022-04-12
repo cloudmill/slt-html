@@ -43,7 +43,7 @@ block content
           .calculator-page__calculate-col
             .calculator-page__calculate-grid
               each item in ddata.form
-                .calculator-page__calculate-item 
+                .calculator-page__calculate-item
                   .calculator-page__caption 
                     |#{item.text}
                   .calculator-page__features-inner 
@@ -102,8 +102,8 @@ block content
                 .calculator-page__grid-item 
                   .calculator-page__grid-title
                     |D20
-                each item in ['73,7174', '96,1133', '118,4716', '6,24482', '12,13625', '20,52237', ]
-                  .calculator-page__grid-item 
+                each item, j in ['73,7174', '96,1133', '118,4716', '6,24482', '12,13625', '20,52237', ]
+                  .calculator-page__grid-item(class=(i === 8 && j === 2 ? 'active' : ''))
                     |#{item}
             .calculator-page__container
               .calculator-page__grid-mobile

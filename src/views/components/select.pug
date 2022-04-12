@@ -5,11 +5,11 @@ mixin select
     .select
       select.select__mobile(name='cat-mob' data-select-mobile='') 
         option(value="" selected disabled)
-          |Выбрать
+          |#{attributes.placeholder}
         each item in attributes.options
           option(value=item)
             |#{item} 
-      select.select__select(data-select-placeholder='Выбрать' style='width: 100%')
+      select.select__select(data-select-placeholder=attributes.placeholder style='width: 100%')
         option(value='' disabled selected)
         each item in attributes.options
           option(value=item)

@@ -5,6 +5,10 @@ include ../components/accordion
 include ../components/nav
 include ../components/select
 
+block variables 
+  -
+    var isDefault = true
+
 block content
   .where-buy
     section.section.section--first
@@ -19,14 +23,9 @@ block content
 
           +nav(items = ['Списком', 'На карте'] active = 1)
 
-          //- select.where-buy__select(name="city")
-          //-   option(value="") Город
-          //-   option(value="") Город2
-          //-   option(value="") Город3
-
           .section__selects
             .section__select 
-              +select(options = ['qwe', 'zxc', 'asd'])
+              +select(options = ['qwe', 'zxc', 'asd'] placeholder='Город')
 
         -
           const filters = [
@@ -59,4 +58,28 @@ block content
               |Очистить
 
         .where-buy__map-container
-          img.where-buy__map(src="assets/images/where-buy-map.jpeg", alt="")
+          #map
+          ul.placemarks
+            li.placemarks__item 
+              .placemarks__latitude 
+                |55.77275533608109
+              .placemarks__longitude
+                |37.50032040967168
+            li.placemarks__item 
+              .placemarks__latitude 
+                |55.75214937578482
+              .placemarks__longitude
+                |37.691191246541344
+            li.placemarks__item 
+              .placemarks__latitude 
+                |55.81749613982103
+              .placemarks__longitude
+                |37.605968474359685
+            li.placemarks__item 
+              .placemarks__latitude 
+                |55.673496969421386
+              .placemarks__longitude
+                |37.633290966668994
+
+block scripts
+  script(src="https://api-maps.yandex.ru/2.1/?apikey=9eaf2d45-34a5-4620-bac6-0482e9335845&lang=ru_RU" type="text/javascript")
