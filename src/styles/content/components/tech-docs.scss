@@ -37,9 +37,9 @@
     top: getRem(20px);
     bottom: getRem(20px);
     @media (max-width: ($breakpoint - 1px)) {
-      right: 0;
-      top: 0;
-      bottom: 0;
+      right: getRem(20px);
+      top: getRem(20px);
+      bottom: getRem(20px);
     }
 
     display: flex;
@@ -51,7 +51,7 @@
     width: getRem(192px);
     height: 100%;
     @media (max-width: ($breakpoint - 1px)) {
-      width: 197px;
+      width: getRem(123px);
     }
   }
 

@@ -368,6 +368,8 @@
       margin-bottom: getRem(8px);
     }
 
+    display: flex;
+
     font-weight: 500;
     color: var(--color-blue);
     @include fsl(140px, 90%);
@@ -375,12 +377,26 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(64px);
     }
+
+    #{$comp}__stats-span {
+      margin-top: 8px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 3px;
+      }
+
+      @include fsl(24px, 90%);
+      @media (max-width: ($breakpoint - 1px)) {
+        @include fsl(16px);
+      }
+    }
   }
   &__stats-span {
+    margin-left: 2px;
+    
     font-weight: 500;
-    @include fsl(24px, 90%);
+    @include fsl(22px, 90%);
     @media (max-width: ($breakpoint - 1px)) {
-      @include fsl(16px);
+      @include fsl(14px);
     }
   }
   &__stats-caption {
@@ -432,6 +448,8 @@
       margin-bottom: 4px;
     }
 
+    display: flex;
+
     color: var(--color-blue);
   }
 
@@ -468,6 +486,11 @@
     }
   }
   &__grid-text {
+    max-width: getRem(580px);
+    @media (max-width: ($breakpoint - 1px)) {
+      max-width: none;
+    }
+
     @include fsl(20px, 130%);
     letter-spacing: -0.5px;
     @media (max-width: ($breakpoint - 1px)) {

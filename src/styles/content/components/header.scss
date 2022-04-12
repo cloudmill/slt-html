@@ -92,7 +92,7 @@
     &:nth-child(2) {
       width: calc(#{$col-part-d} * 6 - #{$col-gap});
       @media (max-width: ($breakpoint - 1px)) {
-        width: calc(#{$col-part-m} * 2 - #{$col-gap});
+        width: auto;
       }
     }
   }
@@ -341,6 +341,9 @@
 
   &__logo {
     width: calc(#{$col-part-d} * 2 - #{$col-gap});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: auto;
+    }
     display: flex;
   }
   &__logo-link {
@@ -543,7 +546,7 @@
   }
   &__buttons-item {
     @media (max-width: ($breakpoint - 1px)) {
-      margin-right: getRem(20px);
+      margin-right: getRem(12px);
     }
     
     width: getRem(48px);

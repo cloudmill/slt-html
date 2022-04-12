@@ -88,8 +88,9 @@
     display: block;
     height: getRem(900px);
     @media (max-width: ($breakpoint - 1px)) {
-      max-height: getRem(375px);
-      height: 100%;
+      // height: getRem(375px);
+      height: auto;
+      // object-fit: initial;
       width: 100%;
     }
   }
@@ -205,7 +206,7 @@
     }
   }
   &__cooperation-title {
-    max-width: getRem(560px);
+    max-width: getRem(586px);
 
     font-weight: 500;
     color: var(--color-white);
@@ -220,7 +221,7 @@
     color: var(--color-blue);
   }
   &__cooperation-text {
-    max-width: getRem(372px);
+    max-width: getRem(360px);
 
     color: var(--color-white);
     font-weight: 500;

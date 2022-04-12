@@ -4,10 +4,10 @@
   display: block;
   min-height: getRem(500px);
   @media (max-width: ($breakpoint - 1px)) {
-    min-height: getRem(217px);
+    min-height: getRem(187px);
   }
 
-  transition: $transition;
+  transition: 0.6s $transition-timing-function;
 
   .button-icon::before {
     background: var(--color-black);
@@ -15,7 +15,7 @@
 
   &:hover {
     @media (min-width: $breakpoint) {
-      padding: 20px;
+      // padding: 20px;
   
       #{$comp}__container {
         background: var(--color-darken-white);
@@ -28,7 +28,7 @@
         opacity: 1;
       }
       #{$comp}__image {
-        transform: scale(1.1);
+        transform: scale(0.9);
       }
   
       .button-icon {
@@ -182,10 +182,10 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    transform: translateY(-10px);
+    transform: translateY(10px);
     
     opacity: 0;
-    transition: $transition;
+    transition: 0.6s $transition-timing-function;
   }
   
   &__logo {
@@ -201,7 +201,7 @@
   }
 
   &__caption {
-    max-width: getRem(474px);
+    max-width: getRem(584px);
 
     letter-spacing: -1px;
     font-weight: 500;
@@ -226,6 +226,8 @@
     display: flex;
     align-items: center;
 
-    transition: $transition;
+    mix-blend-mode: darken;
+    transition: 0.6s $transition-timing-function;
+    transform-origin: top right;
   }
 }
