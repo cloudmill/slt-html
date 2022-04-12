@@ -47,8 +47,14 @@ block content
                   .select-custom__dropdown(data-accordion-dropdown='')
                     ul.select-custom__list 
                       each box in item.items
-                        li.select-custom__item 
-                          +checkbox(text = box)
+                        li.select-custom__item(data-objects-item='')
+                          .checkbox 
+                            label.checkbox__label
+                              input.checkbox__input(type="checkbox" data-item-checkbox='')
+                              .checkbox__box 
+                                +check-svg.checkbox__svg
+                              .checkbox__caption(data-item-text='')
+                                |#{box}
         .category-list(data-list-container='')
           .category-list__row 
             .category-list__col

@@ -6,24 +6,33 @@ import { MobileMenu } from "./mobile-menu/MobileMenu"
 document.addEventListener('DOMContentLoaded', () => {
   const menuContainer = document.querySelector('[data-objects-menu]')
 
-  if (menuContainer && !mediaQuery.matches) {
+  if (menuContainer) {
     const menu = new MobileMenu('[data-objects-menu]', '[data-menu-button]')
     const list = new CategoriesList('[data-list-container]')
     const watcher = new InputsWatcher('[data-objects-item]', {
       onchange: function() {
-        getCheckedCount()
+        inputChange()
       }
     })
 
-    function getCheckedCount() {
-      const panel = document.querySelector('[data-menu-panel]')
-      const text = panel.querySelector('[data-menu-clear]')
+    let inputChange 
 
-      if (watcher.selectedItems.length) {
-        panel.classList.add('active')
-        text.textContent = `Сбросить (${watcher.selectedItems.length})`
-      } else {
-        panel.classList.remove('active')
+    if (mediaQuery.matches) {
+      inputChange = function() {
+        list.clearItems()
+        list.showItems(watcher.selectedItems)
+      }
+    } else {
+      inputChange = function() {
+        const panel = document.querySelector('[data-menu-panel]')
+        const text = panel.querySelector('[data-menu-clear]')
+  
+        if (watcher.selectedItems.length) {
+          panel.classList.add('active')
+          text.textContent = `Сбросить (${watcher.selectedItems.length})`
+        } else {
+          panel.classList.remove('active')
+        }
       }
     }
 
@@ -38,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (target.closest('[data-menu-clear]')) {
         watcher.clearItems()
         list.clearItems()
-        getCheckedCount()
+        inputChange()
       }
 
       if (target.closest('[data-menu-accept]')) {
@@ -49,13 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (target.closest('[data-delete-category]')) {
         watcher.selectedItems = list.deleteItem(target, watcher.selectedItems)
-        getCheckedCount()
+        inputChange()
       }
 
       if (target.closest('[data-clear-categories]')) {
         watcher.clearItems()
         list.clearItems()
-        getCheckedCount()
+        inputChange()
       }
     })
   }

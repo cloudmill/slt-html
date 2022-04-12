@@ -4,18 +4,26 @@ export class CategoriesList {
 
     if (this.root) {
       this.list = this.root.querySelector('[data-catalog-list]')
+      this.currentItems = []
     }
   }
 
   showItems(items) {
     items.forEach(item => {
-      const clone = this.root.querySelector('[data-catalog-template]').content.firstElementChild.cloneNode(true)
-      
-      clone.querySelector('.category-list__text').textContent = item.text
-      this.list.append(clone)
+      if (!this.currentItems.includes(item)) {
+        const clone = this.root.querySelector('[data-catalog-template]').content.firstElementChild.cloneNode(true)
+        
+        clone.querySelector('.category-list__text').textContent = item.text
+        this.list.append(clone)
+        this.currentItems.push(item)
+      }
     })
 
-    this.root.classList.add('active')
+    if (!items.length) {
+      this.root.classList.remove('active')
+    } else {
+      this.root.classList.add('active')
+    }
   }
 
   deleteItem(target, items) {
@@ -30,6 +38,7 @@ export class CategoriesList {
     })
 
     items = items.filter(item => item.text != text)
+    this.currentItems = this.currentItems.filter(item => item.text != text)
     parent.remove()
 
     if (!items.length) {
@@ -42,5 +51,6 @@ export class CategoriesList {
   clearItems() {
     this.list.querySelectorAll('[data-category]').forEach(item => item.remove())
     this.root.classList.remove('active')
+    this.currentItems = []
   }
 }

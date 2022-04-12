@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (modal) {
     // инпуты в модалке
     const watcher = new InputsWatcher('[data-catalog-item]', {
-      onchange: function() {productMatch()}
+      onchange: function() {
+        productMatch()
+      }
     })
     // .category-list на странице catalog-category
     const list = new CategoriesList('[data-list-container]')
