@@ -62,7 +62,7 @@ mixin header
                 .header__logo
                   a.header__logo-link(href="#") 
                     +logo-svg.header__logo-svg
-                .header__button.button-animate
+                .header__button.button-animate(data-accordion-header='cards')
                   .header__button-icon 
                     +header-catalog-svg.header__button-svg
                   .header__button-text
@@ -116,22 +116,23 @@ mixin header
     .header__panel
       .container 
         .header__panel-overlay
-        .header__cards
-          each item in ['aqua', 'blockfire', 'pert', '']
-            .catalog-card(class=item)
-              .catalog-card__container 
-                .catalog-card__title 
-                  |SLT AQUA
-                .catalog-card__caption 
-                  |Полипропиленовые трубопроводные системы #[br] для водоснабжения и отопления
-                ul.catalog-card__list
-                  each item in ['Трубы', 'Фитинги', 'Фитинги комбинированные', 'Компенсаторы', 'Крепления', 'Запорная арматура', ]
-                    li.catalog-card__item 
-                      a.catalog-card__link(href="#") 
-                        |#{item}
-                .catalog-card__images 
-                  - for (j = 1; j < 7; j++)
-                    img.catalog-card__img(src=`assets/images/catalog-card-${j}.webp`, alt="")
+        .header__cards(data-header-modal='cards')
+          .header__cards-grid
+            each item in ['aqua', 'blockfire', 'pert', '']
+              .catalog-card(class=item)
+                .catalog-card__container 
+                  .catalog-card__title 
+                    |SLT AQUA
+                  .catalog-card__caption 
+                    |Полипропиленовые трубопроводные системы #[br] для водоснабжения и отопления
+                  ul.catalog-card__list
+                    each item in ['Трубы', 'Фитинги', 'Фитинги комбинированные', 'Компенсаторы', 'Крепления', 'Запорная арматура', ]
+                      li.catalog-card__item(data-header-category='')
+                        a.catalog-card__link(href="#") 
+                          |#{item}
+                  .catalog-card__images 
+                    - for (j = 1; j < 7; j++)
+                      img.catalog-card__img(src=`assets/images/catalog-card-${j}.webp`, alt="" data-category-img='')
         .header__panel-spoiler(data-header-modal='0')
           .header__panel-inner 
             ul.header__panel-list

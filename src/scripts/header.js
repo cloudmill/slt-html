@@ -53,6 +53,45 @@ import { mediaQuery } from './mediaQueries'
   });
 }
 
+// catalog cards img change
+{
+  $(() => {
+    const cards = $('.catalog-card')
+
+    cards.each(function() {
+      let currentElem = null
+      let index
+      const images = $(this).find('[data-category-img]')
+
+      $(this).on('mouseover', event => {
+        if (currentElem) return;
+
+        let target = $(event.target).closest('[data-header-category]');
+
+        if (!target.length) return;
+
+        index = target.index()
+        currentElem = target
+        
+        images.eq(index).addClass('active')
+      })
+
+      $(this).on('mouseout', event => {
+        if (!currentElem) return;
+
+        let relatedTarget = $(event.relatedTarget).closest('[data-header-category]')
+        
+        if (relatedTarget[0] !== currentElem[0]) {
+          currentElem.removeClass('active')
+          images.eq(index).removeClass('active')
+        } 
+        
+        currentElem = null;
+      })
+    })
+  })
+}
+
 
 // desktop header accordion
 {
@@ -96,7 +135,12 @@ import { mediaQuery } from './mediaQueries'
             $('.header__panel').addClass('header__panel--active')
             headerModal.slideDown(500)
             headerModal.addClass('active')
-            $('.header__nav').addClass('header__nav--active')
+            
+            if (id !== 'cards') {
+              $('.header__nav').addClass('header__nav--active')
+            } else {
+              $('.header__nav').removeClass('header__nav--active')
+            }
           }
         }
   

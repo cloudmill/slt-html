@@ -1,5 +1,6 @@
 .header {
   $comp: &;
+  --colorNav: var(--color-blue);
 
   position: fixed;
   top: 0;
@@ -383,6 +384,11 @@
     }
     &:hover {
       border: 1px solid var(--color-blue-dark);
+    }
+
+    &.active {
+      background: var(--color-black);
+      border-color: var(--color-black);
     }
   }
   &__button-icon {
@@ -835,10 +841,24 @@
   }
 
   &__cards {
+    display: none;
+
+    &.active {
+
+      #{$comp}__cards-grid {
+        opacity: 1;
+      }
+    }
+  }
+  &__cards-grid {
     padding: getRem(40px) 0;
 
-    display: none;
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: $col-gap;
+
+    opacity: 0;
+    transition: $transition;
+    transition-delay: 0.5s;
   }
 }
