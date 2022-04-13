@@ -624,7 +624,11 @@
     z-index: 0;
 
     width: getRem(283px);
-    height: getRem(620px);
+    height: 620px;
+    @media (max-width: ($breakpoint-xxl - 1px)) {
+      height: getRem(620px);
+      width: getRem(283px);
+    }
     @media (max-width: ($breakpoint - 1px)) {
       width: getRem(267px);
       height: auto;
@@ -634,7 +638,10 @@
     transition: 0.8s $transition-timing-function;
 
     &.active {
-      width: getRem(892px);
+      width: 892px;
+      @media (max-width: ($breakpoint-xxl - 1px)) {
+        width: getRem(892px);
+      }
     }
   }
   &__slider-bar {
@@ -654,11 +661,7 @@
     height: 2px;
 
     background: var(--color-blue);
-    transition: $transition;
-    // transform: translateX(-50%);
-    
-    &.active {
-    }
+    transition: 1s $transition-timing-function;
   }
   &__slider-img {
     position: absolute;
