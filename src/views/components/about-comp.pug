@@ -18,8 +18,8 @@ mixin about-slider
       .about-page__slider-desktop(data-slider-parent='')
         .swiper-container.swiper-container--visible.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-desktop='')
           .swiper-wrapper
-            - for (j = 0; j < 3; j++) 
-              - for (i = 0; i < 5; i++)
+            - for (j = 0; j < 2; j++) 
+              - for (i = 0; i < 6; i++)
                 .swiper-slide 
                   .about-page__slider-slide 
                     img.about-page__slider-img(src=`assets/images/about-slide-${i+1}.webp`, alt="")

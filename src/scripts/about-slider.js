@@ -82,20 +82,34 @@ import {mediaQuery} from './mediaQueries'
       //progress
       const slides = swiperContainer.find('.swiper-slide')
       const progress = $('[data-slider-progress]')
+      let width
 
-      progress.css('width', `${Math.round(100 / slides.length)}%`)
+      if (mediaQuery.matches) {
+        const count = slides.length % 2
 
-      swiper.on("progress", function() {
-        const step = Math.round(this.progress * 100)
-        progress.css('left', `${step}%`)
+        width = 100 / (((slides.length - 6) + count) / 2 + 1) 
+      } else {
+        width = 100 / slides.length
+      }
 
-        if (step === 100) {
-          progress.css('transform', 'translateX(-100%)')
-        } else if (step) {
-          progress.css('transform', 'translateX(-50%)')
-        } else {
-          progress.css('transform', 'none')
+      progress.css('width', `${width}%`)
+
+      let prevProgress = swiper.progress
+      let value = 0
+
+      swiper.on("slideChange", function() {
+        const currentProgress = swiper.progress
+
+        if (prevProgress < currentProgress) {
+          value += 100
+        } 
+
+        if (prevProgress > currentProgress) {
+          value -= 100
         }
+
+        progress.css('transform', `translateX(${value}%)`)
+        prevProgress = currentProgress
       })
     }
   })

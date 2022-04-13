@@ -654,12 +654,10 @@
     height: 2px;
 
     background: var(--color-blue);
-    @media (max-width: ($breakpoint - 1px)) {
-      // transition: .2s $transition-timing-function;
-    }
+    transition: $transition;
+    // transform: translateX(-50%);
     
     &.active {
-      transform: translateX(-50%);
     }
   }
   &__slider-img {
