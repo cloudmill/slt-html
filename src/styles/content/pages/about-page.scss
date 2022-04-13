@@ -680,4 +680,25 @@
       max-height: 100%;
     }
   }
+  &__slider-button {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+  }
+  &__slider-svg {
+    width: getRem(110px);
+    height: getRem(110px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(33px);
+      height: getRem(33px);
+    }
+  }
 }

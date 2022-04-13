@@ -1,31 +1,15 @@
 .events-page {
 
-  .section--first {
-    @media (min-width: $breakpoint) {
-      margin-top: 0;
-    }
-  }
-
   .container {
     @media (min-width: $breakpoint) {
       position: relative;
     }
   }
 
-  .breadcrumbs {
-    @media (min-width: $breakpoint) {
-      position: absolute;
-      top: getRem(248px);
-      left: 0;
-      width: 100%;
-      padding: 0 60px;
-    }
-  }
-
   &__main-wrapper {
     display: flex;
 
-    // margin-top: getRem(24px);
+    margin-top: getRem(24px);
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: getRem(24px);
       flex-direction: column;
@@ -36,39 +20,25 @@
     flex-shrink: 0;
 
     &:nth-child(1) {
-      display: flex;
-      position: relative;
-      width: calc(#{$col-part-d} * 3);
-      padding-bottom: getRem(120px);
-      margin-top: getRem(296px);
-
+      padding-top: geRem(4px);
       @media (max-width: ($breakpoint - 1px)) {
-        width: 100%;
-        padding-bottom: getRem(24px);
-        margin-top: 0;
+        padding-top: 0;
       }
 
-      .button {
-        height: fit-content;
-
-        @media (min-width: $breakpoint) {
-          position: sticky;
-          top: getRem(120px);
-          left: 0;
-        }
+      display: flex;
+      align-items: flex-start;
+      width: calc(#{$col-part-d} * 3);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 100%;
       }
     }
 
     &:nth-child(2) {
       width: calc(#{$col-part-d} * 9 - #{$col-gap});
       padding-right: calc(#{$col-part-d} * 3);
-
-      padding-top: getRem(296px);
-
       @media (max-width: ($breakpoint - 1px)) {
         width: 100%;
         padding-right: 0;
-        padding-top: 0;
       }
     }
   }

@@ -289,15 +289,15 @@
       border-color: var(--color-blue);
     }
 
-    &:focus-within {
-      background: var(--color-light-gray);
-      border-color: var(--color-blue);
+    // &:focus-within {
+    //   background: var(--color-light-gray);
+    //   border-color: var(--color-blue);
 
-      #{$comp}__table-button {
-        opacity: 1;
-        pointer-events: all;
-      }
-    }
+    //   #{$comp}__table-button {
+    //     opacity: 1;
+    //     pointer-events: all;
+    //   }
+    // }
   }
   &__table-text {
     font-weight: 400;

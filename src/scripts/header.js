@@ -124,7 +124,10 @@ import { mediaQuery } from './mediaQueries'
   
           if (button.classList.contains('active')) {
             button.classList.remove('active')
-            headerModal.slideUp(500)
+            setTimeout(() => {
+              headerModal.slideUp(500)
+            }, 500);
+
             headerModal.removeClass('active')
             stateManager.classRemove()
           } else {
@@ -145,7 +148,11 @@ import { mediaQuery } from './mediaQueries'
         }
   
         if (event.target.classList.contains('header__panel-overlay')) {
-          stateManager.closeAll()
+          setTimeout(() => {
+            modals.slideUp(500)
+          }, 500);
+          modals.removeClass('active')
+          headerButton.removeClass('active')
           stateManager.classRemove()
         }
       })

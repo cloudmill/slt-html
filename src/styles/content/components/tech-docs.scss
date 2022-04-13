@@ -1,6 +1,20 @@
 .tech-docs {
+  $comp: &;
+
+  position: relative;
+  z-index: 0;
+
   display: block;
   background: var(--color-black);
+
+  &:hover {
+    #{$comp}__hover {
+      transform: none;
+    }
+    #{$comp}__frame {
+      transform: none;
+    }
+  }
 
   &__container {
     padding: getRem(40px);
@@ -129,5 +143,26 @@
     outline: none;
     background: none;
     cursor: pointer;
+  }
+
+  &__hover {
+    @include cover;
+    z-index: 2;
+
+    transition: 0.8s $transition-timing-function;
+    transform: translateY(100%);
+    overflow: hidden;
+
+    #{$comp}__img {
+      path {
+        fill: #009BC9;
+      }
+    }
+  }
+  
+  &__frame {
+    transform: translateY(-100%);
+    background: var(--color-blue);
+    transition: 0.8s $transition-timing-function;
   }
 }

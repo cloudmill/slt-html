@@ -52,6 +52,7 @@
     "parsleyjs": "^2.9.2",
     "reset-css": "^5.0.1",
     "select2": "^4.1.0-rc.0",
-    "swiper": "^7.3.2"
+    "swiper": "^7.3.2",
+    "tippy.js": "^6.3.7"
   }
 }

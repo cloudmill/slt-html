@@ -4,6 +4,23 @@ include ../components/breadcrumbs
 include ../components/tech-docs
 
 block content
+  -
+    var ddata = [
+      {
+        class: 'red',
+        title: 'SLT BLOCKFIRE',
+        button: 'button--red',
+        text: 'Полипропиленовые трубопроводные системы для пожаротушения',
+        items: ['blockfire-1.webp', 'blockfire-2.webp', 'blockfire-3.webp', 'blockfire-4.webp', 'blockfire-5.webp', ]
+      },
+      {
+        class: 'green',
+        title: 'SLT PE-RT',
+        button: 'button--green',
+        text: 'Гибкие трубопроводные системы из термостойкого полиэтилена для водоснабжения и отопления',
+        items: ['pert-1.webp', 'pert-2.webp', 'pert-3.webp', ]
+      },
+    ]
   .catalog-page
     section.section.section--first 
       .container 
@@ -32,17 +49,67 @@ block content
               +link-right.button--wide--mobile
                 |Информационные материалы
         .catalog-page__products 
-          each item in ['blue', 'red', 'green']
-            .catalog-page__products-item(class=item)
+          .catalog-page__products-item.blue
+            .catalog-page__products-row 
+              .catalog-page__products-col
+                .catalog-page__products-title 
+                  |SLT AQUA
+                .catalog-page__products-caption 
+                  |Полипропиленовые трубопроводные системы для водоснабжения и отопления
+                .catalog-page__desktop
+                  .catalog-page__products-btn 
+                    +link-right 
+                      |Вся продукция
+              .catalog-page__products-col
+                .catalog-page__benefits
+                  .catalog-page__benefits-col 
+                    h3.catalog-page__benefits-num 
+                      |10
+                      span.catalog-page__benefits-span 
+                        |лет
+                    .catalog-page__benefits-text 
+                      |Гарантийный срок
+                  .catalog-page__benefits-col 
+                    h3.catalog-page__benefits-num 
+                      |50+
+                      span.catalog-page__benefits-span 
+                        |лет
+                    .catalog-page__benefits-text 
+                      |Гарантийный срок
+                .catalog-page__mobile
+                  .catalog-page__products-btn 
+                    +link-right 
+                      |Вся продукция
+            .catalog-page__products-bot
+              .catalog-page__products-container 
+                a.catalog-page__card(href="#") 
+                  .catalog-page__card-container 
+                    .catalog-page__card-icon 
+                      +big-arrow-svg.catalog-page__card-svg
+                    .catalog-page__card-title 
+                      |PE-RT I
+                  .catalog-page__card-img 
+                    img(src="assets/images/catalog-product.webp", alt="")
+                each img in [1, 3, 4, 5, 6]
+                  a.catalog-page__card(href="#") 
+                    .catalog-page__card-container 
+                      .catalog-page__card-icon 
+                        +big-arrow-svg.catalog-page__card-svg
+                      .catalog-page__card-title 
+                        |PE-RT I
+                    .catalog-page__card-img 
+                      img(src=`assets/images/catalog-card-${img}.webp`, alt="")
+          each item in ddata
+            .catalog-page__products-item(class=item.class)
               .catalog-page__products-row 
                 .catalog-page__products-col
                   .catalog-page__products-title 
-                    |SLT AQUA
+                    |#{item.title}
                   .catalog-page__products-caption 
-                    |Полипропиленовые трубопроводные системы для водоснабжения и отопления
+                    |#{item.text}
                   .catalog-page__desktop
                     .catalog-page__products-btn 
-                      +link-right 
+                      +link-right(class=item.button)
                         |Вся продукция
                 .catalog-page__products-col
                   .catalog-page__benefits
@@ -55,7 +122,7 @@ block content
                         |Гарантийный срок
                     .catalog-page__benefits-col 
                       h3.catalog-page__benefits-num 
-                        |10
+                        |50+
                         span.catalog-page__benefits-span 
                           |лет
                       .catalog-page__benefits-text 
@@ -66,7 +133,7 @@ block content
                         |Вся продукция
               .catalog-page__products-bot
                 .catalog-page__products-container 
-                  - for (i = 0; i < 4; i++)
+                  each img in item.items
                     a.catalog-page__card(href="#") 
                       .catalog-page__card-container 
                         .catalog-page__card-icon 
@@ -74,7 +141,7 @@ block content
                         .catalog-page__card-title 
                           |PE-RT I
                       .catalog-page__card-img 
-                        img(src="assets/images/catalog-product.webp", alt="")
+                        img(src=`assets/images/${img}`, alt="")
           .catalog-page__products-item
             .catalog-page__products-row 
               .catalog-page__products-col
@@ -88,7 +155,7 @@ block content
               .catalog-page__products-col
                 .catalog-page__products-wrapper
                   .catalog-page__products-container 
-                    - for (i = 0; i < 4; i++)
+                    each img in ['tool-1', 'tool-2', 'tool-3']
                       a.catalog-page__card(href="#") 
                         .catalog-page__card-container 
                           .catalog-page__card-icon 
@@ -96,4 +163,4 @@ block content
                           .catalog-page__card-title 
                             |PE-RT I
                         .catalog-page__card-img 
-                          img(src="assets/images/catalog-product.webp", alt="")
+                          img(src=`assets/images/${img}.webp`, alt="")

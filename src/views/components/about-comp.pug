@@ -23,16 +23,26 @@ mixin about-slider
                 .swiper-slide 
                   .about-page__slider-slide 
                     img.about-page__slider-img(src=`assets/images/about-slide-${i+1}.webp`, alt="")
+            .swiper-slide 
+              .about-page__slider-slide 
+                img.about-page__slider-img(src=`assets/images/about-slide-${i+1}.webp`, alt="")
+                .about-page__slider-button(data-fancy-button='video') 
+                  +play-svg.about-page__slider-svg
       .about-page__slider-mobile 
         .swiper-container.swiper-container--visible.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-mobile='')
           .swiper-wrapper 
+            .swiper-slide 
+              .about-page__slider-slide 
+                img.about-page__slider-img(src=`assets/images/about-slide-${i+1}.webp`, alt="")
+                .about-page__slider-button(data-fancy-button='video') 
+                  +play-svg.about-page__slider-svg
             - for (i = 0; i < 6; i++)
               .swiper-slide 
                 .about-page__slider-slide 
                   img.about-page__slider-img(src=`assets/images/about-slide-${i+1}.webp`, alt="")
 
 mixin about-bot 
-  .about-bot 
+  .about-bot(class=attributes.class)
     .about-bot__item 
       a.about-bot__card(href="#")
         .about-bot__container 

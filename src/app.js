@@ -9,6 +9,8 @@ import "./scripts/video-scroll";
 import "./scripts/parallax";
 import "./scripts/select";
 import "./scripts/map";
+import "./scripts/anchor-scroll";
+import "./scripts/tooltip";
 import "./scripts/objects-menu";
 import "./scripts/catalog-category";
 import "./scripts/main-slider";

@@ -140,6 +140,7 @@ block content
       },
       {
         top: true,
+        tooltip: true,
         text: 'Т#[span.table__span раб], ℃'
       },
       {
@@ -182,6 +183,7 @@ block content
       },
       {
         top: true,
+        tooltip: true,
         text: 'Т#[span.table__span max], ℃'
       },
       {
@@ -203,7 +205,7 @@ block content
       },
       {
         top: true,
-        text: 'Время при Т#[span.table__span max], год'
+        text: 'Время при Т#[span.table__span max] , год'
       },
       {
         items: ['1'],
@@ -224,7 +226,8 @@ block content
       },
       {
         top: true,
-        text: 'Т#[span.table__span авар], ℃'
+        tooltip: true,
+        text: 'Т#[span.table__span авар] , ℃'
       },
       {
         items: ['95'],
@@ -245,6 +248,7 @@ block content
       },
       {
         top: true,
+        tooltip: true,
         text: 'Время при Т#[span.table__span авар], час'
       },
       {
@@ -287,6 +291,7 @@ block content
       },
       {
         top: true,
+        tooltip: true,
         text: 'P#[span.table__span max], МПа'
       },
       {
@@ -318,7 +323,7 @@ block content
             p.catalog-page__text 
               |Труба однослойная напорная полипропиленовая PN10 (SDR 11) предназначена для систем холодного и питьевого водоснабжения, а также технологических трубопроводов, транспортирующих жидкости и газы, не агрессивные к материалам трубы.
             .catalog-page__button
-              .button.button-animate
+              .button.button-animate(data-scroll='#order')
                 .button__text
                   span
                     |Сделать заказ
@@ -353,9 +358,49 @@ block content
         .catalog-page__container 
           .table 
             .table__grid
-              each item in ['Класс #[br] эксплуатации', 'Т#[span.table__span раб], ℃', 'Время при Т#[span.table__span раб], год', 'Т#[span.table__span max], ℃', 'Время при Т#[span.table__span max], год', 'Т#[span.table__span авар], час', 'Время при Т#[span.table__span авар], час', 'Область #[br] применения', 'P#[span.table__span max], МПа',]
+              -
+                var top = [
+                  {
+                    text: 'Класс #[br] эксплуатации',
+                  },
+                  {
+                    tooltip: true,
+                    text: 'Т#[span.table__span раб], ℃',
+                  },
+                  {
+                    text: 'Время при Т#[span.table__span раб], год',
+                  },
+                  {
+                    tooltip: true,
+                    text: 'Т#[span.table__span max], ℃',
+                  },
+                  {
+                    text: 'Время при Т#[span.table__span max], год',
+                  },
+                  {
+                    tooltip: true,
+                    text: 'Т#[span.table__span авар], час',
+                  },
+                  {
+                    text: 'Время при Т#[span.table__span авар], час',
+                  },
+                  {
+                    text: 'Область #[br] применения',
+                  },
+                  {
+                    tooltip: true,
+                    text: 'P#[span.table__span max], МПа',
+                  }
+                ]
+              each item in top
                 .table__top 
-                  |#{item}
+                  |#{item.text}
+                  if (item.tooltip)
+                    .tooltip 
+                      .tooltip__icon 
+                        +tooltip-svg.tooltip__svg 
+                      .tooltip__container 
+                        |Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quisquam blanditiis iusto.
               each item in ddata 
                 .table__item 
                   ul.table__list 
@@ -368,6 +413,12 @@ block content
                 if (item.top)
                   .table__top 
                     |#{item.text}
+                    if (item.tooltip)
+                      .tooltip 
+                        .tooltip__icon 
+                          +tooltip-svg.tooltip__svg 
+                        .tooltip__container 
+                          |Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quisquam blanditiis iusto.
                 else 
                   .table__item(class=item.class)
                     ul.table__list 
@@ -402,7 +453,7 @@ block content
                 .catalog-page__list-col
                   .catalog-page__list-text 
                     |#{item.text}
-    section.section.section--md
+    section.section.section--md#order
       .container 
         .row 
           .row__col

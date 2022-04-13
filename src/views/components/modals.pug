@@ -345,3 +345,9 @@ mixin map-modal
                           |#{item.text}
           .map-modal__controls.map-modal__offset 
             +slider-buttons.slider-buttons--default(prev = '11' next = '12')
+          
+mixin video-modal 
+  .video-modal(data-fancy-modal=attributes.id)
+    .video-modal__container
+      iframe.video-modal__iframe(src="https://www.youtube.com/embed/W85oD8FEF78" frameborder="0") 
+

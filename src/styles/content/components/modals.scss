@@ -810,6 +810,26 @@
   }
 }
 
+.video-modal {
+  width: getRem(900px);
+  height: getRem(600px);
+  @media (max-width: ($breakpoint - 1px)) {
+    width: getRem(350px);
+    height: getRem(200px);
+  }
+  display: none;
+
+  &__container {
+    height: 100%;
+    display: flex;
+  }
+
+  &__iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 /* Custom animation slide-in-out */
 .fancybox-fx-left.fancybox-slide--previous {
   

@@ -153,6 +153,25 @@
     }
   }
 
+  &--red {
+    border-color: var(--color-red);
+
+    #{$comp}__svg {
+      path {
+        fill: var(--color-red);
+      }
+    }
+  }
+  &--green {
+    border-color: var(--color-green);
+
+    #{$comp}__svg {
+      path {
+        fill: var(--color-green);
+      }
+    }
+  }
+
   &--black {
     border-color: var(--color-black);
 
