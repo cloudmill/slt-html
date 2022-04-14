@@ -19,7 +19,7 @@ block content
         .cooperation-page__selects 
           .section__selects
             .section__select 
-              +select(options = ['qwe', 'zxc', 'asd'])
+              +select(options = ['qwe', 'zxc', 'asd'] placeholder = 'Категория материалов')
         .section__block 
           .docs-page__block
             .docs-page__block-item
@@ -31,8 +31,8 @@ block content
                     |Скачать все документы
               .docs-page__grid 
                 - for (i = 0; i < 2; i++)
-                  +docs-pe-rt 
-                  +docs-blockfire
+                  +docs-img(img = 'docs-pert.webp')
+                  +docs-img(img = 'docs-blockfire.webp')
             .docs-page__block-item
               .docs-page__top 
                 h4 

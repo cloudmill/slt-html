@@ -192,6 +192,14 @@
         width: auto;
       }
     }
+
+    &--offset {
+      &:nth-child(2) {
+        @media (max-width: ($breakpoint - 1px)) {
+          margin-top: getRem(48px);
+        }
+      }
+    }
   }
 
   &__title {

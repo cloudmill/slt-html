@@ -2,7 +2,7 @@ include ./button-icon
 
 mixin slider-buttons 
   .slider-buttons(class = attributes.class) 
-    .slider-buttons__item 
+    button.slider-buttons__item 
       +button-icon-left.button-icon--blue(data-slider-button = attributes.prev)
-    .slider-buttons__item 
+    button.slider-buttons__item 
       +button-icon.button-icon--blue(data-slider-button = attributes.next)

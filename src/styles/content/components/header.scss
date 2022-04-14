@@ -29,21 +29,21 @@
       background: var(--color-blue);
     }
 
-    #{$comp}__burger-span {
-      &:nth-child(1) {
-        top: 50%;
-        transform: translateY(-50%) rotate(-45deg);
-        background: var(--color-white);
-      }
+    #{$comp}__burger {
+      height: 0;
+      border-color: transparent;
+      transition: all 0.35s 0s $transition-timing-function;
 
-      &:nth-child(2) {
-        opacity: 0;
-      }
-
-      &:nth-child(3) {
-        bottom: 50%;
-        transform: translateY(50%) rotate(45deg);
+      &:before {
+        transform: translate(-50%, -50%) rotate(-45deg);
         background: var(--color-white);
+        transition-delay: 0.5s;
+      }
+      
+      &:after {
+        transform: translate(-50%, -50%) rotate(-135deg);
+        background: var(--color-white);
+        transition-delay: 0.5s;
       }
     }
   }
@@ -378,6 +378,7 @@
     background: var(--color-blue);
     border: 1px solid var(--color-blue);
     border-radius: 40px;
+    transition: $transition;
     cursor: pointer;
 
     &::before {
@@ -392,6 +393,29 @@
     &.active {
       background: var(--color-black);
       border-color: var(--color-black);
+
+      &::before {
+        background-color: var(--color-black);
+      }
+
+      #{$comp}__button-burger {
+        animation: none;
+        height: 0;
+        border-color: transparent;
+        transition: all 0.35s 0s $transition-timing-function;
+
+        &:before {
+          transform: translate(-50%, -50%) rotate(-45deg);
+          background: var(--color-white);
+          transition-delay: 0.5s, 0.1s;
+        }
+        
+        &:after {
+          transform: translate(-50%, -50%) rotate(-135deg);
+          background: var(--color-white);
+          transition-delay: 0.5s, 0.1s;
+        }
+      }
     }
   }
   &__button-icon {
@@ -400,7 +424,7 @@
       margin-right: getStatic(20px, 14.4px);
     }
     position: relative;
-    overflow: hidden;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -408,12 +432,36 @@
     height: getRem(12px);
     @media (max-width: ($breakpoint-ll - 1px)) {
       width: getStatic(28px, 14.4px);
-      height: getStatic(28px, 14.4px);
+      height: getStatic(12px, 14.4px);
     }
+
+    overflow: hidden;
   }
-  &__button-svg {
+  &__button-burger {
     width: 100%;
-    height: 100%;
+    height: getRem(12px);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      height: getStatic(12px, 14.4px);
+    }
+
+    border-top: 2px solid var(--color-white);
+    border-bottom: 2px solid var(--color-white);
+    transition: height 0.4s 0.4s $transition-timing-function, border-color 0.4s 0.4s $transition-timing-function;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 100%;
+      height: 2px;
+
+      background: transparent;
+      transition: transform 0.4s $transition-timing-function, background 0.4s 0.4s $transition-timing-function;
+    }
   }
   &__button-text {
     position: relative;
@@ -805,44 +853,24 @@
 
     width: getRem(16px);
     height: getRem(12px);
-  }
 
-  &__burger-span {
+    border-top: 2px solid var(--color-black);
+    border-bottom: 2px solid var(--color-black);
+    transition: height 0.4s 0.4s $transition-timing-function, border-color 0.4s 0.4s $transition-timing-function;
 
-    &:nth-child(1),
-    &:nth-child(3) {
-      content: '';
+    &::before,
+    &::after {
+      content: "";
       position: absolute;
-      left: 0;
-
-      width: getRem(16px);
-      height: 1.5px;
-
-      contain: content;
-      background: var(--color-black);
-      transition: .3s;
-      will-change: transform;
-    }
-
-    &:nth-child(1) {
-      top: 0;
-    }
-
-    &:nth-child(3) {
-      bottom: 0;
-    }
-
-    &:nth-child(2) {
-      position: absolute;
-      left: 0;
       top: 50%;
-      transform: translateY(-50%);
+      left: 50%;
+      transform: translate(-50%, -50%);
 
-      width: getRem(16px);
+      width: 100%;
       height: 1.5px;
 
+      transition: transform 0.4s $transition-timing-function;
       background: var(--color-black);
-      transition: .3s;
     }
   }
 

@@ -20,6 +20,9 @@
 
     &:not(:first-child) {
       margin-left: getRem(20px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: getRem(12px);
+      }
     }
   }
   &__link {

@@ -49,9 +49,20 @@
     display: flex;
     align-items: center;
 
+    transition: $transition;
     cursor: pointer;
 
-    transition: $transition;
+    &:hover {
+
+      #{$comp}__title {
+        color: var(--color-black);
+      }
+
+      #{$comp}__icon path {
+        fill: var(--color-black);
+      }
+      
+    }
   }
 
   &__title {
