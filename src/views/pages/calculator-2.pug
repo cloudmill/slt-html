@@ -43,7 +43,7 @@ block content
               form.form(action="/") 
                 .calculator-page__features
                   .calculator-page__features-col
-                    .calculator-page__caption(data-aos='fade-up')
+                    .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up')
                       |Тип трубы
                     .calculator-page__features-inner 
                       ul.calculator-page__features-list#radio-group
@@ -51,8 +51,8 @@ block content
                           li.calculator-page__features-item(data-aos='fade-up') 
                             +radio-button(name = 'type' text = item)
                   .calculator-page__features-col
-                    .calculator-page__caption(data-aos='fade-up') 
-                      |Внешний диаметр трубы D, мм
+                    .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up') 
+                      |Внешний диаметр трубы #[span.calculator-page__features-span D], мм
                     .calculator-page__features-inner 
                       .calculator-page__features-row#radio-group
                         ul.calculator-page__features-buttons 
@@ -68,27 +68,27 @@ block content
                             li.calculator-page__features-button(data-aos='fade-up')
                               +radio-button(name = 'diameter' text = item)
                   .calculator-page__features-col
-                    .calculator-page__caption(data-aos='fade-up')
-                      |Длина участка компенсиции, м 
+                    .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up')
+                      |Требуемая длина плеча #[br] компенсатора #[span.calculator-page__features-span L #[span.calculator-page__features-small S1]] (обратный расчет), мм
                     .calculator-page__features-inner(data-aos='fade-up')
                       +input#input(type = 'number' placeholder = '0')
                 .section__block
                   .calculator-page__features
                     .calculator-page__features-col
-                      .calculator-page__caption(data-aos='fade-up') 
+                      .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up') 
                         |Общая длина трубы, м
                       .calculator-page__features-inner(data-aos='fade-up') 
                         +input#input(type = 'number' placeholder = '0')
                       .calculator-page__features-desc 
-                        .calculator-page__caption(data-aos='fade-up') 
+                        .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up') 
                           |Lобщ = 2L
                     .calculator-page__features-col
-                      .calculator-page__caption(data-aos='fade-up') 
+                      .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up') 
                         |Температура монтажа, °C
                       .calculator-page__features-inner(data-aos='fade-up') 
                         +input#input(type = 'number' placeholder = '0')
                     .calculator-page__features-col
-                      .calculator-page__caption(data-aos='fade-up') 
+                      .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up') 
                         |Температура эксплуатации, °C
                       .calculator-page__features-inner(data-aos='fade-up') 
                         +input#input(type = 'number' placeholder = '0')
@@ -104,12 +104,12 @@ block content
                     .calculator-page__block-inner
                       .calculator-page__block-row(data-aos='fade-up')
                         .calculator-page__block-col
-                          .calculator-page__caption 
+                          .calculator-page__caption.calculator-page__caption--big 
                             |Длина плеча компенсатора, мм
                           .calculator-page__block-title 
                             |L#[span.calculator-page__block-span S]=343
                         .calculator-page__block-col
-                          .calculator-page__caption 
+                          .calculator-page__caption.calculator-page__caption--big
                             |Минимальная ширина компенсатора, мм
                           .calculator-page__block-title 
                             |W#[span.calculator-page__block-span k]=156
@@ -130,20 +130,20 @@ block content
                           .calculator-page__block-title 
                             |L#[span.calculator-page__block-span S1]=343
                         .calculator-page__block-col
-                          .calculator-page__caption 
+                          .calculator-page__caption.calculator-page__caption--big 
                             |Минимальная ширина компенсатора, мм
                           .calculator-page__block-title 
                             |W#[span.calculator-page__block-span k]=156
                     .calculator-page__block-inner
                       .calculator-page__block-row(data-aos='fade-up')
                         .calculator-page__block-col
-                          .calculator-page__caption 
+                          .calculator-page__caption.calculator-page__caption--big
                             |Длина компенсируемого участка 1-м компенсатором, мм
                           .calculator-page__block-title 
                             |L#[span.calculator-page__block-span комп]=343
                         .calculator-page__block-col
-                          .calculator-page__caption 
-                            |Количество компенсаторов на длину L общ, шт
+                          .calculator-page__caption.calculator-page__caption--big
+                            |Количество компенсаторов на длину #[span.calculator-page__features-span L #[span.calculator-page__features-small общ]] , шт
                           .calculator-page__block-title 
                             |K=10
                     .calculator-page__block-inner

@@ -44,7 +44,7 @@ block content
             .calculator-page__calculate-grid
               each item in ddata.form
                 .calculator-page__calculate-item(data-aos='fade-up')
-                  .calculator-page__caption 
+                  .calculator-page__caption.calculator-page__caption--big 
                     |#{item.text}
                   .calculator-page__features-inner 
                     if (item.isSelect)
@@ -57,19 +57,19 @@ block content
               .calculator-page__block
                 .calculator-page__block-row(data-aos='fade-up')
                   .calculator-page__block-col
-                    .calculator-page__caption 
+                    .calculator-page__caption.calculator-page__caption--big 
                       |Удельные потери по длине трубопровода без учета местных потерь, м/м
                     .calculator-page__block-title 
                       |1056,5
                   .calculator-page__block-col
-                    .calculator-page__caption 
+                    .calculator-page__caption.calculator-page__caption--big 
                       |Местные потери по длине трубопровода по «Примечанию» СП 40-102-2000, м/м
                     .calculator-page__block-title 
                       |0,8778
                 .calculator-page__block-inner
                   .calculator-page__block-row(data-aos='fade-up')
                     .calculator-page__block-col
-                      .calculator-page__caption 
+                      .calculator-page__caption.calculator-page__caption--big 
                         |Потери по длине трубопровода с учетом суммы местных потерь, м/м
                       .calculator-page__block-title 
                         |5,2667
@@ -83,16 +83,16 @@ block content
           .calculator-page__calculate-col
             .calculator-page__grid(data-aos='fade-up') 
               .calculator-page__grid-heading 
-                .calculator-page__caption
+                .calculator-page__caption.calculator-page__caption--big
                   |Диаметр
               .calculator-page__grid-heading.calculator-page__grid-long
                 .calculator-page__gird-wrapper
-                  .calculator-page__caption
+                  .calculator-page__caption.calculator-page__caption--big
                     |Скорости V, м/с
                   .calculator-page__grid-label 
                     |Рекомендуемые скорости ХВС, ГВС от 0,5 до 1 м/с.
               .calculator-page__grid-heading.calculator-page__grid-long
-                .calculator-page__caption
+                .calculator-page__caption.calculator-page__caption--big
                   |Потери i, м/м.
               each item in ['', 'SDR 11', 'SDR 7,4', 'SDR 6', 'SDR 11', 'SDR 7,4', 'SDR 6', ]
                 .calculator-page__grid-item 

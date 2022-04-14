@@ -338,21 +338,21 @@ block content
               li.catalog-page__types-item(data-aos='fade-up')
                 .catalog-page__type 
                   .catalog-page__type-icon 
-                    +use-svg.catalog-page__type-svg
+                    +connect-svg.catalog-page__type-svg
                   .catalog-page__type-text 
-                    |Соединение
+                    |Холодное водоснабжение
+              li.catalog-page__types-item(data-aos='fade-up')
+                .catalog-page__type 
+                  .catalog-page__type-icon
+                    +hot-water-svg.catalog-page__type-svg
+                  .catalog-page__type-text 
+                    |Горячее водоснабжение
               li.catalog-page__types-item(data-aos='fade-up')
                 .catalog-page__type 
                   .catalog-page__type-icon 
-                    +use-svg.catalog-page__type-svg
+                    +water-svg.catalog-page__type-svg
                   .catalog-page__type-text 
-                    |Соединение
-              li.catalog-page__types-item(data-aos='fade-up')
-                .catalog-page__type 
-                  .catalog-page__type-icon 
-                    +use-svg.catalog-page__type-svg
-                  .catalog-page__type-text 
-                    |Соединение
+                    |Питьевая вода
     section.section.section--md 
       .container
         .catalog-page__container 
@@ -473,14 +473,14 @@ block content
             .catalog-page__colors-icon.red
               +colors-light-svg.catalog-page__colors-svg
         .section__block
-          .catalog-page__table 
+          .catalog-page__table(data-aos='fade-up')
             .catalog-page__table-head 
-              each item in ['Диаметр, мм', 'Артикул', 'Количество в упаковке, шт', 'Количество в коробке, шт', 'Добавить в заказ, шт']
+              each item in ['Наружный диаметр d #[span.catalog-page__table-span n] , мм', 'Артикул', 'Количество в упаковке, шт', 'Количество в коробке, шт', 'Добавить в заказ, шт']
                 .catalog-page__table-cell
                   |#{item}
-            .catalog-page__table-body 
+            .catalog-page__table-body
               - for (i = 0; i < 15; i++)
-                .catalog-page__table-item(data-aos='fade-up')
+                .catalog-page__table-item
                   each item in ['25×20', 'SLTFM32520', '50', '500', 'last']
                     if (item == "last")
                       .catalog-page__table-cell

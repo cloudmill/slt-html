@@ -388,6 +388,14 @@
       }
     }
   }
+  &__table-span {
+    display: inline-block;
+
+    @include fsl(10px);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(8px);
+    }
+  }
 
   &__block {
     display: none;

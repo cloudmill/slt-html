@@ -50,6 +50,12 @@
       letter-spacing: 0;
       @include fsl(10px, 100%);
     }
+
+    &--big {
+      @media (max-width: ($breakpoint - 1px)) {
+        @include fsl(14px);
+      }
+    }
   }
 
   &__label {
@@ -160,6 +166,18 @@
       margin-top: 4px;
     }
   }
+  &__features-span {
+    color: var(--color-black);
+  }
+  &__features-small {
+    display: inline-block;
+    transform: translateY(2px);
+
+    @include fsl(10px, 100%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(8px);
+    }
+  }
 
   &__block {
     padding-top: getRem(20px);
@@ -190,9 +208,9 @@
     &:nth-child(2) {
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: getRem(20px);
-        width: auto;
+        max-width: none;
       }
-      width: getRem(307px);
+      max-width: getRem(352px);
     }
   }
   &__block-title {

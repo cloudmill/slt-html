@@ -53,14 +53,14 @@ block content
             .catalog-page__colors-icon.red(title='красный')
               +colors-light-svg.catalog-page__colors-svg
         .section__block
-          .catalog-page__table 
-            .catalog-page__table-head(data-aos='fade-up')
+          .catalog-page__table(data-aos='fade-up') 
+            .catalog-page__table-head
               each item in ['Диаметр, мм', 'Артикул', 'Количество в упаковке, шт', 'Количество в коробке, шт', 'Добавить в заказ, шт']
                 .catalog-page__table-cell
                   |#{item}
             .catalog-page__table-body 
               - for (i = 0; i < 15; i++)
-                .catalog-page__table-item(data-aos='fade-up') 
+                .catalog-page__table-item
                   each item in ['25×20', 'SLTFM32520', '50', '500', 'last']
                     if (item == "last")
                       .catalog-page__table-cell
