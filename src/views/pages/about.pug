@@ -23,12 +23,12 @@ block content
         .about-page__intro(data-decrease-container='')
           .about-page__intro-row 
             .about-page__intro-col
-              h1.about-page__intro-title 
-                |СЛТ Аква
+              .about-page__intro-title 
+                |#[span.word-span #[span(data-aos='fade-up') СЛТ Аква]]
             .about-page__intro-col
-              p.about-page__intro-text 
+              p.about-page__intro-text(data-aos='fade-up')
                 |От качества наших трубопроводных систем зависит безопасность и комфорт жизни людей, поэтому мы #[br] с большой ответственностью относимся к продуктам, которые производим и поставляем нашему потребителю.
-          .about-page__intro-container
+          .about-page__intro-container(data-aos='fade-up')
             .about-page__intro-image
               img.about-page__intro-img(src="assets/images/about-intro.jpg", alt="" data-parallax='w2')
               img.about-page__intro-mobile(src="assets/images/about-intro-mobile.webp", alt="" data-parallax='w2')
@@ -37,28 +37,28 @@ block content
     section.section(data-parallax-container='w2')
       .container 
         h1.about-page__title
-          |Миссия и ценности
+          |#[span.word-span #[span(data-aos='fade-up') Миссия и ценности]]
         .section__wrapper 
           .section__row 
             .section__col 
-              h5.about-page__label 
+              h5.about-page__label(data-aos='fade-up') 
                 |Наша миссия
             .section__col
               ul.about-page__list 
                 each item in ['Обеспечивать надежными трубопроводными системами объекты строительства', 'Развивать культуру взаимоотношений и профессиональный подход в области инженерных сетей, создавать комфортную среду для жизни людей']
-                  li.about-page__list-item 
+                  li.about-page__list-item(data-aos='fade-up') 
                     h4
                       |#{item}
         .section
           .section__wrapper 
             .section__row 
               .section__col
-                h5.about-page__label 
+                h5.about-page__label(data-aos='fade-up') 
                   |Наша философия
               .section__col
                 .about-page__section-grid 
                   each item in ['Предоставлять клиенту комплексное решение, которое отличается качеством и надежностью, простотой и удобством, технологичностью и инновационностью', 'Направлять наши действия и устремления на повышение уровня взаимоотношений и профессионализма участников рынка', 'Разрабатывать современные решения для создания комфортных условий жизни людей',]
-                    .about-page__section-item 
+                    .about-page__section-item(data-aos='fade-up')
                       |#{item}
     section.section.section--hidden--mobile
       +about-slider
@@ -67,12 +67,12 @@ block content
         .section__wrapper 
           .section__row 
             .section__col 
-              h5.about-page__label 
+              h5.about-page__label(data-aos='fade-up') 
                 |Наши принципы
             .section__col
               ul.about-page__list 
                 each item in ['Ценить каждого клиента и выстраивать с ним долгосрочные доверительные отношения', 'Ставить перед собой амбициозные цели, реализовывать их и поднимать планку еще выше', 'Взаимодействовать с коллегами эффективно', 'Стремиться создавать новое', 'Безопасность превыше всего']
-                  li.about-page__list-item 
+                  li.about-page__list-item(data-aos='fade-up')
                     h4
                       |#{item}
     section.section.section--big 

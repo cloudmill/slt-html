@@ -16,7 +16,7 @@ block content
         +breadcrumbs( page = "Где купить")
         .events-page__inner 
           h1 
-            |Где купить
+            |#[span.word-span #[span(data-aos='fade-up') Где купить]]
     section.section
       .container
         .where-buy__top
@@ -24,7 +24,7 @@ block content
           +nav(items = ['Списком', 'На карте'] active = 1)
 
           .section__selects
-            .section__select 
+            .section__select(data-aos='fade-up') 
               +select(options = ['qwe', 'zxc', 'asd'] placeholder='Город')
 
         -
@@ -49,7 +49,7 @@ block content
 
           .where-buy__filters-col#filters-container
             each item in filters
-              .where-buy__filters-item.filter-btn
+              .where-buy__filters-item.filter-btn(data-aos='fade-up')
                 .button__text
                   span #{item}
 
@@ -57,7 +57,7 @@ block content
             +refresh-button.where-buy__filters-reset.reset-disabled
               |Очистить
 
-        .where-buy__map-container
+        .where-buy__map-container(data-aos='fade-up')
           #map
           ul.placemarks
             li.placemarks__item(data-modal-id='qq')

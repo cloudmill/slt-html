@@ -11,30 +11,34 @@ block content
         +breadcrumbs(page = "Информационные материалы")
         .section__inner 
           h1 
-            |Информационные материалы
+            |#[span.word-span #[span(data-aos='fade-up') Информационные материалы]]
     section.section 
       .container 
         +nav(items = ['Разрешительная документация', 'Программы для проектировщиков', 'Информационные материалы'] active = 2)
         .section__block 
           .docs-page__block
             .docs-page__block-item
-              .docs-page__top 
+              .docs-page__top(data-aos='fade-up') 
                 h4 
                   |Каталоги
                 .docs-page__top-button 
                   +download-btn
                     |Скачать все документы
-              .docs-page__grid 
-                +docs-pe-rt 
-                +docs-blockfire
+              .docs-page__grid
+                .aos(data-aos='fade-up') 
+                  +docs-img(img = 'docs-pert.webp') 
+                .aos(data-aos='fade-up') 
+                  +docs-img(img = 'docs-blockfire.webp')
             .docs-page__block-item
-              .docs-page__top 
+              .docs-page__top(data-aos='fade-up') 
                 h4 
                   |Презентационные материалы
               .docs-page__grid 
                 - for (i = 0; i < 4; i++)
-                  +docs-pe-rt 
-                  +docs-blockfire
-            .docs-page__button 
+                  .aos(data-aos='fade-up') 
+                    +docs-img(img = 'docs-pert.webp') 
+                  .aos(data-aos='fade-up') 
+                    +docs-img(img = 'docs-blockfire.webp')
+            .docs-page__button(data-aos='fade-up')  
               +download-btn.button--wide--mobile
                 |Скачать все документы

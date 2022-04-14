@@ -3,6 +3,8 @@
   &__top {
 
     margin-bottom: getRem(40px);
+    position: relative;
+    z-index: 1;
 
     display: flex;
     justify-content: space-between;

@@ -12,41 +12,45 @@ block content
         +breadcrumbs(page = "Рекламная поддержка")
         .section__inner 
           h1 
-            |Рекламная поддержка
+            |#[span.word-span #[span(data-aos='fade-up') Рекламная поддержка]]
     section.section 
       .container 
         +nav(items = ['Условия сотрудничества', 'Рекламная поддержка', ] active = 1)
         .cooperation-page__selects 
           .section__selects
-            .section__select 
+            .section__select(data-aos='fade-up') 
               +select(options = ['qwe', 'zxc', 'asd'] placeholder = 'Категория материалов')
         .section__block 
           .docs-page__block
             .docs-page__block-item
-              .docs-page__top 
-                h4 
+              .docs-page__top(data-aos='fade-up')
+                h4
                   |Каталоги
-                .docs-page__top-button 
+                .docs-page__top-button(data-aos='fade-up') 
                   +download-btn
                     |Скачать все документы
               .docs-page__grid 
                 - for (i = 0; i < 2; i++)
-                  +docs-img(img = 'docs-pert.webp')
-                  +docs-img(img = 'docs-blockfire.webp')
+                  .aos(data-aos='fade-up')
+                    +docs-img(img = 'docs-pert.webp')
+                  .aos(data-aos='fade-up')
+                    +docs-img(img = 'docs-blockfire.webp')
             .docs-page__block-item
-              .docs-page__top 
-                h4 
+              .docs-page__top(data-aos='fade-up') 
+                h4
                   |Демо-боксы
               .docs-page__grid 
                 - for (i = 0; i < 3; i++)
-                  +docs-img(img = 'docs-card.webp')
+                  .aos(data-aos='fade-up')
+                    +docs-img(img = 'docs-card.webp')
             .docs-page__block-item
-              .docs-page__top 
-                h4 
+              .docs-page__top(data-aos='fade-up') 
+                h4
                   |Демо-боксы
               .docs-page__grid 
                 - for (i = 0; i < 2; i++)
-                  +docs-img(img = 'docs-card.webp')
-            .docs-page__button 
+                  .aos(data-aos='fade-up')
+                    +docs-img(img = 'docs-card.webp')
+            .docs-page__button(data-aos='fade-up') 
               +download-btn.button--wide--mobile
                 |Скачать все документы

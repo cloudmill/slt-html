@@ -26,18 +26,18 @@ block content
         +breadcrumbs(page = "Объекты")
         .section__inner 
           h1 
-            |Объекты
+            |#[span.word-span #[span(data-aos='fade-up') Объекты]]
     section.section
       .container
         .objects-page__top
-          .objects-page__top-button(data-menu-button='')
+          .objects-page__top-button(data-menu-button='' data-aos='fade-up')
             .objects-page__top-text 
               |Фильтр
             .objects-page__top-icon 
               +plus-svg.objects-page__top-svg
           .objects-page__top-grid
             each item in ddata
-              .objects-page__top-item
+              .objects-page__top-item(data-aos='fade-up')
                 .select-custom(data-accordion='')
                   .select-custom__button(data-accordion-button='')
                     .select-custom__text 
@@ -69,16 +69,17 @@ block content
                     +close-svg.category-list__svg
               ul.category-list__list(data-catalog-list='')
         .section__block
-          .objects-page__grid 
+          .objects-page__grid
             - for (i = 0; i < 12; i++)
-              a.objects-page__card(href="#")
-                .objects-page__card-container
-                  .objects-page__card-img-container
-                    img.objects-page__card-img(src="assets/images/objects-1.webp", alt="")
-                  .objects-page__card-category 
-                    |Жилой комплекс
-                .objects-page__card-title 
-                  |ЖК Апарт-отель YE’S
-                .objects-page__card-text 
-                  |Санкт-Петербург
+              .objects-page__grid-item(data-aos='fade-up') 
+                a.objects-page__card(href="#")
+                  .objects-page__card-container
+                    .objects-page__card-img-container
+                      img.objects-page__card-img(src="assets/images/objects-1.webp", alt="")
+                    .objects-page__card-category 
+                      |Жилой комплекс
+                  .objects-page__card-title 
+                    |ЖК Апарт-отель YE’S
+                  .objects-page__card-text 
+                    |Санкт-Петербург
   +objects-menu

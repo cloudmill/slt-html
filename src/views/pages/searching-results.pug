@@ -12,20 +12,20 @@ block content
         +breadcrumbs( page = "Результаты поиска")
         .events-page__inner 
           h1 
-            |Результаты поиска
+            |#[span.word-span #[span(data-aos='fade-up') Результаты поиска]]
 
-        .search-page__count
+        .search-page__count(data-aos='fade-up')
           |По запросу «
           span 123
           |» найдено результатов: 
           span 0
 
-        .search-page__input
+        .search-page__input(data-aos='fade-up')
           +input(type='text' placeholder='Поиск')
           +link-right
             |Поиск
 
-        .search-page-tabs
+        .search-page-tabs(data-aos='fade-up')
           .search-page-tabs__item.is-active Продукция
             sup 20
           .search-page-tabs__item События
@@ -36,13 +36,14 @@ block content
 
           .catalog-page__grid.search-body-item.is-active
             - for (i = 0; i < 8; i++)
-              +card
+              .aos(data-aos='fade-up')
+                +card
 
           ul.events-page__events.search-body-item
             - for (i = 0; i < 5; i++)
               li.events-page__events-item 
                 a.events-page__event(href="#") 
-                  .events-page__event-container 
+                  .events-page__event-container(data-aos='fade-up') 
                     .events-page__event-row 
                       .events-page__event-col
                         .events-page__event-content 
@@ -59,6 +60,6 @@ block content
                         .events-page__event-image 
                           img(src="assets/images/event-1.webp", alt="")
 
-          .search-body-item
+          .search-body-item(data-aos='fade-up')
             .search-empty
               +search-empty-svg

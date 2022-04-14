@@ -3,7 +3,7 @@ include ./slider-buttons
 
 mixin about-slider 
   .container
-    .about-page__slider(data-about-slider='')
+    .about-page__slider(data-about-slider='' data-aos='fade-up')
       .about-page__slider-top
         .about-page__slider-col
           .about-page__slider-bar
@@ -42,7 +42,7 @@ mixin about-slider
                   img.about-page__slider-img(src=`assets/images/about-slide-${i+1}.webp`, alt="")
 
 mixin about-bot 
-  .about-bot(class=attributes.class)
+  .about-bot(class=attributes.class data-aos='fade-up')
     .about-bot__item 
       a.about-bot__card(href="#")
         .about-bot__container 

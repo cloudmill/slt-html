@@ -34,8 +34,8 @@ block content
       .container 
         .main-page__hero-row
           .main-page__hero-col
-            h1.words
-              |#[span.words__span #[span(data-aos='fade-up') Производство]] #[span.words__span #[span(data-aos='fade-up') полимерных]] #[span.words__span #[span(data-aos='fade-up') трубопроводных]] #[span.words__span #[span(data-aos='fade-up') систем]] 
+            h1
+              |#[span.word-span #[span(data-aos='fade-up') Производство]] #[span.word-span #[span(data-aos='fade-up') полимерных]] #[span.word-span #[span(data-aos='fade-up') трубопроводных]] #[span.word-span #[span(data-aos='fade-up') систем]] 
           .main-page__hero-col(data-aos='fade-up')
             +link-right
               |О компании
@@ -59,12 +59,12 @@ block content
           .main-page__cooperation-top
             .main-page__cooperation-row 
               .main-page__cooperation-col
-                h3.main-page__cooperation-title 
-                  |Развитая логистическая инфраструктура позволяет доставлять продукцию #[br] в самые отдаленные регионы #[span.main-page__cooperation-span России и страны СНГ]
+                h3.main-page__cooperation-title
+                  |#[span.word-span #[span(data-aos='fade-up') Развитая]] #[span.word-span #[span(data-aos='fade-up') логистическая]] #[span.word-span #[span(data-aos='fade-up') инфраструктура]] #[span.word-span #[span(data-aos='fade-up') позволяет]] #[span.word-span #[span(data-aos='fade-up') доставлять]] #[span.word-span #[span(data-aos='fade-up') продукцию]] #[br] #[span.word-span #[span(data-aos='fade-up') в самые]] #[span.word-span #[span(data-aos='fade-up') отдаленные]] #[span.word-span #[span(data-aos='fade-up') регионы]] #[span.main-page__cooperation-span #[span.word-span #[span(data-aos='fade-up') России и страны СНГ]]]
               .main-page__cooperation-col
-                p.main-page__cooperation-text 
+                p.main-page__cooperation-text(data-aos='fade-up') 
                   |Мы активно сотрудничаем с торговыми компаниями, проектными, монтажными и строительными организациями
-          .main-page__cooperation-bot
+          .main-page__cooperation-bot(data-aos='fade-up')
             +link-right.button--color-white 
               |Сотрудничество
     section.section.section--overflow(data-parallax-container='1')
@@ -72,15 +72,15 @@ block content
         .main-page__top
           .main-page__top-row 
             .main-page__top-col
-              h3.main-page__title 
-                |Продукция СЛТ Аква на объектах
+              h3.main-page__title
+                |#[span.word-span #[span(data-aos='fade-up') Продукция]] #[span.word-span #[span(data-aos='fade-up') СЛТ Аква]] #[span.word-span #[span(data-aos='fade-up') на объектах]]
             .main-page__top-col
-              p.main-page__top-text 
+              p.main-page__top-text(data-aos='fade-up')
                 |Наши трубопроводные системы установлены на многих объектах строительства жилого, общественного и промышленного назначения
-          .main-page__top-button 
+          .main-page__top-button(data-aos='fade-up') 
             +link-right 
               |Все объекты
-        .main-page__slider
+        .main-page__slider(data-aos='fade-up')
           .main-page__slider-desktop
             .template
               .template__slides
@@ -117,13 +117,13 @@ block content
                           |#{item.title}
     section.section
       .container 
-        h3.main-page__title 
-          |Помощь в инженерных расчетах
+        h3.main-page__title
+          |#[span.word-span #[span(data-aos='fade-up') Помощь]] #[span.word-span #[span(data-aos='fade-up') в инженерных]] #[span.word-span #[span(data-aos='fade-up') расчетах]]
         .section__block(data-parallax-container='2') 
           .main-page__calculator 
             each item, i in ['Расчет компенсаторов #[br] для систем SLT AQUA', 'Расчет компенсаторов #[br] для систем BLOCKFIRE', 'Расчета удельных гидравлических потерь трубопроводов  SLT AQUA']
               a.main-page__calculator-link(href="#" class=(i === 1 ? 'red' : 'blue'))
-                .main-page__calculator-col
+                .main-page__calculator-col(data-aos='fade-up')
                   .main-page__calculator-icon
                     +button-icon.button-icon--white
                   .main-page__calculator-title 

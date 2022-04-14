@@ -25,12 +25,12 @@ block content
         .about-page__intro(data-decrease-container='')
           .about-page__intro-row 
             .about-page__intro-col
-              .about-page__intro-title 
-                |Работа у нас
+              h1.about-page__intro-title 
+                |#[span.word-span #[span(data-aos='fade-up') Работа у нас]]
             .about-page__intro-col
-              p.about-page__intro-text 
+              p.about-page__intro-text(data-aos='fade-up') 
                 |Команда СЛТ Аква — ключевой актив компании. #[br] Мы создаем условия, в которых каждый сотрудник компании может раскрыть свои таланты, самореализоваться, непрерывно развиваться.
-          .about-page__intro-container
+          .about-page__intro-container(data-aos='fade-up')
             .about-page__intro-image
               img.about-page__intro-img(src="assets/images/about-work.jpg", alt=""  data-parallax='w2')
               img.about-page__intro-mobile(src="assets/images/about-work-mobile.webp", alt="" data-parallax='w2')
@@ -41,12 +41,12 @@ block content
         .section__wrapper 
           .section__row 
             .section__col 
-              h5.about-page__label 
+              h5.about-page__label(data-aos='fade-up') 
                 |ВСЕ ЛУЧШИЕ — НАШИ!
             .section__col
               ul.about-page__list 
                 each item in ['Как компания мы #[span.about-page__list-span надежный] поставщик и партнер', 'Как производитель мы устанавливаем высокие стандарты #[span.about-page__list-span качества] для нашей продукции', 'Как команда мы ценим #[span.about-page__list-span профессионализм] коллег и готовность делать больше, чем от тебя ожидают', 'Как социальная система мы несем полную #[span.about-page__list-span ответственность] перед своими сотрудниками, партнерами и потребителями', 'Как производственная организация мы следим за #[span.about-page__list-span технологическими] разработками и используем только передовое оборудование и сырье']
-                  li.about-page__list-item 
+                  li.about-page__list-item(data-aos='fade-up')
                     h4
                       |#{item}
     section.section.section--hidden--mobile
@@ -56,33 +56,33 @@ block content
         .section__wrapper 
           .section__row 
             .section__col
-              h5.about-page__label 
+              h5.about-page__label(data-aos='fade-up') 
                 |Условия
             .section__col
               h2.about-page__heading 
-                |Офис в Москве
+                |#[span.word-span #[span(data-aos='fade-up') Офис в Москве]]
               .about-page__section-grid 
                 each item in ['Слаженная команда профессионалов', 'Комфортный офис класс А с зоной Coffee Point в БЦ Melnikoff House (в пешей доступности от м. Комсомольская/Бауманская)', 'Полный пакет технического и программного обеспечения для продуктивной работы', 'Компенсация мобильной связи', 'Участие в семинарах и тренингах по повышению квалификации', 'Официальное трудоустройство согласно ТК РФ', 'Пятидневная рабочая неделя 9:00 – 18:00 (комбинированный формат работы удаленно/офис)', 'Ежегодный оплачиваемый отпуск — 28 календарных дней ', 'Выплата заработной платы всегда в срок (2 раза в месяц)', 'Перспективы карьерного роста', 'Корпоративные праздники и новогодние подарки для детей сотрудников']
-                  .about-page__section-item 
+                  .about-page__section-item(data-aos='fade-up')
                     |#{item}
               .section
                 h2.about-page__heading 
-                  |Производство в Тольятти
+                  |#[span.word-span #[span(data-aos='fade-up') Производство в Тольятти]]
                 .about-page__section-grid 
                   each item in ['Слаженная команда профессионалов', 'Завод располагается на территории индустриального парка «Тольяттисинтез»', 'Компенсация мобильной связи', 'Бесплатные обеды', 'В зависимости от категории задач выдается рабочая одежда', 'Участие в семинарах и тренингах по повышению квалификации', 'Официальное трудоустройство согласно ТК РФ', 'Пятидневная рабочая неделя 9:00 – 18:00', 'Ежегодный оплачиваемый отпуск — 28 календарных дней', 'Выплата заработной платы всегда в срок (2 раза в месяц)', 'Перспективы карьерного роста', 'Корпоративные праздники и новогодние подарки для детей сотрудников']
-                    .about-page__section-item 
+                    .about-page__section-item(data-aos='fade-up')
                       |#{item}
     section.section 
       .about-page__vacancies
         .container
           .section__row 
             .section__col
-              h5.about-page__label 
+              h5.about-page__label(data-aos='fade-up') 
                 |Открытые вакансии
             .section__col
               ul.about-page__vacancies-page__list
                 - for (i = 0; i < 2; i++)
-                  li.about-page__vacancies-item 
+                  li.about-page__vacancies-item(data-aos='fade-up') 
                     +accordion
     section.section.section--default
       +about-bot

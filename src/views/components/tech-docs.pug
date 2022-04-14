@@ -3,8 +3,8 @@ include ./button-icon
 mixin tech-docs 
   a.tech-docs(href="#") 
     .tech-docs__container 
-      h3.tech-docs__title 
-        |Техническая документация
+      h3.tech-docs__title
+        |#[span.word-span #[span(data-aos='fade-up') Техническая]] #[span.word-span #[span(data-aos='fade-up') документация]]
       .tech-docs__wrapper
         +button-icon.button-icon--white
       .tech-docs__bg 
@@ -20,11 +20,11 @@ mixin tech-docs
             +tech-svg.tech-docs__img
 
 mixin follow
-  .tech-docs
+  .tech-docs.tech-docs--follow
     .tech-docs__container 
       h2.tech-docs__caption
-        |Техническая документация
-      form.tech-docs__form(action="/" data-parsley-validate)
+        |#[span.word-span #[span(data-aos='fade-up') Подпишитесь]] #[span.word-span #[span(data-aos='fade-up') на СЛТ Аква]]
+      form.tech-docs__form(action="/" data-parsley-validate data-form='follow')
         input#input.tech-docs__input(type="email" placeholder='E-mail*' required) 
         .tech-docs__button 
           button.tech-docs__btn 

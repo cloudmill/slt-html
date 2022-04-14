@@ -15,7 +15,7 @@ block content
         +breadcrumbs( page = "Контакты")
         .events-page__inner 
           h1 
-            |Контакты
+            |#[span.word-span #[span(data-aos='fade-up') Контакты]]
     section.section
       .container 
         .contacts-white-row
@@ -24,21 +24,21 @@ block content
 
             .footer__contacts
 
-              .footer__contacts-item 
+              .footer__contacts-item(data-aos='fade-up')
                 .footer__label.footer__label--sm
                   |По вопросам сотрудничества
                 a.footer__mail(href="mailto:info@slt-aqua.ru") 
                   h4
                     |info@slt-aqua.ru
                     
-              .footer__contacts-item 
+              .footer__contacts-item(data-aos='fade-up')
                 .footer__label.footer__label--sm
                   |Для заявок на продукцию
                 a.footer__mail(href="mailto:order@slt-aqua.ru") 
                   h4
                     |order@slt-aqua.ru
 
-            .footer__socials 
+            .footer__socials(data-aos='fade-up') 
               a.footer__socials-item(href="#")
                 .footer__socials-container
                   +facebook-svg.footer__socials-svg
@@ -46,7 +46,7 @@ block content
                 .footer__socials-container
                   +instagram-svg.footer__socials-svg
 
-          .contacts-white-row__right-col
+          .contacts-white-row__right-col(data-aos='fade-up')
 
             a.contacts-mail-box(href="")
               h6.only-desktop Отправить заявку #[br] на тендер
@@ -66,7 +66,7 @@ block content
 
         .contacts-grey-row
 
-          .contacts-card
+          .contacts-card(data-aos='fade-up')
 
             .contacts-card__top
 
@@ -82,7 +82,7 @@ block content
                 .contacts-card__txt-ttl Телефон
                 |8 800 444-72-37
 
-          .contacts-card
+          .contacts-card(data-aos='fade-up')
 
             .contacts-card__top
 
@@ -105,7 +105,7 @@ block content
                 .contacts-card__txt-ttl Координаты для навигатора
                 |-33.8, 151.21
 
-          .contacts-card
+          .contacts-card(data-aos='fade-up')
 
             .contacts-card__top
 
@@ -139,20 +139,20 @@ block content
         .contacts-block
 
           .contacts-form
-            h2.vacancies-modal__title
-              |Связаться с нами
+            h2.contacts-form__title
+              |#[span.word-span #[span(data-aos='fade-up') Связаться с нами]]
             form.form(action="/" data-parsley-validate) 
               each item in ddata
-                .form__item 
+                .form__item(data-aos='fade-up') 
                   +input#input(type = item.type placeholder = item.placeholder required)
 
-              .form__item 
+              .form__item(data-aos='fade-up') 
                   +input#input(type="tel" placeholder="Телефон*" required data-tel-input)
 
-              .form__item 
+              .form__item(data-aos='fade-up') 
                 +textarea#input(placeholder="Комментарий")
 
-              .form-bottom
+              .form-bottom(data-aos='fade-up')
 
                 .form__inner 
                   +checkbox(id="checkbox" required="")
@@ -162,9 +162,9 @@ block content
                     |Отправить
 
           .contacts-requisites
-            h2 Наши реквизиты
+            h2 #[span.word-span #[span(data-aos='fade-up') Наши реквизиты]]
 
-            .contacts-requisites__txt
+            .contacts-requisites__txt(data-aos='fade-up')
               |ИНН 7728894116
               br
               |КПП 632401001
@@ -180,9 +180,9 @@ block content
               |к/с 30101810345250000460
               br
               |БИК 044525460
-
-            +download-btn.button--wide--mobile
-              |Скачать файлом
+            .aos(data-aos='fade-up')
+              +download-btn.button--wide--mobile
+                |Скачать файлом
 
   +contacts-modal1
   +contacts-modal2

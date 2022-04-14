@@ -1,5 +1,5 @@
 mixin card 
-  a.card(href="#")
+  a.card(href="#" data-aos='fade-up')
     .card__category 
       .card__item(title='Соединение')
         +use-svg.card__svg
@@ -7,7 +7,7 @@ mixin card
         +connect-svg.card__svg
       .card__item(title='Питьевая вода') 
         +water-svg.card__svg
-    .card__containe
+    .card__container
       img(src="assets/images/card-1.webp", alt="")
     .card__bot 
       .card__title 

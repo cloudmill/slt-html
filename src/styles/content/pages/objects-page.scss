@@ -207,6 +207,13 @@
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: getRem(28px);
     }
+
+    @include fsl(60px, 100%);
+    letter-spacing: -2px;
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(24px, 120%);
+      letter-spacing: -1px; 
+    }
   }
 
   &__label {

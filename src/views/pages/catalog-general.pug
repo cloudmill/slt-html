@@ -28,10 +28,10 @@ block content
         .section__inner
           .catalog-page__top 
             .catalog-page__top-left
-              h1 
-                |Каталог
+              h1
+                |#[span.word-span #[span(data-aos='fade-up') Каталог]]
             .catalog-page__desktop
-              .catalog-page__top-buttons 
+              .catalog-page__top-buttons(data-aos='fade-up') 
                 .catalog-page__top-item 
                   +download-btn.button--wide--mobile
                     |Скачать каталог в PDF
@@ -40,7 +40,7 @@ block content
                     |Информационные материалы
     section.section
       .container
-        .catalog-page__mobile 
+        .catalog-page__mobile(data-aos='fade-up')
           .catalog-page__top-buttons 
             .catalog-page__top-item 
               +download-btn.button--wide--mobile
@@ -52,37 +52,33 @@ block content
           .catalog-page__products-item.blue
             .catalog-page__products-row 
               .catalog-page__products-col
-                .catalog-page__products-title 
-                  |SLT AQUA
-                .catalog-page__products-caption 
+                h2.catalog-page__products-title 
+                  |#[span.word-span #[span(data-aos='fade-up') SLT]] #[span.word-span #[span(data-aos='fade-up') AQUA]]
+                .catalog-page__products-caption(data-aos='fade-up') 
                   |Полипропиленовые трубопроводные системы для водоснабжения и отопления
                 .catalog-page__desktop
-                  .catalog-page__products-btn 
+                  .catalog-page__products-btn(data-aos='fade-up') 
                     +link-right 
                       |Вся продукция
               .catalog-page__products-col
                 .catalog-page__benefits
                   .catalog-page__benefits-col 
                     h3.catalog-page__benefits-num 
-                      |10
-                      span.catalog-page__benefits-span 
-                        |лет
-                    .catalog-page__benefits-text 
+                      |#[span.word-span #[span(data-aos='fade-up') 10] #[span.catalog-page__benefits-span(data-aos='fade-up') лет]]
+                    .catalog-page__benefits-text(data-aos='fade-up') 
                       |Гарантийный срок
                   .catalog-page__benefits-col 
-                    h3.catalog-page__benefits-num 
-                      |50+
-                      span.catalog-page__benefits-span 
-                        |лет
-                    .catalog-page__benefits-text 
+                    h3.catalog-page__benefits-num
+                      |#[span.word-span #[span(data-aos='fade-up') 50+] #[span.catalog-page__benefits-span(data-aos='fade-up') лет]]
+                    .catalog-page__benefits-text(data-aos='fade-up') 
                       |Гарантийный срок
                 .catalog-page__mobile
-                  .catalog-page__products-btn 
+                  .catalog-page__products-btn(data-aos='fade-up') 
                     +link-right 
                       |Вся продукция
             .catalog-page__products-bot
               .catalog-page__products-container 
-                a.catalog-page__card(href="#") 
+                a.catalog-page__card(href="#" data-aos='fade-up') 
                   .catalog-page__card-container 
                     .catalog-page__card-icon 
                       +big-arrow-svg.catalog-page__card-svg
@@ -91,7 +87,7 @@ block content
                   .catalog-page__card-img 
                     img(src="assets/images/catalog-product.webp", alt="")
                 each img in [1, 3, 4, 5, 6]
-                  a.catalog-page__card(href="#") 
+                  a.catalog-page__card(href="#" data-aos='fade-up') 
                     .catalog-page__card-container 
                       .catalog-page__card-icon 
                         +big-arrow-svg.catalog-page__card-svg
@@ -103,38 +99,34 @@ block content
             .catalog-page__products-item(class=item.class)
               .catalog-page__products-row 
                 .catalog-page__products-col
-                  .catalog-page__products-title 
-                    |#{item.title}
-                  .catalog-page__products-caption 
+                  h2.catalog-page__products-title 
+                    |#[span.word-span #[span(data-aos='fade-up') #{item.title}]]
+                  .catalog-page__products-caption(data-aos='fade-up') 
                     |#{item.text}
                   .catalog-page__desktop
-                    .catalog-page__products-btn 
+                    .catalog-page__products-btn(data-aos='fade-up')
                       +link-right(class=item.button)
                         |Вся продукция
                 .catalog-page__products-col
                   .catalog-page__benefits
                     .catalog-page__benefits-col 
                       h3.catalog-page__benefits-num 
-                        |10
-                        span.catalog-page__benefits-span 
-                          |лет
-                      .catalog-page__benefits-text 
+                        |#[span.word-span #[span(data-aos='fade-up') 10] #[span.catalog-page__benefits-span(data-aos='fade-up') лет]]
+                      .catalog-page__benefits-text(data-aos='fade-up') 
                         |Гарантийный срок
                     .catalog-page__benefits-col 
-                      h3.catalog-page__benefits-num 
-                        |50+
-                        span.catalog-page__benefits-span 
-                          |лет
-                      .catalog-page__benefits-text 
+                      h3.catalog-page__benefits-num
+                        |#[span.word-span #[span(data-aos='fade-up') 50+] #[span.catalog-page__benefits-span(data-aos='fade-up') лет]]
+                      .catalog-page__benefits-text(data-aos='fade-up') 
                         |Гарантийный срок
                   .catalog-page__mobile
-                    .catalog-page__products-btn 
+                    .catalog-page__products-btn(data-aos='fade-up') 
                       +link-right 
                         |Вся продукция
               .catalog-page__products-bot
                 .catalog-page__products-container 
                   each img in item.items
-                    a.catalog-page__card(href="#") 
+                    a.catalog-page__card(href="#" data-aos='fade-up') 
                       .catalog-page__card-container 
                         .catalog-page__card-icon 
                           +big-arrow-svg.catalog-page__card-svg
@@ -145,18 +137,18 @@ block content
           .catalog-page__products-item
             .catalog-page__products-row 
               .catalog-page__products-col
-                .catalog-page__products-title 
-                  |Инструменты
-                .catalog-page__products-caption 
+                h2.catalog-page__products-title 
+                  |#[span.word-span #[span(data-aos='fade-up') Инструменты]]
+                .catalog-page__products-caption(data-aos='fade-up') 
                   |Для монтажа полимерных трубопроводных систем
-                .catalog-page__products-button 
+                .catalog-page__products-button(data-aos='fade-up')
                   +link-right.button--black
                     |Вся продукция
               .catalog-page__products-col
                 .catalog-page__products-wrapper
                   .catalog-page__products-container 
                     each img in ['tool-1', 'tool-2', 'tool-3']
-                      a.catalog-page__card(href="#") 
+                      a.catalog-page__card(href="#" data-aos='fade-up') 
                         .catalog-page__card-container 
                           .catalog-page__card-icon 
                             +big-arrow-svg.catalog-page__card-svg

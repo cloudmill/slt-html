@@ -16,6 +16,14 @@
     }
   }
 
+  &--follow {
+    #{$comp}__bg {
+      @media (max-width: ($breakpoint - 1px)) {
+        display: none;
+      }
+    }
+  }
+
   &__container {
     padding: getRem(40px);
     @media (max-width: ($breakpoint - 1px)) {

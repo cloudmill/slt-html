@@ -319,35 +319,35 @@ block content
         .catalog-page__row 
           .catalog-page__col
             h3  
-              |Труба SLT AQUA PP-R SDR 7,4
-            p.catalog-page__text 
+              |#[span.word-span #[span(data-aos='fade-up') Труба]] #[span.word-span #[span(data-aos='fade-up') SLT AQUA]] #[span.word-span #[span(data-aos='fade-up') PP-R SDR 7,4]]
+            p.catalog-page__text(data-aos='fade-up') 
               |Труба однослойная напорная полипропиленовая PN10 (SDR 11) предназначена для систем холодного и питьевого водоснабжения, а также технологических трубопроводов, транспортирующих жидкости и газы, не агрессивные к материалам трубы.
-            .catalog-page__button
+            .catalog-page__button(data-aos='fade-up')
               .button.button-animate(data-scroll='#order')
                 .button__text
                   span
                     |Сделать заказ
                 .button__icon 
                   +big-arrow-svg.button__svg
-          .catalog-page__col
+          .catalog-page__col(data-aos='fade-up')
             img.catalog-page__img(src="assets/images/catalog-1.jpg", alt="")
           .catalog-page__col
-            .catalog-page__label 
+            .catalog-page__label(data-aos='fade-up') 
               |Применение
             ul.catalog-page__types 
-              li.catalog-page__types-item
+              li.catalog-page__types-item(data-aos='fade-up')
                 .catalog-page__type 
                   .catalog-page__type-icon 
                     +use-svg.catalog-page__type-svg
                   .catalog-page__type-text 
                     |Соединение
-              li.catalog-page__types-item
+              li.catalog-page__types-item(data-aos='fade-up')
                 .catalog-page__type 
                   .catalog-page__type-icon 
                     +use-svg.catalog-page__type-svg
                   .catalog-page__type-text 
                     |Соединение
-              li.catalog-page__types-item
+              li.catalog-page__types-item(data-aos='fade-up')
                 .catalog-page__type 
                   .catalog-page__type-icon 
                     +use-svg.catalog-page__type-svg
@@ -357,7 +357,7 @@ block content
       .container
         .catalog-page__container 
           .table 
-            .table__grid
+            .table__grid(data-aos='fade-up')
               -
                 var top = [
                   {
@@ -408,7 +408,7 @@ block content
                       li.table__list-item 
                         .table__text 
                           |#{text}
-            .table__mobile
+            .table__mobile(data-aos='fade-up')
               each item in tableMobile 
                 if (item.top)
                   .table__top 
@@ -429,7 +429,7 @@ block content
     section.section 
       .container 
         h3.catalog-page__heading
-          |Характеристики
+          |#[span.word-span #[span(data-aos='fade-up') Характеристики]]
         ul.catalog-page__list
           -
             var list = [
@@ -445,7 +445,7 @@ block content
               {label: 'Срок службы', text: 'Более 50 лет'},
             ] 
           each item in list
-            li.catalog-page__list-item 
+            li.catalog-page__list-item(data-aos='fade-up') 
               .catalog-page__list-row 
                 .catalog-page__list-col
                   .catalog-page__list-label 
@@ -458,12 +458,12 @@ block content
         .row 
           .row__col
             h3 
-              |Сделать заказ
+              |#[span.word-span #[span(data-aos='fade-up') Сделать]] #[span.word-span #[span(data-aos='fade-up') заказ]]
           .row__col
-            p.catalog-page__caption 
+            p.catalog-page__caption(data-aos='fade-up') 
               |Здесь вы можете сформировать список требуемых товаров. Наши менеджеры обработают заказ, рассчитают стоимость, найдут подходящего по всем параметрам поставщика и отправят вам коммерческое предложение.
         .catalog-page__colors 
-          .catalog-page__colors-item 
+          .catalog-page__colors-item(data-aos='fade-up') 
             .catalog-page__colors-text 
               |Цветовое #[br] исполнение
             .catalog-page__colors-icon.active
@@ -480,7 +480,7 @@ block content
                   |#{item}
             .catalog-page__table-body 
               - for (i = 0; i < 15; i++)
-                .catalog-page__table-item 
+                .catalog-page__table-item(data-aos='fade-up')
                   each item in ['25×20', 'SLTFM32520', '50', '500', 'last']
                     if (item == "last")
                       .catalog-page__table-cell
@@ -506,7 +506,7 @@ block content
                   {label: "Количество в коробке, шт", text: "500"},
                 ]
               - for (i = 0; i < 12; i++)
-                li.catalog-page__block-item 
+                li.catalog-page__block-item(data-aos='fade-up') 
                   .catalog-page__block-top 
                     .catalog-page__block-cell 
                       .catalog-page__block-label 

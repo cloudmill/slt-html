@@ -14,8 +14,8 @@ block content
         +breadcrumbs(page = "Заказ")
         .section__inner 
           h1.order-page__heading
-            |Заказ оформлен
-          .order-page__caption 
+            |#[span.word-span #[span(data-aos='fade-up') Заказ оформлен]]
+          .order-page__caption(data-aos='fade-up') 
             |Наши менеджеры обработают заказ, рассчитают стоимость, найдут подходящего по всем параметрам поставщика и отправят вам коммерческое предложение.
-    section.order-page__section
+    section.order-page__section(data-aos='fade-up')
       +order-ready-svg.order-page__section-icon

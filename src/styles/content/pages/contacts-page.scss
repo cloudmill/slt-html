@@ -205,6 +205,13 @@
   @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
   }
+
+  &__title {
+    margin-bottom: getRem(60px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(24px);
+    }
+  }
 }
 
 .form-bottom {

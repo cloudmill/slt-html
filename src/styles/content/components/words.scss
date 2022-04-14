@@ -1,14 +1,12 @@
-.words {
+.word-span {
+  padding: 10px 5px;
+  margin: -10px -5px;
 
-  &__span {
-    padding: 10px 0;
-    margin: -10px 0;
-
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  
+  span {
     display: inline-block;
-    overflow: hidden;
-    
-    span {
-      display: inline-block;
-    }
   }
 }

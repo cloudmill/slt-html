@@ -76,6 +76,13 @@
     }
   }
 
+  &--noborder {
+
+    #{$comp}__list {
+      border-bottom: none;
+    }
+  }
+
   &__list {
     padding-bottom: getRem(10px);
 

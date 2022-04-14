@@ -12,13 +12,7 @@ import '@fancyapps/fancybox';
       '<div class="fancybox-stage"></div>' +
       '</div>'
     );
-    $.fancybox.defaults.afterShow = function(instance, slide) {
-      $(slide.src).closest('.fancybox-slide--current').addClass('open')
-      $(slide.src).addClass('active')
-    }
-    $.fancybox.defaults.beforeClose = function(instance, slide) {
-      $(slide.src).removeClass('active')
-    }
+    
 
     $('[data-fancy-button]').on('click', function (event) {
       event.preventDefault();
@@ -28,19 +22,47 @@ import '@fancyapps/fancybox';
       switch (id) {
         case 'work1':
           $.fancybox.defaults.animationEffect = 'left'
-          $.fancybox.defaults.animationDuration = 500
+          $.fancybox.defaults.animationDuration = 800
+          $.fancybox.defaults.afterShow = function(instance, slide) {
+            $(slide.src).closest('.fancybox-container').addClass('open')
+            $(slide.src).addClass('active')
+          }
+          $.fancybox.defaults.beforeClose = function(instance, slide) {
+            $(slide.src).removeClass('active')
+          }
           break
         case 'c1':
           $.fancybox.defaults.animationEffect = 'left'
-          $.fancybox.defaults.animationDuration = 500
+          $.fancybox.defaults.animationDuration = 800
+          $.fancybox.defaults.afterShow = function(instance, slide) {
+            $(slide.src).closest('.fancybox-container').addClass('open')
+            $(slide.src).addClass('active')
+          }
+          $.fancybox.defaults.beforeClose = function(instance, slide) {
+            $(slide.src).removeClass('active')
+          }
           break
         case 'call':
           $.fancybox.defaults.animationEffect = 'left'
-          $.fancybox.defaults.animationDuration = 500
+          $.fancybox.defaults.animationDuration = 800
+          $.fancybox.defaults.afterShow = function(instance, slide) {
+            $(slide.src).closest('.fancybox-container').addClass('open')
+            $(slide.src).addClass('active')
+          }
+          $.fancybox.defaults.beforeClose = function(instance, slide) {
+            $(slide.src).removeClass('active')
+          }
           break
         case 'search':
           $.fancybox.defaults.animationEffect = 'top'
-          $.fancybox.defaults.animationDuration = 500
+          $.fancybox.defaults.animationDuration = 800
+          $.fancybox.defaults.afterShow = function(instance, slide) {
+            $(slide.src).closest('.fancybox-container').addClass('open')
+            $(slide.src).addClass('active')
+          }
+          $.fancybox.defaults.beforeClose = function(instance, slide) {
+            $(slide.src).removeClass('active')
+          }
           break
         default:
           $.fancybox.defaults.closeExisting = true;

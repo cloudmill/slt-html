@@ -27,14 +27,14 @@ block content
         +breadcrumbs(page = "Расчет компенсаторов для систем SLT AQUA")
         .section__inner 
           h1
-            |Расчет удельных гидравлических #[br] потерь трубопроводов СЛТ Аква
-          .calculator-page__text 
+            |#[span.word-span #[span(data-aos='fade-up') Расчет удельных гидравлических]] #[br] #[span.word-span #[span(data-aos='fade-up') потерь трубопроводов СЛТ Аква]]
+          .calculator-page__text(data-aos='fade-up') 
             |С учетом местных сопротивлений по СП 40 102
     section.section
       .container 
         ul.calculator-page__list
           each item in ddata.list
-            li.calculator-page__list-item 
+            li.calculator-page__list-item(data-aos='fade-up') 
               .calculator-page__caption 
                 |#{item.caption}
               .calculator-page__list-text 
@@ -43,7 +43,7 @@ block content
           .calculator-page__calculate-col
             .calculator-page__calculate-grid
               each item in ddata.form
-                .calculator-page__calculate-item
+                .calculator-page__calculate-item(data-aos='fade-up')
                   .calculator-page__caption 
                     |#{item.text}
                   .calculator-page__features-inner 
@@ -51,11 +51,11 @@ block content
                       +select(options = ['D63 SDR 7,4', 'D64 SDR 7,4', 'D65 SDR 7,4', 'D66 SDR 7,4',])
                     else
                       +input#input(type = 'number' placeholder = '0') 
-              .calculator-page__calculate-label 
+              .calculator-page__calculate-label(data-aos='fade-up') 
                 |* Согласно СП 40-102-2000 «Примечание - Допускается  сумму местных потерь h м.с. принимать равной 20-30% суммы удельных потерь i»
             .section__block
               .calculator-page__block
-                .calculator-page__block-row
+                .calculator-page__block-row(data-aos='fade-up')
                   .calculator-page__block-col
                     .calculator-page__caption 
                       |Удельные потери по длине трубопровода без учета местных потерь, м/м
@@ -67,7 +67,7 @@ block content
                     .calculator-page__block-title 
                       |0,8778
                 .calculator-page__block-inner
-                  .calculator-page__block-row
+                  .calculator-page__block-row(data-aos='fade-up')
                     .calculator-page__block-col
                       .calculator-page__caption 
                         |Потери по длине трубопровода с учетом суммы местных потерь, м/м
@@ -77,11 +77,11 @@ block content
                 .calculator-page__block-inner
                   .calculator-page__block-row
                     .calculator-page__block-col
-                      .calculator-page__button
+                      .calculator-page__button(data-aos='fade-up')
                         +download-btn.button--wide--mobile
                           |Скачать расчет в PDF
           .calculator-page__calculate-col
-            .calculator-page__grid 
+            .calculator-page__grid(data-aos='fade-up') 
               .calculator-page__grid-heading 
                 .calculator-page__caption
                   |Диаметр
@@ -105,7 +105,7 @@ block content
                 each item, j in ['73,7174', '96,1133', '118,4716', '6,24482', '12,13625', '20,52237', ]
                   .calculator-page__grid-item(class=(i === 8 && j === 2 ? 'active' : ''))
                     |#{item}
-            .calculator-page__container
+            .calculator-page__container(data-aos='fade-up')
               .calculator-page__grid-mobile
                 .calculator-page__grid-heading 
                   .calculator-page__grid-caption

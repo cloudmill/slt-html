@@ -11,14 +11,14 @@ block content
         +breadcrumbs(page = "Расчет компенсаторов для систем SLT AQUA")
         .section__inner 
           h1
-            |Расчет компенсаторов #[br] для систем SLT AQUA
+            |#[span.word-span #[span(data-aos='fade-up') Расчет компенсаторов]] #[br] #[span.word-span #[span(data-aos='fade-up') для систем SLT AQUA]]
     section.section
       .container 
         +nav(items = ['Компенсационное колено', 'П-образный компенсатор', 'Петлевой компенсатор ', 'Сильфонный компенсатор',] active = 1)
         .section__block 
           .calculator-page__row 
             .calculator-page__col
-              .calculator-page__picture 
+              .calculator-page__picture(data-aos='fade-up') 
                 +calculator-2-svg.calculator-page__picture-svg
               .calculator-page__inner 
                 ul.calculator-page__description
@@ -32,7 +32,7 @@ block content
                       {label: 'ΔL', text: 'линейное расширение, мм'},
                     ]
                   each item in list
-                    li.calculator-page__description-item 
+                    li.calculator-page__description-item(data-aos='fade-up') 
                       .calculator-page__description-col
                         .calculator-page__label 
                           |#{item.label}
@@ -43,58 +43,58 @@ block content
               form.form(action="/") 
                 .calculator-page__features
                   .calculator-page__features-col
-                    .calculator-page__caption 
+                    .calculator-page__caption(data-aos='fade-up')
                       |Тип трубы
                     .calculator-page__features-inner 
                       ul.calculator-page__features-list#radio-group
                         each item in ['SLT AQUA PP-R', 'SLT AQUA PP-R-GF', 'SLT AQUA PP-R-AL']
-                          li.calculator-page__features-item 
+                          li.calculator-page__features-item(data-aos='fade-up') 
                             +radio-button(name = 'type' text = item)
                   .calculator-page__features-col
-                    .calculator-page__caption 
+                    .calculator-page__caption(data-aos='fade-up') 
                       |Внешний диаметр трубы D, мм
                     .calculator-page__features-inner 
                       .calculator-page__features-row#radio-group
                         ul.calculator-page__features-buttons 
                           each item in ['20', '25', '30']
-                            li.calculator-page__features-button 
+                            li.calculator-page__features-button(data-aos='fade-up')
                               +radio-button(name = 'diameter' text = item)
                         ul.calculator-page__features-buttons 
                           each item in ['40', '50', '63']
-                            li.calculator-page__features-button 
+                            li.calculator-page__features-button(data-aos='fade-up')
                               +radio-button(name = 'diameter' text = item)
                         ul.calculator-page__features-buttons 
                           each item in ['75', '90', '110']
-                            li.calculator-page__features-button 
+                            li.calculator-page__features-button(data-aos='fade-up')
                               +radio-button(name = 'diameter' text = item)
                   .calculator-page__features-col
-                    .calculator-page__caption 
+                    .calculator-page__caption(data-aos='fade-up')
                       |Длина участка компенсиции, м 
-                    .calculator-page__features-inner 
+                    .calculator-page__features-inner(data-aos='fade-up')
                       +input#input(type = 'number' placeholder = '0')
                 .section__block
                   .calculator-page__features
                     .calculator-page__features-col
-                      .calculator-page__caption 
+                      .calculator-page__caption(data-aos='fade-up') 
                         |Общая длина трубы, м
-                      .calculator-page__features-inner 
+                      .calculator-page__features-inner(data-aos='fade-up') 
                         +input#input(type = 'number' placeholder = '0')
                       .calculator-page__features-desc 
-                        .calculator-page__caption 
+                        .calculator-page__caption(data-aos='fade-up') 
                           |Lобщ = 2L
                     .calculator-page__features-col
-                      .calculator-page__caption 
+                      .calculator-page__caption(data-aos='fade-up') 
                         |Температура монтажа, °C
-                      .calculator-page__features-inner 
+                      .calculator-page__features-inner(data-aos='fade-up') 
                         +input#input(type = 'number' placeholder = '0')
                     .calculator-page__features-col
-                      .calculator-page__caption 
+                      .calculator-page__caption(data-aos='fade-up') 
                         |Температура эксплуатации, °C
-                      .calculator-page__features-inner 
+                      .calculator-page__features-inner(data-aos='fade-up') 
                         +input#input(type = 'number' placeholder = '0')
                 .section__block 
                   .calculator-page__block
-                    .calculator-page__block-row
+                    .calculator-page__block-row(data-aos='fade-up')
                       .calculator-page__block-col
                         h4 
                           |Прямой расчет
@@ -102,7 +102,7 @@ block content
                         .calculator-page__block-text 
                           |Один компенсатор на весь отрезок компенсации
                     .calculator-page__block-inner
-                      .calculator-page__block-row
+                      .calculator-page__block-row(data-aos='fade-up')
                         .calculator-page__block-col
                           .calculator-page__caption 
                             |Длина плеча компенсатора, мм
@@ -115,7 +115,7 @@ block content
                             |W#[span.calculator-page__block-span k]=156
                 .section__block 
                   .calculator-page__block
-                    .calculator-page__block-row
+                    .calculator-page__block-row(data-aos='fade-up')
                       .calculator-page__block-col
                         h4 
                           |Обратный расчет
@@ -123,7 +123,7 @@ block content
                         .calculator-page__block-text 
                           |Количество компенсаторов в зависимости от плеча компенсации
                     .calculator-page__block-inner
-                      .calculator-page__block-row
+                      .calculator-page__block-row(data-aos='fade-up')
                         .calculator-page__block-col
                           .calculator-page__caption 
                             |Требующаяся длина плеча компенсатора, мм
@@ -135,7 +135,7 @@ block content
                           .calculator-page__block-title 
                             |W#[span.calculator-page__block-span k]=156
                     .calculator-page__block-inner
-                      .calculator-page__block-row
+                      .calculator-page__block-row(data-aos='fade-up')
                         .calculator-page__block-col
                           .calculator-page__caption 
                             |Длина компенсируемого участка 1-м компенсатором, мм
@@ -147,7 +147,7 @@ block content
                           .calculator-page__block-title 
                             |K=10
                     .calculator-page__block-inner
-                      .calculator-page__block-row
+                      .calculator-page__block-row(data-aos='fade-up')
                         .calculator-page__block-col
                           .calculator-page__button
                             +download-btn.button--wide--mobile

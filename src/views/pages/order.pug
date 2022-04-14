@@ -21,12 +21,12 @@ block content
         +breadcrumbs(page = "Заказ")
         .section__inner 
           h1 
-            |Заказ
+            |#[span.word-span #[span(data-aos='fade-up') Заказ]]
     section.section 
       .container 
         .order-page__grid
           - for (i = 0; i < 4; i++) 
-            .order-page__card(data-order-card='')
+            .order-page__card(data-order-card='' data-aos='fade-up')
               .order-page__card-row 
                 .order-page__card-col
                   .order-page__card-content
@@ -71,7 +71,7 @@ block content
                     .order-page__card-label 
                       |Заказано, м
                     input.order-page__card-input(type = "number" value = "25")
-    .order-page__panel.hidden(data-order-panel='')
+    .order-page__panel.hidden(data-order-panel='' data-aos='fade-up')
       .order-page__panel-col
         h5.order-page__panel-title
           |Товарных позиций в заказе: 

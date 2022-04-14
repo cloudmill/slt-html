@@ -11,8 +11,8 @@ block content
       .container 
         +breadcrumbs( page = "Где купить")
         .events-page__inner 
-          h1 
-            |Где купить
+          h1
+            |#[span.word-span #[span(data-aos='fade-up') Где купить]]
     section.section
       .container
         .where-buy__top
@@ -25,8 +25,8 @@ block content
           //-   option(value="") Город3
 
           .section__selects
-            .section__select 
-              +select(options = ['qwe', 'zxc', 'asd'])
+            .section__select(data-aos='fade-up') 
+              +select(options = ['qwe', 'zxc', 'asd'] placeholder = 'Город')
 
         -
           const filters = [
@@ -50,16 +50,16 @@ block content
 
           .where-buy__filters-col#filters-container
             each item in filters
-              .where-buy__filters-item.filter-btn
+              .where-buy__filters-item.filter-btn(data-aos='fade-up')
                 .button__text
                   span #{item}
 
-          .where-buy__filters-col
+          .where-buy__filters-col(data-aos='fade-up')
 
             +refresh-button.where-buy__filters-reset.reset-disabled
               |Очистить
 
         .where-buy-list
           - for (i=0;i<7;i++)
-            .where-buy-list__item
+            .where-buy-list__item(data-aos='fade-up')
               +accordion-big

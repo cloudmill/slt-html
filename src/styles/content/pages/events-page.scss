@@ -1,11 +1,5 @@
 .events-page {
 
-  .container {
-    @media (min-width: $breakpoint) {
-      position: relative;
-    }
-  }
-
   &__main-wrapper {
     display: flex;
 
@@ -34,15 +28,24 @@
     }
 
     &:nth-child(2) {
-      width: calc(#{$col-part-d} * 9 - #{$col-gap});
       padding-right: calc(#{$col-part-d} * 3);
+      width: calc(#{$col-part-d} * 9 - #{$col-gap});
       @media (max-width: ($breakpoint - 1px)) {
-        width: 100%;
+        margin-top: getRem(24px);
         padding-right: 0;
+        width: 100%;
       }
     }
   }
 
+  &__heading {
+    @include fsl(60px, 100%);
+    letter-spacing: -2px;
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(24px, 120%);
+      letter-spacing: -1px; 
+    }
+  }
 
   &__inner {
     margin-top: getRem(24px);
@@ -415,6 +418,12 @@
     margin-bottom: getRem(80px);
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: getRem(32px);
+    }
+  }
+  
+  &__button {
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
     }
   }
 }
