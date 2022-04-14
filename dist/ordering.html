@@ -87,10 +87,9 @@
 													</defs>
 												</svg></a></div>
 										<div class="header__button button-animate" data-accordion-header="cards">
-											<div class="header__button-icon"><svg class="header__button-svg" width="28" height="12" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M1 0H28L27 2H0L1 0Z" fill="white"></path>
-													<path d="M1 10H28L27 12H0L1 10Z" fill="white"></path>
-												</svg></div>
+											<div class="header__button-icon">
+												<div class="header__button-burger"></div>
+											</div>
 											<div class="header__button-text"><span>Каталог</span></div>
 										</div>
 									</div>
@@ -172,7 +171,7 @@
 											<div class="header__cart-count">0</div>
 										</a>
 										<div class="header__menu">
-											<div class="header__burger"><span class="header__burger-span"></span><span class="header__burger-span"></span><span class="header__burger-span"></span></div>
+											<div class="header__burger"></div>
 										</div>
 									</div>
 								</div>
@@ -452,7 +451,7 @@
 				<div class="ordering-page">
 					<section class="section section--first">
 						<div class="container">
-							<div class="breadcrumbs">
+							<div class="breadcrumbs" data-aos="fade-up">
 								<ul class="breadcrumbs__list">
 									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
 									<li class="breadcrumbs__item">
@@ -461,14 +460,14 @@
 								</ul>
 							</div>
 							<div class="section__inner">
-								<h1>Оформление заказа</h1>
+								<h1><span class="word-span"><span data-aos="fade-up">Оформление заказа</span></span></h1>
 							</div>
 						</div>
 					</section>
 					<section class="section">
 						<div class="container">
 							<div class="ordering-page__row">
-								<div class="ordering-page__col">
+								<div class="ordering-page__col" data-aos="fade-up">
 									<div class="ordering-page__button"><a class="button button-animate button--wide--mobile sticky" href="#">
 											<div class="button__icon button__icon--left"><svg class="button__svg arrow-blue" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path fill-rule="evenodd" clip-rule="evenodd" d="M3.27614 6.66672H13V5.33338H3.27614L7.4714 1.13812L6.5286 0.195312L0.723858 6.00005L6.5286 11.8048L7.4714 10.862L3.27614 6.66672Z" fill="#3F3F40"></path>
@@ -477,15 +476,15 @@
 										</a></div>
 								</div>
 								<div class="ordering-page__col">
-									<h5 class="ordering-page__heading">Контактные данные</h5>
+									<h5 class="ordering-page__heading" data-aos="fade-up">Контактные данные</h5>
 									<form class="form" action="/" data-parsley-validate>
-										<div class="form__item"><input class="form__input" id="input" placeholder="Имя*" required="required" /></div>
-										<div class="form__item"><input class="form__input" id="input" type="mail" placeholder="E-mail*" required="required" /></div>
-										<div class="form__item"><input class="form__input" id="input" type="tel" placeholder="Телефон*" data-tel-input="data-tel-input" required="required" /></div>
+										<div class="form__item" data-aos="fade-up"><input class="form__input" id="input" placeholder="Имя*" required="required" /></div>
+										<div class="form__item" data-aos="fade-up"><input class="form__input" id="input" type="mail" placeholder="E-mail*" required="required" /></div>
+										<div class="form__item" data-aos="fade-up"><input class="form__input" id="input" type="tel" placeholder="Телефон*" data-tel-input="data-tel-input" required="required" /></div>
 										<div class="ordering-page__inner">
-											<h5 class="ordering-page__heading">Контактные данные</h5>
+											<h5 class="ordering-page__heading" data-aos="fade-up">Контактные данные</h5>
 											<div class="ordering-page__grid">
-												<div class="ordering-page__grid-item">
+												<div class="ordering-page__grid-item" data-aos="fade-up">
 													<h6 class="ordering-page__title">Проектирование</h6>
 													<ul class="ordering-page__list">
 														<li class="ordering-page__item">
@@ -514,7 +513,7 @@
 														</li>
 													</ul>
 												</div>
-												<div class="ordering-page__grid-item">
+												<div class="ordering-page__grid-item" data-aos="fade-up">
 													<h6 class="ordering-page__title">Монтаж</h6>
 													<ul class="ordering-page__list">
 														<li class="ordering-page__item">
@@ -543,7 +542,7 @@
 														</li>
 													</ul>
 												</div>
-												<div class="ordering-page__grid-item">
+												<div class="ordering-page__grid-item" data-aos="fade-up">
 													<ul class="ordering-page__list">
 														<li class="ordering-page__item">
 															<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" text="Доставка" />
@@ -563,7 +562,7 @@
 												<div class="form__item"><input class="form__input" placeholder="Адрес*" /></div>
 											</div>
 										</div>
-										<div class="ordering-page__inner">
+										<div class="ordering-page__inner" data-aos="fade-up">
 											<h5 class="ordering-page__heading">Дополнительная информация к заказу</h5><textarea class="form__textarea" name="area" id="input" placeholder="Комментарий"></textarea>
 											<div class="form__wrapper">
 												<div class="form__row">

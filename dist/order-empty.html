@@ -87,10 +87,9 @@
 													</defs>
 												</svg></a></div>
 										<div class="header__button button-animate" data-accordion-header="cards">
-											<div class="header__button-icon"><svg class="header__button-svg" width="28" height="12" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M1 0H28L27 2H0L1 0Z" fill="white"></path>
-													<path d="M1 10H28L27 12H0L1 10Z" fill="white"></path>
-												</svg></div>
+											<div class="header__button-icon">
+												<div class="header__button-burger"></div>
+											</div>
 											<div class="header__button-text"><span>Каталог</span></div>
 										</div>
 									</div>
@@ -172,7 +171,7 @@
 											<div class="header__cart-count">0</div>
 										</a>
 										<div class="header__menu">
-											<div class="header__burger"><span class="header__burger-span"></span><span class="header__burger-span"></span><span class="header__burger-span"></span></div>
+											<div class="header__burger"></div>
 										</div>
 									</div>
 								</div>
@@ -452,7 +451,7 @@
 				<div class="order-page">
 					<section class="section section--first">
 						<div class="container">
-							<div class="breadcrumbs">
+							<div class="breadcrumbs" data-aos="fade-up">
 								<ul class="breadcrumbs__list">
 									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
 									<li class="breadcrumbs__item">
@@ -461,8 +460,8 @@
 								</ul>
 							</div>
 							<div class="section__inner">
-								<h1 class="order-page__title">В заказ ничего<br>не добавлено</h1>
-								<div class="order-page__button"><a class="button button-animate button--wide--mobile" href="#">
+								<h1 class="order-page__title"><span class="word-span"><span data-aos="fade-up">В заказ ничего</span></span><br><span class="word-span"><span data-aos="fade-up">не добавлено</span></span></h1>
+								<div class="order-page__button" data-aos="fade-up"><a class="button button-animate button--wide--mobile" href="#">
 										<div class="button__text"><span>Каталог</span></div>
 										<div class="button__icon"><svg class="button__svg arrow-blue" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.72386 6.66672H0V5.33338H9.72386L5.5286 1.13812L6.4714 0.195312L12.2761 6.00005L6.4714 11.8048L5.5286 10.862L9.72386 6.66672Z" fill="white"></path>
@@ -471,7 +470,7 @@
 							</div>
 						</div>
 					</section>
-					<section class="order-page__section"><svg class="order-page__section-icon" width="275" height="226" viewbox="0 0 275 226" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<section class="order-page__section" data-aos="fade-up"><svg class="order-page__section-icon" width="275" height="226" viewbox="0 0 275 226" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M128.306 200.415V112.149M234 112V170.084L128.306 223.051L26 170.084V112" stroke="#979797" stroke-width="1.5"></path>
 							<path d="M116.013 131.144L100 155.164L2 98.9286L25.4043 57.0472M25.4043 57.0472L128.71 1L235.132 57.0472M25.4043 57.0472L128.71 112.051M235.132 57.0472L261 98.9286L158.274 155.164L128.71 112.051M235.132 57.0472L128.71 112.051" stroke="#979797" stroke-width="1.5"></path>
 							<circle cx="235.5" cy="185.551" r="38.75" fill="white" stroke="#07A8D7" stroke-width="1.5"></circle>

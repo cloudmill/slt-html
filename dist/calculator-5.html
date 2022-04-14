@@ -87,10 +87,9 @@
 													</defs>
 												</svg></a></div>
 										<div class="header__button button-animate" data-accordion-header="cards">
-											<div class="header__button-icon"><svg class="header__button-svg" width="28" height="12" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M1 0H28L27 2H0L1 0Z" fill="white"></path>
-													<path d="M1 10H28L27 12H0L1 10Z" fill="white"></path>
-												</svg></div>
+											<div class="header__button-icon">
+												<div class="header__button-burger"></div>
+											</div>
 											<div class="header__button-text"><span>Каталог</span></div>
 										</div>
 									</div>
@@ -172,7 +171,7 @@
 											<div class="header__cart-count">0</div>
 										</a>
 										<div class="header__menu">
-											<div class="header__burger"><span class="header__burger-span"></span><span class="header__burger-span"></span><span class="header__burger-span"></span></div>
+											<div class="header__burger"></div>
 										</div>
 									</div>
 								</div>
@@ -452,7 +451,7 @@
 				<div class="calculator-page">
 					<section class="section section--first">
 						<div class="container">
-							<div class="breadcrumbs">
+							<div class="breadcrumbs" data-aos="fade-up">
 								<ul class="breadcrumbs__list">
 									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
 									<li class="breadcrumbs__item">
@@ -461,23 +460,23 @@
 								</ul>
 							</div>
 							<div class="section__inner">
-								<h1>Расчет удельных гидравлических<br>потерь трубопроводов СЛТ Аква</h1>
-								<div class="calculator-page__text">С учетом местных сопротивлений по СП 40 102</div>
+								<h1><span class="word-span"><span data-aos="fade-up">Расчет удельных гидравлических</span></span><br><span class="word-span"><span data-aos="fade-up">потерь трубопроводов СЛТ Аква</span></span></h1>
+								<div class="calculator-page__text" data-aos="fade-up">С учетом местных сопротивлений по СП 40 102</div>
 							</div>
 						</div>
 					</section>
 					<section class="section">
 						<div class="container">
 							<ul class="calculator-page__list">
-								<li class="calculator-page__list-item">
+								<li class="calculator-page__list-item" data-aos="fade-up">
 									<div class="calculator-page__caption">SLT Aqua PP-R однослойные</div>
 									<div class="calculator-page__list-text">SDR 11, SDR 7,4, SDR 6</div>
 								</li>
-								<li class="calculator-page__list-item">
+								<li class="calculator-page__list-item" data-aos="fade-up">
 									<div class="calculator-page__caption">SLT Aqua PP-R GF армированные стекловолокном</div>
 									<div class="calculator-page__list-text">SDR 7,4, SDR 6</div>
 								</li>
-								<li class="calculator-page__list-item">
+								<li class="calculator-page__list-item" data-aos="fade-up">
 									<div class="calculator-page__caption">SLT Aqua PP-R AL армированные алюминием</div>
 									<div class="calculator-page__list-text">SDR 6</div>
 								</li>
@@ -485,16 +484,16 @@
 							<form class="calculator-page__calculate form" action="/">
 								<div class="calculator-page__calculate-col">
 									<div class="calculator-page__calculate-grid">
-										<div class="calculator-page__calculate-item">
-											<div class="calculator-page__caption">Расход, л/с</div>
+										<div class="calculator-page__calculate-item" data-aos="fade-up">
+											<div class="calculator-page__caption calculator-page__caption--big">Расход, л/с</div>
 											<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
 										</div>
-										<div class="calculator-page__calculate-item">
-											<div class="calculator-page__caption">Температура, °C</div>
+										<div class="calculator-page__calculate-item" data-aos="fade-up">
+											<div class="calculator-page__caption calculator-page__caption--big">Температура, °C</div>
 											<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
 										</div>
-										<div class="calculator-page__calculate-item">
-											<div class="calculator-page__caption">Приемлемый диаметр и SDR труб</div>
+										<div class="calculator-page__calculate-item" data-aos="fade-up">
+											<div class="calculator-page__caption calculator-page__caption--big">Приемлемый диаметр и SDR труб</div>
 											<div class="calculator-page__features-inner">
 												<div class="select-wrapper">
 													<div class="select"><select class="select__mobile" name="cat-mob" data-select-mobile="">
@@ -513,12 +512,12 @@
 												</div>
 											</div>
 										</div>
-										<div class="calculator-page__calculate-item">
-											<div class="calculator-page__caption">Длина трубопровода, м</div>
+										<div class="calculator-page__calculate-item" data-aos="fade-up">
+											<div class="calculator-page__caption calculator-page__caption--big">Длина трубопровода, м</div>
 											<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
 										</div>
-										<div class="calculator-page__calculate-item">
-											<div class="calculator-page__caption">Процент, учитывающий местные потери</div>
+										<div class="calculator-page__calculate-item" data-aos="fade-up">
+											<div class="calculator-page__caption calculator-page__caption--big">Процент, учитывающий местные потери</div>
 											<div class="calculator-page__features-inner">
 												<div class="select-wrapper">
 													<div class="select"><select class="select__mobile" name="cat-mob" data-select-mobile="">
@@ -537,24 +536,24 @@
 												</div>
 											</div>
 										</div>
-										<div class="calculator-page__calculate-label">* Согласно СП 40-102-2000 «Примечание - Допускается сумму местных потерь h м.с. принимать равной 20-30% суммы удельных потерь i»</div>
+										<div class="calculator-page__calculate-label" data-aos="fade-up">* Согласно СП 40-102-2000 «Примечание - Допускается сумму местных потерь h м.с. принимать равной 20-30% суммы удельных потерь i»</div>
 									</div>
 									<div class="section__block">
 										<div class="calculator-page__block">
-											<div class="calculator-page__block-row">
+											<div class="calculator-page__block-row" data-aos="fade-up">
 												<div class="calculator-page__block-col">
-													<div class="calculator-page__caption">Удельные потери по длине трубопровода без учета местных потерь, м/м</div>
+													<div class="calculator-page__caption calculator-page__caption--big">Удельные потери по длине трубопровода без учета местных потерь, м/м</div>
 													<div class="calculator-page__block-title">1056,5</div>
 												</div>
 												<div class="calculator-page__block-col">
-													<div class="calculator-page__caption">Местные потери по длине трубопровода по «Примечанию» СП 40-102-2000, м/м</div>
+													<div class="calculator-page__caption calculator-page__caption--big">Местные потери по длине трубопровода по «Примечанию» СП 40-102-2000, м/м</div>
 													<div class="calculator-page__block-title">0,8778</div>
 												</div>
 											</div>
 											<div class="calculator-page__block-inner">
-												<div class="calculator-page__block-row">
+												<div class="calculator-page__block-row" data-aos="fade-up">
 													<div class="calculator-page__block-col">
-														<div class="calculator-page__caption">Потери по длине трубопровода с учетом суммы местных потерь, м/м</div>
+														<div class="calculator-page__caption calculator-page__caption--big">Потери по длине трубопровода с учетом суммы местных потерь, м/м</div>
 														<div class="calculator-page__block-title">5,2667</div>
 													</div>
 													<div class="calculator-page__block-col"></div>
@@ -563,7 +562,7 @@
 											<div class="calculator-page__block-inner">
 												<div class="calculator-page__block-row">
 													<div class="calculator-page__block-col">
-														<div class="calculator-page__button"><a class="button button--download button--wide--mobile" href="#"><span class="button__text"><span>Скачать расчет в PDF</span></span>
+														<div class="calculator-page__button" data-aos="fade-up"><a class="button button--download button--wide--mobile" href="#"><span class="button__text"><span>Скачать расчет в PDF</span></span>
 																<div class="button__icon"><svg class="button__svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path fill-rule="evenodd" clip-rule="evenodd" d="M16.2929 9.29289L13 12.5858V2H11V12.5858L7.70711 9.29289L6.29289 10.7071L12 16.4142L17.7071 10.7071L16.2929 9.29289ZM22 20V16H20V20H4V16H2V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20Z" fill="#07A8D7"></path>
 																	</svg></div>
@@ -575,18 +574,18 @@
 									</div>
 								</div>
 								<div class="calculator-page__calculate-col">
-									<div class="calculator-page__grid">
+									<div class="calculator-page__grid" data-aos="fade-up">
 										<div class="calculator-page__grid-heading">
-											<div class="calculator-page__caption">Диаметр</div>
+											<div class="calculator-page__caption calculator-page__caption--big">Диаметр</div>
 										</div>
 										<div class="calculator-page__grid-heading calculator-page__grid-long">
 											<div class="calculator-page__gird-wrapper">
-												<div class="calculator-page__caption">Скорости V, м/с</div>
+												<div class="calculator-page__caption calculator-page__caption--big">Скорости V, м/с</div>
 												<div class="calculator-page__grid-label">Рекомендуемые скорости ХВС, ГВС от 0,5 до 1 м/с.</div>
 											</div>
 										</div>
 										<div class="calculator-page__grid-heading calculator-page__grid-long">
-											<div class="calculator-page__caption">Потери i, м/м.</div>
+											<div class="calculator-page__caption calculator-page__caption--big">Потери i, м/м.</div>
 										</div>
 										<div class="calculator-page__grid-item">
 											<div class="calculator-page__grid-title"></div>
@@ -691,7 +690,7 @@
 										<div class="calculator-page__grid-item">12,13625</div>
 										<div class="calculator-page__grid-item">20,52237</div>
 									</div>
-									<div class="calculator-page__container">
+									<div class="calculator-page__container" data-aos="fade-up">
 										<div class="calculator-page__grid-mobile">
 											<div class="calculator-page__grid-heading">
 												<div class="calculator-page__grid-caption">Диаметр</div>
