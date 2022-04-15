@@ -13,10 +13,10 @@
 
 	<body class="body">
 		<div class="wrapper">
-			<header class="header">
+			<header class="header" data-aos="fade-up">
 				<div class="header__inner">
 					<div class="container">
-						<div class="header__desktop" data-aos="fade-up">
+						<div class="header__desktop">
 							<div class="header__top">
 								<div class="header__row">
 									<div class="header__col">
@@ -460,7 +460,7 @@
 								</ul>
 							</div>
 							<div class="section__inner">
-								<h1><span class="word-span"><span data-aos="fade-up">Расчет удельных гидравлических</span></span><br><span class="word-span"><span data-aos="fade-up">потерь трубопроводов СЛТ Аква</span></span></h1>
+								<h1><span class="word-span"><span data-aos="fade-up">Расчет</span></span> <span class="word-span"><span data-aos="fade-up">удельных</span></span> <span class="word-span"><span data-aos="fade-up">гидравлических</span></span><br class="calculator-page__br"><span class="whitespace"></span> <span class="word-span"><span data-aos="fade-up">потерь</span></span> <span class="word-span"><span data-aos="fade-up">трубопроводов</span></span> <span class="word-span"><span data-aos="fade-up">СЛТ Аква</span></span></h1>
 								<div class="calculator-page__text" data-aos="fade-up">С учетом местных сопротивлений по СП 40 102</div>
 							</div>
 						</div>
@@ -483,26 +483,26 @@
 							</ul>
 							<form class="calculator-page__calculate form" action="/">
 								<div class="calculator-page__calculate-col">
-									<div class="calculator-page__calculate-grid">
-										<div class="calculator-page__calculate-item" data-aos="fade-up">
+									<div class="calculator-page__calculate-grid" data-aos="fade-up">
+										<div class="calculator-page__calculate-item">
 											<div class="calculator-page__caption calculator-page__caption--big">Расход, л/с</div>
 											<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
 										</div>
-										<div class="calculator-page__calculate-item" data-aos="fade-up">
+										<div class="calculator-page__calculate-item">
 											<div class="calculator-page__caption calculator-page__caption--big">Температура, °C</div>
 											<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
 										</div>
-										<div class="calculator-page__calculate-item" data-aos="fade-up">
+										<div class="calculator-page__calculate-item">
 											<div class="calculator-page__caption calculator-page__caption--big">Приемлемый диаметр и SDR труб</div>
 											<div class="calculator-page__features-inner">
 												<div class="select-wrapper">
 													<div class="select"><select class="select__mobile" name="cat-mob" data-select-mobile="">
-															<option value="" selected="selected" disabled="disabled"></option>
+															<option value="" selected="selected" disabled="disabled">D63 SDR 7,4</option>
 															<option value="D63 SDR 7,4">D63 SDR 7,4</option>
 															<option value="D64 SDR 7,4">D64 SDR 7,4</option>
 															<option value="D65 SDR 7,4">D65 SDR 7,4</option>
 															<option value="D66 SDR 7,4">D66 SDR 7,4</option>
-														</select><select class="select__select" style="width: 100%">
+														</select><select class="select__select" data-select-placeholder="D63 SDR 7,4" style="width: 100%">
 															<option value="" disabled="disabled" selected="selected"></option>
 															<option value="D63 SDR 7,4">D63 SDR 7,4</option>
 															<option value="D64 SDR 7,4">D64 SDR 7,4</option>
@@ -512,21 +512,21 @@
 												</div>
 											</div>
 										</div>
-										<div class="calculator-page__calculate-item" data-aos="fade-up">
+										<div class="calculator-page__calculate-item">
 											<div class="calculator-page__caption calculator-page__caption--big">Длина трубопровода, м</div>
 											<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
 										</div>
-										<div class="calculator-page__calculate-item" data-aos="fade-up">
+										<div class="calculator-page__calculate-item">
 											<div class="calculator-page__caption calculator-page__caption--big">Процент, учитывающий местные потери</div>
 											<div class="calculator-page__features-inner">
 												<div class="select-wrapper">
 													<div class="select"><select class="select__mobile" name="cat-mob" data-select-mobile="">
-															<option value="" selected="selected" disabled="disabled"></option>
+															<option value="" selected="selected" disabled="disabled">20%</option>
 															<option value="D63 SDR 7,4">D63 SDR 7,4</option>
 															<option value="D64 SDR 7,4">D64 SDR 7,4</option>
 															<option value="D65 SDR 7,4">D65 SDR 7,4</option>
 															<option value="D66 SDR 7,4">D66 SDR 7,4</option>
-														</select><select class="select__select" style="width: 100%">
+														</select><select class="select__select" data-select-placeholder="20%" style="width: 100%">
 															<option value="" disabled="disabled" selected="selected"></option>
 															<option value="D63 SDR 7,4">D63 SDR 7,4</option>
 															<option value="D64 SDR 7,4">D64 SDR 7,4</option>
@@ -536,7 +536,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="calculator-page__calculate-label" data-aos="fade-up">* Согласно СП 40-102-2000 «Примечание - Допускается сумму местных потерь h м.с. принимать равной 20-30% суммы удельных потерь i»</div>
+										<div class="calculator-page__calculate-label">* Согласно СП 40-102-2000 «Примечание - Допускается сумму местных потерь h м.с. принимать равной 20-30% суммы удельных потерь i»</div>
 									</div>
 									<div class="section__block">
 										<div class="calculator-page__block">
@@ -728,7 +728,7 @@
 											<div class="calculator-page__grid-heading calculator-page__grid-long">
 												<div class="calculator-page__gird-wrapper">
 													<div class="calculator-page__grid-caption">Скорости V, м/с</div>
-													<div class="calculator-page__grid-label">Рекомендуемые скорости ХВС, ГВС от 0,5 до 1 м/с.</div>
+													<div class="calculator-page__grid-label">Рекомендуемые скорости ХВС, ГВС от 0,5 до<br>1 м/с.</div>
 												</div>
 											</div>
 											<div class="calculator-page__grid-item calculator-page__grid-item--small">
@@ -768,7 +768,7 @@
 											<div class="calculator-page__grid-item">3,7066</div>
 											<div class="calculator-page__grid-item">2,4342</div>
 											<div class="calculator-page__grid-heading calculator-page__grid-long">
-												<div class="calculator-page__grid-caption">Потери i, м/м.</div>
+												<div class="calculator-page__grid-caption">Потери i,<br>м/м.</div>
 											</div>
 											<div class="calculator-page__grid-item calculator-page__grid-item--small">
 												<div class="calculator-page__grid-title">SDR 11</div>

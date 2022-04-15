@@ -13,10 +13,10 @@
 
 	<body class="body">
 		<div class="wrapper">
-			<header class="header">
+			<header class="header" data-aos="fade-up">
 				<div class="header__inner">
 					<div class="container">
-						<div class="header__desktop" data-aos="fade-up">
+						<div class="header__desktop">
 							<div class="header__top">
 								<div class="header__row">
 									<div class="header__col">
@@ -509,18 +509,24 @@
 							<div class="catalog-page__colors">
 								<div class="catalog-page__colors-item" data-aos="fade-up">
 									<div class="catalog-page__colors-text">Цветовое<br>исполнение</div>
-									<div class="catalog-page__colors-icon active" title="белый"><svg class="catalog-page__colors-svg" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<div class="catalog-page__colors-icon tooltip active"><svg class="catalog-page__colors-svg tooltip__icon" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<circle class="catalog-page__colors-border" cx="20" cy="20" r="19.6" stroke="#E8E9E9" stroke-width="0.8"></circle>
 											<circle class="catalog-page__colors-circle" opacity="0.1" cx="20.0004" cy="20.0004" r="9.2" fill="white" stroke="#3F3F40" stroke-width="0.8"></circle>
-										</svg></div>
-									<div class="catalog-page__colors-icon black" title="черный"><svg class="catalog-page__colors-svg" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+										</svg>
+										<div class="tooltip__container">белый</div>
+									</div>
+									<div class="catalog-page__colors-icon black tooltip"><svg class="catalog-page__colors-svg tooltip__icon" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<circle class="catalog-page__colors-border" cx="20" cy="20" r="19.6" stroke="#E8E9E9" stroke-width="0.8"></circle>
 											<circle class="catalog-page__colors-circle" opacity="0.1" cx="20.0004" cy="20.0004" r="9.2" fill="white" stroke="#3F3F40" stroke-width="0.8"></circle>
-										</svg></div>
-									<div class="catalog-page__colors-icon red" title="красный"><svg class="catalog-page__colors-svg" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+										</svg>
+										<div class="tooltip__container">черный</div>
+									</div>
+									<div class="catalog-page__colors-icon red tooltip"><svg class="catalog-page__colors-svg tooltip__icon" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<circle class="catalog-page__colors-border" cx="20" cy="20" r="19.6" stroke="#E8E9E9" stroke-width="0.8"></circle>
 											<circle class="catalog-page__colors-circle" opacity="0.1" cx="20.0004" cy="20.0004" r="9.2" fill="white" stroke="#3F3F40" stroke-width="0.8"></circle>
-										</svg></div>
+										</svg>
+										<div class="tooltip__container">красный</div>
+									</div>
 								</div>
 							</div>
 							<div class="section__block">
@@ -532,8 +538,7 @@
 										<div class="catalog-page__table-cell">Количество в коробке, шт</div>
 										<div class="catalog-page__table-cell">Добавить в заказ, шт</div>
 									</div>
-									<div class="catalog-page__table-body">
-										<div class="catalog-page__table-item">
+									<div class="catalog-page__table-body"><label class="catalog-page__table-item">
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">25×20</div>
 											</div>
@@ -548,7 +553,7 @@
 											</div>
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество"></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-catalog-input=""></div>
 													<div class="catalog-page__table-col">
 														<div class="catalog-page__table-button">
 															<div class="catalog-page__table-add">Добавить</div>
@@ -559,8 +564,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="catalog-page__table-item">
+										</label><label class="catalog-page__table-item">
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">25×20</div>
 											</div>
@@ -575,7 +579,7 @@
 											</div>
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество"></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-catalog-input=""></div>
 													<div class="catalog-page__table-col">
 														<div class="catalog-page__table-button">
 															<div class="catalog-page__table-add">Добавить</div>
@@ -586,8 +590,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="catalog-page__table-item">
+										</label><label class="catalog-page__table-item">
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">25×20</div>
 											</div>
@@ -602,7 +605,7 @@
 											</div>
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество"></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-catalog-input=""></div>
 													<div class="catalog-page__table-col">
 														<div class="catalog-page__table-button">
 															<div class="catalog-page__table-add">Добавить</div>
@@ -613,8 +616,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="catalog-page__table-item">
+										</label><label class="catalog-page__table-item">
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">25×20</div>
 											</div>
@@ -629,7 +631,7 @@
 											</div>
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество"></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-catalog-input=""></div>
 													<div class="catalog-page__table-col">
 														<div class="catalog-page__table-button">
 															<div class="catalog-page__table-add">Добавить</div>
@@ -640,8 +642,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="catalog-page__table-item">
+										</label><label class="catalog-page__table-item">
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">25×20</div>
 											</div>
@@ -656,7 +657,7 @@
 											</div>
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество"></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-catalog-input=""></div>
 													<div class="catalog-page__table-col">
 														<div class="catalog-page__table-button">
 															<div class="catalog-page__table-add">Добавить</div>
@@ -667,8 +668,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="catalog-page__table-item">
+										</label><label class="catalog-page__table-item">
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">25×20</div>
 											</div>
@@ -683,7 +683,7 @@
 											</div>
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество"></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-catalog-input=""></div>
 													<div class="catalog-page__table-col">
 														<div class="catalog-page__table-button">
 															<div class="catalog-page__table-add">Добавить</div>
@@ -694,8 +694,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="catalog-page__table-item">
+										</label><label class="catalog-page__table-item">
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">25×20</div>
 											</div>
@@ -710,7 +709,7 @@
 											</div>
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество"></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-catalog-input=""></div>
 													<div class="catalog-page__table-col">
 														<div class="catalog-page__table-button">
 															<div class="catalog-page__table-add">Добавить</div>
@@ -721,8 +720,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="catalog-page__table-item">
+										</label><label class="catalog-page__table-item">
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">25×20</div>
 											</div>
@@ -737,7 +735,7 @@
 											</div>
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество"></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-catalog-input=""></div>
 													<div class="catalog-page__table-col">
 														<div class="catalog-page__table-button">
 															<div class="catalog-page__table-add">Добавить</div>
@@ -748,8 +746,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="catalog-page__table-item">
+										</label><label class="catalog-page__table-item">
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">25×20</div>
 											</div>
@@ -764,7 +761,7 @@
 											</div>
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество"></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-catalog-input=""></div>
 													<div class="catalog-page__table-col">
 														<div class="catalog-page__table-button">
 															<div class="catalog-page__table-add">Добавить</div>
@@ -775,8 +772,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="catalog-page__table-item">
+										</label><label class="catalog-page__table-item">
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">25×20</div>
 											</div>
@@ -791,7 +787,7 @@
 											</div>
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество"></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-catalog-input=""></div>
 													<div class="catalog-page__table-col">
 														<div class="catalog-page__table-button">
 															<div class="catalog-page__table-add">Добавить</div>
@@ -802,8 +798,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="catalog-page__table-item">
+										</label><label class="catalog-page__table-item">
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">25×20</div>
 											</div>
@@ -818,7 +813,7 @@
 											</div>
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество"></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-catalog-input=""></div>
 													<div class="catalog-page__table-col">
 														<div class="catalog-page__table-button">
 															<div class="catalog-page__table-add">Добавить</div>
@@ -829,8 +824,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="catalog-page__table-item">
+										</label><label class="catalog-page__table-item">
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">25×20</div>
 											</div>
@@ -845,7 +839,7 @@
 											</div>
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество"></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-catalog-input=""></div>
 													<div class="catalog-page__table-col">
 														<div class="catalog-page__table-button">
 															<div class="catalog-page__table-add">Добавить</div>
@@ -856,8 +850,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="catalog-page__table-item">
+										</label><label class="catalog-page__table-item">
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">25×20</div>
 											</div>
@@ -872,7 +865,7 @@
 											</div>
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество"></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-catalog-input=""></div>
 													<div class="catalog-page__table-col">
 														<div class="catalog-page__table-button">
 															<div class="catalog-page__table-add">Добавить</div>
@@ -883,8 +876,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="catalog-page__table-item">
+										</label><label class="catalog-page__table-item">
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">25×20</div>
 											</div>
@@ -899,7 +891,7 @@
 											</div>
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество"></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-catalog-input=""></div>
 													<div class="catalog-page__table-col">
 														<div class="catalog-page__table-button">
 															<div class="catalog-page__table-add">Добавить</div>
@@ -910,8 +902,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="catalog-page__table-item">
+										</label><label class="catalog-page__table-item">
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">25×20</div>
 											</div>
@@ -926,7 +917,7 @@
 											</div>
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество"></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-catalog-input=""></div>
 													<div class="catalog-page__table-col">
 														<div class="catalog-page__table-button">
 															<div class="catalog-page__table-add">Добавить</div>
@@ -937,8 +928,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-									</div>
+										</label></div>
 								</div>
 								<div class="catalog-page__block">
 									<ul class="catalog-page__block-list">
