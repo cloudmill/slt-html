@@ -12,7 +12,6 @@
 
   background: var(--color-light-gray);
   overflow: hidden;
-  transition: $transition;
 
   &::before {
     content: "";
@@ -24,13 +23,26 @@
     height: 4px;
 
     transform: translateY(100%);
-    transition: $transition;
+    transition: 0.8s $transition-timing-function;
+  }
+
+  &::after {
+    content: "";
+    @include cover;
+    z-index: -1;
+
+    background: var(--color-darken-white);
+    transform: translateY(100%);
+    transition: 0.8s $transition-timing-function;
   }
 
   &:hover {
-    background: var(--color-darken-white);
 
     &::before {
+      transform: none;
+    }
+
+    &::after {
       transform: none;
     }
   }

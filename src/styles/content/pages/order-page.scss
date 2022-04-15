@@ -200,6 +200,16 @@
   &__card-svg {
     width: getRem(24px);
     height: getRem(24px);
+
+    path {
+      transition: $transition
+    }
+
+    &:hover {
+      path {
+        fill: var(--color-black);
+      }
+    }
   }
   &__card-input {
     padding: getRem(14px) getRem(20px);
@@ -211,12 +221,17 @@
 
     font-weight: 500;
     @include f-main;
+    transition: $transition;
     border: 1px solid var(--color-borders);
     letter-spacing: -0.5px;
     @include fsl(16px, 130%);
     @media (max-width: ($breakpoint - 1px)) {
       letter-spacing: 0;
       @include fsl(14px);
+    }
+
+    &:focus {
+      border-color: var(--color-blue);
     }
   }
   &__card-content {
@@ -261,6 +276,7 @@
       padding: getRem(20px);
     }
     position: fixed;
+    z-index: 1;
     bottom: 0;
     left: 0;
     right: 0;

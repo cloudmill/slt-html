@@ -2,7 +2,7 @@
 const BREAKPOINT = 1280;
 
 
-if ($('.where-buy').length) {
+if ($('#map').length) {
   try {
     ymaps.ready(() => {
       // vars

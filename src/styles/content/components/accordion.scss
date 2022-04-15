@@ -199,6 +199,14 @@
     transition: $transition;
   }
   
+  &__link {
+    transition: $transition;
+    
+    &:hover {
+      color: var(--color-blue);
+    }
+  }
+
   &__svg {
     path {
       fill: var(--color-blue);
@@ -384,10 +392,47 @@
     @media (max-width: ($breakpoint - 1px)) {
       flex-shrink: 0;
     }
+
+    &:hover {
+      #{$comp}__bot-container {
+        &::before {
+          transform: none;
+        }
+      }
+      #{$comp}__bot-pic {
+        transform: scale(1.1);
+      }
+      #{$comp}__text {
+        color: var(--color-blue);
+      }
+    }
+  }
+  &__bot-container {
+    position: relative;
+    z-index: 0;
+
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      height: 4px;
+
+      background: var(--color-blue);
+      transition: $transition;
+      transform: translateY(100%);
+    }
   }
   &__bot-img {
     display: flex;
     align-items: center;
+
+    overflow: hidden;
   }
   &__bot-text {
     margin-top: getRem(8px);
@@ -395,11 +440,16 @@
       margin-top: 4px;
     }
 
+    transition: $transition;
     letter-spacing: -0.5px;
     @include fsl(14px, 110%);
     @media (max-width: ($breakpoint - 1px)) {
       letter-spacing: 0;
       @include fsl(12px);
     }
+  }
+  &__bot-pic {
+    transition: $transition;
+    transform-origin: center;
   }
 }

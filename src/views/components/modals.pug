@@ -24,11 +24,8 @@ mixin vacancies-modal
         .form__inner 
           +checkbox(id="checkbox" required="")
         .form__inner 
-          button.button.button--blue
-            .button__text
-              |Отправить
-            .button__icon.button__icon--right 
-              +big-arrow-svg.button__svg
+          +form-button
+            |Отправить
 
 mixin contacts-modal1
   .modal.contacts-modal(data-fancy-modal='contacts1')

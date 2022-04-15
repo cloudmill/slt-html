@@ -143,6 +143,9 @@
       color: var(--color-white);
     }
     #{$comp}__count {
+      width: getRem(127px);
+      height: getRem(127px);
+
       border-color: var(--color-white);
       color: var(--color-white);
     }

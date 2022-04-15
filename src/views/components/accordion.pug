@@ -131,7 +131,7 @@ mixin accordion-big
                   each el in item.items
                     li.accordion__top-item
                       if (el.isLink)
-                        a.accordion__top-text(href=el.href) 
+                        a.accordion__top-text.accordion__link(href=el.href) 
                           |#{el.text}
                       else 
                         .accordion__top-text 
@@ -142,9 +142,10 @@ mixin accordion-big
             |Реализованные объекты
           .accordion__bot-grid 
             each item in ddata.bot
-              a.accordion__bot-item(href="#") 
-                .accordion__bot-img 
-                  img(src=`assets/images/${item.src}`, alt="")
+              a.accordion__bot-item(href="#")
+                .accordion__bot-container 
+                  .accordion__bot-img 
+                    img.accordion__bot-pic(src=`assets/images/${item.src}`, alt="")
                 .accordion__bot-text 
                   |#{item.text}
 
