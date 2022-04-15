@@ -234,6 +234,9 @@
     display: inline-block;
 
     @include fsl(18px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(8px);
+    }
   }
   &__block-inner {
     margin-top: getRem(40px);
@@ -413,6 +416,9 @@
     }
   }
   &__calculate-grid {
+    position: relative;
+    z-index: 1;
+    
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: getRem(40px);
@@ -550,5 +556,11 @@
   }
   &__grid-title {
     font-weight: 500;
+  }
+
+  &__br {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
   }
 }

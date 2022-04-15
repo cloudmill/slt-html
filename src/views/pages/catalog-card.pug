@@ -473,15 +473,15 @@ block content
             .catalog-page__colors-icon.red
               +colors-light-svg.catalog-page__colors-svg
         .section__block
-          .catalog-page__table(data-aos='fade-up')
+          .catalog-page__table.catalog-page__table--big(data-aos='fade-up')
             .catalog-page__table-head 
-              each item in ['Наружный диаметр d #[span.catalog-page__table-span n] , мм', 'Артикул', 'Количество в упаковке, шт', 'Количество в коробке, шт', 'Добавить в заказ, шт']
+              each item in ['Наружный диаметр d#[span.catalog-page__table-span n], мм', 'Артикул', 'Толщина стенки e#[span.catalog-page__table-span n], мм', 'Длина #[br] отрезка, м', 'Количество #[br] в упаковке, м', 'Вес, кг/м', 'Добавить в заказ, шт']
                 .catalog-page__table-cell
                   |#{item}
             .catalog-page__table-body
               - for (i = 0; i < 15; i++)
                 .catalog-page__table-item
-                  each item in ['25×20', 'SLTFM32520', '50', '500', 'last']
+                  each item in ['20', '2SLTPS1120', '1,9', '2', '50', '0,105', 'last']
                     if (item == "last")
                       .catalog-page__table-cell
                         .catalog-page__table-row 
@@ -501,18 +501,19 @@ block content
             ul.catalog-page__block-list
               -
                 var ddata = [
-                  {label: "Артикул", text: "SLTFM32520"},
-                  {label: "Количество в упаковке, шт", text: "50"},
-                  {label: "Количество в коробке, шт", text: "500"},
+                  {label: "Толщина стенки e#[span.catalog-page__table-span n], мм", text: "1.9"},
+                  {label: "Длина отрезка, м", text: "2"},
+                  {label: "Количество #[br] в упаковке, м", text: "50"},
+                  {label: "Вес, кг/м", text: "0,105"},
                 ]
               - for (i = 0; i < 12; i++)
                 li.catalog-page__block-item(data-aos='fade-up') 
                   .catalog-page__block-top 
                     .catalog-page__block-cell 
                       .catalog-page__block-label 
-                        |Диаметр, мм
+                        |Наружный диаметр d#[span.catalog-page__table-span n], мм
                       .catalog-page__block-text
-                        |25×20
+                        |20
                   .catalog-page__block-body
                     each item in ddata 
                       .catalog-page__block-cell 
@@ -521,7 +522,7 @@ block content
                         .catalog-page__block-text
                           |#{item.text}
                     .catalog-page__block-cell 
-                      .catalog-page__block-label.darken
+                      .catalog-page__block-label
                         |Добавить в заказ,шт
                       .catalog-page__block-input
                         input.catalog-page__table-input(type="number" placeholder="Кол-во")

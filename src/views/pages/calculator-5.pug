@@ -16,9 +16,9 @@ block content
       form: [
         {text: 'Расход, л/с', isSelect: false},
         {text: 'Температура, °C', isSelect: false},
-        {text: 'Приемлемый диаметр и SDR труб', isSelect: true},
+        {text: 'Приемлемый диаметр и SDR труб', isSelect: true, placeholder: 'D63 SDR 7,4'},
         {text: 'Длина трубопровода, м', isSelect: false},
-        {text: 'Процент, учитывающий местные потери', isSelect: true},
+        {text: 'Процент, учитывающий местные потери', isSelect: true, placeholder: '20%'},
       ]
     }
   .calculator-page
@@ -27,7 +27,7 @@ block content
         +breadcrumbs(page = "Расчет компенсаторов для систем SLT AQUA")
         .section__inner 
           h1
-            |#[span.word-span #[span(data-aos='fade-up') Расчет удельных гидравлических]] #[br] #[span.word-span #[span(data-aos='fade-up') потерь трубопроводов СЛТ Аква]]
+            |#[span.word-span #[span(data-aos='fade-up') Расчет]] #[span.word-span #[span(data-aos='fade-up') удельных]] #[span.word-span #[span(data-aos='fade-up') гидравлических ]] #[br.calculator-page__br] #[span.whitespace ] #[span.word-span #[span(data-aos='fade-up') потерь]] #[span.word-span #[span(data-aos='fade-up') трубопроводов]] #[span.word-span #[span(data-aos='fade-up') СЛТ Аква]]
           .calculator-page__text(data-aos='fade-up') 
             |С учетом местных сопротивлений по СП 40 102
     section.section
@@ -41,17 +41,17 @@ block content
                 |#{item.text}
         form.calculator-page__calculate.form(action="/")
           .calculator-page__calculate-col
-            .calculator-page__calculate-grid
+            .calculator-page__calculate-grid(data-aos='fade-up')
               each item in ddata.form
-                .calculator-page__calculate-item(data-aos='fade-up')
+                .calculator-page__calculate-item
                   .calculator-page__caption.calculator-page__caption--big 
                     |#{item.text}
                   .calculator-page__features-inner 
                     if (item.isSelect)
-                      +select(options = ['D63 SDR 7,4', 'D64 SDR 7,4', 'D65 SDR 7,4', 'D66 SDR 7,4',])
+                      +select(options = ['D63 SDR 7,4', 'D64 SDR 7,4', 'D65 SDR 7,4', 'D66 SDR 7,4',] placeholder = item.placeholder)
                     else
                       +input#input(type = 'number' placeholder = '0') 
-              .calculator-page__calculate-label(data-aos='fade-up') 
+              .calculator-page__calculate-label
                 |* Согласно СП 40-102-2000 «Примечание - Допускается  сумму местных потерь h м.с. принимать равной 20-30% суммы удельных потерь i»
             .section__block
               .calculator-page__block
@@ -121,7 +121,7 @@ block content
                     .calculator-page__grid-caption
                       |Скорости V, м/с
                     .calculator-page__grid-label 
-                      |Рекомендуемые скорости ХВС, ГВС от 0,5 до 1 м/с.
+                      |Рекомендуемые скорости ХВС, ГВС от 0,5 до #[br] 1 м/с.
                 - for (i = 0; i < 3; i++)
                   .calculator-page__grid-item.calculator-page__grid-item--small
                     .calculator-page__grid-title
@@ -131,7 +131,7 @@ block content
                       |#{item}
                 .calculator-page__grid-heading.calculator-page__grid-long
                   .calculator-page__grid-caption
-                    |Потери i, м/м.
+                    |Потери i, #[br] м/м.
                 - for (i = 0; i < 3; i++)
                   .calculator-page__grid-item.calculator-page__grid-item--small
                     .calculator-page__grid-title
