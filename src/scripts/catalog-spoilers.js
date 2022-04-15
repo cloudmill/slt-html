@@ -13,7 +13,7 @@
         if (button.length) {
           const id = button.closest('[data-filters-button]').attr('data-filters-button')
 
-          button.toggleClass('visible')
+          button.closest('.filters__headings-item').toggleClass('visible')
           filtersTop.toggleClass('darken')
           $(`[data-filters-dropdown=${id}]`).slideToggle()
         }

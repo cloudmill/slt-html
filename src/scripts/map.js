@@ -61,7 +61,14 @@ if ($('.where-buy').length) {
         );
         placemark.events.add(['click'], () => {
           $.fancybox.defaults.animationEffect = 'left'
-          $.fancybox.defaults.animationDuration = 500
+          $.fancybox.defaults.animationDuration = 800
+          $.fancybox.defaults.afterShow = function(instance, slide) {
+            $(slide.src).closest('.fancybox-container').addClass('open')
+            $(slide.src).addClass('active')
+          }
+          $.fancybox.defaults.beforeClose = function(instance, slide) {
+            $(slide.src).removeClass('active')
+          }
           $.fancybox.open($(`[data-map-modal=${id}]`))
         })
         placemarks.push(placemark);

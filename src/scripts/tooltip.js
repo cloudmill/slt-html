@@ -10,7 +10,7 @@ $(() => {
       content: tooltipContent,
       // trigger: 'click',
       appendTo: $('.main')[0],
-      offset: [0, 6],
+      offset: [0, 14],
       zIndex: 999999,
     });
   });

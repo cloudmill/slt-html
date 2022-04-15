@@ -55,6 +55,8 @@
   &__video {
     position: relative;
     z-index: 0;
+
+    overflow: hidden;
   }
   &__video-left {
     position: absolute;
@@ -124,8 +126,8 @@
     @media (max-width: ($breakpoint - 1px)) {
       height: getRem(485px);
     }
-    background: var(--color-black);
     overflow: hidden;
+    background: var(--color-black);
   }
   &__cooperation-bg {
     @include cover;
@@ -365,6 +367,12 @@
     &.front {
       z-index: 10;
     }
+
+    &:hover {
+      #{$comp}__slider-image {
+        transform: scale(1.1);
+      }
+    }
   }
   &__slider-slide {
     display: block;
@@ -373,6 +381,7 @@
     @media (max-width: ($breakpoint - 1px)) {
       width: getRem(266px);
     }
+    overflow: hidden;
   }
   &__slider-image {
     @media (max-width: ($breakpoint - 1px)) {
@@ -385,6 +394,9 @@
     @media (max-width: ($breakpoint - 1px)) {
       height: auto;
     }
+
+    transform-origin: center;
+    transition: $transition;
   }
   &__slider-wrapper {
     margin-top: getRem(16px);
@@ -459,7 +471,7 @@
   &__calculator-bg {
     position: absolute;
     left: 50%;
-    bottom: 0;
+    top: 0;
     transform: translate(-50%, 0);
 
     display: block;
@@ -592,15 +604,17 @@
     justify-content: space-between;
 
     &::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      left: getRem(-20px);
-      right: getRem(-20px);
-      bottom: getRem(-20px);
-      top: 0;
-
-      background: linear-gradient(180deg, rgba(52, 52, 54, 0) 0%, #333335 100%);
+      @media (max-width: ($breakpoint - 1px)) {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: getRem(-20px);
+        right: getRem(-20px);
+        bottom: getRem(-20px);
+        top: 0;
+  
+        background: linear-gradient(180deg, rgba(52, 52, 54, 0) 0%, #333335 100%);
+      }
     }
   }
   &__calculator-icon {

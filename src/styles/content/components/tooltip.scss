@@ -1,7 +1,10 @@
 .tooltip {
-  position: absolute;
-  top: getRem(10px);
-  right: getRem(10px);
+  
+  &--absolute {
+    position: absolute;
+    top: getRem(10px);
+    right: getRem(10px);
+  }
 
   &__icon {
     display: flex;
@@ -20,17 +23,19 @@
 }
 
 .tippy-content {
-  padding: getRem(10px);
+  padding: getRem(20px);
   
-  max-width: getRem(350px);
-  @media (max-width: ($breakpoint - 1px)) {
-    max-width: getRem(200px);
-  }
+  max-width: getRem(260px);
 
-
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
   background: var(--color-white);
-  @include fsl(16px, 130%);
-  @media (max-width: ($breakpoint - 1px)) {
-    @include fsl(12px);
-  }
+  @include fsl(13px, 130%);
+}
+
+.tippy-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 14px 0 14px;
+  border-color: var(--color-white) transparent transparent transparent;
 }

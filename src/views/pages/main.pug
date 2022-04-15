@@ -45,13 +45,13 @@ block content
         .main-page__video-right
         .main-page__video-icon(data-decrease='')
           +about-logo-svg.main-page__video-svg
-        video.main-page__video-player(src="assets/videos/slt_company_2.mp4" loop muted)
+        video.main-page__video-player(src="assets/videos/slt_main.mp4" loop muted data-aos='fade-down')
     section.main-page__section 
       .main-page__section-grid 
         +product-cards
     section.main-page__section 
       .main-page__cooperation
-        .main-page__cooperation-bg(data-parallax='1')
+        .main-page__cooperation-bg(data-parallax='1' data-parallax-type='up')
           +cooperation-bg-svg.main-page__cooperation-svg
         .main-page__cooperation-image 
           img(src="assets/images/truck.webp", alt="")
@@ -128,5 +128,5 @@ block content
                     +button-icon.button-icon--white
                   .main-page__calculator-title 
                     |#{item}
-            .main-page__calculator-img(data-parallax='2')
+            .main-page__calculator-img(data-parallax='2' data-parallax-type='up')
               img.main-page__calculator-bg(src="assets/images/calculator-bg.webp", alt="")

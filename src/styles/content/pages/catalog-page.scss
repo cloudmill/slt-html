@@ -258,7 +258,7 @@
 
         &:last-child {
           padding-right: getRem(32px);
-          
+
           width: auto;
           flex-grow: 1;
         }
@@ -309,37 +309,52 @@
     }
   }
   &__table-item {
-    display: flex;
-    cursor: pointer;
+    position: relative;
+    z-index: 0;
 
+    display: flex;
+    
+    cursor: pointer;
     border-bottom: 1px solid var(--color-borders);
-    transition: $transition;
+    transition: 0.8s $transition-timing-function;
+    overflow: hidden;
 
     &:hover {
-      background: var(--color-light-gray);
       border-color: var(--color-blue);
 
-      .catalog-page__table-input {
+      &::before {
+        transform: none;
+      }
+
+      #{$comp}__table-input {
         @include placeholder {
           color: var(--color-black);
         }
       }
     }
 
-    &.active {
+    &::before {
+      content: "";
+      @include cover;
+      z-index: -1;
+
       background: var(--color-light-gray);
-      border-color: var(--color-blue);
+      transform: translateY(100%);
+      transition: 0.8s $transition-timing-function;
     }
 
-    // &:focus-within {
-    //   background: var(--color-light-gray);
-    //   border-color: var(--color-blue);
+    &.active {
+      border-color: var(--color-blue);
 
-    //   #{$comp}__table-button {
-    //     opacity: 1;
-    //     pointer-events: all;
-    //   }
-    // }
+      &::before {
+        transform: none;
+      }
+
+      #{$comp}__table-button {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
   }
   &__table-text {
     font-weight: 400;
@@ -363,7 +378,7 @@
     cursor: pointer;
     opacity: 0.5;
     pointer-events: none;
-    transition: $transition;
+    transition: 0.8s $transition-timing-function;
   }
   &__table-add {
     letter-spacing: normal;
@@ -412,7 +427,7 @@
       @include fsl(18px);
     }
     letter-spacing: -0.5px;
-    transition: $transition;
+    transition: 0.8s $transition-timing-function;
 
     @include placeholder {
       color: var(--color-gray);
@@ -632,10 +647,9 @@
       #{$comp}__benefits-num {
         color: var(--color-red);
       }
-      #{$comp}__card-svg {
-        path {
-          fill: var(--color-red);
-        }
+
+      #{$comp}__card {
+        --color: var(--color-red);
       }
     }
     &.green {
@@ -645,10 +659,9 @@
       #{$comp}__benefits-num {
         color: var(--color-green);
       }
-      #{$comp}__card-svg {
-        path {
-          fill: var(--color-green);
-        }
+
+      #{$comp}__card {
+        --color: var(--color-green);
       }
     }
   }
@@ -776,6 +789,8 @@
   }
 
   &__card {
+    --color: var(--color-blue);
+
     padding: getRem(20px);
     @media (max-width: ($breakpoint - 1px)) {
       padding: getRem(16px);
@@ -792,6 +807,20 @@
     }
 
     background: var(--color-white);
+
+    &:hover {
+      #{$comp}__card-svg {
+        animation: MoveUpInitial 0.3s forwards, MoveUpEnd 0.3s forwards 0.3s;
+      }
+
+      #{$comp}__card-title {
+        color: var(--color);
+      }
+
+      #{$comp}__card-pic {
+        transform: scale(0.9);
+      }
+    }
   }
   &__card-container {
     // height: 100%;
@@ -803,11 +832,18 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    // transform: rotate(-90deg);
+    overflow: hidden;
   }
   &__card-svg {
     width: getRem(16px);
     height: getRem(16px);
-    transform: rotate(-90deg);
+    
+
+    path {
+      fill: var(--color);
+    }
   }
   &__card-title {
     font-weight: 500;
@@ -816,6 +852,8 @@
       letter-spacing: 0;
       @include fsl(14px);
     }
+
+    transition: $transition;
   }
   &__card-img {
     position: absolute;
@@ -828,13 +866,15 @@
 
     display: flex;
     align-items: center;
-
-    img {
-      width: getRem(190px);
-      @media (max-width: ($breakpoint - 1px)) {
-        width: getRem(133px);
-      }
+  }
+  &__card-pic {
+    width: getRem(190px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(133px);
     }
+
+    transition: $transition;
+    transform-origin: top right;
   }
 
   &__desktop {

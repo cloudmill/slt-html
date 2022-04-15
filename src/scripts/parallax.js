@@ -10,6 +10,7 @@
         const parallaxElemOffset = parallaxElem.offset().top;
         const parallaxId = parallaxElem.data('parallax');
         const parallaxContainer = $(`[data-parallax-container='${parallaxId}']`)
+        const type = $(this).data('parallax-type')
 
         $(window).on('scroll', function () {
           const scrollPos = this.pageYOffset;
@@ -18,9 +19,15 @@
             (scrollPos + $(window).height() / 2) > parallaxElemOffset) {
             const parallax = ((scrollPos + $(window).height() / 2) - parallaxElemOffset) * 0.1;
 
-            requestAnimationFrame(() => {
-              parallaxElem.css('transform', `translateY(${parallax}px)`);
-            })
+            if (type === 'up') {
+              requestAnimationFrame(() => {
+                parallaxElem.css('transform', `translateY(-${parallax}px)`);
+              })
+            } else {
+              requestAnimationFrame(() => {
+                parallaxElem.css('transform', `translateY(${parallax}px)`);
+              })
+            }
           }
         });
       });

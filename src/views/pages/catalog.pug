@@ -46,12 +46,18 @@ block content
           .catalog-page__colors-item(data-aos='fade-up')
             .catalog-page__colors-text 
               |Цветовое #[br] исполнение
-            .catalog-page__colors-icon.active(title='белый')
-              +colors-light-svg.catalog-page__colors-svg
-            .catalog-page__colors-icon.black(title='черный')
-              +colors-light-svg.catalog-page__colors-svg
-            .catalog-page__colors-icon.red(title='красный')
-              +colors-light-svg.catalog-page__colors-svg
+            .catalog-page__colors-icon.tooltip.active
+              +colors-light-svg.catalog-page__colors-svg.tooltip__icon 
+              .tooltip__container 
+                |белый
+            .catalog-page__colors-icon.black.tooltip
+              +colors-light-svg.catalog-page__colors-svg.tooltip__icon
+              .tooltip__container 
+                |черный
+            .catalog-page__colors-icon.red.tooltip
+              +colors-light-svg.catalog-page__colors-svg.tooltip__icon 
+              .tooltip__container 
+                |красный
         .section__block
           .catalog-page__table(data-aos='fade-up') 
             .catalog-page__table-head
@@ -60,13 +66,13 @@ block content
                   |#{item}
             .catalog-page__table-body 
               - for (i = 0; i < 15; i++)
-                .catalog-page__table-item
+                label.catalog-page__table-item
                   each item in ['25×20', 'SLTFM32520', '50', '500', 'last']
                     if (item == "last")
                       .catalog-page__table-cell
                         .catalog-page__table-row 
                           .catalog-page__table-col
-                            input.catalog-page__table-input(type="number" placeholder="Введите количество")
+                            input.catalog-page__table-input(type="number" placeholder="Введите количество" data-catalog-input='')
                           .catalog-page__table-col
                             .catalog-page__table-button 
                               .catalog-page__table-add 

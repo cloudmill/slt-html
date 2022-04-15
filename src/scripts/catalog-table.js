@@ -2,16 +2,17 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  const catalogTable = document.querySelector('.catalog-page__table-body');
+  const catalogInputs = document.querySelectorAll('[data-catalog-input]');
 
-  if (catalogTable) {
-    catalogTable.addEventListener('click', event => {
-      const currentRow = event.target.closest('.catalog-page__table-item');
-      if (currentRow) {
-        if (!Number(currentRow.querySelector('.catalog-page__table-input').value) == 0) {
-          currentRow.classList.add('active')
+  if (catalogInputs.length) {
+    catalogInputs.forEach(input => {
+      const item = input.closest('.catalog-page__table-item')
+      
+      input.oninput = function() {
+        if (this.value.length) {
+          item.classList.add('active')
         } else {
-          currentRow.querySelector('.catalog-page__table-input').focus();
+          item.classList.remove('active')
         }
       }
     })
@@ -37,11 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         currentColor.classList.add('active');
-
       }
-
     })
-
   }
-
 })

@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
   const loader = document.querySelector('.loader')
 
   if (loader) {
-    const DELAY = 1000
+    const DELAY = 800
     const layers = document.querySelectorAll('.loader__layer')
 
     layers.forEach((item, i) => {
@@ -26,8 +26,8 @@ window.addEventListener("load", () => {
           duration: 1200,
         });
         document.querySelector('.main-page__video-player').play()
-      }, 1400);
-    }, DELAY * layers.length);
+      }, 1100);
+    }, DELAY * layers.length - 200);
   } else {
     document.body.classList.remove('body--hidden')
     AOS.init({

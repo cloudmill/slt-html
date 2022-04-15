@@ -18,9 +18,13 @@
       // padding: 20px;
   
       #{$comp}__container {
-        background: var(--color-darken-white);
+        // background: var(--color-darken-white);
+        &::before {
+          transform: none;
+        }
       }
       #{$comp}__content {
+        transform: translateY(-10px);
         opacity: 0;
       }
       #{$comp}__hidden {
@@ -130,6 +134,16 @@
     background: var(--color-light-gray);
     transition: $transition;
     overflow: hidden;
+    
+    &::before {
+      content: "";
+      @include cover;
+      z-index: -1;
+
+      background: var(--color-darken-white);
+      transition: 0.8s $transition-timing-function;
+      transform: translateY(100%);
+    }
   } 
 
   &__column {
@@ -152,7 +166,7 @@
   }
 
   &__content {
-    transition: $transition;
+    transition: 0.6s $transition-timing-function;
   }
 
   &__title {

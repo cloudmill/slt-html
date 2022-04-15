@@ -121,8 +121,7 @@
         transition-delay: 0s;
       }
       #{$comp}__dropdown-list {
-        opacity: 1;
-        transition-delay: 0.5s;
+        animation: fadeIn 0.5s $transition-timing-function 0.5s forwards;
       }
       #{$comp}__text {
         color: var(--color-blue);
@@ -201,8 +200,8 @@
 
   &__dropdown {
     position: absolute;
-    left: -60px;
-    top: getRem(-40px);
+    left: 0;
+    top: 0;
     bottom: 0;
     z-index: 1;
 
@@ -238,8 +237,8 @@
     padding: getRem(96px) 60px getRem(40px);
 
     opacity: 0;
+    animation: fadeOut 0.5s $transition-timing-function forwards;
     transition: $transition;
-
   }
   &__dropdown-item {
     display: flex;
@@ -691,6 +690,12 @@
   &__cart {
     position: relative;
     z-index: 0;
+
+    &:hover {
+      #{$comp}__cart-count {
+        background-color: var(--color-black);
+      }
+    }
   }
   &__cart-count {
     position: absolute;
@@ -712,6 +717,7 @@
     align-items: center;
     justify-content: center;
 
+    transition: $transition;
     color: var(--color-white);
     background-color: var(--color-blue);
     border-radius: 50%;
@@ -804,13 +810,13 @@
 
     &.active {
       #{$comp}__panel-list {
-        opacity: 1;
-        transition-delay: 0.5s;
+        animation: fadeIn 0.5s $transition-timing-function 0.5s forwards;
       }
     }
   }
   &__panel-list {
     opacity: 0;
+    animation: fadeOut 0.5s $transition-timing-function forwards;
     transition: $transition;
   }
   &__panel-item { 
@@ -880,8 +886,8 @@
     &.active {
 
       #{$comp}__cards-grid {
-        opacity: 1;
-        transition-delay: 0.5s;
+        animation: fadeIn 0.5s $transition-timing-function 0.5s forwards;
+        // transition-delay: 0.5s;
       }
     }
   }
@@ -893,6 +899,7 @@
     column-gap: $col-gap;
 
     opacity: 0;
+    animation: fadeOut 0.5s $transition-timing-function forwards;
     transition: $transition;
   }
 }

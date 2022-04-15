@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
 
-    cursor: pointer;
+    
     transition: $transition;
 
     &.active {
@@ -58,6 +58,7 @@
   }
 
   &__heading {
+    transition: $transition;
     white-space: nowrap;
     font-weight: 500;
     letter-spacing: -0.5px;
@@ -65,6 +66,10 @@
     @media (max-width: ($breakpoint - 1px)) {
       letter-spacing: 0;
       @include fsl(14px); 
+    }
+
+    &:hover {
+      color: var(--color-blue);
     }
   }
 
@@ -74,6 +79,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    cursor: pointer;
+
+    &:hover {
+      #{$comp}__svg {
+        path {
+          fill: var(--color-blue);
+        }
+      }
+    }
   }
 
   &__svg {
@@ -130,6 +145,21 @@
     }
 
     &.active {
+      color: var(--color-blue);
+    }
+  }
+
+  &__link {
+    transition: $transition;
+    white-space: nowrap;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(12px, 100%);
+    }
+
+    &:hover {
       color: var(--color-blue);
     }
   }

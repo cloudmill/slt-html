@@ -21,20 +21,20 @@
     pointer-events: none;
 
     #{$comp}__icon {
-      width: 100vw;
-      height: 100vw;
+      width: 120vw;
+      height: 120vw;
       @media (max-width: ($breakpoint - 1px)) {
         flex-shrink: 0;
         width: 100vh;
         height: 100vh;
       }
-      transform: scale(1.2);
+      // transform: scale(1.2);
       transition: width 1.6s  $transition-timing-function, height 1.6s  $transition-timing-function;
       transition-delay: 0s, 0s;
     }
 
     #{$comp}__container {
-      transform: rotate(180deg) scale(0.1);
+      transform: rotate(360deg) scale(0.1);
       opacity: 0;
     }
   }
@@ -43,6 +43,7 @@
     --size: 132px;
     padding: 22px 22px 38px;
 
+    flex-shrink: 0;
     width: var(--size);
     height: var(--size);
     display: flex;
@@ -62,8 +63,8 @@
     justify-content: center;
 
     overflow: hidden;
-    transition: transform 1.6s $transition-timing-function, opacity 0.1s  $transition-timing-function;
-    transition-delay: 0s, 1.4s;
+    transition: transform 1.2s $transition-timing-function, opacity 0.1s  $transition-timing-function;
+    transition-delay: 0.2s, 1.4s;
     transform-origin: center;
   }
 
@@ -87,11 +88,11 @@
 
       &.active {
         transform: none;
-        transition: 1s $transition-timing-function;
+        transition: 0.8s $transition-timing-function;
 
         #{$comp}__first-svg {
           transform: none;
-          transition: 1s $transition-timing-function;
+          transition: 0.8s $transition-timing-function;
         }
       }
     // }
@@ -105,11 +106,11 @@
 
     &.active {
       transform: none;
-      transition: 1s $transition-timing-function;
+      transition: 0.8s $transition-timing-function;
 
       #{$comp}__second-svg {
         transform: none;
-        transition: 1s $transition-timing-function;
+        transition: 0.8s $transition-timing-function;
       }
     }
   }
@@ -122,11 +123,11 @@
 
     &.active {
       transform: none;
-      transition: 1s $transition-timing-function;
+      transition: 0.8s $transition-timing-function;
 
       #{$comp}__third-svg {
         transform: none;
-        transition: 1s $transition-timing-function;
+        transition: 0.8s $transition-timing-function;
       }
     }
   }
