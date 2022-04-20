@@ -10,7 +10,9 @@
     display: flex;
     flex-direction: column;
   
-    width: calc(#{$col-part-d} * 6);
+    @media (min-width: $breakpoint) {
+      width: calc(#{$col-part-d} * 6);
+    }
 
     .footer__label {
       @include fsl(16px, 130%);
@@ -50,6 +52,9 @@
       &:first-child {
         margin-right: getRem(60px);
       }
+    }
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
     }
   }
 
