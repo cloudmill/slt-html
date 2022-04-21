@@ -41,34 +41,35 @@ function filterChange() {
 
 function filterCheckbox() {
     $(document).on("click", "[data-type=js-filter-checkbox]", function (e) {
-        e.preventDefault();
-
-        let parent = $(this).parent("[data-type=filter-parent]"),
-            field = $(this).attr("code"),
-            val = $(this).attr("value"),
-            data = {};
-
         console.log("filter checkbox ");
-        console.log(field + ' - ' + val);
-        /*
-        parent.find("[data-type=js-filter-checkbox]").each(function (index, element) {
-            console.log(index + ' - ' + element);
-            if (element.attr(':checked')); {
-                let field = element.attr("code"),
-                    val = element.attr("value");
+        const thisObj = $(this);
+        let data = [],
+            parent = thisObj.parents("[data-type=filter-parent]"),
+            count = 0;
 
-                data[field][index] = val;
-            }
+        data = {
+            ajax: 1,
+        }
 
+        parent.find("[data-type=js-filter-checkbox]").each(function () {
+            let field = $(this).attr("data-code");
+            data[field] = [];
         });
-        */
 
-        data['ajax'] = 1;
+        parent.find("[data-type=js-filter-checkbox]").each(function () {
+            if ($(this).is(":checked")) {
+                let field = $(this).attr("data-code"),
+                    val = $(this).val();
+
+                data[field][count] = val;
+                count++
+            }
+        });
 
         console.log(data);
 
         $.ajax({
-            method: "POST",
+            type: "POST",
             url: window.location.href,
             data: data,
             success: function (r) {
