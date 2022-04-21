@@ -380,19 +380,19 @@
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: getRem(20px);
     }
-  }
 
-  &__text {
-    letter-spacing: -0.5px;
-    @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
-      @include fsl(14px, 160%);
-    }
-
-    &:not(:first-child) {
-      margin-top: getRem(20px);
+    p {
+      letter-spacing: -0.5px;
       @media (max-width: ($breakpoint - 1px)) {
-        margin-top: getRem(10px);
+        letter-spacing: 0;
+        @include fsl(14px, 160%);
+      }
+  
+      &:not(:first-child) {
+        margin-top: getRem(20px);
+        @media (max-width: ($breakpoint - 1px)) {
+          margin-top: getRem(10px);
+        }
       }
     }
   }
