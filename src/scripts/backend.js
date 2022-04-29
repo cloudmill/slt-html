@@ -3,7 +3,17 @@ $(function () {
     filterCheckbox();
     snippetImg();
     forms();
+    videoModal();
 });
+
+function videoModal() {
+    $(document).on("click", "[data-fancy-button=video]", function (e) {
+        const thisObj = $(this);
+        let video = thisObj.attr("data-video");
+
+        $(document).find('[data-type=iframe-video-modal]').attr('src', video);
+    });
+}
 
 function snippetImg() {
     $(document).ready(function () {
