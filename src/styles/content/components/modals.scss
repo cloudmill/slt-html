@@ -814,8 +814,10 @@
   width: getRem(900px);
   height: getRem(600px);
   @media (max-width: ($breakpoint - 1px)) {
-    width: getRem(350px);
-    height: getRem(200px);
+    width: calc(100% - 40px);
+  }
+  @media (max-width: ($breakpoint-m - 1px)) {
+    height: getRem(300px);
   }
   display: none;
 

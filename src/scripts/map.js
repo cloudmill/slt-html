@@ -51,7 +51,7 @@ if ($('#map').length) {
           {
             iconLayout: "default#image",
             // iconImageHref: "/local/templates/main/assets/images/svg/map/placemark.svg",
-            iconImageHref: "/assets/images/svg/placemark.svg",
+            iconImageHref: "assets/images/svg/placemark.svg",
             iconImageSize: [markWidth, markHeight],
             iconImageOffset: [-markWidth / 2, -80],
 

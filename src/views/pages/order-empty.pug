@@ -16,7 +16,8 @@ block content
           h1.order-page__title
             |#[span.word-span #[span(data-aos='fade-up') В заказ ничего]] #[br] #[span.word-span #[span(data-aos='fade-up') не добавлено]]
           .order-page__button(data-aos='fade-up')
-            +link-right.button--wide--mobile 
-              |Каталог
+            .button-wrapper
+              +link-right.button--wide--mobile 
+                |Каталог
     section.order-page__section(data-aos='fade-up')
       +order-empty-svg.order-page__section-icon

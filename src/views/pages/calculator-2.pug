@@ -43,13 +43,14 @@ block content
               form.form(action="/") 
                 .calculator-page__features
                   .calculator-page__features-col
-                    .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up')
-                      |Тип трубы
-                    .calculator-page__features-inner 
-                      ul.calculator-page__features-list#radio-group
-                        each item in ['SLT AQUA PP-R', 'SLT AQUA PP-R-GF', 'SLT AQUA PP-R-AL']
-                          li.calculator-page__features-item(data-aos='fade-up') 
-                            +radio-button(name = 'type' text = item)
+                    .calculator-page__wrapper
+                      .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up')
+                        |Тип трубы
+                      .calculator-page__features-inner 
+                        ul.calculator-page__features-list#radio-group
+                          each item in ['SLT AQUA PP-R', 'SLT AQUA PP-R-GF', 'SLT AQUA PP-R-AL']
+                            li.calculator-page__features-item(data-aos='fade-up') 
+                              +radio-button(name = 'type' text = item)
                   .calculator-page__features-col
                     .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up') 
                       |Внешний диаметр трубы #[span.calculator-page__features-span D], мм
@@ -68,30 +69,32 @@ block content
                             li.calculator-page__features-button(data-aos='fade-up')
                               +radio-button(name = 'diameter' text = item)
                   .calculator-page__features-col
-                    .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up')
-                      |Требуемая длина плеча #[br] компенсатора #[span.calculator-page__features-span L #[span.calculator-page__features-small S1]] (обратный расчет), мм
-                    .calculator-page__features-inner(data-aos='fade-up')
-                      +input#input(type = 'number' placeholder = '0')
+                    .calculator-page__wrapper
+                      .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up')
+                        |Требуемая длина плеча #[br.calculator-page__br] компенсатора #[span.calculator-page__features-span L #[span.calculator-page__features-small S1]] (обратный расчет), мм
+                      .calculator-page__features-inner(data-aos='fade-up')
+                        +input#input(type = 'number' placeholder = '0')
                 .section__block
-                  .calculator-page__features
-                    .calculator-page__features-col
-                      .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up') 
-                        |Общая длина трубы, м
-                      .calculator-page__features-inner(data-aos='fade-up') 
-                        +input#input(type = 'number' placeholder = '0')
-                      .calculator-page__features-desc 
+                  .calculator-page__wrapper
+                    .calculator-page__features
+                      .calculator-page__features-col
                         .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up') 
-                          |Lобщ = 2L
-                    .calculator-page__features-col
-                      .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up') 
-                        |Температура монтажа, °C
-                      .calculator-page__features-inner(data-aos='fade-up') 
-                        +input#input(type = 'number' placeholder = '0')
-                    .calculator-page__features-col
-                      .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up') 
-                        |Температура эксплуатации, °C
-                      .calculator-page__features-inner(data-aos='fade-up') 
-                        +input#input(type = 'number' placeholder = '0')
+                          |Общая длина трубы, м
+                        .calculator-page__features-inner(data-aos='fade-up') 
+                          +input#input(type = 'number' placeholder = '0')
+                        .calculator-page__features-desc 
+                          .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up') 
+                            |Lобщ = 2L
+                      .calculator-page__features-col
+                        .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up') 
+                          |Температура монтажа, °C
+                        .calculator-page__features-inner(data-aos='fade-up') 
+                          +input#input(type = 'number' placeholder = '0')
+                      .calculator-page__features-col
+                        .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up') 
+                          |Температура эксплуатации, °C
+                        .calculator-page__features-inner(data-aos='fade-up') 
+                          +input#input(type = 'number' placeholder = '0')
                 .section__block 
                   .calculator-page__block
                     .calculator-page__block-row(data-aos='fade-up')
@@ -150,5 +153,6 @@ block content
                       .calculator-page__block-row(data-aos='fade-up')
                         .calculator-page__block-col
                           .calculator-page__button
-                            +download-btn.button--wide--mobile
-                              |Скачать расчет в PDF
+                            .button-wrapper
+                              +download-btn.button--wide--mobile
+                                |Скачать расчет в PDF

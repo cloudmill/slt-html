@@ -142,24 +142,25 @@ block content
             h2.contacts-form__title
               |#[span.word-span #[span(data-aos='fade-up') Связаться с нами]]
             form.form(action="/" data-parsley-validate) 
-              each item in ddata
+              .form__container
+                each item in ddata
+                  .form__item(data-aos='fade-up') 
+                    +input#input(type = item.type placeholder = item.placeholder required)
+
                 .form__item(data-aos='fade-up') 
-                  +input#input(type = item.type placeholder = item.placeholder required)
+                    +input#input(type="tel" placeholder="Телефон*" required data-tel-input)
 
-              .form__item(data-aos='fade-up') 
-                  +input#input(type="tel" placeholder="Телефон*" required data-tel-input)
+                .form__item(data-aos='fade-up') 
+                  +textarea#input(placeholder="Комментарий")
 
-              .form__item(data-aos='fade-up') 
-                +textarea#input(placeholder="Комментарий")
+                .form-bottom(data-aos='fade-up')
 
-              .form-bottom(data-aos='fade-up')
+                  .form__inner 
+                    +checkbox(id="checkbox" required="")
 
-                .form__inner 
-                  +checkbox(id="checkbox" required="")
-
-                .form__inner
-                  +form-button
-                    |Отправить
+                  .form__inner
+                    +form-button
+                      |Отправить
 
           .contacts-requisites
             h2 #[span.word-span #[span(data-aos='fade-up') Наши реквизиты]]
@@ -181,8 +182,9 @@ block content
               br
               |БИК 044525460
             .aos(data-aos='fade-up')
-              +download-btn.button--wide--mobile
-                |Скачать файлом
+              .button-wrapper
+                +download-btn.button--wide--mobile
+                  |Скачать файлом
 
   +contacts-modal1
   +contacts-modal2

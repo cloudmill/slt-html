@@ -40,13 +40,14 @@ block content
               form.form(action="/") 
                 .calculator-page__features
                   .calculator-page__features-col
-                    .calculator-page__caption(data-aos='fade-up')
-                      |Тип трубы
-                    .calculator-page__features-inner 
-                      ul.calculator-page__features-list#radio-group
-                        each item in ['SLT AQUA PP-R', 'SLT AQUA PP-R-GF', 'SLT AQUA PP-R-AL']
-                          li.calculator-page__features-item(data-aos='fade-up') 
-                            +radio-button(name = 'type' text = item)
+                    .calculator-page__wrapper
+                      .calculator-page__caption(data-aos='fade-up')
+                        |Тип трубы
+                      .calculator-page__features-inner 
+                        ul.calculator-page__features-list#radio-group
+                          each item in ['SLT AQUA PP-R', 'SLT AQUA PP-R-GF', 'SLT AQUA PP-R-AL']
+                            li.calculator-page__features-item(data-aos='fade-up') 
+                              +radio-button(name = 'type' text = item)
                   .calculator-page__features-col
                     .calculator-page__caption(data-aos='fade-up') 
                       |Внешний диаметр трубы D, мм
@@ -65,23 +66,25 @@ block content
                             li.calculator-page__features-button(data-aos='fade-up') 
                               +radio-button(name = 'diameter' text = item)
                   .calculator-page__features-col
-                    .calculator-page__caption(data-aos='fade-up') 
-                      |Длина участка компенсиции, м 
-                    .calculator-page__features-inner(data-aos='fade-up') 
-                      +input#input(type = 'number' placeholder = '0')
+                    .calculator-page__wrapper
+                      .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up') 
+                        |Длина участка компенсиции, м 
+                      .calculator-page__features-inner(data-aos='fade-up') 
+                        +input#input(type = 'number' placeholder = '0')
                 .section__block
-                  .calculator-page__features
-                    .calculator-page__features-col(data-aos='fade-up')
-                      .calculator-page__caption.calculator-page__caption--big 
-                        |Температура монтажа, °C
-                      .calculator-page__features-inner 
-                        +input#input(type = 'number' placeholder = '0')
-                    .calculator-page__features-col(data-aos='fade-up')
-                      .calculator-page__caption.calculator-page__caption--big 
-                        |Температура эксплуатации, °C
-                      .calculator-page__features-inner 
-                        +input#input(type = 'number' placeholder = '0')
-                    .calculator-page__features-col.only-desktop
+                  .calculator-page__wrapper
+                    .calculator-page__features
+                      .calculator-page__features-col(data-aos='fade-up')
+                        .calculator-page__caption.calculator-page__caption--big 
+                          |Температура монтажа, °C
+                        .calculator-page__features-inner 
+                          +input#input(type = 'number' placeholder = '0')
+                      .calculator-page__features-col(data-aos='fade-up')
+                        .calculator-page__caption.calculator-page__caption--big 
+                          |Температура эксплуатации, °C
+                        .calculator-page__features-inner 
+                          +input#input(type = 'number' placeholder = '0')
+                      .calculator-page__features-col.only-desktop
                 .section__block 
                   .calculator-page__block
                     .calculator-page__block-row(data-aos='fade-up')
@@ -99,5 +102,6 @@ block content
                       .calculator-page__block-row(data-aos='fade-up')
                         .calculator-page__block-col
                           .calculator-page__button
-                            +download-btn.button--wide--mobile
-                              |Скачать расчет в PDF
+                            .button-wrapper
+                              +download-btn.button--wide--mobile
+                                |Скачать расчет в PDF

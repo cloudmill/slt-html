@@ -29,6 +29,10 @@
     @media (max-width: ($breakpoint - 1px)) {
       flex-direction: column;
       margin-top: getRem(30px);
+      width: 50%;
+    }
+    @media (max-width: ($breakpoint-m - 1px)) {
+      width: auto;
     }
   }
 
@@ -118,6 +122,12 @@
 
   @media (max-width: ($breakpoint - 1px)) {
     margin: getRem(48px) 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  @media (max-width: ($breakpoint-m - 1px)) {
+    display: flex;
     flex-direction: column;
   }
 }
@@ -134,7 +144,8 @@
   @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
     padding: getRem(20px);
-
+  }
+  @media (max-width: ($breakpoint-m - 1px)) {
     &:not(:first-child) {
       margin-top: getRem(12px);
     }

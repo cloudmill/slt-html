@@ -44,13 +44,14 @@ block content
             .calculator-page__calculate-grid(data-aos='fade-up')
               each item in ddata.form
                 .calculator-page__calculate-item
-                  .calculator-page__caption.calculator-page__caption--big 
-                    |#{item.text}
-                  .calculator-page__features-inner 
-                    if (item.isSelect)
-                      +select(options = ['D63 SDR 7,4', 'D64 SDR 7,4', 'D65 SDR 7,4', 'D66 SDR 7,4',] placeholder = item.placeholder)
-                    else
-                      +input#input(type = 'number' placeholder = '0') 
+                  .calculator-page__wrapper
+                    .calculator-page__caption.calculator-page__caption--big 
+                      |#{item.text}
+                    .calculator-page__features-inner 
+                      if (item.isSelect)
+                        +select(options = ['D63 SDR 7,4', 'D64 SDR 7,4', 'D65 SDR 7,4', 'D66 SDR 7,4',] placeholder = item.placeholder)
+                      else
+                        +input#input(type = 'number' placeholder = '0') 
               .calculator-page__calculate-label
                 |* Согласно СП 40-102-2000 «Примечание - Допускается  сумму местных потерь h м.с. принимать равной 20-30% суммы удельных потерь i»
             .section__block
@@ -78,8 +79,9 @@ block content
                   .calculator-page__block-row
                     .calculator-page__block-col
                       .calculator-page__button(data-aos='fade-up')
-                        +download-btn.button--wide--mobile
-                          |Скачать расчет в PDF
+                        .button-wrapper
+                          +download-btn.button--wide--mobile
+                            |Скачать расчет в PDF
           .calculator-page__calculate-col
             .calculator-page__grid(data-aos='fade-up') 
               .calculator-page__grid-heading 

@@ -44,12 +44,14 @@
   &__section-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    @media (max-width: ($breakpoint - 1px)) {
-      grid-template-columns: 1fr;
-      row-gap: 12px;
-    }
     row-gap: 20px;
     column-gap: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      gap: 12px;
+    }
+    @media (max-width: ($breakpoint-m - 1px)) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__video {
@@ -454,7 +456,7 @@
     }
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    @media (max-width: ($breakpoint - 1px)) {
+    @media (max-width: ($breakpoint-m - 1px)) {
       display: block;
     }
 
@@ -500,7 +502,7 @@
 
     &:not(:first-child) {
       border-left: 1px solid $rgba-white;
-      @media (max-width: ($breakpoint - 1px)) {
+      @media (max-width: ($breakpoint-m - 1px)) {
         margin-top: getRem(12px);
         border-left: none;
       }
@@ -585,7 +587,7 @@
     @for $i from 1 to 4 {
       &:nth-child(#{$i}) {
         @media (max-width: ($breakpoint - 1px)) {
-          background: url("assets/images/calculator-bg-#{$i}.webp");
+          background: url("assets/images/calculator-bg-#{$i}.webp") center no-repeat;
           background-size: cover;
         }
       }

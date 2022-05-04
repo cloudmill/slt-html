@@ -41,13 +41,14 @@ block content
     section.section
       .container
         .catalog-page__mobile(data-aos='fade-up')
-          .catalog-page__top-buttons 
-            .catalog-page__top-item 
-              +download-btn.button--wide--mobile
-                |Скачать каталог в PDF
-            .catalog-page__top-item 
-              +link-right.button--wide--mobile
-                |Информационные материалы
+          .button-wrapper
+            .catalog-page__top-buttons 
+              .catalog-page__top-item 
+                +download-btn.button--wide--mobile
+                  |Скачать каталог в PDF
+              .catalog-page__top-item 
+                +link-right.button--wide--mobile
+                  |Информационные материалы
         .catalog-page__products 
           .catalog-page__products-item.blue
             .catalog-page__products-row 
@@ -121,7 +122,7 @@ block content
                         |Гарантийный срок
                   .catalog-page__mobile
                     .catalog-page__products-btn(data-aos='fade-up') 
-                      +link-right 
+                      +link-right(class=item.button)
                         |Вся продукция
               .catalog-page__products-bot
                 .catalog-page__products-container 

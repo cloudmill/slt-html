@@ -59,8 +59,9 @@ block content
           .category-list__row 
             .category-list__col
               .category-list__button
-                +refresh-button.button--wide--mobile(data-clear-categories='')
-                  |Сбросить
+                .button-wrapper
+                  +refresh-button.button--wide--mobile(data-clear-categories='')
+                    |Сбросить
             .category-list__col
               template(data-catalog-template='')
                 li.category-list__item(data-category='')

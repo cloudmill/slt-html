@@ -16,8 +16,9 @@ block content
         .events-page__main-wrapper
           .events-page__col(data-aos='fade-up')
             .events-page__button.sticky
-              +link-left.button--wide--mobile
-                |Все события
+              .button-wrapper
+                +link-left.button--wide--mobile
+                  |Все события
 
           .events-page__col
             section
@@ -33,7 +34,8 @@ block content
                 .events-page__image(data-aos='fade-up') 
                   img.events-page__img(src="assets/images/event-1.webp", alt="")
                 .events-page__download(data-aos='fade-up')
-                  +download-card(title = 'Скачать презентацию')
+                  .button-wrapper
+                    +download-card(title = 'Скачать презентацию')
               .section__block 
                 p.events-page__caption(data-aos='fade-up') 
                   |Системы пожаротушения на основе полимеров могут заметно потеснить традиционные решения. Однако пока этому мешают устаревшие нормы законодательства, уверены представители компании «СЛТ Аква»: технический директор Михаил Базилевский и генеральный директор Михаил Товмасян.

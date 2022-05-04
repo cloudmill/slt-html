@@ -5,7 +5,7 @@ include ../components/card
 include ../components/modals
 
 block content
-  .docs-page.cooperation-page
+  .catalog-page
     section.section.section--first
       .container 
         +breadcrumbs.breadcrumbs--noborder(items=['каталог'] page = "SLT AQUA")
@@ -48,12 +48,13 @@ block content
                       a.filters__link(href="#") 
                         |#{item}
         .section__block(data-aos='fade-up')
-          .button.button--wide.button-animate(data-fancy-button='c1')
-            .button__text
-              span
-                |Области применения
-            .button__icon 
-              +plus-svg.button__svg
+          .button-wrapper
+            .button.button--wide.button-animate(data-fancy-button='c1')
+              .button__text
+                span
+                  |Области применения
+              .button__icon 
+                +plus-svg.button__svg
         .category-list(data-list-container='')
           .category-list__row 
             .category-list__col
