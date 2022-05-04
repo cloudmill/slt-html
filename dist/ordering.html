@@ -13,8 +13,8 @@
 
 	<body class="body">
 		<div class="wrapper">
-			<header class="header" data-aos="fade-up">
-				<div class="header__inner">
+			<header class="header">
+				<div class="header__inner" data-aos="fade-up">
 					<div class="container">
 						<div class="header__desktop">
 							<div class="header__top">
@@ -468,19 +468,23 @@
 						<div class="container">
 							<div class="ordering-page__row">
 								<div class="ordering-page__col" data-aos="fade-up">
-									<div class="ordering-page__button"><a class="button button-animate button--wide--mobile sticky" href="#">
-											<div class="button__icon button__icon--left"><svg class="button__svg arrow-blue" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M3.27614 6.66672H13V5.33338H3.27614L7.4714 1.13812L6.5286 0.195312L0.723858 6.00005L6.5286 11.8048L7.4714 10.862L3.27614 6.66672Z" fill="#3F3F40"></path>
-												</svg></div>
-											<div class="button__text"><span>Редактировать заказ</span></div>
-										</a></div>
+									<div class="ordering-page__button">
+										<div class="button-wrapper sticky"><a class="button button-animate button--wide--mobile" href="#">
+												<div class="button__icon button__icon--left"><svg class="button__svg arrow-blue" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M3.27614 6.66672H13V5.33338H3.27614L7.4714 1.13812L6.5286 0.195312L0.723858 6.00005L6.5286 11.8048L7.4714 10.862L3.27614 6.66672Z" fill="#3F3F40"></path>
+													</svg></div>
+												<div class="button__text"><span>Редактировать заказ</span></div>
+											</a></div>
+									</div>
 								</div>
 								<div class="ordering-page__col">
 									<h5 class="ordering-page__heading" data-aos="fade-up">Контактные данные</h5>
 									<form class="form" action="/" data-parsley-validate>
-										<div class="form__item" data-aos="fade-up"><input class="form__input" id="input" placeholder="Имя*" required="required" /></div>
-										<div class="form__item" data-aos="fade-up"><input class="form__input" id="input" type="mail" placeholder="E-mail*" required="required" /></div>
-										<div class="form__item" data-aos="fade-up"><input class="form__input" id="input" type="tel" placeholder="Телефон*" data-tel-input="data-tel-input" required="required" /></div>
+										<div class="form__container">
+											<div class="form__item" data-aos="fade-up"><input class="form__input" id="input" placeholder="Имя*" required="required" /></div>
+											<div class="form__item" data-aos="fade-up"><input class="form__input" id="input" type="mail" placeholder="E-mail*" required="required" /></div>
+											<div class="form__item" data-aos="fade-up"><input class="form__input" id="input" type="tel" placeholder="Телефон*" data-tel-input="data-tel-input" required="required" /></div>
+										</div>
 										<div class="ordering-page__inner">
 											<h5 class="ordering-page__heading" data-aos="fade-up">Контактные данные</h5>
 											<div class="ordering-page__grid">
@@ -563,7 +567,9 @@
 											</div>
 										</div>
 										<div class="ordering-page__inner" data-aos="fade-up">
-											<h5 class="ordering-page__heading">Дополнительная информация к заказу</h5><textarea class="form__textarea" name="area" id="input" placeholder="Комментарий"></textarea>
+											<div class="form__container">
+												<h5 class="ordering-page__heading">Дополнительная информация к заказу</h5><textarea class="form__textarea" name="area" id="input" placeholder="Комментарий"></textarea>
+											</div>
 											<div class="form__wrapper">
 												<div class="form__row">
 													<div class="form__col">
@@ -574,11 +580,13 @@
 																<div class="checkbox__text">Даю согласие на обработку <a class="checkbox__link" href="#">персональных данных</a></div>
 															</label></div>
 													</div>
-													<div class="form__col"><button class="button button--blue button--wide--mobile"><span class="button__text"><span>Оформить заказ</span></span>
-															<div class="button__icon"><svg class="button__svg" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path fill-rule="evenodd" clip-rule="evenodd" d="M9.72386 6.66672H0V5.33338H9.72386L5.5286 1.13812L6.4714 0.195312L12.2761 6.00005L6.4714 11.8048L5.5286 10.862L9.72386 6.66672Z" fill="white"></path>
-																</svg></div>
-														</button></div>
+													<div class="form__col">
+														<div class="button-wrapper"><button class="button button--blue button--wide--mobile"><span class="button__text"><span>Оформить заказ</span></span>
+																<div class="button__icon"><svg class="button__svg" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd" d="M9.72386 6.66672H0V5.33338H9.72386L5.5286 1.13812L6.4714 0.195312L12.2761 6.00005L6.4714 11.8048L5.5286 10.862L9.72386 6.66672Z" fill="white"></path>
+																	</svg></div>
+															</button></div>
+													</div>
 												</div>
 											</div>
 										</div>

@@ -48,6 +48,9 @@
     letter-spacing: -0.5px;
     @media (max-width: ($breakpoint - 1px)) {
       letter-spacing: 0;
+      @include fsl(14px, 100%);
+    }
+    @media (max-width: ($breakpoint-m - 1px)) {
       @include fsl(10px, 100%);
     }
 
@@ -67,6 +70,9 @@
     letter-spacing: -0.5px;
     @media (max-width: ($breakpoint - 1px)) {
       letter-spacing: 0;
+      @include fsl(14px, 100%);
+    }
+    @media (max-width: ($breakpoint-m - 1px)) {
       @include fsl(10px, 100%);
     }
   }

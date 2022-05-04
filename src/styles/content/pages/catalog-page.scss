@@ -545,6 +545,13 @@
     margin-left: calc(#{$col-part-d} * 3);
     @media (max-width: ($breakpoint - 1px)) {
       margin-left: 0;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: ($breakpoint-m - 1px)) {
+      display: block;
     }
   }
   &__list-item {
@@ -558,6 +565,9 @@
     &:not(:first-child) {
       margin-top: getRem(32px);
       @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 0;
+      }
+      @media (max-width: ($breakpoint-m - 1px)) {
         margin-top: getRem(12px);
       }
     }

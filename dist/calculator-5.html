@@ -13,8 +13,8 @@
 
 	<body class="body">
 		<div class="wrapper">
-			<header class="header" data-aos="fade-up">
-				<div class="header__inner">
+			<header class="header">
+				<div class="header__inner" data-aos="fade-up">
 					<div class="container">
 						<div class="header__desktop">
 							<div class="header__top">
@@ -485,54 +485,64 @@
 								<div class="calculator-page__calculate-col">
 									<div class="calculator-page__calculate-grid" data-aos="fade-up">
 										<div class="calculator-page__calculate-item">
-											<div class="calculator-page__caption calculator-page__caption--big">Расход, л/с</div>
-											<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
+											<div class="calculator-page__wrapper">
+												<div class="calculator-page__caption calculator-page__caption--big">Расход, л/с</div>
+												<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
+											</div>
 										</div>
 										<div class="calculator-page__calculate-item">
-											<div class="calculator-page__caption calculator-page__caption--big">Температура, °C</div>
-											<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
+											<div class="calculator-page__wrapper">
+												<div class="calculator-page__caption calculator-page__caption--big">Температура, °C</div>
+												<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
+											</div>
 										</div>
 										<div class="calculator-page__calculate-item">
-											<div class="calculator-page__caption calculator-page__caption--big">Приемлемый диаметр и SDR труб</div>
-											<div class="calculator-page__features-inner">
-												<div class="select-wrapper">
-													<div class="select"><select class="select__mobile" name="cat-mob" data-select-mobile="">
-															<option value="" selected="selected" disabled="disabled">D63 SDR 7,4</option>
-															<option value="D63 SDR 7,4">D63 SDR 7,4</option>
-															<option value="D64 SDR 7,4">D64 SDR 7,4</option>
-															<option value="D65 SDR 7,4">D65 SDR 7,4</option>
-															<option value="D66 SDR 7,4">D66 SDR 7,4</option>
-														</select><select class="select__select" data-select-placeholder="D63 SDR 7,4" style="width: 100%">
-															<option value="" disabled="disabled" selected="selected"></option>
-															<option value="D63 SDR 7,4">D63 SDR 7,4</option>
-															<option value="D64 SDR 7,4">D64 SDR 7,4</option>
-															<option value="D65 SDR 7,4">D65 SDR 7,4</option>
-															<option value="D66 SDR 7,4">D66 SDR 7,4</option>
-														</select></div>
+											<div class="calculator-page__wrapper">
+												<div class="calculator-page__caption calculator-page__caption--big">Приемлемый диаметр и SDR труб</div>
+												<div class="calculator-page__features-inner">
+													<div class="select-wrapper">
+														<div class="select"><select class="select__mobile" name="cat-mob" data-select-mobile="">
+																<option value="" selected="selected" disabled="disabled">D63 SDR 7,4</option>
+																<option value="D63 SDR 7,4">D63 SDR 7,4</option>
+																<option value="D64 SDR 7,4">D64 SDR 7,4</option>
+																<option value="D65 SDR 7,4">D65 SDR 7,4</option>
+																<option value="D66 SDR 7,4">D66 SDR 7,4</option>
+															</select><select class="select__select" data-select-placeholder="D63 SDR 7,4" style="width: 100%">
+																<option value="" disabled="disabled" selected="selected"></option>
+																<option value="D63 SDR 7,4">D63 SDR 7,4</option>
+																<option value="D64 SDR 7,4">D64 SDR 7,4</option>
+																<option value="D65 SDR 7,4">D65 SDR 7,4</option>
+																<option value="D66 SDR 7,4">D66 SDR 7,4</option>
+															</select></div>
+													</div>
 												</div>
 											</div>
 										</div>
 										<div class="calculator-page__calculate-item">
-											<div class="calculator-page__caption calculator-page__caption--big">Длина трубопровода, м</div>
-											<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
+											<div class="calculator-page__wrapper">
+												<div class="calculator-page__caption calculator-page__caption--big">Длина трубопровода, м</div>
+												<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
+											</div>
 										</div>
 										<div class="calculator-page__calculate-item">
-											<div class="calculator-page__caption calculator-page__caption--big">Процент, учитывающий местные потери</div>
-											<div class="calculator-page__features-inner">
-												<div class="select-wrapper">
-													<div class="select"><select class="select__mobile" name="cat-mob" data-select-mobile="">
-															<option value="" selected="selected" disabled="disabled">20%</option>
-															<option value="D63 SDR 7,4">D63 SDR 7,4</option>
-															<option value="D64 SDR 7,4">D64 SDR 7,4</option>
-															<option value="D65 SDR 7,4">D65 SDR 7,4</option>
-															<option value="D66 SDR 7,4">D66 SDR 7,4</option>
-														</select><select class="select__select" data-select-placeholder="20%" style="width: 100%">
-															<option value="" disabled="disabled" selected="selected"></option>
-															<option value="D63 SDR 7,4">D63 SDR 7,4</option>
-															<option value="D64 SDR 7,4">D64 SDR 7,4</option>
-															<option value="D65 SDR 7,4">D65 SDR 7,4</option>
-															<option value="D66 SDR 7,4">D66 SDR 7,4</option>
-														</select></div>
+											<div class="calculator-page__wrapper">
+												<div class="calculator-page__caption calculator-page__caption--big">Процент, учитывающий местные потери</div>
+												<div class="calculator-page__features-inner">
+													<div class="select-wrapper">
+														<div class="select"><select class="select__mobile" name="cat-mob" data-select-mobile="">
+																<option value="" selected="selected" disabled="disabled">20%</option>
+																<option value="D63 SDR 7,4">D63 SDR 7,4</option>
+																<option value="D64 SDR 7,4">D64 SDR 7,4</option>
+																<option value="D65 SDR 7,4">D65 SDR 7,4</option>
+																<option value="D66 SDR 7,4">D66 SDR 7,4</option>
+															</select><select class="select__select" data-select-placeholder="20%" style="width: 100%">
+																<option value="" disabled="disabled" selected="selected"></option>
+																<option value="D63 SDR 7,4">D63 SDR 7,4</option>
+																<option value="D64 SDR 7,4">D64 SDR 7,4</option>
+																<option value="D65 SDR 7,4">D65 SDR 7,4</option>
+																<option value="D66 SDR 7,4">D66 SDR 7,4</option>
+															</select></div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -562,11 +572,13 @@
 											<div class="calculator-page__block-inner">
 												<div class="calculator-page__block-row">
 													<div class="calculator-page__block-col">
-														<div class="calculator-page__button" data-aos="fade-up"><a class="button button--download button--wide--mobile" href="#"><span class="button__text"><span>Скачать расчет в PDF</span></span>
-																<div class="button__icon"><svg class="button__svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<path fill-rule="evenodd" clip-rule="evenodd" d="M16.2929 9.29289L13 12.5858V2H11V12.5858L7.70711 9.29289L6.29289 10.7071L12 16.4142L17.7071 10.7071L16.2929 9.29289ZM22 20V16H20V20H4V16H2V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20Z" fill="#07A8D7"></path>
-																	</svg></div>
-															</a></div>
+														<div class="calculator-page__button" data-aos="fade-up">
+															<div class="button-wrapper"><a class="button button--download button--wide--mobile" href="#"><span class="button__text"><span>Скачать расчет в PDF</span></span>
+																	<div class="button__icon"><svg class="button__svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path fill-rule="evenodd" clip-rule="evenodd" d="M16.2929 9.29289L13 12.5858V2H11V12.5858L7.70711 9.29289L6.29289 10.7071L12 16.4142L17.7071 10.7071L16.2929 9.29289ZM22 20V16H20V20H4V16H2V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20Z" fill="#07A8D7"></path>
+																		</svg></div>
+																</a></div>
+														</div>
 													</div>
 												</div>
 											</div>

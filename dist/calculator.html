@@ -13,8 +13,8 @@
 
 	<body class="body">
 		<div class="wrapper">
-			<header class="header" data-aos="fade-up">
-				<div class="header__inner">
+			<header class="header">
+				<div class="header__inner" data-aos="fade-up">
 					<div class="container">
 						<div class="header__desktop">
 							<div class="header__top">
@@ -565,28 +565,30 @@
 										<form class="form" action="/">
 											<div class="calculator-page__features">
 												<div class="calculator-page__features-col">
-													<div class="calculator-page__caption" data-aos="fade-up">Тип трубы</div>
-													<div class="calculator-page__features-inner">
-														<ul class="calculator-page__features-list" id="radio-group">
-															<li class="calculator-page__features-item" data-aos="fade-up">
-																<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="type" />
-																		<div class="radio__text">SLT AQUA PP-R</div>
-																		<div class="radio__icon"></div>
-																	</label></div>
-															</li>
-															<li class="calculator-page__features-item" data-aos="fade-up">
-																<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="type" />
-																		<div class="radio__text">SLT AQUA PP-R-GF</div>
-																		<div class="radio__icon"></div>
-																	</label></div>
-															</li>
-															<li class="calculator-page__features-item" data-aos="fade-up">
-																<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="type" />
-																		<div class="radio__text">SLT AQUA PP-R-AL</div>
-																		<div class="radio__icon"></div>
-																	</label></div>
-															</li>
-														</ul>
+													<div class="calculator-page__wrapper">
+														<div class="calculator-page__caption" data-aos="fade-up">Тип трубы</div>
+														<div class="calculator-page__features-inner">
+															<ul class="calculator-page__features-list" id="radio-group">
+																<li class="calculator-page__features-item" data-aos="fade-up">
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="type" />
+																			<div class="radio__text">SLT AQUA PP-R</div>
+																			<div class="radio__icon"></div>
+																		</label></div>
+																</li>
+																<li class="calculator-page__features-item" data-aos="fade-up">
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="type" />
+																			<div class="radio__text">SLT AQUA PP-R-GF</div>
+																			<div class="radio__icon"></div>
+																		</label></div>
+																</li>
+																<li class="calculator-page__features-item" data-aos="fade-up">
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="type" />
+																			<div class="radio__text">SLT AQUA PP-R-AL</div>
+																			<div class="radio__icon"></div>
+																		</label></div>
+																</li>
+															</ul>
+														</div>
 													</div>
 												</div>
 												<div class="calculator-page__features-col">
@@ -657,21 +659,25 @@
 													</div>
 												</div>
 												<div class="calculator-page__features-col">
-													<div class="calculator-page__caption" data-aos="fade-up">Длина участка компенсиции, м</div>
-													<div class="calculator-page__features-inner" data-aos="fade-up"><input class="form__input" id="input" type="number" placeholder="0" /></div>
+													<div class="calculator-page__wrapper">
+														<div class="calculator-page__caption calculator-page__caption--big" data-aos="fade-up">Длина участка компенсиции, м</div>
+														<div class="calculator-page__features-inner" data-aos="fade-up"><input class="form__input" id="input" type="number" placeholder="0" /></div>
+													</div>
 												</div>
 											</div>
 											<div class="section__block">
-												<div class="calculator-page__features">
-													<div class="calculator-page__features-col" data-aos="fade-up">
-														<div class="calculator-page__caption calculator-page__caption--big">Температура монтажа, °C</div>
-														<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
+												<div class="calculator-page__wrapper">
+													<div class="calculator-page__features">
+														<div class="calculator-page__features-col" data-aos="fade-up">
+															<div class="calculator-page__caption calculator-page__caption--big">Температура монтажа, °C</div>
+															<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
+														</div>
+														<div class="calculator-page__features-col" data-aos="fade-up">
+															<div class="calculator-page__caption calculator-page__caption--big">Температура эксплуатации, °C</div>
+															<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
+														</div>
+														<div class="calculator-page__features-col only-desktop"></div>
 													</div>
-													<div class="calculator-page__features-col" data-aos="fade-up">
-														<div class="calculator-page__caption calculator-page__caption--big">Температура эксплуатации, °C</div>
-														<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
-													</div>
-													<div class="calculator-page__features-col only-desktop"></div>
 												</div>
 											</div>
 											<div class="section__block">
@@ -689,11 +695,13 @@
 													<div class="calculator-page__block-inner">
 														<div class="calculator-page__block-row" data-aos="fade-up">
 															<div class="calculator-page__block-col">
-																<div class="calculator-page__button"><a class="button button--download button--wide--mobile" href="#"><span class="button__text"><span>Скачать расчет в PDF</span></span>
-																		<div class="button__icon"><svg class="button__svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																				<path fill-rule="evenodd" clip-rule="evenodd" d="M16.2929 9.29289L13 12.5858V2H11V12.5858L7.70711 9.29289L6.29289 10.7071L12 16.4142L17.7071 10.7071L16.2929 9.29289ZM22 20V16H20V20H4V16H2V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20Z" fill="#07A8D7"></path>
-																			</svg></div>
-																	</a></div>
+																<div class="calculator-page__button">
+																	<div class="button-wrapper"><a class="button button--download button--wide--mobile" href="#"><span class="button__text"><span>Скачать расчет в PDF</span></span>
+																			<div class="button__icon"><svg class="button__svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																					<path fill-rule="evenodd" clip-rule="evenodd" d="M16.2929 9.29289L13 12.5858V2H11V12.5858L7.70711 9.29289L6.29289 10.7071L12 16.4142L17.7071 10.7071L16.2929 9.29289ZM22 20V16H20V20H4V16H2V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20Z" fill="#07A8D7"></path>
+																				</svg></div>
+																		</a></div>
+																</div>
 															</div>
 														</div>
 													</div>
