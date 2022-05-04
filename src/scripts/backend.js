@@ -4,7 +4,23 @@ $(function () {
     snippetImg();
     forms();
     videoModal();
+    workModal();
 });
+
+function workModal() {
+    $(document).on("click", "[data-type=work-modal]", function (e) {
+        const thisObj = $(this);
+        let ttl = thisObj.attr("data-text"),
+            id = thisObj.attr("data-id"),
+            modalId = thisObj.attr("data-fancy-button"),
+            modal = $(document).find('[data-fancy-modal=' + modalId + ']'),
+            modalTtl = modal.find('[data-type=ttl]'),
+            modalInputVacID = modal.find('[data-uf=UF_VAC_ID]');
+
+        modalTtl.html(ttl);
+        modalInputVacID.val(id);
+    });
+}
 
 function videoModal() {
     $(document).on("click", "[data-fancy-button=video]", function (e) {
@@ -101,17 +117,24 @@ function forms() {
 
         let form = $(this),
             url = form.attr("data-url"),
-            contentType = "application/x-www-form-urlencoded; charset=UTF-8",
-            processData = true,
             count = 0,
-            data = {};
+            file = form.find('[data-type=get-field-file]').length ? form.find('[data-type=get-field-file]') : false,
+            contentType = file ? false : 'application/x-www-form-urlencoded; charset=UTF-8',
+            processData = file ? false : true,
+            data = file ? new FormData() : {};
+
+        if (file) {
+            $.each(file.files, function (key, input) {
+                data.append('file[]', input);
+            });
+            data.append('file', file[0].files[0]);
+        }
 
         form.find("[data-type=get-field]").each(function () {
             let field = $(this).attr("data-uf"),
                 val = $(this).val();
 
-            data[field] = val;
-
+            file ? data.append(field, val) : (data[field] = val);
         });
 
         form.find("[data-type=get-field-multi]").each(function () {
