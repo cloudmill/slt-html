@@ -1,6 +1,7 @@
 $(function () {
     filterChange();
     filterCheckbox();
+    filterList();
     snippetImg();
     forms();
     videoModal();
@@ -44,16 +45,81 @@ function filterChange() {
         e.preventDefault();
 
         let thisObj = $(this),
-            value = thisObj.val();
+            city = thisObj.val(),
+            tags = [],
+            count = 0;
 
-        console.log("filter change  " + value);
+        console.log("filter change  " + city);
+
+        $(document).find("[data-type=js-filter-list]").each(function () {
+            if ($(this).hasClass("is-active")) {
+                let prop = $(this).attr("data-value");
+
+                tags[count] = prop;
+                count++
+            }
+        });
+
+        console.log(tags);
+        console.log(city);
+
+        $(this).addClass('active-city');
 
         $.ajax({
             method: "POST",
             url: window.location.href,
             data: {
                 ajax: 1,
-                value: value,
+                city: city,
+                tags: tags
+            },
+            success: function (r) {
+                $(document).find('[data-type=items-container-full]').empty();
+                $(document).find('[data-type=items-container-full]').append($(r));
+            },
+            error: function (r) {
+                console.debug(r);
+            }
+        });
+    });
+}
+
+function filterList() {
+    $(document).on("click", "[data-type=js-filter-list]", function (e) {
+        e.preventDefault();
+
+        let thisObj = $(this),
+            parent = thisObj.parents('#filters-container'),
+            count = 0,
+            value = [],
+            city = '',
+            inputCity = $(document).find('.active-city');
+
+        console.log("filter list ");
+
+        parent.find("[data-type=js-filter-list]").each(function () {
+            if ($(this).hasClass("is-active")) {
+                let prop = $(this).attr("data-value");
+
+                value[count] = prop;
+                count++
+            }
+        });
+
+        if (inputCity) {
+            city = inputCity.val();
+        }
+
+        console.log(value);
+        console.log(city);
+
+        $.ajax({
+            method: "POST",
+            url: window.location.href,
+            data: {
+                ajax: 1,
+                tags: value,
+                city: city,
             },
             success: function (r) {
                 $(document).find('[data-type=items-container-full]').empty();
