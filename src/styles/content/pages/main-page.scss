@@ -333,17 +333,6 @@
     position: relative;
     z-index: 0;
   }
-  &__slider-desktop {
-    @media (max-width: ($breakpoint - 1px)) {
-      display: none;
-    }
-  }
-  &__slider-mobile {
-    display: none;
-    @media (max-width: ($breakpoint - 1px)) {
-      display: block;
-    }
-  }
   &__slider-row {
     margin-left: getRem(-150px);
 
@@ -433,6 +422,11 @@
     margin-top: getRem(16px);
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: getRem(12px);
+    }
+  }
+  &__slider-controls {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
     }
   }
 

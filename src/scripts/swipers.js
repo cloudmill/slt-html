@@ -33,12 +33,13 @@ const BREAKPOINT = 1280;
           case 1:
             slider_options = {
               ...slider_options,
-              centeredSlides: true,
+              centeredSlides: false,
               loop: true,
               spaceBetween: 20,
               breakpoints: {
                 [BREAKPOINT]: {
                   spaceBetween: 172,
+                  centeredSlides: true,
                 },
               },
             }
