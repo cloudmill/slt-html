@@ -176,6 +176,44 @@
       height: getRem(176px);
     }
   }
+  &__cooperation-truck {
+    position: absolute;
+    z-index: -1;
+    bottom: getRem(50px);
+    right: getRem(40px);
+    @media (max-width: ($breakpoint - 1px)) {
+      bottom: getRem(97px);
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    width: getRem(904px);
+    height: getRem(505px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(267px);
+      height: getRem(149px);
+    }
+  }
+  &__cooperation-shadow {
+    position: absolute;
+    z-index: -2;
+    bottom: getRem(-8px);
+    right: getRem(-37px);
+    @media (max-width: ($breakpoint - 1px)) {
+      bottom: getRem(78px);
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    width: getRem(1094px);
+    height: getRem(344px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(324px);
+      height: getRem(102px);
+    }
+
+    mix-blend-mode: darken;
+  }
   &__cooperation-container {
     padding: getRem(50px) getRem(40px);
     @media (max-width: ($breakpoint - 1px)) {
