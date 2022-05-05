@@ -20,6 +20,7 @@ const BREAKPOINT = 1280;
           slidesPerView: 'auto',
 
           spaceBetween: 20,
+          speed: 500,
 
           // breakpoints: {
           //   [BREAKPOINT]: {
@@ -29,26 +30,38 @@ const BREAKPOINT = 1280;
         };
 
         switch (slider_id) {
+          case 1:
+            slider_options = {
+              ...slider_options,
+              centeredSlides: true,
+              loop: true,
+              spaceBetween: 20,
+              breakpoints: {
+                [BREAKPOINT]: {
+                  spaceBetween: 172,
+                },
+              },
+            }
+            break;
           case 3:
-          slider_options = {
-            loop: true,
-            slidesPerView: 'auto',
-            spaceBetween: 12,
-            centeredSlides: true,
-          }
+            slider_options = {
+              loop: true,
+              slidesPerView: 'auto',
+              spaceBetween: 12,
+              centeredSlides: true,
+            }
             break;
           case 5:
-          slider_options = {
-            slidesPerView: 'auto',
-            spaceBetween: 0,
-            pagination: {
-              el: '.swiper-pagination',
-            },
+            slider_options = {
+              slidesPerView: 'auto',
+              spaceBetween: 0,
+              pagination: {
+                el: '.swiper-pagination',
+              },
           }
             break;
           case 10:
             slider_options = {
-              // ...slider_options,
               slidesPerView: 'auto',
               spaceBetween: 150,
               loop: true,
@@ -59,12 +72,11 @@ const BREAKPOINT = 1280;
             slider_options = {
               slidesPerView: 'auto',
               spaceBetween: 20,
-              // slidesPerGroup: 2,
               allowTouchMove: false,
-              // loopFillGroupWithBlank: true,
               loop: true,
               speed: 300,
             }
+            break;
         }
 
         const slider_swiper = new Swiper(slider_el[0], slider_options);

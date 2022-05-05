@@ -383,66 +383,18 @@
     @media (max-width: ($breakpoint - 1px)) {
       width: getRem(266px);
     }
-    overflow: hidden;
   }
   &__slider-image {
-    @media (max-width: ($breakpoint - 1px)) {
-      margin-bottom: 12px;
-    }
-
     display: flex;
     align-items: center;
-    height: getRem(420px);
-    @media (max-width: ($breakpoint - 1px)) {
-      height: auto;
-    }
 
     transform-origin: center;
     transition: $transition;
   }
-  &__slider-wrapper {
-    margin-top: getRem(16px);
-    position: relative;
-  }
   &__slider-title {
-    opacity: 0;
-    pointer-events: none;
-
-    overflow: hidden;
-    transition: opacity 0s .3s;
+    margin-top: getRem(16px);
     @media (max-width: ($breakpoint - 1px)) {
-      opacity: 1;
-      pointer-events: all;
-    }
-
-    &.active {
-      opacity: 1;
-      pointer-events: all;
-      transition-delay: 0.1s;
-
-      #{$comp}__slider-span {
-        animation: textIn 0.3s $transition-timing-function;
-        transform: translateY(0);
-        transition: transform, opacity 0s;
-      }
-    }
-
-    &:not(:first-child) {
-      position: absolute;
-      top: 0;
-      @media (max-width: ($breakpoint - 1px)) {
-        position: static;
-      }
-    }
-  }
-  &__slider-span {
-    display: block;
-    animation: textOut 0.3s $transition-timing-function;
-    transform: translateY(100%);
-    transition: transform, opacity 0s;
-    @media (max-width: ($breakpoint - 1px)) {
-      animation: none;
-      transform: none;
+      margin-top: getRem(12px);
     }
   }
 

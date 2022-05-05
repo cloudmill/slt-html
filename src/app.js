@@ -14,7 +14,7 @@ import "./scripts/anchor-scroll";
 import "./scripts/tooltip";
 import "./scripts/objects-menu";
 import "./scripts/catalog-category";
-import "./scripts/main-slider";
+// import "./scripts/main-slider";
 import "./scripts/about-slider";
 import "./scripts/order-panel";
 import "./scripts/scroll-decrease";
