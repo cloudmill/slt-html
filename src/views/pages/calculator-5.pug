@@ -128,8 +128,8 @@ block content
                   .calculator-page__grid-item.calculator-page__grid-item--small
                     .calculator-page__grid-title
                       |SDR 11
-                  each item in ['73,7174', '47,2966', '28,9305', '18,3154', '11,7074', '7,2892', '5,2033', '3,7066', '2,4342']
-                    .calculator-page__grid-item 
+                  each item, j in ['73,7174', '47,2966', '28,9305', '18,3154', '11,7074', '7,2892', '5,2033', '3,7066', '2,4342']
+                    .calculator-page__grid-item(class=(j === 2 ? "active" : ""))
                       |#{item}
                 .calculator-page__grid-heading.calculator-page__grid-long
                   .calculator-page__grid-caption

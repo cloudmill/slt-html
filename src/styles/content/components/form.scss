@@ -62,6 +62,7 @@
     resize: none;
 
     @include placeholder {
+      font-weight: 500;
       color: var(--color-gray);
     }
 

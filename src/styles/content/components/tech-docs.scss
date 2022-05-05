@@ -5,7 +5,9 @@
   z-index: 0;
 
   display: block;
+  
   background: var(--color-black);
+  overflow: hidden;
 
   &:hover {
     #{$comp}__hover {

@@ -7,6 +7,7 @@ import "./scripts/accordion";
 import "./scripts/fancybox";
 import "./scripts/video-scroll";
 import "./scripts/parallax";
+import "./scripts/page-fadeout";
 import "./scripts/select";
 import "./scripts/map";
 import "./scripts/anchor-scroll";
