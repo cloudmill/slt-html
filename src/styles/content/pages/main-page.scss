@@ -176,6 +176,44 @@
       height: getRem(176px);
     }
   }
+  &__cooperation-truck {
+    position: absolute;
+    z-index: -1;
+    bottom: getRem(50px);
+    right: getRem(40px);
+    @media (max-width: ($breakpoint - 1px)) {
+      bottom: getRem(97px);
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    width: getRem(904px);
+    height: getRem(505px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(267px);
+      height: getRem(149px);
+    }
+  }
+  &__cooperation-shadow {
+    position: absolute;
+    z-index: -2;
+    bottom: getRem(-8px);
+    right: getRem(-37px);
+    @media (max-width: ($breakpoint - 1px)) {
+      bottom: getRem(78px);
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    width: getRem(1094px);
+    height: getRem(344px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(324px);
+      height: getRem(102px);
+    }
+
+    mix-blend-mode: darken;
+  }
   &__cooperation-container {
     padding: getRem(50px) getRem(40px);
     @media (max-width: ($breakpoint - 1px)) {
@@ -295,17 +333,6 @@
     position: relative;
     z-index: 0;
   }
-  &__slider-desktop {
-    @media (max-width: ($breakpoint - 1px)) {
-      display: none;
-    }
-  }
-  &__slider-mobile {
-    display: none;
-    @media (max-width: ($breakpoint - 1px)) {
-      display: block;
-    }
-  }
   &__slider-row {
     margin-left: getRem(-150px);
 
@@ -383,66 +410,23 @@
     @media (max-width: ($breakpoint - 1px)) {
       width: getRem(266px);
     }
-    overflow: hidden;
   }
   &__slider-image {
-    @media (max-width: ($breakpoint - 1px)) {
-      margin-bottom: 12px;
-    }
-
     display: flex;
     align-items: center;
-    height: getRem(420px);
-    @media (max-width: ($breakpoint - 1px)) {
-      height: auto;
-    }
 
     transform-origin: center;
     transition: $transition;
   }
-  &__slider-wrapper {
-    margin-top: getRem(16px);
-    position: relative;
-  }
   &__slider-title {
-    opacity: 0;
-    pointer-events: none;
-
-    overflow: hidden;
-    transition: opacity 0s .3s;
+    margin-top: getRem(16px);
     @media (max-width: ($breakpoint - 1px)) {
-      opacity: 1;
-      pointer-events: all;
-    }
-
-    &.active {
-      opacity: 1;
-      pointer-events: all;
-      transition-delay: 0.1s;
-
-      #{$comp}__slider-span {
-        animation: textIn 0.3s $transition-timing-function;
-        transform: translateY(0);
-        transition: transform, opacity 0s;
-      }
-    }
-
-    &:not(:first-child) {
-      position: absolute;
-      top: 0;
-      @media (max-width: ($breakpoint - 1px)) {
-        position: static;
-      }
+      margin-top: getRem(12px);
     }
   }
-  &__slider-span {
-    display: block;
-    animation: textOut 0.3s $transition-timing-function;
-    transform: translateY(100%);
-    transition: transform, opacity 0s;
+  &__slider-controls {
     @media (max-width: ($breakpoint - 1px)) {
-      animation: none;
-      transform: none;
+      display: none;
     }
   }
 

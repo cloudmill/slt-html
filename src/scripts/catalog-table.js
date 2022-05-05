@@ -2,11 +2,11 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  const catalogInputs = document.querySelectorAll('[data-catalog-input]');
+  const catalogInputs = document.querySelectorAll('[data-table-input]');
 
   if (catalogInputs.length) {
     catalogInputs.forEach(input => {
-      const item = input.closest('.catalog-page__table-item')
+      const item = input.closest('[data-table-item]')
       
       input.oninput = function() {
         if (this.value.length) {

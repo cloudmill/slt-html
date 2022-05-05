@@ -318,7 +318,7 @@ block content
         +breadcrumbs(items = ['SLT AQUA', 'трубы', 'однослойная'] page = "Труба SLT Aqua PP-R SDR 7,4")
         .catalog-page__row 
           .catalog-page__col
-            h3  
+            h1.catalog-page__title
               |#[span.word-span #[span(data-aos='fade-up') Труба]] #[span.word-span #[span(data-aos='fade-up') SLT AQUA]] #[span.word-span #[span(data-aos='fade-up') PP-R SDR 7,4]]
             p.catalog-page__text(data-aos='fade-up') 
               |Труба однослойная напорная полипропиленовая PN10 (SDR 11) предназначена для систем холодного и питьевого водоснабжения, а также технологических трубопроводов, транспортирующих жидкости и газы, не агрессивные к материалам трубы.
@@ -486,13 +486,13 @@ block content
                   |#{item}
             .catalog-page__table-body
               - for (i = 0; i < 15; i++)
-                label.catalog-page__table-item
+                label.catalog-page__table-item(data-table-item='')
                   each item in ['20', '2SLTPS1120', '1,9', '2', '50', '0,105', 'last']
                     if (item == "last")
                       .catalog-page__table-cell
                         .catalog-page__table-row 
                           .catalog-page__table-col
-                            input.catalog-page__table-input(type="number" placeholder="Введите количество" data-catalog-input='')
+                            input.catalog-page__table-input(type="number" placeholder="Введите количество" data-table-input='')
                           .catalog-page__table-col
                             .catalog-page__table-button 
                               .catalog-page__table-add 
@@ -513,7 +513,7 @@ block content
                   {label: "Вес, кг/м", text: "0,105"},
                 ]
               - for (i = 0; i < 12; i++)
-                li.catalog-page__block-item(data-aos='fade-up') 
+                li.catalog-page__block-item(data-aos='fade-up' data-table-item='') 
                   .catalog-page__block-top 
                     .catalog-page__block-cell 
                       .catalog-page__block-label 
@@ -528,10 +528,10 @@ block content
                         .catalog-page__block-text
                           |#{item.text}
                     .catalog-page__block-cell 
-                      .catalog-page__block-label
+                      .catalog-page__block-label.darken
                         |Добавить в заказ,шт
                       .catalog-page__block-input
-                        input.catalog-page__table-input(type="number" placeholder="Кол-во")
+                        input.catalog-page__table-input(type="number" placeholder="Кол-во" data-table-input='')
                     .catalog-page__block-cell 
                       .catalog-page__table-button 
                         .catalog-page__table-add 

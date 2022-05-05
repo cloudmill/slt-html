@@ -1,6 +1,15 @@
 .catalog-page {
   $comp: &;
 
+  &__title {
+    @include fsl(44px, 110%);
+    letter-spacing: -2px;
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(20px);
+      letter-spacing: -0.5px;
+    }
+  }
+
   &__section {
     padding-bottom: getRem(20px);
     @media (max-width: ($breakpoint - 1px)) {
@@ -482,6 +491,19 @@
     &:not(:first-child) {
       @media (max-width: ($breakpoint-m - 1px)) {
         margin-top: getRem(12px);
+      }
+    }
+
+    &.active {
+      #{$comp}__table-input {
+        border-color: transparent;
+        border-bottom-color: var(--color-blue);
+        background: var(--color-light-gray);
+      }
+
+      #{$comp}__table-button {
+        opacity: 1;
+        pointer-events: all;
       }
     }
   }
