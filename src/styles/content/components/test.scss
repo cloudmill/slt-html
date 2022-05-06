@@ -10,11 +10,6 @@
   }
 }
 
-.test-container {
-  margin: 50px;
-}
-
-.test-grid {
-  display: grid;
-  grid-template-columns: repeat(9, auto);
+.test-button {
+  display: flex;
 }
