@@ -1,6 +1,9 @@
 .objects-page {
 
   &__top {
+    position: relative;
+    z-index: 1;
+    
     @media (max-width: ($breakpoint - 1px)) {
       width: 50%;
     }

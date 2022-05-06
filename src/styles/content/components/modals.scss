@@ -163,6 +163,9 @@
     #{$comp}__container {
       opacity: 1;
     }
+    #{$comp}__panel {
+      opacity: 1;
+    }
   }
 
   &__container {
@@ -326,6 +329,8 @@
     background: var(--color-white);
     border-top: 1px solid var(--color-borders);
     box-shadow: 0px -6px 34px rgba(0, 0, 0, 0.06);
+    transition: $transition;
+    opacity: 0;
 
     &.hidden {
       #{$comp}__panel-title {

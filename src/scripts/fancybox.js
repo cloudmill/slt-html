@@ -24,6 +24,7 @@ import '@fancyapps/fancybox';
           $.fancybox.defaults.animationEffect = 'left'
           $.fancybox.defaults.animationDuration = 800
           $.fancybox.defaults.afterShow = function(instance, slide) {
+            slide.src.querySelector('form').reset()
             $(slide.src).closest('.fancybox-container').addClass('open')
             $(slide.src).addClass('active')
           }

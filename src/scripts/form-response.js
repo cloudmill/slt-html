@@ -20,8 +20,8 @@ $(() => {
         );
         $.fancybox.defaults.animationEffect = 'zoom'
         $.fancybox.defaults.animationDuration = 500
+        $.fancybox.defaults.afterShow = function(instance, slide) {}
         $.fancybox.open($(`[data-response=${id}]`))
-        ths[0].reset()
       })
     })
   }
