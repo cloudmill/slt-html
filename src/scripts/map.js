@@ -48,8 +48,8 @@ export function initMap() {
                   {},
                   {
                     iconLayout: "default#image",
-                    // iconImageHref: "/local/templates/main/assets/images/svg/placemark.svg",
-                    iconImageHref: "assets/images/svg/placemark.svg",
+                    iconImageHref: "/local/templates/main/assets/images/svg/placemark.svg",
+                    // iconImageHref: "assets/images/svg/placemark.svg",
                     iconImageSize: [markWidth, markHeight],
                     iconImageOffset: [-markWidth / 2, -80],
       
