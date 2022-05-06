@@ -1,3 +1,5 @@
+import {initMap} from './map.js';
+
 $(function () {
     filterChange();
     filterCheckbox();
@@ -76,6 +78,8 @@ function filterChange() {
             success: function (r) {
                 $(document).find('[data-type=items-container-full]').empty();
                 $(document).find('[data-type=items-container-full]').append($(r));
+
+                initMap();
             },
             error: function (r) {
                 console.debug(r);
@@ -124,6 +128,8 @@ function filterList() {
             success: function (r) {
                 $(document).find('[data-type=items-container-full]').empty();
                 $(document).find('[data-type=items-container-full]').append($(r));
+
+                initMap();
             },
             error: function (r) {
                 console.debug(r);
