@@ -48,8 +48,8 @@ export function initMap() {
                   {},
                   {
                     iconLayout: "default#image",
-                    iconImageHref: "/local/templates/main/assets/images/svg/placemark.svg",
-                    // iconImageHref: "assets/images/svg/placemark.svg",
+                    // iconImageHref: "/local/templates/main/assets/images/svg/placemark.svg",
+                    iconImageHref: "assets/images/svg/placemark.svg",
                     iconImageSize: [markWidth, markHeight],
                     iconImageOffset: [-markWidth / 2, -80],
       
@@ -82,7 +82,7 @@ export function initMap() {
                   zoomMargin: Math.max(markWidth, markHeight),
                 })
                 .then(() => {
-                  if (items.length === 1) {
+                  if (placemarks.length === 1) {
                     map.setZoom(12);
                   }
                 });
