@@ -27,6 +27,11 @@ block content
         .section__inner 
           h1 
             |#[span.word-span #[span(data-aos='fade-up') Объекты]]
+    section.section.section--md 
+      .container 
+        .test-button(data-aos='fade-up')
+          +link-right(href='/slt-html/dist/about' data-link='')
+            |О компании
     section.section
       .container
         .objects-page__top
@@ -38,7 +43,7 @@ block content
           .objects-page__top-grid
             each item in ddata
               .objects-page__top-item(data-aos='fade-up')
-                .select-custom(data-accordion='')
+                .select-custom(data-objects-accordion='')
                   .select-custom__button(data-accordion-button='')
                     .select-custom__text 
                       |#{item.title}
