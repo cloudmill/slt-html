@@ -18,7 +18,6 @@ export function initMap() {
           {
             maxZoom: 22,
           },
-          
         );
 
         const clusterer = new ymaps.Clusterer({
@@ -31,61 +30,64 @@ export function initMap() {
 
         // добавление точек
         const placemarks = [];
+        let requests = []
 
-        $(".placemarks__item").each(function () {
-          // данные
-          const balloon = $(this).find(".placemarks__balloon").text().trim();
-          const latitude = $(this).find(".placemarks__latitude").text().trim();
-          const longitude = $(this).find(".placemarks__longitude").text().trim();
-          const id = $(this).data('modal-id')
+        $('.placemarks__address').each(function() {
+          requests.push(ymaps.geocode($(this).text().trim()))
+        })
 
-          // placemark
-          const coordinates = [latitude, longitude];
-          const placemark = new ymaps.Placemark(
-            coordinates,
-            {
-              balloon,
-            },
-            {
-              iconLayout: "default#image",
-              iconImageHref: "/local/templates/main/assets/images/svg/placemark.svg",
-              // iconImageHref: "assets/images/svg/placemark.svg",
-              iconImageSize: [markWidth, markHeight],
-              iconImageOffset: [-markWidth / 2, -80],
+        Promise.all(requests)
+          .then(
+            function(res) {
+              res.forEach((item, i) => {
+                const coordinates = item.geoObjects.get(0).geometry.getCoordinates()
+                const id = $('.placemarks__item').eq(i).data('modal-id')
 
-              balloonPanelMaxMapArea: 0,
-              hideIconOnBalloonOpen: false,
+                const placemark = new ymaps.Placemark(
+                  coordinates,
+                  {},
+                  {
+                    iconLayout: "default#image",
+                    // iconImageHref: "/local/templates/main/assets/images/svg/placemark.svg",
+                    iconImageHref: "assets/images/svg/placemark.svg",
+                    iconImageSize: [markWidth, markHeight],
+                    iconImageOffset: [-markWidth / 2, -80],
+      
+                    balloonPanelMaxMapArea: 0,
+                    hideIconOnBalloonOpen: false,
+                  }
+                );
+                placemark.events.add(['click'], () => {
+                  $.fancybox.defaults.animationEffect = 'left'
+                  $.fancybox.defaults.animationDuration = 800
+                  $.fancybox.defaults.afterShow = function(instance, slide) {
+                    $(slide.src).closest('.fancybox-container').addClass('open')
+                    $(slide.src).addClass('active')
+                  }
+                  $.fancybox.defaults.beforeClose = function(instance, slide) {
+                    $(slide.src).removeClass('active')
+                  }
+                  $.fancybox.open($(`[data-map-modal=${id}]`))
+                })
+                placemarks.push(placemark);
+              })
+
+              // добавление на карту
+              clusterer.add(placemarks)
+              map.geoObjects.add(clusterer)
+
+              // позиционирование на точках
+              map
+                .setBounds(clusterer.getBounds(), {
+                  zoomMargin: Math.max(markWidth, markHeight),
+                })
+                .then(() => {
+                  if (items.length === 1) {
+                    map.setZoom(12);
+                  }
+                });
             }
-          );
-          placemark.events.add(['click'], () => {
-            $.fancybox.defaults.animationEffect = 'left'
-            $.fancybox.defaults.animationDuration = 800
-            $.fancybox.defaults.afterShow = function(instance, slide) {
-              $(slide.src).closest('.fancybox-container').addClass('open')
-              $(slide.src).addClass('active')
-            }
-            $.fancybox.defaults.beforeClose = function(instance, slide) {
-              $(slide.src).removeClass('active')
-            }
-            $.fancybox.open($(`[data-map-modal=${id}]`))
-          })
-          placemarks.push(placemark);
-        });
-
-        // добавление на карту
-        clusterer.add(placemarks)
-        map.geoObjects.add(clusterer)
-
-        // позиционирование на точках
-        map
-          .setBounds(clusterer.getBounds(), {
-            zoomMargin: Math.max(markWidth, markHeight),
-          })
-          .then(() => {
-            if (items.length === 1) {
-              map.setZoom(12);
-            }
-          });
+          )
       })
     } catch (err) {
       console.error(err)

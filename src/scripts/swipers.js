@@ -30,7 +30,7 @@ const BREAKPOINT = 1280;
         };
 
         switch (slider_id) {
-          case 1:
+          case 'main':
             slider_options = {
               ...slider_options,
               centeredSlides: false,
