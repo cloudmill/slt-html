@@ -8,9 +8,11 @@ $(() => {
 
     tippy(tooltipMark[0],  {
       content: tooltipContent,
+
       // trigger: 'click',
       appendTo: $('.main')[0],
       offset: [0, 14],
+      delay: 0,
       zIndex: 999999,
     });
   });

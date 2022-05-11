@@ -58,6 +58,10 @@
     position: relative;
     z-index: 0;
 
+    @media (max-width: ($breakpoint-m - 1px)) {
+      height: 100vw;
+    }
+
     overflow: hidden;
   }
   &__video-left {
@@ -89,13 +93,19 @@
     background: var(--color-white);
   }
   &__video-player {
+    @media (max-width: ($breakpoint-m - 1px)) {
+      position: absolute;
+    }
+
     display: block;
     height: getRem(900px);
     @media (max-width: ($breakpoint - 1px)) {
-      // height: getRem(375px);
       height: auto;
-      // object-fit: initial;
       width: 100%;
+    }
+    @media (max-width: ($breakpoint-m - 1px)) {
+      height: 100%;
+      width: auto;
     }
   }
   &__video-icon {

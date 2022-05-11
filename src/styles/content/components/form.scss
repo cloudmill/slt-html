@@ -46,6 +46,19 @@
     &.is-active {
       border: 1px solid var(--color-blue);
     }
+
+    &--tall {
+      @media (max-width: ($breakpoint-s - 1px)) {
+        padding: getRem(9.5px) getRem(16px);
+      }
+
+      height: getRem(62px);
+      @media (max-width: ($breakpoint - 1px)) {
+        height: getRem(49px);
+      }
+      resize: none;
+      @include scrollbar-hidden;
+    }
   }
 
   &__textarea {
