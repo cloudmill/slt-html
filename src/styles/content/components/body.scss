@@ -18,4 +18,10 @@
   &--hidden {
     overflow: hidden;
   }
+  &--unvisible {
+    opacity: 0;
+    * {
+      transition: none !important;
+    }
+  }
 }

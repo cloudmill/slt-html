@@ -1,6 +1,6 @@
 
 mixin docs-pe-rt 
-  a.docs-card(href="#") 
+  a.docs-card(href="#" data-link='') 
     .docs-card__col
       .docs-card__pert 
         .docs-card__column
@@ -25,7 +25,7 @@ mixin docs-pe-rt
               +download-svg.docs-card__svg
 
 mixin docs-blockfire
-  a.docs-card(href="#")
+  a.docs-card(href="#" data-link='')
     .docs-card__col
       .docs-card__blockfire 
         .docs-card__column
@@ -47,7 +47,7 @@ mixin docs-blockfire
               +download-svg.docs-card__svg
 
 mixin docs-img 
-  a.docs-card(href="#")
+  a.docs-card(href="#" data-link='')
     .docs-card__col
       img.docs-card__image(src="assets/images/" + attributes.img, alt="")
     .docs-card__col

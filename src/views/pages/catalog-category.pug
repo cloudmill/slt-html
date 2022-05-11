@@ -26,7 +26,7 @@ block content
                 ] 
               each item in items
                 li.spoiler__item(class=item.class data-spoiler-item=item.class)
-                  a.spoiler__link(href="#") 
+                  a.spoiler__link(href="#" data-link='') 
                     |#{item.text}
         .section__block 
           .filters 
@@ -36,7 +36,7 @@ block content
                   |Все 
               each item in ['Трубы', 'Фитинги', 'Фитинги комбинированные', 'Компенсаторы', 'Крепления', 'Запорная арматура']
                 li.filters__headings-item
-                  a.filters__heading(href="#")
+                  a.filters__heading(href="#" data-link='')
                     |#{item}
                   .filters__icon(data-filters-button='q1')
                     +arrow-svg.filters__svg
@@ -45,7 +45,7 @@ block content
                 ul.filters__list
                   each item in ['Муфты', 'Отоводы', 'Тройники', 'Крестовины', 'Обвод', 'Бурт', 'Фланец', 'Загрушка']
                     li.filters__item
-                      a.filters__link(href="#") 
+                      a.filters__link(href="#" data-link='') 
                         |#{item}
         .section__block(data-aos='fade-up')
           .button-wrapper

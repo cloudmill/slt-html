@@ -28,16 +28,16 @@ mixin header
                         ul.header__dropdown-list
                           each item in ['Расчет компенсаторов для систем SLT AQUA', 'Расчет компенсаторов для систем BLOCKFIRE', 'Расчета удельных гидравлических потерь трубопроводов  SLT AQUA', ]
                             li.header__dropdown-item 
-                              a.header__dropdown-link(href="#") 
+                              a.header__dropdown-link(href="#" data-link='') 
                                 |#{item}
                   each item in ['События', 'Контакты'] 
                     li.header__links-item 
-                      a.header__links-link(href="#") 
+                      a.header__links-link(href="#" data-link='') 
                         |#{item}
               .header__col
                 .header__feedback 
                   .header__feedback-col
-                    a.header__feedback-link(href="#")
+                    a.header__feedback-link(href="#" data-link='')
                       .header__feedback-icon 
                         +geo-svg.header__feedback-svg
                       .header__text 
@@ -60,7 +60,7 @@ mixin header
             .header__row 
               .header__col
                 .header__logo
-                  a.header__logo-link(href="#") 
+                  a.header__logo-link(href="#" data-link='') 
                     +logo-svg.header__logo-svg
                 .header__button.button-animate(data-accordion-header='cards')
                   .header__button-icon 
@@ -81,7 +81,7 @@ mixin header
                               +arrow-svg.header__accordion-svg 
                           .header__accordion-dropdown
                         else 
-                          a.header__link(href="#") 
+                          a.header__link(href="#" data-link='') 
                             |#{item.text}
                   .header__buttons 
                     a.header__buttons-item(href="#" data-fancy-button='search')
@@ -98,7 +98,7 @@ mixin header
           .header__row 
             .header__col
               .header__logo 
-                a.header__logo-link(href="#") 
+                a.header__logo-link(href="#" data-link='') 
                   +logo-svg.header__logo-svg
             .header__col
               .header__buttons 
@@ -128,7 +128,7 @@ mixin header
                   ul.catalog-card__list
                     each item in ['Трубы', 'Фитинги', 'Фитинги комбинированные', 'Компенсаторы', 'Крепления', 'Запорная арматура', ]
                       li.catalog-card__item(data-header-category='')
-                        a.catalog-card__link(href="#") 
+                        a.catalog-card__link(href="#" data-link='') 
                           |#{item}
                   .catalog-card__images 
                     - for (j = 1; j < 7; j++)
@@ -138,21 +138,21 @@ mixin header
             ul.header__panel-list
               each item in ['СЛТ Аква', 'Производство', 'Работа у нас',]
                 li.header__panel-item 
-                  a.header__panel-link(href="#")
+                  a.header__panel-link(href="#" data-link='')
                     |#{item}
         .header__panel-spoiler(data-header-modal='2')
           .header__panel-inner 
             ul.header__panel-list
               each item in ['Разрешительная документация', 'Программы для проектировщиков', 'Информационные материалы',]
                 li.header__panel-item 
-                  a.header__panel-link(href="#")
+                  a.header__panel-link(href="#" data-link='')
                     |#{item}
         .header__panel-spoiler(data-header-modal='3')
           .header__panel-inner 
             ul.header__panel-list
               each item in ['Условия сотрудничества', 'Рекламная поддержка',]
                 li.header__panel-item 
-                  a.header__panel-link(href="#")
+                  a.header__panel-link(href="#" data-link='')
                     |#{item}
     .mobile-menu
       .mobile-menu__wrapper
@@ -172,14 +172,14 @@ mixin header
           .mobile-menu__container
             ul.mobile-menu__nav 
               li.mobile-menu__nav-item 
-                a.header__feedback-link(href="#")
+                a.header__feedback-link(href="#" data-link='')
                   .header__feedback-icon 
                     +geo-svg.header__feedback-svg
                   .header__text 
                     |Где купить
               each item in ['Объекты', 'События', 'Контакты']
                 li.mobile-menu__nav-item 
-                  a.mobile-menu__nav-link(href="#") 
+                  a.mobile-menu__nav-link(href="#" data-link='') 
                     |#{item}
             .mobile-menu__inner 
               a.header__phone(href="tel:" + data.phone) 
@@ -243,7 +243,7 @@ mixin header
                 ul.mobile-menu__modal-list
                   each item in ['Трубы', 'Фитинги', 'Фитинги комбинированные', 'Компенсаторы', 'Крепления', 'Запорная арматура']
                     li.mobile-menu__modal-item 
-                      a.mobile-menu__nav-link(href="#") 
+                      a.mobile-menu__nav-link(href="#" data-link='') 
                         |#{item}
           .mobile-menu__modal(data-modal-menu='1')
             .container
@@ -255,5 +255,5 @@ mixin header
               ul.mobile-menu__modal-list
                 each item in ['Трубы', 'Фитинги', 'Фитинги комбинированные', 'Компенсаторы', 'Крепления', 'Запорная арматура']
                   li.mobile-menu__modal-item 
-                    a.mobile-menu__nav-link(href="#") 
+                    a.mobile-menu__nav-link(href="#" data-link='') 
                       |#{item}

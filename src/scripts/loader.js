@@ -3,6 +3,7 @@ import AOS from 'aos';
 document.body.classList.add('body--hidden')
 
 window.addEventListener("load", () => {
+  document.body.classList.remove('body--unvisible')
   const loader = document.querySelector('.loader')
 
   if (loader) {

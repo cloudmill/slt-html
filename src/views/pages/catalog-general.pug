@@ -79,7 +79,7 @@ block content
                       |Вся продукция
             .catalog-page__products-bot
               .catalog-page__products-container 
-                a.catalog-page__card(href="#" data-aos='fade-up') 
+                a.catalog-page__card(href="#" data-link='' data-aos='fade-up') 
                   .catalog-page__card-container 
                     .catalog-page__card-icon 
                       +btn-arrow-right.catalog-page__card-svg
@@ -88,7 +88,7 @@ block content
                   .catalog-page__card-img 
                     img.catalog-page__card-pic(src="assets/images/catalog-product.webp", alt="")
                 each img in [1, 3, 4, 5, 6]
-                  a.catalog-page__card(href="#" data-aos='fade-up') 
+                  a.catalog-page__card(href="#" data-link='' data-aos='fade-up') 
                     .catalog-page__card-container 
                       .catalog-page__card-icon 
                         +btn-arrow-right.catalog-page__card-svg
@@ -127,7 +127,7 @@ block content
               .catalog-page__products-bot
                 .catalog-page__products-container 
                   each img in item.items
-                    a.catalog-page__card(href="#" data-aos='fade-up') 
+                    a.catalog-page__card(href="#" data-link='' data-aos='fade-up') 
                       .catalog-page__card-container 
                         .catalog-page__card-icon 
                           +btn-arrow-right.catalog-page__card-svg
@@ -149,7 +149,7 @@ block content
                 .catalog-page__products-wrapper
                   .catalog-page__products-container 
                     each img in ['tool-1', 'tool-2', 'tool-3']
-                      a.catalog-page__card(href="#" data-aos='fade-up') 
+                      a.catalog-page__card(href="#" data-link='' data-aos='fade-up') 
                         .catalog-page__card-container 
                           .catalog-page__card-icon 
                             +btn-arrow-right.catalog-page__card-svg

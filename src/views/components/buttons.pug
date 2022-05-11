@@ -1,5 +1,5 @@
 mixin link-left 
-  a.button.button-animate(href="#")&attributes(attributes)
+  a.button.button-animate(href="#" data-link='')&attributes(attributes)
     .button__icon.button__icon--left
       +btn-arrow-left.button__svg.arrow-blue
     .button__text
@@ -7,7 +7,7 @@ mixin link-left
         block
 
 mixin link-right 
-  a.button.button-animate(href="#")&attributes(attributes)
+  a.button.button-animate(href="#" data-link='')&attributes(attributes)
     .button__text
       span
         block
