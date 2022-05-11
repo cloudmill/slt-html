@@ -11,7 +11,7 @@
 		<link href="app.css" rel="stylesheet">
 	</head>
 
-	<body class="body">
+	<body class="body body--unvisible">
 		<div class="wrapper">
 			<header class="header">
 				<div class="header__inner" data-aos="fade-up">
@@ -32,20 +32,20 @@
 												<div class="header__dropdown" data-header-dropdown="">
 													<div class="header__dropdown-container">
 														<ul class="header__dropdown-list">
-															<li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Расчет компенсаторов для систем SLT AQUA</a></li>
-															<li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Расчет компенсаторов для систем BLOCKFIRE</a></li>
-															<li class="header__dropdown-item"><a class="header__dropdown-link" href="#">Расчета удельных гидравлических потерь трубопроводов SLT AQUA</a></li>
+															<li class="header__dropdown-item"><a class="header__dropdown-link" href="#" data-link="">Расчет компенсаторов для систем SLT AQUA</a></li>
+															<li class="header__dropdown-item"><a class="header__dropdown-link" href="#" data-link="">Расчет компенсаторов для систем BLOCKFIRE</a></li>
+															<li class="header__dropdown-item"><a class="header__dropdown-link" href="#" data-link="">Расчета удельных гидравлических потерь трубопроводов SLT AQUA</a></li>
 														</ul>
 													</div>
 												</div>
 											</li>
-											<li class="header__links-item"><a class="header__links-link" href="#">События</a></li>
-											<li class="header__links-item"><a class="header__links-link" href="#">Контакты</a></li>
+											<li class="header__links-item"><a class="header__links-link" href="#" data-link="">События</a></li>
+											<li class="header__links-item"><a class="header__links-link" href="#" data-link="">Контакты</a></li>
 										</ul>
 									</div>
 									<div class="header__col">
 										<div class="header__feedback">
-											<div class="header__feedback-col"><a class="header__feedback-link" href="#">
+											<div class="header__feedback-col"><a class="header__feedback-link" href="#" data-link="">
 													<div class="header__feedback-icon"><svg class="header__feedback-svg" width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<path d="M9.49967 1.58301C6.43909 1.58301 3.95801 4.06409 3.95801 7.12467C3.95801 12.6663 9.49967 17.4163 9.49967 17.4163C9.49967 17.4163 15.0413 12.6663 15.0413 7.12467C15.0413 4.06409 12.5603 1.58301 9.49967 1.58301ZM9.49967 16.3318C8.17363 15.0283 4.74967 11.2615 4.74967 7.12467C4.74967 4.50545 6.88045 2.37467 9.49967 2.37467C12.1189 2.37467 14.2497 4.50545 14.2497 7.12467C14.2497 11.2619 10.8253 15.0287 9.49967 16.3318Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
 															<path d="M9.49967 7.91634C9.9369 7.91634 10.2913 7.5619 10.2913 7.12467C10.2913 6.68745 9.9369 6.33301 9.49967 6.33301C9.06245 6.33301 8.70801 6.68745 8.70801 7.12467C8.70801 7.5619 9.06245 7.91634 9.49967 7.91634Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
@@ -76,7 +76,7 @@
 							<div class="header__bot">
 								<div class="header__row">
 									<div class="header__col">
-										<div class="header__logo"><a class="header__logo-link" href="#"><svg class="header__logo-svg" width="163" height="28" viewbox="0 0 163 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<div class="header__logo"><a class="header__logo-link" href="#" data-link=""><svg class="header__logo-svg" width="163" height="28" viewbox="0 0 163 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<g clip-path="url(#clip0_285_10681)">
 														<path d="M48.2505 5.49833H55.0559V27.668H59.9526V5.49833H66.7996V0.674324H48.2505V5.49833ZM138.807 17.4183C139.865 16.4016 139.99 15.0322 139.99 14.0571C139.99 11.9822 139.077 8.48611 132.935 8.48611H125.206V27.668H133.869C138.454 27.668 141.193 25.4998 141.193 21.8688C141.183 19.877 140.342 18.3105 138.807 17.4183ZM129.875 12.6358H133.153C134.595 12.6358 135.321 13.2271 135.321 14.389C135.321 15.4887 134.595 16.0697 133.153 16.1112H129.875V12.6358ZM134.004 23.508H129.875V19.6591H134.014C136.255 19.6591 136.514 20.7692 136.514 21.5991C136.504 22.8544 135.684 23.4768 134.004 23.508ZM157.564 8.48611V9.5754C156.225 8.66247 154.617 8.18525 152.874 8.18525C147.262 8.18525 143.029 12.4387 143.029 18.0719C143.029 23.7051 147.262 27.9585 152.874 27.9585C154.648 27.9585 156.256 27.4917 157.564 26.6099V27.668H162.242V8.48611H157.564ZM157.564 21.153C156.578 22.595 154.804 23.4768 152.906 23.4768C149.949 23.4768 147.801 21.2049 147.801 18.0719C147.801 14.9389 149.949 12.6669 152.906 12.6669C154.804 12.6669 156.578 13.5591 157.564 14.9907V21.153ZM13.8288 5.03149C16.2564 5.03149 18.5698 6.01704 20.1778 7.73916L20.3957 7.96739H20.4061L22.9996 3.89033C22.8751 3.77621 22.7506 3.64135 22.6158 3.52723C20.7899 1.91923 18.5802 0.912931 16.1008 0.529085C15.9348 0.497962 15.7688 0.477214 15.6028 0.456465C15.4161 0.435717 15.2293 0.414968 15.0426 0.39422C14.6484 0.363097 14.2542 0.342349 13.8496 0.342349C13.8185 0.342349 13.7977 0.342349 13.7666 0.342349C6.02742 0.383846 0 6.44239 0 14.1712C0 21.9 6.02742 27.9585 13.7458 28C13.777 28 13.7977 28 13.8288 28C14.223 28 14.6173 27.9793 15.0011 27.9481C15.1982 27.9274 15.385 27.917 15.5717 27.8859C15.7584 27.8651 15.9452 27.834 16.1319 27.8029C18.601 27.419 20.8003 26.4024 22.6158 24.7944C22.7092 24.7114 22.8025 24.618 22.9063 24.535L20.4061 20.375H20.3853L20.1675 20.6032C18.5595 22.3253 16.246 23.3109 13.8184 23.3109C8.77658 23.3109 4.96925 19.379 4.96925 14.1712C4.97962 8.95294 8.78696 5.03149 13.8288 5.03149ZM121.472 8.49648H115.672L109.666 15.0634V8.49648H105.018V27.6784H109.676L109.645 21.568L110.693 20.4165L117.716 27.6784H123.878L113.722 17.076L121.472 8.49648ZM75.7214 27.6576H80.9811L83.7303 21.7858H88.7929H90.2556L88.1289 17.2627H87.4442H85.8777L89.0937 10.4365L91.4383 15.4265L94.3638 21.651L97.196 27.668H102.456L89.0834 0.0207484L75.7214 27.6576ZM32.6995 9.52353L23.9333 27.668H29.2345L35.1893 14.9492L33.9755 12.2727L32.6995 9.52353ZM34.8262 5.13523L38.9344 13.8496L38.924 13.8599L45.4183 27.668H50.678L37.3057 0L34.8262 5.13523Z" fill="#07A8D7"></path>
 													</g>
@@ -105,7 +105,7 @@
 													</div>
 													<div class="header__accordion-dropdown"></div>
 												</li>
-												<li class="header__item"><a class="header__link" href="#">Объекты</a></li>
+												<li class="header__item"><a class="header__link" href="#" data-link="">Объекты</a></li>
 												<li class="header__item">
 													<div class="header__accordion" data-accordion-header="2">
 														<div class="header__accordion-text">Техническая информация</div>
@@ -147,7 +147,7 @@
 						<div class="header__mobile">
 							<div class="header__row">
 								<div class="header__col">
-									<div class="header__logo"><a class="header__logo-link" href="#"><svg class="header__logo-svg" width="163" height="28" viewbox="0 0 163 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<div class="header__logo"><a class="header__logo-link" href="#" data-link=""><svg class="header__logo-svg" width="163" height="28" viewbox="0 0 163 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<g clip-path="url(#clip0_285_10681)">
 													<path d="M48.2505 5.49833H55.0559V27.668H59.9526V5.49833H66.7996V0.674324H48.2505V5.49833ZM138.807 17.4183C139.865 16.4016 139.99 15.0322 139.99 14.0571C139.99 11.9822 139.077 8.48611 132.935 8.48611H125.206V27.668H133.869C138.454 27.668 141.193 25.4998 141.193 21.8688C141.183 19.877 140.342 18.3105 138.807 17.4183ZM129.875 12.6358H133.153C134.595 12.6358 135.321 13.2271 135.321 14.389C135.321 15.4887 134.595 16.0697 133.153 16.1112H129.875V12.6358ZM134.004 23.508H129.875V19.6591H134.014C136.255 19.6591 136.514 20.7692 136.514 21.5991C136.504 22.8544 135.684 23.4768 134.004 23.508ZM157.564 8.48611V9.5754C156.225 8.66247 154.617 8.18525 152.874 8.18525C147.262 8.18525 143.029 12.4387 143.029 18.0719C143.029 23.7051 147.262 27.9585 152.874 27.9585C154.648 27.9585 156.256 27.4917 157.564 26.6099V27.668H162.242V8.48611H157.564ZM157.564 21.153C156.578 22.595 154.804 23.4768 152.906 23.4768C149.949 23.4768 147.801 21.2049 147.801 18.0719C147.801 14.9389 149.949 12.6669 152.906 12.6669C154.804 12.6669 156.578 13.5591 157.564 14.9907V21.153ZM13.8288 5.03149C16.2564 5.03149 18.5698 6.01704 20.1778 7.73916L20.3957 7.96739H20.4061L22.9996 3.89033C22.8751 3.77621 22.7506 3.64135 22.6158 3.52723C20.7899 1.91923 18.5802 0.912931 16.1008 0.529085C15.9348 0.497962 15.7688 0.477214 15.6028 0.456465C15.4161 0.435717 15.2293 0.414968 15.0426 0.39422C14.6484 0.363097 14.2542 0.342349 13.8496 0.342349C13.8185 0.342349 13.7977 0.342349 13.7666 0.342349C6.02742 0.383846 0 6.44239 0 14.1712C0 21.9 6.02742 27.9585 13.7458 28C13.777 28 13.7977 28 13.8288 28C14.223 28 14.6173 27.9793 15.0011 27.9481C15.1982 27.9274 15.385 27.917 15.5717 27.8859C15.7584 27.8651 15.9452 27.834 16.1319 27.8029C18.601 27.419 20.8003 26.4024 22.6158 24.7944C22.7092 24.7114 22.8025 24.618 22.9063 24.535L20.4061 20.375H20.3853L20.1675 20.6032C18.5595 22.3253 16.246 23.3109 13.8184 23.3109C8.77658 23.3109 4.96925 19.379 4.96925 14.1712C4.97962 8.95294 8.78696 5.03149 13.8288 5.03149ZM121.472 8.49648H115.672L109.666 15.0634V8.49648H105.018V27.6784H109.676L109.645 21.568L110.693 20.4165L117.716 27.6784H123.878L113.722 17.076L121.472 8.49648ZM75.7214 27.6576H80.9811L83.7303 21.7858H88.7929H90.2556L88.1289 17.2627H87.4442H85.8777L89.0937 10.4365L91.4383 15.4265L94.3638 21.651L97.196 27.668H102.456L89.0834 0.0207484L75.7214 27.6576ZM32.6995 9.52353L23.9333 27.668H29.2345L35.1893 14.9492L33.9755 12.2727L32.6995 9.52353ZM34.8262 5.13523L38.9344 13.8496L38.924 13.8599L45.4183 27.668H50.678L37.3057 0L34.8262 5.13523Z" fill="#07A8D7"></path>
 												</g>
@@ -189,12 +189,12 @@
 										<div class="catalog-card__title">SLT AQUA</div>
 										<div class="catalog-card__caption">Полипропиленовые трубопроводные системы<br />для водоснабжения и отопления</div>
 										<ul class="catalog-card__list">
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Трубы</a></li>
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Фитинги</a></li>
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Фитинги комбинированные</a></li>
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Компенсаторы</a></li>
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Крепления</a></li>
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Запорная арматура</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Трубы</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Фитинги</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Фитинги комбинированные</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Компенсаторы</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Крепления</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Запорная арматура</a></li>
 										</ul>
 										<div class="catalog-card__images"><img class="catalog-card__img" src="assets/images/catalog-card-1.webp" alt="" data-category-img="" /><img class="catalog-card__img" src="assets/images/catalog-card-2.webp" alt="" data-category-img="" /><img class="catalog-card__img" src="assets/images/catalog-card-3.webp" alt="" data-category-img="" /><img class="catalog-card__img" src="assets/images/catalog-card-4.webp" alt="" data-category-img="" /><img class="catalog-card__img" src="assets/images/catalog-card-5.webp" alt="" data-category-img="" /><img class="catalog-card__img" src="assets/images/catalog-card-6.webp" alt="" data-category-img="" /></div>
 									</div>
@@ -204,12 +204,12 @@
 										<div class="catalog-card__title">SLT AQUA</div>
 										<div class="catalog-card__caption">Полипропиленовые трубопроводные системы<br />для водоснабжения и отопления</div>
 										<ul class="catalog-card__list">
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Трубы</a></li>
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Фитинги</a></li>
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Фитинги комбинированные</a></li>
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Компенсаторы</a></li>
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Крепления</a></li>
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Запорная арматура</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Трубы</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Фитинги</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Фитинги комбинированные</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Компенсаторы</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Крепления</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Запорная арматура</a></li>
 										</ul>
 										<div class="catalog-card__images"><img class="catalog-card__img" src="assets/images/catalog-card-1.webp" alt="" data-category-img="" /><img class="catalog-card__img" src="assets/images/catalog-card-2.webp" alt="" data-category-img="" /><img class="catalog-card__img" src="assets/images/catalog-card-3.webp" alt="" data-category-img="" /><img class="catalog-card__img" src="assets/images/catalog-card-4.webp" alt="" data-category-img="" /><img class="catalog-card__img" src="assets/images/catalog-card-5.webp" alt="" data-category-img="" /><img class="catalog-card__img" src="assets/images/catalog-card-6.webp" alt="" data-category-img="" /></div>
 									</div>
@@ -219,12 +219,12 @@
 										<div class="catalog-card__title">SLT AQUA</div>
 										<div class="catalog-card__caption">Полипропиленовые трубопроводные системы<br />для водоснабжения и отопления</div>
 										<ul class="catalog-card__list">
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Трубы</a></li>
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Фитинги</a></li>
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Фитинги комбинированные</a></li>
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Компенсаторы</a></li>
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Крепления</a></li>
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Запорная арматура</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Трубы</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Фитинги</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Фитинги комбинированные</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Компенсаторы</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Крепления</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Запорная арматура</a></li>
 										</ul>
 										<div class="catalog-card__images"><img class="catalog-card__img" src="assets/images/catalog-card-1.webp" alt="" data-category-img="" /><img class="catalog-card__img" src="assets/images/catalog-card-2.webp" alt="" data-category-img="" /><img class="catalog-card__img" src="assets/images/catalog-card-3.webp" alt="" data-category-img="" /><img class="catalog-card__img" src="assets/images/catalog-card-4.webp" alt="" data-category-img="" /><img class="catalog-card__img" src="assets/images/catalog-card-5.webp" alt="" data-category-img="" /><img class="catalog-card__img" src="assets/images/catalog-card-6.webp" alt="" data-category-img="" /></div>
 									</div>
@@ -234,12 +234,12 @@
 										<div class="catalog-card__title">SLT AQUA</div>
 										<div class="catalog-card__caption">Полипропиленовые трубопроводные системы<br />для водоснабжения и отопления</div>
 										<ul class="catalog-card__list">
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Трубы</a></li>
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Фитинги</a></li>
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Фитинги комбинированные</a></li>
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Компенсаторы</a></li>
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Крепления</a></li>
-											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#">Запорная арматура</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Трубы</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Фитинги</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Фитинги комбинированные</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Компенсаторы</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Крепления</a></li>
+											<li class="catalog-card__item" data-header-category=""><a class="catalog-card__link" href="#" data-link="">Запорная арматура</a></li>
 										</ul>
 										<div class="catalog-card__images"><img class="catalog-card__img" src="assets/images/catalog-card-1.webp" alt="" data-category-img="" /><img class="catalog-card__img" src="assets/images/catalog-card-2.webp" alt="" data-category-img="" /><img class="catalog-card__img" src="assets/images/catalog-card-3.webp" alt="" data-category-img="" /><img class="catalog-card__img" src="assets/images/catalog-card-4.webp" alt="" data-category-img="" /><img class="catalog-card__img" src="assets/images/catalog-card-5.webp" alt="" data-category-img="" /><img class="catalog-card__img" src="assets/images/catalog-card-6.webp" alt="" data-category-img="" /></div>
 									</div>
@@ -249,26 +249,26 @@
 						<div class="header__panel-spoiler" data-header-modal="0">
 							<div class="header__panel-inner">
 								<ul class="header__panel-list">
-									<li class="header__panel-item"><a class="header__panel-link" href="#">СЛТ Аква</a></li>
-									<li class="header__panel-item"><a class="header__panel-link" href="#">Производство</a></li>
-									<li class="header__panel-item"><a class="header__panel-link" href="#">Работа у нас</a></li>
+									<li class="header__panel-item"><a class="header__panel-link" href="#" data-link="">СЛТ Аква</a></li>
+									<li class="header__panel-item"><a class="header__panel-link" href="#" data-link="">Производство</a></li>
+									<li class="header__panel-item"><a class="header__panel-link" href="#" data-link="">Работа у нас</a></li>
 								</ul>
 							</div>
 						</div>
 						<div class="header__panel-spoiler" data-header-modal="2">
 							<div class="header__panel-inner">
 								<ul class="header__panel-list">
-									<li class="header__panel-item"><a class="header__panel-link" href="#">Разрешительная документация</a></li>
-									<li class="header__panel-item"><a class="header__panel-link" href="#">Программы для проектировщиков</a></li>
-									<li class="header__panel-item"><a class="header__panel-link" href="#">Информационные материалы</a></li>
+									<li class="header__panel-item"><a class="header__panel-link" href="#" data-link="">Разрешительная документация</a></li>
+									<li class="header__panel-item"><a class="header__panel-link" href="#" data-link="">Программы для проектировщиков</a></li>
+									<li class="header__panel-item"><a class="header__panel-link" href="#" data-link="">Информационные материалы</a></li>
 								</ul>
 							</div>
 						</div>
 						<div class="header__panel-spoiler" data-header-modal="3">
 							<div class="header__panel-inner">
 								<ul class="header__panel-list">
-									<li class="header__panel-item"><a class="header__panel-link" href="#">Условия сотрудничества</a></li>
-									<li class="header__panel-item"><a class="header__panel-link" href="#">Рекламная поддержка</a></li>
+									<li class="header__panel-item"><a class="header__panel-link" href="#" data-link="">Условия сотрудничества</a></li>
+									<li class="header__panel-item"><a class="header__panel-link" href="#" data-link="">Рекламная поддержка</a></li>
 								</ul>
 							</div>
 						</div>
@@ -311,16 +311,16 @@
 						<div class="container">
 							<div class="mobile-menu__container">
 								<ul class="mobile-menu__nav">
-									<li class="mobile-menu__nav-item"><a class="header__feedback-link" href="#">
+									<li class="mobile-menu__nav-item"><a class="header__feedback-link" href="#" data-link="">
 											<div class="header__feedback-icon"><svg class="header__feedback-svg" width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path d="M9.49967 1.58301C6.43909 1.58301 3.95801 4.06409 3.95801 7.12467C3.95801 12.6663 9.49967 17.4163 9.49967 17.4163C9.49967 17.4163 15.0413 12.6663 15.0413 7.12467C15.0413 4.06409 12.5603 1.58301 9.49967 1.58301ZM9.49967 16.3318C8.17363 15.0283 4.74967 11.2615 4.74967 7.12467C4.74967 4.50545 6.88045 2.37467 9.49967 2.37467C12.1189 2.37467 14.2497 4.50545 14.2497 7.12467C14.2497 11.2619 10.8253 15.0287 9.49967 16.3318Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
 													<path d="M9.49967 7.91634C9.9369 7.91634 10.2913 7.5619 10.2913 7.12467C10.2913 6.68745 9.9369 6.33301 9.49967 6.33301C9.06245 6.33301 8.70801 6.68745 8.70801 7.12467C8.70801 7.5619 9.06245 7.91634 9.49967 7.91634Z" fill="#07A8D7" stroke="#07A8D7" stroke-width="0.7"></path>
 												</svg></div>
 											<div class="header__text">Где купить</div>
 										</a></li>
-									<li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">Объекты</a></li>
-									<li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">События</a></li>
-									<li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">Контакты</a></li>
+									<li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#" data-link="">Объекты</a></li>
+									<li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#" data-link="">События</a></li>
+									<li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#" data-link="">Контакты</a></li>
 								</ul>
 								<div class="mobile-menu__inner"><a class="header__phone" href="tel:8 800 444-72-37">8 800 444-72-37</a>
 									<div class="button button--sm" data-fancy-button="call">Обратный звонок</div>
@@ -415,12 +415,12 @@
 											<div class="mobile-menu__modal-text">Меню</div>
 										</div>
 										<ul class="mobile-menu__modal-list">
-											<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Трубы</a></li>
-											<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Фитинги</a></li>
-											<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Фитинги комбинированные</a></li>
-											<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Компенсаторы</a></li>
-											<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Крепления</a></li>
-											<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Запорная арматура</a></li>
+											<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#" data-link="">Трубы</a></li>
+											<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#" data-link="">Фитинги</a></li>
+											<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#" data-link="">Фитинги комбинированные</a></li>
+											<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#" data-link="">Компенсаторы</a></li>
+											<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#" data-link="">Крепления</a></li>
+											<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#" data-link="">Запорная арматура</a></li>
 										</ul>
 									</div>
 								</div>
@@ -434,12 +434,12 @@
 										<div class="mobile-menu__modal-text">Меню</div>
 									</div>
 									<ul class="mobile-menu__modal-list">
-										<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Трубы</a></li>
-										<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Фитинги</a></li>
-										<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Фитинги комбинированные</a></li>
-										<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Компенсаторы</a></li>
-										<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Крепления</a></li>
-										<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#">Запорная арматура</a></li>
+										<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#" data-link="">Трубы</a></li>
+										<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#" data-link="">Фитинги</a></li>
+										<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#" data-link="">Фитинги комбинированные</a></li>
+										<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#" data-link="">Компенсаторы</a></li>
+										<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#" data-link="">Крепления</a></li>
+										<li class="mobile-menu__modal-item"><a class="mobile-menu__nav-link" href="#" data-link="">Запорная арматура</a></li>
 									</ul>
 								</div>
 							</div>
@@ -453,7 +453,7 @@
 						<div class="container">
 							<div class="breadcrumbs breadcrumbs--noborder" data-aos="fade-up">
 								<ul class="breadcrumbs__list">
-									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" data-link="">Главная</a></li>
 									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">каталог</a></li>
 									<li class="breadcrumbs__item">
 										<div class="breadcrumbs__text">SLT AQUA</div>
@@ -469,10 +469,10 @@
 								</div>
 								<div class="spoiler__dropdown" data-accordion-dropdown="">
 									<ul class="spoiler__list">
-										<li class="spoiler__item aqua" data-spoiler-item="aqua"><a class="spoiler__link" href="#">SLT AQUA</a></li>
-										<li class="spoiler__item blockfire" data-spoiler-item="blockfire"><a class="spoiler__link" href="#">SLT BLOCKFIRE</a></li>
-										<li class="spoiler__item pert" data-spoiler-item="pert"><a class="spoiler__link" href="#">SLT PE-RT</a></li>
-										<li class="spoiler__item tool" data-spoiler-item="tool"><a class="spoiler__link" href="#">Инструменты</a></li>
+										<li class="spoiler__item aqua" data-spoiler-item="aqua"><a class="spoiler__link" href="#" data-link="">SLT AQUA</a></li>
+										<li class="spoiler__item blockfire" data-spoiler-item="blockfire"><a class="spoiler__link" href="#" data-link="">SLT BLOCKFIRE</a></li>
+										<li class="spoiler__item pert" data-spoiler-item="pert"><a class="spoiler__link" href="#" data-link="">SLT PE-RT</a></li>
+										<li class="spoiler__item tool" data-spoiler-item="tool"><a class="spoiler__link" href="#" data-link="">Инструменты</a></li>
 									</ul>
 								</div>
 							</div>
@@ -482,32 +482,32 @@
 										<li class="filters__headings-item active">
 											<div class="filters__heading">Все</div>
 										</li>
-										<li class="filters__headings-item"><a class="filters__heading" href="#">Трубы</a>
+										<li class="filters__headings-item"><a class="filters__heading" href="#" data-link="">Трубы</a>
 											<div class="filters__icon" data-filters-button="q1"><svg class="filters__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
 												</svg></div>
 										</li>
-										<li class="filters__headings-item"><a class="filters__heading" href="#">Фитинги</a>
+										<li class="filters__headings-item"><a class="filters__heading" href="#" data-link="">Фитинги</a>
 											<div class="filters__icon" data-filters-button="q1"><svg class="filters__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
 												</svg></div>
 										</li>
-										<li class="filters__headings-item"><a class="filters__heading" href="#">Фитинги комбинированные</a>
+										<li class="filters__headings-item"><a class="filters__heading" href="#" data-link="">Фитинги комбинированные</a>
 											<div class="filters__icon" data-filters-button="q1"><svg class="filters__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
 												</svg></div>
 										</li>
-										<li class="filters__headings-item"><a class="filters__heading" href="#">Компенсаторы</a>
+										<li class="filters__headings-item"><a class="filters__heading" href="#" data-link="">Компенсаторы</a>
 											<div class="filters__icon" data-filters-button="q1"><svg class="filters__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
 												</svg></div>
 										</li>
-										<li class="filters__headings-item"><a class="filters__heading" href="#">Крепления</a>
+										<li class="filters__headings-item"><a class="filters__heading" href="#" data-link="">Крепления</a>
 											<div class="filters__icon" data-filters-button="q1"><svg class="filters__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
 												</svg></div>
 										</li>
-										<li class="filters__headings-item"><a class="filters__heading" href="#">Запорная арматура</a>
+										<li class="filters__headings-item"><a class="filters__heading" href="#" data-link="">Запорная арматура</a>
 											<div class="filters__icon" data-filters-button="q1"><svg class="filters__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
 												</svg></div>
@@ -516,14 +516,14 @@
 									<div class="filters__container">
 										<div class="filters__dropdown" data-filters-dropdown="q1">
 											<ul class="filters__list">
-												<li class="filters__item"><a class="filters__link" href="#">Муфты</a></li>
-												<li class="filters__item"><a class="filters__link" href="#">Отоводы</a></li>
-												<li class="filters__item"><a class="filters__link" href="#">Тройники</a></li>
-												<li class="filters__item"><a class="filters__link" href="#">Крестовины</a></li>
-												<li class="filters__item"><a class="filters__link" href="#">Обвод</a></li>
-												<li class="filters__item"><a class="filters__link" href="#">Бурт</a></li>
-												<li class="filters__item"><a class="filters__link" href="#">Фланец</a></li>
-												<li class="filters__item"><a class="filters__link" href="#">Загрушка</a></li>
+												<li class="filters__item"><a class="filters__link" href="#" data-link="">Муфты</a></li>
+												<li class="filters__item"><a class="filters__link" href="#" data-link="">Отоводы</a></li>
+												<li class="filters__item"><a class="filters__link" href="#" data-link="">Тройники</a></li>
+												<li class="filters__item"><a class="filters__link" href="#" data-link="">Крестовины</a></li>
+												<li class="filters__item"><a class="filters__link" href="#" data-link="">Обвод</a></li>
+												<li class="filters__item"><a class="filters__link" href="#" data-link="">Бурт</a></li>
+												<li class="filters__item"><a class="filters__link" href="#" data-link="">Фланец</a></li>
+												<li class="filters__item"><a class="filters__link" href="#" data-link="">Загрушка</a></li>
 											</ul>
 										</div>
 									</div>
@@ -564,7 +564,7 @@
 							</div>
 							<div class="section__block catalog">
 								<div class="catalog-page__grid">
-									<div class="aos" data-aos="fade-up"><a class="card" href="#">
+									<div class="aos" data-aos="fade-up"><a class="card" href="#" data-link="">
 											<div class="card__category">
 												<div class="card__item tooltip"><svg class="card__svg tooltip__icon" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white"></path>
@@ -597,7 +597,7 @@
 												<div class="card__title">Крестовина SLT AQUA PP-R</div>
 											</div>
 										</a></div>
-									<div class="aos" data-aos="fade-up"><a class="card" href="#">
+									<div class="aos" data-aos="fade-up"><a class="card" href="#" data-link="">
 											<div class="card__category">
 												<div class="card__item tooltip"><svg class="card__svg tooltip__icon" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white"></path>
@@ -630,7 +630,7 @@
 												<div class="card__title">Крестовина SLT AQUA PP-R</div>
 											</div>
 										</a></div>
-									<div class="aos" data-aos="fade-up"><a class="card" href="#">
+									<div class="aos" data-aos="fade-up"><a class="card" href="#" data-link="">
 											<div class="card__category">
 												<div class="card__item tooltip"><svg class="card__svg tooltip__icon" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white"></path>
@@ -663,7 +663,7 @@
 												<div class="card__title">Крестовина SLT AQUA PP-R</div>
 											</div>
 										</a></div>
-									<div class="aos" data-aos="fade-up"><a class="card" href="#">
+									<div class="aos" data-aos="fade-up"><a class="card" href="#" data-link="">
 											<div class="card__category">
 												<div class="card__item tooltip"><svg class="card__svg tooltip__icon" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white"></path>
@@ -696,7 +696,7 @@
 												<div class="card__title">Крестовина SLT AQUA PP-R</div>
 											</div>
 										</a></div>
-									<div class="aos" data-aos="fade-up"><a class="card" href="#">
+									<div class="aos" data-aos="fade-up"><a class="card" href="#" data-link="">
 											<div class="card__category">
 												<div class="card__item tooltip"><svg class="card__svg tooltip__icon" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white"></path>
@@ -729,7 +729,7 @@
 												<div class="card__title">Крестовина SLT AQUA PP-R</div>
 											</div>
 										</a></div>
-									<div class="aos" data-aos="fade-up"><a class="card" href="#">
+									<div class="aos" data-aos="fade-up"><a class="card" href="#" data-link="">
 											<div class="card__category">
 												<div class="card__item tooltip"><svg class="card__svg tooltip__icon" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white"></path>
@@ -762,7 +762,7 @@
 												<div class="card__title">Крестовина SLT AQUA PP-R</div>
 											</div>
 										</a></div>
-									<div class="aos" data-aos="fade-up"><a class="card" href="#">
+									<div class="aos" data-aos="fade-up"><a class="card" href="#" data-link="">
 											<div class="card__category">
 												<div class="card__item tooltip"><svg class="card__svg tooltip__icon" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white"></path>
@@ -795,7 +795,7 @@
 												<div class="card__title">Крестовина SLT AQUA PP-R</div>
 											</div>
 										</a></div>
-									<div class="aos" data-aos="fade-up"><a class="card" href="#">
+									<div class="aos" data-aos="fade-up"><a class="card" href="#" data-link="">
 											<div class="card__category">
 												<div class="card__item tooltip"><svg class="card__svg tooltip__icon" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white"></path>
@@ -828,7 +828,7 @@
 												<div class="card__title">Крестовина SLT AQUA PP-R</div>
 											</div>
 										</a></div>
-									<div class="aos" data-aos="fade-up"><a class="card" href="#">
+									<div class="aos" data-aos="fade-up"><a class="card" href="#" data-link="">
 											<div class="card__category">
 												<div class="card__item tooltip"><svg class="card__svg tooltip__icon" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white"></path>
@@ -861,7 +861,7 @@
 												<div class="card__title">Крестовина SLT AQUA PP-R</div>
 											</div>
 										</a></div>
-									<div class="aos" data-aos="fade-up"><a class="card" href="#">
+									<div class="aos" data-aos="fade-up"><a class="card" href="#" data-link="">
 											<div class="card__category">
 												<div class="card__item tooltip"><svg class="card__svg tooltip__icon" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white"></path>
@@ -894,7 +894,7 @@
 												<div class="card__title">Крестовина SLT AQUA PP-R</div>
 											</div>
 										</a></div>
-									<div class="aos" data-aos="fade-up"><a class="card" href="#">
+									<div class="aos" data-aos="fade-up"><a class="card" href="#" data-link="">
 											<div class="card__category">
 												<div class="card__item tooltip"><svg class="card__svg tooltip__icon" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white"></path>
@@ -927,7 +927,7 @@
 												<div class="card__title">Крестовина SLT AQUA PP-R</div>
 											</div>
 										</a></div>
-									<div class="aos" data-aos="fade-up"><a class="card" href="#">
+									<div class="aos" data-aos="fade-up"><a class="card" href="#" data-link="">
 											<div class="card__category">
 												<div class="card__item tooltip"><svg class="card__svg tooltip__icon" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white"></path>
@@ -960,7 +960,7 @@
 												<div class="card__title">Крестовина SLT AQUA PP-R</div>
 											</div>
 										</a></div>
-									<div class="aos" data-aos="fade-up"><a class="card" href="#">
+									<div class="aos" data-aos="fade-up"><a class="card" href="#" data-link="">
 											<div class="card__category">
 												<div class="card__item tooltip"><svg class="card__svg tooltip__icon" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white"></path>
@@ -993,7 +993,7 @@
 												<div class="card__title">Крестовина SLT AQUA PP-R</div>
 											</div>
 										</a></div>
-									<div class="aos" data-aos="fade-up"><a class="card" href="#">
+									<div class="aos" data-aos="fade-up"><a class="card" href="#" data-link="">
 											<div class="card__category">
 												<div class="card__item tooltip"><svg class="card__svg tooltip__icon" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white"></path>
@@ -1026,7 +1026,7 @@
 												<div class="card__title">Крестовина SLT AQUA PP-R</div>
 											</div>
 										</a></div>
-									<div class="aos" data-aos="fade-up"><a class="card" href="#">
+									<div class="aos" data-aos="fade-up"><a class="card" href="#" data-link="">
 											<div class="card__category">
 												<div class="card__item tooltip"><svg class="card__svg tooltip__icon" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white"></path>
@@ -1059,7 +1059,7 @@
 												<div class="card__title">Крестовина SLT AQUA PP-R</div>
 											</div>
 										</a></div>
-									<div class="aos" data-aos="fade-up"><a class="card" href="#">
+									<div class="aos" data-aos="fade-up"><a class="card" href="#" data-link="">
 											<div class="card__category">
 												<div class="card__item tooltip"><svg class="card__svg tooltip__icon" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white"></path>
@@ -1244,7 +1244,7 @@
 					</div>
 					<div class="catalog-modal__panel hidden">
 						<h5 class="catalog-modal__panel-title">Подходит позиций: 0</h5>
-						<div class="catalog-modal__panel-button"><a class="button button-animate button--wide" href="#" data-catalog-show="">
+						<div class="catalog-modal__panel-button"><a class="button button-animate button--wide" href="#" data-link="" data-catalog-show="">
 								<div class="button__text"><span>Показать</span></div>
 								<div class="button__icon"><svg class="button__svg arrow-blue" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M9.72386 6.66672H0V5.33338H9.72386L5.5286 1.13812L6.4714 0.195312L12.2761 6.00005L6.4714 11.8048L5.5286 10.862L9.72386 6.66672Z" fill="white"></path>
@@ -1299,16 +1299,16 @@
 								<div class="footer__col">
 									<div class="footer__label" data-aos="fade-up">Продукция</div>
 									<ul class="footer__products">
-										<li class="footer__products-item" data-aos="fade-up"><a class="footer__products-link" href="#">
+										<li class="footer__products-item" data-aos="fade-up"><a class="footer__products-link" href="#" data-link="">
 												<h5>SLT AQUA</h5>
 											</a></li>
-										<li class="footer__products-item" data-aos="fade-up"><a class="footer__products-link" href="#">
+										<li class="footer__products-item" data-aos="fade-up"><a class="footer__products-link" href="#" data-link="">
 												<h5>SLT BLOCKFIRE</h5>
 											</a></li>
-										<li class="footer__products-item" data-aos="fade-up"><a class="footer__products-link" href="#">
+										<li class="footer__products-item" data-aos="fade-up"><a class="footer__products-link" href="#" data-link="">
 												<h5>SLT PE-RT</h5>
 											</a></li>
-										<li class="footer__products-item" data-aos="fade-up"><a class="footer__products-link" href="#">
+										<li class="footer__products-item" data-aos="fade-up"><a class="footer__products-link" href="#" data-link="">
 												<h5>Инструменты</h5>
 											</a></li>
 									</ul>
@@ -1317,17 +1317,17 @@
 									<div class="footer__section">
 										<div class="footer__label" data-aos="fade-up">О компании</div>
 										<ul class="footer__list">
-											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#">СЛТ Аква</a></li>
-											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#">Производство</a></li>
-											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#">Работа у нас</a></li>
+											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#" data-link="">СЛТ Аква</a></li>
+											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#" data-link="">Производство</a></li>
+											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#" data-link="">Работа у нас</a></li>
 										</ul>
 									</div>
 									<div class="footer__section">
 										<div class="footer__label" data-aos="fade-up">Техническая информация</div>
 										<ul class="footer__list">
-											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#">Разрешительная документация</a></li>
-											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#">Программы для проектировщиков</a></li>
-											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#">Информационные материалы</a></li>
+											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#" data-link="">Разрешительная документация</a></li>
+											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#" data-link="">Программы для проектировщиков</a></li>
+											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#" data-link="">Информационные материалы</a></li>
 										</ul>
 									</div>
 								</div>
@@ -1335,25 +1335,25 @@
 									<div class="footer__section">
 										<div class="footer__label" data-aos="fade-up">Сотрудничество</div>
 										<ul class="footer__list">
-											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#">Условия сотрудничества</a></li>
-											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#">Рекламная поддержка</a></li>
+											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#" data-link="">Условия сотрудничества</a></li>
+											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#" data-link="">Рекламная поддержка</a></li>
 										</ul>
 									</div>
 									<div class="footer__section">
 										<div class="footer__label" data-aos="fade-up">Сервисы расчета</div>
 										<ul class="footer__list">
-											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#">Расчет компенсаторов для систем SLT AQUA</a></li>
-											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#">Расчет компенсаторов для систем BLOCKFIRE</a></li>
-											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#">Расчета удельных гидравлических потерь<br>трубопроводов SLT AQUA</a></li>
+											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#" data-link="">Расчет компенсаторов для систем SLT AQUA</a></li>
+											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#" data-link="">Расчет компенсаторов для систем BLOCKFIRE</a></li>
+											<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#" data-link="">Расчета удельных гидравлических потерь<br>трубопроводов SLT AQUA</a></li>
 										</ul>
 									</div>
 								</div>
 								<div class="footer__col">
 									<ul class="footer__list">
-										<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#">События</a></li>
-										<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#">Объекты</a></li>
-										<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#">Контакты</a></li>
-										<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#">Где купить?</a></li>
+										<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#" data-link="">События</a></li>
+										<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#" data-link="">Объекты</a></li>
+										<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#" data-link="">Контакты</a></li>
+										<li class="footer__item" data-aos="fade-up"><a class="footer__link" href="#" data-link="">Где купить?</a></li>
 									</ul>
 								</div>
 							</div>
