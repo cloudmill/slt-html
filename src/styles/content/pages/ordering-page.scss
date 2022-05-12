@@ -68,6 +68,10 @@
 
   &__hidden {
     display: none;
+
+    &.active {
+      display: block;
+    }
   }
 
   &__button {

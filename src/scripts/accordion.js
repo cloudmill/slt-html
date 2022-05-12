@@ -19,13 +19,14 @@ $(() => {
 
 $(() => {
   if ($('[data-objects-accordion]')) {
+
     window.addEventListener('click', (e) => {
       accordionDropdown(e, '[data-objects-accordion]')
 
       const target = $(e.target).closest('[data-objects-accordion]')
 
       if (!target.length) {
-        $('[data-accordion-dropdown]').slideUp()
+        $('[data-objects-accordion]').find('[data-accordion-dropdown]').slideUp()
         $('[data-objects-accordion]').removeClass('active')
       }
     })

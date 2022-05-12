@@ -51,22 +51,30 @@ block content
         +product-cards
     section.main-page__section 
       .main-page__cooperation
-        .main-page__cooperation-bg(data-parallax='1' data-parallax-type='up')
-          +cooperation-bg-svg.main-page__cooperation-svg
-        img.main-page__cooperation-truck(src="assets/images/truck.webp", alt="")
-        img.main-page__cooperation-shadow(src="assets/images/truck-shadow.webp", alt="")
+        .main-page__cooperation-bg
         .main-page__cooperation-container 
-          .main-page__cooperation-top
-            .main-page__cooperation-row 
-              .main-page__cooperation-col
+          .main-page__cooperation-row 
+            .main-page__cooperation-col
+              .main-page__cooperation-wrapper
                 h3.main-page__cooperation-title
                   |#[span.word-span #[span(data-aos='fade-up') Развитая]] #[span.word-span #[span(data-aos='fade-up') логистическая]] #[span.word-span #[span(data-aos='fade-up') инфраструктура]] #[span.word-span #[span(data-aos='fade-up') позволяет]] #[span.word-span #[span(data-aos='fade-up') доставлять]] #[span.word-span #[span(data-aos='fade-up') продукцию]] #[br] #[span.word-span #[span(data-aos='fade-up') в самые]] #[span.word-span #[span(data-aos='fade-up') отдаленные]] #[span.word-span #[span(data-aos='fade-up') регионы]] #[span.main-page__cooperation-span #[span.word-span #[span(data-aos='fade-up') России и страны СНГ]]]
-              .main-page__cooperation-col
-                p.main-page__cooperation-text(data-aos='fade-up') 
-                  |Мы активно сотрудничаем с торговыми компаниями, проектными, монтажными и строительными организациями
-          .main-page__cooperation-bot(data-aos='fade-up')
-            +link-right.button--color-white 
-              |Сотрудничество
+              .main-page__cooperation-top
+                .main-page__cooperation-item
+                  .main-page__cooperation-text 
+                    |Центральный офис
+                  .main-page__cooperation-city 
+                    |Москва
+                .main-page__cooperation-item
+                  .main-page__cooperation-text 
+                    |Завод и центральный склад
+                  .main-page__cooperation-city 
+                    |Тольятти
+            .main-page__cooperation-col
+              .main-page__cooperation-text(data-aos='fade-up')
+                |Мы активно сотрудничаем с торговыми компаниями, проектными, монтажными и строительными организациями
+              .main-page__cooperation-button(data-aos='fade-up')
+                +link-right.button--color-white 
+                  |Сотрудничество
     section.section.section--overflow(data-parallax-container='1')
       .container 
         .main-page__top

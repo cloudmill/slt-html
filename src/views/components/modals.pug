@@ -99,7 +99,8 @@ mixin catalog-modal
                 label.catalog-modal__button(data-catalog-item='')
                   .catalog-modal__content 
                     .catalog-modal__img
-                      +use-svg.catalog-modal__icon
+                      .use-icon
+                        +use-svg.catalog-modal__icon
                     .catalog-modal__text(data-item-text='')
                       |#{item}
                   input.catalog-modal__input(type="checkbox" data-item-checkbox='')
@@ -114,7 +115,8 @@ mixin catalog-modal
                 label.catalog-modal__button(data-catalog-item='') 
                   .catalog-modal__content 
                     .catalog-modal__img
-                      +use-svg.catalog-modal__icon
+                      .use-icon
+                        +use-svg.catalog-modal__icon
                     .catalog-modal__text(data-item-text='')
                       |#{item}
                   input.catalog-modal__input(type="checkbox" data-item-checkbox='')

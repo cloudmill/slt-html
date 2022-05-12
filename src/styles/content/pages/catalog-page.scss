@@ -969,3 +969,17 @@
     
   }
 }
+
+.use-icon {
+  --size: 40px;
+  padding: getRem(11px) getRem(3px);
+
+  width: getRem(40px);
+  height: getRem(40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50px;
+  border: 1.5px solid var(--color-borders);
+}

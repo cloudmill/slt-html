@@ -15,10 +15,10 @@
   }
 
   &__caption {
-    margin-bottom: getRem(47px);
+    margin-bottom: getRem(40px);
     width: calc(#{$col-part-d} * 4 - #{$col-gap});
     @media (max-width: ($breakpoint - 1px)) {
-      margin-bottom: 0;
+      margin-bottom: getRem(20px);
       width: auto;
     }
 

@@ -2,15 +2,18 @@ mixin card
   a.card(href="#" data-link='')
     .card__category 
       .card__item.tooltip
-        +use-svg.card__svg.tooltip__icon 
+        .use-icon
+          +use-svg.tooltip__icon 
         .tooltip__container
           |Соединение
       .card__item.tooltip
-        +connect-svg.card__svg.tooltip__icon 
+        .use-icon
+          +connect-svg.tooltip__icon 
         .tooltip__container
           |Холодное водоснабжение
       .card__item.tooltip
-        +water-svg.card__svg.tooltip__icon 
+        .use-icon
+          +water-svg.tooltip__icon 
         .tooltip__container
           |Питьевая вода
     .card__container

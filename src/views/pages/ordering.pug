@@ -57,8 +57,8 @@ block content
                   .ordering-page__grid-item(data-aos='fade-up')
                     ul.ordering-page__list  
                       li.ordering-page__item 
-                        +checkbox(text = 'Доставка')
-              .ordering-page__hidden
+                        +checkbox(text = 'Доставка' data-checkbox-reveal='')
+              .ordering-page__hidden(data-container-reveal='')
                 .ordering-page__inner
                   .form__item 
                     +input(type = 'text' placeholder = 'Город*')
