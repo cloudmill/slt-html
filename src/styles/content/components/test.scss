@@ -12,6 +12,13 @@
 
 .test-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.test-frame {
+  transition: $transition;
 }
 
 .test-button {
