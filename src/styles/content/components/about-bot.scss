@@ -36,6 +36,14 @@
           transform: scale(1.1);
         }
 
+        #{$comp}__count {
+          width: getRem(127px);
+          height: getRem(127px);
+
+          border-color: var(--color-white);
+          color: var(--color-white);
+        }
+
         .button-icon {
           .button-icon__svg {
             animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
@@ -98,6 +106,7 @@
   }
   &__count {
     position: absolute;
+    z-index: 1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -112,7 +121,7 @@
     align-items: center;
     justify-content: center;
 
-    transition: $transition;
+    transition: 1s $transition-timing-function;
     border: 1px solid var(--color-borders);
     border-radius: 50%;
     color: var(--color-blue);
@@ -140,13 +149,6 @@
     transition: 1s $transition-timing-function;
 
     #{$comp}__title {
-      color: var(--color-white);
-    }
-    #{$comp}__count {
-      width: getRem(127px);
-      height: getRem(127px);
-
-      border-color: var(--color-white);
       color: var(--color-white);
     }
 

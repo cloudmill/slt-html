@@ -54,6 +54,7 @@ const BREAKPOINT = 1280;
             break;
           case 5:
             slider_options = {
+              speed: 500,
               slidesPerView: 'auto',
               spaceBetween: 0,
               pagination: {

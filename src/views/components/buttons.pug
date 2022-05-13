@@ -23,11 +23,12 @@ mixin download-btn
       +download-svg.button__svg
 
 mixin address-btn
-  a.button(href="#")&attributes(attributes)
+  a.button.button-animate(href="#")&attributes(attributes)
     .button__icon
       +address-label.button__svg
-    .button__text
-      block
+    span.button__text
+      span
+        block
 
 mixin form-button
   button.button.button--blue.button--wide--mobile&attributes(attributes)

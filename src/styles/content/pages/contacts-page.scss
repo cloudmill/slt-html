@@ -172,6 +172,14 @@
     }
   }
 
+  &__txt-link {
+    transition: $transition;
+
+    &:hover {
+      color: var(--color-blue);
+    }
+  }
+
   &__btn {
     
 
