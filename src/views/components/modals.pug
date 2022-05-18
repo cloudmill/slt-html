@@ -94,29 +94,104 @@ mixin catalog-modal
           h5.catalog-modal__heading 
             |Трубы
           ul.catalog-modal__list 
-            each item in ['Холодное водоснабжение', 'Горячее водоснабжение', 'Питьевая вода']
-              li.catalog-modal__item 
-                label.catalog-modal__button(data-catalog-item='')
-                  .catalog-modal__content 
-                    .catalog-modal__img
-                      .use-icon
-                        +use-svg.catalog-modal__icon
-                    .catalog-modal__text(data-item-text='')
-                      |#{item}
-                  input.catalog-modal__input(type="checkbox" data-item-checkbox='')
-                  .catalog-modal__box 
-                    +check-svg.catalog-modal__svg
+            li.catalog-modal__item 
+              label.catalog-modal__button(data-catalog-item='') 
+                .catalog-modal__content 
+                  .catalog-modal__img
+                    .use-icon
+                      +connect-svg.use-icon__svg.catalog-modal__icon
+                  .catalog-modal__text(data-item-text='')
+                    |Холодное водоснабжение
+                input.catalog-modal__input(type="checkbox" data-item-checkbox='')
+                .catalog-modal__box 
+                  +check-svg.catalog-modal__svg
+            li.catalog-modal__item 
+              label.catalog-modal__button(data-catalog-item='') 
+                .catalog-modal__content 
+                  .catalog-modal__img
+                    .use-icon
+                      +fire-svg.use-icon__svg.catalog-modal__icon
+                  .catalog-modal__text(data-item-text='')
+                    |Горячее водоснабжение
+                input.catalog-modal__input(type="checkbox" data-item-checkbox='')
+                .catalog-modal__box 
+                  +check-svg.catalog-modal__svg
+            li.catalog-modal__item 
+              label.catalog-modal__button(data-catalog-item='') 
+                .catalog-modal__content 
+                  .catalog-modal__img
+                    .use-icon
+                      +water-svg.use-icon__svg.catalog-modal__icon
+                  .catalog-modal__text(data-item-text='')
+                    |Питьевая вода
+                input.catalog-modal__input(type="checkbox" data-item-checkbox='')
+                .catalog-modal__box 
+                  +check-svg.catalog-modal__svg
+            li.catalog-modal__item 
+              label.catalog-modal__button(data-catalog-item='') 
+                .catalog-modal__content 
+                  .catalog-modal__img
+                    .use-icon
+                      +heating-svg.use-icon__svg.catalog-modal__icon
+                  .catalog-modal__text(data-item-text='')
+                    |Отопление
+                input.catalog-modal__input(type="checkbox" data-item-checkbox='')
+                .catalog-modal__box 
+                  +check-svg.catalog-modal__svg
         .catalog-modal__col
           h5.catalog-modal__heading 
             |Фитинги
           ul.catalog-modal__list 
-            each item in ['Холодное водоснабжение', 'Горячее водоснабжение', 'Питьевая вода','Холодное водоснабжение', 'Горячее водоснабжение',]
+            li.catalog-modal__item 
+              label.catalog-modal__button(data-catalog-item='') 
+                .catalog-modal__content 
+                  .catalog-modal__img
+                    .use-icon
+                      +use-svg.use-icon__svg.catalog-modal__icon
+                  .catalog-modal__text(data-item-text='')
+                    |Соединение
+                input.catalog-modal__input(type="checkbox" data-item-checkbox='')
+                .catalog-modal__box 
+                  +check-svg.catalog-modal__svg
+            li.catalog-modal__item 
+              label.catalog-modal__button(data-catalog-item='') 
+                .catalog-modal__content 
+                  .catalog-modal__img
+                    .use-icon
+                      +connect-svg.use-icon__svg.catalog-modal__icon
+                  .catalog-modal__text(data-item-text='')
+                    |Переход на разные диаметры
+                input.catalog-modal__input(type="checkbox" data-item-checkbox='')
+                .catalog-modal__box 
+                  +check-svg.catalog-modal__svg
+            li.catalog-modal__item 
+              label.catalog-modal__button(data-catalog-item='') 
+                .catalog-modal__content 
+                  .catalog-modal__img
+                    .use-icon
+                      +fire-svg.use-icon__svg.catalog-modal__icon
+                  .catalog-modal__text(data-item-text='')
+                    |Направление потока
+                input.catalog-modal__input(type="checkbox" data-item-checkbox='')
+                .catalog-modal__box 
+                  +check-svg.catalog-modal__svg
+            li.catalog-modal__item 
+              label.catalog-modal__button(data-catalog-item='') 
+                .catalog-modal__content 
+                  .catalog-modal__img
+                    .use-icon
+                      +water-svg.use-icon__svg.catalog-modal__icon
+                  .catalog-modal__text(data-item-text='')
+                    |Распределение потоков
+                input.catalog-modal__input(type="checkbox" data-item-checkbox='')
+                .catalog-modal__box 
+                  +check-svg.catalog-modal__svg
+            each item in ['Обход пересечения труб', 'Соединение с другими видами труб, запорной арматурой', 'Временное перекрытие системы', 'Перекрытие системы', ]
               li.catalog-modal__item 
                 label.catalog-modal__button(data-catalog-item='') 
                   .catalog-modal__content 
                     .catalog-modal__img
                       .use-icon
-                        +use-svg.catalog-modal__icon
                     .catalog-modal__text(data-item-text='')
                       |#{item}
                   input.catalog-modal__input(type="checkbox" data-item-checkbox='')

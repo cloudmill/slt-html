@@ -702,4 +702,10 @@
       height: getRem(33px);
     }
   }
+
+  &__br {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
 }
