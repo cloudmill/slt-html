@@ -639,7 +639,7 @@
   }
 
   &__title {
-    letter-spacing: -3px;
+    letter-spacing: -2px;
     @media (max-width: ($breakpoint - 1px)) {
       letter-spacing: -0.5px;
     }
