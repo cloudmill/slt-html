@@ -84,10 +84,12 @@
     position: relative;
     overflow: hidden;
     transition: $transition;
+    z-index: 2;
 
     &::before {
       content: '';
       background: var(--color-blue);
+      // border-radius: 60px;
       
       @include btn-before;
     }
