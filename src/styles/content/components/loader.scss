@@ -78,24 +78,23 @@
     overflow: hidden;
   }
 
+
   &__first {
-    // &.hidden {
-      transform: translateY(-100%);
+    transform: translateY(-100%);
+
+    #{$comp}__first-svg {
+      transform: translateY(100%);
+    }
+
+    &.active {
+      transform: none;
+      transition: 0.8s $transition-timing-function;
 
       #{$comp}__first-svg {
-        transform: translateY(100%);
-      }
-
-      &.active {
         transform: none;
         transition: 0.8s $transition-timing-function;
-
-        #{$comp}__first-svg {
-          transform: none;
-          transition: 0.8s $transition-timing-function;
-        }
       }
-    // }
+    }
   }
   &__second {
     transform: translateX(100%);

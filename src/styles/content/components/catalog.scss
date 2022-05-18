@@ -2,11 +2,17 @@
   position: relative;
   z-index: 0;
 
-  &__loader {
+  &__wrapper {
     position: absolute;
     left: 50%;
     top: calc(100% + 2rem);
     transform: translateX(-50%);
+    @media (max-width: ($breakpoint - 1px)) {
+      top: 100%;
+    }
+  }
+
+  &__loader {
 
     height: 50px;
     width: 50px;
