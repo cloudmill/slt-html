@@ -669,7 +669,9 @@
     overflow: hidden;
   }
   &__slider-container {
-    height: getRem(420px);
+    display: flex;
+    align-items: center;
+    
   }
   &__slider-frame {
     // position: absolute;
@@ -723,6 +725,8 @@
 
     &:hover {
       #{$comp}__slider-img {
+        will-change: transform;
+        transition: $transition;
         transform: scale(1.1);
       }
       #{$comp}__slider-title {
@@ -737,8 +741,9 @@
     overflow: hidden;
   }
   &__slider-img {
-    transform-origin: center;
+    will-change: transform;
     transition: $transition;
+    transform: scale(1);
   }
   &__slider-title {
     margin-top: getRem(16px);

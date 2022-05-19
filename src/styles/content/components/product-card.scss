@@ -2,9 +2,9 @@
   $comp: &;
 
   display: block;
-  min-height: getRem(500px);
+  height: getRem(500px);
   @media (max-width: ($breakpoint - 1px)) {
-    min-height: getRem(187px);
+    height: getRem(187px);
   }
 
   transition: 0.6s $transition-timing-function;
