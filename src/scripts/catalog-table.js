@@ -42,3 +42,29 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+  const catalogButton = document.querySelector('[data-catalog-button]')
+
+  if (catalogButton) {
+    window.addEventListener('click', event => {
+      const target = event.target.closest('[data-catalog-button]')
+
+      if (target) {
+        const cell = target.closest('.catalog-page__table-cell')
+        const text = target.querySelector('.catalog-page__table-add')
+        const caption = cell.querySelector('[data-table-caption]')
+        const input = cell.querySelector('[data-table-input]')
+
+        if (cell.classList.contains('active')) {
+          text.textContent = 'Добавить'
+          cell.classList.remove('active')
+        } else {
+          text.textContent = 'Изменить'
+          cell.classList.add('active')
+          caption.textContent = `Добавлено: ${input.value}`
+        }
+      }
+    })
+  }
+})

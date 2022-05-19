@@ -341,6 +341,18 @@
       width: calc(#{$col-part-d} * 3 - #{$col-gap});
       color: var(--color-black);
     }
+
+    &.active {
+      #{$comp}__table-input {
+        display: none;
+      }
+      #{$comp}__table-caption {
+        display: block;
+      }
+      #{$comp}__table-icon {
+        display: none;
+      }
+    }
   }
   &__table-item {
     position: relative;
@@ -395,6 +407,7 @@
   }
   &__table-row {
     display: flex;
+    align-items: center;
   }
   &__table-col {
     flex-shrink: 0;
@@ -500,6 +513,17 @@
     @include fsl(10px);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(8px);
+    }
+  }
+  &__table-caption {
+    display: none;
+
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    @include fsl(20px, 130%);
+    @media (max-width: ($breakpoint - 1px)) {
+      letter-spacing: 0;
+      @include fsl(14px, 130%);
     }
   }
 

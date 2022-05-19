@@ -74,8 +74,10 @@ block content
                         .catalog-page__table-row 
                           .catalog-page__table-col
                             input.catalog-page__table-input(type="number" placeholder="Введите количество" data-table-input='')
+                            .catalog-page__table-caption(data-table-caption='')
+                              |
                           .catalog-page__table-col
-                            .catalog-page__table-button 
+                            .catalog-page__table-button(data-catalog-button='')
                               .catalog-page__table-add 
                                 |Добавить
                               .catalog-page__table-icon 
@@ -112,8 +114,9 @@ block content
                         |Добавить в заказ,шт
                       .catalog-page__block-input
                         input.catalog-page__table-input(type="number" placeholder="Кол-во" data-table-input='')
+                        //- .catalog-page__blop
                     .catalog-page__block-cell 
-                      .catalog-page__table-button 
+                      .catalog-page__table-button(data-catalog-button='')
                         .catalog-page__table-add 
                           |Добавить
                         .catalog-page__table-icon 
