@@ -573,6 +573,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
+    align-items: center;
 
     &:last-child {
       grid-template-columns: 1fr;
@@ -599,6 +600,18 @@
 
     border: 1px solid var(--color-borders);
     border-top: none;
+
+    &.active {
+      #{$comp}__table-input {
+        display: none;
+      }
+      #{$comp}__table-caption {
+        display: block;
+      }
+      #{$comp}__table-icon {
+        display: none;
+      }
+    }
   }
 
   &__grid {

@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = event.target.closest('[data-catalog-button]')
 
       if (target) {
-        const cell = target.closest('.catalog-page__table-cell')
+        const cell = target.closest('[data-table-cell]')
         const text = target.querySelector('.catalog-page__table-add')
         const caption = cell.querySelector('[data-table-caption]')
         const input = cell.querySelector('[data-table-input]')

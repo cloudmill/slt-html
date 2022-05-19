@@ -70,7 +70,7 @@ block content
                 label.catalog-page__table-item(data-table-item='')
                   each item in ['25×20', 'SLTFM32520', '50', '500', 'last']
                     if (item == "last")
-                      .catalog-page__table-cell
+                      .catalog-page__table-cell(data-table-cell='')
                         .catalog-page__table-row 
                           .catalog-page__table-col
                             input.catalog-page__table-input(type="number" placeholder="Введите количество" data-table-input='')
@@ -102,19 +102,20 @@ block content
                         |Диаметр, мм
                       .catalog-page__block-text
                         |25×20
-                  .catalog-page__block-body
+                  .catalog-page__block-body(data-table-cell='')
                     each item in ddata 
                       .catalog-page__block-cell 
                         .catalog-page__block-label 
                           |#{item.label}
                         .catalog-page__block-text
                           |#{item.text}
-                    .catalog-page__block-cell 
+                    .catalog-page__block-cell
                       .catalog-page__block-label.darken
                         |Добавить в заказ,шт
                       .catalog-page__block-input
                         input.catalog-page__table-input(type="number" placeholder="Кол-во" data-table-input='')
-                        //- .catalog-page__blop
+                        .catalog-page__table-caption(data-table-caption='')
+                          |
                     .catalog-page__block-cell 
                       .catalog-page__table-button(data-catalog-button='')
                         .catalog-page__table-add 
