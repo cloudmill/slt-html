@@ -90,31 +90,31 @@
     }
 
     &:hover {
-      padding-left: getRem(20px);
-
-      &::before {
-        @media (min-width: $breakpoint) {
-          transform: none;
-        }
-      }
-
       .events-page__event-image img {
         transform: scale(1.1, 1.1);
       }
+      @media (min-width: $breakpoint) {
+        padding-left: getRem(20px);
 
-      .button-icon {
         &::before {
           transform: none;
         }
-  
-        .button-icon__svg {
-          animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
-  
-          path {
-            fill: var(--color-white);
+        
+        .button-icon {
+          &::before {
+            transform: none;
+          }
+    
+          .button-icon__svg {
+            animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+    
+            path {
+              fill: var(--color-white);
+            }
           }
         }
       }
+      
     }
   }
 

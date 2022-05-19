@@ -47,6 +47,7 @@ export function initMap() {
               res.forEach((item, i) => {
                 const coordinates = item.geoObjects.get(0).geometry.getCoordinates()
                 const id = $('.placemarks__item').eq(i).data('modal-id')
+                const modalId = $('.placemarks__item').eq(i).data('item')
 
                 const placemark = new ymaps.Placemark(
                   coordinates,
@@ -63,6 +64,7 @@ export function initMap() {
                   }
                 );
                 placemark.events.add(['click'], () => {
+                  window.dispatchEvent(new CustomEvent('mapModalOpen', {detail: {modalId: modalId,}}));
                   $.fancybox.defaults.animationEffect = 'left'
                   $.fancybox.defaults.animationDuration = 800
                   $.fancybox.defaults.afterShow = function(instance, slide) {
