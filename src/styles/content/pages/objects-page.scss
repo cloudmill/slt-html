@@ -2,7 +2,7 @@
 
   &__top {
     position: relative;
-    z-index: 1;
+    z-index: 3;
     
     @media (max-width: ($breakpoint - 1px)) {
       width: 50%;

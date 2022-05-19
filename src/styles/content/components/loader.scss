@@ -28,7 +28,7 @@
         width: 100vh;
         height: 100vh;
       }
-      // transform: scale(1.2);
+
       transition: width 1.6s  $transition-timing-function, height 1.6s  $transition-timing-function;
       transition-delay: 0s, 0s;
     }
@@ -131,3 +131,12 @@
     }
   }
 }
+
+// @keyframes frameDown {
+//   0% {
+
+//   }
+//   100% {
+//     transform: none;
+//   }
+// }
