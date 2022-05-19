@@ -644,6 +644,9 @@
       }
     }
   }
+  &__slider-container {
+    // @include cover;
+  }
   &__slider-bar {
     position: relative;
     z-index: 0;

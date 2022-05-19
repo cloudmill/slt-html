@@ -93,7 +93,9 @@
       padding-left: getRem(20px);
 
       &::before {
-        transform: none;
+        @media (min-width: $breakpoint) {
+          transform: none;
+        }
       }
 
       .events-page__event-image img {
