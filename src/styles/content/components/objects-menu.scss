@@ -1,5 +1,6 @@
 .objects-menu {
   position: fixed;
+  z-index: 20;
   top: getRem(59px);
 
   // @media (max-width: ($breakpoint - 1px)) {

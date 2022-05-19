@@ -238,10 +238,8 @@
 
     &--big {
       #{$comp}__table-cell {
-        padding: getRem(24px) getRem(43px);
-        padding-right: getRem(70px);
-
-        width: getRem(223px);
+        padding: getRem(24px) 0;
+        padding-right: getRem(75px);
 
         &:nth-child(1) {
           padding: getRem(24px);
@@ -254,19 +252,21 @@
           padding: getRem(24px) getRem(43px);
           padding-right: getRem(70px);
 
-          width: getRem(233px);
+          width: getRem(270px);
         }
         &:nth-child(3) {
-          padding: getRem(24px) getRem(43px);
-          padding-right: getRem(70px);
-
-          width: getRem(233px);
+          width: getRem(195px);
         }
         &:nth-child(4) {
-          padding: getRem(24px) getRem(43px);
-          padding-right: getRem(70px);
+          width: getRem(195px);
+        }
 
-          width: getRem(233px);
+        &:nth-child(5) {
+          width: getRem(214px);
+        }
+
+        &:nth-child(6) {
+          width: getRem(192px);
         }
 
         &:last-child {
@@ -274,6 +274,27 @@
 
           width: auto;
           flex-grow: 1;
+        }
+      }
+
+      #{$comp}__table-body {
+        #{$comp}__table-cell {
+          padding: getRem(32px) 0;
+
+          &:nth-child(1) {
+            padding: getRem(32px);
+          }
+
+          &:nth-child(2) {
+            padding: getRem(32px) getRem(43px);
+            padding-right: getRem(70px);
+
+            width: getRem(270px);
+          }
+
+          &:last-child {
+            padding: 21px 0;
+          }
         }
       }
     }
@@ -307,7 +328,7 @@
     }
 
     &:nth-child(4) {
-      width: calc(#{$col-part-d} * 3);
+      width: calc(#{$col-part-d} * 2);
     }
 
     letter-spacing: -0.5px;
@@ -338,12 +359,6 @@
       &::before {
         transform: none;
       }
-
-      #{$comp}__table-input {
-        @include placeholder {
-          color: var(--color-black);
-        }
-      }
     }
 
     &::before {
@@ -361,6 +376,10 @@
 
       &::before {
         transform: none;
+      }
+
+      #{$comp}__table-input {
+        border-color: var(--color-blue);
       }
 
       #{$comp}__table-button {
@@ -385,9 +404,17 @@
     }
   }
   &__table-button {
+    padding: 16px 36px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 10px 0;
+    }
+
     display: flex;
     align-items: center;
+    justify-content: center;
 
+    background: var(--color-blue);
+    border-radius: 60px;
     cursor: pointer;
     opacity: 0.5;
     pointer-events: none;
@@ -396,7 +423,7 @@
   &__table-add {
     letter-spacing: normal;
     font-weight: 500;
-    color: var(--color-black);
+    color: var(--color-white);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px); 
     }
@@ -422,18 +449,24 @@
       width: var(--size);
       height: var(--size);
     }
+
+    path {
+      fill: var(--color-white);
+    }
   }
   &__table-input {
+    padding: 16px 12px;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 12px;
 
       width: 100%;
     }
+    width: getRem(190px);
 
-    @include fsl(20px);
+    @include fsl(14px);
     @include f-main();
-    background: none;
-    border: none;
+    background: var(--color-white);
+    border: 1px solid var(--color-borders);
     color: var(--color-blue);
     @media (max-width: ($breakpoint - 1px)) {
       border: 1px solid var(--color-borders);
@@ -516,6 +549,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
+
+    &:last-child {
+      grid-template-columns: 1fr;
+    }
   }
   &__block-label {
     @include fsl(14px);

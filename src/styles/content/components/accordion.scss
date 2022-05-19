@@ -71,8 +71,11 @@
         padding-right: getRem(20px);
       }
       min-height: 71px;
+      display: flex;
+      align-items: center;
     }
     #{$comp}__row {
+      width: 100%;
       justify-content: space-between;
       @media (max-width: ($breakpoint - 1px)) {
         flex-wrap: nowrap;
@@ -282,13 +285,11 @@
       margin-right: getRem(19px);
     }
 
+    width: getRem(48px);
+    height: getRem(48px);
     display: flex;
     align-items: center;
     justify-content: flex-start;
-  }
-  &__img-svg {
-    width: getRem(48px);
-    height: getRem(48px);
   }
 
   &__inner {

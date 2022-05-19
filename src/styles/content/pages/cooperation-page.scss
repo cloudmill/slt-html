@@ -1,6 +1,8 @@
 .cooperation-page {
 
   &__selects {
+    position: relative;
+    z-index: 1;
     margin-top: getRem(40px);
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: getRem(20px);
@@ -42,6 +44,13 @@
     @media (max-width: ($breakpoint - 1px)) {
       letter-spacing: 0;
       @include fsl(16px);
+    }
+  }
+
+  &__accordion {
+
+    &:not(:first-child) {
+      margin-top: 8px;
     }
   }
 

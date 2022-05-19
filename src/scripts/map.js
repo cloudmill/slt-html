@@ -1,4 +1,6 @@
 // map
+const BREAKPOINT = 1280;
+
 export function initMap() {
   if ($('#map').length) {
     try {
@@ -13,7 +15,7 @@ export function initMap() {
           {
             center: [55.749175531624125, 37.61820806388663],
             zoom: 15,
-            controls: [],
+            controls: ['zoomControl', 'geolocationControl']
           },
           {
             maxZoom: 22,
@@ -27,6 +29,9 @@ export function initMap() {
             coordinates: [[0, 0], [50, 50]]
           },
         })
+
+        // zoom
+        map.behaviors.disable('scrollZoom');
 
         // добавление точек
         const placemarks = [];
@@ -48,8 +53,8 @@ export function initMap() {
                   {},
                   {
                     iconLayout: "default#image",
-                    iconImageHref: "/local/templates/main/assets/images/svg/placemark.svg",
-                    // iconImageHref: "assets/images/svg/placemark.svg",
+                    // iconImageHref: "/local/templates/main/assets/images/svg/placemark.svg",
+                    iconImageHref: "assets/images/svg/placemark.svg",
                     iconImageSize: [markWidth, markHeight],
                     iconImageOffset: [-markWidth / 2, -80],
       

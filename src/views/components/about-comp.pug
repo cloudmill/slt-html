@@ -58,8 +58,9 @@ mixin about-bot
               .about-bot__button 
                 +button-icon.button-icon--blue
             img.about-bot__img(src="assets/images/about-bot-prod.webp", alt="")
-        .about-bot__count 
-          |1
+        .about-bot__count
+          .about-bot__num 
+            |1
       a.about-bot__card(href="#" data-link='')
         .about-bot__container 
           h4.about-bot__title
@@ -75,7 +76,8 @@ mixin about-bot
                 +button-icon.button-icon--blue
             img.about-bot__img(src="assets/images/about-bot-work.webp", alt="")
         .about-bot__count 
-          |2
+          .about-bot__num
+            |2
     .about-bot__item
       a.about-bot__line(href="#" data-link='')
         .about-bot__container 
@@ -92,4 +94,5 @@ mixin about-bot
                 +button-icon.button-icon--blue
             img.about-bot__img(src="assets/images/about-bot-coop.webp", alt="")
         .about-bot__count 
-          |3
+          .about-bot__num
+            |3
