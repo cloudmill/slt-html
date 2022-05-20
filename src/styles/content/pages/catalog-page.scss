@@ -973,13 +973,17 @@
     }
   }
   &__card-title {
+    max-width: getRem(162px);
+    @media (max-width: ($breakpoint - 1px)) {
+      max-width: none;
+    }
+
     font-weight: 500;
     letter-spacing: -0.5px;
     @media (max-width: ($breakpoint - 1px)) {
       letter-spacing: 0;
       @include fsl(14px);
     }
-
     transition: $transition;
   }
   &__card-img {

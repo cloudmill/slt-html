@@ -11,14 +11,25 @@ block content
         title: 'SLT BLOCKFIRE',
         button: 'button--red',
         text: 'Полипропиленовые трубопроводные системы для пожаротушения',
-        items: ['blockfire-1.webp', 'blockfire-2.webp', 'blockfire-3.webp', 'blockfire-4.webp', 'blockfire-5.webp', ]
+        items: [
+          {index: 'blockfire-1.webp', text: 'Трубы'}, 
+          {index: 'blockfire-2.webp', text: 'Фитинги'}, 
+          {index: 'blockfire-3.webp', text: 'Фитинги комбинированные'}, 
+          {index: 'blockfire-4.webp', text: 'Крепления'}, 
+          {index: 'blockfire-5.webp', text: 'Запорная арматура'}, 
+        ]
       },
       {
         class: 'green',
         title: 'SLT PE-RT',
         button: 'button--green',
         text: 'Гибкие трубопроводные системы из термостойкого полиэтилена для водоснабжения и отопления',
-        items: ['pert-1.webp', 'pert-2.webp', 'pert-3.webp', ]
+        items: 
+        [
+          {index: 'pert-1.webp', text: 'PE-RT I'}, 
+          {index: 'pert-2.webp', text: 'PE-RT II'}, 
+          {index: 'pert-3.webp', text: 'PE-RT II EVOH'}, 
+        ]
       },
     ]
   .catalog-page
@@ -84,18 +95,18 @@ block content
                     .catalog-page__card-icon 
                       +btn-arrow-right.catalog-page__card-svg
                     .catalog-page__card-title 
-                      |PE-RT I
+                      |Трубы
                   .catalog-page__card-img 
                     img.catalog-page__card-pic(src="assets/images/catalog-product.webp", alt="")
-                each img in [1, 3, 4, 5, 6]
+                each img in [{index: 1, text: 'Фитинги'}, {index: 3, text: 'Фитинги комбинированные'}, {index: 4, text: 'Компенсаторы'}, {index: 5, text: 'Крепления'}, {index: 6, text: 'Запорная арматура'}, ]
                   a.catalog-page__card(href="#" data-link='' data-aos='fade-up') 
                     .catalog-page__card-container 
                       .catalog-page__card-icon 
                         +btn-arrow-right.catalog-page__card-svg
                       .catalog-page__card-title 
-                        |PE-RT I
+                        |#{img.text}
                     .catalog-page__card-img 
-                      img.catalog-page__card-pic(src=`assets/images/catalog-card-${img}.webp`, alt="")
+                      img.catalog-page__card-pic(src=`assets/images/catalog-card-${img.index}.webp`, alt="")
           each item in ddata
             .catalog-page__products-item(class=item.class)
               .catalog-page__products-row 
@@ -132,9 +143,9 @@ block content
                         .catalog-page__card-icon 
                           +btn-arrow-right.catalog-page__card-svg
                         .catalog-page__card-title 
-                          |PE-RT I
+                          |#{img.text}
                       .catalog-page__card-img 
-                        img.catalog-page__card-pic(src=`assets/images/${img}`, alt="")
+                        img.catalog-page__card-pic(src=`assets/images/${img.index}`, alt="")
           .catalog-page__products-item
             .catalog-page__products-row 
               .catalog-page__products-col
@@ -148,12 +159,12 @@ block content
               .catalog-page__products-col
                 .catalog-page__products-wrapper
                   .catalog-page__products-container 
-                    each img in ['tool-1', 'tool-2', 'tool-3']
+                    each img in [{index: 'tool-1', text: 'Труборезы'}, {index: 'tool-2', text: 'Сварочные аппараты'}, {index: 'tool-3', text: 'Комплектующие'}]
                       a.catalog-page__card(href="#" data-link='' data-aos='fade-up') 
                         .catalog-page__card-container 
                           .catalog-page__card-icon 
                             +btn-arrow-right.catalog-page__card-svg
                           .catalog-page__card-title 
-                            |PE-RT I
+                            |#{img.text}
                         .catalog-page__card-img 
-                          img.catalog-page__card-pic(src=`assets/images/${img}.webp`, alt="")
+                          img.catalog-page__card-pic(src=`assets/images/${img.index}.webp`, alt="")
