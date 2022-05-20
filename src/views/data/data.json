@@ -12,7 +12,19 @@
     },
     {
       "href": "catalog-category",
-      "title": "Каталог категория"
+      "title": "Каталог категория 1"
+    },
+    {
+      "href": "catalog-category-2",
+      "title": "Каталог категория 2"
+    },
+    {
+      "href": "catalog-category-3",
+      "title": "Каталог категория 3"
+    },
+    {
+      "href": "catalog-category-4",
+      "title": "Каталог категория 4"
     },
     {
       "href": "catalog-general",
