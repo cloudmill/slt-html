@@ -337,20 +337,20 @@ block content
             ul.catalog-page__types 
               li.catalog-page__types-item(data-aos='fade-up')
                 .catalog-page__type 
-                  .catalog-page__type-icon 
-                    +connect-svg.catalog-page__type-svg
+                  .catalog-page__type-icon.use-icon
+                    +connect-svg.use-icon__svg.catalog-page__type-svg
                   .catalog-page__type-text 
                     |Холодное водоснабжение
               li.catalog-page__types-item(data-aos='fade-up')
                 .catalog-page__type 
-                  .catalog-page__type-icon
-                    +hot-water-svg.catalog-page__type-svg
+                  .catalog-page__type-icon.use-icon
+                    +fire-svg.use-icon__svg.catalog-page__type-svg
                   .catalog-page__type-text 
                     |Горячее водоснабжение
               li.catalog-page__types-item(data-aos='fade-up')
                 .catalog-page__type 
-                  .catalog-page__type-icon 
-                    +water-svg.catalog-page__type-svg
+                  .catalog-page__type-icon.use-icon
+                    +water-svg.use-icon__svg.catalog-page__type-svg
                   .catalog-page__type-text 
                     |Питьевая вода
     section.section.section--md 
@@ -489,12 +489,14 @@ block content
                 label.catalog-page__table-item(data-table-item='')
                   each item in ['20', '2SLTPS1120', '1,9', '2', '50', '0,105', 'last']
                     if (item == "last")
-                      .catalog-page__table-cell
+                      .catalog-page__table-cell(data-table-cell='')
                         .catalog-page__table-row 
                           .catalog-page__table-col
                             input.catalog-page__table-input(type="number" placeholder="Введите количество" data-table-input='')
+                            .catalog-page__table-caption(data-table-caption='')
+                              |
                           .catalog-page__table-col
-                            .catalog-page__table-button 
+                            .catalog-page__table-button(data-catalog-button='')
                               .catalog-page__table-add 
                                 |Добавить
                               .catalog-page__table-icon 
@@ -520,7 +522,7 @@ block content
                         |Наружный диаметр d#[span.catalog-page__table-span n], мм
                       .catalog-page__block-text
                         |20
-                  .catalog-page__block-body
+                  .catalog-page__block-body(data-table-cell='')
                     each item in ddata 
                       .catalog-page__block-cell 
                         .catalog-page__block-label 
@@ -532,8 +534,10 @@ block content
                         |Добавить в заказ,шт
                       .catalog-page__block-input
                         input.catalog-page__table-input(type="number" placeholder="Кол-во" data-table-input='')
+                        .catalog-page__table-caption(data-table-caption='')
+                          |
                     .catalog-page__block-cell 
-                      .catalog-page__table-button 
+                      .catalog-page__table-button(data-catalog-button='')
                         .catalog-page__table-add 
                           |Добавить
                         .catalog-page__table-icon 

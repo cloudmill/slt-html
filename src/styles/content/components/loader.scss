@@ -70,8 +70,8 @@
 
   &__layer {
     position: absolute;
-    left: 0;
-    top: 0;
+    // left: 0;
+    // top: 0;
 
     width: 88px;
     height: 72px;
@@ -91,15 +91,12 @@
     }
 
     &.active {
-      // transform: none;
-      // transition: 0.8s $transition-timing-function;
-      animation: frameDown 2s $transition-timing-function forwards;
+      transform: none;
+      transition: 0.8s $transition-timing-function;
 
       #{$comp}__first-svg {
-        animation: frameDown 2s $transition-timing-function forwards;
-
-        // transform: none;
-        // transition: 0.8s $transition-timing-function;
+        transform: none;
+        transition: 0.8s $transition-timing-function;
       }
     }
   }
@@ -111,44 +108,35 @@
     }
 
     &.active {
-      animation: frameDown 2s $transition-timing-function 2s forwards;
 
-      // transform: none;
-      // transition: 0.8s $transition-timing-function;
+      transform: none;
+      transition: 0.8s $transition-timing-function;
 
       #{$comp}__second-svg {
-        animation: frameDown 2 $transition-timing-function 2s forwards;
-        // transform: none;
-        // transition: 0.8s $transition-timing-function;
+        transform: none;
+        transition: 0.8s $transition-timing-function;
       }
     }
   }
   &__third {
+    will-change: transform;
     transform: translateY(100%);
+    transition: 0.8s $transition-timing-function;
 
     #{$comp}__third-svg {
+      will-change: transform;
+      transition: 0.8s $transition-timing-function;
       transform: translateY(-100%);
     }
 
     &.active {
-      animation: frameDown 2s $transition-timing-function 4s forwards;
-      // transform: none;
-      // transition: 0.8s $transition-timing-function;
+      transform: none;
+      
 
       #{$comp}__third-svg {
-        animation: frameDown 2s $transition-timing-function 4s forwards;
-        // transform: none;
-        // transition: 0.8s $transition-timing-function;
+        transform: none;
+        
       }
     }
-  }
-}
-
-@keyframes frameDown {
-  0% {
-
-  }
-  100% {
-    transform: none;
   }
 }

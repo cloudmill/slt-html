@@ -481,7 +481,7 @@
 									<ul class="catalog-page__types">
 										<li class="catalog-page__types-item" data-aos="fade-up">
 											<div class="catalog-page__type">
-												<div class="catalog-page__type-icon"><svg class="catalog-page__type-svg" width="12" height="24" viewbox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<div class="catalog-page__type-icon use-icon"><svg class="use-icon__svg catalog-page__type-svg" width="12" height="24" viewbox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<rect x="0.75" y="0.75" width="10.5" height="22.5" stroke="#07A8D7" stroke-width="1.5"></rect>
 														<rect x="3" y="15" width="6" height="6" fill="#07A8D7"></rect>
 													</svg></div>
@@ -490,18 +490,16 @@
 										</li>
 										<li class="catalog-page__types-item" data-aos="fade-up">
 											<div class="catalog-page__type">
-												<div class="catalog-page__type-icon"><svg class="catalog-page__type-svg" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white"></path>
-														<rect x="14.75" y="8.75" width="10.5" height="22.5" stroke="#E53B10" stroke-width="1.5"></rect>
-														<rect x="17" y="14" width="6" height="15" fill="#E53B10"></rect>
-														<path d="M20 38.5C9.78273 38.5 1.5 30.2173 1.5 20H-1.5C-1.5 31.8741 8.12588 41.5 20 41.5V38.5ZM38.5 20C38.5 30.2173 30.2173 38.5 20 38.5V41.5C31.8741 41.5 41.5 31.8741 41.5 20H38.5ZM20 1.5C30.2173 1.5 38.5 9.78273 38.5 20H41.5C41.5 8.12588 31.8741 -1.5 20 -1.5V1.5ZM20 -1.5C8.12588 -1.5 -1.5 8.12588 -1.5 20H1.5C1.5 9.78273 9.78273 1.5 20 1.5V-1.5Z" fill="#E8E9E9"></path>
+												<div class="catalog-page__type-icon use-icon"><svg class="use-icon__svg catalog-page__type-svg" width="12" height="24" viewbox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<rect x="0.75" y="0.75" width="10.5" height="22.5" stroke="#E53B10" stroke-width="1.5"></rect>
+														<rect x="3" y="6" width="6" height="15" fill="#E53B10"></rect>
 													</svg></div>
 												<div class="catalog-page__type-text">Горячее водоснабжение</div>
 											</div>
 										</li>
 										<li class="catalog-page__types-item" data-aos="fade-up">
 											<div class="catalog-page__type">
-												<div class="catalog-page__type-icon"><svg class="catalog-page__type-svg" width="16" height="20" viewbox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<div class="catalog-page__type-icon use-icon"><svg class="use-icon__svg catalog-page__type-svg" width="16" height="20" viewbox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path fill-rule="evenodd" clip-rule="evenodd" d="M8.54811 1.03914C13.1572 5.06375 15.5 8.57789 15.5 11.6669C15.5 16.0413 12.0858 19.1669 8 19.1669C3.91421 19.1669 0.5 16.0413 0.5 11.6669C0.5 8.57789 2.84276 5.06375 7.45189 1.03914L8 0.560547L8.54811 1.03914ZM2.16667 11.6669C2.16667 15.0864 4.80343 17.5002 8 17.5002C11.1966 17.5002 13.8333 15.0864 13.8333 11.6669C13.8333 9.2925 11.9112 6.30557 8 2.78069C4.08884 6.30557 2.16667 9.2925 2.16667 11.6669ZM8 15.0002V16.6669C10.7614 16.6669 13 14.4283 13 11.6669H11.3333C11.3333 13.5078 9.84095 15.0002 8 15.0002Z" fill="#07A8D7"></path>
 													</svg></div>
 												<div class="catalog-page__type-text">Питьевая вода</div>
@@ -1390,11 +1388,13 @@
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">0,105</div>
 											</div>
-											<div class="catalog-page__table-cell">
+											<div class="catalog-page__table-cell" data-table-cell="">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input=""></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 													<div class="catalog-page__table-col">
-														<div class="catalog-page__table-button">
+														<div class="catalog-page__table-button" data-catalog-button="">
 															<div class="catalog-page__table-add">Добавить</div>
 															<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -1422,11 +1422,13 @@
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">0,105</div>
 											</div>
-											<div class="catalog-page__table-cell">
+											<div class="catalog-page__table-cell" data-table-cell="">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input=""></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 													<div class="catalog-page__table-col">
-														<div class="catalog-page__table-button">
+														<div class="catalog-page__table-button" data-catalog-button="">
 															<div class="catalog-page__table-add">Добавить</div>
 															<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -1454,11 +1456,13 @@
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">0,105</div>
 											</div>
-											<div class="catalog-page__table-cell">
+											<div class="catalog-page__table-cell" data-table-cell="">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input=""></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 													<div class="catalog-page__table-col">
-														<div class="catalog-page__table-button">
+														<div class="catalog-page__table-button" data-catalog-button="">
 															<div class="catalog-page__table-add">Добавить</div>
 															<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -1486,11 +1490,13 @@
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">0,105</div>
 											</div>
-											<div class="catalog-page__table-cell">
+											<div class="catalog-page__table-cell" data-table-cell="">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input=""></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 													<div class="catalog-page__table-col">
-														<div class="catalog-page__table-button">
+														<div class="catalog-page__table-button" data-catalog-button="">
 															<div class="catalog-page__table-add">Добавить</div>
 															<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -1518,11 +1524,13 @@
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">0,105</div>
 											</div>
-											<div class="catalog-page__table-cell">
+											<div class="catalog-page__table-cell" data-table-cell="">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input=""></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 													<div class="catalog-page__table-col">
-														<div class="catalog-page__table-button">
+														<div class="catalog-page__table-button" data-catalog-button="">
 															<div class="catalog-page__table-add">Добавить</div>
 															<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -1550,11 +1558,13 @@
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">0,105</div>
 											</div>
-											<div class="catalog-page__table-cell">
+											<div class="catalog-page__table-cell" data-table-cell="">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input=""></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 													<div class="catalog-page__table-col">
-														<div class="catalog-page__table-button">
+														<div class="catalog-page__table-button" data-catalog-button="">
 															<div class="catalog-page__table-add">Добавить</div>
 															<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -1582,11 +1592,13 @@
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">0,105</div>
 											</div>
-											<div class="catalog-page__table-cell">
+											<div class="catalog-page__table-cell" data-table-cell="">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input=""></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 													<div class="catalog-page__table-col">
-														<div class="catalog-page__table-button">
+														<div class="catalog-page__table-button" data-catalog-button="">
 															<div class="catalog-page__table-add">Добавить</div>
 															<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -1614,11 +1626,13 @@
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">0,105</div>
 											</div>
-											<div class="catalog-page__table-cell">
+											<div class="catalog-page__table-cell" data-table-cell="">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input=""></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 													<div class="catalog-page__table-col">
-														<div class="catalog-page__table-button">
+														<div class="catalog-page__table-button" data-catalog-button="">
 															<div class="catalog-page__table-add">Добавить</div>
 															<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -1646,11 +1660,13 @@
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">0,105</div>
 											</div>
-											<div class="catalog-page__table-cell">
+											<div class="catalog-page__table-cell" data-table-cell="">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input=""></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 													<div class="catalog-page__table-col">
-														<div class="catalog-page__table-button">
+														<div class="catalog-page__table-button" data-catalog-button="">
 															<div class="catalog-page__table-add">Добавить</div>
 															<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -1678,11 +1694,13 @@
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">0,105</div>
 											</div>
-											<div class="catalog-page__table-cell">
+											<div class="catalog-page__table-cell" data-table-cell="">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input=""></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 													<div class="catalog-page__table-col">
-														<div class="catalog-page__table-button">
+														<div class="catalog-page__table-button" data-catalog-button="">
 															<div class="catalog-page__table-add">Добавить</div>
 															<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -1710,11 +1728,13 @@
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">0,105</div>
 											</div>
-											<div class="catalog-page__table-cell">
+											<div class="catalog-page__table-cell" data-table-cell="">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input=""></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 													<div class="catalog-page__table-col">
-														<div class="catalog-page__table-button">
+														<div class="catalog-page__table-button" data-catalog-button="">
 															<div class="catalog-page__table-add">Добавить</div>
 															<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -1742,11 +1762,13 @@
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">0,105</div>
 											</div>
-											<div class="catalog-page__table-cell">
+											<div class="catalog-page__table-cell" data-table-cell="">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input=""></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 													<div class="catalog-page__table-col">
-														<div class="catalog-page__table-button">
+														<div class="catalog-page__table-button" data-catalog-button="">
 															<div class="catalog-page__table-add">Добавить</div>
 															<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -1774,11 +1796,13 @@
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">0,105</div>
 											</div>
-											<div class="catalog-page__table-cell">
+											<div class="catalog-page__table-cell" data-table-cell="">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input=""></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 													<div class="catalog-page__table-col">
-														<div class="catalog-page__table-button">
+														<div class="catalog-page__table-button" data-catalog-button="">
 															<div class="catalog-page__table-add">Добавить</div>
 															<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -1806,11 +1830,13 @@
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">0,105</div>
 											</div>
-											<div class="catalog-page__table-cell">
+											<div class="catalog-page__table-cell" data-table-cell="">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input=""></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 													<div class="catalog-page__table-col">
-														<div class="catalog-page__table-button">
+														<div class="catalog-page__table-button" data-catalog-button="">
 															<div class="catalog-page__table-add">Добавить</div>
 															<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -1838,11 +1864,13 @@
 											<div class="catalog-page__table-cell">
 												<div class="catalog-page__table-text">0,105</div>
 											</div>
-											<div class="catalog-page__table-cell">
+											<div class="catalog-page__table-cell" data-table-cell="">
 												<div class="catalog-page__table-row">
-													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input=""></div>
+													<div class="catalog-page__table-col"><input class="catalog-page__table-input" type="number" placeholder="Введите количество" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 													<div class="catalog-page__table-col">
-														<div class="catalog-page__table-button">
+														<div class="catalog-page__table-button" data-catalog-button="">
 															<div class="catalog-page__table-add">Добавить</div>
 															<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																	<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -1862,7 +1890,7 @@
 													<div class="catalog-page__block-text">20</div>
 												</div>
 											</div>
-											<div class="catalog-page__block-body">
+											<div class="catalog-page__block-body" data-table-cell="">
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label">Толщина стенки e<span class="catalog-page__table-span">n</span>, мм</div>
 													<div class="catalog-page__block-text">1.9</div>
@@ -1881,10 +1909,12 @@
 												</div>
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label darken">Добавить в заказ,шт</div>
-													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input=""></div>
+													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 												</div>
 												<div class="catalog-page__block-cell">
-													<div class="catalog-page__table-button">
+													<div class="catalog-page__table-button" data-catalog-button="">
 														<div class="catalog-page__table-add">Добавить</div>
 														<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -1900,7 +1930,7 @@
 													<div class="catalog-page__block-text">20</div>
 												</div>
 											</div>
-											<div class="catalog-page__block-body">
+											<div class="catalog-page__block-body" data-table-cell="">
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label">Толщина стенки e<span class="catalog-page__table-span">n</span>, мм</div>
 													<div class="catalog-page__block-text">1.9</div>
@@ -1919,10 +1949,12 @@
 												</div>
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label darken">Добавить в заказ,шт</div>
-													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input=""></div>
+													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 												</div>
 												<div class="catalog-page__block-cell">
-													<div class="catalog-page__table-button">
+													<div class="catalog-page__table-button" data-catalog-button="">
 														<div class="catalog-page__table-add">Добавить</div>
 														<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -1938,7 +1970,7 @@
 													<div class="catalog-page__block-text">20</div>
 												</div>
 											</div>
-											<div class="catalog-page__block-body">
+											<div class="catalog-page__block-body" data-table-cell="">
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label">Толщина стенки e<span class="catalog-page__table-span">n</span>, мм</div>
 													<div class="catalog-page__block-text">1.9</div>
@@ -1957,10 +1989,12 @@
 												</div>
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label darken">Добавить в заказ,шт</div>
-													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input=""></div>
+													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 												</div>
 												<div class="catalog-page__block-cell">
-													<div class="catalog-page__table-button">
+													<div class="catalog-page__table-button" data-catalog-button="">
 														<div class="catalog-page__table-add">Добавить</div>
 														<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -1976,7 +2010,7 @@
 													<div class="catalog-page__block-text">20</div>
 												</div>
 											</div>
-											<div class="catalog-page__block-body">
+											<div class="catalog-page__block-body" data-table-cell="">
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label">Толщина стенки e<span class="catalog-page__table-span">n</span>, мм</div>
 													<div class="catalog-page__block-text">1.9</div>
@@ -1995,10 +2029,12 @@
 												</div>
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label darken">Добавить в заказ,шт</div>
-													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input=""></div>
+													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 												</div>
 												<div class="catalog-page__block-cell">
-													<div class="catalog-page__table-button">
+													<div class="catalog-page__table-button" data-catalog-button="">
 														<div class="catalog-page__table-add">Добавить</div>
 														<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -2014,7 +2050,7 @@
 													<div class="catalog-page__block-text">20</div>
 												</div>
 											</div>
-											<div class="catalog-page__block-body">
+											<div class="catalog-page__block-body" data-table-cell="">
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label">Толщина стенки e<span class="catalog-page__table-span">n</span>, мм</div>
 													<div class="catalog-page__block-text">1.9</div>
@@ -2033,10 +2069,12 @@
 												</div>
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label darken">Добавить в заказ,шт</div>
-													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input=""></div>
+													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 												</div>
 												<div class="catalog-page__block-cell">
-													<div class="catalog-page__table-button">
+													<div class="catalog-page__table-button" data-catalog-button="">
 														<div class="catalog-page__table-add">Добавить</div>
 														<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -2052,7 +2090,7 @@
 													<div class="catalog-page__block-text">20</div>
 												</div>
 											</div>
-											<div class="catalog-page__block-body">
+											<div class="catalog-page__block-body" data-table-cell="">
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label">Толщина стенки e<span class="catalog-page__table-span">n</span>, мм</div>
 													<div class="catalog-page__block-text">1.9</div>
@@ -2071,10 +2109,12 @@
 												</div>
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label darken">Добавить в заказ,шт</div>
-													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input=""></div>
+													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 												</div>
 												<div class="catalog-page__block-cell">
-													<div class="catalog-page__table-button">
+													<div class="catalog-page__table-button" data-catalog-button="">
 														<div class="catalog-page__table-add">Добавить</div>
 														<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -2090,7 +2130,7 @@
 													<div class="catalog-page__block-text">20</div>
 												</div>
 											</div>
-											<div class="catalog-page__block-body">
+											<div class="catalog-page__block-body" data-table-cell="">
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label">Толщина стенки e<span class="catalog-page__table-span">n</span>, мм</div>
 													<div class="catalog-page__block-text">1.9</div>
@@ -2109,10 +2149,12 @@
 												</div>
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label darken">Добавить в заказ,шт</div>
-													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input=""></div>
+													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 												</div>
 												<div class="catalog-page__block-cell">
-													<div class="catalog-page__table-button">
+													<div class="catalog-page__table-button" data-catalog-button="">
 														<div class="catalog-page__table-add">Добавить</div>
 														<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -2128,7 +2170,7 @@
 													<div class="catalog-page__block-text">20</div>
 												</div>
 											</div>
-											<div class="catalog-page__block-body">
+											<div class="catalog-page__block-body" data-table-cell="">
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label">Толщина стенки e<span class="catalog-page__table-span">n</span>, мм</div>
 													<div class="catalog-page__block-text">1.9</div>
@@ -2147,10 +2189,12 @@
 												</div>
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label darken">Добавить в заказ,шт</div>
-													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input=""></div>
+													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 												</div>
 												<div class="catalog-page__block-cell">
-													<div class="catalog-page__table-button">
+													<div class="catalog-page__table-button" data-catalog-button="">
 														<div class="catalog-page__table-add">Добавить</div>
 														<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -2166,7 +2210,7 @@
 													<div class="catalog-page__block-text">20</div>
 												</div>
 											</div>
-											<div class="catalog-page__block-body">
+											<div class="catalog-page__block-body" data-table-cell="">
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label">Толщина стенки e<span class="catalog-page__table-span">n</span>, мм</div>
 													<div class="catalog-page__block-text">1.9</div>
@@ -2185,10 +2229,12 @@
 												</div>
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label darken">Добавить в заказ,шт</div>
-													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input=""></div>
+													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 												</div>
 												<div class="catalog-page__block-cell">
-													<div class="catalog-page__table-button">
+													<div class="catalog-page__table-button" data-catalog-button="">
 														<div class="catalog-page__table-add">Добавить</div>
 														<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -2204,7 +2250,7 @@
 													<div class="catalog-page__block-text">20</div>
 												</div>
 											</div>
-											<div class="catalog-page__block-body">
+											<div class="catalog-page__block-body" data-table-cell="">
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label">Толщина стенки e<span class="catalog-page__table-span">n</span>, мм</div>
 													<div class="catalog-page__block-text">1.9</div>
@@ -2223,10 +2269,12 @@
 												</div>
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label darken">Добавить в заказ,шт</div>
-													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input=""></div>
+													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 												</div>
 												<div class="catalog-page__block-cell">
-													<div class="catalog-page__table-button">
+													<div class="catalog-page__table-button" data-catalog-button="">
 														<div class="catalog-page__table-add">Добавить</div>
 														<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -2242,7 +2290,7 @@
 													<div class="catalog-page__block-text">20</div>
 												</div>
 											</div>
-											<div class="catalog-page__block-body">
+											<div class="catalog-page__block-body" data-table-cell="">
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label">Толщина стенки e<span class="catalog-page__table-span">n</span>, мм</div>
 													<div class="catalog-page__block-text">1.9</div>
@@ -2261,10 +2309,12 @@
 												</div>
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label darken">Добавить в заказ,шт</div>
-													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input=""></div>
+													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 												</div>
 												<div class="catalog-page__block-cell">
-													<div class="catalog-page__table-button">
+													<div class="catalog-page__table-button" data-catalog-button="">
 														<div class="catalog-page__table-add">Добавить</div>
 														<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>
@@ -2280,7 +2330,7 @@
 													<div class="catalog-page__block-text">20</div>
 												</div>
 											</div>
-											<div class="catalog-page__block-body">
+											<div class="catalog-page__block-body" data-table-cell="">
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label">Толщина стенки e<span class="catalog-page__table-span">n</span>, мм</div>
 													<div class="catalog-page__block-text">1.9</div>
@@ -2299,10 +2349,12 @@
 												</div>
 												<div class="catalog-page__block-cell">
 													<div class="catalog-page__block-label darken">Добавить в заказ,шт</div>
-													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input=""></div>
+													<div class="catalog-page__block-input"><input class="catalog-page__table-input" type="number" placeholder="Кол-во" data-table-input="">
+														<div class="catalog-page__table-caption" data-table-caption=""></div>
+													</div>
 												</div>
 												<div class="catalog-page__block-cell">
-													<div class="catalog-page__table-button">
+													<div class="catalog-page__table-button" data-catalog-button="">
 														<div class="catalog-page__table-add">Добавить</div>
 														<div class="catalog-page__table-icon"><svg class="catalog-page__table-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66634 7.33301H14.6663V8.66634H8.66634V14.6663H7.33301V8.66634H1.33301V7.33301H7.33301V1.33301H8.66634V7.33301Z" fill="#07A8D7"></path>

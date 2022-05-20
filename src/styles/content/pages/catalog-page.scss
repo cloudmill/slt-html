@@ -125,12 +125,6 @@
   }
   &__type-icon {
     margin-right: getRem(16px);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: getRem(40px);
-    height: getRem(40px);
   }
   &__type-svg {
     width: 100%;
@@ -417,14 +411,18 @@
     }
   }
   &__table-button {
-    padding: 16px 36px;
+    padding: getRem(16px) getRem(36px);
     @media (max-width: ($breakpoint - 1px)) {
-      padding: 10px 0;
+      padding: getRem(10px) 0;
     }
 
     display: flex;
     align-items: center;
     justify-content: center;
+    width: getRem(180px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: auto;
+    }
 
     background: var(--color-blue);
     border-radius: 60px;
@@ -478,7 +476,7 @@
 
     @include fsl(14px);
     @include f-main();
-    background: var(--color-white);
+    background: none;
     border: 1px solid var(--color-borders);
     color: var(--color-blue);
     @media (max-width: ($breakpoint - 1px)) {
