@@ -17,26 +17,26 @@
   transition-delay: 1s;
 
   &--hidden {
-    // opacity: 0;
-    // pointer-events: none;
+    opacity: 0;
+    pointer-events: none;
 
-    // #{$comp}__icon {
-    //   width: 120vw;
-    //   height: 120vw;
-    //   @media (max-width: ($breakpoint - 1px)) {
-    //     flex-shrink: 0;
-    //     width: 100vh;
-    //     height: 100vh;
-    //   }
+    #{$comp}__icon {
+      width: 120vw;
+      height: 120vw;
+      @media (max-width: ($breakpoint - 1px)) {
+        flex-shrink: 0;
+        width: 100vh;
+        height: 100vh;
+      }
 
-    //   transition: width 1.6s  $transition-timing-function, height 1.6s  $transition-timing-function;
-    //   transition-delay: 0s, 0s;
-    // }
+      transition: width 1.6s  $transition-timing-function, height 1.6s  $transition-timing-function;
+      transition-delay: 0s, 0s;
+    }
 
-    // #{$comp}__container {
-    //   transform: rotate(360deg) scale(0.1);
-    //   opacity: 0;
-    // }
+    #{$comp}__container {
+      transform: rotate(360deg) scale(0.1);
+      opacity: 0;
+    }
   }
 
   &__icon {
