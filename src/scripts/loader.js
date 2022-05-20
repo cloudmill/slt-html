@@ -11,9 +11,10 @@ window.addEventListener("load", () => {
     const layers = document.querySelectorAll('.loader__layer')
 
     layers.forEach((item, i) => {
-      setTimeout(() => {
-        item.classList.add('active')
-      }, DELAY * i);
+      // setTimeout(() => {
+      //   item.classList.add('active')
+      // }, DELAY * i);
+      item.classList.add('active')
     })
 
     setTimeout(() => {
