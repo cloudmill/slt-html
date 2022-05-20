@@ -17,26 +17,26 @@
   transition-delay: 1s;
 
   &--hidden {
-    opacity: 0;
-    pointer-events: none;
+    // opacity: 0;
+    // pointer-events: none;
 
-    #{$comp}__icon {
-      width: 120vw;
-      height: 120vw;
-      @media (max-width: ($breakpoint - 1px)) {
-        flex-shrink: 0;
-        width: 100vh;
-        height: 100vh;
-      }
+    // #{$comp}__icon {
+    //   width: 120vw;
+    //   height: 120vw;
+    //   @media (max-width: ($breakpoint - 1px)) {
+    //     flex-shrink: 0;
+    //     width: 100vh;
+    //     height: 100vh;
+    //   }
 
-      transition: width 1.6s  $transition-timing-function, height 1.6s  $transition-timing-function;
-      transition-delay: 0s, 0s;
-    }
+    //   transition: width 1.6s  $transition-timing-function, height 1.6s  $transition-timing-function;
+    //   transition-delay: 0s, 0s;
+    // }
 
-    #{$comp}__container {
-      transform: rotate(360deg) scale(0.1);
-      opacity: 0;
-    }
+    // #{$comp}__container {
+    //   transform: rotate(360deg) scale(0.1);
+    //   opacity: 0;
+    // }
   }
 
   &__icon {
@@ -69,8 +69,12 @@
   }
 
   &__layer {
-    @include cover;
+    position: absolute;
+    left: 0;
+    top: 0;
 
+    width: 88px;
+    height: 72px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,10 +93,10 @@
     &.active {
       // transform: none;
       // transition: 0.8s $transition-timing-function;
-      animation: frameDown 0.8s $transition-timing-function forwards;
+      animation: frameDown 2s $transition-timing-function forwards;
 
       #{$comp}__first-svg {
-        animation: frameDown 0.8s $transition-timing-function forwards;
+        animation: frameDown 2s $transition-timing-function forwards;
 
         // transform: none;
         // transition: 0.8s $transition-timing-function;
@@ -107,13 +111,13 @@
     }
 
     &.active {
-      animation: frameDown 0.8s $transition-timing-function 0.8s forwards;
+      animation: frameDown 2s $transition-timing-function 2s forwards;
 
       // transform: none;
       // transition: 0.8s $transition-timing-function;
 
       #{$comp}__second-svg {
-        animation: frameDown 0.8s $transition-timing-function 0.8s forwards;
+        animation: frameDown 2 $transition-timing-function 2s forwards;
         // transform: none;
         // transition: 0.8s $transition-timing-function;
       }
@@ -127,12 +131,12 @@
     }
 
     &.active {
-      animation: frameDown 0.8s $transition-timing-function 1.6s forwards;
+      animation: frameDown 2s $transition-timing-function 4s forwards;
       // transform: none;
       // transition: 0.8s $transition-timing-function;
 
       #{$comp}__third-svg {
-        animation: frameDown 0.8s $transition-timing-function 1.6s forwards;
+        animation: frameDown 2s $transition-timing-function 4s forwards;
         // transform: none;
         // transition: 0.8s $transition-timing-function;
       }
