@@ -97,6 +97,8 @@
     align-items: center;
     width: getRem(190px);
     height: getRem(140px);
+
+    mix-blend-mode: darken;
   }
 
   &__img {
