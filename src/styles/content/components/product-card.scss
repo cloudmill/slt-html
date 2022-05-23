@@ -2,7 +2,7 @@
   $comp: &;
 
   display: block;
-  height: getRem(420px);
+  height: getRem(360px);
   @media (max-width: ($breakpoint - 1px)) {
     height: getRem(187px);
   }
@@ -22,10 +22,12 @@
         }
       }
       #{$comp}__content {
+        transition-delay: 0s;
         transform: translateY(-10px);
         opacity: 0;
       }
       #{$comp}__hidden {
+        transition-delay: 0.4s;
         transform: none;
         opacity: 1;
       }
@@ -161,7 +163,8 @@
   }
 
   &__content {
-    transition: 0.6s $transition-timing-function;
+    transition: 0.4s $transition-timing-function;
+    transition-delay: 0.4s;
   }
 
   &__title {
@@ -195,6 +198,7 @@
     
     opacity: 0;
     transition: 0.6s $transition-timing-function;
+    // transition-delay: 0.4s;
   }
   
   &__logo {
