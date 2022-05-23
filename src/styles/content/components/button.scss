@@ -56,6 +56,7 @@
       width: getStatic(16px, 14.4px);
       height: getStatic(16px, 14.4px);
     }
+    transition: $transition;
 
     &--right {
       transform: rotate(-90deg);
@@ -138,6 +139,10 @@
     @media (max-width: ($breakpoint - 1px)) {
       padding: getRem(9px) getRem(26px);
     }
+  }
+
+  &--feedback {
+    border: none;
   }
 
   &--gray {

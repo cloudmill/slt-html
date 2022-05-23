@@ -49,11 +49,38 @@ mixin header
                           .button__text
                             span Обратный звонок
                       .header__feedback-item
-                        .button.button--sm.button--gray.button-animate
-                          .button__text
-                            span Написать нам
-                          .button__icon 
-                            +arrow-svg
+                        .header__feedback-btn(data-feedback-btn='')
+                          .button.button--sm.button--gray.button-animate
+                            .button__text
+                              span Написать нам
+                            .button__icon 
+                              +arrow-svg
+                          .header__feedback-dropdown(data-feedback-dropdown='')
+                            ul.header__feedback-list 
+                              li.header__feedback-line
+                                a.header__feedback-link(href="#" data-link='')
+                                  .header__feedback-icon 
+                                    +tg-svg.header__feedback-svg
+                                  .header__text 
+                                    |Telegram
+                              li.header__feedback-line
+                                a.header__feedback-link(href="#" data-link='')
+                                  .header__feedback-icon 
+                                    +viber-svg.header__feedback-svg
+                                  .header__text 
+                                    |Viber
+                              li.header__feedback-line
+                                a.header__feedback-link(href="#" data-link='')
+                                  .header__feedback-icon 
+                                    +whatsapp-svg.header__feedback-svg
+                                  .header__text 
+                                    |WhatsApp
+                        .header__hidden 
+                          .button.button--sm.button--gray.button--feedback.button-animate
+                            .button__text
+                              span Написать нам
+                            .button__icon 
+                              +arrow-svg
                     a.header__phone(href="tel:" + data.phone) 
                       |#{data.phone}
           .header__bot 

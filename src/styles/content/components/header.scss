@@ -271,8 +271,17 @@
     align-items: center;
 
     &:hover {
+      .header-icon-stroke {
+        stroke: var(--color-blue);
+      }
 
-      .header__text {
+      #{$comp}__feedback-svg {
+        path {
+          fill: var(--color-blue);
+        }
+      }
+
+      #{$comp}__text {
         color: var(--color-blue);
       }
     }
@@ -300,6 +309,10 @@
   &__feedback-svg {
     width: 100%;
     height: 100%;
+
+    path {
+      transition: $transition;
+    }
   }
   &__feedback-buttons {
     margin-right: getRem(60px);
@@ -313,6 +326,56 @@
     .button__text span {
       font-weight: 400;
       @include fsl(14px);
+    }
+  }
+  &__feedback-btn {
+    position: absolute;
+    z-index: 1;
+
+    border: 1px solid transparent;
+    border-radius: 18px;
+    transition: $transition;
+    background: var(--color-white);
+
+    &.active {
+      border-color: var(--color-blue);
+
+      .button {
+        border-color: transparent;
+
+        &::before {
+          background: transparent;
+        }
+      }
+
+      .button__text {
+        span {
+          color: var(--color-black);
+        }
+      }
+
+      .button__icon {
+        transform: rotate(-180deg);
+
+        svg {
+          path {
+            fill: var(--color-black);
+          }
+        }
+      }
+    }
+  }
+  &__feedback-dropdown {
+    padding: 4px 24px 16px;
+
+    display: none;
+
+    border-radius: 0 0 18px 18px;
+  }
+  &__feedback-line {
+    
+    &:not(:first-child) {
+      margin-top: getRem(8px);
     }
   }
 
@@ -897,5 +960,10 @@
     opacity: 0;
     animation: fadeOut 0.5s $transition-timing-function forwards;
     transition: $transition;
+  }
+
+  &__hidden {
+    pointer-events: none;
+    opacity: 0;
   }
 }

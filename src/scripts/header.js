@@ -183,3 +183,16 @@ import { mediaQuery } from './mediaQueries'
     }
   })
 }
+
+// feedback 
+{
+  $(() => {
+    const btn = $('[data-feedback-btn]')
+    const dropdown = btn.find('[data-feedback-dropdown]')
+
+    btn.on('click', function() {
+      btn.toggleClass('active')
+      dropdown.slideToggle()
+    })
+  })
+}
