@@ -27,16 +27,14 @@
     }
 
     display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
   &__item {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    &:not(:first-child) {
-      margin-left: getRem(8px); 
-    }
   }
 
   &__svg {
@@ -53,7 +51,25 @@
   &__container {
     padding: getRem(60px);
     @media (max-width: ($breakpoint - 1px)) {
-      padding: getRem(44px) 0 0;
+      // padding: getRem(44px) 0 0;
+      padding: 0;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image {
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(30px);
+    }
+
+    width: getRem(315px);
+    height: getRem(315px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(162px);
+      height: getRem(162px);
     }
 
     display: flex;

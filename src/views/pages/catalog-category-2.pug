@@ -70,9 +70,55 @@ block content
               ul.category-list__list(data-catalog-list='')
         .section__block.catalog
           .catalog-page__grid 
-            - for (i = 0; i < 16; i++)
+            - for (i = 0; i < 8; i++)
               .aos(data-aos='fade-up')
-                +card
+                a.card(href="#" data-link='')
+                  .card__category 
+                    .card__item.tooltip
+                      .use-icon
+                        +connect-svg.use-icon__svg.tooltip__icon 
+                      .tooltip__container
+                        |Холодное водоснабжение
+                    .card__item.tooltip
+                      .use-icon
+                        +water-svg.use-icon__svg.tooltip__icon 
+                      .tooltip__container
+                        |Питьевая вода
+                    .card__item.tooltip
+                      .use-icon
+                        +fire-svg.use-icon__svg.tooltip__icon 
+                      .tooltip__container
+                        |Пqwe
+                  .card__container
+                    .card__image
+                      img(src="assets/images/card-2.webp", alt="")
+                  .card__bot 
+                    .card__title 
+                      |Крестовина SLT BLOCKFIRE PP-R 
+              .aos(data-aos='fade-up')
+                a.card(href="#" data-link='')
+                  .card__category 
+                    .card__item.tooltip
+                      .use-icon
+                        +use-svg.use-icon__svg.tooltip__icon 
+                      .tooltip__container
+                        |Соединение
+                    .card__item.tooltip
+                      .use-icon
+                        +connect-svg.use-icon__svg.tooltip__icon 
+                      .tooltip__container
+                        |Холодное водоснабжение
+                    .card__item.tooltip
+                      .use-icon
+                        +fire-svg.use-icon__svg.tooltip__icon 
+                      .tooltip__container
+                        |Пqwe
+                  .card__container
+                    .card__image
+                      img(src="assets/images/card-3.webp", alt="")
+                  .card__bot 
+                    .card__title 
+                      |Муфта SLT BLOCKFIRE PP-R комбинированная BP
           .catalog__wrapper
             .catalog__loader
   +catalog-modal
