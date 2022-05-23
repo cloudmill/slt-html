@@ -58,6 +58,10 @@
     position: relative;
     z-index: 0;
 
+    height: getRem(860px);
+    @media (max-width: ($breakpoint - 1px)) {
+      height: auto;
+    }
     @media (max-width: ($breakpoint-m - 1px)) {
       height: 100vw;
     }
@@ -93,16 +97,16 @@
     background: var(--color-white);
   }
   &__video-player {
+    position: absolute;
+    @media (max-width: ($breakpoint - 1px)) {
+      position: static;
+    }
     @media (max-width: ($breakpoint-m - 1px)) {
       position: absolute;
     }
 
     display: block;
-    height: getRem(900px);
-    @media (max-width: ($breakpoint - 1px)) {
-      height: auto;
-      width: 100%;
-    }
+    width: 100%;
     @media (max-width: ($breakpoint-m - 1px)) {
       height: 100%;
       width: auto;
@@ -134,7 +138,7 @@
     position: relative;
     z-index: 0;
 
-    height: getRem(893px);
+    height: getRem(790px);
     @media (max-width: ($breakpoint - 1px)) {
       height: getRem(485px);
     }

@@ -58,7 +58,7 @@
   }
   &__item {
     display: flex;
-    height: getRem(420px);
+    height: getRem(360px);
     @media (max-width: ($breakpoint - 1px)) {
       display: block;
       height: auto;

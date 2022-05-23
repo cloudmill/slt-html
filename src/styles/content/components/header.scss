@@ -12,11 +12,7 @@
   transition: $transition;
 
   &--up {
-    transform: translateY(-5.25rem);
-
-    #{$comp}__inner {
-      padding-bottom: getRem(20px);
-    }
+    transform: translateY(-3.75rem);
   }
 
   &.menu {
@@ -49,7 +45,7 @@
   }
 
   &__inner {
-    padding: getRem(32px) 0 getRem(40px);
+    padding: getRem(20px) 0;
     @media (max-width: ($breakpoint - 1px)) {
       padding: getRem(13px) 0;
     }

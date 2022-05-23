@@ -2,7 +2,7 @@
   $comp: &;
 
   display: block;
-  height: getRem(500px);
+  height: getRem(420px);
   @media (max-width: ($breakpoint - 1px)) {
     height: getRem(187px);
   }
@@ -15,10 +15,8 @@
 
   &:hover {
     @media (min-width: $breakpoint) {
-      // padding: 20px;
   
       #{$comp}__container {
-        // background: var(--color-darken-white);
         &::before {
           transform: none;
         }
@@ -160,9 +158,6 @@
   &__bot {
     position: relative;
     z-index: 0;
-    @media (max-width: ($breakpoint - 1px)) {
-      // order: -1;
-    }
   }
 
   &__content {
@@ -226,15 +221,9 @@
     position: absolute;
     top: 0;
     right: 0;
-    // @media (max-width: ($breakpoint - 1px)) {
-    //   bottom: getRem(20px);
-    //   right: 0;
-    //   top: auto;
-    // }
 
-    width: calc(#{$col-part-d} * 4 - #{$col-gap});
+    width: getRem(500px);
     @media (max-width: ($breakpoint - 1px)) {
-      // width: calc(#{$col-part-m} * 2 - #{$col-gap});
       width: getRem(170px);
     }
     display: flex;

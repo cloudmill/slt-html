@@ -30,27 +30,39 @@ block content
                   +download-btn
                     |Скачать все документы
               .docs-page__grid 
-                - for (i = 0; i < 2; i++)
+                -
+                  var items = [
+                    {img: 'docs-pert.webp', title: 'Рекламная листовка 2018'},
+                    {img: 'docs-blockfire.webp', title: 'Рекламная листовка 2019'},
+                    {img: 'docs-pert.webp', title: 'Рекламная листовка 2021'},
+                    {img: 'docs-blockfire.webp', title: 'Рекламная листовка 2022'},
+                  ]
+                each item in items
                   .aos(data-aos='fade-up')
-                    +docs-img(img = 'docs-pert.webp')
-                  .aos(data-aos='fade-up')
-                    +docs-img(img = 'docs-blockfire.webp')
+                    +docs-img(img = item.img title = item.title)
             .docs-page__block-item
               .docs-page__top(data-aos='fade-up') 
                 h4
                   |Демо-боксы
               .docs-page__grid 
-                - for (i = 0; i < 3; i++)
+                -
+                  var items = [
+                    {img: 'docs-card.webp', title: 'Демо-бокс 2020'},
+                    {img: 'docs-card-2.webp', title: 'Рекламная листовка 2018'},
+                    {img: 'docs-card.webp', title: 'Рекламная листовка 2018'},
+                  ]
+                each item in items
                   .aos(data-aos='fade-up')
-                    +docs-img(img = 'docs-card.webp')
+                    +docs-img(img = item.img title = item.title)
             .docs-page__block-item
               .docs-page__top(data-aos='fade-up') 
                 h4
                   |Логотипы
               .docs-page__grid 
-                each img in ['svg/docs-card-2.svg', 'svg/docs-card-3.svg']
-                  .aos(data-aos='fade-up')
-                    +docs-img(img = img)
+                .aos(data-aos='fade-up')
+                  +docs-img(img = 'svg/docs-card-2.svg' title = 'Логотип')
+                .aos(data-aos='fade-up')
+                  +docs-img(img = 'svg/docs-card-3.svg' title = 'Логотип в инверсии')
             .docs-page__button(data-aos='fade-up') 
               .button-wrapper
                 +download-btn.button--wide--mobile

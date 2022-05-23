@@ -26,9 +26,9 @@ block content
                     |Скачать все документы
               .docs-page__grid
                 .aos(data-aos='fade-up') 
-                  +docs-img(img = 'docs-pert.webp') 
+                  +docs-img(img = 'docs-pert.webp' title = 'Каталог фитингов') 
                 .aos(data-aos='fade-up') 
-                  +docs-img(img = 'docs-blockfire.webp')
+                  +docs-img(img = 'docs-blockfire.webp' title = 'Каталог фитингов')
             .docs-page__block-item
               .docs-page__top(data-aos='fade-up') 
                 h4 
@@ -36,9 +36,9 @@ block content
               .docs-page__grid 
                 - for (i = 0; i < 4; i++)
                   .aos(data-aos='fade-up') 
-                    +docs-img(img = 'docs-pert.webp') 
+                    +docs-img(img = 'docs-pert.webp' title = 'Каталог фитингов') 
                   .aos(data-aos='fade-up') 
-                    +docs-img(img = 'docs-blockfire.webp')
+                    +docs-img(img = 'docs-blockfire.webp' title = 'Каталог фитингов')
             .docs-page__button(data-aos='fade-up') 
               .button-wrapper 
                 +download-btn.button--wide--mobile
