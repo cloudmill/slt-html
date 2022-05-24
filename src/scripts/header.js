@@ -192,7 +192,7 @@ import { mediaQuery } from './mediaQueries'
 
     btn.on('click', function() {
       btn.toggleClass('active')
-      dropdown.slideToggle()
+      dropdown.slideToggle(400)
     })
   })
 }

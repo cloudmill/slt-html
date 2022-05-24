@@ -45,6 +45,8 @@
   }
 
   &__inner {
+    position: relative;
+    z-index: 1;
     padding: getRem(20px) 0;
     @media (max-width: ($breakpoint - 1px)) {
       padding: getRem(13px) 0;
@@ -212,7 +214,7 @@
     position: absolute;
     left: -60px;
     top: getRem(-40px);
-    z-index: 1;
+    z-index: 2;
 
     width: 120vw;
     height: 120vh;
@@ -340,6 +342,21 @@
     &.active {
       border-color: var(--color-blue);
 
+      #{$comp}__feedback-list {
+        // transition-delay: 0.4s;
+        // opacity: 1;
+        animation: fade 0.4s $transition-timing-function 0.4s forwards;
+
+        @keyframes fade {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+
       .button {
         border-color: transparent;
 
@@ -371,6 +388,11 @@
     display: none;
 
     border-radius: 0 0 18px 18px;
+  }
+  &__feedback-list {
+    opacity: 0;
+    transition-delay: 0.4s;
+    transition: $transition;
   }
   &__feedback-line {
     
