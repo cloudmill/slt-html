@@ -1,6 +1,10 @@
 .main-page {
   $comp: &;
 
+  &__heading {
+
+  }
+
   &__hero {
     margin-top: getRem(308px);
     @media (max-width: ($breakpoint - 1px)) {
@@ -31,6 +35,9 @@
         margin-top: 12px;
       }
     }
+  }
+  &__hero-title {
+    
   }
 
   &__section {
@@ -196,7 +203,7 @@
 
     font-weight: 500;
     color: var(--color-white);
-    letter-spacing: -3px;
+    letter-spacing: -1px;
     @include fsl(44px, 110%);
     @media (max-width: ($breakpoint - 1px)) {
       letter-spacing: -0.5px;

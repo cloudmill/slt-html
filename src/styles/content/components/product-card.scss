@@ -54,6 +54,11 @@
   }
 
   &--blue {
+    #{$comp}__logo {
+      width: getRem(216px);
+      height: getRem(48px);
+    }
+
     .button-icon {
       border-color: var(--color-blue);
 
@@ -74,6 +79,11 @@
     }
   }
   &--red {
+    #{$comp}__logo {
+      width: getRem(292px);
+      height: getRem(48px);
+    }
+
     .button-icon {
       border-color: var(--color-red);
 
@@ -94,6 +104,11 @@
     }
   }
   &--green {
+    #{$comp}__logo {
+      width: getRem(202px);
+      height: getRem(48px);
+    }
+
     .button-icon {
       border-color: var(--color-green);
 
@@ -182,10 +197,8 @@
 
     font-weight: 500;
     color: var(--color-gray);
-    letter-spacing: -0.5px;
     @include fsl(20px, 130%);
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(14px);
     }
   }
@@ -203,9 +216,6 @@
   
   &__logo {
     margin-bottom: getRem(20px);
-
-    width: getRem(268px);
-    height: getRem(60px);
   }
 
   &__svg {
