@@ -185,8 +185,8 @@ mixin header
                     |#{item.text}
                   ul.catalog-card__list
                     each text in item.items 
-                      li.catalog-card__item(data-header-category='')
-                        a.catalog-card__link(href="#" data-link='') 
+                      li.catalog-card__item(data-category-item='')
+                        a.catalog-card__link(href="#" data-header-category='' data-link='') 
                           |#{text}
                   .catalog-card__images 
                     each img in item.images

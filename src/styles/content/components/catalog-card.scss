@@ -106,12 +106,13 @@
     z-index: -1;
     
     opacity: 0;
-    animation: fadeOut forwards 0.5s $transition-timing-function;
-    transition: $transition;
+    // animation: fadeOut forwards 0.5s $transition-timing-function;
+    // transition: $transition;
 
     &.active {
+      opacity: 1;
       z-index: 1;
-      animation: fadeIn forwards 0.5s $transition-timing-function;
+      // animation: fadeIn forwards 0.5s $transition-timing-function;
     }
   }
 }

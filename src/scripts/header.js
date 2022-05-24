@@ -70,7 +70,7 @@ import { mediaQuery } from './mediaQueries'
 
         if (!target.length) return;
 
-        index = target.index()
+        index = target.closest('[data-category-item]').index()
         currentElem = target
         
         images.eq(index).addClass('active')
