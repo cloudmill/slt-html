@@ -145,7 +145,7 @@
     position: relative;
     z-index: 0;
 
-    height: getRem(730px);
+    height: getRem(784px);
     @media (max-width: ($breakpoint - 1px)) {
       height: getRem(485px);
     }
@@ -324,7 +324,7 @@
 
   &__first {
     left: getRem(528px);
-    top: getRem(155px);
+    top: getRem(200px);
 
     #{$comp}__ball {
       left: -7px;
@@ -334,7 +334,7 @@
 
   &__second{
     left: getRem(760px);
-    top: getRem(245px);
+    top: getRem(288px);
 
     #{$comp}__ball {
       right: -7px;
@@ -344,7 +344,7 @@
 
   &__third {
     left: getRem(760px);
-    top: getRem(374px);
+    top: getRem(422px);
 
     #{$comp}__ball {
       right: -7px;
@@ -354,7 +354,7 @@
 
   &__fourth {
     left: getRem(720px);
-    top: getRem(352px);
+    top: getRem(400px);
 
     #{$comp}__ball {
       left: -4px;
