@@ -2,8 +2,8 @@
   $comp: &;
   position: absolute;
   z-index: 2;
-  left: calc(#{$col-part-d} * 3);
-  right: calc(#{$col-part-d} * 3);
+  left: calc(#{$col-part-d} * 3 - #{$col-gap});
+  right: calc(#{$col-part-d} * 3 - #{$col-gap});
   top: 50%;
   transform: translateY(-50%);
   padding: 0 getRem(44px);

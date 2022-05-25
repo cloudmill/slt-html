@@ -26,7 +26,7 @@ mixin header
                     .header__dropdown(data-header-dropdown='')
                       .header__dropdown-container
                         ul.header__dropdown-list
-                          each item in ['Расчет компенсаторов для систем SLT AQUA', 'Расчет компенсаторов для систем BLOCKFIRE', 'Расчета удельных гидравлических потерь трубопроводов  SLT AQUA', ]
+                          each item in ['Расчет компенсаторов для систем SLT AQUA', 'Расчет компенсаторов для систем SLT BLOCKFIRE', 'Расчета удельных гидравлических потерь трубопроводов  SLT AQUA', ]
                             li.header__dropdown-item 
                               a.header__dropdown-link(href="#" data-link='') 
                                 |#{item}
@@ -120,7 +120,8 @@ mixin header
                       .header__buttons-container
                         +basket-svg.header__cart-svg
                       .header__cart-count
-                        |0
+                        .header__cart-text 
+                          |0
         .header__mobile 
           .header__row 
             .header__col
@@ -136,7 +137,8 @@ mixin header
                 a.header__buttons-item.header__cart(href="#")
                   +basket-svg.header__cart-svg
                   .header__cart-count
-                    |0
+                    .header__cart-text 
+                      |0
                 .header__menu 
                   .header__burger
                     
@@ -147,7 +149,7 @@ mixin header
             title: 'SLT AQUA',
             text: 'Полипропиленовые трубопроводные системы #[br] для водоснабжения и отопления',
             items: ['Трубы', 'Фитинги', 'Фитинги комбинированные', 'Компенсаторы', 'Крепления', 'Запорная арматура', ],
-            images: ['assets/images/catalog-card-1.webp', 'assets/images/catalog-card-2.webp', 'assets/images/catalog-card-3.webp', 'assets/images/catalog-card-4.webp', 'assets/images/catalog-card-5.webp', 'assets/images/catalog-card-6.webp', ],
+            images: ['assets/images/catalog-card-2.webp', 'assets/images/catalog-card-1.webp', 'assets/images/catalog-card-3.webp', 'assets/images/catalog-card-4.webp', 'assets/images/catalog-card-5.webp', 'assets/images/catalog-card-6.webp', ],
             class: 'aqua'
           },
           {

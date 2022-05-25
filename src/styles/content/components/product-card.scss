@@ -10,7 +10,7 @@
   transition: 0.6s $transition-timing-function;
 
   .button-icon::before {
-    background: var(--color-black);
+    background: var(--color-gray);
   }
 
   &:hover {
@@ -36,7 +36,7 @@
       }
   
       .button-icon {
-        border-color: var(--color-black);
+        border-color: var(--color-gray);
 
         &::before {
           transform: none;
@@ -224,7 +224,7 @@
   }
 
   &__caption {
-    max-width: getRem(584px);
+    max-width: getRem(608px);
 
     letter-spacing: -1px;
     font-weight: 500;
