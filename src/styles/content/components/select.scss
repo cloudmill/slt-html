@@ -59,10 +59,8 @@
 
         font-weight: 500;
         color: var(--color-black);
-        letter-spacing: -0.5px;
         @include fsl(16px, 130%);
         @media (max-width: ($breakpoint - 1px)) {
-          letter-spacing: 0;
           @include fsl(14px);
         }
       }

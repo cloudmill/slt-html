@@ -60,10 +60,8 @@
     
     transition: $transition;
     font-weight: 500;
-    letter-spacing: -0.5px;
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px, 130%);
-      letter-spacing: 0;
     }
   }
   &__label {

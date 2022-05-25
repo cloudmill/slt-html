@@ -134,12 +134,10 @@
   &__link {
     transition: $transition;
     text-transform: uppercase;
-    letter-spacing: -0.5px;
     color: var(--color-gray);
     @include fsl(12px, 120%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(10px);
-      letter-spacing: 0;
     }
 
     &:hover {
@@ -149,12 +147,10 @@
 
   &__text {
     text-transform: uppercase;
-    letter-spacing: -0.5px;
     cursor: default;
     @include fsl(12px, 120%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(10px);
-      letter-spacing: 0;
     }
   }
 }

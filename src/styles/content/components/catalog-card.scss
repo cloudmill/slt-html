@@ -50,7 +50,7 @@
 
   &__title {
     font-weight: 500;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     @include fsl(32px, 100%);
     transition: $transition;
 
@@ -64,7 +64,6 @@
 
     font-weight: 500;
     color: var(--color-gray);
-    letter-spacing: -1px;
   }
 
   &__list {
@@ -75,7 +74,6 @@
     display: flex;
 
     font-weight: 500;
-    letter-spacing: -0.5px;
 
     &:not(:first-child) {
       margin-top: getRem(12px);

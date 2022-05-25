@@ -40,10 +40,9 @@
 
   &__heading {
     @include fsl(60px, 100%);
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(24px, 120%);
-      letter-spacing: -1px; 
     }
   }
 
@@ -177,11 +176,9 @@
   &__event-label {
     font-weight: 500;
     color: var(--color-gray);
-    letter-spacing: -0.5px;
     @include fsl(16px, 130%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px, 100%);
-      letter-spacing: 0;
     }
   }
   &__event-category {
@@ -196,10 +193,8 @@
     border-radius: 40px;
     font-weight: 500;
     color: var(--color-gray);
-    letter-spacing: -0.5px;
     @include fsl(16px, 130%);
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(14px, 100%);
     }
   }
@@ -272,19 +267,15 @@
 
   &__caption {
     font-weight: 500;
-    letter-spacing: -0.5px;
     @include fsl(18px, 160%);
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(14px);
     }
   }
 
   &__text {
     @include fsl(16px, 160%);
-    letter-spacing: -0.5px;
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(12px);
     }
 
@@ -331,9 +322,7 @@
 
     font-weight: 500;
     color: var(--color-gray);
-    letter-spacing: -0.5px;
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(12px, 100%);
     }
   }
@@ -355,11 +344,9 @@
     }
 
     font-weight: 500;
-    letter-spacing: -0.5px;
     @include fsl(18px, 160%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px);
-      letter-spacing: 0;
     }
   }
   &__future-icon {
@@ -408,9 +395,7 @@
     position: relative;
     z-index: 0;
 
-    letter-spacing: -0.5px;
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(12px, 160%);
     }
 
@@ -421,10 +406,8 @@
       top: 2px;
 
       color: var(--color-blue);
-      letter-spacing: -0.5px;
       @include fsl(16px, 100%);
       @media (max-width: ($breakpoint - 1px)) {
-        letter-spacing: 0;
         @include fsl(12px, 100%);
       }
     }

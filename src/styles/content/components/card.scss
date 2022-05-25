@@ -87,9 +87,7 @@
   &__title {
     transition: $transition;
     font-weight: 500;
-    letter-spacing: -0.5px;
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(12px, 120%);
     }
     @include cropText(2);

@@ -35,23 +35,22 @@
 
   &__ttl {
     @include fsl(200px, 90%);
-    letter-spacing: -3px;
+    letter-spacing: -1px;
 
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(80px, 100%);
-      letter-spacing: -1px;
     }
   }
 
   &__subttl {
     @include fsl(36px, 110%);
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     margin-top: getRem(8px);
     color: var(--color-gray);
 
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(18px, 110%);
-      letter-spacing: -0.5px;
+      letter-spacing: 0;
       margin-top: getRem(12px);
     }
   }

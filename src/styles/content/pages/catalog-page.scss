@@ -3,10 +3,10 @@
 
   &__title {
     @include fsl(44px, 110%);
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(20px);
-      letter-spacing: -0.5px;
+      letter-spacing: 0;
     }
   }
 
@@ -75,7 +75,6 @@
     }
     @include fsl(16px, 150%);
     color: var(--color-gray);
-    letter-spacing: -0.5px;
   }
 
   &__button {
@@ -108,7 +107,6 @@
 
     font-weight: 500;
     @include fsl(16px, 130%);
-    letter-spacing: -0.5px;
     color: var(--color-gray);
   }
 
@@ -133,14 +131,14 @@
     overflow: visible;
   }
   &__type-text {
-    letter-spacing: -0.5px;
+    
     @media (max-width: ($breakpoint - 1px)) {
       
     }
   }
 
   &__caption {
-    letter-spacing: -0.5px;
+    
     @include fsl(18px, 150%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(16px);
@@ -162,7 +160,7 @@
     }
 
     font-weight: 500;
-    letter-spacing: -0.5px;
+    
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px);
     }
@@ -297,7 +295,6 @@
     display: flex;
   }
   &__table-heading {
-    letter-spacing: -1px;
     font-weight: 500;
     color: var(--color-gray);
   }
@@ -325,7 +322,7 @@
       width: calc(#{$col-part-d} * 2);
     }
 
-    letter-spacing: -0.5px;
+    
     color: var(--color-gray);
     font-weight: 500;
 
@@ -480,7 +477,7 @@
       border: 1px solid var(--color-borders);
       @include fsl(18px);
     }
-    letter-spacing: -0.5px;
+    
     transition: 0.8s $transition-timing-function;
 
     @include placeholder {
@@ -514,10 +511,9 @@
     display: none;
 
     font-weight: 400;
-    letter-spacing: -0.5px;
+    
     @include fsl(20px, 130%);
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(14px, 130%);
     }
   }
@@ -686,19 +682,17 @@
   &__list-label {
     color: var(--color-gray);
     font-weight: 500;
-    letter-spacing: -0.5px;
+    
     @include fsl(18px, 130%);
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(12px);
     }
   }
   &__list-text {
     font-weight: 500;
-    letter-spacing: -0.5px;
+    
     @include fsl(20px, 130%);
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(14px, 110%);
     }
   }
@@ -804,10 +798,9 @@
     }
 
     font-weight: 500;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     @include fsl(60px, 100%);
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: -1px;
       @include fsl(24px)
     }
   }
@@ -819,10 +812,8 @@
 
     color: var(--color-gray);
     font-weight: 500;
-    letter-spacing: -1px;
     @include fsl(20px, 130%);
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(14px);
     }
   }
@@ -891,20 +882,18 @@
   &__benefits-span {
     display: inline-block;
 
-    letter-spacing: -0.5px;
+    
     font-weight: 500;
     @include fsl(16px, 110%);
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(12px, 110%);
     }
   }
   &__benefits-text {
     font-weight: 500;
-    letter-spacing: -0.5px;
+    
     @include fsl(14px, 160%);
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(12px);
     }
   }
@@ -976,9 +965,7 @@
     }
 
     font-weight: 500;
-    letter-spacing: -0.5px;
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(14px);
     }
     transition: $transition;

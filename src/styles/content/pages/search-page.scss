@@ -11,7 +11,7 @@
     }
 
     @media (min-width: $breakpoint) {
-      letter-spacing: -0.5px;
+      
     }
 
     span {
@@ -59,7 +59,7 @@
       }
 
       @media (min-width: $breakpoint) {
-        letter-spacing: -0.5px;
+        
       }
 
       &:not(:first-child) {
@@ -68,7 +68,7 @@
 
       sup {
         @include fsl(12px);
-        letter-spacing: -0.5px;
+        
         position: absolute;
       }
 

@@ -247,7 +247,6 @@
   }
   &__dropdown-link {
     transition: $transition;
-    letter-spacing: -0.5px;
     @include fsl(18px, 130%);
 
     &:hover {
@@ -566,7 +565,6 @@
     overflow: hidden;
     color: var(--color-white);
     @include fsl(18px, 120%);
-    letter-spacing: -0.5px;
     @media (max-width: ($breakpoint-ll - 1px)) {
       font-size: getStatic(18px, 14.4px);
     }
@@ -649,7 +647,6 @@
   }
   &__accordion-text {
     @include fsl(18px, 120%);
-    letter-spacing: -0.5px;
     transition: $transition;
   }
   &__accordion-icon {
@@ -674,7 +671,6 @@
 
   &__link {
     @include fsl(18px, 120%);
-    letter-spacing: -0.5px;
     // @media (max-width: ($breakpoint-ll - 1px)) {
     //   @include fsl(16px);
     // }
@@ -937,7 +933,6 @@
     }
   }
   &__panel-link {
-    letter-spacing: -0.5px;
     @include fsl(18px, 120%);
     transition: $transition;
 

@@ -242,7 +242,6 @@
   &__caption {
     max-width: getRem(608px);
 
-    letter-spacing: -1px;
     font-weight: 500;
     @include fsl(20px, 130%);
   }

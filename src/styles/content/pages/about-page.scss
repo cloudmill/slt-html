@@ -27,11 +27,10 @@
   }
   &__intro-title {
     font-weight: 500;
-    letter-spacing: -3px;
+    letter-spacing: -1px;
     @include fsl(110px, 90%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(48px, 100%);
-      letter-spacing: -1px;
     }
   }
   &__intro-text {
@@ -41,10 +40,8 @@
     // }
 
     font-weight: 500;
-    letter-spacing: -1px;
     @include fsl(20px, 130%);
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(14px);
     }
   }
@@ -146,11 +143,9 @@
     z-index: 0;
 
     font-weight: 500;
-    letter-spacing: -1px;
     @include fsl(20px, 130%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px);
-      letter-spacing: 0;
     }
 
     &::after {
@@ -253,7 +248,7 @@
     font-weight: 500;
     color: var(--color-blue);
     @include fsl(140px, 90%);
-    letter-spacing: -3px;
+    letter-spacing: -1px;
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(64px);
     }
@@ -282,10 +277,8 @@
   &__stats-caption {
     font-weight: 500;
     @include fsl(16px, 130%);
-    letter-spacing: -0.5px;
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px);
-      letter-spacing: 0;
     }
   }
   &__stats-row {
@@ -372,9 +365,7 @@
     }
 
     @include fsl(20px, 130%);
-    letter-spacing: -0.5px;
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(14px);
     }
   }

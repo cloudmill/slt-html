@@ -291,10 +291,8 @@
   }
 
   &__text {
-    letter-spacing: -1px;
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px);
-      letter-spacing: 0;
     }
   }
 
@@ -474,7 +472,6 @@
   }
 
   &__text {
-    letter-spacing: -0.5px;
     @include fsl(18px, 160%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px);
@@ -567,10 +564,8 @@
     background-color: var(--color-white);
     border: 1px solid var(--color-borders);
     font-weight: 500;
-    letter-spacing: -0.5px;
     @include fsl(20px, 120%);
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(14px, 100%);
     }
 
@@ -663,9 +658,7 @@
   &__site {
     font-weight: 500;
     color: var(--color-blue);
-    letter-spacing: -0.5px;
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(12px, 110%);
     }
   }
@@ -696,9 +689,7 @@
   }
 
   &__caption {
-    letter-spacing: -0.5px;
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(12px);
     }
   }
@@ -746,10 +737,8 @@
 
     font-weight: 500;
     color: var(--color-gray);
-    letter-spacing: -0.5px;
     @include fsl(14px, 130%);
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(12px);
     }
   }
@@ -766,9 +755,7 @@
 
   &__text {
     font-weight: 500;
-    letter-spacing: -0.5px;
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(14px);
     }
   }
@@ -784,10 +771,8 @@
 
   &__heading {
     font-weight: 500;
-    letter-spacing: -0.5px;
     @include fsl(20px, 130%);
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(14px);
     }
   }
@@ -807,10 +792,8 @@
     }
 
     font-weight: 500;
-    letter-spacing: -1px;
     @include fsl(14px, 110%);
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(12px);
     }
   }

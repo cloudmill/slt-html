@@ -116,10 +116,8 @@
     font-weight: 500;
     cursor: pointer;
     transition: $transition;
-    letter-spacing: -0.5px;
     @include fsl(20px, 130%);
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(14px);
     }
 

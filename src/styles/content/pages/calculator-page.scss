@@ -45,9 +45,7 @@
   &__caption {
     color: var(--color-gray);
     font-weight: 500;
-    letter-spacing: -0.5px;
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(14px, 100%);
     }
     @media (max-width: ($breakpoint-m - 1px)) {
@@ -67,9 +65,7 @@
 
     color: var(--color-blue);
     font-weight: 500;
-    letter-spacing: -0.5px;
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(14px, 100%);
     }
     @media (max-width: ($breakpoint-m - 1px)) {
@@ -84,7 +80,6 @@
     display: inline-block;
 
     font-weight: 500;
-    letter-spacing: -0.5px;
     @include fsl(10px, 110%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(6px, 110%);
@@ -230,7 +225,6 @@
 
     color: var(--color-blue);
     font-weight: 500;
-    letter-spacing: -0.5px;
     @include fsl(40px, 110%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(20px, 110%);
@@ -255,11 +249,9 @@
   }
   &__block-text {
     font-weight: 500;
-    letter-spacing: -0.5px;
     @include fsl(16px, 110%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px);
-      letter-spacing: 0;
     }
   }
 
@@ -290,9 +282,7 @@
     width: 100%;
 
     @include fsl(20px, 130%);
-    letter-spacing: -1px;
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(14px);
     }
 
@@ -307,9 +297,7 @@
     color: var(--color-gray);
     font-weight: 500;
     @include fsl(16px);
-    letter-spacing: -0.5px;
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(14px);
     }
   }
@@ -343,7 +331,7 @@
     letter-spacing: -1px;
     @include fsl(24px, 110%);
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: -0.5px;
+      letter-spacing: 0;
       @include fsl(16px);
     }
   }
@@ -371,10 +359,8 @@
     }
 
     font-weight: 500;
-    letter-spacing: -0.5px;
     @include fsl(18px, 110%);
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(14px);
     }
   }
@@ -440,11 +426,9 @@
   &__calculate-label {
     align-self: center;
     color: var(--color-gray);
-    letter-spacing: -1px;
     @include fsl(13px, 150%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(10px);
-      letter-spacing: 0;
     }
   }
 
@@ -510,9 +494,7 @@
 
     color: var(--color-gray);
     font-weight: 500;
-    letter-spacing: -0.5px;
     @media (max-width: ($breakpoint - 1px)) {
-      letter-spacing: 0;
       @include fsl(14px, 130%);
     }
   }
@@ -525,11 +507,9 @@
   }
   &__grid-label {
     color: var(--color-gray);
-    letter-spacing: -0.5px;
     @include fsl(12px, 110%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(10px);
-      letter-spacing: 0;
     }
   }
   &__grid-item {
@@ -546,10 +526,8 @@
     border-left: 1px solid var(--color-borders);
     transition: $transition;
     @include fsl(20px, 130%);
-    letter-spacing: -1px;
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px);
-      letter-spacing: 0;
     }
 
     &--small {
