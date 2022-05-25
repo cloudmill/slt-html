@@ -13,9 +13,17 @@
   justify-content: center;
 
   overflow: hidden;
-  border: 1px solid var(--color-black);
   border-radius: 60px;
   transition: $transition;
+
+  &::after {
+    content: "";
+    @include cover;
+
+    border: 1px solid var(--color-black);
+    border-radius: 60px;
+    transition: $transition;
+  }
 
   &::before {
     content: '';
@@ -44,7 +52,9 @@
   }
 
   &--white {
-    border-color: var(--color-white);
+    &::after {
+      border-color: var(--color-white);
+    }
 
     #{$comp}__svg {
       path {
@@ -53,7 +63,9 @@
     }
   }
   &--blue {
-    border-color: var(--color-blue);
+    &::after {
+      border-color: var(--color-blue);
+    }
 
     &::before {
       content: '';
@@ -77,10 +89,14 @@
     }
   }
   &--red {
-    border-color: var(--color-red);
+    &::after {
+      border-color: var(--color-red);
+    }
   }
   &--green {
-    border-color: var(--color-green);
+    &::after {
+      border-color: var(--color-green);
+    }
   }
 
   &--left {
@@ -90,8 +106,11 @@
   }
 
   &--black {
-    border-color: var(--color-black);
     background-color: var(--color-black);
+
+    &::after {
+      border-color: var(--color-black);
+    }
 
     #{$comp}__svg {
       path {

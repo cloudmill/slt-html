@@ -78,7 +78,10 @@
       }
     }
     .button-icon {
-      border-color: var(--color-blue);
+      &::after {
+        border-color: var(--color-blue);
+      }
+
 
       &::before {
         background: var(--color-blue);
@@ -115,7 +118,9 @@
     }
 
     .button-icon {
-      border-color: var(--color-red);
+      &::after {
+        border-color: var(--color-red);
+      }
 
       &::before {
         background: var(--color-red);
@@ -124,7 +129,9 @@
 
     &:hover {
       .button-icon {
-        border-color: var(--color-red);
+        &::after {
+          border-color: var(--color-red);
+        }
 
         &::before {
           transform: none;
@@ -153,7 +160,9 @@
     }
 
     .button-icon {
-      border-color: var(--color-green);
+      &::after {
+        border-color: var(--color-green);
+      }
 
       &::before {
         background: var(--color-green);
@@ -162,7 +171,9 @@
 
     &:hover {
       .button-icon {
-        border-color: var(--color-green);
+        &::after {
+          border-color: var(--color-green);
+        }
 
         &::before {
           transform: none;

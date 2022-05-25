@@ -816,7 +816,9 @@
 
       &:hover {
         .button-icon {
-          border-color: var(--color-red);
+          &::after {
+            border-color: var(--color-red);
+          }
 
           &::before {
             transform: none;
@@ -838,7 +840,9 @@
 
       &:hover {
         .button-icon {
-          border-color: var(--color-blue);
+          &::after {
+            border-color: var(--color-blue);
+          }
 
           &::before {
             transform: none;

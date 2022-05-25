@@ -358,7 +358,10 @@
       }
 
       .button {
-        border-color: transparent;
+        
+        &::after {
+          border-color: transparent;
+        }
 
         &::before {
           background: transparent;

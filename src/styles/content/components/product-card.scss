@@ -36,7 +36,10 @@
       }
   
       .button-icon {
-        border-color: var(--color-gray);
+        
+        &::after {
+          border-color: var(--color-gray);
+        }
 
         &::before {
           transform: none;
@@ -60,7 +63,9 @@
     }
 
     .button-icon {
-      border-color: var(--color-blue);
+      &::after {
+        border-color: var(--color-blue);
+      }
 
       &::before {
         background: var(--color-blue);
@@ -68,7 +73,9 @@
     }
     &:hover {
       .button-icon {
-        border-color: var(--color-blue);
+        &::after {
+          border-color: var(--color-blue);
+        }
       }
 
       .button-icon__svg {
@@ -85,7 +92,9 @@
     }
 
     .button-icon {
-      border-color: var(--color-red);
+      &::after {
+        border-color: var(--color-red);
+      }
 
       &::before {
         background: var(--color-red);
@@ -93,7 +102,9 @@
     }
     &:hover {
       .button-icon {
-        border-color: var(--color-red);
+        &::after {
+          border-color: var(--color-red);
+        }
       }
 
       .button-icon__svg {
@@ -110,7 +121,9 @@
     }
 
     .button-icon {
-      border-color: var(--color-green);
+      &::after {
+        border-color: var(--color-green);
+      }
 
       &::before {
         background: var(--color-green);
@@ -118,7 +131,10 @@
     }
     &:hover {
       .button-icon {
-        border-color: var(--color-green);
+        &::after {
+          border-color: var(--color-green);
+        }
+  
       }
 
       .button-icon__svg {

@@ -20,7 +20,7 @@
     @include fsl(12px);
   }
   cursor: pointer;
-  border: 1px solid var(--color-blue);
+  // border: 1px solid var(--color-blue);
   border-radius: 60px;
   @media (max-width: ($breakpoint - 1px)) {
     border-radius: 45px;
@@ -29,6 +29,15 @@
   position: relative;
   transition: $transition;
   background: transparent;
+
+  &::after {
+    content: "";
+    @include cover;
+
+    border: 1px solid var(--color-blue);
+    border-radius: 60px;
+    transition: $transition;
+  }
 
   &__text {
     font-weight: 500;
@@ -114,19 +123,13 @@
         transform: none;
       }
       #{$comp}__text span {
-        // animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
         color: var(--color-white);
       }
       #{$comp}__icon svg {
-        // animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
 
         path {
           fill: var(--color-white);
         }
-      }
-
-      .header__button-text span {
-        // animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
       }
     }
   }
@@ -146,7 +149,10 @@
   }
 
   &--gray {
-    border-color: rgba(26, 31, 33, 0.1);
+    
+    &::after {
+      border-color: rgba(26, 31, 33, 0.1);
+    }
   }
 
   &--color-white {
@@ -183,14 +189,13 @@
     }
 
     &:hover {
-      border: 1px solid var(--color-blue-dark) !important;
 
       &::before {
         transform: none;
       }
 
-      #{$comp}__text span, #{$comp}__svg {
-        // animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+      &::after {
+        border-color: var(--color-blue-dark);
       }
     }
   }
@@ -209,7 +214,7 @@
   }
 
   &--red {
-    border-color: var(--color-red);
+    
 
     #{$comp}__svg {
       path {
@@ -221,12 +226,16 @@
       background: var(--color-red);
     }
 
+    &::after {
+      border-color: var(--color-red);
+    }
+
     &:hover {
       border-color: var(--color-red);
     }
   }
   &--green {
-    border-color: var(--color-green);
+    
 
     #{$comp}__svg {
       path {
@@ -238,13 +247,18 @@
       background: var(--color-green);
     }
 
-    &:hover {
+    &::after {
       border-color: var(--color-green);
+    }
+
+    &:hover {
+      &::after {
+        border-color: var(--color-green);
+      }
     }
   }
 
   &--black {
-    border-color: var(--color-black);
 
     #{$comp}__svg {
       path {
@@ -256,8 +270,14 @@
       background: var(--color-black);
     }
 
-    &:hover {
+    &::after {
       border-color: var(--color-black);
+    }
+
+    &:hover {
+      &::after {
+        border-color: var(--color-black);
+      }
     }
   }
 
@@ -294,7 +314,7 @@
     }
 
     &:hover {
-      border: 1px solid var(--color-blue);
+      // border: 1px solid var(--color-blue);
 
       #{$comp}__text {
         color: var(--color-white);
