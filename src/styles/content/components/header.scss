@@ -459,10 +459,18 @@
     align-items: center;
 
     background: var(--color-blue);
-    border: 1px solid var(--color-blue);
     border-radius: 40px;
     transition: $transition;
     cursor: pointer;
+
+    &::after {
+      content: "";
+      @include cover;
+      
+      border: 1px solid var(--color-blue);
+      border-radius: 40px;
+      transition: $transition;
+    }
 
     &::before {
       background-color: var(--color-black);
@@ -470,12 +478,17 @@
       z-index: 0;
     }
     &:hover {
-      border: 1px solid var(--color-black);
+      
+      &::after {
+        border-color: var(--color-black);
+      }
     }
 
     &.active {
       background: var(--color-black);
-      border-color: var(--color-black);
+      &::after {
+        border-color: var(--color-black);
+      }
 
       &::before {
         background-color: var(--color-black);
