@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const initialWidth = decrease.offsetWidth
 
     window.addEventListener('scroll', () => {
-      const scrollPos = window.pageYOffset
+      const scrollPos = window.pageYOffset + window.innerHeight / 3
       const step = container.offsetTop - scrollPos
 
       if (scrollPos < container.offsetTop && initialWidth > step) {

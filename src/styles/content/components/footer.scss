@@ -28,7 +28,7 @@
       display: block;
     }
 
-    &--mobile-grid {
+    &--alt {
       @media (max-width: ($breakpoint - 1px)) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -36,6 +36,22 @@
         #{$comp}__col {
           &:nth-child(2) {
             margin-top: 0;
+          }
+        }
+      }
+
+      #{$comp}__col {
+        &:nth-child(2) {
+          width: auto;
+          @media (max-width: ($breakpoint - 1px)) {
+            display: contents;
+          }
+        }
+  
+        &:nth-child(3) {
+          width: calc(#{$col-width-d});
+          @media (max-width: ($breakpoint - 1px)) {
+            width: auto;
           }
         }
       }
@@ -75,7 +91,7 @@
 
     &:not(:first-child) {
       @media (max-width: ($breakpoint - 1px)) {
-        margin-top: 32px;
+        margin-top: getRem(32px);
       }
     }
   }
@@ -387,5 +403,39 @@
     &:hover {
       color: var(--color-blue);
     }
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__mobile-col {
+    display: none;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+
+    &:last-child {
+      margin-top: getRem(32px);
+    }
+  }
+
+  &__block {
+    display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+
+    &:not(:first-child) {
+      margin-top: getRem(80px);
+      @media (max-width: ($breakpoint-ll - 1px)) {
+        margin-top: getStatic(80px, 14.4px);
+      }
+    }
+  }
+  &__block-col {
+    flex-shrink: 0;
+
+    width: calc(#{$col-part-d} * 3);
   }
 }

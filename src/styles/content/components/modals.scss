@@ -675,6 +675,13 @@
     align-items: center;
   }
 
+  &__breadcrumbs {
+    margin-top: getRem(24px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(16px);
+    }
+  }
+
   &__icon {
     margin-right: getRem(8px);
 

@@ -23,7 +23,8 @@
 
     #{$comp}__list {
       padding-bottom: 0;
-      gap: getRem(21px);
+      column-gap: getRem(21px);
+      row-gap: 8px;
       @media (max-width: ($breakpoint - 1px)) {
         column-gap: 17px;
         row-gap: 4px;
@@ -73,6 +74,10 @@
     }
     #{$comp}__link {
       text-transform: none;
+
+      &:hover {
+        color: var(--color-gray);
+      }
     }
   }
 

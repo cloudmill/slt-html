@@ -319,9 +319,9 @@ block content
         .catalog-page__row 
           .catalog-page__col
             h1.catalog-page__title
-              |#[span.word-span #[span(data-aos='fade-up') Труба]] #[span.word-span #[span(data-aos='fade-up') SLT AQUA]] #[span.word-span #[span(data-aos='fade-up') PP-R SDR 7,4]]
+              |#[span.word-span #[span(data-aos='fade-up') Труба]] #[span.word-span #[span(data-aos='fade-up') SLT AQUA]] #[span.word-span #[span(data-aos='fade-up') PP-R/PP-R-GF/PP-R SDR 7,4]]
             p.catalog-page__text(data-aos='fade-up') 
-              |Труба однослойная напорная полипропиленовая PN10 (SDR 11) предназначена для систем холодного и питьевого водоснабжения, а также технологических трубопроводов, транспортирующих жидкости и газы, не агрессивные к материалам трубы.
+              |Труба напорная полипропиленовая армированная стекловолокном, SDR7,4 предназначена для систем горячего, питьевого водоснабжения и отопления, а также технологических трубопроводов, транспортирующих жидкости и газы, неагрессивные к материалу трубы
             .catalog-page__button(data-aos='fade-up')
               .button.button-animate(data-scroll='#order')
                 .button__text
@@ -338,21 +338,21 @@ block content
               li.catalog-page__types-item(data-aos='fade-up')
                 .catalog-page__type 
                   .catalog-page__type-icon.use-icon
-                    +connect-svg.use-icon__svg.catalog-page__type-svg
+                    +fire-svg.use-icon__svg.catalog-page__type-svg
                   .catalog-page__type-text 
-                    |Холодное водоснабжение
+                    |горячее водоснабжение
               li.catalog-page__types-item(data-aos='fade-up')
                 .catalog-page__type 
                   .catalog-page__type-icon.use-icon
-                    +fire-svg.use-icon__svg.catalog-page__type-svg
+                    +heating-svg.use-icon__svg.catalog-page__type-svg
                   .catalog-page__type-text 
-                    |Горячее водоснабжение
+                    |отопление
               li.catalog-page__types-item(data-aos='fade-up')
                 .catalog-page__type 
                   .catalog-page__type-icon.use-icon
                     +water-svg.use-icon__svg.catalog-page__type-svg
                   .catalog-page__type-text 
-                    |Питьевая вода
+                    |питьевая вода
     section.section.section--md 
       .container
         .catalog-page__container 
@@ -465,23 +465,15 @@ block content
         .catalog-page__colors 
           .catalog-page__colors-item(data-aos='fade-up') 
             .catalog-page__colors-text 
-              |Цветовое #[br] исполнение
+              |Цвет
             .catalog-page__colors-icon.tooltip.active
               +colors-light-svg.catalog-page__colors-svg.tooltip__icon 
               .tooltip__container 
                 |белый
-            .catalog-page__colors-icon.black.tooltip
-              +colors-light-svg.catalog-page__colors-svg.tooltip__icon
-              .tooltip__container 
-                |черный
-            .catalog-page__colors-icon.red.tooltip
-              +colors-light-svg.catalog-page__colors-svg.tooltip__icon 
-              .tooltip__container 
-                |красный
         .section__block
           .catalog-page__table.catalog-page__table--big(data-aos='fade-up')
             .catalog-page__table-head 
-              each item in ['Наружный диаметр d#[span.catalog-page__table-span n], мм', 'Артикул', 'Толщина стенки e#[span.catalog-page__table-span n], мм', 'Длина #[br] отрезка, м', 'Количество #[br] в упаковке, м', 'Вес, кг/м', 'Добавить в заказ, шт']
+              each item in ['Наружный диаметр d#[span.catalog-page__table-span n], мм', 'Артикул', 'Толщина стенки e#[span.catalog-page__table-span n], мм', 'Длина #[br] отрезка, м', 'Количество #[br] в упаковке, м', 'Вес, кг/м', 'Добавить в заказ, м']
                 .catalog-page__table-cell
                   |#{item}
             .catalog-page__table-body
@@ -529,7 +521,7 @@ block content
                           |#{item.text}
                     .catalog-page__block-cell 
                       .catalog-page__block-label.darken
-                        |Добавить в заказ,шт
+                        |Добавить в заказ, м
                       .catalog-page__block-input
                         input.catalog-page__table-input(type="number" placeholder="Кол-во" data-table-input='')
                         .catalog-page__table-caption(data-table-caption='')
