@@ -4,6 +4,7 @@ $(function () {
     filterChange();
     filterCheckbox();
     filterList();
+    filterClickColor();
     snippetImg();
     forms();
     videoModal();
@@ -244,6 +245,33 @@ function forms() {
             success: function (r) {
                 console.log(r);
             },
+        });
+    });
+}
+
+function filterClickColor() {
+    $(document).on("click", "[data-type=js-filter-color]", function (e) {
+        e.preventDefault();
+
+        let thisObj = $(this),
+        color = thisObj.attr("data-color");
+
+        console.log("filter color - " + color);
+
+        $.ajax({
+            method: "POST",
+            url: window.location.href,
+            data: {
+                ajax: 1,
+                color: color,
+            },
+            success: function (r) {
+                $(document).find('[data-type=items-container-full]').empty();
+                $(document).find('[data-type=items-container-full]').append($(r));
+            },
+            error: function (r) {
+                console.debug(r);
+            }
         });
     });
 }
