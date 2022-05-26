@@ -182,7 +182,7 @@
     }
 
     &::after {
-      border-color: var(--color-blue);
+      display: none;
     }
 
     &::before {
@@ -196,10 +196,6 @@
 
       &::before {
         transform: none;
-      }
-
-      &::after {
-        border-color: var(--color-blue-dark);
       }
     }
   }
@@ -318,7 +314,6 @@
     }
 
     &:hover {
-      // border: 1px solid var(--color-blue);
 
       #{$comp}__text {
         color: var(--color-white);
@@ -332,10 +327,6 @@
         path {
           fill: var(--color-white) !important;
         }
-      }
-
-      span, #{$comp}__svg {
-        // animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
       }
     }
   }

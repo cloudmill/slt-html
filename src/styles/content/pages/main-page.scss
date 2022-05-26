@@ -825,12 +825,12 @@
       left: 0;
       right: 0;
       bottom: 0;
-      transform: translateY(getRem(24px));
+      transform: translateY(100%);
       @media (max-width: ($breakpoint - 1px)) {
         display: none;
       }
 
-      height: getRem(24px);
+      height: getRem(12px);
 
       transition: $transition;
     }
@@ -923,8 +923,8 @@
     align-items: center;
   }
   &__calculator-svg {
-    width: getRem(40px);
-    height: getRem(40px);
+    width: getRem(30px);
+    height: getRem(30px);
 
     path {
       transition: $transition;

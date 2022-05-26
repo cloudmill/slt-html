@@ -241,9 +241,11 @@
     }
 
     transition: $transition;
+    border-bottom: 1px solid transparent;
 
     &:hover {
       color: var(--color-blue);
+      border-color: var(--color-blue);
     }
   }
 
@@ -337,6 +339,8 @@
   }
 
   &__mail {
+    display: inline-block;
+
     font-weight: 500;
     @include fsl(24px, 110%);
     @media (max-width: ($breakpoint-ll - 1px)) {
@@ -347,9 +351,11 @@
     }
 
     transition: $transition;
+    border-bottom: 1px solid transparent;
 
     &:hover {
       color: var(--color-blue);
+      border-color: var(--color-blue);
     }
   }
 
@@ -396,12 +402,15 @@
   }
 
   &__span {
+    display: inline-block;
+
     color: var(--color-black);
-    
     transition: $transition;
+    border-bottom: 1px solid transparent;
 
     &:hover {
       color: var(--color-blue);
+      border-color: var(--color-blue);
     }
   }
 

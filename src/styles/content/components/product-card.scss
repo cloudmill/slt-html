@@ -40,22 +40,9 @@
         transform: scale(0.9);
       }
   
-      .button-icon {
-        
-        &::after {
-          border-color: var(--color-gray);
-        }
-
-        &::before {
-          transform: none;
-        }
-      }
-  
-      .button-icon__svg {
-        // animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
-
+      #{$comp}__button-svg {
         path {
-          fill: var(--color-white);
+          fill: var(--color-blue);
         }
       }
     }
@@ -210,11 +197,11 @@
       bottom: 0;
       z-index: 0;
 
-      height: 4px;
+      height: getRem(12px);
 
       background: var(--color-gray);
       transform: translateY(100%);
-      transition: $transition;
+      transition: 0.8s $transition-timing-function;
     }
   } 
 
@@ -227,6 +214,16 @@
 
   &__button {
     display: flex;
+    align-items: center;
+  }
+  &__button-svg {
+    width: getRem(30px);
+    height: getRem(30px);
+
+    path {
+      fill: var(--color-black);
+      transition: $transition;
+    }
   }
 
   &__bot {
