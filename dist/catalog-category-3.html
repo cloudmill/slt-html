@@ -21,22 +21,12 @@
 								<div class="header__row">
 									<div class="header__col">
 										<ul class="header__links">
-											<li class="header__links-item" data-header-menu="">
-												<div class="header__links-button" data-header-button="">
+											<li class="header__links-item">
+												<div class="header__links-button" data-accordion-header="service">
 													<div class="header__text">Сервисы расчета</div>
 													<div class="header__links-icon"><svg class="header__links-svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
 														</svg></div>
-												</div>
-												<div class="header__dropdown-overlay" data-header-overlay=""></div>
-												<div class="header__dropdown" data-header-dropdown="">
-													<div class="header__dropdown-container">
-														<ul class="header__dropdown-list">
-															<li class="header__dropdown-item"><a class="header__dropdown-link" href="#" data-link="">Расчет компенсаторов для систем SLT AQUA</a></li>
-															<li class="header__dropdown-item"><a class="header__dropdown-link" href="#" data-link="">Расчет компенсаторов для систем SLT BLOCKFIRE</a></li>
-															<li class="header__dropdown-item"><a class="header__dropdown-link" href="#" data-link="">Расчета удельных гидравлических потерь трубопроводов SLT AQUA</a></li>
-														</ul>
-													</div>
 												</div>
 											</li>
 											<li class="header__links-item"><a class="header__links-link" href="#" data-link="">События</a></li>
@@ -226,6 +216,15 @@
 				<div class="header__panel">
 					<div class="container">
 						<div class="header__panel-overlay"></div>
+						<div class="header__dropdown" data-header-modal="service">
+							<div class="header__dropdown-container">
+								<ul class="header__dropdown-list">
+									<li class="header__dropdown-item"><a class="header__dropdown-link" href="#" data-link="">Расчет компенсаторов для систем SLT AQUA</a></li>
+									<li class="header__dropdown-item"><a class="header__dropdown-link" href="#" data-link="">Расчет компенсаторов для систем SLT BLOCKFIRE</a></li>
+									<li class="header__dropdown-item"><a class="header__dropdown-link" href="#" data-link="">Расчета удельных гидравлических потерь трубопроводов SLT AQUA</a></li>
+								</ul>
+							</div>
+						</div>
 						<div class="header__cards" data-header-modal="cards">
 							<div class="header__cards-grid">
 								<div class="catalog-card aqua">
@@ -521,26 +520,6 @@
 												</svg></div>
 										</li>
 										<li class="filters__headings-item"><a class="filters__heading" href="#" data-link="">Фитинги</a>
-											<div class="filters__icon" data-filters-button="q1"><svg class="filters__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
-												</svg></div>
-										</li>
-										<li class="filters__headings-item"><a class="filters__heading" href="#" data-link="">Фитинги комбинированные</a>
-											<div class="filters__icon" data-filters-button="q1"><svg class="filters__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
-												</svg></div>
-										</li>
-										<li class="filters__headings-item"><a class="filters__heading" href="#" data-link="">Компенсаторы</a>
-											<div class="filters__icon" data-filters-button="q1"><svg class="filters__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
-												</svg></div>
-										</li>
-										<li class="filters__headings-item"><a class="filters__heading" href="#" data-link="">Крепления</a>
-											<div class="filters__icon" data-filters-button="q1"><svg class="filters__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
-												</svg></div>
-										</li>
-										<li class="filters__headings-item"><a class="filters__heading" href="#" data-link="">Запорная арматура</a>
 											<div class="filters__icon" data-filters-button="q1"><svg class="filters__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path fill-rule="evenodd" clip-rule="evenodd" d="M12.862 4.8623L13.8048 5.80511L8.00005 11.6099L2.19531 5.80511L3.13812 4.8623L8.00005 9.72423L12.862 4.8623Z" fill="#3F3F40"></path>
 												</svg></div>
@@ -1199,7 +1178,7 @@
 				</div>
 				<div class="catalog-modal" data-fancy-modal="c1">
 					<div class="catalog-modal__container">
-						<h4 class="catalog-modal__title">Области применения</h4>
+						<h4 class="catalog-modal__title">Область применения</h4>
 						<div class="catalog-modal__row">
 							<div class="catalog-modal__col">
 								<h5 class="catalog-modal__heading">Трубы</h5>
