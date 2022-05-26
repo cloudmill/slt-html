@@ -17,6 +17,11 @@
     @media (min-width: $breakpoint) {
   
       #{$comp}__container {
+
+        &::after {
+          transform: none;
+        }
+
         &::before {
           transform: none;
         }
@@ -47,7 +52,7 @@
       }
   
       .button-icon__svg {
-        animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+        // animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
 
         path {
           fill: var(--color-white);
@@ -60,6 +65,13 @@
     #{$comp}__logo {
       width: getRem(216px);
       height: getRem(48px);
+    }
+
+    #{$comp}__container {
+
+      &::after {
+        background: var(--color-blue);
+      }
     }
 
     .button-icon {
@@ -91,6 +103,13 @@
       height: getRem(48px);
     }
 
+    #{$comp}__container {
+
+      &::after {
+        background: var(--color-red);
+      }
+    }
+
     .button-icon {
       &::after {
         border-color: var(--color-red);
@@ -118,6 +137,13 @@
     #{$comp}__logo {
       width: getRem(202px);
       height: getRem(48px);
+    }
+
+    #{$comp}__container {
+
+      &::after {
+        background: var(--color-green);
+      }
     }
 
     .button-icon {
@@ -174,6 +200,21 @@
       background: var(--color-darken-white);
       transition: 0.8s $transition-timing-function;
       transform: translateY(100%);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+
+      height: 4px;
+
+      background: var(--color-gray);
+      transform: translateY(100%);
+      transition: $transition;
     }
   } 
 

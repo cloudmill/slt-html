@@ -139,7 +139,7 @@ import { mediaQuery } from './mediaQueries'
             headerModal.slideDown(500)
             headerModal.addClass('active')
             
-            if (id !== 'cards') {
+            if (id !== 'cards' && id !== 'service') {
               $('.header__nav').addClass('header__nav--active')
             } else {
               $('.header__nav').removeClass('header__nav--active')
@@ -156,30 +156,6 @@ import { mediaQuery } from './mediaQueries'
           stateManager.classRemove()
         }
       })
-    }
-  })
-}
-
-// header сервисы расчета
-{
-  document.addEventListener('DOMContentLoaded', () => {
-    const menu = document.querySelector('[data-header-menu]')
-    const button = menu.querySelector('[data-header-button]')
-    const dropdown = menu.querySelector('[data-header-dropdown]')
-
-    window.addEventListener('click', event => {
-      const target = event.target
-
-      if (target.closest('[data-header-button]')) {
-        menu.classList.toggle('active')
-      }
-
-      if (target.closest('[data-header-overlay]')) {
-        menu.classList.remove('active')
-      }
-    })
-    button.onclick = function() {
-      
     }
   })
 }

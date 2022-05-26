@@ -107,30 +107,6 @@
         margin-left: getStatic(40px, 14.4px);
       }
     }
-
-    &.active {
-      #{$comp}__dropdown {
-        transform: scaleY(1);
-        transition-delay: 0s;
-      }
-      #{$comp}__dropdown-overlay {
-        opacity: 1;
-        pointer-events: all;
-        transition-delay: 0s;
-      }
-      #{$comp}__dropdown-list {
-        animation: fadeIn 0.5s $transition-timing-function 0.5s forwards;
-      }
-      #{$comp}__text {
-        color: var(--color-blue);
-      }
-      #{$comp}__links-svg {
-        transform: rotate(-180deg);
-        path {
-          fill: var(--color-blue);
-        }
-      }
-    }
   }
   &__links-button {
     position: relative;
@@ -147,6 +123,18 @@
       }
       .header__links-svg path {
         fill: var(--color-blue);
+      }
+    }
+
+    &.active {
+      #{$comp}__text {
+        color: var(--color-blue);
+      }
+      #{$comp}__links-svg {
+        transform: rotate(-180deg);
+        path {
+          fill: var(--color-blue);
+        }
       }
     }
   }
@@ -197,33 +185,13 @@
   }
 
   &__dropdown {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 3;
+    display: none;
 
-    width: getRem(688px);
-
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: $transition;
-    transition-delay: 0.5s;
-  }
-  &__dropdown-overlay {
-    position: absolute;
-    left: -60px;
-    top: getRem(-40px);
-    z-index: 2;
-
-    width: 120vw;
-    height: 120vh;
-
-    background-color: rgba(#000, 0.2);
-    transition: $transition;
-    transition-delay: 0.5s;
-    opacity: 0;
-    pointer-events: none;
+    &.active {
+      #{$comp}__dropdown-list {
+        animation: fadeIn 0.5s $transition-timing-function 0.5s forwards;
+      }
+    }
   }
   &__dropdown-container {
     position: relative;
@@ -232,7 +200,7 @@
     background: var(--color-white);
   }
   &__dropdown-list {
-    padding: getRem(96px) 60px getRem(40px);
+    padding: getRem(40px) 0;
 
     opacity: 0;
     animation: fadeOut 0.5s $transition-timing-function forwards;

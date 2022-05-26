@@ -61,6 +61,7 @@
     transition: $transition;
     white-space: nowrap;
     font-weight: 500;
+    color: inherit;
     @include fsl(20px, 120%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px); 
@@ -142,7 +143,9 @@
     }
 
     &.active {
-      color: var(--color-blue);
+      #{$comp}__link {
+        color: var(--color-blue);
+      }
     }
   }
 

@@ -266,21 +266,21 @@
 
     #{$comp}__svg {
       path {
-        fill: var(--color-black);
+        fill: var(--color-gray);
       }
     }
 
     &::before {
-      background: var(--color-black);
+      background: var(--color-gray);
     }
 
     &::after {
-      border-color: var(--color-black);
+      border-color: var(--color-gray);
     }
 
     &:hover {
       &::after {
-        border-color: var(--color-black);
+        border-color: var(--color-gray);
       }
     }
   }

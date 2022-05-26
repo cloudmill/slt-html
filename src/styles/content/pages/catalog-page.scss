@@ -152,6 +152,7 @@
   }
   &__colors-item {
     display: flex;
+    align-items: center;
   }
   &__colors-text {
     margin-right: getRem(40px);
@@ -750,6 +751,10 @@
       #{$comp}__benefits-num {
         color: var(--color-blue);
       }
+
+      #{$comp}__card {
+        --color: var(--color-blue);
+      }
     }
     &.red {
       #{$comp}__benefits {
@@ -899,7 +904,7 @@
   }
 
   &__card {
-    --color: var(--color-blue);
+    --color: var(--color-gray);
 
     padding: getRem(20px);
     @media (max-width: ($breakpoint - 1px)) {
@@ -919,11 +924,27 @@
       width: 100%;
     }
 
+    overflow: hidden;
     background: var(--color-white);
 
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transform: translateY(100%);
+
+      height: 4px;
+
+      transition: $transition;
+      background: var(--color);
+    }
+
     &:hover {
-      #{$comp}__card-svg {
-        animation: MoveUpInitial 0.3s forwards, MoveUpEnd 0.3s forwards 0.3s;
+
+      &::before {
+        transform: none;
       }
 
       #{$comp}__card-title {
@@ -1042,6 +1063,7 @@
 
   border-radius: 50px;
   border: 1.5px solid var(--color-borders);
+  background: var(--color-white);
 
   &__svg {
     width: 100%;

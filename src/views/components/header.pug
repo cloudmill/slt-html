@@ -16,20 +16,13 @@ mixin header
             .header__row
               .header__col
                 ul.header__links 
-                  li.header__links-item(data-header-menu='')
-                    .header__links-button(data-header-button='') 
+                  li.header__links-item
+                    .header__links-button(data-accordion-header='service') 
                       .header__text 
                         |Сервисы расчета
                       .header__links-icon 
                         +arrow-svg.header__links-svg
-                    .header__dropdown-overlay(data-header-overlay='')
-                    .header__dropdown(data-header-dropdown='')
-                      .header__dropdown-container
-                        ul.header__dropdown-list
-                          each item in ['Расчет компенсаторов для систем SLT AQUA', 'Расчет компенсаторов для систем SLT BLOCKFIRE', 'Расчета удельных гидравлических потерь трубопроводов  SLT AQUA', ]
-                            li.header__dropdown-item 
-                              a.header__dropdown-link(href="#" data-link='') 
-                                |#{item}
+                    
                   each item in ['События', 'Контакты'] 
                     li.header__links-item 
                       a.header__links-link(href="#" data-link='') 
@@ -176,6 +169,13 @@ mixin header
         ]
       .container 
         .header__panel-overlay
+        .header__dropdown(data-header-modal='service')
+          .header__dropdown-container
+            ul.header__dropdown-list
+              each item in ['Расчет компенсаторов для систем SLT AQUA', 'Расчет компенсаторов для систем SLT BLOCKFIRE', 'Расчета удельных гидравлических потерь трубопроводов  SLT AQUA', ]
+                li.header__dropdown-item 
+                  a.header__dropdown-link(href="#" data-link='') 
+                    |#{item}
         .header__cards(data-header-modal='cards')
           .header__cards-grid
             each item in cards
