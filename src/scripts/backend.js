@@ -285,7 +285,6 @@ function add2basket() {
             url = thisObj.parents("[data-type=items-container-full]").attr("data-url"),
             type = thisObj.attr("data-add"),
             letReq = thisObj.attr("data-let"),
-            prodId = thisObj.attr("data-id-prod"),
             offerId = thisObj.attr("data-id-offer"),
             par = thisObj.parents("[data-type=par]"),
             sib = par.siblings("[data-type=sib]"),
@@ -306,7 +305,6 @@ function add2basket() {
 
         console.log(type);
 
-        data['prod'] = prodId;
         data['offer'] = offerId;
         data['count'] = count;
         data['type'] = type;
