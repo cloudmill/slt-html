@@ -1,4 +1,4 @@
-import {initMap} from './map.js';
+import { initMap } from './map.js';
 
 $(function () {
     filterChange();
@@ -9,6 +9,7 @@ $(function () {
     forms();
     videoModal();
     workModal();
+    add2basket();
 });
 
 function workModal() {
@@ -254,7 +255,7 @@ function filterClickColor() {
         e.preventDefault();
 
         let thisObj = $(this),
-        color = thisObj.attr("data-color");
+            color = thisObj.attr("data-color");
 
         console.log("filter color - " + color);
 
@@ -273,5 +274,56 @@ function filterClickColor() {
                 console.debug(r);
             }
         });
+    });
+}
+
+function add2basket() {
+    $(document).on("click", "[data-type=add2basket]", function (e) {
+        e.preventDefault();
+
+        let thisObj = $(this),
+            url = thisObj.parents("[data-type=items-container-full]").attr("data-url"),
+            type = thisObj.attr("data-add"),
+            letReq = thisObj.attr("data-let"),
+            offerId = thisObj.attr("data-id-offer"),
+            par = thisObj.parents("[data-type=par]"),
+            sib = par.siblings("[data-type=sib]"),
+            count = sib.find("[data-type=count]").val(),
+            data = {};
+
+        if (type == 'add') {
+            thisObj.attr("data-add", "change")
+        }
+
+        if (letReq == 'let') {
+            thisObj.attr("data-let", "no")
+        }
+
+        if (letReq == 'no') {
+            thisObj.attr("data-let", "let")
+        }
+
+        console.log(type);
+
+        data['offer'] = offerId;
+        data['count'] = count;
+        data['type'] = type;
+
+        console.log("add2basket");
+
+        if (letReq == 'let') {
+            $.ajax({
+                type: "POST",
+                url: url,
+                dataType: "json",
+                data: data,
+                success: function (r) {
+                    console.log(r);
+                },
+                error: function (r) {
+                    console.debug(r);
+                }
+            });
+        }
     });
 }
