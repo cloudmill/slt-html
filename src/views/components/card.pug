@@ -1,26 +1,12 @@
 mixin card 
   a.card(href="#" data-link='')
     .card__category 
-      .card__item.tooltip
-        .use-icon
-          +use-svg.use-icon__svg.tooltip__icon 
-        .tooltip__container
-          |Соединение
-      .card__item.tooltip
-        .use-icon
-          +connect-svg.use-icon__svg.tooltip__icon 
-        .tooltip__container
-          |Холодное водоснабжение
-      .card__item.tooltip
-        .use-icon
-          +water-svg.use-icon__svg.tooltip__icon 
-        .tooltip__container
-          |Питьевая вода
-      .card__item.tooltip
-        .use-icon
-          +fire-svg.use-icon__svg.tooltip__icon 
-        .tooltip__container
-          |Пqwe
+      each item, i in ['Соединение', 'Холодное водоснабжение', 'Питьевая вода', 'Огонь',]
+        .card__item.tooltip
+          .use-icon.tooltip__icon 
+            img(src=`assets/images/svg/catalog-item-${i+1}.svg`, alt="")
+          .tooltip__container
+            |#{item}
     .card__container
       img(src="assets/images/card-1.webp", alt="")
     .card__bot 

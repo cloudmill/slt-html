@@ -7,7 +7,7 @@ include ../components/product-cards
 include ../components/slider-buttons
 
 
-block loader 
+//- block loader 
   +loader
 
 
@@ -132,7 +132,7 @@ block content
               a.main-page__calculator-link(href="#" class=(i === 1 ? 'red' : 'blue'))
                 .main-page__calculator-col(data-aos='fade-up')
                   .main-page__calculator-icon
-                    +button-icon.button-icon--white
+                    +btn-arrow-right.main-page__calculator-svg
                   .main-page__calculator-title 
                     |#{item}
             .main-page__calculator-img(data-parallax='2' data-parallax-type='up')
