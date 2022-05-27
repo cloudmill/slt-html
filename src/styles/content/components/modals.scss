@@ -661,6 +661,13 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px, 110%);
     }
+    transition: $transition;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      color: var(--color-black);
+      border-color: var(--color-black);
+    }
   }
 
   &__offset {

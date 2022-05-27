@@ -7,7 +7,7 @@ include ../components/product-cards
 include ../components/slider-buttons
 
 
-block loader 
+//- block loader 
   +loader
 
 
@@ -68,6 +68,19 @@ block content
             .main-page__ball 
             .main-page__line.main-page__line--fourth
               +line-4-svg.main-page__line-svg
+          .main-page__elem.main-page__fifth
+            .main-page__ball 
+            .main-page__line.main-page__line--fifth
+              +line-5-svg.main-page__line-svg
+          .main-page__elem.main-page__sixth
+            .main-page__ball 
+            .main-page__line.main-page__line--sixth
+              +line-6-svg.main-page__line-svg
+          .only-mobile 
+            .main-page__icon.small
+              +main-icon-small.main-page__svg.main-page__svg--small
+            .main-page__icon
+              +main-icon.main-page__svg
         .main-page__cooperation-container 
           .main-page__cooperation-row 
             .main-page__cooperation-col
@@ -76,14 +89,14 @@ block content
                   |#[span.word-span #[span(data-aos='fade-up') Развитая]] #[span.word-span #[span(data-aos='fade-up') логистическая]] #[span.word-span #[span(data-aos='fade-up') инфраструктура]] #[span.word-span #[span(data-aos='fade-up') позволяет]] #[span.word-span #[span(data-aos='fade-up') доставлять]] #[span.word-span #[span(data-aos='fade-up') продукцию]] #[br] #[span.word-span #[span(data-aos='fade-up') в самые]] #[span.word-span #[span(data-aos='fade-up') отдаленные]] #[span.word-span #[span(data-aos='fade-up') регионы]] #[span.main-page__cooperation-span #[span.word-span #[span(data-aos='fade-up') России и страны СНГ]]]
               .main-page__cooperation-top
                 .main-page__cooperation-item.small(data-aos='fade-up')
-                  .main-page__icon 
+                  .main-page__icon.small.only-desktop
                     +main-icon-small.main-page__svg.main-page__svg--small
                   .main-page__cooperation-text
                     |Центральный офис
                   .main-page__cooperation-city 
                     |Москва
                 .main-page__cooperation-item(data-aos='fade-up')
-                  .main-page__icon 
+                  .main-page__icon.only-desktop
                     +main-icon.main-page__svg
                   .main-page__cooperation-text.main-page__cooperation-text--small 
                     |Завод и&nbsp;центральный&nbsp;склад
