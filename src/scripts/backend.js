@@ -319,6 +319,9 @@ function add2basket() {
                 data: data,
                 success: function (r) {
                     console.log(r);
+                    if (r.success == true) {
+                        $(document).find('[data-type=basket_count]').html(r.count);
+                    }
                 },
                 error: function (r) {
                     console.debug(r);
