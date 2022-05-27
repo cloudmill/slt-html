@@ -43,15 +43,15 @@ block content
       .main-page__video(data-aos='fade-up' data-decrease-container='')
         .main-page__video-left
         .main-page__video-right
-        .main-page__video-icon(data-decrease='3')
+        .main-page__video-icon(data-decrease-main='')
           +about-logo-svg.main-page__video-svg
         video.main-page__video-player(src="assets/videos/slt_main.mp4" loop muted data-aos='fade-down')
     section.main-page__section 
       .main-page__section-grid 
         +product-cards
     section.main-page__section 
-      .main-page__cooperation
-        .main-page__cooperation-bg(data-aos='fade-up')
+      .main-page__cooperation(data-aos='fade-up')
+        .main-page__cooperation-bg
           .main-page__elem.main-page__first
             .main-page__ball 
             .main-page__line.main-page__line--first 
@@ -105,14 +105,14 @@ block content
                 h3.main-page__cooperation-title
                   |#[span.word-span #[span(data-aos='fade-up') Развитая]] #[span.word-span #[span(data-aos='fade-up') логистическая]] #[span.word-span #[span(data-aos='fade-up') инфраструктура]] #[span.word-span #[span(data-aos='fade-up') позволяет]] #[span.word-span #[span(data-aos='fade-up') доставлять]] #[span.word-span #[span(data-aos='fade-up') продукцию]] #[br] #[span.word-span #[span(data-aos='fade-up') в самые]] #[span.word-span #[span(data-aos='fade-up') отдаленные]] #[span.word-span #[span(data-aos='fade-up') регионы]] #[span.main-page__cooperation-span #[span.word-span #[span(data-aos='fade-up') России и страны СНГ]]]
               .main-page__cooperation-top
-                .main-page__cooperation-item.small(data-aos='fade-up')
+                .main-page__cooperation-item.small
                   .main-page__icon.small.only-desktop
                     +main-icon-small.main-page__svg.main-page__svg--small
                   .main-page__cooperation-text
                     |Центральный офис
                   .main-page__cooperation-city 
                     |Москва
-                .main-page__cooperation-item(data-aos='fade-up')
+                .main-page__cooperation-item
                   .main-page__icon.only-desktop
                     +main-icon.main-page__svg
                   .main-page__cooperation-text.main-page__cooperation-text--small 
@@ -120,9 +120,9 @@ block content
                   .main-page__cooperation-city 
                     |Тольятти
             .main-page__cooperation-col
-              .main-page__cooperation-text(data-aos='fade-up')
+              .main-page__cooperation-text
                 |Мы активно сотрудничаем с торговыми компаниями, проектными, монтажными и строительными организациями
-              .main-page__cooperation-button(data-aos='fade-up')
+              .main-page__cooperation-button
                 +link-right.button--color-white 
                   |Сотрудничество
     section.section.section--overflow(data-parallax-container='1')
@@ -147,9 +147,8 @@ block content
                 each item in ddata.slider
                   .swiper-slide 
                     a.main-page__slider-slide(href="#" data-link='')
-                      .main-page__slider-container
-                        .main-page__slider-image 
-                          img.main-page__slider-img(src=item.img, alt="")
+                      .main-page__slider-image 
+                        img.main-page__slider-img(src=item.img, alt="")
                       h5.main-page__slider-title 
                         |#{item.title}
     section.section

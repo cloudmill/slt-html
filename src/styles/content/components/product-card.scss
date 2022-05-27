@@ -22,9 +22,6 @@
           transform: none;
         }
 
-        &::before {
-          transform: none;
-        }
       }
       #{$comp}__content {
         transition-delay: 0s;
@@ -42,7 +39,7 @@
   
       #{$comp}__button-svg {
         path {
-          fill: var(--color-blue);
+          fill: var(--color-gray);
         }
       }
     }
@@ -61,25 +58,10 @@
       }
     }
 
-    .button-icon {
-      &::after {
-        border-color: var(--color-blue);
-      }
-
-      &::before {
-        background: var(--color-blue);
-      }
-    }
     &:hover {
-      .button-icon {
-        &::after {
-          border-color: var(--color-blue);
-        }
-      }
-
-      .button-icon__svg {
+      #{$comp}__button-svg {
         path {
-          fill: var(--color-white);
+          fill: var(--color-blue);
         }
       }
     }
@@ -97,25 +79,10 @@
       }
     }
 
-    .button-icon {
-      &::after {
-        border-color: var(--color-red);
-      }
-
-      &::before {
-        background: var(--color-red);
-      }
-    }
     &:hover {
-      .button-icon {
-        &::after {
-          border-color: var(--color-red);
-        }
-      }
-
-      .button-icon__svg {
+      #{$comp}__button-svg {
         path {
-          fill: var(--color-white);
+          fill: var(--color-red);
         }
       }
     }
@@ -132,27 +99,10 @@
         background: var(--color-green);
       }
     }
-
-    .button-icon {
-      &::after {
-        border-color: var(--color-green);
-      }
-
-      &::before {
-        background: var(--color-green);
-      }
-    }
     &:hover {
-      .button-icon {
-        &::after {
-          border-color: var(--color-green);
-        }
-  
-      }
-
-      .button-icon__svg {
+      #{$comp}__button-svg {
         path {
-          fill: var(--color-white);
+          fill: var(--color-green);
         }
       }
     }
@@ -178,16 +128,6 @@
     background: var(--color-light-gray);
     transition: $transition;
     overflow: hidden;
-    
-    &::before {
-      content: "";
-      @include cover;
-      z-index: -1;
-
-      background: var(--color-darken-white);
-      transition: 0.8s $transition-timing-function;
-      transform: translateY(100%);
-    }
 
     &::after {
       content: "";
