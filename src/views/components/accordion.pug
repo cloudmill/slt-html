@@ -67,8 +67,9 @@ mixin accordion-big
         {
           label: 'Время работы',
           items: [
-            {isLink: false, text: 'ПН – ПТ, 10 - 20',},
-            {isLink: false, text: 'СБ – ВС, 11 - 19',},
+            {isLink: false, text: 'ПН – ПТ 10:00 - 20:00',},
+            {isLink: false, text: 'СБ 10:30 - 19:00',},
+            {isLink: false, text: 'ВС 9:00 - 14:30',},
           ]
         },
       ],
@@ -101,7 +102,7 @@ mixin accordion-big
         .accordion__col
           .accordion__title 
             |ООО «Текс-Нева»
-          .accordion__label 
+          a.accordion__label(href='#')
             |teksneva.ru
         .accordion__col
           .breadcrumbs.breadcrumbs--small 
@@ -136,18 +137,19 @@ mixin accordion-big
                       else 
                         .accordion__top-text 
                           |#{el.text}
-      .accordion__bot 
-        .accordion__container 
-          .accordion__bot-title 
-            |Реализованные объекты
-          .accordion__bot-grid 
-            each item in ddata.bot
-              a.accordion__bot-item(href="#")
-                .accordion__bot-container 
-                  .accordion__bot-img 
-                    img.accordion__bot-pic(src=`assets/images/${item.src}`, alt="")
-                .accordion__bot-text 
-                  |#{item.text}
+      if (!attributes.objects)
+        .accordion__bot 
+          .accordion__container 
+            .accordion__bot-title 
+              |Реализованные объекты
+            .accordion__bot-grid 
+              each item in ddata.bot
+                a.accordion__bot-item(href="#")
+                  .accordion__bot-container 
+                    .accordion__bot-img 
+                      img.accordion__bot-pic(src=`assets/images/${item.src}`, alt="")
+                  .accordion__bot-text 
+                    |#{item.text}
 
 mixin accordion-simple
   .accordion.accordion--simple(data-accordion='')

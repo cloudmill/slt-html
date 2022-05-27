@@ -152,14 +152,14 @@
     overflow: hidden;
     background: url("assets/images/svg/map.svg") center no-repeat;
     background-size: cover;
+    @media (max-width: ($breakpoint - 1px)) {
+      background: url("assets/images/svg/cooperation-bg-mobile.svg") center no-repeat;
+      background-size: cover;
+    }
   }
   &__cooperation-bg {
     @include cover;
     z-index: -1;
-
-    @media (max-width: ($breakpoint - 1px)) {
-      display: none;
-    }
   }
   &__cooperation-container {
     padding: getRem(35px) getRem(40px);
@@ -192,14 +192,14 @@
     }
   }
   &__cooperation-wrapper {
-    margin-bottom: getRem(20px);
+    margin-bottom: getRem(44px);
     margin-left: calc(#{$col-part-d} * 6);
     @media (max-width: ($breakpoint - 1px)) {
       margin-left: 0;
     }
   }
   &__cooperation-title {
-    max-width: getRem(586px);
+    max-width: getRem(630px);
 
     font-weight: 500;
     color: var(--color-white);
@@ -332,22 +332,39 @@
     left: getRem(664px);
     z-index: 1;
     transform: translateY(-50%);
-
+    @media (max-width: ($breakpoint - 1px)) {
+      top: getRem(248px);
+      left: getRem(136px);
+      transform: none;
+    }
+    
     display: flex;
     align-items: center;
     justify-content: center;
-    @media (max-width: ($breakpoint - 1px)) {
-      display: none;
+
+    &.small {
+      @media (max-width: ($breakpoint - 1px)) {
+        left: getRem(50px);
+        top: getRem(220px);
+      }
     }
   }
 
   &__svg {
     width: getRem(124px);
     height: getRem(124px);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: getRem(53px);
+      height: getRem(53px);
+    }
 
     &--small {
       width: getRem(82px);
       height: getRem(82px);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: getRem(35px);
+        height: getRem(35px);
+      }
     }
   }
 
@@ -357,38 +374,86 @@
   }
 
   &__first {
-    left: getRem(528px);
-    top: getRem(200px);
+    left: getRem(512px);
+    top: getRem(168px);
+    @media (max-width: ($breakpoint - 1px)) {
+      left: getRem(50px);
+      top: getRem(171px);
+    }
 
     #{$comp}__ball {
-      left: -7px;
+      left: -5px;
       top: -5px;
+      @media (max-width: ($breakpoint - 1px)) {
+        left: -3px;
+        top: -3px;
+      }
     }
   }
 
   &__second{
-    left: getRem(760px);
-    top: getRem(288px);
+    left: getRem(752px);
+    top: getRem(174px);
+    @media (max-width: ($breakpoint - 1px)) {
+      left: getRem(156px);
+      top: getRem(180px);
+    }
 
     #{$comp}__ball {
-      right: -7px;
+      left: -4px;
       top: -4px;
     }
   }
 
   &__third {
     left: getRem(760px);
-    top: getRem(422px);
+    top: getRem(235px);
+    @media (max-width: ($breakpoint - 1px)) {
+      left: getRem(160px);
+      top: getRem(248px);
+    }
 
     #{$comp}__ball {
-      right: -7px;
-      bottom: -4px;
+      right: -4px;
+      top: -4px;
     }
   }
 
   &__fourth {
-    left: getRem(720px);
+    left: getRem(760px);
     top: getRem(400px);
+    @media (max-width: ($breakpoint - 1px)) {
+      left: getRem(152px);
+      top: getRem(267px);
+    }
+
+    #{$comp}__ball {
+      right: -4px;
+      bottom: -4px;
+    }
+  }
+
+  &__fifth {
+    left: getRem(708px);
+    top: getRem(368px);
+    @media (max-width: ($breakpoint - 1px)) {
+      left: getRem(136px);
+      top: getRem(274px);
+    }
+
+    #{$comp}__ball {
+      left: -4px;
+      bottom: -4px;
+    }
+  }
+
+  &__sixth {
+    left: getRem(496px);
+    top: getRem(380px);
+    @media (max-width: ($breakpoint - 1px)) {
+      left: getRem(42px);
+      top: getRem(275px);
+    }
 
     #{$comp}__ball {
       left: -4px;
@@ -402,6 +467,10 @@
 
     width: 10px;
     height: 10px;
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 5px;
+      height: 5px;
+    }
 
     border-radius: 50%;
     transition: $transition;
@@ -420,7 +489,11 @@
 
     &--first {
       width: getRem(257px);
-      height: getRem(240px);
+      height: getRem(235px);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: getRem(112px);
+        height: auto;
+      }
 
       transform: translateY(100%);
       animation: showFirstFrame 3s $transition-timing-function infinite;
@@ -450,7 +523,6 @@
         }
       }
       
-
       @keyframes showFirstLine {
         0% {
       
@@ -473,13 +545,17 @@
       }
     }
     &--second {
-      width: getRem(799px);
-      height: getRem(134px);
+      width: getRem(13px);
+      height: getRem(196px);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+        height: getRem(95px);
+      }
 
-      transform: translateX(-100%);
+      transform: translateY(100%);
       animation: showSecondFrame 3s $transition-timing-function infinite;
       #{$comp}__line-svg {
-        transform: translateX(100%);
+        transform: translateY(-100%);
         animation: showSecondLine 3s $transition-timing-function infinite;
       }
 
@@ -494,13 +570,13 @@
           transform: none;
         }
         53% {
-          transform: translateX(100%);
+          transform: translateY(-100%);
         }
         66% {
-          transform: translateX(100%);
+          transform: translateY(-100%);
         }
         100% {
-          transform: translateX(100%);
+          transform: translateY(-100%);
         }
       }
 
@@ -515,19 +591,23 @@
           transform: none;
         }
         53% {
-          transform: translateX(-100%);
+          transform: translateY(100%);
         }
         66% {
-          transform: translateX(-100%);
+          transform: translateY(100%);
         }
         100% {
-          transform: translateX(-100%);
+          transform: translateY(100%);
         }
       }
     }
     &--third {
-      width: getRem(342px);
-      height: getRem(120px);
+      width: getRem(1046px);
+      height: getRem(163px);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: getRem(163px);
+        height: auto;
+      }
 
       transform: translateX(-100%);
       animation: showThirdFrame 3s $transition-timing-function infinite;
@@ -579,8 +659,126 @@
       }
     }
     &--fourth {
-      width: getRem(49px);
-      height: getRem(331px);
+      width: getRem(393px);
+      height: getRem(224px);
+      @media (max-width: ($breakpoint - 1px)) {
+        height: auto;
+        width: getRem(176px);
+      }
+
+      transform: translateY(-100%);
+      animation: showFourthFrame 3s $transition-timing-function infinite;
+      #{$comp}__line-svg {
+        transform: translateY(100%);
+        animation: showFourthLines 3s $transition-timing-function infinite;
+      }
+
+      @keyframes showFourthFrame {
+        0% {
+          
+        }
+        33% {
+          transform: none;
+        }
+        43% {
+          transform: none;
+        }
+        53% {
+          transform: translateY(100%);
+        }
+        66% {
+          transform: translateY(100%);
+        }
+        100% {
+          transform: translateY(100%);
+        }
+      }
+
+      @keyframes showFourthLines {
+        0% {
+      
+        }
+        33% {
+          transform: none;
+        }
+        43% {
+          transform: none;
+        }
+        53% {
+          transform: translateY(-100%);
+        }
+        66% {
+          transform: translateY(-100%);
+        }
+        100% {
+          transform: translateY(-100%);
+        }
+      }
+    }
+    &--fifth {
+      width: getRem(66px);
+      height: getRem(285px);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+        height: getRem(121px);
+      }
+
+      transform: translateY(-100%);
+      animation: showFourthFrame 3s $transition-timing-function infinite;
+      #{$comp}__line-svg {
+        transform: translateY(100%);
+        animation: showFourthLines 3s $transition-timing-function infinite;
+      }
+
+      @keyframes showFourthFrame {
+        0% {
+          
+        }
+        33% {
+          transform: none;
+        }
+        43% {
+          transform: none;
+        }
+        53% {
+          transform: translateY(100%);
+        }
+        66% {
+          transform: translateY(100%);
+        }
+        100% {
+          transform: translateY(100%);
+        }
+      }
+
+      @keyframes showFourthLines {
+        0% {
+      
+        }
+        33% {
+          transform: none;
+        }
+        43% {
+          transform: none;
+        }
+        53% {
+          transform: translateY(-100%);
+        }
+        66% {
+          transform: translateY(-100%);
+        }
+        100% {
+          transform: translateY(-100%);
+        }
+      }
+    }
+    &--sixth {
+      width: getRem(288px);
+      height: getRem(208px);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: getRem(120px);
+        height: auto;
+      }
 
       transform: translateY(-100%);
       animation: showFourthFrame 3s $transition-timing-function infinite;

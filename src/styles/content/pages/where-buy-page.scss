@@ -212,8 +212,8 @@
 }
 
 .cluster {
-  width: getRem(40px);
-  height: getRem(40px);
+  width: 35px;
+  height: 35px;
   @media (max-width: ($breakpoint - 1px)) {
     width: getRem(24px);
     height: getRem(24px);

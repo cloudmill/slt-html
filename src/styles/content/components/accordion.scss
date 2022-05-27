@@ -160,6 +160,8 @@
   }
 
   &__text {
+    
+
     font-weight: 500;
     @include fsl(16px, 110%);
     @media (max-width: ($breakpoint - 1px)) {
@@ -264,11 +266,20 @@
       margin-top: 2px;
     }
 
+    display: inline-block;
+
     color: var(--color-blue);
     font-weight: 500;
     @include fsl(14px, 110%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px);
+    }
+    border-bottom: 1px solid transparent;
+    transition: $transition;
+
+    &:hover {
+      color: var(--color-black);
+      border-color: var(--color-black);
     }
   }
 
@@ -345,6 +356,8 @@
     }
   }
   &__top-text {
+    max-width: getRem(284px);
+    
     font-weight: 500;
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px);

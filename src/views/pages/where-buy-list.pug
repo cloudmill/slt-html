@@ -60,6 +60,8 @@ block content
               |Очистить
 
         .where-buy-list
-          - for (i=0;i<7;i++)
+          - for (i=0;i<3;i++)
             .where-buy-list__item(data-aos='fade-up')
               +accordion-big
+            .where-buy-list__item(data-aos='fade-up')
+              +accordion-big(objects=true)
