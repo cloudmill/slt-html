@@ -43,7 +43,7 @@ block content
       .main-page__video(data-aos='fade-up' data-decrease-container='')
         .main-page__video-left
         .main-page__video-right
-        .main-page__video-icon(data-decrease='3')
+        .main-page__video-icon(data-decrease-main='')
           +about-logo-svg.main-page__video-svg
         video.main-page__video-player(src="assets/videos/slt_main.mp4" loop muted data-aos='fade-down')
     section.main-page__section 
@@ -147,9 +147,8 @@ block content
                 each item in ddata.slider
                   .swiper-slide 
                     a.main-page__slider-slide(href="#" data-link='')
-                      .main-page__slider-container
-                        .main-page__slider-image 
-                          img.main-page__slider-img(src=item.img, alt="")
+                      .main-page__slider-image 
+                        img.main-page__slider-img(src=item.img, alt="")
                       h5.main-page__slider-title 
                         |#{item.title}
     section.section
