@@ -15,25 +15,16 @@
   transition: $transition;
   overflow: hidden;
 
-  &::before {
-    content: "";
-    @include cover;
-    z-index: -1;
-
-    background-color: var(--color-light-gray);
-    transition: $transition;
-    transform: translateY(100%);
-  }
-
   &:hover {
-    border: 1px solid var(--color-blue);
-
-    &::before {
-      transform: none;
-    }
 
     #{$comp}__title {
       color: var(--color-blue);
+    }
+
+    #{$comp}__svg {
+      path {
+        fill: var(--color-blue);
+      }
     }
   }
 
@@ -91,6 +82,11 @@
     @media (max-width: ($breakpoint - 1px)) {
       width: getRem(16px);
       height: getRem(16px);
+    }
+
+    path {
+      transition: $transition;
+      fill: var(--color-gray);
     }
   }
 }

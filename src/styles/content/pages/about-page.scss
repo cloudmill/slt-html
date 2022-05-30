@@ -274,6 +274,20 @@
       @include fsl(14px);
     }
   }
+  &__stats-num {
+    margin-left: 2px;
+    transform: translateY(-10px);
+    @media (max-width: ($breakpoint - 1px)) {
+      transform: translateY(-5px);
+    }
+
+    display: inline-block;
+
+    @include fsl(16px);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
+  }
   &__stats-caption {
     font-weight: 500;
     @include fsl(16px, 130%);

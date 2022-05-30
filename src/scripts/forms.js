@@ -155,20 +155,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // выделение активной радиокнопки
 
-document.addEventListener('DOMContentLoaded', () => {
+// document.addEventListener('DOMContentLoaded', () => {
 
-  const radioGroup = document.querySelectorAll('#radio-group');
+//   const radioGroup = document.querySelectorAll('#radio-group');
 
-  if (radioGroup) {
-    radioGroup.forEach(item => {
-      item.addEventListener('click', event => {
+//   if (radioGroup) {
+//     radioGroup.forEach(item => {
+//       item.addEventListener('click', event => {
 
-        item.querySelectorAll('.radio').forEach(radio => {
-          radio.classList.remove('active')
-        })
+//         item.querySelectorAll('.radio').forEach(radio => {
+//           radio.classList.remove('active')
+//         })
 
-        event.target.closest('.radio').classList.add('active');
-      })
-    })
-  }
-})
+//         event.target.closest('.radio').classList.add('active');
+//       })
+//     })
+//   }
+// })

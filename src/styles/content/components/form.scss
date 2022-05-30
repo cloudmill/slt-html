@@ -130,11 +130,12 @@
   }
 
   &__container {
+    width: 100%;
     @media (max-width: ($breakpoint - 1px)) {
       width: 50%;
     }
     @media (max-width: ($breakpoint-m - 1px)) {
-      width: auto;
+      width: 100%;
     }
   }
 }

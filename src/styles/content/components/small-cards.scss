@@ -1,5 +1,6 @@
 .small-card {
   $comp: &;
+  --color: var(--color-white);
 
   position: relative;
   z-index: 0;
@@ -24,25 +25,17 @@
 
     transform: translateY(100%);
     transition: 0.8s $transition-timing-function;
-  }
-
-  &::after {
-    content: "";
-    @include cover;
-    z-index: -1;
-
-    background: var(--color-darken-white);
-    transform: translateY(100%);
-    transition: 0.8s $transition-timing-function;
+    background: var(--color);
   }
 
   &:hover {
-
-    &::before {
-      transform: none;
+    #{$comp}__button-svg {
+      path {
+        fill: var(--color);
+      }
     }
 
-    &::after {
+    &::before {
       transform: none;
     }
   }
@@ -66,10 +59,11 @@
   }
 
   &.aqua {
+    --color: var(--color-blue);
 
-    &::before {
-      background: var(--color-blue);
-    }
+    // &::before {
+    //   background: var(--color-blue);
+    // }
 
     #{$comp}__svg {
       width: getRem(145px);
@@ -77,38 +71,9 @@
         width: getRem(82px);
       }
     }
-    .button-icon {
-      &::after {
-        border-color: var(--color-blue);
-      }
-
-
-      &::before {
-        background: var(--color-blue);
-      }
-    }
-
-    &:hover {
-      .button-icon {
-        &::before {
-          transform: none;
-        }
-        
-      }
-      .button-icon__svg {
-        // animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
-
-        path {
-          fill: var(--color-white);
-        }
-      }
-    }
   }
   &.blockfire {
-
-    &::before {
-      background: var(--color-red);
-    }
+    --color: var(--color-red);
 
     #{$comp}__svg {
       width: getRem(195px);
@@ -116,75 +81,15 @@
         width: getRem(115px);
       }
     }
-
-    .button-icon {
-      &::after {
-        border-color: var(--color-red);
-      }
-
-      &::before {
-        background: var(--color-red);
-      }
-    }
-
-    &:hover {
-      .button-icon {
-        &::after {
-          border-color: var(--color-red);
-        }
-
-        &::before {
-          transform: none;
-        }
-      }
-      .button-icon__svg {
-        // animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
-
-        path {
-          fill: var(--color-white);
-        }
-      }
-    }
   }
   &.pert {
+    --color: var(--color-green);
 
-    &::before {
-      background: var(--color-green);
-    }
 
     #{$comp}__svg {
       width: getRem(134px);
       @media (max-width: ($breakpoint - 1px)) {
         width: getRem(80px);
-      }
-    }
-
-    .button-icon {
-      &::after {
-        border-color: var(--color-green);
-      }
-
-      &::before {
-        background: var(--color-green);
-      }
-    }
-
-    &:hover {
-      .button-icon {
-        &::after {
-          border-color: var(--color-green);
-        }
-
-        &::before {
-          transform: none;
-        }
-      }
-      .button-icon__svg {
-        // animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
-
-        path {
-          fill: var(--color-white);
-        }
       }
     }
   }
@@ -220,6 +125,20 @@
     height: getRem(32px);
     @media (max-width: ($breakpoint - 1px)) {
       height: getRem(19px);
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__button-svg {
+    width: getRem(30px);
+    height: getRem(30px);
+    path {
+      fill: var(--color-black);
+      transition: $transition;
     }
   }
 }

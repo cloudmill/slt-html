@@ -57,7 +57,7 @@ block content
                       .calculator-page__caption.calculator-page__caption--big
                         |Тип трубы
                       .calculator-page__features-inner 
-                        ul.calculator-page__features-list#radio-group
+                        ul.calculator-page__features-list
                           each item in ['SLT AQUA PP-R', 'SLT AQUA PP-R-GF', 'SLT AQUA PP-R-AL']
                             li.calculator-page__features-item 
                               +radio-button(name = 'type' text = item)
@@ -65,7 +65,7 @@ block content
                     .calculator-page__caption.calculator-page__caption--big
                       |Внешний диаметр трубы #[span.calculator-page__features-span D], мм
                     .calculator-page__features-inner 
-                      .calculator-page__features-row#radio-group
+                      .calculator-page__features-row
                         ul.calculator-page__features-buttons 
                           each item in ['20', '25', '32']
                             li.calculator-page__features-button 
