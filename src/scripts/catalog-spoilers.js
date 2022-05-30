@@ -12,10 +12,20 @@
 
         if (button.length) {
           const id = button.closest('[data-filters-button]').attr('data-filters-button')
+          const item = button.closest('.filters__headings-item')
 
-          button.closest('.filters__headings-item').toggleClass('visible')
-          filtersTop.toggleClass('darken')
-          $(`[data-filters-dropdown=${id}]`).slideToggle()
+          if (item.hasClass('visible')) {
+            item.removeClass('visible')
+            filtersTop.removeClass('darken')
+            $(`[data-filters-dropdown=${id}]`).slideUp()
+          } else {
+            filtersTop.find('.visible').removeClass('visible')
+            $('[data-filters-dropdown]').slideUp()
+
+            item.addClass('visible')
+            filtersTop.addClass('darken')
+            $(`[data-filters-dropdown=${id}]`).slideDown()
+          }
         }
       })
     }

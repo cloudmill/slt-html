@@ -708,15 +708,15 @@
     }
   }
 
-  &__row {
+  &__wrapper {
     margin-top: getRem(60px);
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: getRem(16px);
     }
-
-    display: flex;
   }
-  &__row-item {
+
+  &__row {
+    display: flex;
 
     &:not(:first-child) {
       margin-top: getRem(32px);
@@ -816,6 +816,16 @@
     display: flex;
     @media (max-width: ($breakpoint - 1px)) {
       display: none;
+    }
+  }
+
+  &__link {
+    transition: $transition;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      color: var(--color-blue);
+      border-color: var(--color-blue);
     }
   }
 }

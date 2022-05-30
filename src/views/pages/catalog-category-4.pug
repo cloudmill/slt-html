@@ -22,7 +22,6 @@ block content
                   {class: 'aqua', text: 'SLT AQUA'},
                   {class: 'blockfire', text: 'SLT BLOCKFIRE'},
                   {class: 'pert', text: 'SLT  PE-RT'},
-                  {class: 'tool', text: 'Инструменты'},
                 ] 
               each item in items
                 li.spoiler__item(class=item.class data-spoiler-item=item.class)
@@ -52,9 +51,9 @@ block content
             .button.button--wide.button-animate(data-fancy-button='c1')
               .button__text
                 span
-                  |Области применения
+                  |Выбрать область применения
               .button__icon 
-                +plus-svg.button__svg
+                +btn-arrow-right.button__svg.arrow-blue
         .category-list(data-list-container='')
           .category-list__row 
             .category-list__col

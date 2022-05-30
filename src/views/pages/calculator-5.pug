@@ -40,8 +40,8 @@ block content
               .calculator-page__list-text 
                 |#{item.text}
         form.calculator-page__calculate.form(action="/")
-          .calculator-page__calculate-col
-            .calculator-page__calculate-grid(data-aos='fade-up')
+          .calculator-page__calculate-col(data-aos='fade-up') 
+            .calculator-page__calculate-grid
               each item in ddata.form
                 .calculator-page__calculate-item
                   .calculator-page__wrapper
@@ -56,7 +56,7 @@ block content
                 |* Согласно СП 40-102-2000 «Примечание - Допускается  сумму местных потерь h м.с. принимать равной 20-30% суммы удельных потерь»
             .section__block
               .calculator-page__block
-                .calculator-page__block-row(data-aos='fade-up')
+                .calculator-page__block-row
                   .calculator-page__block-col
                     .calculator-page__caption.calculator-page__caption--big 
                       |Удельные потери по длине трубопровода без учета местных потерь, м/м
@@ -68,7 +68,7 @@ block content
                     .calculator-page__block-title 
                       |0,8778
                 .calculator-page__block-inner
-                  .calculator-page__block-row(data-aos='fade-up')
+                  .calculator-page__block-row
                     .calculator-page__block-col
                       .calculator-page__caption.calculator-page__caption--big 
                         |Потери по длине трубопровода с учетом суммы местных потерь, м/м
@@ -78,12 +78,12 @@ block content
                 .calculator-page__block-inner
                   .calculator-page__block-row
                     .calculator-page__block-col
-                      .calculator-page__button(data-aos='fade-up')
+                      .calculator-page__button
                         .button-wrapper
                           +download-btn.button--wide--mobile
                             |Скачать расчет в PDF
-          .calculator-page__calculate-col
-            .calculator-page__grid(data-aos='fade-up') 
+          .calculator-page__calculate-col(data-aos='fade-up') 
+            .calculator-page__grid 
               .calculator-page__grid-heading 
                 .calculator-page__caption.calculator-page__caption--big
                   |Диаметр
@@ -107,7 +107,7 @@ block content
                 each item, j in ['73,7174', '96,1133', '118,4716', '6,24482', '12,13625', '20,52237', ]
                   .calculator-page__grid-item(class=(i === 8 && j === 2 ? 'active' : ''))
                     |#{item}
-            .calculator-page__container(data-aos='fade-up')
+            .calculator-page__container
               .calculator-page__grid-mobile
                 .calculator-page__grid-heading 
                   .calculator-page__grid-caption

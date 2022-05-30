@@ -29,32 +29,32 @@ block content
           .ordering-page__col
             h5.ordering-page__heading(data-aos='fade-up')
               |Контактные данные
-            form.form(action="/" data-parsley-validate) 
+            form.form(action="/" data-parsley-validate data-aos='fade-up') 
               .form__container
                 each item in ddata.inputs
-                  .form__item(data-aos='fade-up') 
+                  .form__item
                     +input#input(type = item.type placeholder = item.placeholder required)
-                .form__item(data-aos='fade-up') 
+                .form__item
                   +input#input(type="tel" placeholder="Телефон*" data-tel-input required)
               .ordering-page__inner 
-                h5.ordering-page__heading(data-aos='fade-up') 
+                h5.ordering-page__heading
                   |Контактные данные
                 .ordering-page__grid 
-                  .ordering-page__grid-item(data-aos='fade-up')
+                  .ordering-page__grid-item
                     h6.ordering-page__title 
                       |Проектирование
                     ul.ordering-page__list  
                       each item in ['Системы водоснабжения', 'Системы отопления', 'Системы пожаротушения',]
                         li.ordering-page__item 
                           +checkbox(text = item)
-                  .ordering-page__grid-item(data-aos='fade-up')
+                  .ordering-page__grid-item
                     h6.ordering-page__title 
                       |Монтаж
                     ul.ordering-page__list  
                       each item in ['Системы водоснабжения', 'Системы отопления', 'Системы пожаротушения',]
                         li.ordering-page__item 
                           +checkbox(text = item)
-                  .ordering-page__grid-item(data-aos='fade-up')
+                  .ordering-page__grid-item
                     ul.ordering-page__list  
                       li.ordering-page__item 
                         +checkbox(text = 'Доставка' data-checkbox-reveal='')
@@ -64,7 +64,7 @@ block content
                     +input(type = 'text' placeholder = 'Город*')
                   .form__item 
                     +input(type = 'text' placeholder = 'Адрес*')
-              .ordering-page__inner(data-aos='fade-up')
+              .ordering-page__inner
                 .form__container
                   h5.ordering-page__heading 
                     |Дополнительная информация к заказу

@@ -17,7 +17,7 @@
     &.darken {
       #{$comp}__headings-item:not(.visible) {
         opacity: 0.5;
-        pointer-events: none;
+        // pointer-events: none;
       }
     }
   }

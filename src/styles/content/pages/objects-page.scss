@@ -439,4 +439,16 @@
       margin-bottom: 6px;
     }
   }
+
+  &__link {
+    font-weight: 500;
+    color: var(--color-blue);
+    transition: $transition;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      color: var(--color-black);
+      border-color: var(--color-black);
+    }
+  }
 }

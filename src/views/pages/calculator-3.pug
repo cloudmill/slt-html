@@ -17,8 +17,8 @@ block content
         +nav(items = ['Компенсационное колено', 'П-образный компенсатор', 'Петлевой компенсатор ', 'Сильфонный компенсатор',] active = 2)
         .section__block 
           .calculator-page__row 
-            .calculator-page__col
-              .calculator-page__picture(data-aos='fade-up') 
+            .calculator-page__col(data-aos='fade-up') 
+              .calculator-page__picture
                 +calculator-3-svg.calculator-page__picture-svg
               .calculator-page__inner 
                 ul.calculator-page__description
@@ -29,7 +29,7 @@ block content
                       {label: 'ΔL', text: 'линейное расширение, мм'},
                     ]
                   each item in list
-                    li.calculator-page__description-item(data-aos='fade-up')
+                    li.calculator-page__description-item
                       .calculator-page__description-col
                         .calculator-page__label 
                           |#{item.label}
@@ -37,43 +37,43 @@ block content
                         .calculator-page__caption 
                           |#{item.text}
               .calculator-page__inner
-                .calculator-page__icon(data-aos='fade-up')
+                .calculator-page__icon
                   +calculator-table-svg.calculator-page__svg
                 .calculator-page__table
-                  .calculator-page__table-row(data-aos='fade-up')
+                  .calculator-page__table-row
                     each item in ['D, мм', 'D#[span.calculator-page__table-span 1, мм]', 'В, мм']
                       .calculator-page__table-top 
                         |#{item}
                   - for (i = 0; i < 4; i++)
-                    .calculator-page__table-row(data-aos='fade-up')
+                    .calculator-page__table-row
                       each item in ['20', '200', '450']
                         .calculator-page__table-cell 
                           |#{item}
-            .calculator-page__col
+            .calculator-page__col(data-aos='fade-up') 
               form.form(action="/") 
                 .calculator-page__features
                   .calculator-page__features-col
                     .calculator-page__wrapper
-                      .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up')
+                      .calculator-page__caption.calculator-page__caption--big
                         |Тип трубы
                       .calculator-page__features-inner 
                         ul.calculator-page__features-list#radio-group
                           each item in ['SLT AQUA PP-R', 'SLT AQUA PP-R-GF', 'SLT AQUA PP-R-AL']
-                            li.calculator-page__features-item(data-aos='fade-up') 
+                            li.calculator-page__features-item 
                               +radio-button(name = 'type' text = item)
                   .calculator-page__features-col
-                    .calculator-page__caption.calculator-page__caption--big(data-aos='fade-up')
+                    .calculator-page__caption.calculator-page__caption--big
                       |Внешний диаметр трубы #[span.calculator-page__features-span D], мм
                     .calculator-page__features-inner 
                       .calculator-page__features-row#radio-group
                         ul.calculator-page__features-buttons 
                           each item in ['20', '25', '32']
-                            li.calculator-page__features-button(data-aos='fade-up') 
+                            li.calculator-page__features-button 
                               +radio-button(name = 'diameter' text = item)
                         ul.calculator-page__features-buttons 
-                          li.calculator-page__features-button(data-aos='fade-up') 
+                          li.calculator-page__features-button 
                             +radio-button(name = 'diameter' text = '40')
-                  .calculator-page__features-col(data-aos='fade-up')
+                  .calculator-page__features-col
                     .calculator-page__wrapper
                       .calculator-page__caption.calculator-page__caption--big
                         |Длина участка компенсиции, м 
@@ -82,12 +82,12 @@ block content
                 .section__block
                   .calculator-page__wrapper
                     .calculator-page__features
-                      .calculator-page__features-col(data-aos='fade-up')
+                      .calculator-page__features-col
                         .calculator-page__caption.calculator-page__caption--big
                           |Температура монтажа, °C
                         .calculator-page__features-inner 
                           +input#input(type = 'number' placeholder = '0')
-                      .calculator-page__features-col(data-aos='fade-up')
+                      .calculator-page__features-col
                         .calculator-page__caption.calculator-page__caption--big
                           |Температура эксплуатации, °C
                         .calculator-page__features-inner 
@@ -96,19 +96,19 @@ block content
                 .section__block 
                   .calculator-page__block
                     .calculator-page__block-row
-                      .calculator-page__block-col(data-aos='fade-up')
+                      .calculator-page__block-col
                         .calculator-page__caption.calculator-page__caption--big
                           |Линейное расширение, мм
                         .calculator-page__block-title 
                           |ΔL=1056
-                      .calculator-page__block-col(data-aos='fade-up')
+                      .calculator-page__block-col
                         .calculator-page__caption.calculator-page__caption--big
                           |Количество компенсаторов на длину #[span.calculator-page__features-span L] , шт
                         .calculator-page__block-title 
                           |К=10
                     .calculator-page__block-inner
                       .calculator-page__block-row
-                        .calculator-page__block-col(data-aos='fade-up')
+                        .calculator-page__block-col
                           .calculator-page__caption.calculator-page__caption--big
                             |Компенсирующая способность изделия, мм
                           .calculator-page__block-title 
@@ -117,7 +117,7 @@ block content
                     .calculator-page__block-inner
                       .calculator-page__block-row
                         .calculator-page__block-col
-                          .calculator-page__button(data-aos='fade-up')
+                          .calculator-page__button
                             .button-wrapper
                               +download-btn.button--wide--mobile
                                 |Скачать расчет в PDF

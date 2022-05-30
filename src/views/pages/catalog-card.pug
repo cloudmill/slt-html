@@ -364,21 +364,21 @@ block content
                     text: 'Класс #[br] эксплуатации',
                   },
                   {
-                    tooltip: true,
+                    tooltip: 'Траб - рабочая температура или комбинация рабочих температур транспортируемой воды',
                     text: 'Т#[span.table__span раб], ℃',
                   },
                   {
                     text: 'Время при Т#[span.table__span раб], год',
                   },
                   {
-                    tooltip: true,
+                    tooltip: 'Тmax - максимальная рабочая температура транспортируемой воды, действия которой ограничены по времени',
                     text: 'Т#[span.table__span max], ℃',
                   },
                   {
                     text: 'Время при Т#[span.table__span max], год',
                   },
                   {
-                    tooltip: true,
+                    tooltip: 'Тавар - аварийная температура транспортируемой воды, возникающая в аварийных ситуациях при нарушении работы автоматики терморегулирования, при этом аварийные фазы в отдельности не должны превышать 3-х часов',
                     text: 'Т#[span.table__span авар], час',
                   },
                   {
@@ -388,7 +388,7 @@ block content
                     text: 'Область #[br] применения',
                   },
                   {
-                    tooltip: true,
+                    tooltip: 'Рmax - максимальное рабочее давление воды',
                     text: 'P#[span.table__span max], МПа',
                   }
                 ]
@@ -400,7 +400,7 @@ block content
                       .tooltip__icon 
                         +tooltip-svg.tooltip__svg 
                       .tooltip__container 
-                        |Труба однослойная напорная полипропиленовая PN10 (SDR 11) предназначена для систем
+                        |#{item.tooltip}
               each item in ddata 
                 .table__item 
                   ul.table__list 
@@ -418,7 +418,7 @@ block content
                         .tooltip__icon 
                           +tooltip-svg.tooltip__svg 
                         .tooltip__container 
-                          |Труба однослойная напорная полипропиленовая PN10 (SDR 11) предназначена для систем
+                          |#{item.tooltip}
                 else 
                   .table__item(class=item.class)
                     ul.table__list 
