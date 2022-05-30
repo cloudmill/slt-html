@@ -55,9 +55,9 @@
 				<div class="call-modal" data-fancy-modal="call">
 					<div class="call-modal__container">
 						<h4 class="call-modal__title">Обратный звонок</h4>
-						<form class="form" action="/">
-							<div class="form__item"><input class="form__input" placeholder="Имя*" /></div>
-							<div class="form__item"><input class="form__input" type="number" placeholder="Телефон*" /></div>
+						<form class="form" action="/" data-parsley-validate="data-parsley-validate">
+							<div class="form__item"><input class="form__input" id="input" placeholder="Имя*" required="required" /></div>
+							<div class="form__item"><input class="form__input" id="input" type="number" placeholder="Телефон*" required="required" /></div>
 							<div class="form__inner">
 								<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
 										<div class="checkbox__box"><svg class="checkbox__svg" width="15" height="11" viewbox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -82,7 +82,7 @@
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M13.4142 12L19.7782 18.3639L18.364 19.7782L12 13.4142L5.63604 19.7782L4.22183 18.3639L10.5858 12L4.22183 5.63602L5.63604 4.22181L12 10.5858L18.364 4.22181L19.7782 5.63602L13.4142 12Z" fill="#979797"></path>
 									</svg></div>
 							</div>
-							<div class="search-modal__col"><button class="button button--wide--mobile"><span class="button__text"><span>Поиск</span></span>
+							<div class="search-modal__col"><button class="button button--wide--mobile button-animate"><span class="button__text"><span>Поиск</span></span>
 									<div class="button__icon"><svg class="button__svg arrow-blue" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd" d="M9.72386 6.66672H0V5.33338H9.72386L5.5286 1.13812L6.4714 0.195312L12.2761 6.00005L6.4714 11.8048L5.5286 10.862L9.72386 6.66672Z" fill="white"></path>
 										</svg></div>

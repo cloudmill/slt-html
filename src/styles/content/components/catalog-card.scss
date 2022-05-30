@@ -5,6 +5,8 @@
   position: relative;
   z-index: 0;
 
+  display: block;
+
   background: var(--color-light-gray);
   transition: $transition;
   overflow: hidden;
@@ -25,7 +27,11 @@
   }
 
   &:hover {
-    background: var(--color-darken-white);
+    // background: var(--color-darken-white);
+
+    #{$comp}__title {
+      color: var(--color);
+    }
 
     &::after {
       transform: none;
@@ -54,9 +60,9 @@
     @include fsl(32px, 100%);
     transition: $transition;
 
-    &:hover {
-      color: var(--color);
-    }
+    // &:hover {
+    //   color: var(--color);
+    // }
   }
 
   &__caption {

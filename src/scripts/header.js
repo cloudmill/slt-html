@@ -147,14 +147,23 @@ import { mediaQuery } from './mediaQueries'
           }
         }
   
-        if (event.target.classList.contains('header__panel-overlay')) {
-          setTimeout(() => {
-            modals.slideUp(500)
-          }, 500);
-          modals.removeClass('active')
-          headerButton.removeClass('active')
-          stateManager.classRemove()
-        }
+        // if (event.target.classList.contains('header__panel-overlay')) {
+          // setTimeout(() => {
+          //   modals.slideUp(500)
+          // }, 500);
+          // modals.removeClass('active')
+          // headerButton.removeClass('active')
+          // stateManager.classRemove()
+        // }
+      })
+
+      $('.header__panel-overlay').on('mouseenter', function() {
+        setTimeout(() => {
+          modals.slideUp(500)
+        }, 500);
+        modals.removeClass('active')
+        headerButton.removeClass('active')
+        stateManager.classRemove()
       })
     }
   })

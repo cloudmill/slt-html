@@ -252,13 +252,13 @@ mixin call-modal
     .call-modal__container 
       h4.call-modal__title 
         |Обратный звонок
-      form.form(action="/") 
+      form.form(action="/" data-parsley-validate) 
         .form__item 
-          +input(type="text" placeholder="Имя*")
+          +input#input(type="text" placeholder="Имя*" required)
         .form__item 
-          +input(type="number" placeholder="Телефон*")
+          +input#input(type="number" placeholder="Телефон*" required)
         .form__inner 
-          +checkbox
+          +checkbox(required)
         .form__inner 
           +form-button 
             |Отправить
@@ -285,7 +285,7 @@ mixin search-modal
           .search-modal__icon 
             +close-svg.search-modal__svg
         .search-modal__col
-          button.button.button--wide--mobile
+          button.button.button--wide--mobile.button-animate
             span.button__text
               span
                 |Поиск

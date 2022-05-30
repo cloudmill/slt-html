@@ -169,6 +169,24 @@ mixin header
         ]
       .container 
         .header__panel-overlay
+        .header__cards(data-header-modal='cards')
+          .header__cards-grid
+            each item in cards
+              a.catalog-card(class=item.class href="#")
+                .catalog-card__container 
+                  .catalog-card__title 
+                    |#{item.title}
+                  .catalog-card__caption 
+                    |#{item.text}
+                  ul.catalog-card__list
+                    each text in item.items 
+                      li.catalog-card__item(data-category-item='')
+                        object
+                          a.catalog-card__link(href="#" data-header-category='' data-link='') 
+                            |#{text}
+                  .catalog-card__images 
+                    each img in item.images
+                      img.catalog-card__img(src=img, alt="" data-category-img='')
         .header__dropdown(data-header-modal='service')
           .header__dropdown-container
             ul.header__dropdown-list
@@ -176,23 +194,6 @@ mixin header
                 li.header__dropdown-item 
                   a.header__dropdown-link(href="#" data-link='') 
                     |#{item}
-        .header__cards(data-header-modal='cards')
-          .header__cards-grid
-            each item in cards
-              .catalog-card(class=item.class)
-                .catalog-card__container 
-                  a.catalog-card__title(href="#") 
-                    |#{item.title}
-                  .catalog-card__caption 
-                    |#{item.text}
-                  ul.catalog-card__list
-                    each text in item.items 
-                      li.catalog-card__item(data-category-item='')
-                        a.catalog-card__link(href="#" data-header-category='' data-link='') 
-                          |#{text}
-                  .catalog-card__images 
-                    each img in item.images
-                      img.catalog-card__img(src=img, alt="" data-category-img='')
         .header__panel-spoiler(data-header-modal='0')
           .header__panel-inner 
             ul.header__panel-list

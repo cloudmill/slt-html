@@ -13,11 +13,12 @@ block footer
 block content
   .test-frame
     .swiper-container.swiper-container--visible.swiper-container--visible.swiper-container--slide-width-auto.swiper-container--slide-height-max
-      .swiper-wrapper 
-        .swiper-slide
-          a.main-page__slider-slide(href="#" data-link='')
-            .main-page__slider-image 
-              img.main-page__slider-img(src='assets/images/main-slide-1.webp', alt="")
-            h5.main-page__slider-title 
-              |qweasd
+      .swiper-wrapper
+        - for (i = 0; i < 20; i++) 
+          .swiper-slide
+            a.main-page__slider-slide(href="#" data-link='')
+              .main-page__slider-image 
+                img.main-page__slider-img(src='assets/images/main-slide-1.webp', alt="")
+              h5.main-page__slider-title 
+                |qweasd
     
