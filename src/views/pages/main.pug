@@ -45,7 +45,8 @@ block content
         .main-page__video-right
         .main-page__video-icon(data-decrease-main='')
           +about-logo-svg.main-page__video-svg
-        video.main-page__video-player(src="assets/videos/slt_main.mp4" loop muted data-aos='fade-down')
+        .main-page__video-container
+          video.main-page__video-player(src="assets/videos/slt_main.mp4" loop muted data-aos='fade-down')
     section.main-page__section 
       .main-page__section-grid 
         +product-cards

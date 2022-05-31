@@ -1,7 +1,7 @@
 .button-icon {
   $comp: &;
 
-  padding: getRem(18px) getRem(25px);
+  padding: getRem(18px) getRem(23px);
   @media (max-width: ($breakpoint - 1px)) {
     padding: getRem(10px) getRem(16px);
   }

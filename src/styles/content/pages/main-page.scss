@@ -73,7 +73,7 @@
       height: 100vw;
     }
 
-    overflow: hidden;
+    // overflow: hidden;
   }
   &__video-left {
     position: absolute;
@@ -123,14 +123,14 @@
     position: absolute;
     z-index: 2;
     left: 50%;
-    top: 50%;
+    top: 0;
     transform: translate(-50%, -50%);
 
     display: flex;
     align-items: center;
     justify-content: center;
-    width: getRem(754px);
-    height: getRem(620px);
+    width: getRem(586px);
+    height: getRem(482px);
     @media (max-width: ($breakpoint - 1px)) {
       width: getRem(97px);
       height: getRem(80px);
@@ -141,6 +141,12 @@
   &__video-svg {
     width: 100%;
     height: 100%;
+  }
+  &__video-container {
+    position: relative;
+
+    height: 100%;
+    overflow: hidden;
   }
 
   &__cooperation {
