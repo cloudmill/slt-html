@@ -48,22 +48,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (catalogButton) {
     window.addEventListener('click', event => {
-      const target = event.target.closest('[data-catalog-button]')
+      const target = event.target
 
-      if (target) {
+      if (target.closest('[data-catalog-button]')) {
         const cell = target.closest('[data-table-cell]')
-        const text = target.querySelector('.catalog-page__table-add')
         const caption = cell.querySelector('[data-table-caption]')
         const input = cell.querySelector('[data-table-input]')
 
-        if (cell.classList.contains('active')) {
-          text.textContent = 'Добавить'
-          cell.classList.remove('active')
-        } else {
-          text.textContent = 'Изменить'
-          cell.classList.add('active')
-          caption.textContent = `Добавлено: ${input.value}`
-        }
+        cell.classList.add('active')
+        cell.classList.add('input-hide')
+        caption.textContent = `${input.value}`
+      }
+
+      if (target.closest('[data-catalog-change]')) {
+        const cell = target.closest('[data-table-cell]')
+        
+        cell.classList.remove('input-hide')
       }
     })
   }

@@ -323,18 +323,28 @@
       width: calc(#{$col-part-d} * 2);
     }
 
-    
     color: var(--color-gray);
     font-weight: 500;
 
     &:last-child {
       padding-right: getRem(32px);
 
-      width: calc(#{$col-part-d} * 3 - #{$col-gap});
+      flex-grow: 1;
+
       color: var(--color-black);
     }
 
     &.active {
+      
+      #{$comp}__table-button {
+        display: none;
+      }
+      #{$comp}__change {
+        display: flex;
+      }
+    }
+
+    &.input-hide {
       #{$comp}__table-input {
         display: none;
       }
@@ -403,6 +413,9 @@
 
     &:nth-child(1) {
       width: calc(#{$col-part-d} * 2);
+    }
+    &:nth-child(2) {
+      flex-grow: 1;
     }
   }
   &__table-button {
@@ -511,12 +524,34 @@
   &__table-caption {
     display: none;
 
+    color: var(--color-blue);
     font-weight: 400;
-    
     @include fsl(20px, 130%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px, 130%);
     }
+  }
+
+  &__change {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__change-btn {
+    padding: getRem(16px) getRem(51px);
+
+    background: var(--color-borders);
+    border-radius: 60px;
+    @include fsl(14px);
+  }
+  &__change-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__change-svg {
+    width: getRem(24px);
+    height: getRem(24px);
   }
 
   &__block {

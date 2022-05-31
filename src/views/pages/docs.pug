@@ -47,6 +47,7 @@ block content
                             |#{item.title}
                         .docs-page__col
                           .docs-page__grid 
+                            +download-card.download-card--big(title = 'Сертификат соответствия № РОСС RU.АГ81.Н09372')
                             - for (i = 0; i < item.count; i++)
                               +download-card.download-card--big(title = 'Трубы')
               .docs-page__button(data-aos='fade-up') 

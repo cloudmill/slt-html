@@ -456,4 +456,12 @@
     transition: $transition;
     transform-origin: center;
   }
+
+  &__wrapper {
+    margin-top: getRem(60px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: getRem(32px);
+    }
+    display: flex;
+  }
 }

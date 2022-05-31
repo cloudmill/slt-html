@@ -37,8 +37,12 @@ mixin accordion
                   |#{item}
         .accordion__block 
           .accordion__button 
-            +link-right.button--wide--mobile(data-fancy-button='work1')
-              |Откликнуться
+            a.button.button-animate.button--wide--mobile(data-fancy-button='work1')
+              .button__text
+                span
+                  |Откликнуться
+              .button__icon
+                +plus-svg.button__svg
 
 mixin accordion-big
   -
@@ -175,3 +179,10 @@ mixin accordion-simple
               li.accordion__item 
                 .list-item
                   |#{item}
+        .accordion__wrapper
+          .button.button.button--wide--mobile.button-animate(data-scroll='#form')
+            .button__text
+              span
+                |Оставить заявку
+            .button__icon 
+              +big-arrow-svg.button__svg

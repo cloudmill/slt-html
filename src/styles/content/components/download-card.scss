@@ -33,13 +33,6 @@
     @media (max-width: ($breakpoint - 1px)) {
       min-height: getRem(96px);
     }
-
-    #{$comp}__bot {
-      margin-top: 0;
-      @media (max-width: ($breakpoint - 1px)) {
-        margin-top: getRem(24px);
-      }
-    }
   }
 
   &__top {
