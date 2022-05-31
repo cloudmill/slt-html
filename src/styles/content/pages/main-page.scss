@@ -916,8 +916,6 @@
     overflow: hidden;
   }
   &__slider-slide {
-    // margin-right: 80px;
-
     display: block;
 
     width: calc(#{$col-part-d} * 4 - #{$col-gap});
@@ -946,7 +944,7 @@
   }
   &__slider-img {
     object-fit: cover;
-    will-change: transform;
+    transform-origin: left center;
     transition: $transition;
   }
   &__slider-title {

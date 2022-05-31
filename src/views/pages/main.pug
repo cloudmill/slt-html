@@ -153,9 +153,9 @@ block content
                         |#{item.title}
     section.section
       .container 
-        h3.main-page__title
+        h3.main-page__title(data-parallax-container='2') 
           |#[span.word-span #[span(data-aos='fade-up') Помощь]] #[span.word-span #[span(data-aos='fade-up') в инженерных]] #[span.word-span #[span(data-aos='fade-up') расчетах]]
-        .section__block(data-parallax-container='2') 
+        .section__block
           .main-page__calculator 
             each item, i in ['Расчет компенсаторов #[br] для систем SLT AQUA', 'Расчет компенсаторов #[br] для систем SLT BLOCKFIRE', 'Расчета удельных гидравлических потерь трубопроводов  SLT AQUA']
               a.main-page__calculator-link(href="#" class=(i === 1 ? 'red' : 'blue'))
