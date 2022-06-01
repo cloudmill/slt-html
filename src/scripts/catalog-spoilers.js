@@ -26,6 +26,8 @@
             filtersTop.addClass('darken')
             $(`[data-filters-dropdown=${id}]`).slideDown()
           }
+
+          button.toggleClass('active')
         }
       })
     }

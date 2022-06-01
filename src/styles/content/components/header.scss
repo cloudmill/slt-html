@@ -314,7 +314,6 @@
     position: absolute;
     z-index: 1;
 
-    // border: 1px solid transparent;
     border-radius: 18px;
     transition: $transition;
     background: var(--color-white);
@@ -322,7 +321,7 @@
     &::before {
       content: "";
       @include cover;
-      z-index: 1;
+      z-index: 0;
 
       border: 1px solid transparent;
       transition: $transition;
