@@ -314,13 +314,26 @@
     position: absolute;
     z-index: 1;
 
-    border: 1px solid transparent;
+    // border: 1px solid transparent;
     border-radius: 18px;
     transition: $transition;
     background: var(--color-white);
 
+    &::before {
+      content: "";
+      @include cover;
+      z-index: 1;
+
+      border: 1px solid transparent;
+      transition: $transition;
+      border-radius: 18px;
+    }
+
     &.active {
-      border-color: var(--color-blue);
+
+      &::before {
+        border-color: var(--color-blue);
+      }
 
       #{$comp}__feedback-list {
         // transition-delay: 0.4s;
