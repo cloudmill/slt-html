@@ -7,7 +7,7 @@ include ../components/product-cards
 include ../components/slider-buttons
 
 
-block loader 
+block loader
   +loader
 
 
@@ -126,7 +126,7 @@ block content
               .main-page__cooperation-button
                 +link-right.button--color-white 
                   |Сотрудничество
-    section.section.section--overflow(data-parallax-container='1')
+    section.section.section--overflow(data-aos='fade-up')
       .container 
         .main-page__top
           .main-page__top-row 
@@ -139,19 +139,18 @@ block content
           .main-page__top-button(data-aos='fade-up') 
             +link-right 
               |Все объекты
-        .main-page__slider(data-aos='fade-up')
+        .main-page__slider
           .main-page__slider-controls
             +slider-buttons(prev = '11' next = '12')
           .swiper-container.swiper-container--visible.swiper-container--visible.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='main' data-slider-prev='11' data-slider-next='12')
             .swiper-wrapper 
-              - for (i = 0; i < 3; i++)
-                each item in ddata.slider
-                  .swiper-slide 
-                    a.main-page__slider-slide(href="#" data-link='')
-                      .main-page__slider-image 
-                        img.main-page__slider-img(src=item.img, alt="")
-                      h5.main-page__slider-title 
-                        |#{item.title}
+              each item in ddata.slider
+                .swiper-slide 
+                  a.main-page__slider-slide(href="#" data-link='')
+                    .main-page__slider-image 
+                      img.main-page__slider-img(src=item.img, alt="")
+                    h5.main-page__slider-title 
+                      |#{item.title}
     section.section
       .container 
         h3.main-page__title(data-parallax-container='2') 

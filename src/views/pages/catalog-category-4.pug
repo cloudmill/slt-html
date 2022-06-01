@@ -37,36 +37,6 @@ block content
                 li.filters__headings-item
                   a.filters__heading(href="#" data-link='')
                     |#{item}
-                  .filters__icon(data-filters-button='q1')
-                    +arrow-svg.filters__svg
-            .filters__container
-              .filters__dropdown(data-filters-dropdown='q1')
-                ul.filters__list
-                  each item in ['Муфты', 'Отоводы', 'Тройники', 'Крестовины', 'Обвод', 'Бурт', 'Фланец', 'Загрушка']
-                    li.filters__item
-                      a.filters__link(href="#" data-link='') 
-                        |#{item}
-        .section__block(data-aos='fade-up')
-          .button-wrapper
-            .button.button--wide.button-animate(data-fancy-button='c1')
-              .button__text
-                span
-                  |Области применения
-              .button__icon 
-                +plus-svg.button__svg
-        .category-list(data-list-container='')
-          .category-list__row 
-            .category-list__col
-              .category-list__button
-                +refresh-button.button--wide--mobile(data-clear-categories='')
-                  |Сбросить
-            .category-list__col
-              template(data-catalog-template='')
-                li.category-list__item(data-category='')
-                  .category-list__text 
-                  .category-list__icon(data-delete-category='')
-                    +close-svg.category-list__svg
-              ul.category-list__list(data-catalog-list='')
         .section__block.catalog
           .catalog-page__grid 
             - for (i = 0; i < 16; i++)

@@ -51,7 +51,7 @@ block content
             .button.button--wide.button-animate(data-fancy-button='c1')
               .button__text
                 span
-                  |Области применения
+                  |Выбрать область применения
               .button__icon 
                 +plus-svg.button__svg
         .category-list(data-list-container='')
@@ -71,7 +71,7 @@ block content
           .catalog-page__grid 
             - for (i = 0; i < 16; i++)
               .aos(data-aos='fade-up')
-                +card
+                +card(img = 'assets/images/slt-pert.webp')
           .catalog__wrapper
             .catalog__loader
   +catalog-modal

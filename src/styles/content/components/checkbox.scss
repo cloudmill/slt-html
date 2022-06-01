@@ -1,6 +1,9 @@
 .checkbox {
   $comp: &;
 
+  display: flex;
+  align-items: center;
+
   &__label {
     position: relative;
     z-index: 0;
@@ -70,6 +73,13 @@
   }
 
   &__link {
+    margin-left: 3px;
+
+    font-weight: 500;
+    @include fsl(12px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(10px, 100%);
+    }
     color: var(--color-blue);
     transition: $transition;
     border-bottom: 1px solid transparent;

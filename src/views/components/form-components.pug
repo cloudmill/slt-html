@@ -25,7 +25,10 @@ mixin checkbox
           |#{attributes.text}
       else
         .checkbox__text 
-          |Даю согласие на обработку #[a.checkbox__link(href="#") персональных данных]
+          |Даю согласие на обработку 
+    if (!attributes.text)
+      a.checkbox__link(href="#") 
+        |персональных данных
 
 mixin radio-button 
   .radio

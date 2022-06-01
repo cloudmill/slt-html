@@ -106,7 +106,7 @@ import { mediaQuery } from './mediaQueries'
         closeAll: () => {
           modals.removeClass('active')
           headerButton.removeClass('active')
-          modals.slideUp(500)
+          modals.slideUp(300)
         },
         classRemove: () => {
           $('.body').removeClass('body--hidden')
@@ -125,8 +125,8 @@ import { mediaQuery } from './mediaQueries'
           if (button.classList.contains('active')) {
             button.classList.remove('active')
             setTimeout(() => {
-              headerModal.slideUp(500)
-            }, 500);
+              headerModal.slideUp(300)
+            }, 300);
 
             headerModal.removeClass('active')
             stateManager.classRemove()
@@ -136,7 +136,7 @@ import { mediaQuery } from './mediaQueries'
             button.classList.add('active')
             $('.body').addClass('body--hidden')
             $('.header__panel').addClass('header__panel--active')
-            headerModal.slideDown(500)
+            headerModal.slideDown(300)
             headerModal.addClass('active')
             
             if (id !== 'cards' && id !== 'service') {
@@ -146,21 +146,12 @@ import { mediaQuery } from './mediaQueries'
             }
           }
         }
-  
-        // if (event.target.classList.contains('header__panel-overlay')) {
-          // setTimeout(() => {
-          //   modals.slideUp(500)
-          // }, 500);
-          // modals.removeClass('active')
-          // headerButton.removeClass('active')
-          // stateManager.classRemove()
-        // }
       })
 
       $('.header__panel-overlay').on('mouseenter', function() {
         setTimeout(() => {
-          modals.slideUp(500)
-        }, 500);
+          modals.slideUp(300)
+        }, 300);
         modals.removeClass('active')
         headerButton.removeClass('active')
         stateManager.classRemove()

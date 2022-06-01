@@ -2,6 +2,7 @@
   $comp: &;
 
   border-top: 1px solid $rgba-borders;
+  overflow-y: hidden;
 
   &--order {
     padding-bottom: getRem(105px);

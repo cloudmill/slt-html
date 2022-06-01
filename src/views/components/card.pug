@@ -8,7 +8,10 @@ mixin card
           .tooltip__container
             |#{item}
     .card__container
-      img(src="assets/images/card-1.webp", alt="")
+      if (attributes.img)
+        img(src=attributes.img, alt="")
+      else
+        img(src="assets/images/card-1.webp", alt="")
     .card__bot 
       .card__title 
         |Крестовина SLT AQUA PP-R
