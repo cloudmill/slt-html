@@ -320,6 +320,7 @@ function add2basket() {
                 success: function (r) {
                     console.log(r);
                     if (r.success == true) {
+                        $(document).find('[data-type=basket_count]').empty();
                         $(document).find('[data-type=basket_count]').html(r.count);
                     }
                 },
