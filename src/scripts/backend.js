@@ -320,9 +320,6 @@ function add2basket() {
                 success: function (r) {
                     console.log(r);
                     if (r.success == true) {
-                        console.log('add true');
-                        console.log(r);
-                        console.log($(document).find('[data-type=basket_count]'));
                         $(document).find('[data-type=basket_count]').empty();
                         $(document).find('[data-type=basket_count]').html(r.count);
                     }
