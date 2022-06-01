@@ -88,10 +88,10 @@ mixin footer
                   li.footer__item(data-aos='fade-up') 
                     a.footer__link(href="#" data-link='') 
                       |#{item}
-        .footer__bot
+        .footer__bot(data-aos='fade-up')
           .footer__row 
             .footer__col
-              .footer__bot-item(data-aos='fade-up')
+              .footer__bot-item
                 .footer__wrapper
                   a.footer__phone(href="tel:" + data.phone) 
                     h4
@@ -105,20 +105,20 @@ mixin footer
                       +instagram-svg.footer__socials-svg
             .footer__col 
               .footer__contacts 
-                .footer__contacts-item(data-aos='fade-up') 
+                .footer__contacts-item
                   .footer__label.footer__label--sm
                     |По вопросам сотрудничества
                   a.footer__mail(href="mailto:info@slt-aqua.ru") 
                     h5
                       |info@slt-aqua.ru
-                .footer__contacts-item(data-aos='fade-up')
+                .footer__contacts-item
                   .footer__label.footer__label--sm
                     |Для заявок на продукцию
                   a.footer__mail(href="mailto:order@slt-aqua.ru") 
                     h5
                       |order@slt-aqua.ru
             .footer__col 
-              .footer__bot-item(data-aos='fade-up')
+              .footer__bot-item
                 a.footer__policy(href="#") 
                   |Политика конфиденциальности
                 .footer__corps 

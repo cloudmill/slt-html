@@ -56,14 +56,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const input = cell.querySelector('[data-table-input]')
 
         cell.classList.add('active')
-        cell.classList.add('input-hide')
         caption.textContent = `${input.value}`
       }
 
       if (target.closest('[data-catalog-change]')) {
         const cell = target.closest('[data-table-cell]')
         
-        cell.classList.remove('input-hide')
+        cell.classList.remove('active')
+      }
+      if (target.closest('[data-catalog-remove]')) {
+        const cell = target.closest('[data-table-cell]')
+        const input = cell.querySelector('[data-table-input]')
+        
+        target.closest('[data-table-item]').classList.remove('active')
+        cell.classList.remove('active')
+        console.log(input);
+        input.value = ''
       }
     })
   }

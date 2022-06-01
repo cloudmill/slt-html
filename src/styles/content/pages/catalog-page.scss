@@ -286,7 +286,8 @@
           }
 
           &:last-child {
-            padding: 21px 0;
+            padding: getRem(21px) 0;
+            padding-right: getRem(16px);
           }
         }
       }
@@ -335,21 +336,18 @@
     }
 
     &.active {
+      #{$comp}__table-input {
+        display: none;
+      }
+      #{$comp}__table-caption {
+        display: block;
+      }
       
       #{$comp}__table-button {
         display: none;
       }
       #{$comp}__change {
         display: flex;
-      }
-    }
-
-    &.input-hide {
-      #{$comp}__table-input {
-        display: none;
-      }
-      #{$comp}__table-caption {
-        display: block;
       }
     }
   }
@@ -538,11 +536,41 @@
     align-items: center;
   }
   &__change-btn {
+    position: relative;
+    z-index: 0;
     padding: getRem(16px) getRem(51px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(12px) 0;
+      
+      width: 100%;
+
+      text-align: center;
+    }
 
     background: var(--color-borders);
     border-radius: 60px;
+    overflow: hidden;
+    transition: $transition;
     @include fsl(14px);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px);
+    }
+
+    &::before {
+      content: "";
+      @include btn-before;
+      z-index: -1;
+
+      background: var(--color-blue);
+    }
+
+    &:hover {
+      color: var(--color-white);
+
+      &::before {
+        transform: none;
+      }
+    }
   }
   &__change-icon {
     display: flex;
@@ -552,6 +580,16 @@
   &__change-svg {
     width: getRem(24px);
     height: getRem(24px);
+
+    path {
+      transition: $transition;
+    }
+
+    &:hover {
+      path {
+        fill: var(--color-blue);
+      }
+    }
   }
 
   &__block {
@@ -635,10 +673,18 @@
       #{$comp}__table-caption {
         display: block;
       }
-      #{$comp}__table-icon {
+      #{$comp}__table-button {
         display: none;
       }
+      #{$comp}__block-buttons {
+        display: grid;
+      }
     }
+  }
+  &__block-buttons {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   &__grid {

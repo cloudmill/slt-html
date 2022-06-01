@@ -202,7 +202,7 @@
 
     &.active {
       #{$comp}__dropdown-list {
-        animation: fadeIn 0.5s $transition-timing-function 0.5s forwards;
+        animation: fadeIn 0.3s $transition-timing-function 0.5s forwards;
       }
     }
   }
@@ -216,7 +216,7 @@
     padding: getRem(40px) 0;
 
     opacity: 0;
-    animation: fadeOut 0.5s $transition-timing-function forwards;
+    animation: fadeOut 0.3s $transition-timing-function forwards;
     transition: $transition;
   }
   &__dropdown-item {
@@ -845,6 +845,7 @@
   }
 
   &__panel {
+    width: 100vw;
     
     &--active {
       #{$comp}__panel-overlay {
@@ -878,13 +879,13 @@
 
     &.active {
       #{$comp}__panel-list {
-        animation: fadeIn 0.5s $transition-timing-function 0.5s forwards;
+        animation: fadeIn 0.3s $transition-timing-function 0.5s forwards;
       }
     }
   }
   &__panel-list {
     opacity: 0;
-    animation: fadeOut 0.5s $transition-timing-function forwards;
+    animation: fadeOut 0.3s $transition-timing-function forwards;
     transition: $transition;
   }
   &__panel-item { 

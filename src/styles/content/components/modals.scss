@@ -297,6 +297,7 @@
   }
 
   &__box {
+    flex-shrink: 0;
     width: getRem(28px);
     height: getRem(28px);
     display: flex;

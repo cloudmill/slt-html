@@ -94,7 +94,6 @@
       }
       
       @media (min-width: $breakpoint) {
-        padding-left: getRem(20px);
 
         &::before {
           transform: none;
@@ -130,6 +129,7 @@
   }
   &__event-container {
     padding: getRem(20px) 0;
+    padding-left: getRem(20px);
     @media (max-width: ($breakpoint - 1px)) {
       padding: 0;
     }
