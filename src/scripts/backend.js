@@ -12,6 +12,7 @@ $(function () {
     add2basket();
     deleteBasket();
     changeLenBasket();
+    addresAdd2Order();
 });
 
 function workModal() {
@@ -400,7 +401,7 @@ function changeLenBasket() {
 
         console.log("change basket");
         console.log(data);
-        
+
         $.ajax({
             type: "POST",
             url: "/local/templates/main/include/ajax/basket.php",
@@ -432,6 +433,16 @@ function changeLenBasket() {
             error: function (r) {
                 console.debug(r);
             }
+        });
+    });
+}
+
+function addresAdd2Order() {
+    $(document).on("change", "[data-type=change-address]", function (e) {
+        e.preventDefault();
+
+        $(document).find("[data-uf=UF_ADDRES]").each(function () {
+            $(this).attr(required, "required");
         });
     });
 }
