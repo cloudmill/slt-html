@@ -170,5 +170,14 @@ import { mediaQuery } from './mediaQueries'
       btn.toggleClass('active')
       dropdown.slideToggle(400)
     })
+
+    $(window).on('mouseenter', event => {
+      const target = $(event.target).closest('[data-feedback-btn]')
+
+      if (!target.length) {
+        btn.removeClass('active')
+        dropdown.slideUp(400)
+      }
+    })
   })
 }

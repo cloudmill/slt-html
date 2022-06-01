@@ -328,6 +328,10 @@
       border-radius: 18px;
     }
 
+    .button::before {
+      transition: $transition;
+    }
+
     &.active {
 
       &::before {
