@@ -10,6 +10,8 @@ $(function () {
     videoModal();
     workModal();
     add2basket();
+    deleteBasket();
+    changeLenBasket();
 });
 
 function workModal() {
@@ -329,5 +331,107 @@ function add2basket() {
                 }
             });
         }
+    });
+}
+
+function deleteBasket() {
+    $(document).on("click", "[data-type=basket-delete]", function (e) {
+        e.preventDefault();
+
+        let thisObj = $(this),
+            id = thisObj.attr("data-id"),
+            type = 'delete',
+            data = {};
+
+        data['id'] = id;
+        data['type'] = type;
+
+        console.log("delete basket");
+
+        $.ajax({
+            type: "POST",
+            url: "/local/templates/main/include/ajax/basket.php",
+            dataType: "json",
+            data: data,
+            success: function (r) {
+                console.log(r);
+                if (r.success == true) {
+
+                    $(document).find('[data-type=basket_count]').empty();
+                    $(document).find('[data-type=basket_count]').html(r.count);
+
+                    $.ajax({
+                        method: "POST",
+                        url: window.location.href,
+                        data: {
+                            ajax: 1,
+                        },
+                        success: function (r) {
+                            $(document).find('[data-type=items-container-full]').empty();
+                            $(document).find('[data-type=items-container-full]').append($(r));
+                        },
+                        error: function (r) {
+                            console.debug(r);
+                        }
+                    });
+                }
+            },
+            error: function (r) {
+                console.debug(r);
+            }
+        });
+    });
+}
+
+function changeLenBasket() {
+    $(document).on("change", "[data-type=change-length-m]", function (e) {
+        e.preventDefault();
+
+        let thisObj = $(this),
+            id = thisObj.attr("data-id"),
+            length = thisObj.attr("data-length"),
+            val = thisObj.val(),
+            type = 'change',
+            data = {};
+
+        data['offer'] = id;
+        data['type'] = type;
+        data['count'] = val / length;
+
+        console.log("change basket");
+        console.log(data);
+        
+        $.ajax({
+            type: "POST",
+            url: "/local/templates/main/include/ajax/basket.php",
+            dataType: "json",
+            data: data,
+            success: function (r) {
+                console.log(r);
+                if (r.success == true) {
+
+                    $(document).find('[data-type=basket_count]').empty();
+                    $(document).find('[data-type=basket_count]').html(r.count);
+
+                    $.ajax({
+                        method: "POST",
+                        url: window.location.href,
+                        data: {
+                            ajax: 1,
+                        },
+                        success: function (r) {
+                            $(document).find('[data-type=items-container-full]').empty();
+                            $(document).find('[data-type=items-container-full]').append($(r));
+                        },
+                        error: function (r) {
+                            console.debug(r);
+                        }
+                    });
+                }
+            },
+            error: function (r) {
+                console.debug(r);
+            }
+        });
     });
 }
