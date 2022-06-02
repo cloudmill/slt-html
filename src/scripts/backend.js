@@ -150,7 +150,8 @@ function filterCheckbox() {
         const thisObj = $(this);
         let data = [],
             parent = thisObj.parents("[data-type=filter-parent]"),
-            count = 0;
+            count = 0,
+            arUrl = window.location.href.split('?');
 
         data = {
             ajax: 1,
@@ -171,15 +172,15 @@ function filterCheckbox() {
             }
         });
 
-        console.log(data);
-
         $.ajax({
             type: "POST",
-            url: window.location.href,
+            url: arUrl[0],
             data: data,
             success: function (r) {
                 $(document).find('[data-type=items-container-full]').empty();
                 $(document).find('[data-type=items-container-full]').append($(r));
+
+                console.log(window.location);
             },
             error: function (r) {
                 console.debug(r);
