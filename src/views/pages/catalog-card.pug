@@ -463,13 +463,21 @@ block content
             p.catalog-page__caption(data-aos='fade-up') 
               |Здесь вы можете сформировать список требуемых товаров. Наши менеджеры обработают заказ, рассчитают стоимость, найдут подходящего по всем параметрам поставщика и отправят вам коммерческое предложение.
         .catalog-page__colors 
-          .catalog-page__colors-item(data-aos='fade-up') 
+          .catalog-page__colors-item(data-aos='fade-up')
             .catalog-page__colors-text 
               |Цвет
             .catalog-page__colors-icon.tooltip.active
               +colors-light-svg.catalog-page__colors-svg.tooltip__icon 
               .tooltip__container 
                 |белый
+            .catalog-page__colors-icon.black.tooltip
+              +colors-light-svg.catalog-page__colors-svg.tooltip__icon
+              .tooltip__container 
+                |черный
+            .catalog-page__colors-icon.red.tooltip
+              +colors-light-svg.catalog-page__colors-svg.tooltip__icon 
+              .tooltip__container 
+                |красный
         .section__block
           .catalog-page__table.catalog-page__table--big(data-aos='fade-up')
             .catalog-page__table-head 
