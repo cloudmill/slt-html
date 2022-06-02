@@ -1,6 +1,6 @@
 // parallax
 {
-  $(() => {
+  $(window).on("load", function() {
     const parallaxItem = $('[data-parallax]');
 
     if (parallaxItem.length !== 0) {

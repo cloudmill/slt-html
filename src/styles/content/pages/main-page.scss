@@ -922,9 +922,10 @@
     overflow: hidden;
   }
   &__slider-slide {
-    display: block;
+    --shf: 4.9406564584124654e-324;
 
-    width: calc(#{$col-part-d} * 4 - #{$col-gap});
+    display: block;
+    width: calc((#{$col-part-d} * 4 - #{$col-gap} - 9.09px) * var(--shf) / var(--shf));
     @media (max-width: ($breakpoint - 1px)) {
       width: getRem(266px);
     }
@@ -950,7 +951,6 @@
   }
   &__slider-img {
     object-fit: cover;
-    transform-origin: left center;
     transition: $transition;
   }
   &__slider-title {
