@@ -179,8 +179,6 @@ function filterCheckbox() {
             success: function (r) {
                 $(document).find('[data-type=items-container-full]').empty();
                 $(document).find('[data-type=items-container-full]').append($(r));
-
-                console.log(window.location);
             },
             error: function (r) {
                 console.debug(r);
