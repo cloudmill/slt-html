@@ -508,7 +508,22 @@
       display: block;
     }
   }
+  &__slider-swipe {
+    
+
+    &:first-child {
+      #{$comp}__slider-slide {
+        padding-left: 0;
+      }
+    }
+    &:last-child {
+      #{$comp}__slider-slide {
+        padding-right: 0;
+      }
+    }
+  }
   &__slider-slide {
+    padding: 0 10px;
     position: relative;
     z-index: 0;
 

@@ -20,8 +20,8 @@ mixin about-slider
           .swiper-wrapper
             - for (j = 0; j < 2; j++) 
               - for (i = 0; i < 6; i++)
-                .swiper-slide
-                  .about-page__slider-slide 
+                .swiper-slide.about-page__slider-swipe
+                  .about-page__slider-slide
                     img.about-page__slider-img(src=`assets/images/about-slide-${i+1}.webp`, alt="")
             .swiper-slide 
               .about-page__slider-slide 

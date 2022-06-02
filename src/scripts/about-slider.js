@@ -16,7 +16,7 @@ import {mediaQuery} from './mediaQueries'
   
         swiper = new Swiper(swiperContainer[0], {
           slidesPerView: 'auto',
-          spaceBetween: 20,
+          spaceBetween: 0,
           slidesPerGroup: 2,
           allowTouchMove: false,
           speed: 500,
