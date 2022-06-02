@@ -39,3 +39,12 @@
   border-width: 10px 14px 0 14px;
   border-color: var(--color-white) transparent transparent transparent;
 }
+
+.tooltip-span {
+  margin-left: 1px;
+  transform: translateY(2px);
+
+  display: inline-block;
+
+  font-size: 10px;
+}
