@@ -512,25 +512,19 @@
     position: relative;
     z-index: 0;
 
-    width: getRem(283px);
-    height: 620px;
-    @media (max-width: ($breakpoint-xxl - 1px)) {
-      height: getRem(620px);
-      width: getRem(283px);
-    }
+    height: getRem(620px);
+    max-width: getRem(283px);
     @media (max-width: ($breakpoint - 1px)) {
-      width: getRem(267px);
+      max-width: getRem(267px);
       height: auto;
     }
 
+    will-change: auto;
     overflow: hidden;
     transition: 0.8s $transition-timing-function;
 
     &.active {
-      width: 892px;
-      @media (max-width: ($breakpoint-xxl - 1px)) {
-        width: getRem(892px);
-      }
+      max-width: getRem(892px);
     }
   }
   &__slider-container {
@@ -556,22 +550,9 @@
     transition: 1s $transition-timing-function;
   }
   &__slider-img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    @media (max-width: ($breakpoint - 1px)) {
-      position: static;
-      transform: none;
-      display: block;
-    }
-
-    max-width: none;
-    max-height: none;
-    @media (max-width: ($breakpoint - 1px)) {
-      max-width: 100%;
-      max-height: 100%;
-    }
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   &__slider-button {
     position: absolute;
