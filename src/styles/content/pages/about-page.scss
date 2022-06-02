@@ -527,7 +527,7 @@
     z-index: 0;
 
     height: getRem(620px);
-    max-width: getRem(283px);
+    max-width: getRem(303px);
     @media (max-width: ($breakpoint - 1px)) {
       max-width: getRem(267px);
       height: auto;
