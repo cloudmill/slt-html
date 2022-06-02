@@ -24,10 +24,9 @@
     #{$comp}__list {
       padding-bottom: 0;
       column-gap: getRem(21px);
-      row-gap: 8px;
+      row-gap: 4px;
       @media (max-width: ($breakpoint - 1px)) {
         column-gap: 17px;
-        row-gap: 4px;
         flex-wrap: wrap;
         flex-shrink: 1;
       }

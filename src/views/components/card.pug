@@ -14,4 +14,7 @@ mixin card
         img(src="assets/images/card-1.webp", alt="")
     .card__bot 
       .card__title 
-        |Крестовина SLT AQUA PP-R
+        if (attributes.title)
+          |#{attributes.title}
+        else
+          |Крестовина SLT AQUA PP-R

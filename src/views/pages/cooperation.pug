@@ -50,7 +50,7 @@ block content
         +breadcrumbs(page = "Условия сотрудничества")
         .section__inner 
           h1 
-            |#[span.word-span #[span(data-aos='fade-up') Условия сотрудничества]]
+            |#[span.word-span #[span Условия сотрудничества]]
     section.section 
       .container 
         +nav(items = ['Условия сотрудничества', 'Рекламная поддержка', ] active = 0)
@@ -58,12 +58,12 @@ block content
           .section__wrapper 
             .section__row 
               .section__col
-                h5.section__label(data-aos='fade-up')
+                h5.section__label
                   |Для нас важно
               .section__col
                 ul.cooperation-page__list 
                   each item in ddata.list
-                    li.cooperation-page__list-item(data-aos='fade-up') 
+                    li.cooperation-page__list-item 
                       h2.cooperation-page__list-title 
                         |#{item.title}
                       .cooperation-page__list-wrapper
@@ -74,76 +74,76 @@ block content
         .container 
           .section__row 
             .section__col
-              h5.section__label(data-aos='fade-up')
+              h5.section__label
                 |Условия работы
             .section__col
               ul.cooperation-page__accordions
                 each item in ['svg/bag.svg', 'svg/accordion-2.svg', 'svg/accordion-3.svg', 'svg/accordion-4.svg',]
-                  li.cooperation-page__accordion(data-aos='fade-up')
+                  li.cooperation-page__accordion
                     +accordion-simple(url = item)
     section.section#form
       .container 
         h3.cooperation-page__title
-            |#[span.word-span #[span(data-aos='fade-up') Оставить заявку]] #[span.word-span #[span(data-aos='fade-up') на]] #[span.word-span #[span(data-aos='fade-up') сотрудничество]]
+            |#[span.word-span #[span Оставить заявку]] #[span.word-span #[span на]] #[span.word-span #[span сотрудничество]]
         .section__block 
           form.form(action="/" data-parsley-validate) 
             .cooperation-page__row
               .cooperation-page__col
 
-                .form__item(data-aos='fade-up')
+                .form__item
                   +input#input(type="text" placeholder="Имя*" required)
                 
-                .form__item(data-aos='fade-up')
+                .form__item
                   +input#input(type="mail" placeholder="E-mail*" required)
 
-                .form__item(data-aos='fade-up')
+                .form__item
                   +input#input(type="tel" placeholder="Телефон*" data-tel-input required)
 
                 each item in ddata.inputs 
-                  .form__item(data-aos='fade-up') 
+                  .form__item 
                     +input#input(type = item.type placeholder = item.placeholder required)
 
-                .form__item(data-aos='fade-up')
+                .form__item
                   +input#input(type="text" placeholder="Сайт компании")
 
-                .form__item(data-aos='fade-up')
+                .form__item
                   +input#input(type="text" placeholder="Территория продаж*" required)
 
-                .form__item(data-aos='fade-up')
+                .form__item
                   textarea.form__input.form__input--tall#input(type="text" placeholder="Оборот компании по полипропиленовым системам в год, руб.")
 
-                .form__item(data-aos='fade-up')
+                .form__item
                   +textarea#input(placeholder = "Как вы о нас узнали?")
                 .cooperation-page__desktop
                   .form__wrapper
-                    .form__row(data-aos='fade-up') 
+                    .form__row 
                       .form__col
                         +checkbox(id="checkbox" required="")
                       .form__col
                         +form-button
                           |Отправить
               .cooperation-page__col
-                h6.cooperation-page__label(data-aos='fade-up') 
+                h6.cooperation-page__label 
                   |Укажите
                 each item, i in ddata.right
                   div(class=(i === 0 ? "form__wrapper" : "section__block")) 
-                    h5(data-aos='fade-up')
+                    h5
                       |#{item.title}
                     if (item.items)
-                      .cooperation-page__inner(data-aos='fade-up') 
+                      .cooperation-page__inner 
                         ul.form__list
                           each text in item.items 
                             li.form__box 
                               +checkbox(text = text)
                     else  
-                      .form__wrapper(data-aos='fade-up')
+                      .form__wrapper
                         .cooperation-page__buttons
                           .cooperation-page__buttons-item
                             +radio-button(name = item.name text = 'Да')
                           .cooperation-page__buttons-item
                             +radio-button(name = item.name text = 'Нет')
                 .cooperation-page__mobile
-                  .form__wrapper(data-aos='fade-up')
+                  .form__wrapper
                     .form__row 
                       .form__col
                         +checkbox 

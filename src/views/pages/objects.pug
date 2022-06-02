@@ -26,10 +26,10 @@ block content
         +breadcrumbs(page = "Объекты")
         .section__inner 
           h1 
-            |#[span.word-span #[span(data-aos='fade-up') Объекты]]
+            |#[span.word-span #[span Объекты]]
     section.section.section--md 
       .container 
-        .test-button(data-aos='fade-up')
+        .test-button
           +link-right(href='/slt-html/dist/about' data-link='')
             |О компании
     section.section
@@ -42,7 +42,7 @@ block content
               +plus-svg.objects-page__top-svg
           .objects-page__top-grid
             each item in ddata
-              .objects-page__top-item(data-aos='fade-up')
+              .objects-page__top-item
                 .select-custom(data-objects-accordion='')
                   .select-custom__button(data-accordion-button='')
                     .select-custom__text 
@@ -76,7 +76,7 @@ block content
               ul.category-list__list(data-catalog-list='')
         .section__block
           .objects-page__grid
-            .objects-page__grid-item(data-aos='fade-up') 
+            .objects-page__grid-item 
               a.objects-page__card(href="#" data-link='')
                 .objects-page__card-container
                   .objects-page__card-img-container
@@ -88,7 +88,7 @@ block content
                 .objects-page__card-text 
                   |Санкт-Петербург
             - for (i = 0; i < 11; i++)
-              .objects-page__grid-item(data-aos='fade-up') 
+              .objects-page__grid-item 
                 a.objects-page__card(href="#" data-link='')
                   .objects-page__card-container
                     .objects-page__card-img-container

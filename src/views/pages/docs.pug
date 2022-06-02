@@ -20,7 +20,7 @@ block content
         +breadcrumbs(itmes = ['Техническая информация'] page = "Разрешительная документация")
         .section__inner 
           h1 
-            |#[span.word-span #[span(data-aos='fade-up') Техническая информация]]
+            |#[span.word-span #[span Техническая информация]]
     section.section 
       .container 
         +nav(items = ['Разрешительная документация', 'Программы для проектировщиков', 'Информационные материалы'] active = 0)
@@ -29,18 +29,18 @@ block content
             .docs-page__block
               .docs-page__top 
                 .docs-page__top-row 
-                  .docs-page__col(data-aos='fade-up')
+                  .docs-page__col
                     .docs-page__icon
                       +card-logo.docs-page__svg
                   h2.docs-page__top-title
-                    |#[span.word-span #[span(data-aos='fade-up') SLT AQUA]]
-                .docs-page__top-button(data-aos='fade-up') 
+                    |#[span.word-span #[span SLT AQUA]]
+                .docs-page__top-button 
                   +download-btn
                     |Скачать все документы
               .docs-page__block-item
                 ul.docs-page__list
                   each item in ddata
-                    li.docs-page__list-item(data-aos='fade-up')
+                    li.docs-page__list-item
                       .docs-page__row 
                         .docs-page__col
                           .docs-page__heading 
@@ -50,7 +50,7 @@ block content
                             +download-card.download-card--big(title = 'Сертификат соответствия № РОСС RU.АГ81.Н09372')
                             - for (i = 0; i < item.count; i++)
                               +download-card.download-card--big(title = 'Трубы')
-              .docs-page__button(data-aos='fade-up') 
+              .docs-page__button 
                 .button-wrapper
                   +download-btn.button--wide--mobile
                     |Скачать все документы
@@ -58,18 +58,18 @@ block content
             .docs-page__block
               .docs-page__top 
                 .docs-page__top-row 
-                  .docs-page__col(data-aos='fade-up')
+                  .docs-page__col
                     .docs-page__icon
                       +blockfire-svg.docs-page__svg
                   h2.docs-page__top-title
-                    |#[span.word-span #[span(data-aos='fade-up') SLT BLOCKFIRE]]
-                .docs-page__top-button(data-aos='fade-up') 
+                    |#[span.word-span #[span SLT BLOCKFIRE]]
+                .docs-page__top-button 
                   +download-btn
                     |Скачать все документы
               .docs-page__block-item
                 ul.docs-page__list
                   each item in ddata
-                    li.docs-page__list-item(data-aos='fade-up')
+                    li.docs-page__list-item
                       .docs-page__row 
                         .docs-page__col
                           .docs-page__heading 
@@ -78,7 +78,7 @@ block content
                           .docs-page__grid 
                             - for (i = 0; i < item.count; i++)
                               +download-card.download-card--big(title = 'Трубы')
-              .docs-page__button(data-aos='fade-up') 
+              .docs-page__button 
                 .button-wrapper
                   +download-btn.button--wide--mobile
                     |Скачать все документы
@@ -86,18 +86,18 @@ block content
             .docs-page__block
               .docs-page__top 
                 .docs-page__top-row 
-                  .docs-page__col(data-aos='fade-up')
+                  .docs-page__col
                     .docs-page__icon
                       +pe-rt-svg.docs-page__svg
                   h2.docs-page__top-title
-                    |#[span.word-span #[span(data-aos='fade-up') SLT PE-RT]]
-                .docs-page__top-button(data-aos='fade-up') 
+                    |#[span.word-span #[span SLT PE-RT]]
+                .docs-page__top-button 
                   +download-btn
                     |Скачать все документы
               .docs-page__block-item
                 ul.docs-page__list
                   each item in ddata
-                    li.docs-page__list-item(data-aos='fade-up')
+                    li.docs-page__list-item
                       .docs-page__row 
                         .docs-page__col
                           .docs-page__heading 
@@ -106,7 +106,7 @@ block content
                           .docs-page__grid 
                             - for (i = 0; i < item.count; i++)
                               +download-card.download-card--big(title = 'Трубы')
-              .docs-page__button(data-aos='fade-up') 
+              .docs-page__button 
                 .button-wrapper
                   +download-btn.button--wide--mobile
                     |Скачать все документы

@@ -27,20 +27,20 @@ block content
         +breadcrumbs(page = "Расчет компенсаторов для систем SLT AQUA")
         .section__inner 
           h1
-            |#[span.word-span #[span(data-aos='fade-up') Расчет]] #[span.word-span #[span(data-aos='fade-up') удельных]] #[span.word-span #[span(data-aos='fade-up') гидравлических ]] #[br.calculator-page__br] #[span.whitespace ] #[span.word-span #[span(data-aos='fade-up') потерь]] #[span.word-span #[span(data-aos='fade-up') трубопроводов]] #[span.word-span #[span(data-aos='fade-up') СЛТ Аква]]
-          .calculator-page__text(data-aos='fade-up') 
+            |#[span.word-span #[span Расчет]] #[span.word-span #[span удельных]] #[span.word-span #[span гидравлических ]] #[br.calculator-page__br] #[span.whitespace ] #[span.word-span #[span потерь]] #[span.word-span #[span трубопроводов]] #[span.word-span #[span СЛТ Аква]]
+          .calculator-page__text 
             |С учетом местных сопротивлений по СП 40 102
     section.section
       .container 
         ul.calculator-page__list
           each item in ddata.list
-            li.calculator-page__list-item(data-aos='fade-up') 
+            li.calculator-page__list-item 
               .calculator-page__caption 
                 |#{item.caption}
               .calculator-page__list-text 
                 |#{item.text}
         form.calculator-page__calculate.form(action="/")
-          .calculator-page__calculate-col(data-aos='fade-up') 
+          .calculator-page__calculate-col 
             .calculator-page__calculate-grid
               each item in ddata.form
                 .calculator-page__calculate-item
@@ -82,7 +82,7 @@ block content
                         .button-wrapper
                           +download-btn.button--wide--mobile
                             |Скачать расчет в PDF
-          .calculator-page__calculate-col(data-aos='fade-up') 
+          .calculator-page__calculate-col 
             .calculator-page__grid 
               .calculator-page__grid-heading 
                 .calculator-page__caption.calculator-page__caption--big
@@ -91,11 +91,19 @@ block content
                 .calculator-page__gird-wrapper
                   .calculator-page__caption.calculator-page__caption--big
                     |Скорости V, м/с
-                  .calculator-page__grid-label 
-                    |Рекомендуемые скорости ХВС, ГВС от 0,5 до 1 м/с.
+                  .tooltip.tooltip--absolute
+                    .tooltip__icon 
+                      +tooltip-svg.tooltip__svg 
+                    .tooltip__container 
+                      |Рекомендуемые скорости ХВС, ГВС от 0,5 до 1 м/с.
               .calculator-page__grid-heading.calculator-page__grid-long
                 .calculator-page__caption.calculator-page__caption--big
                   |Потери i, м/м.
+                .tooltip.tooltip--absolute
+                  .tooltip__icon 
+                    +tooltip-svg.tooltip__svg 
+                  .tooltip__container 
+                    |м/м метр водного столба на метр трубы
               each item in ['', 'SDR 11', 'SDR 7,4', 'SDR 6', 'SDR 11', 'SDR 7,4', 'SDR 6', ]
                 .calculator-page__grid-item 
                   .calculator-page__grid-title

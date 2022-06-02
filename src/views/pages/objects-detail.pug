@@ -15,7 +15,7 @@ block content
         +breadcrumbs(items = ['Объекты'] page = "Электродепо «Лихоборы»")
         .objects-page__section 
           .objects-page__row 
-            .objects-page__col(data-aos='fade-up')
+            .objects-page__col
               .objects-page__slider
                 .objects-page__slider-bot 
                   .objects-page__slider-pagination 
@@ -29,14 +29,14 @@ block content
                         img.objects-page__slider-img(src="assets/images/object-slide-1.webp", alt="") 
             .objects-page__col
               h1.objects-page__title 
-                |#[span.word-span #[span(data-aos='fade-up') Электродепо]] #[span.word-span #[span(data-aos='fade-up') «Лихоборы»]]
+                |#[span.word-span #[span Электродепо]] #[span.word-span #[span «Лихоборы»]]
               .objects-page__section-row 
-                .objects-page__section-col(data-aos='fade-up')
+                .objects-page__section-col
                   .objects-page__section-label
                     |Местоположение
                   .objects-page__section-text 
                     |Санкт-Петербург
-                .objects-page__section-col(data-aos='fade-up')
+                .objects-page__section-col
                   .objects-page__section-label
                     |Тип объекта
                   .objects-page__section-text 
@@ -45,38 +45,38 @@ block content
                 .objects-page__block
                   .objects-page__section-row 
                     .objects-page__section-col
-                      .objects-page__label(data-aos='fade-up')
+                      .objects-page__label
                         |Задача
                     .objects-page__section-col
                       ul.objects-page__section-list 
                         each item in ['Обновить водноснабжение', 'Обновить систему пожаротушения']
-                          li.objects-page__section-item(data-aos='fade-up') 
+                          li.objects-page__section-item 
                             .objects-page__section-text 
                               |#{item}
                 .objects-page__block
                   .objects-page__section-row 
                     .objects-page__section-col
-                      .objects-page__label(data-aos='fade-up')
+                      .objects-page__label
                         |Предложенное решение
                     .objects-page__section-col
                       ul.objects-page__section-list 
                         each item in ['Полностью перепроектировать системы водоснабжения', 'С учетом проектных изменений и новых требований, обновить коммуникации для пожаротушения с использванием продукции СЛТ Аква']
-                          li.objects-page__section-item(data-aos='fade-up') 
+                          li.objects-page__section-item 
                             .objects-page__section-text 
                               |#{item}
     section.section 
       .container 
         .objects-page__row  
           .objects-page__col
-            h4(data-aos='fade-up')
+            h4
               |Категории продукции
             .objects-page__inner
-              .objects-page__cards(data-aos='fade-up')
+              .objects-page__cards
                 +small-cards
           .objects-page__col.objects-page__col--offset
-            h4(data-aos='fade-up')
+            h4
               |Об объекте
-            .objects-page__inner(data-aos='fade-up')
+            .objects-page__inner
               p
                 |Электродепо в Московском метрополитене работают как гаражи, где поезда отстаиваются ночью и куда прибывают на ремонт в случае поломки. В «Лихоборах», которые строятся для обслуживания растущей Люблинско-Дмитровской линии, смогут оставаться на стоянку 38 составов.
                 br
@@ -84,40 +84,40 @@ block content
                 |Электродепо «Лихоборы» строится для обслуживания поездов Люблинско-Дмитровской линии #[a.objects-page__link(href='#') Московского метрополитена]. Строительство депо началось в 2012 году и должно завершиться в 2018 году. Обратите внимание — цвет строящихся сейчас в Москве электродепо совпадает с цветом той линии, которую они будут обслуживать. Депо «Солнцево» жёлтое, депо «Руднёво» розовое, а депо «Лихоборы» салатовое! И ещё — в правой части верхнего кадра видна новая эстакада для 3-го главного пути, построенная во время реконструкции МК МЖД (МЦК).
     section.section 
       .container 
-        h4(data-aos='fade-up') 
+        h4 
           |Поставщик
         .objects-page__inner 
           .objects-page__block 
             .objects-page__headings
-              .objects-page__headings-col(data-aos='fade-up')
+              .objects-page__headings-col
                 .objects-page__label 
                   |Выполнены работы
-              .objects-page__headings-col(data-aos='fade-up')
+              .objects-page__headings-col
                 .objects-page__section-item 
                   .objects-page__section-text 
                     |Проектирование
-              .objects-page__headings-col(data-aos='fade-up')
+              .objects-page__headings-col
                 .objects-page__section-item 
                   .objects-page__section-text 
                     |Поставка продукции
-              .objects-page__headings-col(data-aos='fade-up')
+              .objects-page__headings-col
                 .objects-page__section-item 
                   .objects-page__section-text 
                     |Монтаж
-            .aos(data-aos='fade-up')
+            .aos
               +accordion-big
           .objects-page__block 
             .objects-page__headings
-              .objects-page__headings-col(data-aos='fade-up')
+              .objects-page__headings-col
                 .objects-page__label 
                   |Выполнены работы
-              .objects-page__headings-col(data-aos='fade-up')
+              .objects-page__headings-col
                 .objects-page__section-item 
                   .objects-page__section-text 
                     |Проектирование
-              .objects-page__headings-col(data-aos='fade-up')
+              .objects-page__headings-col
                 .objects-page__section-item 
                   .objects-page__section-text 
                     |Поставка продукции
-            .aos(data-aos='fade-up')
+            .aos
               +accordion-big

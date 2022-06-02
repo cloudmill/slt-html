@@ -1,4 +1,5 @@
 .file {
+  $comp: &;
   
   display: flex;
 
@@ -14,9 +15,45 @@
       width: 100%;
     }
 
-    border: 1px solid $rgba-borders;
     border-radius: 60px;
     cursor: pointer;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      @include cover;
+      z-index: -1;
+
+      border: 1px solid $rgba-borders;
+      border-radius: 60px;
+      transition: $transition;
+    }
+    &::before {
+      content: "";
+      @include btn-before;
+      z-index: -1;
+
+      background: var(--color-blue);
+    }
+
+    &:hover {
+      &::after {
+        border-color: var(--color-blue);
+      }
+      &::before {
+        transform: none;
+      }
+
+      #{$comp}__svg {
+        path {
+          fill: var(--color-white);
+        }
+      }
+
+      #{$comp}__text {
+        color: var(--color-white);
+      }
+    }
   }
 
   &__input {
@@ -40,9 +77,14 @@
   &__svg {
     width: getRem(16px);
     height: getRem(16px);
+
+    path {
+      transition: $transition;
+    }
   }
 
   &__text {
+    transition: $transition;
     @include fsl(14px, 120%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px, 100%);

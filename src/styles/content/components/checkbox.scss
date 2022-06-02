@@ -1,5 +1,6 @@
 .checkbox {
   $comp: &;
+  position: relative;
 
   display: flex;
   align-items: center;
@@ -94,5 +95,10 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px, 100%);
     }
+  }
+  .parsley-errors-list {
+    position: absolute;
+    top: 100%;
+    margin-top: 5px;
   }
 }

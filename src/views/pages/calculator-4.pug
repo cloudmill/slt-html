@@ -11,13 +11,13 @@ block content
         +breadcrumbs(page = "Расчет компенсаторов для систем SLT AQUA")
         .section__inner 
           h1
-            |#[span.word-span #[span(data-aos='fade-up') Расчет компенсаторов]] #[br] #[span.word-span #[span(data-aos='fade-up') для систем SLT AQUA]]
+            |#[span.word-span #[span Расчет компенсаторов]] #[br] #[span.word-span #[span для систем SLT AQUA]]
     section.section
       .container 
         +nav(items = ['Компенсационное колено', 'П-образный компенсатор', 'Петлевой компенсатор ', 'Сильфонный компенсатор',] active = 3)
         .section__block 
           .calculator-page__row 
-            .calculator-page__col(data-aos='fade-up') 
+            .calculator-page__col 
               .calculator-page__picture
                 +calculator-4-svg.calculator-page__picture-svg
               .calculator-page__inner 
@@ -38,7 +38,7 @@ block content
                       .calculator-page__description-col
                         .calculator-page__caption 
                           |#{item.text}
-            .calculator-page__col(data-aos='fade-up') 
+            .calculator-page__col 
               form.form(action="/") 
                 .calculator-page__features
                   .calculator-page__features-col

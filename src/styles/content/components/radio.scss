@@ -7,11 +7,8 @@
   transition: $transition;
 
   &:hover {
-    background: var(--color-light-gray);
-  }
-
-  &.active {
     // background: var(--color-light-gray);
+    border-color: var(--color-blue);
   }
 
   &__label {

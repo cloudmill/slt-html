@@ -13,7 +13,7 @@ block content
         +breadcrumbs( page = "События")
         .events-page__inner 
           h1 
-            |#[span.word-span #[span(data-aos='fade-up') События]]
+            |#[span.word-span #[span События]]
     section.section
       .container 
         +nav(items = ['Все', 'Новости', 'Публикации'] active = 0)
@@ -23,7 +23,7 @@ block content
           - for (i = 0; i < 5; i++)
             li.events-page__events-item 
               a.events-page__event(href="#" data-link='') 
-                .events-page__event-container(data-aos='fade-up') 
+                .events-page__event-container 
                   .events-page__event-row 
                     .events-page__event-col
                       .events-page__event-content 

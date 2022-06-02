@@ -12,21 +12,21 @@ block content
         +breadcrumbs(page = "Рекламная поддержка")
         .section__inner 
           h1 
-            |#[span.word-span #[span(data-aos='fade-up') Рекламная поддержка]]
+            |#[span.word-span #[span Рекламная поддержка]]
     section.section 
       .container 
         +nav(items = ['Условия сотрудничества', 'Рекламная поддержка', ] active = 1)
         .cooperation-page__selects 
           .section__selects
-            .section__select(data-aos='fade-up') 
+            .section__select 
               +select(options = ['qwe', 'zxc', 'asd'] placeholder = 'Категория материалов')
         .section__block 
           .docs-page__block
             .docs-page__block-item
-              .docs-page__top(data-aos='fade-up')
+              .docs-page__top
                 h4
                   |Каталоги
-                .docs-page__top-button(data-aos='fade-up') 
+                .docs-page__top-button 
                   +download-btn
                     |Скачать все документы
               .docs-page__grid 
@@ -38,10 +38,10 @@ block content
                     {img: 'docs-blockfire.webp', title: 'Рекламная листовка 2022'},
                   ]
                 each item in items
-                  .aos(data-aos='fade-up')
+                  .aos
                     +docs-img(img = item.img title = item.title)
             .docs-page__block-item
-              .docs-page__top(data-aos='fade-up') 
+              .docs-page__top 
                 h4
                   |Демо-боксы
               .docs-page__grid 
@@ -52,18 +52,18 @@ block content
                     {img: 'docs-card.webp', title: 'Рекламная листовка 2018'},
                   ]
                 each item in items
-                  .aos(data-aos='fade-up')
+                  .aos
                     +docs-img(img = item.img title = item.title)
             .docs-page__block-item
-              .docs-page__top(data-aos='fade-up') 
+              .docs-page__top 
                 h4
                   |Логотипы
               .docs-page__grid 
-                .aos(data-aos='fade-up')
+                .aos
                   +docs-img(img = 'svg/docs-card-2.svg' title = 'Логотип')
-                .aos(data-aos='fade-up')
+                .aos
                   +docs-img(img = 'svg/docs-card-3.svg' title = 'Логотип в инверсии')
-            .docs-page__button(data-aos='fade-up') 
+            .docs-page__button 
               .button-wrapper
                 +download-btn.button--wide--mobile
                   |Скачать все документы

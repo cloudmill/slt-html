@@ -141,6 +141,10 @@
           height: getRem(16px);
         }
       }
+
+      .download-card:hover {
+        border-color: var(--color-blue);
+      }
     }
 
     &.blockfire {
