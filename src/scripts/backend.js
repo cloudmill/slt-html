@@ -13,6 +13,7 @@ $(function () {
     deleteBasket();
     changeLenBasket();
     addresAdd2Order();
+    clearBasket();
 });
 
 function workModal() {
@@ -446,6 +447,35 @@ function addresAdd2Order() {
 
         $(document).find("[data-uf=UF_ADDRES]").each(function () {
             $(this).attr(required, "required");
+        });
+    });
+}
+
+function clearBasket() {
+    $(document).on("click", "[data-type=order-clear]", function (e) {
+        e.preventDefault();
+
+        let type = 'clear',
+            data = {};
+
+        data['type'] = type;
+
+        console.log("clear basket");
+
+        $.ajax({
+            type: "POST",
+            url: "/local/templates/main/include/ajax/basket.php",
+            dataType: "json",
+            data: data,
+            success: function (r) {
+                console.log(r);
+                if (r.success == true) {
+                    window.location.href = "/order/";
+                }
+            },
+            error: function (r) {
+                console.debug(r);
+            }
         });
     });
 }
