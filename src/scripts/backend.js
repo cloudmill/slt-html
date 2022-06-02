@@ -248,6 +248,9 @@ function forms() {
             data: data,
             success: function (r) {
                 console.log(r);
+                if (r.type == 'order') {
+                    window.location.href = r.url;
+                }
             },
         });
     });
