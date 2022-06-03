@@ -141,7 +141,13 @@ block content
               |Все объекты
         .main-page__slider
           .main-page__slider-controls
-            +slider-buttons(prev = '11' next = '12')
+            .slider-buttons
+              .slider-buttons__btn
+                button.slider-buttons__item 
+                  +button-icon-left.button-icon--blue(data-slider-button = '11')
+              .slider-buttons__btn
+                button.slider-buttons__item 
+                  +button-icon.button-icon--blue(data-slider-button = '12')
           .swiper-container.swiper-container--visible.swiper-container--visible.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='main' data-slider-prev='11' data-slider-next='12')
             .swiper-wrapper 
               each item in ddata.slider
