@@ -96,6 +96,7 @@ mixin catalog-modal
           ul.catalog-modal__list
             -
               var ddata = [
+                {text: 'теплый пол', url: '0'},
                 {text: 'холодное водоснабжение', url: '1'},
                 {text: 'горячее водоснабжение', url: '2'},
               ]
@@ -114,8 +115,8 @@ mixin catalog-modal
           ul.catalog-modal__list 
             -
               var ddata = [
-                {text: 'Питьевая вода', url: '3'},
-                {text: 'Отопление', url: '4'},
+                {text: 'питьевая вода', url: '3'},
+                {text: 'отопление', url: '4'},
               ]
             each item in ddata
               li.catalog-modal__item 
