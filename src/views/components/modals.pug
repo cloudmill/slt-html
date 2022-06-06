@@ -96,16 +96,16 @@ mixin catalog-modal
           ul.catalog-modal__list
             -
               var ddata = [
-                {text: 'теплый пол', url: '0'},
-                {text: 'холодное водоснабжение', url: '1'},
-                {text: 'горячее водоснабжение', url: '2'},
+                {text: 'теплый пол', url: '0.svg'},
+                {text: 'холодное водоснабжение', url: '1.png'},
+                {text: 'горячее водоснабжение', url: '2.png'},
               ]
             each item in ddata
               li.catalog-modal__item 
                 label.catalog-modal__button(data-catalog-item='') 
                   .catalog-modal__content 
                     .catalog-modal__img
-                      img(src=`assets/images/svg/modal-icon-${item.url}.svg`, alt="")
+                      img(src=`assets/images/svg/modal-icon-${item.url}`, alt="")
                     .catalog-modal__text(data-item-text='')
                       |#{item.text}
                   input.catalog-modal__input(type="checkbox" data-item-checkbox='')
@@ -115,15 +115,15 @@ mixin catalog-modal
           ul.catalog-modal__list 
             -
               var ddata = [
-                {text: 'питьевая вода', url: '3'},
-                {text: 'отопление', url: '4'},
+                {text: 'питьевая вода', url: '3.png'},
+                {text: 'отопление', url: '4.png'},
               ]
             each item in ddata
               li.catalog-modal__item 
                 label.catalog-modal__button(data-catalog-item='') 
                   .catalog-modal__content 
                     .catalog-modal__img
-                      img(src=`assets/images/svg/modal-icon-${item.url}.svg`, alt="")
+                      img(src=`assets/images/svg/modal-icon-${item.url}`, alt="")
                     .catalog-modal__text(data-item-text='')
                       |#{item.text}
                   input.catalog-modal__input(type="checkbox" data-item-checkbox='')
@@ -137,17 +137,17 @@ mixin catalog-modal
             ul.catalog-modal__list
               -
                 var ddata = [
-                  {text: 'холодоснабжение', url: '5'},
-                  {text: 'переход на разные диаметры', url: '6'},
-                  {text: 'направление потока', url: '7'},
-                  {text: 'распределение потоков', url: '8'},
+                  {text: 'холодоснабжение', url: '5.png'},
+                  {text: 'переход на разные диаметры', url: '6.svg'},
+                  {text: 'направление потока', url: '7.svg'},
+                  {text: 'распределение потоков', url: '8.svg'},
                 ]
               each item in ddata
                 li.catalog-modal__item 
                   label.catalog-modal__button(data-catalog-item='') 
                     .catalog-modal__content 
                       .catalog-modal__img
-                        img(src=`assets/images/svg/modal-icon-${item.url}.svg`, alt="")
+                        img(src=`assets/images/svg/modal-icon-${item.url}`, alt="")
                       .catalog-modal__text(data-item-text='')
                         |#{item.text}
                     input.catalog-modal__input(type="checkbox" data-item-checkbox='')
