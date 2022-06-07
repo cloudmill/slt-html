@@ -75,7 +75,7 @@
     &-item {
       padding: getRem(12px) getRem(20px);
       margin-bottom: getRem(10px);
-      border: 1px solid var(--color-borders);
+      // border: 1px solid var(--color-borders);
       border-radius: 40px;
       
       // background-clip: padding-box;
@@ -101,9 +101,20 @@
         @include btn-before;
       }
 
+      &::after {
+        content: "";
+        @include cover;
+
+        border: 1px solid var(--color-borders);
+        border-radius: 40px;
+        transition: $transition;
+      }
+
       &:hover {
         @media (min-width: $breakpoint) {
-          border: 1px solid var(--color-blue);
+          &::after {
+            border-color: var(--color-blue);
+          }
 
           &::before {
             transform: none;
