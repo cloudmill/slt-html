@@ -14,6 +14,8 @@ $(function () {
     changeLenBasket();
     addresAdd2Order();
     clearBasket();
+    searchAjax();
+    searchHead();
 });
 
 function workModal() {
@@ -476,5 +478,52 @@ function clearBasket() {
                 console.debug(r);
             }
         });
+    });
+}
+
+function searchAjax() {
+    $(document).on("click", "[data-type=search-ajax]", function (e) {
+        e.preventDefault();
+
+        let thisObj = $(this),
+            sibIn = thisObj.siblings('[data-type=s-sib-input]'),
+            inputSearch = sibIn.find('[data-type=s-input]'),
+            search = inputSearch.val();
+
+        console.log("search " + search + " ");
+
+        $.ajax({
+            method: "GET",
+            url: window.location.href,
+            data: {
+                ajax: 1,
+                q: search,
+            },
+            success: function (r) {
+
+                console.log(r);
+                $(document).find('[data-type=items-container-full]').empty();
+                $(document).find('[data-type=items-container-full]').append($(r));
+            },
+            error: function (r) {
+                console.debug(r);
+            }
+        });
+    });
+}
+
+function searchHead() {
+    $(document).on("click", "[data-type=search-head]", function (e) {
+        e.preventDefault();
+
+        let thisObj = $(this),
+            searchForm = thisObj.parents('[data-type=search-form]'),
+            inputSearch = searchForm.find('[data-type=search-input]'),
+            search = inputSearch.val(),
+            pathSearch = '/search/?q=' + search + '';
+
+        console.log("search " + search + " // " + pathSearch + "");
+
+        window.location.href = pathSearch;
     });
 }
