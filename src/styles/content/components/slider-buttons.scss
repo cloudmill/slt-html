@@ -2,10 +2,11 @@
   $comp: &;
   position: absolute;
   z-index: 2;
-  left: calc(#{$col-part-d} * 3 - #{$col-gap} + 3px);
-  right: calc(#{$col-part-d} * 3 - #{$col-gap} + 3px);
   top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: calc(172px + 172px + 6px + (100vw - (20px * 11)) / 12 * 4);
 
   display: flex;
   justify-content: space-between;
@@ -17,6 +18,8 @@
   &--default {
     position: static;
     transform: none;
+
+    width: auto;
 
     #{$comp}__item {
 

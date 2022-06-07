@@ -48,9 +48,9 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        left: calc(100% + 8px);
+        left: calc(100% + 0.5rem);
         @media (max-width: ($breakpoint  - 1px)) {
-          left: calc(100% + 4px);
+          left: calc(100% + 0.25rem);
         }
 
         width: 5px;

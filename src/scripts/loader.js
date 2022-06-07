@@ -31,6 +31,7 @@ window.addEventListener("load", () => {
     }, DELAY * layers.length - 200);
   } else {
     document.body.classList.remove('body--hidden')
+    
     AOS.init({
       once: true,
       offset: 0,
