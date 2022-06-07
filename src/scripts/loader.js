@@ -30,6 +30,7 @@ window.addEventListener("load", () => {
       }, 1100);
     }, DELAY * layers.length - 200);
   } else {
+    window.scrollTo(0, 0);
     document.body.classList.remove('body--hidden')
     AOS.init({
       once: true,

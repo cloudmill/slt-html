@@ -1,7 +1,7 @@
 mixin card 
   a.card(href="#" data-link='')
     .card__category 
-      each item, i in ['соединение', 'холодное водоснабжение', 'питьевая вода', 'горячее водоснабжение',]
+      each item, i in ['соединение', 'холодное водоснабжение', 'питьевая вода',]
         .card__item.tooltip
           .use-icon.tooltip__icon 
             img(src=`assets/images/svg/catalog-item-${i+1}.svg`, alt="")
