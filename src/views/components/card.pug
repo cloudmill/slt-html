@@ -1,12 +1,11 @@
 mixin card 
   a.card(href="#" data-link='')
     .card__category 
-      each item, i in ['соединение', 'холодное водоснабжение', 'питьевая вода',]
-        .card__item.tooltip
-          .use-icon.tooltip__icon 
-            img(src=`assets/images/svg/catalog-item-${i+1}.svg`, alt="")
-          .tooltip__container
-            |#{item}
+      .card__item.tooltip
+        .tooltip__icon 
+          img(src=`assets/images/svg/modal-icon-8.svg`, alt="")
+        .tooltip__container
+          |распределение потоков
     .card__container
       if (attributes.img)
         img(src=attributes.img, alt="")

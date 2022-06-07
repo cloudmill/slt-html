@@ -207,7 +207,7 @@
     }
   }
   &__cooperation-title {
-    max-width: getRem(630px);
+    max-width: getRem(640px);
 
     font-weight: 500;
     color: var(--color-white);
@@ -445,7 +445,7 @@
 
   &__fifth {
     left: getRem(708px);
-    top: getRem(368px);
+    top: getRem(392px);
     @media (max-width: ($breakpoint - 1px)) {
       left: getRem(136px);
       top: getRem(274px);
