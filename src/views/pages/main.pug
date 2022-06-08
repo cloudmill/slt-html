@@ -7,7 +7,7 @@ include ../components/product-cards
 include ../components/slider-buttons
 
 
-block loader
+//- block loader
   +loader
 
 
@@ -53,30 +53,9 @@ block content
     section.main-page__section 
       .main-page__cooperation(data-aos='fade-up')
         .main-page__cooperation-bg
-          .main-page__elem.main-page__first
-            .main-page__ball 
-            .main-page__line.main-page__line--first 
-              +line-1-svg.main-page__line-svg
-          .main-page__elem.main-page__second
-            .main-page__ball 
-            .main-page__line.main-page__line--second
-              +line-2-svg.main-page__line-svg
-          .main-page__elem.main-page__third
-            .main-page__ball 
-            .main-page__line.main-page__line--third
-              +line-3-svg.main-page__line-svg
-          .main-page__elem.main-page__fourth
-            .main-page__ball 
-            .main-page__line.main-page__line--fourth
-              +line-4-svg.main-page__line-svg
-          .main-page__elem.main-page__fifth
-            .main-page__ball 
-            .main-page__line.main-page__line--fifth
-              +line-5-svg.main-page__line-svg
-          .main-page__elem.main-page__sixth
-            .main-page__ball 
-            .main-page__line.main-page__line--sixth
-              +line-6-svg.main-page__line-svg
+          .main-map 
+            +main-map-svg
+            +main-map-mobile
           .only-mobile 
             .main-page__icon.small
               svg.main-page__svg.main-page__svg--small(width='82' height='82' viewbox='0 0 82 82' fill='none' xmlns='http://www.w3.org/2000/svg')

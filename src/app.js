@@ -26,4 +26,5 @@ import "./scripts/where-buy-filter";
 import "./scripts/forms";
 import "./scripts/form-response";
 import "./scripts/catalog-table";
+import "./scripts/main-map";
 import "./scripts/backend";
