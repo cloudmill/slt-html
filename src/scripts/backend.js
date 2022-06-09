@@ -17,6 +17,7 @@ $(function () {
     searchAjax();
     searchHead();
     filterClickSec();
+    mapModal();
 });
 
 function workModal() {
@@ -553,4 +554,28 @@ function filterClickSec() {
             }
         });
     });
+}
+
+function mapModal() {
+    window.addEventListener("mapModalOpen", (e) => {
+        let id = e.detail.modalId,
+            data = {};
+
+        data['id'] = id;
+
+        console.log("mapModalOpen - " + id);
+
+        $.ajax({
+            type: "POST",
+            url: "/local/templates/main/include/ajax/map_modal.php",
+            data: data,
+            success: function (r) {
+                $(document).find('[data-type=modal-map]').empty();
+                $(document).find('[data-type=modal-map]').append($(r));
+            },
+            error: function (r) {
+                console.debug(r);
+            }
+        });
+    })
 }
