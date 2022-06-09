@@ -4,9 +4,12 @@ mixin loader
       .loader__wrapper
         .loader__container
           +loader-svg.loader__svg  
-          .loader__first.loader__layer
-            +first-layer.loader__first-svg
-          .loader__second.loader__layer
-            +second-layer.loader__second-svg
-          .loader__third.loader__layer
-            +third-layer.loader__third-svg
+          .loader__first-container
+            .loader__first.loader__layer
+              +first-layer.loader__first-svg
+          .loader__second-container
+            .loader__second.loader__layer
+              +second-layer.loader__second-svg
+          .loader__third-container
+            .loader__third.loader__layer
+              +third-layer.loader__third-svg

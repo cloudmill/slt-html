@@ -1155,8 +1155,8 @@
 
 .main-map {
   position: absolute;
-  top: getRem(158px);
-  left: getRem(467px);
+  top: 9.375rem;
+  left: 29.1875rem;
   @media (max-width: ($breakpoint - 1px)) {
     top: getRem(160px);
     left: getRem(47px);
