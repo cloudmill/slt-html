@@ -45,8 +45,6 @@
       --size: 264px
     }
     padding: 22px 22px 38px;
-    // position: relative;
-    // z-index: 0;
 
     flex-shrink: 0;
     width: var(--size);
@@ -95,21 +93,22 @@
 
 
   &__layer {
-    position: absolute;
 
-    width: 88px;
-    height: 72px;
-    @media (min-width: $breakpoint) {
-      width: 172px;
-      height: 144px;
-    }
+    // width: 88px;
+    // height: 72px;
+    // @media (min-width: $breakpoint) {
+    //   width: 172px;
+    //   height: 144px;
+    // }
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
 
     overflow: hidden;
+    transition: 0.8s $transition-timing-function;
 
     svg {
+      flex-shrink: 0;
       @media (min-width: $breakpoint) {
         width: 172px;
         height: 144px;
@@ -119,59 +118,86 @@
 
 
   &__first {
-    transform: translateY(-100%);
 
-    #{$comp}__first-svg {
-      transform: translateY(100%);
+    height: 0;
+    width: 88px;
+    @media (min-width: $breakpoint) {
+      width: 172px;
     }
 
     &.active {
-      transform: none;
-      transition: 0.8s $transition-timing-function;
-
-      #{$comp}__first-svg {
-        transform: none;
-        transition: 0.8s $transition-timing-function;
+      height: 72px;
+      @media (min-width: $breakpoint) {
+        height: 144px;
       }
+    }
+  }
+  &__first-container {
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    @media (min-width: $breakpoint) {
+      width: 172px;
+      height: 144px;
     }
   }
   &__second {
-    transform: translateX(100%);
-
-    #{$comp}__second-svg {
-      transform: translateX(-100%);
+    width: 0;
+    height: 72px;
+    @media (min-width: $breakpoint) {
+      height: 144px;
     }
+    align-items: flex-end;
+    justify-content: flex-end;
 
     &.active {
-
-      transform: none;
-      transition: 0.8s $transition-timing-function;
-
-      #{$comp}__second-svg {
-        transform: none;
-        transition: 0.8s $transition-timing-function;
+      width: 88px;
+      @media (min-width: $breakpoint) {
+        width: 172px;
       }
     }
   }
-  &__third {
-    will-change: transform;
-    transform: translateY(100%);
-    transition: 0.8s $transition-timing-function;
-
-    #{$comp}__third-svg {
-      will-change: transform;
-      transition: 0.8s $transition-timing-function;
-      transform: translateY(-100%);
+  &__second-container {
+    position: absolute;
+    top: 0;
+  
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    @media (min-width: $breakpoint) {
+      width: 172px;
+      height: 144px;
     }
+  }
+  &__third {
+    height: 0;
+    width: 88px;
+    @media (min-width: $breakpoint) {
+      width: 172px;
+    }
+    align-items: flex-end;
+    justify-content: flex-end;
 
     &.active {
-      transform: none;
-      
-
-      #{$comp}__third-svg {
-        transform: none;
-        
+      height: 72px;
+      @media (min-width: $breakpoint) {
+        height: 144px;
       }
+    }
+  }
+  &__third-container {
+    position: absolute;
+    top: 0;
+  
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    @media (min-width: $breakpoint) {
+      width: 172px;
+      height: 144px;
     }
   }
 }
