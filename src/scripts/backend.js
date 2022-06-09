@@ -16,6 +16,7 @@ $(function () {
     clearBasket();
     searchAjax();
     searchHead();
+    filterClickSec();
 });
 
 function workModal() {
@@ -525,5 +526,31 @@ function searchHead() {
         console.log("search " + search + " // " + pathSearch + "");
 
         window.location.href = pathSearch;
+    });
+}
+
+function filterClickSec() {
+    $(document).on("click", "[data-type=sec-prog]", function (e) {
+        e.preventDefault();
+
+        let thisObj = $(this),
+            section = thisObj.attr("data-id");
+
+
+        $.ajax({
+            method: "GET",
+            url: window.location.href,
+            data: {
+                ajax: 1,
+                section: section,
+            },
+            success: function (r) {
+                $(document).find('[data-type=items-container-full]').empty();
+                $(document).find('[data-type=items-container-full]').append($(r));
+            },
+            error: function (r) {
+                console.debug(r);
+            }
+        });
     });
 }
