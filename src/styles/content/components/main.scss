@@ -1,10 +1,17 @@
 .main {
-  margin-bottom: getRem(100px);
+  margin-bottom: getRem(120px);
   @media (max-width: ($breakpoint - 1px)) {
     margin-bottom: getRem(48px);
   }
 
   &--default {
     margin-bottom: 0;
+  }
+
+  &--main-page {
+    margin-bottom: getRem(60px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: getRem(48px);
+    }
   }
 }

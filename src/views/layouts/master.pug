@@ -1,6 +1,6 @@
 
 block variables
-  - var param = false
+  - var mainClass=''
 
 
 
@@ -33,7 +33,7 @@ html(lang='ru')
       block header
         +header
 
-      main.main(class=(isDefault ? "main--default" : ""))
+      main.main(class=mainClass)
         block content
         +call-modal
         +search-modal
