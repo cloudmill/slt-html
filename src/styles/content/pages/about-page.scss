@@ -272,6 +272,7 @@
   &__stats-span {
     margin-left: 2px;
 
+    white-space: nowrap;
     font-weight: 500;
     @include fsl(22px, 90%);
     @media (max-width: ($breakpoint - 1px)) {

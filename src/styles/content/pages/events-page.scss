@@ -330,7 +330,7 @@
   &__future {
     padding: getRem(40px);
     @media (max-width: ($breakpoint - 1px)) {
-      padding: getRem(16px) getRem(16px) getRem(56px);
+      padding: getRem(16px);
     }
     position: relative;
     z-index: 0;
@@ -356,9 +356,7 @@
     right: getRem(20px);
     bottom: getRem(20px);
     @media (max-width: ($breakpoint - 1px)) {
-      top: auto;
-      bottom: getRem(-13px);
-      right: getRem(-9px);
+      display: none;
     }
 
     display: flex;

@@ -1073,6 +1073,7 @@
   &__card-title {
     max-width: getRem(162px);
     @media (max-width: ($breakpoint - 1px)) {
+      margin-right: getRem(100px);
       max-width: none;
     }
 

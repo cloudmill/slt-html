@@ -127,11 +127,16 @@ block content
                     .calculator-page__grid-title
                       |#{item}
                 .calculator-page__grid-heading.calculator-page__grid-long
+                  .tooltip.tooltip--absolute
+                    .tooltip__icon 
+                      +tooltip-svg.tooltip__svg 
+                    .tooltip__container 
+                      |Рекомендуемые скорости ХВС, ГВС от 0,5 до 1 м/с.
                   .calculator-page__gird-wrapper
                     .calculator-page__grid-caption
                       |Скорости V, м/с
-                    .calculator-page__grid-label 
-                      |Рекомендуемые скорости ХВС, ГВС от 0,5 до #[br] 1 м/с.
+                    //- .calculator-page__grid-label 
+                    //-   |Рекомендуемые скорости ХВС, ГВС от 0,5 до #[br] 1 м/с.
                 - for (i = 0; i < 3; i++)
                   .calculator-page__grid-item.calculator-page__grid-item--small
                     .calculator-page__grid-title
@@ -140,8 +145,13 @@ block content
                     .calculator-page__grid-item(class=(j === 2 ? "active" : ""))
                       |#{item}
                 .calculator-page__grid-heading.calculator-page__grid-long
+                  .tooltip.tooltip--absolute
+                    .tooltip__icon 
+                      +tooltip-svg.tooltip__svg 
+                    .tooltip__container 
+                      |м/м - метр водного столба на метр трубы
                   .calculator-page__grid-caption
-                    |Потери i, #[br] м/м.
+                    |Потери i, #[br] м/м
                 - for (i = 0; i < 3; i++)
                   .calculator-page__grid-item.calculator-page__grid-item--small
                     .calculator-page__grid-title
