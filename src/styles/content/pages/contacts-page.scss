@@ -11,6 +11,7 @@
     flex-direction: column;
   
     @media (min-width: $breakpoint) {
+      flex-shrink: 0;
       width: calc(#{$col-part-d} * 6);
     }
 
@@ -25,10 +26,15 @@
 
   &__right-col {
     display: flex;
+    flex-wrap: wrap;
+    gap: getRem(20px);
 
     @media (max-width: ($breakpoint - 1px)) {
-      flex-direction: column;
       margin-top: getRem(30px);
+      
+      flex-direction: column;
+      gap: getRem(12px);
+      flex-wrap: nowrap;
       width: 50%;
     }
     @media (max-width: ($breakpoint-m - 1px)) {
@@ -72,9 +78,11 @@
 }
 
 .contacts-mail-box {
-  width: calc(#{$col-part-d} * 2 - #{$col-gap});
   padding: getRem(20px);
-  margin-left: calc(#{$col-gap});
+
+  width: calc(#{$col-part-d} * 2 - #{$col-gap});
+  min-height: 170px;
+
   border: 1px solid var(--color-borders);
   cursor: pointer;
 
@@ -90,12 +98,8 @@
 
   @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
-    margin-left: 0;
+    min-height: auto;
     flex-direction: row;
-
-    &:not(:first-child) {
-      margin-top: getRem(12px);
-    }
   }
 
   .download-card__icon {
