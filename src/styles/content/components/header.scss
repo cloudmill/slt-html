@@ -47,7 +47,7 @@
   &__inner {
     position: relative;
     z-index: 3;
-    padding: getRem(20px) 0;
+    padding: getRem(18px) 0;
     @media (max-width: ($breakpoint - 1px)) {
       padding: getRem(13px) 0;
     }
@@ -415,7 +415,7 @@
   }
 
   &__bot {
-    margin-top: getRem(20px);
+    margin-top: getRem(18px);
   }
 
   &__logo {
