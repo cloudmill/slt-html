@@ -249,7 +249,7 @@ block content
       {
         top: true,
         tooltip: true,
-        text: 'Время при Т#[span.table__span авар], час'
+        text: 'Время при #[span.table__line Т#[span.table__span авар]], час'
       },
       {
         items: ['100'],
@@ -393,7 +393,7 @@ block content
                   }
                 ]
               each item in top
-                .table__top 
+                .table__top
                   |#{item.text}
                   if (item.tooltip)
                     .tooltip.tooltip--absolute
@@ -411,7 +411,7 @@ block content
             .table__mobile
               each item in tableMobile 
                 if (item.top)
-                  .table__top 
+                  .table__top(class=(item.tooltip ? 'table__top--tooltip' : ''))
                     |#{item.text}
                     if (item.tooltip)
                       .tooltip.tooltip--absolute

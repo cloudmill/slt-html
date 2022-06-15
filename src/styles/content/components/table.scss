@@ -43,6 +43,12 @@
 
     border-left: 1px solid var(--color-borders);
     border-top: 1px solid var(--color-borders);
+
+    &--tooltip {
+      @media (max-width: ($breakpoint - 1px)) {
+        padding: getRem(16px) getRem(36px) getRem(16px) getRem(16px);
+      }
+    }
   }
 
   &__item {
@@ -111,5 +117,9 @@
 
     border-right: 1px solid var(--color-borders);
     border-bottom: 1px solid var(--color-borders);
+  }
+
+  &__line {
+    white-space: nowrap;
   }
 }
