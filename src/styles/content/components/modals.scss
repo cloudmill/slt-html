@@ -641,6 +641,7 @@
     height: 100%;
 
     overflow-y: scroll;
+    overflow-x: hidden;
     @include scrollbar-hidden;
     opacity: 0;
     transition: $transition;
@@ -729,6 +730,9 @@
 
   &__row {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
 
     &:not(:first-child) {
       margin-top: getRem(32px);
