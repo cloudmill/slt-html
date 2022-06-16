@@ -1000,8 +1000,12 @@
     display: block;
     width: getRem(2113px);
     height: getRem(793px);
-    max-width: none;
-    max-height: none;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
   &__calculator-link {
     position: relative;

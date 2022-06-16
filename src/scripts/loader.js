@@ -26,7 +26,15 @@ window.addEventListener("load", () => {
           offset: 0,
           duration: 1200,
         });
-        document.querySelector('.main-page__video-player').play()
+        const video = document.querySelector('.main-page__video-player')
+        video.setAttribute('autoplay', '')
+        video.load()
+        // video.addEventListener("canplay", event => {
+        //   console.log("CANPLAY");
+        //   video.play()
+        //   // console.log(event);
+        // })
+        
       }, 1100);
     }, DELAY * layers.length - 200);
   } else {

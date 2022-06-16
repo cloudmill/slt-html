@@ -19,15 +19,15 @@ block content
     var ddata = {
       slider: [
         {
-          img: "assets/images/main-slide-1.webp",
+          img: "main-slide-1.jpg",
           title: "Жилые комплексы "
         },
         {
-          img: "assets/images/main-slide-3.webp",
+          img: "main-slide-3.jpg",
           title: "Общественные здания"
         },
         {
-          img: "assets/images/main-slide-2.webp",
+          img: "main-slide-2.jpg",
           title: "Гостиничные и торгово-развлекательные комплексы"
         },
       ]
@@ -49,7 +49,7 @@ block content
         .main-page__video-icon(data-decrease-main='')
           +about-logo-svg.main-page__video-svg
         .main-page__video-container
-          video.main-page__video-player(src="assets/videos/slt_main.mp4" loop muted playsinline data-aos='fade-down')
+          video.main-page__video-player(src="assets/videos/slt_main.mp4" poster='assets/images/poster.jpg' loop muted playsinline data-aos='fade-down')
     section.main-page__section 
       .main-page__section-grid 
         +product-cards
@@ -136,7 +136,8 @@ block content
                 .swiper-slide 
                   a.main-page__slider-slide(href="#" data-link='')
                     .main-page__slider-image 
-                      img.main-page__slider-img(src=item.img, alt="")
+                      +picture(item.img).main-page__slider-img
+                      //- img.main-page__slider-img(src=item.img, alt="")
                     h5.main-page__slider-title 
                       |#{item.title}
     section.section
@@ -153,4 +154,5 @@ block content
                   .main-page__calculator-title 
                     |#{item}
             .main-page__calculator-img(data-parallax='2' data-parallax-type='up')
-              img.main-page__calculator-bg(src="assets/images/calculator-bg.webp", alt="")
+              +picture('calculator-bg.jpg').main-page__calculator-bg
+              //- img.main-page__calculator-bg(src="assets/images/calculator-bg.webp", alt="")

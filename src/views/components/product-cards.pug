@@ -18,7 +18,8 @@ mixin product-cards
             p.product-card__caption 
               |Экономичное решение, обеспечивающее длительный срок службы и бесперебойное функционирование внутренних инженерных сетей хозяйственно-питьевого водоснабжения и отопления.
       .product-card__image 
-        img.product-card__img(src="assets/images/product-1.webp", alt="")
+        +picture('product-1.jpg')
+        //- img.product-card__img(src="assets/images/product-1.webp", alt="")
   a.product-card.product-card--red(href="#" data-link='' data-aos='fade-up')
     .product-card__container 
       .product-card__column
@@ -36,7 +37,8 @@ mixin product-cards
             p.product-card__caption 
               |Оптимальное решение, для применения в автоматических установках пожаротушения и внутреннем противопожарном водопроводе
       .product-card__image 
-        img.product-card__img(src="assets/images/product-2.webp", alt="")
+        +picture('product-2.jpg')
+        //- img.product-card__img(src="assets/images/product-2.webp", alt="")
   a.product-card.product-card--green(href="#" data-link='' data-aos='fade-up')
     .product-card__container 
       .product-card__column
@@ -54,7 +56,8 @@ mixin product-cards
             p.product-card__caption 
               |Скрытое решение для организации "теплого пола", радиаторного отопления и хозяйственно-питьевого водоснабжения
       .product-card__image 
-        img.product-card__img(src="assets/images/product-3.webp", alt="")
+        +picture('product-3.jpg')
+        //- img.product-card__img(src="assets/images/product-3.webp", alt="")
   a.product-card(href="#" data-link='' data-aos='fade-up')
     .product-card__container 
       .product-card__column
@@ -70,4 +73,5 @@ mixin product-cards
             p.product-card__caption 
               |Инструменты, обеспечивающие простой и качественный #[br] монтаж трубопровода
       .product-card__image 
-        img.product-card__img(src="assets/images/product-4.webp", alt="")
+        +picture('product-4.jpg')
+        //- img.product-card__img(src="assets/images/product-4.webp", alt="")

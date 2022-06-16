@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
       lines = document.querySelectorAll('.main-line-mobile')
     }
 
-    console.log(lines);
-
     lines.forEach(item => {
       let coords = {
         x1: item.getAttribute('x1'),
