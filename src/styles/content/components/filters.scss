@@ -129,6 +129,7 @@
       width: calc(100% + 40px);
 
       overflow-x: scroll;
+      overflow-y: hidden;
       @include scrollbar-hidden;
     }
 

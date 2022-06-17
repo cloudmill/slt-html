@@ -92,7 +92,7 @@
   &__container {
     padding: getRem(40px) getRem(60px);
     @media (max-width: ($breakpoint - 1px)) {
-      padding: getRem(16px) getRem(20px);
+      padding: getRem(20px);
     }
 
     height: 100%;
