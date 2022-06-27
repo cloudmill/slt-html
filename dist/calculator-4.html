@@ -798,16 +798,20 @@
 				<div class="search-modal" data-fancy-modal="search">
 					<div class="search-modal__container">
 						<form class="search-modal__form" action="/">
-							<div class="search-modal__col"><input class="search-modal__input" placeholder="Что вы хотите найти?" />
-								<div class="search-modal__icon"><svg class="search-modal__svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<div class="search-modal__col" data-search-container=""><input class="search-modal__input" placeholder="Что вы хотите найти?" data-search-input="" />
+								<div class="search-modal__icon hidden" data-search-button="data-search-button"><svg class="search-modal__svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M13.4142 11.9996L19.7782 18.3635L18.364 19.7777L12 13.4138L5.63604 19.7777L4.22183 18.3635L10.5858 11.9996L4.22183 5.6356L5.63604 4.22138L12 10.5853L18.364 4.22138L19.7782 5.6356L13.4142 11.9996Z" fill="#3F3F40"></path>
 									</svg></div>
 							</div>
-							<div class="search-modal__col"><button class="button button--wide--mobile button-animate"><span class="button__text"><span>Поиск</span></span>
-									<div class="button__icon"><svg class="button__svg arrow-blue" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd" d="M9.72386 6.66672H0V5.33338H9.72386L5.5286 1.13812L6.4714 0.195312L12.2761 6.00005L6.4714 11.8048L5.5286 10.862L9.72386 6.66672Z" fill="white"></path>
-										</svg></div>
-								</button></div>
+							<div class="search-modal__col">
+								<div class="search-modal__btn"><button class="button button--wide--mobile button-animate"><span class="button__text"><span>Поиск</span></span>
+										<div class="button__icon"><svg class="button__svg arrow-blue" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.72386 6.66672H0V5.33338H9.72386L5.5286 1.13812L6.4714 0.195312L12.2761 6.00005L6.4714 11.8048L5.5286 10.862L9.72386 6.66672Z" fill="white"></path>
+											</svg></div>
+									</button></div><button class="search-modal__button"><svg class="arrow-blue" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M9.72386 6.66672H0V5.33338H9.72386L5.5286 1.13812L6.4714 0.195312L12.2761 6.00005L6.4714 11.8048L5.5286 10.862L9.72386 6.66672Z" fill="white"></path>
+									</svg></button>
+							</div>
 						</form>
 					</div>
 				</div>
