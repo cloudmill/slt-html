@@ -1,4 +1,5 @@
 import '@fancyapps/fancybox';
+import {mediaQuery} from './mediaQueries'
 
 // fancybox
 {
@@ -77,6 +78,10 @@ import '@fancyapps/fancybox';
           )
           $.fancybox.defaults.animationEffect = 'zoom'
           $.fancybox.defaults.animationDuration = 500
+      }
+
+      if (!mediaQuery.matches) {
+        $.fancybox.defaults.animationDuration = 500
       }
 
       $.fancybox.open(modal);

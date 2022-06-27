@@ -33,22 +33,28 @@
   &.active {
     // transition-delay: 300;
 
-    #{$comp}__title {
-      opacity: 1;
-    }
-
-    .form > div {
-      opacity: 1;
+    @media (min-width: $breakpoint) {
+      
+      #{$comp}__title {
+        opacity: 1;
+      }
+  
+      .form > div {
+        opacity: 1;
+      }
     }
   }
 
   .form > div {
-    opacity: 0;
-    transition: opacity 0.3s $transition-timing-function;
-    @for $i from 1 to 9 {
-      &:nth-child(#{$i}) {
-        transition-delay: #{0.05 * $i}s;
+    @media (min-width: $breakpoint) {
+      opacity: 0;
+      transition: opacity 0.3s $transition-timing-function;
+      @for $i from 1 to 9 {
+        &:nth-child(#{$i}) {
+          transition-delay: #{0.05 * $i}s;
+        }
       }
+      
     }
   }
   
@@ -61,7 +67,10 @@
 
     transition: opacity .4s;
     // transition-delay: .3s;
-    opacity: 0;
+    @media (min-width: $breakpoint) {
+      opacity: 0;
+      
+    }
   }
 }
 
@@ -165,11 +174,14 @@
   background: var(--color-white);
 
   &.active {
-    #{$comp}__container {
-      opacity: 1;
-    }
-    #{$comp}__panel {
-      opacity: 1;
+    @media (min-width: $breakpoint) {
+      #{$comp}__container {
+        opacity: 1;
+      }
+      #{$comp}__panel {
+        opacity: 1;
+      }
+      
     }
   }
 
@@ -185,7 +197,10 @@
     overflow-y: scroll;
     @include scrollbar-hidden;
     transition: $transition;
-    opacity: 0;
+    @media (min-width: $breakpoint) {
+      opacity: 0;
+      
+    }
   }
 
   &__title {
@@ -338,7 +353,10 @@
     border-top: 1px solid var(--color-borders);
     box-shadow: 0px -6px 34px rgba(0, 0, 0, 0.06);
     transition: $transition;
-    opacity: 0;
+    @media (min-width: $breakpoint) {
+      opacity: 0;
+      
+    }
 
     &.hidden {
       #{$comp}__panel-title {
@@ -390,12 +408,15 @@
   background: var(--color-white);
 
   &.active {
-    transition-delay: 300;
-    #{$comp}__title {
-      opacity: 1;
-    }
-    .form > div {
-      opacity: 1;
+    @media (min-width: $breakpoint) {
+      transition-delay: 300;
+      #{$comp}__title {
+        opacity: 1;
+      }
+      .form > div {
+        opacity: 1;
+      }
+      
     }
   }
 
@@ -418,17 +439,23 @@
       margin-bottom: getRem(28px);
     }
 
-    opacity: 0;
     transition: $transition;
+    @media (min-width: $breakpoint) {
+      opacity: 0;
+    
+    }
   }
 
   .form > div {
-    opacity: 0;
-    transition: opacity 0.3s $transition-timing-function;
-    @for $i from 1 to 5 {
-      &:nth-child(#{$i}) {
-        transition-delay: #{0.05 * $i}s;
+    @media (min-width: $breakpoint) {
+      opacity: 0;
+      transition: opacity 0.3s $transition-timing-function;
+      @for $i from 1 to 5 {
+        &:nth-child(#{$i}) {
+          transition-delay: #{0.05 * $i}s;
+        }
       }
+      
     }
   }
 }
@@ -523,8 +550,10 @@
   background: var(--color-white);
 
   &.active {
-    #{$comp}__form {
-      opacity: 1;
+    @media (min-width: $breakpoint) {
+      #{$comp}__form {
+        opacity: 1;
+      }
     }
   }
 
@@ -544,8 +573,11 @@
     justify-content: space-between;
     align-items: center;
 
-    opacity: 0;
     transition: opacity $transition;
+    @media (min-width: $breakpoint) {
+      opacity: 0;
+      
+    }
   }
 
   &__col {
@@ -683,8 +715,11 @@
   background: var(--color-white);
 
   &.active {
-    #{$comp}__inner {
-      opacity: 1;
+    @media (min-width: $breakpoint) {
+      #{$comp}__inner {
+        opacity: 1;
+      }
+      
     }
   }
 
@@ -699,8 +734,11 @@
     overflow-y: scroll;
     overflow-x: hidden;
     @include scrollbar-hidden;
-    opacity: 0;
     transition: $transition;
+    @media (min-width: $breakpoint) {
+      opacity: 0;
+      
+    }
   }
 
   &__top {
@@ -990,14 +1028,17 @@
 }
 
 .fancybox-container.open {
-  .fancybox-bg {
-    transition-delay: 0.4s;
-  }
-
-  .fancybox-slide--next {
-    transition-delay: 0.4s;
-  }
-  .fancybox-slide--previous {
-    transition-delay: 0.4s;
+  
+  @media (min-width: $breakpoint) {
+    .fancybox-bg {
+      transition-delay: 0.4s;
+    }
+  
+    .fancybox-slide--next {
+      transition-delay: 0.4s;
+    }
+    .fancybox-slide--previous {
+      transition-delay: 0.4s;
+    }
   }
 }
