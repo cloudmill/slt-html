@@ -97,8 +97,6 @@
     align-items: center;
     justify-content: center;
 
-    transition: $transition;
-    
     &.hidden {
       opacity: 0;
       pointer-events: none;
