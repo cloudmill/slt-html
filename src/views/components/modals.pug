@@ -55,7 +55,6 @@ mixin contacts-modal1
               a.contacts-modal__info-item(href="tel:+79278932960") +7 927 893 29 60
               a.contacts-modal__info-item(href="mailto:kovshov@slt-aqua.ru") kovshov@slt-aqua.ru
 
-
 mixin contacts-modal2
   .modal.contacts-modal(data-fancy-modal='contacts2')
     .modal__container
@@ -263,17 +262,20 @@ mixin search-modal
   .search-modal(data-fancy-modal='search')
     .search-modal__container 
       form.search-modal__form(action="/") 
-        .search-modal__col
-          input.search-modal__input(type="text" placeholder='Что вы хотите найти?')
-          .search-modal__icon 
+        .search-modal__col(data-search-container='')
+          input.search-modal__input(type="text" placeholder='Что вы хотите найти?' data-search-input='')
+          .search-modal__icon.hidden(data-search-button)
             +close-svg.search-modal__svg
         .search-modal__col
-          button.button.button--wide--mobile.button-animate
-            span.button__text
-              span
-                |Поиск
-            .button__icon
-              +btn-arrow-right.button__svg.arrow-blue
+          .search-modal__btn
+            button.button.button--wide--mobile.button-animate
+              span.button__text
+                span
+                  |Поиск
+              .button__icon
+                +btn-arrow-right.button__svg.arrow-blue
+          button.search-modal__button
+            +btn-arrow-right.arrow-blue
 
 mixin map-modal
   -

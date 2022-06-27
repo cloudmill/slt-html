@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (step < 0) {
-        decrease.style.width = '1px'
+        decrease.style.width = '0px'
       }
     })
   }
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (step < 0) {
-        svg.style.width = '1px'
+        svg.style.width = '0px'
       }
     })
   }

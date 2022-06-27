@@ -21,10 +21,15 @@ block content
           span 0
 
         .search-page__input
-          .form__container
-            +input(type='text' placeholder='Поиск')
-          +link-right
-            |Поиск
+          .form__container.search-page__container(data-search-container='')
+            +input(type='text' placeholder='Поиск' data-search-input='')
+            .search-page__icon.hidden(data-search-button='')
+              +close-svg.search-page__svg
+          .search-page__btn
+            +link-right
+              |Поиск
+          button.search-page__button
+            +btn-arrow-right.arrow-blue
 
         .search-page-tabs
           .search-page-tabs__item.is-active Продукция

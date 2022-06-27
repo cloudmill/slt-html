@@ -29,12 +29,6 @@ window.addEventListener("load", () => {
         const video = document.querySelector('.main-page__video-player')
         video.setAttribute('autoplay', '')
         video.load()
-        // video.addEventListener("canplay", event => {
-        //   console.log("CANPLAY");
-        //   video.play()
-        //   // console.log(event);
-        // })
-        
       }, 1100);
     }, DELAY * layers.length - 200);
   } else {
