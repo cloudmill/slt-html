@@ -138,6 +138,11 @@
       margin-bottom: getRem(5px);
     }
   }
+
+  &__map {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .catalog-modal {
