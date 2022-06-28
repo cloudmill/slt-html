@@ -22,6 +22,8 @@ $(() => {
         $.fancybox.defaults.animationDuration = 500
         $.fancybox.defaults.afterShow = function(instance, slide) {}
         $.fancybox.open($(`[data-response=${id}]`))
+        
+        this.reset()
       })
     })
   }

@@ -15,12 +15,28 @@ export function initMap() {
           {
             center: [55.749175531624125, 37.61820806388663],
             zoom: 15,
-            controls: ['zoomControl', 'geolocationControl']
+            controls: []
           },
           {
             maxZoom: 22,
           },
         );
+
+        map.controls.add('zoomControl', {
+          float: 'none',
+          position: {
+            top: '150px',
+            left: '20px'
+          }
+        })
+
+        map.controls.add('geolocationControl', {
+          float: 'none',
+          position: {
+            top: '20px',
+            left: '20px'
+          }
+        })
 
         const clusterer = new ymaps.Clusterer({
           clusterIconLayout: ymaps.templateLayoutFactory.createClass('<div class="cluster">{{ properties.geoObjects.length }}</div>'),

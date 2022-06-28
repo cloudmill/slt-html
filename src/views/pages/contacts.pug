@@ -143,7 +143,7 @@ block content
           .contacts-form
             h2.contacts-form__title
               |#[span.word-span #[span Связаться с нами]]
-            form.form(action="/" data-parsley-validate) 
+            form.form(action="/" data-parsley-validate data-form='contact-resp') 
               .form__container
                 each item in ddata
                   .form__item 
@@ -190,3 +190,4 @@ block content
 
   +contacts-modal1
   +contacts-modal2
+  +response-modal(id='contact-resp' text = 'Спасибо, мы с вами свяжемся в ближайшее время')
