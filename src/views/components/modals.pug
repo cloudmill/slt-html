@@ -36,24 +36,6 @@ mixin contacts-modal1
       .contacts-modal__block
         .contacts-modal__map
           img(src="assets/images/contact-map1.jpg", alt="")
-        //- .contacts-modal__bottom
-          .contacts-modal__logo-box
-            +logo-svg
-            p производство полимерных #[br] трубопроводных систем
-
-          .contacts-modal__info
-
-            .contacts-modal__info-col
-              .contacts-modal__info-ttl Заказ пропуска:
-              .contacts-modal__info-item Мочалова Марина
-              a.contacts-modal__info-item(href="tel:+79179687750") +7 917 968 77 50
-              a.contacts-modal__info-item(href="mailto:mochalova@slt-aqua.ru") mochalova@slt-aqua.ru
-
-            .contacts-modal__info-col
-              .contacts-modal__info-ttl Склад:
-              .contacts-modal__info-item Ковшов Никита
-              a.contacts-modal__info-item(href="tel:+79278932960") +7 927 893 29 60
-              a.contacts-modal__info-item(href="mailto:kovshov@slt-aqua.ru") kovshov@slt-aqua.ru
 
 mixin contacts-modal2
   .modal.contacts-modal(data-fancy-modal='contacts2')
@@ -64,24 +46,6 @@ mixin contacts-modal2
       .contacts-modal__block
         .contacts-modal__map
           img(src="assets/images/contact-map2.jpg", alt="")
-        //- .contacts-modal__bottom
-          .contacts-modal__logo-box
-            +logo-svg
-            p производство полимерных #[br] трубопроводных систем
-
-          .contacts-modal__info
-
-            .contacts-modal__info-col
-              .contacts-modal__info-ttl Заказ пропуска:
-              .contacts-modal__info-item Мочалова Марина
-              a.contacts-modal__info-item(href="tel:+79179687750") +7 917 968 77 50
-              a.contacts-modal__info-item(href="mailto:mochalova@slt-aqua.ru") mochalova@slt-aqua.ru
-
-            .contacts-modal__info-col
-              .contacts-modal__info-ttl Склад:
-              .contacts-modal__info-item Ковшов Никита
-              a.contacts-modal__info-item(href="tel:+79278932960") +7 927 893 29 60
-              a.contacts-modal__info-item(href="mailto:kovshov@slt-aqua.ru") kovshov@slt-aqua.ru
 
 mixin catalog-modal 
   .catalog-modal(data-fancy-modal='c1')
@@ -234,7 +198,7 @@ mixin call-modal
     .call-modal__container 
       h4.call-modal__title 
         |Обратный звонок
-      form.form(action="/" data-parsley-validate) 
+      form.form(action="/" data-parsley-validate data-form='call-form') 
         .form__item 
           +input#input(type="text" placeholder="Имя*" required)
         .form__item 

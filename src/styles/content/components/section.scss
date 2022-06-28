@@ -5,7 +5,7 @@
   }
 
   &--first {
-    margin-top: getRem(248px);
+    margin-top: getRem(200px);
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: getRem(83px);
     }

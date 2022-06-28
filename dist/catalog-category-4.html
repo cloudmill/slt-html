@@ -932,7 +932,7 @@
 				<div class="call-modal" data-fancy-modal="call">
 					<div class="call-modal__container">
 						<h4 class="call-modal__title">Обратный звонок</h4>
-						<form class="form" action="/" data-parsley-validate="data-parsley-validate">
+						<form class="form" action="/" data-parsley-validate="data-parsley-validate" data-form="call-form">
 							<div class="form__item"><input class="form__input" id="input" placeholder="Имя*" required="required" /></div>
 							<div class="form__item"><input class="form__input" id="input" type="number" placeholder="Телефон*" required="required" /></div>
 							<div class="form__inner">
@@ -969,6 +969,19 @@
 									</svg></button>
 							</div>
 						</form>
+					</div>
+				</div>
+				<div class="response" data-fancy-modal="response" data-response="call-form">
+					<div class="response__container">
+						<div class="response__icon"><svg class="response__svg" width="97" height="97" viewbox="0 0 97 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="48.5" cy="48.5" r="47.75" fill="white" stroke="#04b2d1" stroke-width="1.5"></circle>
+								<path d="M28.2402 45.8784L43.1239 60.1646L69.9871 34.3798" stroke="#04b2d1" stroke-width="1.5"></path>
+							</svg></div>
+						<h5 class="response__title">Отправлено</h5>
+						<div class="response__text">Спасибо, мы с вами свяжемся в ближайшее время</div>
+						<div class="response__button">
+							<div class="button" data-fancybox-close="">Закрыть</div>
+						</div>
 					</div>
 				</div>
 			</main>

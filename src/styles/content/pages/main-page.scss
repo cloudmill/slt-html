@@ -6,7 +6,7 @@
   }
 
   &__hero {
-    margin-top: getRem(308px);
+    margin-top: getRem(260px);
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: getRem(108px);
     }

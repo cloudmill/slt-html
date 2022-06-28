@@ -23,6 +23,8 @@
 
     width: auto;
 
+    pointer-events: all;
+
     #{$comp}__item {
 
       &:not(:first-child) {
