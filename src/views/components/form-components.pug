@@ -6,13 +6,15 @@ mixin textarea
   textarea.form__textarea(name="area")&attributes(attributes)
 
 mixin input-file 
-  .file 
-    label.file__label
-      input.file__input(type="file")
-      .file__icon 
-        +paperclip-svg.file__svg
-      .file__text 
-        |Прикрепить файл
+  .file
+    .file__inner
+      label.file__label
+        input.file__input(type="file")
+        .file__icon 
+          +paperclip-svg.file__svg
+        .file__text 
+          |Прикрепить файл
+    .file__container
 
 mixin checkbox 
   .checkbox 

@@ -126,16 +126,23 @@
       transition: $transition;
     }
   }
-  &__card-category {
-    padding: getRem(6px) getRem(20px);
-    @media (max-width: ($breakpoint - 1px)) {
-      padding: getRem(6px) getRem(12px);
-    }
+  &__card-categories {
     position: absolute;
     z-index: 1;
     top: getRem(16px);
     left: getRem(16px);
 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  &__card-category {
+    padding: getRem(6px) getRem(20px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(6px) getRem(12px);
+    }
+    
+    white-space: nowrap;
     border-radius: 40px;
     border: 1px solid var(--color-borders);
     background: var(--color-white);

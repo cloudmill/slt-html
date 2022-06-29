@@ -29,3 +29,4 @@ import "./scripts/catalog-table";
 import "./scripts/main-map";
 import "./scripts/backend";
 import "./scripts/search-input";
+import "./scripts/file-input";

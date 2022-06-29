@@ -1,7 +1,10 @@
 .file {
   $comp: &;
   
-  display: flex;
+  
+  &__inner {
+    display: flex;
+  }
 
   &__label {
     position: relative;
@@ -89,5 +92,39 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px, 100%);
     }
+  }
+
+  &__item {
+
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+      margin-top: getRem(24px);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: getRem(20px);
+      }
+    }
+
+    &:not(:first-child) {
+      margin-top: 3px;
+    }
+  }
+
+  &__name {
+    @include fsl(14px, 120%);
+  }
+
+  &__mark {
+    margin-left: 4px;
+
+    width: getRem(20px);
+    height: getRem(20px);
+
+    background-image: url("data:image/svg+xml,%3Csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.3211 14.1422L20.6244 19.4455L19.4459 20.624L14.1426 15.3207L8.83927 20.624L7.66076 19.4455L12.9641 14.1422L7.66076 8.83886L8.83927 7.66035L14.1426 12.9637L19.4459 7.66035L20.6244 8.83886L15.3211 14.1422Z' fill='%237E7E7E'/%3E%3C/svg%3E%0A");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
   }
 }
