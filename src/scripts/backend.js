@@ -251,6 +251,8 @@ function forms() {
             processData: processData,
             data: data,
             success: function (r) {
+                form.reset();
+
                 console.log(r);
                 if (r.type == 'order') {
                     window.location.href = r.url;
