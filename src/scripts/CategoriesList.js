@@ -9,6 +9,7 @@ export class CategoriesList {
   }
 
   showItems(items) {
+    console.log(items);
     items.forEach(item => {
       if (!this.currentItems.includes(item)) {
         const clone = this.root.querySelector('[data-catalog-template]').content.firstElementChild.cloneNode(true)

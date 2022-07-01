@@ -22,7 +22,7 @@ export class InputsWatcher {
           this.selectedItems = this.selectedItems.filter(item => item.text !== text)
           item.classList.remove('active')
         }
-
+        console.log(this.selectedItems);
         if (params.onchange) {
           params.onchange()
         }
