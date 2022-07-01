@@ -5,6 +5,14 @@ include ../components/nav
 include ../components/form-components
 
 block content
+  -
+    var ddata = {
+      radioButtons: [
+        {text: 'SLT AQUA PP-R', value: 0.15},
+        {text: 'SLT AQUA PP-R-GF', value: 0.04},
+        {text: 'SLT AQUA PP-R-AL', value: 0.035},
+      ]
+    }
   .calculator-page
     section.section.section--first
       .container 
@@ -42,7 +50,7 @@ block content
                         .calculator-page__caption 
                           |#{item.text}
             .calculator-page__col
-              form.form(action="/") 
+              form.form(action="/" data-calc='') 
                 .calculator-page__features
                   .calculator-page__features-col
                     .calculator-page__wrapper
@@ -50,9 +58,9 @@ block content
                         |Тип трубы
                       .calculator-page__features-inner 
                         ul.calculator-page__features-list
-                          each item in ['SLT AQUA PP-R', 'SLT AQUA PP-R-GF', 'SLT AQUA PP-R-AL']
+                          each item in ddata.radioButtons
                             li.calculator-page__features-item 
-                              +radio-button(name = 'type' text = item)
+                              +radio-button(name = 'type' text = item.text value = item.value data-calc-radio='type')
                   .calculator-page__features-col
                     .calculator-page__caption.calculator-page__caption--big 
                       |Внешний диаметр трубы #[span.calculator-page__features-span D], мм
@@ -83,7 +91,7 @@ block content
                         .calculator-page__caption.calculator-page__caption--big 
                           |Общая длина трубы, м
                         .calculator-page__features-inner 
-                          +input#input(type = 'number' placeholder = '0')
+                          +input#input(type = 'number' placeholder = '0' data-calc-input='length')
                         .calculator-page__features-desc 
                           .calculator-page__caption.calculator-page__caption--big 
                             |Lобщ = 2L
@@ -91,12 +99,20 @@ block content
                         .calculator-page__caption.calculator-page__caption--big 
                           |Температура монтажа, °C
                         .calculator-page__features-inner 
-                          +input#input(type = 'number' placeholder = '0')
+                          +input#input(type = 'number' placeholder = '0' data-calc-input='mounting')
                       .calculator-page__features-col
                         .calculator-page__caption.calculator-page__caption--big 
                           |Температура эксплуатации, °C
                         .calculator-page__features-inner 
-                          +input#input(type = 'number' placeholder = '0')
+                          +input#input(type = 'number' placeholder = '0' data-calc-input='exploitation')
+                .section__block 
+                  .test 
+                    .test__text 
+                      |Результат:
+                    .test__result(data-calc-res='')
+                  .test-btn 
+                    .button(data-calc-btn='')
+                      |Расчитать
                 .section__block 
                   .calculator-page__block
                     .calculator-page__block-row

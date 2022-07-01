@@ -35,7 +35,7 @@ mixin checkbox
 mixin radio-button 
   .radio
     label.radio__label
-      input.radio__input(type="radio" name=attributes.name)
+      input.radio__input(type="radio" name=attributes.name value=attributes.value)&attributes(attributes)
       .radio__text 
         |#{attributes.text}
       .radio__icon

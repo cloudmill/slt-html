@@ -672,7 +672,7 @@
 										</div>
 									</div>
 									<div class="calculator-page__col">
-										<form class="form" action="/">
+										<form class="form" action="/" data-calc="">
 											<div class="calculator-page__features">
 												<div class="calculator-page__features-col">
 													<div class="calculator-page__wrapper">
@@ -680,19 +680,19 @@
 														<div class="calculator-page__features-inner">
 															<ul class="calculator-page__features-list">
 																<li class="calculator-page__features-item">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="type" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="type" value="0.15" text="SLT AQUA PP-R" data-calc-radio="type" />
 																			<div class="radio__text">SLT AQUA PP-R</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
 																</li>
 																<li class="calculator-page__features-item">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="type" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="type" value="0.04" text="SLT AQUA PP-R-GF" data-calc-radio="type" />
 																			<div class="radio__text">SLT AQUA PP-R-GF</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
 																</li>
 																<li class="calculator-page__features-item">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="type" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="type" value="0.035" text="SLT AQUA PP-R-AL" data-calc-radio="type" />
 																			<div class="radio__text">SLT AQUA PP-R-AL</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
@@ -707,19 +707,19 @@
 														<div class="calculator-page__features-row">
 															<ul class="calculator-page__features-buttons">
 																<li class="calculator-page__features-button">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" text="20" />
 																			<div class="radio__text">20</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
 																</li>
 																<li class="calculator-page__features-button">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" text="25" />
 																			<div class="radio__text">25</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
 																</li>
 																<li class="calculator-page__features-button">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" text="30" />
 																			<div class="radio__text">30</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
@@ -727,19 +727,19 @@
 															</ul>
 															<ul class="calculator-page__features-buttons">
 																<li class="calculator-page__features-button">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" text="40" />
 																			<div class="radio__text">40</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
 																</li>
 																<li class="calculator-page__features-button">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" text="50" />
 																			<div class="radio__text">50</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
 																</li>
 																<li class="calculator-page__features-button">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" text="63" />
 																			<div class="radio__text">63</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
@@ -747,19 +747,19 @@
 															</ul>
 															<ul class="calculator-page__features-buttons">
 																<li class="calculator-page__features-button">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" text="75" />
 																			<div class="radio__text">75</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
 																</li>
 																<li class="calculator-page__features-button">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" text="90" />
 																			<div class="radio__text">90</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
 																</li>
 																<li class="calculator-page__features-button">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" text="110" />
 																			<div class="radio__text">110</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
@@ -780,20 +780,29 @@
 													<div class="calculator-page__features">
 														<div class="calculator-page__features-col">
 															<div class="calculator-page__caption calculator-page__caption--big">Общая длина трубы, м</div>
-															<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
+															<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" data-calc-input="length" /></div>
 															<div class="calculator-page__features-desc">
 																<div class="calculator-page__caption calculator-page__caption--big">Lобщ = 2L</div>
 															</div>
 														</div>
 														<div class="calculator-page__features-col">
 															<div class="calculator-page__caption calculator-page__caption--big">Температура монтажа, °C</div>
-															<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
+															<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" data-calc-input="mounting" /></div>
 														</div>
 														<div class="calculator-page__features-col">
 															<div class="calculator-page__caption calculator-page__caption--big">Температура эксплуатации, °C</div>
-															<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
+															<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" data-calc-input="exploitation" /></div>
 														</div>
 													</div>
+												</div>
+											</div>
+											<div class="section__block">
+												<div class="test">
+													<div class="test__text">Результат:</div>
+													<div class="test__result" data-calc-res=""></div>
+												</div>
+												<div class="test-btn">
+													<div class="button" data-calc-btn="">Расчитать</div>
 												</div>
 											</div>
 											<div class="section__block">

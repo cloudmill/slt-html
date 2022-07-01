@@ -17,3 +17,25 @@
 .blude-stroke {
   stroke: var(--color-blue);
 }
+
+.test {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    margin-right: 5px;
+
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  &__result {
+    font-size: 20px;
+  }
+}
+
+.test-btn {
+  margin-top: 20px;
+
+  display: flex;
+}
