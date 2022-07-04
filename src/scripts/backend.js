@@ -148,12 +148,11 @@ function filterList() {
     });
 }
 
-function filterCheckbox() {
+export function filterCheckbox() {
     $(document).on("click", "[data-type=js-filter-checkbox]", function (e) {
-        console.log("filter checkbox ");
-        const thisObj = $(this);
+
         let data = [],
-            parent = thisObj.parents("[data-type=filter-parent]"),
+            parent = $(document).find("[data-type=filter-parent]"),
             count = 0,
             arUrl = window.location.href.split('?');
 
@@ -167,7 +166,9 @@ function filterCheckbox() {
         });
 
         parent.find("[data-type=js-filter-checkbox]").each(function () {
-            if ($(this).is(":checked")) {
+            let parentLi = $(this).parents("[data-objects-item]");
+
+            if (parentLi.hasClass("active")) {
                 let field = $(this).attr("data-code"),
                     val = $(this).val();
 
@@ -175,6 +176,8 @@ function filterCheckbox() {
                 count++
             }
         });
+
+        console.log(data);
 
         $.ajax({
             type: "POST",
