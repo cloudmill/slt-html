@@ -37,6 +37,8 @@ export class CategoriesList {
       }
     })
 
+    $(items[0].element.querySelector('[data-item-checkbox]')).trigger('change')
+
     items = items.filter(item => item.text != text)
     this.currentItems = this.currentItems.filter(item => item.text != text)
     parent.remove()
@@ -44,7 +46,7 @@ export class CategoriesList {
     if (!items.length) {
       this.root.classList.remove('active')
     }
-
+    
     return items
   }
 

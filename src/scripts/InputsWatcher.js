@@ -35,6 +35,8 @@ export class InputsWatcher {
       item.element.querySelector('[data-item-checkbox]').checked = false
       item.element.classList.remove('active')
     })
+    
+    $(this.selectedItems[0].element.querySelector('[data-item-checkbox]')).trigger('change')
     this.selectedItems = []
   }
 }
