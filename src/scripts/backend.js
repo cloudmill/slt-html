@@ -149,7 +149,7 @@ function filterList() {
 }
 
 export function filterCheckbox() {
-    $(document).on("click", "[data-type=js-filter-checkbox]", function (e) {
+    $(document).on("change", "[data-type=js-filter-checkbox]", function (e) {
 
         let data = [],
             parent = $(document).find("[data-type=filter-parent]"),
