@@ -21,6 +21,9 @@ $(() => {
         $.fancybox.defaults.animationEffect = 'zoom'
         $.fancybox.defaults.animationDuration = 500
         $.fancybox.defaults.afterShow = function(instance, slide) {}
+        $.fancybox.defaults.beforeClose = function(instance, slide) {
+          ths[0].reset()
+        }
         $.fancybox.open($(`[data-response=${id}]`))
       })
     })

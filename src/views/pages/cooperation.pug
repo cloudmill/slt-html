@@ -86,7 +86,7 @@ block content
         h3.cooperation-page__title
             |#[span.word-span #[span Оставить заявку]] #[span.word-span #[span на]] #[span.word-span #[span сотрудничество]]
         .section__block 
-          form.form(action="/" data-parsley-validate) 
+          form.form(action="/" data-parsley-validate data-form='form1') 
             .cooperation-page__row
               .cooperation-page__col
 
@@ -153,3 +153,4 @@ block content
                             |Отправить
     section.section 
       +about-bot
+  +response-modal(id = 'form1' text = 'Благодарим за проявленный интерес к нашей компании. В ближайшее время мы рассмотрим вашу заявку и свяжемся.')
