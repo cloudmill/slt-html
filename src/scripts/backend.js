@@ -254,11 +254,20 @@ function forms() {
             processData: processData,
             data: data,
             success: function (r) {
-                form.reset();
+                if (r.type != 'sub') {
+                    form.reset();
+                }
 
                 console.log(r);
                 if (r.type == 'order') {
                     window.location.href = r.url;
+                }
+                if (r.type == 'sub') {
+                    $(document).find('[data-type=sub-resp-ttl]').empty();
+                    $(document).find('[data-type=sub-resp-ttl]').text(r.ttl);
+
+                    $(document).find('[data-type=sub-resp-desc]').empty();
+                    $(document).find('[data-type=sub-resp-desc]').text(r.desc);
                 }
             },
         });
