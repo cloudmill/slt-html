@@ -8,9 +8,9 @@ block content
   -
     var ddata = {
       radioButtons: [
-        {text: 'SLT AQUA PP-R', value: 0.15},
-        {text: 'SLT AQUA PP-R-GF', value: 0.04},
-        {text: 'SLT AQUA PP-R-AL', value: 0.035},
+        {text: 'SLT AQUA PP-R', value: 20, ratio: 0.15,},
+        {text: 'SLT AQUA PP-R-GF', value: 25, ratio: 0.04,},
+        {text: 'SLT AQUA PP-R-AL', value: 32, ratio: 0.035,},
       ]
     }
   .calculator-page
@@ -60,7 +60,7 @@ block content
                         ul.calculator-page__features-list
                           each item in ddata.radioButtons
                             li.calculator-page__features-item 
-                              +radio-button(name = 'type' text = item.text value = item.value data-calc-radio='type')
+                              +radio-button(name = 'type' text = item.text value = item.value data-calc-radio='type' data-calc-ratio=item.ratio)
                   .calculator-page__features-col
                     .calculator-page__caption.calculator-page__caption--big 
                       |Внешний диаметр трубы #[span.calculator-page__features-span D], мм
@@ -69,21 +69,21 @@ block content
                         ul.calculator-page__features-buttons 
                           each item in ['20', '25', '30']
                             li.calculator-page__features-button
-                              +radio-button(name = 'diameter' text = item)
+                              +radio-button(name = 'diameter' text = item data-calc-radio='diameter' value=item)
                         ul.calculator-page__features-buttons 
                           each item in ['40', '50', '63']
                             li.calculator-page__features-button
-                              +radio-button(name = 'diameter' text = item)
+                              +radio-button(name = 'diameter' text = item data-calc-radio='diameter' value=item)
                         ul.calculator-page__features-buttons 
                           each item in ['75', '90', '110']
                             li.calculator-page__features-button
-                              +radio-button(name = 'diameter' text = item)
+                              +radio-button(name = 'diameter' text = item data-calc-radio='diameter' value=item)
                   .calculator-page__features-col
                     .calculator-page__wrapper
                       .calculator-page__caption.calculator-page__caption--big
                         |Требуемая длина плеча #[br.calculator-page__br] компенсатора #[span.calculator-page__features-span L #[span.calculator-page__features-small S1]] (обратный расчет), мм
                       .calculator-page__features-inner
-                        +input#input(type = 'number' placeholder = '0')
+                        +input#input(type = 'number' placeholder = '0' data-calc-input='compensatorLength')
                 .section__block
                   .calculator-page__wrapper
                     .calculator-page__features
@@ -128,12 +128,12 @@ block content
                           .calculator-page__caption.calculator-page__caption--big 
                             |Длина плеча компенсатора, мм
                           .calculator-page__block-title 
-                            |L#[span.calculator-page__block-span S]=343
+                            |L#[span.calculator-page__block-span S]=#[span(data-calc-value='length') 0]
                         .calculator-page__block-col
                           .calculator-page__caption.calculator-page__caption--big
                             |Минимальная ширина компенсатора, мм
                           .calculator-page__block-title 
-                            |W#[span.calculator-page__block-span k]=156
+                            |W#[span.calculator-page__block-span k]=#[span(data-calc-value='minWidth') 0]
                 .section__block 
                   .calculator-page__block
                     .calculator-page__block-row
@@ -149,24 +149,24 @@ block content
                           .calculator-page__caption 
                             |Требующаяся длина плеча компенсатора, мм
                           .calculator-page__block-title 
-                            |L#[span.calculator-page__block-span S1]=343
+                            |L#[span.calculator-page__block-span S1]=#[span(data-calc-value='compensatorLength') 0]
                         .calculator-page__block-col
                           .calculator-page__caption.calculator-page__caption--big 
                             |Минимальная ширина компенсатора, мм
                           .calculator-page__block-title 
-                            |W#[span.calculator-page__block-span k]=156
+                            |W#[span.calculator-page__block-span k]=#[span(data-calc-value='minWidth') 0]
                     .calculator-page__block-inner
                       .calculator-page__block-row
                         .calculator-page__block-col
                           .calculator-page__caption.calculator-page__caption--big
                             |Длина компенсируемого участка 1-м компенсатором, мм
                           .calculator-page__block-title 
-                            |L#[span.calculator-page__block-span комп]=343
+                            |L#[span.calculator-page__block-span комп]=#[span(data-calc-value='compLength') 0]
                         .calculator-page__block-col
                           .calculator-page__caption.calculator-page__caption--big
                             |Количество компенсаторов на длину #[span.calculator-page__features-span L #[span.calculator-page__features-small общ]] , шт
                           .calculator-page__block-title 
-                            |K=10
+                            |K=#[span(data-calc-value='amount') 0]
                     .calculator-page__block-inner
                       .calculator-page__block-row
                         .calculator-page__block-col
