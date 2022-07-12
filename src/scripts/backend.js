@@ -254,9 +254,6 @@ function forms() {
             processData: processData,
             data: data,
             success: function (r) {
-                if (r.type != 'sub') {
-                    form.reset();
-                }
 
                 console.log(r);
                 if (r.type == 'order') {
@@ -382,6 +379,8 @@ function deleteBasket() {
                     $(document).find('[data-type=basket_count]').empty();
                     $(document).find('[data-type=basket_count]').html(r.count);
 
+                    let countOrderPage = r.count;
+
                     $.ajax({
                         method: "POST",
                         url: window.location.href,
@@ -391,6 +390,23 @@ function deleteBasket() {
                         success: function (r) {
                             $(document).find('[data-type=items-container-full]').empty();
                             $(document).find('[data-type=items-container-full]').append($(r));
+                        },
+                        error: function (r) {
+                            console.debug(r);
+                        }
+                    });
+
+                    $.ajax({
+                        method: "POST",
+                        url: window.location.href,
+                        data: {
+                            ajax2: 1,
+                        },
+                        success: function (r) {
+                            let countOrder = '<h5 class="order-page__panel-title">Товарных позиций в заказе: ' + countOrderPage + '</h5>';
+
+                            $(document).find('[data-type=order-page-count]').empty();
+                            $(document).find('[data-type=order-page-count]').append(countOrder);
                         },
                         error: function (r) {
                             console.debug(r);
