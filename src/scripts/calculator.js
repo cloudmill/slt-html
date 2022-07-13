@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       getCompLength()
       getMinWidth()
       getAmount()
+      linearExpansion()
     }
     
     function tempDiff() {
@@ -79,7 +80,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function linearExpansion() {
-      return Math.round(data.ratio * (data.length / 2) * tempDiff());
+      const result = Math.round(data.ratio * (data.length / 2) * tempDiff())
+      const elem = document.querySelector('[data-calc-value=expansion]')
+      console.log(tempDiff());
+      console.log(data);
+      if (elem) {
+        const parent = elem.closest('[data-calc-parent]')
+        if (result) {
+          elem.textContent = result
+          parent.classList.remove('empty')
+        } else {
+          parent.classList.add('empty')
+        }
+      }
+
+      return result;
     }
 
     function getLength() {

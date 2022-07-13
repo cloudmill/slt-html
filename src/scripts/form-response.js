@@ -23,6 +23,12 @@ $(() => {
         $.fancybox.defaults.afterShow = function(instance, slide) {}
         $.fancybox.defaults.beforeClose = function(instance, slide) {
           ths[0].reset()
+
+          // const file = ths.find('[data-files-input]')
+
+          // if (file.length) {
+          //   window.dispatchEvent(new CustomEvent('clearFiles'))
+          // }
         }
         $.fancybox.open($(`[data-response=${id}]`))
       })

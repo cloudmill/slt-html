@@ -138,5 +138,10 @@
       "href": "404",
       "title": "404"
     }
+  ],
+  "radioButtons": [
+    {"text": "SLT AQUA PP-R", "value": 20, "ratio": 0.15},
+    {"text": "SLT AQUA PP-R-GF", "value": 25, "ratio": 0.04},
+    {"text": "SLT AQUA PP-R-AL", "value": 32, "ratio": 0.035}
   ]
 }

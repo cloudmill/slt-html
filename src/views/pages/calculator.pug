@@ -39,7 +39,7 @@ block content
                         .calculator-page__caption 
                           |#{item.text}
             .calculator-page__col
-              form.form(action="/") 
+              form.form(action="/" data-calc='') 
                 .calculator-page__features
                   .calculator-page__features-col
                     .calculator-page__wrapper
@@ -47,9 +47,9 @@ block content
                         |Тип трубы
                       .calculator-page__features-inner 
                         ul.calculator-page__features-list
-                          each item in ['SLT AQUA PP-R', 'SLT AQUA PP-R-GF', 'SLT AQUA PP-R-AL']
+                          each item in data.radioButtons
                             li.calculator-page__features-item 
-                              +radio-button(name = 'type' text = item)
+                              +radio-button(name = 'type' text = item.text value = item.value data-calc-radio='type' data-calc-ratio=item.ratio)
                   .calculator-page__features-col
                     .calculator-page__caption 
                       |Внешний диаметр трубы #[span.calculator-page__features-span D], мм
@@ -58,21 +58,21 @@ block content
                         ul.calculator-page__features-buttons 
                           each item in ['20', '25', '30']
                             li.calculator-page__features-button 
-                              +radio-button(name = 'diameter' text = item)
+                              +radio-button(name = 'diameter' text = item data-calc-radio='diameter' value=item)
                         ul.calculator-page__features-buttons 
                           each item in ['40', '50', '63']
                             li.calculator-page__features-button 
-                              +radio-button(name = 'diameter' text = item)
+                              +radio-button(name = 'diameter' text = item data-calc-radio='diameter' value=item)
                         ul.calculator-page__features-buttons 
                           each item in ['75', '90', '110']
                             li.calculator-page__features-button 
-                              +radio-button(name = 'diameter' text = item)
+                              +radio-button(name = 'diameter' text = item data-calc-radio='diameter' value=item)
                   .calculator-page__features-col
                     .calculator-page__wrapper
                       .calculator-page__caption.calculator-page__caption--big 
                         |Длина участка компенсиции, м 
                       .calculator-page__features-inner 
-                        +input#input(type = 'number' placeholder = '0')
+                        +input#input(type = 'number' placeholder = '0' data-calc-input='length')
                 .section__block
                   .calculator-page__wrapper
                     .calculator-page__features
@@ -80,26 +80,30 @@ block content
                         .calculator-page__caption.calculator-page__caption--big 
                           |Температура монтажа, °C
                         .calculator-page__features-inner 
-                          +input#input(type = 'number' placeholder = '0')
+                          +input#input(type = 'number' placeholder = '0' data-calc-input='mounting')
                       .calculator-page__features-col
                         .calculator-page__caption.calculator-page__caption--big 
                           |Температура эксплуатации, °C
                         .calculator-page__features-inner 
-                          +input#input(type = 'number' placeholder = '0')
+                          +input#input(type = 'number' placeholder = '0' data-calc-input='exploitation')
                       .calculator-page__features-col.only-desktop
                 .section__block 
                   .calculator-page__block
                     .calculator-page__block-row
-                      .calculator-page__block-col
+                      .calculator-page__block-col.empty(data-calc-parent='')
                         .calculator-page__caption.calculator-page__caption--big 
                           |Линейное расширение, мм
                         .calculator-page__block-title 
-                          |ΔL=19
-                      .calculator-page__block-col
+                          |ΔL=#[span(data-calc-value='expansion') 19]
+                        .calculator-page__block-error 
+                          |Null
+                      .calculator-page__block-col.empty(data-calc-parent='')
                         .calculator-page__caption.calculator-page__caption--big 
                           |Длина плеча компенсатора, мм
                         .calculator-page__block-title 
-                          |L#[span.calculator-page__block-span S]=156
+                          |L#[span.calculator-page__block-span S]=#[span(data-calc-value='length') 156]
+                        .calculator-page__block-error 
+                          |Null
                     .calculator-page__block-inner
                       .calculator-page__block-row
                         .calculator-page__block-col

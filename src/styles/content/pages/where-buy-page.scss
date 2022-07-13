@@ -140,8 +140,26 @@
       }
 
       &.is-active {
-        border: 1px solid var(--color-blue);
-        background: var(--color-blue);
+        &::after {
+          border-color: var(--color-blue);
+        }
+
+        &::before {
+          transform: none;
+        }
+
+        .button__text span {
+          // animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+          color: var(--color-white);
+        }
+
+        .button__svg {
+          // animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+
+          path {
+            fill: var(--color-white);
+          }
+        }
 
         .button__text span {
           color: #fff;

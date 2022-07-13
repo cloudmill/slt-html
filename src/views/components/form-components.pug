@@ -9,12 +9,12 @@ mixin input-file
   .file
     .file__inner
       label.file__label
-        input.file__input(type="file")
+        input.file__input(type="file" multiple data-files-input='')
         .file__icon 
           +paperclip-svg.file__svg
         .file__text 
           |Прикрепить файл
-    .file__container
+    .file__container(data-files-container='')
 
 mixin checkbox 
   .checkbox 
