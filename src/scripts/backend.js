@@ -1,4 +1,5 @@
 import { initMap } from './map.js';
+import { swiperInit } from './swipers.js';
 
 $(function () {
     filterChange();
@@ -649,6 +650,8 @@ function mapModal() {
             success: function (r) {
                 $(document).find('[data-type=modal-map]').empty();
                 $(document).find('[data-type=modal-map]').append($(r));
+
+                swiperInit();
             },
             error: function (r) {
                 console.debug(r);
