@@ -5,6 +5,11 @@
 		<meta charset="utf-8">
 		<title>slt-html</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<link rel="icon" type="image/png" href="assets/images/favicon_16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="assets/images/favicon_32x32.png" sizes="32x32">
+		<link rel="shortcut icon" href="assets/images/favicon.ico">
+		<link rel="apple-touch-icon" href="assets/images/svg/appletouch-icon.svg">
+		<meta property="og:image" content="assets/images/opengraph.jpg">
 		<script defer="defer" src="assets/vendor.js"></script>
 		<script defer="defer" src="assets/app.js"></script>
 		<link href="902.css" rel="stylesheet">
@@ -596,7 +601,7 @@
 										</div>
 									</div>
 									<div class="calculator-page__col">
-										<form class="form" action="/">
+										<form class="form" action="/" data-calc="">
 											<div class="calculator-page__features">
 												<div class="calculator-page__features-col">
 													<div class="calculator-page__wrapper">
@@ -604,19 +609,19 @@
 														<div class="calculator-page__features-inner">
 															<ul class="calculator-page__features-list">
 																<li class="calculator-page__features-item">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="type" text="SLT AQUA PP-R" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="type" value="20" text="SLT AQUA PP-R" data-calc-radio="type" data-calc-ratio="0.15" />
 																			<div class="radio__text">SLT AQUA PP-R</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
 																</li>
 																<li class="calculator-page__features-item">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="type" text="SLT AQUA PP-R-GF" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="type" value="25" text="SLT AQUA PP-R-GF" data-calc-radio="type" data-calc-ratio="0.04" />
 																			<div class="radio__text">SLT AQUA PP-R-GF</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
 																</li>
 																<li class="calculator-page__features-item">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="type" text="SLT AQUA PP-R-AL" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="type" value="32" text="SLT AQUA PP-R-AL" data-calc-radio="type" data-calc-ratio="0.035" />
 																			<div class="radio__text">SLT AQUA PP-R-AL</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
@@ -631,19 +636,19 @@
 														<div class="calculator-page__features-row">
 															<ul class="calculator-page__features-buttons">
 																<li class="calculator-page__features-button">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" text="20" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" value="20" text="20" data-calc-radio="diameter" />
 																			<div class="radio__text">20</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
 																</li>
 																<li class="calculator-page__features-button">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" text="25" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" value="25" text="25" data-calc-radio="diameter" />
 																			<div class="radio__text">25</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
 																</li>
 																<li class="calculator-page__features-button">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" text="30" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" value="30" text="30" data-calc-radio="diameter" />
 																			<div class="radio__text">30</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
@@ -651,19 +656,19 @@
 															</ul>
 															<ul class="calculator-page__features-buttons">
 																<li class="calculator-page__features-button">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" text="40" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" value="40" text="40" data-calc-radio="diameter" />
 																			<div class="radio__text">40</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
 																</li>
 																<li class="calculator-page__features-button">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" text="50" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" value="50" text="50" data-calc-radio="diameter" />
 																			<div class="radio__text">50</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
 																</li>
 																<li class="calculator-page__features-button">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" text="63" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" value="63" text="63" data-calc-radio="diameter" />
 																			<div class="radio__text">63</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
@@ -671,19 +676,19 @@
 															</ul>
 															<ul class="calculator-page__features-buttons">
 																<li class="calculator-page__features-button">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" text="75" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" value="75" text="75" data-calc-radio="diameter" />
 																			<div class="radio__text">75</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
 																</li>
 																<li class="calculator-page__features-button">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" text="90" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" value="90" text="90" data-calc-radio="diameter" />
 																			<div class="radio__text">90</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
 																</li>
 																<li class="calculator-page__features-button">
-																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" text="110" />
+																	<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="diameter" value="110" text="110" data-calc-radio="diameter" />
 																			<div class="radio__text">110</div>
 																			<div class="radio__icon"></div>
 																		</label></div>
@@ -695,7 +700,7 @@
 												<div class="calculator-page__features-col">
 													<div class="calculator-page__wrapper">
 														<div class="calculator-page__caption calculator-page__caption--big">Длина участка компенсиции, м</div>
-														<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
+														<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" data-calc-input="length" /></div>
 													</div>
 												</div>
 											</div>
@@ -704,11 +709,11 @@
 													<div class="calculator-page__features">
 														<div class="calculator-page__features-col">
 															<div class="calculator-page__caption calculator-page__caption--big">Температура монтажа, °C</div>
-															<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
+															<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" data-calc-input="mounting" /></div>
 														</div>
 														<div class="calculator-page__features-col">
 															<div class="calculator-page__caption calculator-page__caption--big">Температура эксплуатации, °C</div>
-															<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
+															<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" data-calc-input="exploitation" /></div>
 														</div>
 														<div class="calculator-page__features-col only-desktop"></div>
 													</div>
@@ -717,13 +722,15 @@
 											<div class="section__block">
 												<div class="calculator-page__block">
 													<div class="calculator-page__block-row">
-														<div class="calculator-page__block-col">
+														<div class="calculator-page__block-col empty" data-calc-parent="">
 															<div class="calculator-page__caption calculator-page__caption--big">Линейное расширение, мм</div>
-															<div class="calculator-page__block-title">ΔL=19</div>
+															<div class="calculator-page__block-title">ΔL=<span data-calc-value="expansion">19</span></div>
+															<div class="calculator-page__block-error">Null</div>
 														</div>
-														<div class="calculator-page__block-col">
+														<div class="calculator-page__block-col empty" data-calc-parent="">
 															<div class="calculator-page__caption calculator-page__caption--big">Длина плеча компенсатора, мм</div>
-															<div class="calculator-page__block-title">L<span class="calculator-page__block-span">S</span>=156</div>
+															<div class="calculator-page__block-title">L<span class="calculator-page__block-span">S</span>=<span data-calc-value="length">156</span></div>
+															<div class="calculator-page__block-error">Null</div>
 														</div>
 													</div>
 													<div class="calculator-page__block-inner">

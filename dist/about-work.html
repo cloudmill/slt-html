@@ -5,6 +5,11 @@
 		<meta charset="utf-8">
 		<title>slt-html</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<link rel="icon" type="image/png" href="assets/images/favicon_16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="assets/images/favicon_32x32.png" sizes="32x32">
+		<link rel="shortcut icon" href="assets/images/favicon.ico">
+		<link rel="apple-touch-icon" href="assets/images/svg/appletouch-icon.svg">
+		<meta property="og:image" content="assets/images/opengraph.jpg">
 		<script defer="defer" src="assets/vendor.js"></script>
 		<script defer="defer" src="assets/app.js"></script>
 		<link href="902.css" rel="stylesheet">
@@ -568,22 +573,19 @@
 									</div>
 									<div class="about-page__slider-col">
 										<div class="about-page__slider-controls">
-											<div class="slider-buttons slider-buttons--default">
-												<div class="slider-buttons__item">
+											<div class="slider-buttons slider-buttons--default"><button class="slider-buttons__item">
 													<div class="button-icon button-icon--blue" data-about-prev="">
 														<div class="button-icon__container-svg"><svg class="button-icon__svg" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path fill-rule="evenodd" clip-rule="evenodd" d="M3.27614 6.66672H13V5.33338H3.27614L7.4714 1.13812L6.5286 0.195312L0.723858 6.00005L6.5286 11.8048L7.4714 10.862L3.27614 6.66672Z" fill="#3F3F40"></path>
 															</svg></div>
 													</div>
-												</div>
-												<div class="slider-buttons__item">
+												</button><button class="slider-buttons__item">
 													<div class="button-icon button-icon--blue" data-about-next="">
 														<div class="button-icon__container-svg"><svg class="button-icon__svg" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 																<path fill-rule="evenodd" clip-rule="evenodd" d="M9.72386 6.66672H0V5.33338H9.72386L5.5286 1.13812L6.4714 0.195312L12.2761 6.00005L6.4714 11.8048L5.5286 10.862L9.72386 6.66672Z" fill="white"></path>
 															</svg></div>
 													</div>
-												</div>
-											</div>
+												</button></div>
 										</div>
 									</div>
 								</div>
@@ -1010,13 +1012,13 @@
 							<div class="form__item"><textarea class="form__textarea" name="area" id="input" placeholder="Текст сопроводительного письма"></textarea></div>
 							<div class="form__inner">
 								<div class="file">
-									<div class="file__inner"><label class="file__label"><input class="file__input" type="file" />
+									<div class="file__inner"><label class="file__label"><input class="file__input" type="file" multiple="multiple" data-files-input="" />
 											<div class="file__icon"><svg class="file__svg" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path fill-rule="evenodd" clip-rule="evenodd" d="M8.89545 4.36237L9.84545 5.29793L5.63332 9.57509C5.42196 9.79081 5.42196 10.138 5.63332 10.3537C5.83388 10.5584 6.16893 10.5575 6.36736 10.3526L11.0016 5.64486C11.6782 4.95444 11.6782 3.84563 11.0016 3.15521C10.3561 2.49648 9.214 2.51113 8.58138 3.15647L3.52319 8.29124C2.38119 9.45619 2.38119 11.3268 3.52319 12.4918C4.63213 13.623 6.53712 13.6046 7.62874 12.4907L13.5281 6.49924L14.4782 7.43472L8.57992 13.4251C6.97064 15.0671 4.20688 15.0939 2.57105 13.4252C0.920789 11.7417 0.920789 9.04127 2.57219 7.3567L7.63038 2.22193C8.77933 1.04988 10.7802 1.02421 11.954 2.22202C13.1385 3.43086 13.1385 5.36921 11.9529 6.57914L7.3214 11.284C6.60495 12.024 5.40639 12.0273 4.68092 11.2868C3.96165 10.5527 3.96165 9.3761 4.68212 8.64075L8.89545 4.36237Z" fill="#04b2d1"></path>
 												</svg></div>
 											<div class="file__text">Прикрепить файл</div>
 										</label></div>
-									<div class="file__container"></div>
+									<div class="file__container" data-files-container=""></div>
 								</div>
 							</div>
 							<div class="form__inner">
