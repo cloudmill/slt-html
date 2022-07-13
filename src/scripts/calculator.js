@@ -26,6 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
           if (ratio) {
             data.ratio = +ratio
           }
+
+          const elem = document.querySelector('[data-calc-value=compensSkill]')
+
+          if (elem) {
+            if (property === 'diameter') {
+              const parent = elem.closest('[data-calc-parent]')
+
+              elem.textContent = this.value
+              parent.classList.remove('empty')
+            }
+          }
         }
 
         calculate()
@@ -45,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
           const parent = elem.closest('[data-calc-parent]')
 
           if (+this.value) {
-            console.log(+this.value);
             elem.textContent = this.value
             parent.classList.remove('empty')
           } else {
@@ -66,6 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
     //   text.textContent = `${result} мм`
     // }
 
+    let sep = 2
+    const fullExpansion = document.querySelector('[data-calc-value=expansion]')
+
+    if (fullExpansion) {
+      sep = 1
+    }
+
     function calculate() {
       getLength()
       getCompLength()
@@ -80,10 +97,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function linearExpansion() {
-      const result = Math.round(data.ratio * (data.length / 2) * tempDiff())
+      const result = Math.round(data.ratio * (data.length / sep) * tempDiff())
       const elem = document.querySelector('[data-calc-value=expansion]')
-      console.log(tempDiff());
-      console.log(data);
+
       if (elem) {
         const parent = elem.closest('[data-calc-parent]')
         if (result) {
@@ -147,7 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const elem = document.querySelector('[data-calc-value=compLength]')
       if (elem) {
         const parent = elem.closest('[data-calc-parent]')
-        console.log(result);
         if (result) {
           elem.textContent = result
           parent.classList.remove('empty')
@@ -160,7 +175,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function getAmount() {
-      const result = Math.ceil(data.length / getCompLength())
+      let result
+      if (document.querySelector('[data-calc-value=compensSkill]')) {
+        result = Math.abs(Math.ceil(linearExpansion() / data.diameter))
+      } else {
+        result = Math.ceil(data.length / getCompLength())
+      }
+
       const elem = document.querySelector('[data-calc-value=amount]')
 
       if (elem) {
