@@ -30,6 +30,7 @@ import {mediaQuery} from './mediaQueries'
             $(slide.src).addClass('active')
           }
           $.fancybox.defaults.beforeClose = function(instance, slide) {
+            window.dispatchEvent(new CustomEvent('clearFiles'))
             $(slide.src).removeClass('active')
           }
           break

@@ -5,14 +5,6 @@ include ../components/nav
 include ../components/form-components
 
 block content
-  -
-    var ddata = {
-      radioButtons: [
-        {text: 'SLT AQUA PP-R', value: 20, ratio: 0.15,},
-        {text: 'SLT AQUA PP-R-GF', value: 25, ratio: 0.04,},
-        {text: 'SLT AQUA PP-R-AL', value: 32, ratio: 0.035,},
-      ]
-    }
   .calculator-page
     section.section.section--first
       .container 
@@ -58,7 +50,7 @@ block content
                         |Тип трубы
                       .calculator-page__features-inner 
                         ul.calculator-page__features-list
-                          each item in ddata.radioButtons
+                          each item in data.radioButtons
                             li.calculator-page__features-item 
                               +radio-button(name = 'type' text = item.text value = item.value data-calc-radio='type' data-calc-ratio=item.ratio)
                   .calculator-page__features-col
