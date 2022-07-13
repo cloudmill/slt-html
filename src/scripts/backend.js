@@ -5,6 +5,7 @@ $(function () {
     filterCheckbox();
     filterList();
     filterClickColor();
+    filterCatalog();
     snippetImg();
     forms();
     videoModal();
@@ -140,6 +141,52 @@ function filterList() {
                 $(document).find('[data-type=items-container-full]').append($(r));
 
                 initMap();
+            },
+            error: function (r) {
+                console.debug(r);
+            }
+        });
+    });
+}
+
+function filterCatalog() {
+    $(document).on("change", "[data-type=js-filter-catalog]", function (e) {
+
+        let data = [],
+            parent = $(document).find("[data-type=filter-parent]"),
+            count = 0,
+            typeF = 'filter';
+
+        data = {
+            ajaxShow: 1,
+            type: typeF,
+        }
+
+        parent.find("[data-type=js-filter-catalog]").each(function () {
+            let field = $(this).attr("data-code");
+            data[field] = [];
+        });
+
+        parent.find("[data-type=js-filter-catalog]").each(function () {
+            let parentLi = $(this).parents("[data-catalog-item]");
+
+            if (parentLi.hasClass("active")) {
+                let field = $(this).attr("data-code"),
+                    val = $(this).val();
+
+                data[field][count] = val;
+                count++
+            }
+        });
+
+        console.log(data);
+
+        $.ajax({
+            type: "POST",
+            url: "/local/templates/main/include/ajax/catalog_filter.php",
+            data: data,
+            success: function (r) {
+                console.log(r);
             },
             error: function (r) {
                 console.debug(r);
