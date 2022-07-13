@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
             data.ratio = +ratio
           }
         }
+
+        calculate()
       }
     })
 
@@ -38,47 +40,42 @@ document.addEventListener('DOMContentLoaded', () => {
         
         data[property] = +this.value
 
-        const res = getLength()
-
         if (property === 'compensatorLength') {
-          document.querySelector('[data-calc-value=compensatorLength]').textContent = this.value
+          const elem = document.querySelector('[data-calc-value=compensatorLength]')
+          const parent = elem.closest('[data-calc-parent]')
+
+          if (+this.value) {
+            console.log(+this.value);
+            elem.textContent = this.value
+            parent.classList.remove('empty')
+          } else {
+            parent.classList.add('empty')
+          }
         }
 
-        if (getLength()) {
-          document.querySelector('[data-calc-value=length]').textContent = getLength()
-        }
-        if (getCompLength()) {
-          document.querySelector('[data-calc-value=compLength]').textContent = getCompLength()
-        }
-        if (getMinWidth()) {
-          document.querySelectorAll('[data-calc-value=minWidth]').forEach(item => {
-            item.textContent = getMinWidth()
-          })
-        }
-        if (getAmount()) {
-          document.querySelector('[data-calc-value=amount]').textContent = getAmount()
-        }
-
-        if (res) {
-          console.log(getLength());
-          console.log(getMinWidth());
-          console.log(getCompLength());
-          console.log(getAmount());
-        }
+        calculate()
       }
     })
 
-    const btn = document.querySelector('[data-calc-btn]')
-    const text = document.querySelector('[data-calc-res]')
+    // const btn = document.querySelector('[data-calc-btn]')
+    // const text = document.querySelector('[data-calc-res]')
 
-    btn.onclick = function() {
-      const result = Math.round(data.type * (data.length / 2) * (data.exploitation - data.mounting))
+    // btn.onclick = function() {
+    //   const result = Math.round(data.type * (data.length / 2) * (data.exploitation - data.mounting))
 
-      text.textContent = `${result} мм`
+    //   text.textContent = `${result} мм`
+    // }
+
+    function calculate() {
+      getLength()
+      getCompLength()
+      getMinWidth()
+      getAmount()
     }
     
     function tempDiff() {
-      return data.exploitation - data.mounting;
+      const res = data.exploitation - data.mounting
+      return res ? res : NaN;
     }
 
     function linearExpansion() {
@@ -86,29 +83,81 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function getLength() {
-      return data.type * Math.pow(Math.abs(data.diameter * linearExpansion()),0.5);
+      const result = data.type * Math.pow(Math.abs(data.diameter * linearExpansion()),0.5)
+      const elem = document.querySelector('[data-calc-value=length]')
+
+      if (elem) {
+        const parent = elem.closest('[data-calc-parent]')
+
+        if (result) {
+          elem.textContent = result
+          parent.classList.remove('empty')
+        } else {
+          parent.classList.add('empty')
+        }
+      }
     }
 
     function getMinWidth() {
       const expansion = linearExpansion()
-      
+      let result 
+
       if (expansion < 0) {
-        return 150;
+        result = 150;
+      } else if (!expansion) {
+        result =  null;
+      } else {
+        result = 2 * expansion + 150;
       }
+      
+      const elems = document.querySelectorAll('[data-calc-value=minWidth]')
 
-      if (!expansion) {
-        return null;
+      if (elems.length) {
+
+        if (result) {
+          elems.forEach(item => {
+            item.textContent = result
+            item.closest('[data-calc-parent]').classList.remove('empty')
+          })
+        } else {
+          elems.forEach(item => {
+            item.closest('[data-calc-parent]').classList.add('empty')
+          })
+        }
       }
-
-      return 2 * expansion + 150;
     }
 
     function getCompLength() {
-      return 2 * Math.pow(data.compensatorLength / data.type, 2) / data.diameter / data.ratio / Math.abs(tempDiff())
+      const result = 2 * Math.pow(data.compensatorLength / data.type, 2) / data.diameter / data.ratio / Math.abs(tempDiff())
+      const elem = document.querySelector('[data-calc-value=compLength]')
+      if (elem) {
+        const parent = elem.closest('[data-calc-parent]')
+        console.log(result);
+        if (result) {
+          elem.textContent = result
+          parent.classList.remove('empty')
+        } else {
+          parent.classList.add('empty')
+        }
+      }
+      
+      return result;
     }
 
     function getAmount() {
-      return Math.ceil(data.length / getCompLength())
+      const result = Math.ceil(data.length / getCompLength())
+      const elem = document.querySelector('[data-calc-value=amount]')
+
+      if (elem) {
+        const parent = elem.closest('[data-calc-parent]')
+
+        if (result) {
+          elem.textContent = result
+          parent.classList.remove('empty')
+        } else {
+          parent.classList.add('empty')
+        }
+      }
     }
   }
 })
