@@ -1,4 +1,5 @@
 .calculator-page {
+  $comp: &;
 
   &__row {
     display: flex;
@@ -229,6 +230,15 @@
       }
       max-width: getRem(352px);
     }
+
+    &.empty {
+      #{$comp}__block-error {
+        display: block;
+      }
+      #{$comp}__block-title {
+        display: none;
+      }
+    }
   }
   &__block-title {
     margin-top: getRem(12px);
@@ -265,6 +275,20 @@
     @include fsl(16px, 110%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px);
+    }
+  }
+  &__block-error {
+    margin-top: getRem(12px);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 4px;
+    }
+
+    display: none;
+
+    color: var(--color-red);
+    @include fsl(40px, 100%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(20px, 110%);
     }
   }
 
