@@ -523,13 +523,13 @@
 										<div class="calculator-page__calculate-item">
 											<div class="calculator-page__wrapper">
 												<div class="calculator-page__caption calculator-page__caption--big">Расход, л/с</div>
-												<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
+												<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" data-calc-input="rate" /></div>
 											</div>
 										</div>
 										<div class="calculator-page__calculate-item">
 											<div class="calculator-page__wrapper">
 												<div class="calculator-page__caption calculator-page__caption--big">Температура, °C</div>
-												<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
+												<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" data-calc-input="temp" /></div>
 											</div>
 										</div>
 										<div class="calculator-page__calculate-item">
@@ -538,14 +538,14 @@
 												<div class="calculator-page__features-inner">
 													<div class="select-wrapper">
 														<div class="select"><select class="select__mobile" name="cat-mob" data-select-mobile="">
-																<option value="" selected="selected" disabled="disabled">D63 SDR 7,4</option>
-																<option value="D63 SDR 7,4">D63 SDR 7,4</option>
+																<option value="" selected="selected" disabled="disabled">PPR-GF, SDR6</option>
+																<option value="PPR-GF, SDR6">PPR-GF, SDR6</option>
 																<option value="D64 SDR 7,4">D64 SDR 7,4</option>
 																<option value="D65 SDR 7,4">D65 SDR 7,4</option>
 																<option value="D66 SDR 7,4">D66 SDR 7,4</option>
-															</select><select class="select__select" data-select-placeholder="D63 SDR 7,4" style="width: 100%">
+															</select><select class="select__select" data-select-placeholder="PPR-GF, SDR6" style="width: 100%">
 																<option value="" disabled="disabled" selected="selected"></option>
-																<option value="D63 SDR 7,4">D63 SDR 7,4</option>
+																<option value="PPR-GF, SDR6">PPR-GF, SDR6</option>
 																<option value="D64 SDR 7,4">D64 SDR 7,4</option>
 																<option value="D65 SDR 7,4">D65 SDR 7,4</option>
 																<option value="D66 SDR 7,4">D66 SDR 7,4</option>
@@ -567,13 +567,13 @@
 													<div class="select-wrapper">
 														<div class="select"><select class="select__mobile" name="cat-mob" data-select-mobile="">
 																<option value="" selected="selected" disabled="disabled">20%</option>
-																<option value="D63 SDR 7,4">D63 SDR 7,4</option>
+																<option value="PPR-GF, SDR6">PPR-GF, SDR6</option>
 																<option value="D64 SDR 7,4">D64 SDR 7,4</option>
 																<option value="D65 SDR 7,4">D65 SDR 7,4</option>
 																<option value="D66 SDR 7,4">D66 SDR 7,4</option>
 															</select><select class="select__select" data-select-placeholder="20%" style="width: 100%">
 																<option value="" disabled="disabled" selected="selected"></option>
-																<option value="D63 SDR 7,4">D63 SDR 7,4</option>
+																<option value="PPR-GF, SDR6">PPR-GF, SDR6</option>
 																<option value="D64 SDR 7,4">D64 SDR 7,4</option>
 																<option value="D65 SDR 7,4">D65 SDR 7,4</option>
 																<option value="D66 SDR 7,4">D66 SDR 7,4</option>
@@ -622,7 +622,7 @@
 									</div>
 								</div>
 								<div class="calculator-page__calculate-col">
-									<div class="calculator-page__grid">
+									<div class="calculator-page__grid" data-table="">
 										<div class="calculator-page__grid-heading">
 											<div class="calculator-page__caption calculator-page__caption--big">Диаметр</div>
 										</div>
@@ -648,108 +648,230 @@
 												<div class="tooltip__container">м/м - метр водного столба на метр трубы</div>
 											</div>
 										</div>
-										<div class="calculator-page__grid-item">
-											<div class="calculator-page__grid-title"></div>
+										<div class="calculator-page_grid-col" data-table-col="">
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title"></div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">D20</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">D25</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">D32</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">D40</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">D50</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">D63</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">D75</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">D90</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">D110</div>
+											</div>
 										</div>
-										<div class="calculator-page__grid-item">
-											<div class="calculator-page__grid-title">SDR 11</div>
+										<div class="calculator-page_grid-col" data-table-col="">
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">SDR 11</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
 										</div>
-										<div class="calculator-page__grid-item">
-											<div class="calculator-page__grid-title">SDR 7,4</div>
+										<div class="calculator-page_grid-col" data-table-col="">
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">SDR 7,4</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
 										</div>
-										<div class="calculator-page__grid-item">
-											<div class="calculator-page__grid-title">SDR 6</div>
+										<div class="calculator-page_grid-col" data-table-col="">
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">SDR 6</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
 										</div>
-										<div class="calculator-page__grid-item">
-											<div class="calculator-page__grid-title">SDR 11</div>
+										<div class="calculator-page_grid-col" data-table-col="">
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">SDR 11</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
 										</div>
-										<div class="calculator-page__grid-item">
-											<div class="calculator-page__grid-title">SDR 7,4</div>
+										<div class="calculator-page_grid-col" data-table-col="">
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">SDR 7,4</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
 										</div>
-										<div class="calculator-page__grid-item">
-											<div class="calculator-page__grid-title">SDR 6</div>
+										<div class="calculator-page_grid-col" data-table-col="">
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">SDR 6</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
+											<div class="calculator-page__grid-item" data-table-cell="">
+												<div class="calculator-page__grid-title">null</div>
+											</div>
 										</div>
-										<div class="calculator-page__grid-item">
-											<div class="calculator-page__grid-title">D20</div>
-										</div>
-										<div class="calculator-page__grid-item">73,7174</div>
-										<div class="calculator-page__grid-item">96,1133</div>
-										<div class="calculator-page__grid-item">118,4716</div>
-										<div class="calculator-page__grid-item">6,24482</div>
-										<div class="calculator-page__grid-item">12,13625</div>
-										<div class="calculator-page__grid-item">20,52237</div>
-										<div class="calculator-page__grid-item">
-											<div class="calculator-page__grid-title">D20</div>
-										</div>
-										<div class="calculator-page__grid-item">73,7174</div>
-										<div class="calculator-page__grid-item">96,1133</div>
-										<div class="calculator-page__grid-item">118,4716</div>
-										<div class="calculator-page__grid-item">6,24482</div>
-										<div class="calculator-page__grid-item">12,13625</div>
-										<div class="calculator-page__grid-item">20,52237</div>
-										<div class="calculator-page__grid-item">
-											<div class="calculator-page__grid-title">D20</div>
-										</div>
-										<div class="calculator-page__grid-item">73,7174</div>
-										<div class="calculator-page__grid-item">96,1133</div>
-										<div class="calculator-page__grid-item">118,4716</div>
-										<div class="calculator-page__grid-item">6,24482</div>
-										<div class="calculator-page__grid-item">12,13625</div>
-										<div class="calculator-page__grid-item">20,52237</div>
-										<div class="calculator-page__grid-item">
-											<div class="calculator-page__grid-title">D20</div>
-										</div>
-										<div class="calculator-page__grid-item">73,7174</div>
-										<div class="calculator-page__grid-item">96,1133</div>
-										<div class="calculator-page__grid-item">118,4716</div>
-										<div class="calculator-page__grid-item">6,24482</div>
-										<div class="calculator-page__grid-item">12,13625</div>
-										<div class="calculator-page__grid-item">20,52237</div>
-										<div class="calculator-page__grid-item">
-											<div class="calculator-page__grid-title">D20</div>
-										</div>
-										<div class="calculator-page__grid-item">73,7174</div>
-										<div class="calculator-page__grid-item">96,1133</div>
-										<div class="calculator-page__grid-item">118,4716</div>
-										<div class="calculator-page__grid-item">6,24482</div>
-										<div class="calculator-page__grid-item">12,13625</div>
-										<div class="calculator-page__grid-item">20,52237</div>
-										<div class="calculator-page__grid-item">
-											<div class="calculator-page__grid-title">D20</div>
-										</div>
-										<div class="calculator-page__grid-item">73,7174</div>
-										<div class="calculator-page__grid-item">96,1133</div>
-										<div class="calculator-page__grid-item">118,4716</div>
-										<div class="calculator-page__grid-item">6,24482</div>
-										<div class="calculator-page__grid-item">12,13625</div>
-										<div class="calculator-page__grid-item">20,52237</div>
-										<div class="calculator-page__grid-item">
-											<div class="calculator-page__grid-title">D20</div>
-										</div>
-										<div class="calculator-page__grid-item">73,7174</div>
-										<div class="calculator-page__grid-item">96,1133</div>
-										<div class="calculator-page__grid-item">118,4716</div>
-										<div class="calculator-page__grid-item">6,24482</div>
-										<div class="calculator-page__grid-item">12,13625</div>
-										<div class="calculator-page__grid-item">20,52237</div>
-										<div class="calculator-page__grid-item">
-											<div class="calculator-page__grid-title">D20</div>
-										</div>
-										<div class="calculator-page__grid-item">73,7174</div>
-										<div class="calculator-page__grid-item">96,1133</div>
-										<div class="calculator-page__grid-item">118,4716</div>
-										<div class="calculator-page__grid-item">6,24482</div>
-										<div class="calculator-page__grid-item">12,13625</div>
-										<div class="calculator-page__grid-item">20,52237</div>
-										<div class="calculator-page__grid-item">
-											<div class="calculator-page__grid-title">D20</div>
-										</div>
-										<div class="calculator-page__grid-item">73,7174</div>
-										<div class="calculator-page__grid-item">96,1133</div>
-										<div class="calculator-page__grid-item active">118,4716</div>
-										<div class="calculator-page__grid-item">6,24482</div>
-										<div class="calculator-page__grid-item">12,13625</div>
-										<div class="calculator-page__grid-item">20,52237</div>
 									</div>
 									<div class="calculator-page__container">
 										<div class="calculator-page__grid-mobile">
@@ -940,6 +1062,96 @@
 							</form>
 						</div>
 					</section>
+				</div>
+				<div class="test-table hidden">
+					<div class="test-col">
+						<div class="test-cell"></div>
+						<div class="test-cell">PPR-GF, SDR6</div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell"></div>
+						<div class="test-cell"></div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell"></div>
+						<div class="test-cell"></div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell"></div>
+						<div class="test-cell"></div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell"></div>
+						<div class="test-cell"></div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell"></div>
+						<div class="test-cell"></div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell"></div>
+						<div class="test-cell"></div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell"></div>
+						<div class="test-cell"></div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell"></div>
+						<div class="test-cell"></div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell">при 5ᴼС</div>
+						<div class="test-cell">0.000001519</div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell">при 10ᴼС</div>
+						<div class="test-cell">0.000001307</div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell">при 20ᴼС</div>
+						<div class="test-cell">0.000001004</div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell">при 40ᴼС</div>
+						<div class="test-cell">0.000000658</div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell">при 50ᴼС</div>
+						<div class="test-cell">0.000000554</div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell">при 55ᴼС</div>
+						<div class="test-cell">0.000000512</div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell">при 60ᴼС</div>
+						<div class="test-cell">0.000000475</div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell">при 65ᴼС</div>
+						<div class="test-cell">0.000000444</div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell">при 70ᴼС</div>
+						<div class="test-cell">0.000000413</div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell">при 80ᴼС</div>
+						<div class="test-cell">0.000000365</div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell">при 90ᴼС</div>
+						<div class="test-cell">0.000000326</div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell"></div>
+						<div class="test-cell">0.000007</div>
+					</div>
+					<div class="test-col">
+						<div class="test-cell"></div>
+						<div class="test-cell"></div>
+					</div>
 				</div>
 				<div class="call-modal" data-fancy-modal="call">
 					<div class="call-modal__container">

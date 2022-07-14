@@ -16,7 +16,7 @@ block content
       form: [
         {text: 'Расход, л/с', isSelect: false, type: 'rate'},
         {text: 'Температура, °C', isSelect: false, type: 'temp'},
-        {text: 'Приемлемый диаметр и SDR труб', isSelect: true, placeholder: 'D63 SDR 7,4'},
+        {text: 'Приемлемый диаметр и SDR труб', isSelect: true, placeholder: 'PPR-GF, SDR6'},
         {text: 'Длина трубопровода, м', isSelect: false},
         {text: 'Процент, учитывающий местные потери', isSelect: true, placeholder: '20%'},
       ],
@@ -58,7 +58,7 @@ block content
                       |#{item.text}
                     .calculator-page__features-inner 
                       if (item.isSelect)
-                        +select(options = ['D63 SDR 7,4', 'D64 SDR 7,4', 'D65 SDR 7,4', 'D66 SDR 7,4',] placeholder = item.placeholder)
+                        +select(options = ['PPR-GF, SDR6', 'D64 SDR 7,4', 'D65 SDR 7,4', 'D66 SDR 7,4',] placeholder = item.placeholder)
                       else
                         +input#input(type = 'number' placeholder = '0' data-calc-input=item.type) 
               .calculator-page__calculate-label

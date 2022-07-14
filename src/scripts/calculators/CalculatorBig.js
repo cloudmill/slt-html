@@ -9,7 +9,7 @@ export class CalculatorBig {
     }
 
     this.init()
-    console.log(this.data);
+    console.log(this.fields);
   }
 
   init() {
@@ -55,7 +55,7 @@ export class CalculatorBig {
     inputs.forEach(item => {
       const property = item.getAttribute('data-calc-input')
       item.onchange = () => {
-        this.data[property] = +item.value
+        this.formData[property] = +item.value
         
         this.calculate()
       }
@@ -63,12 +63,54 @@ export class CalculatorBig {
   }
 
   calculate() {
+    for (let i = 0; i < 9; i++) {
+      this.getSpeed(i)
+      this.getLosses(i)
 
+      this.setSpeed(i)
+      this.setLosses(i)
+    }
   }
 
   // Удельные потери
-  getLosses() {
+  getLosses(i) {
+    const G31 = this.data[6][i]
+    const E18 = this.formData.temp
+    const V31 = this.data[19][i]
+    const zzz = G31/1000/((1.78*Math.pow(10, -6))/(1+0.0337*E18+0.000221*Math.pow(E18, 2)))
+    const logs = 1 + ((Math.log((this.speed)*(zzz)) / Math.log(10)) / (Math.log(500 * V31) / Math.log(10)))
+    this.losses = 
+    Math.pow(0.5 / this.data[20][i] * ((logs) / 2 + (1.312*(2-(logs)))), 2) * 
+    Math.pow(this.speed, 2)/2/9.81/G31 * 1000
+  }
 
+  setLosses(i) {
+    if (this.losses) {
+      this.fields[5][i].innerHTML = this.losses.toFixed(5)
+    }
+  }
+
+  // Скорости
+  getSpeed(i) {
+    const G31 = this.data[6][i]
+    this.speed = this.formData.rate / 1000 / (3.14*(Math.pow((G31/1000), 2)/4))
+  }
+
+  setSpeed(i) {
+    if (this.speed) {
+      const cells = this.fields[2]
+      cells[i].innerHTML = this.speed.toFixed(4)
+
+      if (this.speed > 0.5 && this.speed < 1) {
+        cells[i].classList.add('active')
+        this.fields[2+3][i].classList.add('active')
+      } else {
+        if (cells[i].classList.contains('active')) {
+          cells[i].classList.remove('active')
+          this.fields[2+3][i].classList.remove('active')
+        }
+      }
+    }
   }
 }
 
