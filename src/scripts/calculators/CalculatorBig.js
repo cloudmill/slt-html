@@ -9,7 +9,6 @@ export class CalculatorBig {
     }
 
     this.init()
-    console.log(this.fields);
   }
 
   init() {
@@ -97,11 +96,11 @@ export class CalculatorBig {
   }
 
   setSpeed(i) {
+    const cells = this.fields[2]
     if (this.speed) {
-      const cells = this.fields[2]
       cells[i].innerHTML = this.speed.toFixed(4)
 
-      if (this.speed > 0.5 && this.speed < 1) {
+      if (this.speed > 0.5 && this.speed < 1 && this.losses) {
         cells[i].classList.add('active')
         this.fields[2+3][i].classList.add('active')
       } else {
@@ -110,10 +109,8 @@ export class CalculatorBig {
           this.fields[2+3][i].classList.remove('active')
         }
       }
+    } else {
+      cells[i].innerHTML = '<div class="calculator-page__grid-title">null</div>'
     }
   }
 }
-
-$(() => {
-  
-})

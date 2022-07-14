@@ -98,7 +98,7 @@ $(() => {
 
       return cell;
     }
+    
+    new CalculatorBig()
   }
-
-  new CalculatorBig()
 })
