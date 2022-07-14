@@ -6,7 +6,6 @@ $(function () {
     filterCheckbox();
     filterList();
     filterClickColor();
-    filterCatalog();
     snippetImg();
     forms();
     videoModal();
@@ -150,66 +149,31 @@ function filterList() {
     });
 }
 
-function filterCatalog() {
-    $(document).on("change", "[data-type=js-filter-catalog]", function (e) {
-
-        let data = [],
-            parent = $(document).find("[data-type=filter-parent]"),
-            count = 0,
-            secIds = parent.attr("data-sec"),
-            typeF = parent.attr("data-type-filter");
-
-        data = {
-            ajaxShow: 1,
-            type: typeF,
-            sec: secIds,
-        }
-
-        if (typeF == 'filter') {
-            parent.find("[data-type=js-filter-catalog]").each(function () {
-                let field = $(this).attr("data-code");
-                data[field] = [];
-            });
-    
-            parent.find("[data-type=js-filter-catalog]").each(function () {
-                let parentLi = $(this).parents("[data-catalog-item]");
-    
-                if (parentLi.hasClass("active")) {
-                    let field = $(this).attr("data-code"),
-                        val = $(this).val();
-    
-                    data[field][count] = val;
-                    count++
-                }
-            });
-        }
-
-        console.log(data);
-
-        $.ajax({
-            type: "POST",
-            url: "/local/templates/main/include/ajax/catalog_filter.php",
-            data: data,
-            success: function (r) {
-                console.log(r);
-            },
-            error: function (r) {
-                console.debug(r);
-            }
-        });
-    });
-}
-
 export function filterCheckbox() {
-    $(document).on("change", "[data-type=js-filter-checkbox]", function (e) {
+    $(document).on("change click", "[data-type=js-filter-checkbox]", function (e) {
 
         let data = [],
             parent = $(document).find("[data-type=filter-parent]"),
             count = 0,
-            arUrl = window.location.href.split('?');
+            arUrl = window.location.href.split('?'),
+            showModal = $(this).attr("data-show-modal"),
+            showCount = parent.attr("data-show-count");
 
-        data = {
-            ajax: 1,
+        if (showModal) {
+            showCount = false;
+        }
+
+        console.log(showModal);
+        console.log(showCount);
+
+        if (showCount == 'before') {
+            data = {
+                ajaxShowCount: 1,
+            }
+        } else {
+            data = {
+                ajax: 1,
+            }
         }
 
         parent.find("[data-type=js-filter-checkbox]").each(function () {
@@ -219,6 +183,10 @@ export function filterCheckbox() {
 
         parent.find("[data-type=js-filter-checkbox]").each(function () {
             let parentLi = $(this).parents("[data-objects-item]");
+
+            if (parentLi) {
+                parentLi = $(this).parents("[data-catalog-item]");
+            }
 
             if (parentLi.hasClass("active")) {
                 let field = $(this).attr("data-code"),
@@ -236,8 +204,19 @@ export function filterCheckbox() {
             url: arUrl[0],
             data: data,
             success: function (r) {
-                $(document).find('[data-type=items-container-full]').empty();
-                $(document).find('[data-type=items-container-full]').append($(r));
+                if (showCount == 'before') {
+                    let strAnswer = 'Подходит позиций: ' + r + '',
+                        countCatalog = $(document).find('[data-type=count-catalog-filter]');
+
+                    console.log(data);
+                    console.log(strAnswer);
+
+                    countCatalog.empty();
+                    countCatalog.append(strAnswer);
+                } else {
+                    $(document).find('[data-type=items-container-full]').empty();
+                    $(document).find('[data-type=items-container-full]').append($(r));
+                }
             },
             error: function (r) {
                 console.debug(r);

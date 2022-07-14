@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = event.target
 
       if (target.closest('[data-catalog-show]')) {
-        event.preventDefault();
         list.showItems(watcher.selectedItems);
         $.fancybox.close(target.closest('[data-fancy-modal]'))
       }
