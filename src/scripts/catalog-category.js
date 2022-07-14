@@ -16,11 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function productMatch() {
       const panel = document.querySelector('.catalog-modal__panel')
+      const text = panel.querySelector('[data-product-count]')
 
       if (watcher.selectedItems.length) {
         panel.classList.remove('hidden')
       } else {
         panel.classList.add('hidden')
+        text.textContent = '0'
       }
     }
 
