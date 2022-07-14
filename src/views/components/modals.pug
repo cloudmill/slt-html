@@ -145,7 +145,7 @@ mixin catalog-modal
 
     .catalog-modal__panel.hidden
       h5.catalog-modal__panel-title 
-        |Подходит позиций: 0
+        |Подходит позиций: #[span(data-product-count='') 0]
       .catalog-modal__panel-button 
         +link-right.button--wide(data-catalog-show='')
           |Показать
