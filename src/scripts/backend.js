@@ -156,29 +156,33 @@ function filterCatalog() {
         let data = [],
             parent = $(document).find("[data-type=filter-parent]"),
             count = 0,
-            typeF = 'filter';
+            secIds = parent.attr("data-sec"),
+            typeF = parent.attr("data-type-filter");
 
         data = {
             ajaxShow: 1,
             type: typeF,
+            sec: secIds,
         }
 
-        parent.find("[data-type=js-filter-catalog]").each(function () {
-            let field = $(this).attr("data-code");
-            data[field] = [];
-        });
-
-        parent.find("[data-type=js-filter-catalog]").each(function () {
-            let parentLi = $(this).parents("[data-catalog-item]");
-
-            if (parentLi.hasClass("active")) {
-                let field = $(this).attr("data-code"),
-                    val = $(this).val();
-
-                data[field][count] = val;
-                count++
-            }
-        });
+        if (typeF == 'filter') {
+            parent.find("[data-type=js-filter-catalog]").each(function () {
+                let field = $(this).attr("data-code");
+                data[field] = [];
+            });
+    
+            parent.find("[data-type=js-filter-catalog]").each(function () {
+                let parentLi = $(this).parents("[data-catalog-item]");
+    
+                if (parentLi.hasClass("active")) {
+                    let field = $(this).attr("data-code"),
+                        val = $(this).val();
+    
+                    data[field][count] = val;
+                    count++
+                }
+            });
+        }
 
         console.log(data);
 
