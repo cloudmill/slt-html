@@ -73,14 +73,18 @@ export class CalculatorBig {
 
   // Удельные потери
   getLosses(i) {
-    const G31 = this.data[6][i]
-    const E18 = this.formData.temp
-    const V31 = this.data[19][i]
-    const zzz = G31/1000/((1.78*Math.pow(10, -6))/(1+0.0337*E18+0.000221*Math.pow(E18, 2)))
-    const logs = 1 + ((Math.log((this.speed)*(zzz)) / Math.log(10)) / (Math.log(500 * V31) / Math.log(10)))
+    // Внутр. диаметр
+    const x = this.data[6][i]
+    const y = this.formData.temp
+    const logs = 1 + (
+      (Math.log((this.speed)*(x/1000/((1.78*Math.pow(10, -6))/(1+0.0337*y+0.000221*Math.pow(y, 2))))) / Math.log(10)) 
+      / 
+      (Math.log(500 * this.data[19][i]) / Math.log(10))
+    )
+    // console.log(Math.pow(0.5 / this.data[20][i] * ((logs) / 2 + (1.312*(2-(logs)))), 2)); //?
     this.losses = 
     Math.pow(0.5 / this.data[20][i] * ((logs) / 2 + (1.312*(2-(logs)))), 2) * 
-    Math.pow(this.speed, 2)/2/9.81/G31 * 1000
+    Math.pow(this.speed, 2)/2/9.81/x * 1000
   }
 
   setLosses(i) {
@@ -91,8 +95,9 @@ export class CalculatorBig {
 
   // Скорости
   getSpeed(i) {
-    const G31 = this.data[6][i]
-    this.speed = this.formData.rate / 1000 / (3.14*(Math.pow((G31/1000), 2)/4))
+    // Внутр. диаметр
+    const x = this.data[6][i]
+    this.speed = this.formData.rate / 1000 / (3.14*(Math.pow((x/1000), 2)/4))
   }
 
   setSpeed(i) {

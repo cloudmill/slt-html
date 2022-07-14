@@ -31,21 +31,29 @@ import "./scripts/backend";
 import "./scripts/search-input";
 // import "./scripts/file-input";
 import "./scripts/Files";
-import "./scripts/calculator";
+// import "./scripts/calculator";
 // import "./scripts/calculators/CalculatorBig";
 import {CalculatorBig} from './scripts/calculators/CalculatorBig'
+import {CalculatorMain} from './scripts/calculators/CalculatorMain'
 
 $(() => {
   const table = document.querySelector('.test-table')
 
   if (table) {
     const columns = table.querySelectorAll('.test-col')
+    // const data = [
+    //   [20, 25, 32, 40, 50, 64, 75, 90, 110],
+    //   [3.4, 4.2, 5.4, 6.7, 8.3, 10.5, 12.5, 15, 18.3],
+    //   [6, 6, 6, 6, 6, 6, 6, 6, 6, ],
+    //   [20.3, 25.3, 32.3, 40.3, 50.4, 63.4, 75.5, 90.7, 110.8],
+    //   [3.8, 4.6, 5.7, 7.0, 8.9, 10.8, 12.8, 15.6, 19]
+    // ]
     const data = [
       [20, 25, 32, 40, 50, 64, 75, 90, 110],
       [3.4, 4.2, 5.4, 6.7, 8.3, 10.5, 12.5, 15, 18.3],
       [6, 6, 6, 6, 6, 6, 6, 6, 6, ],
-      [20.3, 25.3, 32.3, 40.3, 50.4, 63.4, 75.5, 90.7, 110.8],
-      [3.8, 4.6, 5.7, 7.0, 8.9, 10.8, 12.8, 15.6, 19]
+      [20.3, 25.3, 32.3, 40.4, 50.5, 63.5, 75.7, 90.8, 110.8],
+      [3.8, 4.6, 5.8, 7.1, 9.0, 10.7, 12.8, 16, 19]
     ]
 
     let i = 0;
@@ -83,7 +91,7 @@ $(() => {
         if (i === 21) {
           const V = columns[i - 1].querySelectorAll('.test-cell')[j+2].textContent
           content = Math.log(3.7 * +V) / Math.log(10)
-          content = Math.round(content * 1000) / 1000
+          content = Math.round(content * 100) / 100
         }
 
         const cell = createCell(content)
@@ -98,7 +106,15 @@ $(() => {
 
       return cell;
     }
-    
+
     new CalculatorBig()
+  }
+})
+
+$(() => {
+  const calculator = document.querySelector('[data-calc=calculatorMain]')
+
+  if (calculator) {
+    new CalculatorMain()
   }
 })
