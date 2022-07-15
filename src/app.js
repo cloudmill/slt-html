@@ -74,18 +74,18 @@ $(() => {
           content = Math.round(content * 100) / 100
         } else if (i === 6) {
           content = data[3][j] - 2 * data[4][j]
-          content = Math.round(content * 10) / 10
+          // content = Math.round(content * 10) / 10
         } else if (i === 7) {
           const G = columns[6].querySelectorAll('.test-cell')[j+2].textContent
           content = 3.14 / 4000 * +G * +G
-          content = Math.round(content * 1000) / 1000
+          // content = Math.round(content * 1000) / 1000
         } else if (i === 8) {
           content = ""
         } else {
           const G = columns[6].querySelectorAll('.test-cell')[j+2].textContent
           const J = columns[i].querySelectorAll('.test-cell')[1].textContent
           content = +G / 1000 / +J
-          content = Math.round(content * 10) / 10
+          // content = Math.round(content * 10) / 10
         }
 
         // if (i === 20) {
@@ -94,7 +94,7 @@ $(() => {
         if (i === 21) {
           const V = columns[i - 1].querySelectorAll('.test-cell')[j+2].textContent
           content = Math.log(3.7 * +V) / Math.log(10)
-          content = Math.round(content * 100) / 100
+          // content = Math.round(content * 100) / 100
         }
 
         const cell = createCell(content)
@@ -114,10 +114,10 @@ $(() => {
   }
 })
 
-$(() => {
-  const calculator = document.querySelector('[data-calc=calculatorMain]')
+// $(() => {
+//   const calculator = document.querySelector('[data-calc=calculatorMain]')
 
-  if (calculator) {
-    new CalculatorMain()
-  }
-})
+//   if (calculator) {
+//     new CalculatorMain()
+//   }
+// })
