@@ -31,10 +31,10 @@ import "./scripts/backend";
 import "./scripts/search-input";
 // import "./scripts/file-input";
 import "./scripts/Files";
-// import "./scripts/calculator";
+import "./scripts/calculator";
 // import "./scripts/calculators/CalculatorBig";
 import {CalculatorBig} from './scripts/calculators/CalculatorBig'
-import {CalculatorMain} from './scripts/calculators/CalculatorMain'
+// import {CalculatorMain} from './scripts/calculators/CalculatorMain'
 
 $(() => {
   const table = document.querySelector('.test-table')
