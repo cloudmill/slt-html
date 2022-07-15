@@ -81,9 +81,11 @@ export class CalculatorBig {
       / 
       (Math.log(500 * this.data[19][i]) / Math.log(10))
     )
-    // console.log(Math.pow(0.5 / this.data[20][i] * ((logs) / 2 + (1.312*(2-(logs)))), 2)); //?
+    const asd = ((Math.log((this.speed)*(x/1000/((1.78*Math.pow(10, -6))/(1+0.0337*y+0.000221*Math.pow(y, 2))))) / Math.log(10)) - 1)
+    // console.log((Math.log(500 * this.data[19][i]) / Math.log(10)));
+    // console.log(Math.pow(0.5 / this.data[20][i] * ((logs) / 2 + (1.312*(2-(logs))* this.data[20][i]) / asd), 2)); //?
     this.losses = 
-    Math.pow(0.5 / this.data[20][i] * ((logs) / 2 + (1.312*(2-(logs)))), 2) * 
+    Math.pow(0.5 / this.data[20][i] * ((logs) / 2 + (1.312*(2-(logs))* this.data[20][i]) / asd), 2) * 
     Math.pow(this.speed, 2)/2/9.81/x * 1000
   }
 

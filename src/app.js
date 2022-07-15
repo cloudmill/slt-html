@@ -88,6 +88,9 @@ $(() => {
           content = Math.round(content * 10) / 10
         }
 
+        // if (i === 20) {
+        //   content = Math.round(content)
+        // }
         if (i === 21) {
           const V = columns[i - 1].querySelectorAll('.test-cell')[j+2].textContent
           content = Math.log(3.7 * +V) / Math.log(10)
