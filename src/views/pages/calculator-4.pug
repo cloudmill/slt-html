@@ -84,37 +84,36 @@ block content
                         .calculator-page__features-inner 
                           +input#input(type = 'number' placeholder = '0' data-calc-input='exploitation')
                       .calculator-page__features-col.only-desktop
-                .section__block 
-                  .calculator-page__block
+                .section__block.calculator-page__layout 
+                  .calculator-page__block-row
+                    .calculator-page__block-col.empty(data-calc-parent='')
+                      .calculator-page__caption.calculator-page__caption--big
+                        |Линейное расширение, мм
+                      .calculator-page__block-title 
+                        |ΔL=#[span(data-calc-value='expansion') 1056]
+                      .calculator-page__block-error 
+                        |Null
+                    .calculator-page__block-col.empty(data-calc-parent='')
+                      .calculator-page__caption.calculator-page__caption--big 
+                        |Количество компенсаторов на длину #[span.calculator-page__features-span L], шт
+                      .calculator-page__block-title 
+                        |К=#[span(data-calc-value='amount') 10]
+                      .calculator-page__block-error 
+                        |Null
+                  .calculator-page__block-inner
                     .calculator-page__block-row
                       .calculator-page__block-col.empty(data-calc-parent='')
-                        .calculator-page__caption.calculator-page__caption--big
-                          |Линейное расширение, мм
-                        .calculator-page__block-title 
-                          |ΔL=#[span(data-calc-value='expansion') 1056]
-                        .calculator-page__block-error 
-                          |Null
-                      .calculator-page__block-col.empty(data-calc-parent='')
                         .calculator-page__caption.calculator-page__caption--big 
-                          |Количество компенсаторов на длину #[span.calculator-page__features-span L], шт
+                          |Компенсирующая способность изделия, мм
                         .calculator-page__block-title 
-                          |К=#[span(data-calc-value='amount') 10]
+                          |ΔL#[span.calculator-page__block-span k]=#[span(data-calc-value='compensSkill') 10]
                         .calculator-page__block-error 
                           |Null
-                    .calculator-page__block-inner
-                      .calculator-page__block-row
-                        .calculator-page__block-col.empty(data-calc-parent='')
-                          .calculator-page__caption.calculator-page__caption--big 
-                            |Компенсирующая способность изделия, мм
-                          .calculator-page__block-title 
-                            |ΔL#[span.calculator-page__block-span k]=#[span(data-calc-value='compensSkill') 10]
-                          .calculator-page__block-error 
-                            |Null
-                        .calculator-page__block-col
-                    .calculator-page__block-inner
-                      .calculator-page__block-row
-                        .calculator-page__block-col
-                          .calculator-page__button
-                            .button-wrapper
-                              +download-btn.button--wide--mobile
-                                |Скачать расчет в PDF
+                      .calculator-page__block-col
+                  .calculator-page__block-inner
+                    .calculator-page__block-row
+                      .calculator-page__block-col
+                        .calculator-page__button
+                          .button-wrapper
+                            +download-btn.button--wide--mobile
+                              |Скачать расчет в PDF

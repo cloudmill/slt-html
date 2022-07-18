@@ -599,4 +599,12 @@
       width: auto;
     }
   }
+
+  &__layout {
+    padding: getRem(40px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: getRem(20px);
+    }
+    background: var(--color-light-gray);
+  }
 }
