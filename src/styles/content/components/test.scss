@@ -22,6 +22,10 @@
   display: grid;
   grid-template-columns: repeat(22, 1fr);
 
+  &:not(:first-child) {
+    margin-top: 60px;
+  }
+
   &.hidden {
     position: absolute;
     left: 100%;

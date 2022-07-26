@@ -4,6 +4,7 @@ include ../components/breadcrumbs
 include ../components/tech-docs
 include ../components/product-cards
 include ../components/form-components
+include ../components/calc-table
 
 
 block header
@@ -11,34 +12,4 @@ block header
 block footer
 
 block content
-  -
-    var ddata = [
-      ['', 'PPR-GF,  SDR6'],
-      ['', ''],
-      ['', ''],
-      ['', ''],
-      ['', ''],
-      ['', ''],
-      ['', ''],
-      ['', ''],
-      ['', ''],
-      ['при 5ᴼС', '0.000001519'],
-      ['при 10ᴼС', '0.000001307'],
-      ['при 20ᴼС', '0.000001004'],
-      ['при 40ᴼС', '0.000000658'],
-      ['при 50ᴼС', '0.000000554'],
-      ['при 55ᴼС', '0.000000512'],
-      ['при 60ᴼС', '0.000000475'],
-      ['при 65ᴼС', '0.000000444'],
-      ['при 70ᴼС', '0.000000413'],
-      ['при 80ᴼС', '0.000000365'],
-      ['при 90ᴼС', '0.000000326'],
-      ['', '0.000007'],
-      ['', ''],
-    ]
-  .test-table
-    each col in ddata
-      .test-col
-        each cell in col 
-          .test-cell
-            |#{cell}
+  +calc-table
