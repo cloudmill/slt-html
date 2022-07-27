@@ -121,8 +121,12 @@
     padding: getRem(20px);
     margin-top: 4px;
 
+    max-height: getRem(400px);
+    
+    overflow-y: scroll;
     border: 1px solid var(--color-borders);
     box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.08);
+    @include scrollbar-hidden;
   }
 
   .select2-container--default .select2-results>.select2-results__options {

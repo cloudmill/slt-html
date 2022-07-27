@@ -14,3 +14,20 @@ mixin select
         each item in attributes.options
           option(value=item)
             |#{item}
+
+mixin calc-select
+  .select-wrapper 
+    .select
+      select.select__mobile(data-calc-select=attributes.value name='cat-mob' data-select-mobile='') 
+        option(value="" selected disabled)
+          |#{attributes.placeholder}
+        each diametr, y in ['D20', 'D25', 'D32', 'D40', 'D50', 'D63', 'D75', 'D90', 'D110',]
+          each type, x in ['SDR 11', 'SDR 7.4', 'SDR 6']
+            option(value='[x, y]')
+              |#{diametr} #{type}
+      select.select__select(data-calc-select=attributes.value data-select-placeholder=attributes.placeholder style='width: 100%')
+        option(value='' disabled selected)
+        each diametr, y in ['D20', 'D25', 'D32', 'D40', 'D50', 'D63', 'D75', 'D90', 'D110',]
+          each type, x in ['SDR 11', 'SDR 7.4', 'SDR 6']
+            option(value=`[${x}, ${y}]`)
+              |#{diametr} #{type}

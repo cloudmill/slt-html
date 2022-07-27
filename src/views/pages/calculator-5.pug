@@ -17,9 +17,12 @@ block content
       form: [
         {text: 'Расход, л/с', isSelect: false, type: 'rate'},
         {text: 'Температура, °C', isSelect: false, type: 'temp'},
-        {text: 'Приемлемый диаметр и SDR труб', isSelect: true, placeholder: 'PPR-GF, SDR6'},
-        {text: 'Длина трубопровода, м', isSelect: false},
-        {text: 'Процент, учитывающий местные потери', isSelect: true, placeholder: '20%'},
+        {
+          text: 'Приемлемый диаметр и SDR труб', 
+          isSelect: true, 
+          placeholder: 'Выберете диаметр', 
+        },
+        {text: 'Длина трубопровода, м', isSelect: false, type: 'length'},
       ],
       table: [
         ['', 'D20', 'D25', 'D32', 'D40', 'D50', 'D63', 'D75', 'D90', 'D110',],
@@ -59,9 +62,32 @@ block content
                       |#{item.text}
                     .calculator-page__features-inner 
                       if (item.isSelect)
-                        +select(options = ['PPR-GF, SDR6', 'D64 SDR 7,4', 'D65 SDR 7,4', 'D66 SDR 7,4',] placeholder = item.placeholder)
+                        +calc-select(placeholder = item.placeholder value='diameter')
                       else
                         +input#input(type = 'number' placeholder = '0' data-calc-input=item.type) 
+              .calculator-page__wrapper
+                .calculator-page__caption.calculator-page__caption--big 
+                  |Процент, учитывающий местные потери
+                .calculator-page__features-inner
+                  -
+                    var options = [
+                      {text: '20%', value: '20'},
+                      {text: '25%', value: '25'},
+                      {text: '30%', value: '30'},
+                    ]
+                  .select-wrapper 
+                    .select
+                      select.select__mobile(name='cat-mob' data-select-mobile='') 
+                        option(value="" selected disabled data-calc-select='percent' )
+                          |Выберете процент
+                        each item in options
+                          option(value=item.value)
+                            |#{item.text} 
+                      select.select__select(data-select-placeholder='Выберете процент' style='width: 100%' data-calc-select='percent')
+                        option(value='' disabled selected)
+                        each item in options
+                          option(value=item.value)
+                            |#{item.text} 
               .calculator-page__calculate-label
                 |* Согласно СП 40-102-2000 «Примечание - Допускается  сумму местных потерь h м.с. принимать равной 20-30% суммы удельных потерь»
             .section__block.calculator-page__layout 
@@ -69,20 +95,20 @@ block content
                 .calculator-page__block-col
                   .calculator-page__caption.calculator-page__caption--big 
                     |Удельные потери по длине трубопровода без учета местных потерь, м/м
-                  .calculator-page__block-title 
-                    |1056,5
+                  .calculator-page__block-title(data-calc-value='specificLosses')
+                    |null
                 .calculator-page__block-col
                   .calculator-page__caption.calculator-page__caption--big 
                     |Местные потери по длине трубопровода по «Примечанию» СП 40-102-2000, м/м
-                  .calculator-page__block-title 
-                    |0,8778
+                  .calculator-page__block-title(data-calc-value='localLosses')
+                    |null
               .calculator-page__block-inner
                 .calculator-page__block-row
                   .calculator-page__block-col
                     .calculator-page__caption.calculator-page__caption--big 
                       |Потери по длине трубопровода с учетом суммы местных потерь, м/м
-                    .calculator-page__block-title 
-                      |5,2667
+                    .calculator-page__block-title(data-calc-value='lengthLosses')
+                      |null
                   .calculator-page__block-col
               .calculator-page__block-inner
                 .calculator-page__block-row

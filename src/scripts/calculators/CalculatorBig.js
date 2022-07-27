@@ -2,15 +2,13 @@
 export class CalculatorBig {
   constructor() {
     this.data = [];
-    // this.data = {
-    //   SDR6: [],
-    //   SDR7: [],
-    //   SDR11: [],
-    // };
     this.fields = [];
     this.formData = {
       rate: NaN,
       temp: NaN,
+      diameter: NaN,
+      length: NaN,
+      percent: NaN,
     };
 
     this.init();
@@ -18,6 +16,7 @@ export class CalculatorBig {
 
   init() {
     this.changeHandler();
+    this.selectHandler();
     this.collectData();
     this.collectFields();
   }
@@ -68,23 +67,44 @@ export class CalculatorBig {
       item.onchange = () => {
         this.formData[property] = +item.value;
 
-        this.calculate();
+        const isTableChange = property === "temp" || property === "rate";
+
+        this.calculate(isTableChange);
       };
     });
   }
 
-  calculate() {
-    for (let x = 0; x < this.data.length; x++) {
-      const data = this.data[x];
+  selectHandler() {
+    const selects = document.querySelectorAll("[data-calc-select]");
 
-      for (let i = 0; i < 9; i++) {
-        this.getSpeed(data, i);
-        this.getLosses(data, i);
+    selects.forEach((select) => {
+      const property = select.getAttribute("data-calc-select");
 
-        this.setSpeed(x, i);
-        this.setLosses(x, i);
+      select.onchange = () => {
+        this.formData[property] = select.value;
+
+        this.calculate(false);
+      };
+    });
+  }
+
+  calculate(isTableChange) {
+    if (isTableChange) {
+      for (let x = 0; x < this.data.length; x++) {
+        const data = this.data[x];
+
+        for (let i = 0; i < 9; i++) {
+          this.getSpeed(data, i);
+          this.getLosses(data, i);
+
+          this.setSpeed(x, i);
+          this.setLosses(x, i);
+        }
       }
     }
+    this.getSpecificLosses();
+    this.getLocalLosses();
+    this.getLengthLosses();
   }
 
   // Удельные потери
@@ -129,7 +149,11 @@ export class CalculatorBig {
 
   setLosses(x, i) {
     if (this.losses) {
-      this.fields[x+3][i].innerHTML = this.losses.toFixed(5);
+      this.fields[x + 3][i].innerHTML = this.losses.toFixed(5);
+    } else {
+      this.fields[x + 3][i].classList.remove("active");
+      this.fields[x + 3][i].innerHTML =
+        '<div class="calculator-page__grid-title">null</div>';
     }
   }
 
@@ -156,8 +180,52 @@ export class CalculatorBig {
         }
       }
     } else {
+      cells[i].classList.remove("active");
       cells[i].innerHTML =
         '<div class="calculator-page__grid-title">null</div>';
+    }
+  }
+
+  // Удельные потери по длине
+  getSpecificLosses() {
+    if (this.losses && this.formData.diameter) {
+      const pos = JSON.parse(this.formData.diameter);
+      const diameterValue = this.fields[pos[0] + 3][pos[1]].textContent;
+      this.specificLosses = this.formData.length * +diameterValue;
+
+      this.setElemValue(
+        this.specificLosses,
+        "[data-calc-value=specificLosses]"
+      );
+    }
+  }
+
+  // местные потери
+  getLocalLosses() {
+    if (this.specificLosses && this.formData.percent) {
+      this.localLosses = (this.specificLosses / 100) * +this.formData.percent;
+
+      this.setElemValue(this.localLosses, "[data-calc-value=localLosses]");
+    }
+  }
+
+  // потери по длине
+  getLengthLosses() {
+    if (this.specificLosses && this.localLosses) {
+      this.lengthLosses = this.specificLosses + this.localLosses;
+
+      this.setElemValue(this.lengthLosses, "[data-calc-value=lengthLosses]");
+    }
+  }
+
+  setElemValue(value, selector) {
+    const element = document.querySelector(selector);
+    if (value) {
+      const result = value.toFixed(4);
+
+      element.textContent = result;
+    } else {
+      element.textContent = "null";
     }
   }
 }
