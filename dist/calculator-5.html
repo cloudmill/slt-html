@@ -537,18 +537,64 @@
 												<div class="calculator-page__caption calculator-page__caption--big">Приемлемый диаметр и SDR труб</div>
 												<div class="calculator-page__features-inner">
 													<div class="select-wrapper">
-														<div class="select"><select class="select__mobile" name="cat-mob" data-select-mobile="">
-																<option value="" selected="selected" disabled="disabled">PPR-GF, SDR6</option>
-																<option value="PPR-GF, SDR6">PPR-GF, SDR6</option>
-																<option value="D64 SDR 7,4">D64 SDR 7,4</option>
-																<option value="D65 SDR 7,4">D65 SDR 7,4</option>
-																<option value="D66 SDR 7,4">D66 SDR 7,4</option>
-															</select><select class="select__select" data-select-placeholder="PPR-GF, SDR6" style="width: 100%">
+														<div class="select"><select class="select__mobile" data-calc-select="diameter" name="cat-mob" data-select-mobile="">
+																<option value="" selected="selected" disabled="disabled">Выберете диаметр</option>
+																<option value="[x, y]">D20 SDR 11</option>
+																<option value="[x, y]">D20 SDR 7.4</option>
+																<option value="[x, y]">D20 SDR 6</option>
+																<option value="[x, y]">D25 SDR 11</option>
+																<option value="[x, y]">D25 SDR 7.4</option>
+																<option value="[x, y]">D25 SDR 6</option>
+																<option value="[x, y]">D32 SDR 11</option>
+																<option value="[x, y]">D32 SDR 7.4</option>
+																<option value="[x, y]">D32 SDR 6</option>
+																<option value="[x, y]">D40 SDR 11</option>
+																<option value="[x, y]">D40 SDR 7.4</option>
+																<option value="[x, y]">D40 SDR 6</option>
+																<option value="[x, y]">D50 SDR 11</option>
+																<option value="[x, y]">D50 SDR 7.4</option>
+																<option value="[x, y]">D50 SDR 6</option>
+																<option value="[x, y]">D63 SDR 11</option>
+																<option value="[x, y]">D63 SDR 7.4</option>
+																<option value="[x, y]">D63 SDR 6</option>
+																<option value="[x, y]">D75 SDR 11</option>
+																<option value="[x, y]">D75 SDR 7.4</option>
+																<option value="[x, y]">D75 SDR 6</option>
+																<option value="[x, y]">D90 SDR 11</option>
+																<option value="[x, y]">D90 SDR 7.4</option>
+																<option value="[x, y]">D90 SDR 6</option>
+																<option value="[x, y]">D110 SDR 11</option>
+																<option value="[x, y]">D110 SDR 7.4</option>
+																<option value="[x, y]">D110 SDR 6</option>
+															</select><select class="select__select" data-calc-select="diameter" data-select-placeholder="Выберете диаметр" style="width: 100%">
 																<option value="" disabled="disabled" selected="selected"></option>
-																<option value="PPR-GF, SDR6">PPR-GF, SDR6</option>
-																<option value="D64 SDR 7,4">D64 SDR 7,4</option>
-																<option value="D65 SDR 7,4">D65 SDR 7,4</option>
-																<option value="D66 SDR 7,4">D66 SDR 7,4</option>
+																<option value="[0, 0]">D20 SDR 11</option>
+																<option value="[1, 0]">D20 SDR 7.4</option>
+																<option value="[2, 0]">D20 SDR 6</option>
+																<option value="[0, 1]">D25 SDR 11</option>
+																<option value="[1, 1]">D25 SDR 7.4</option>
+																<option value="[2, 1]">D25 SDR 6</option>
+																<option value="[0, 2]">D32 SDR 11</option>
+																<option value="[1, 2]">D32 SDR 7.4</option>
+																<option value="[2, 2]">D32 SDR 6</option>
+																<option value="[0, 3]">D40 SDR 11</option>
+																<option value="[1, 3]">D40 SDR 7.4</option>
+																<option value="[2, 3]">D40 SDR 6</option>
+																<option value="[0, 4]">D50 SDR 11</option>
+																<option value="[1, 4]">D50 SDR 7.4</option>
+																<option value="[2, 4]">D50 SDR 6</option>
+																<option value="[0, 5]">D63 SDR 11</option>
+																<option value="[1, 5]">D63 SDR 7.4</option>
+																<option value="[2, 5]">D63 SDR 6</option>
+																<option value="[0, 6]">D75 SDR 11</option>
+																<option value="[1, 6]">D75 SDR 7.4</option>
+																<option value="[2, 6]">D75 SDR 6</option>
+																<option value="[0, 7]">D90 SDR 11</option>
+																<option value="[1, 7]">D90 SDR 7.4</option>
+																<option value="[2, 7]">D90 SDR 6</option>
+																<option value="[0, 8]">D110 SDR 11</option>
+																<option value="[1, 8]">D110 SDR 7.4</option>
+																<option value="[2, 8]">D110 SDR 6</option>
 															</select></div>
 													</div>
 												</div>
@@ -557,28 +603,24 @@
 										<div class="calculator-page__calculate-item">
 											<div class="calculator-page__wrapper">
 												<div class="calculator-page__caption calculator-page__caption--big">Длина трубопровода, м</div>
-												<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" /></div>
+												<div class="calculator-page__features-inner"><input class="form__input" id="input" type="number" placeholder="0" data-calc-input="length" /></div>
 											</div>
 										</div>
-										<div class="calculator-page__calculate-item">
-											<div class="calculator-page__wrapper">
-												<div class="calculator-page__caption calculator-page__caption--big">Процент, учитывающий местные потери</div>
-												<div class="calculator-page__features-inner">
-													<div class="select-wrapper">
-														<div class="select"><select class="select__mobile" name="cat-mob" data-select-mobile="">
-																<option value="" selected="selected" disabled="disabled">20%</option>
-																<option value="PPR-GF, SDR6">PPR-GF, SDR6</option>
-																<option value="D64 SDR 7,4">D64 SDR 7,4</option>
-																<option value="D65 SDR 7,4">D65 SDR 7,4</option>
-																<option value="D66 SDR 7,4">D66 SDR 7,4</option>
-															</select><select class="select__select" data-select-placeholder="20%" style="width: 100%">
-																<option value="" disabled="disabled" selected="selected"></option>
-																<option value="PPR-GF, SDR6">PPR-GF, SDR6</option>
-																<option value="D64 SDR 7,4">D64 SDR 7,4</option>
-																<option value="D65 SDR 7,4">D65 SDR 7,4</option>
-																<option value="D66 SDR 7,4">D66 SDR 7,4</option>
-															</select></div>
-													</div>
+										<div class="calculator-page__wrapper">
+											<div class="calculator-page__caption calculator-page__caption--big">Процент, учитывающий местные потери</div>
+											<div class="calculator-page__features-inner">
+												<div class="select-wrapper">
+													<div class="select"><select class="select__mobile" name="cat-mob" data-select-mobile="">
+															<option value="" selected="selected" disabled="disabled" data-calc-select="percent">Выберете процент</option>
+															<option value="20">20%</option>
+															<option value="25">25%</option>
+															<option value="30">30%</option>
+														</select><select class="select__select" data-select-placeholder="Выберете процент" style="width: 100%" data-calc-select="percent">
+															<option value="" disabled="disabled" selected="selected"></option>
+															<option value="20">20%</option>
+															<option value="25">25%</option>
+															<option value="30">30%</option>
+														</select></div>
 												</div>
 											</div>
 										</div>
@@ -588,18 +630,18 @@
 										<div class="calculator-page__block-row">
 											<div class="calculator-page__block-col">
 												<div class="calculator-page__caption calculator-page__caption--big">Удельные потери по длине трубопровода без учета местных потерь, м/м</div>
-												<div class="calculator-page__block-title">1056,5</div>
+												<div class="calculator-page__block-title" data-calc-value="specificLosses">null</div>
 											</div>
 											<div class="calculator-page__block-col">
 												<div class="calculator-page__caption calculator-page__caption--big">Местные потери по длине трубопровода по «Примечанию» СП 40-102-2000, м/м</div>
-												<div class="calculator-page__block-title">0,8778</div>
+												<div class="calculator-page__block-title" data-calc-value="localLosses">null</div>
 											</div>
 										</div>
 										<div class="calculator-page__block-inner">
 											<div class="calculator-page__block-row">
 												<div class="calculator-page__block-col">
 													<div class="calculator-page__caption calculator-page__caption--big">Потери по длине трубопровода с учетом суммы местных потерь, м/м</div>
-													<div class="calculator-page__block-title">5,2667</div>
+													<div class="calculator-page__block-title" data-calc-value="lengthLosses">null</div>
 												</div>
 												<div class="calculator-page__block-col"></div>
 											</div>
