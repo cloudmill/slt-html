@@ -1,199 +1,86 @@
+import { CalculatorFirst } from "./calculators/CalculatorFirst";
+import { CalculatorSecond } from "./calculators/CalculatorSecond";
+import { CalculatorThird } from "./calculators/CalculatorThird";
+import { CalculatorBig } from "./calculators/CalculatorBig";
 
-document.addEventListener('DOMContentLoaded', () => {
-
-  const calculator = document.querySelector('[data-calc]')
+document.addEventListener("DOMContentLoaded", () => {
+  // calculators init 1/2/3/4 pages
+  const calculator = document.querySelector("[data-calc]");
 
   if (calculator) {
-    const data = {
-      type: NaN,
-      ratio: NaN,
-      length: NaN,
-      mounting: NaN,
-      exploitation: NaN,
-      diameter: NaN,
-      compensatorLength: NaN,
+    const id = calculator.getAttribute("data-calc");
+
+    switch (id) {
+      case "calcFirst":
+        new CalculatorFirst();
+        break;
+      case "calculatorSecond":
+        new CalculatorSecond();
+        break;
+      default:
+        new CalculatorThird();
     }
-    const radioButtons = document.querySelectorAll('[data-calc-radio]')
-    
-    radioButtons.forEach(item => {
-      item.onchange = function() {
-        const property = item.getAttribute('data-calc-radio')
-        const ratio = item.getAttribute('data-calc-ratio')
+  }
 
-        if (this.checked) {
-          data[property] = +this.value
+  // калькулятор на странице calculator-5 + расчет таблицы данных с excel
+  const tables = document.querySelectorAll("[data-calc-table]");
 
-          if (ratio) {
-            data.ratio = +ratio
-          }
+  if (tables.length) {
+    tables.forEach((table) => {
+      const columns = table.querySelectorAll(".test-col");
+      const data = JSON.parse(table.getAttribute("data-calc-table"));
 
-          const elem = document.querySelector('[data-calc-value=compensSkill]')
-
-          if (elem) {
-            if (property === 'diameter') {
-              const parent = elem.closest('[data-calc-parent]')
-
-              elem.textContent = this.value
-              parent.classList.remove('empty')
-            }
-          }
+      let i = 0;
+      for (; i < data.length; i++) {
+        for (let j = 0; j < data[0].length; j++) {
+          const cell = createCell(data[i][j], data[i][j]);
+          columns[i].append(cell);
         }
-
-        calculate()
       }
-    })
 
-    const inputs = document.querySelectorAll('[data-calc-input]')
+      for (; i < columns.length; i++) {
+        for (let j = 0; j < data[0].length; j++) {
+          let value;
 
-    inputs.forEach(item => {
-      item.onchange = function() {
-        const property = item.getAttribute('data-calc-input')
-        
-        data[property] = +this.value
-
-        if (property === 'compensatorLength') {
-          const elem = document.querySelector('[data-calc-value=compensatorLength]')
-          const parent = elem.closest('[data-calc-parent]')
-
-          if (+this.value) {
-            elem.textContent = this.value
-            parent.classList.remove('empty')
+          if (i === 5) {
+            value = (data[3][j] - data[4][j]) / (2 * data[4][j]);
+          } else if (i === 6) {
+            value = data[3][j] - 2 * data[4][j];
+          } else if (i === 7) {
+            const G =
+              columns[6].querySelectorAll(".test-cell")[j + 2].textContent;
+            value = (3.14 / 4000) * +G * +G;
+          } else if (i === 8) {
+            value = "";
           } else {
-            parent.classList.add('empty')
+            const G =
+              columns[6].querySelectorAll(".test-cell")[j + 2].textContent;
+            const J = columns[i].querySelectorAll(".test-cell")[1].textContent;
+            value = +G / 1000 / +J;
           }
-        }
 
-        calculate()
-      }
-    })
+          if (i === 21) {
+            const V =
+              columns[i - 1].querySelectorAll(".test-cell")[j + 2].textContent;
+            value = Math.log(3.7 * +V) / Math.log(10);
+          }
 
-    // const btn = document.querySelector('[data-calc-btn]')
-    // const text = document.querySelector('[data-calc-res]')
-
-    // btn.onclick = function() {
-    //   const result = Math.round(data.type * (data.length / 2) * (data.exploitation - data.mounting))
-
-    //   text.textContent = `${result} мм`
-    // }
-
-    let sep = 2
-    const fullExpansion = document.querySelector('[data-calc-value=expansion]')
-
-    if (fullExpansion) {
-      sep = 1
-    }
-
-    function calculate() {
-      getLength()
-      getCompLength()
-      getMinWidth()
-      getAmount()
-      linearExpansion()
-    }
-    
-    function tempDiff() {
-      const res = data.exploitation - data.mounting
-      return res ? res : NaN;
-    }
-
-    function linearExpansion() {
-      const result = Math.round(data.ratio * (data.length / sep) * tempDiff())
-      const elem = document.querySelector('[data-calc-value=expansion]')
-
-      if (elem) {
-        const parent = elem.closest('[data-calc-parent]')
-        if (result) {
-          elem.textContent = result
-          parent.classList.remove('empty')
-        } else {
-          parent.classList.add('empty')
+          const text = Math.round(value * 100) / 100;
+          const cell = createCell(value, text);
+          columns[i].append(cell);
         }
       }
 
-      return result;
-    }
+      function createCell(value, text) {
+        const cell = document.createElement("div");
+        cell.classList.add("test-cell");
+        cell.setAttribute("data-cell-value", value);
+        cell.innerHTML = text;
 
-    function getLength() {
-      const result = data.type * Math.pow(Math.abs(data.diameter * linearExpansion()),0.5)
-      const elem = document.querySelector('[data-calc-value=length]')
-
-      if (elem) {
-        const parent = elem.closest('[data-calc-parent]')
-
-        if (result) {
-          elem.textContent = result
-          parent.classList.remove('empty')
-        } else {
-          parent.classList.add('empty')
-        }
+        return cell;
       }
-    }
+    });
 
-    function getMinWidth() {
-      const expansion = linearExpansion()
-      let result 
-
-      if (expansion < 0) {
-        result = 150;
-      } else if (!expansion) {
-        result =  null;
-      } else {
-        result = 2 * expansion + 150;
-      }
-      
-      const elems = document.querySelectorAll('[data-calc-value=minWidth]')
-
-      if (elems.length) {
-
-        if (result) {
-          elems.forEach(item => {
-            item.textContent = result
-            item.closest('[data-calc-parent]').classList.remove('empty')
-          })
-        } else {
-          elems.forEach(item => {
-            item.closest('[data-calc-parent]').classList.add('empty')
-          })
-        }
-      }
-    }
-
-    function getCompLength() {
-      const result = 2 * Math.pow(data.compensatorLength / data.type, 2) / data.diameter / data.ratio / Math.abs(tempDiff())
-      const elem = document.querySelector('[data-calc-value=compLength]')
-      if (elem) {
-        const parent = elem.closest('[data-calc-parent]')
-        if (result) {
-          elem.textContent = result
-          parent.classList.remove('empty')
-        } else {
-          parent.classList.add('empty')
-        }
-      }
-      
-      return result;
-    }
-
-    function getAmount() {
-      let result
-      if (document.querySelector('[data-calc-value=compensSkill]')) {
-        result = Math.abs(Math.ceil(linearExpansion() / data.diameter))
-      } else {
-        result = Math.ceil(data.length / getCompLength())
-      }
-
-      const elem = document.querySelector('[data-calc-value=amount]')
-
-      if (elem) {
-        const parent = elem.closest('[data-calc-parent]')
-
-        if (result) {
-          elem.textContent = result
-          parent.classList.remove('empty')
-        } else {
-          parent.classList.add('empty')
-        }
-      }
-    }
-  }  
-})
+    new CalculatorBig();
+  }
+});
