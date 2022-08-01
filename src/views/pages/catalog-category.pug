@@ -69,6 +69,16 @@ block content
               ul.category-list__list(data-catalog-list='')
         .section__block.catalog
           .catalog-page__grid 
+            a.card(href="#" data-link='')
+              .card__category 
+                .card__item
+                  img(src=`assets/images/svg/icon-empty.svg`, alt="")
+              .card__container
+                .card__image
+                  img(src="assets/images/card-1.webp", alt="")
+              .card__bot 
+                .card__title 
+                  |Крестовина SLT BLOCKFIRE PP-R 
             +card(title = 'Отвод двойной SLT AQUA PP-R с креплением комбинированный ВР')
             - for (i = 0; i < 15; i++)
               +card
