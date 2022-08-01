@@ -65,30 +65,24 @@ export class CalculatorAbstract {
     const received = pdf.querySelectorAll('[data-pdf-received]')
 
     this.button.onclick = () => {
-
-      introduced.forEach(item => {
-        const property = item.getAttribute('data-pdf-introduced')
-
-        item.textContent = this.data[property]
-      })
-      received.forEach(item => {
-        const property = item.getAttribute('data-pdf-received')
-        console.log(this[property]);
-        item.textContent = this[property]
-      })
-
-      this.downloadPdf(pdf)
+      this.setPdfFields(introduced, this.data)
+      this.setPdfFields(received, this)
+      
+      html2pdf()
+        .from(pdf)
+        .save();
     }
   }
 
-  downloadPdf(element) {
-    html2pdf()
-        .from(element)
-        .save();
+  setPdfFields(items, data) {
+    items.forEach(item => {
+      const property = item.getAttribute('data-pdf-field')
+
+      item.textContent = data[property]
+    })
   }
 
   calculate() {
-    // console.log(this.data);
     this.getLinearExpansion();
   }
 
@@ -134,7 +128,7 @@ export class CalculatorAbstract {
     const parent = elem.closest("[data-calc-parent]");
 
     if (Math.abs(value)) {
-      elem.textContent = value;
+      elem.textContent = Math.round(value);
       parent.classList.remove("empty");
     } else {
       parent.classList.add("empty");

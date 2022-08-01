@@ -132,7 +132,7 @@ block content
               li.calculator-page__pdf-item
                 .calculator-page__caption
                   |#{item.caption}
-                .calculator-page__block-title(data-pdf-introduced=item.attr)
+                .calculator-page__block-title(data-pdf-introduced='' data-pdf-field=item.attr)
         .calculator-page__pdf-col
           -
             var fields = [
@@ -146,4 +146,4 @@ block content
               li.calculator-page__pdf-item
                 .calculator-page__caption
                   |#{item.caption}
-                .calculator-page__block-title(data-pdf-received=item.attr)
+                .calculator-page__block-title(data-pdf-received='' data-pdf-field=item.attr)
