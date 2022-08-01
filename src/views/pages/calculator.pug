@@ -108,5 +108,42 @@ block content
                       .calculator-page__block-col
                         .calculator-page__button
                           .button-wrapper
-                            +download-btn.button--wide--mobile
-                              |Скачать расчет в PDF
+                            .button.button--download.button--wide--mobile.disabled(data-calc-download='')
+                              span.button__text
+                                span
+                                  |Скачать расчет в PDF
+                              .button__icon
+                                +download-svg.button__svg
+    .calculator-page__hidden 
+      .calculator-page__pdf(data-pdf='')
+        .calculator-page__pdf-col
+          -
+            var fields = [
+              {caption: 'Тип трубы', attr: 'type'},
+              {caption: 'Внешний диаметр трубы D, мм', attr: 'diameter'},
+              {caption: 'Длина участка компенсиции, м ', attr: 'length'},
+              {caption: 'Температура монтажа, °C', attr: 'mounting'},
+              {caption: 'Температура эксплуатации, °C', attr: 'exploitation'},
+            ]
+          .calculator-page__pdf-title
+            |Введенные значения
+          ul.calculator-page__pdf-list
+            each item in fields
+              li.calculator-page__pdf-item
+                .calculator-page__caption
+                  |#{item.caption}
+                .calculator-page__block-title(data-pdf-introduced=item.attr)
+        .calculator-page__pdf-col
+          -
+            var fields = [
+              {caption: 'Линейное расширение, мм', attr: 'expansion'},
+              {caption: 'Длина плеча компенсатора, мм', attr: 'length'},
+            ]
+          .calculator-page__pdf-title
+            |Рассчитанные значения
+          ul.calculator-page__pdf-list
+            each item in fields
+              li.calculator-page__pdf-item
+                .calculator-page__caption
+                  |#{item.caption}
+                .calculator-page__block-title(data-pdf-received=item.attr)

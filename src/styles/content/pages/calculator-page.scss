@@ -607,4 +607,34 @@
     }
     background: var(--color-light-gray);
   }
+
+  &__hidden {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: -1;
+
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__pdf {
+    margin: 30px;
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+  }
+  &__pdf-title {
+    margin-bottom: getRem(20px);
+
+    font-weight: 500;
+    @include fsl(20px, 120%);
+  }
+  &__pdf-item {
+    &:not(:first-child) {
+      margin-top: getRem(15px);
+    }
+  }
 }

@@ -49,3 +49,12 @@
   @include fsl(12px);
   border-bottom: 1px solid var(--color-black);
 }
+
+.test-pdf {
+  margin: 40px;
+}
+
+.test-qwe {
+  color: red;
+  margin-left: 100px;
+}

@@ -1,3 +1,5 @@
+import html2pdf from 'html2pdf.js'
+
 export class CalculatorAbstract {
   constructor() {
     this.data = {
@@ -10,6 +12,7 @@ export class CalculatorAbstract {
       compensatorLength: NaN,
     };
     this.sep = 1;
+    this.button = document.querySelector('[data-calc-download]')
 
     this.init();
   }
@@ -27,6 +30,8 @@ export class CalculatorAbstract {
         this.radioChangeHandler(item);
       };
     });
+
+    this.downloadClickHandler()
   }
 
   inputChangeHandler(item) {
@@ -54,7 +59,36 @@ export class CalculatorAbstract {
     this.setValues();
   }
 
+  downloadClickHandler() {
+    const pdf = document.querySelector('[data-pdf]')
+    const introduced = pdf.querySelectorAll('[data-pdf-introduced]')
+    const received = pdf.querySelectorAll('[data-pdf-received]')
+
+    this.button.onclick = () => {
+
+      introduced.forEach(item => {
+        const property = item.getAttribute('data-pdf-introduced')
+
+        item.textContent = this.data[property]
+      })
+      received.forEach(item => {
+        const property = item.getAttribute('data-pdf-received')
+        console.log(this[property]);
+        item.textContent = this[property]
+      })
+
+      this.downloadPdf(pdf)
+    }
+  }
+
+  downloadPdf(element) {
+    html2pdf()
+        .from(element)
+        .save();
+  }
+
   calculate() {
+    // console.log(this.data);
     this.getLinearExpansion();
   }
 
@@ -104,6 +138,14 @@ export class CalculatorAbstract {
       parent.classList.remove("empty");
     } else {
       parent.classList.add("empty");
+    }
+  }
+
+  checkIsDownloadable(boolean) {
+    if (boolean) {
+      this.button.classList.remove('disabled')
+    } else {
+      this.button.classList.add('disabled')
     }
   }
 }

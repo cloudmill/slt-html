@@ -9,6 +9,7 @@ export class CalculatorFirst extends CalculatorAbstract {
   calculate() {
     super.calculate();
     super.getLength();
+    super.checkIsDownloadable(this.expansion && this.length);
   }
 
   setValues() {

@@ -12,7 +12,7 @@
 		<meta property="og:image" content="assets/images/opengraph.jpg">
 		<script defer="defer" src="assets/vendor.js"></script>
 		<script defer="defer" src="assets/app.js"></script>
-		<link href="902.css" rel="stylesheet">
+		<link href="241.css" rel="stylesheet">
 		<link href="app.css" rel="stylesheet">
 	</head>
 
@@ -736,11 +736,13 @@
 													<div class="calculator-page__block-row">
 														<div class="calculator-page__block-col">
 															<div class="calculator-page__button">
-																<div class="button-wrapper"><a class="button button--download button--wide--mobile" href="#"><span class="button__text"><span>Скачать расчет в PDF</span></span>
+																<div class="button-wrapper">
+																	<div class="button button--download button--wide--mobile disabled" data-calc-download=""><span class="button__text"><span>Скачать расчет в PDF</span></span>
 																		<div class="button__icon"><svg class="button__svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 																				<path fill-rule="evenodd" clip-rule="evenodd" d="M16.2929 9.29289L13 12.5858V2H11V12.5858L7.70711 9.29289L6.29289 10.7071L12 16.4142L17.7071 10.7071L16.2929 9.29289ZM22 20V16H20V20H4V16H2V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20Z" fill="#04b2d1"></path>
 																			</svg></div>
-																	</a></div>
+																	</div>
+																</div>
 															</div>
 														</div>
 													</div>
@@ -752,6 +754,48 @@
 							</div>
 						</div>
 					</section>
+					<div class="calculator-page__hidden">
+						<div class="calculator-page__pdf" data-pdf="">
+							<div class="calculator-page__pdf-col">
+								<div class="calculator-page__pdf-title">Введенные значения</div>
+								<ul class="calculator-page__pdf-list">
+									<li class="calculator-page__pdf-item">
+										<div class="calculator-page__caption">Тип трубы</div>
+										<div class="calculator-page__block-title" data-pdf-introduced="type"></div>
+									</li>
+									<li class="calculator-page__pdf-item">
+										<div class="calculator-page__caption">Внешний диаметр трубы D, мм</div>
+										<div class="calculator-page__block-title" data-pdf-introduced="diameter"></div>
+									</li>
+									<li class="calculator-page__pdf-item">
+										<div class="calculator-page__caption">Длина участка компенсиции, м</div>
+										<div class="calculator-page__block-title" data-pdf-introduced="length"></div>
+									</li>
+									<li class="calculator-page__pdf-item">
+										<div class="calculator-page__caption">Температура монтажа, °C</div>
+										<div class="calculator-page__block-title" data-pdf-introduced="mounting"></div>
+									</li>
+									<li class="calculator-page__pdf-item">
+										<div class="calculator-page__caption">Температура эксплуатации, °C</div>
+										<div class="calculator-page__block-title" data-pdf-introduced="exploitation"></div>
+									</li>
+								</ul>
+							</div>
+							<div class="calculator-page__pdf-col">
+								<div class="calculator-page__pdf-title">Рассчитанные значения</div>
+								<ul class="calculator-page__pdf-list">
+									<li class="calculator-page__pdf-item">
+										<div class="calculator-page__caption">Линейное расширение, мм</div>
+										<div class="calculator-page__block-title" data-pdf-received="expansion"></div>
+									</li>
+									<li class="calculator-page__pdf-item">
+										<div class="calculator-page__caption">Длина плеча компенсатора, мм</div>
+										<div class="calculator-page__block-title" data-pdf-received="length"></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="call-modal" data-fancy-modal="call">
 					<div class="call-modal__container">
