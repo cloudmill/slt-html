@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const id = calculator.getAttribute("data-calc");
 
     switch (id) {
-      case "calcFirst":
+      case "calculatorFirst":
         new CalculatorFirst();
         break;
       case "calculatorSecond":
