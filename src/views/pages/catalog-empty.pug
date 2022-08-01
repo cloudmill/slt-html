@@ -1,0 +1,127 @@
+extends ../layouts/master
+
+include ../components/breadcrumbs
+include ../components/tech-docs
+
+block content
+  .catalog-page
+    section.section.section--first.catalog-page__section 
+      .container 
+        +breadcrumbs(items = ['SLT AQUA', 'фитинги '] page = "Муфта SLT AQUA PP-R Переходная BxB")
+        .catalog-page__row 
+          .catalog-page__col
+            h1.catalog-page__title
+              |#[span.word-span #[span Муфта]] #[span.word-span #[span SLT AQUA]] #[span.word-span #[span PP-R]] #[span.word-span #[span переходная BxB]]
+            p.catalog-page__text 
+              |Муфта переходная (труба-труба), предназначенная для соединения элементов трубопровода методом раструбной сварки с переходом на разный диаметр труб. Особенности монтажа: D 40-110 мм использовать центрально
+            .catalog-page__button
+              .button.button-animate(data-scroll='#order')
+                .button__text
+                  span
+                    |Сделать заказ
+                .button__icon 
+                  +big-arrow-svg.button__svg
+          .catalog-page__col
+            img.catalog-page__img(src="assets/images/catalog-placeholder.jpg", alt="")
+          .catalog-page__col
+            .catalog-page__label 
+              |Применение
+            ul.catalog-page__types 
+              li.catalog-page__types-item
+                .catalog-page__type 
+                  .catalog-page__type-icon
+                    .use-icon 
+                      +use-svg.use-icon__svg.catalog-page__type-svg
+                  .catalog-page__type-text 
+                    |соединение
+    section.section.section--md#order
+      .container 
+        .row 
+          .row__col
+            h3
+              |#[span.word-span #[span Сделать]] #[span.word-span #[span заказ]]
+          .row__col
+            p.catalog-page__caption 
+              |Здесь вы можете сформировать список требуемых товаров. Наши менеджеры обработают заказ, рассчитают стоимость, найдут подходящего по всем параметрам поставщика и отправят вам коммерческое предложение.
+        .catalog-page__colors 
+          .catalog-page__colors-item 
+            .catalog-page__colors-text 
+              |Цвет
+            .catalog-page__colors-icon.tooltip.active
+              +colors-light-svg.catalog-page__colors-svg.tooltip__icon 
+              .tooltip__container 
+                |белый
+        .section__block
+          .catalog-page__table 
+            .catalog-page__table-head
+              each item in ['Диаметр, мм', 'Артикул', 'Количество в упаковке, шт', 'Количество в коробке, шт', 'Добавить в заказ, шт']
+                .catalog-page__table-cell
+                  |#{item}
+            .catalog-page__table-body 
+              - for (i = 0; i < 15; i++)
+                label.catalog-page__table-item(data-table-item='')
+                  each item in ['25×20', 'SLTFM32520', '50', '500', 'last']
+                    if (item == "last")
+                      .catalog-page__table-cell(data-table-cell='')
+                        .catalog-page__table-row 
+                          .catalog-page__table-col
+                            input.catalog-page__table-input(type="number" placeholder="Введите количество" data-table-input='')
+                            .catalog-page__table-caption(data-table-caption='')
+                              |
+                          .catalog-page__table-col
+                            .catalog-page__table-button(data-catalog-button='')
+                              .catalog-page__table-add 
+                                |Добавить
+                            .catalog-page__change 
+                              .catalog-page__change-btn(data-catalog-change='')
+                                |Изменить
+                              .catalog-page__change-icon(data-catalog-remove='')
+                                +close-svg.catalog-page__change-svg
+                    else
+                      .catalog-page__table-cell 
+                        .catalog-page__table-text
+                          |#{item}
+          .catalog-page__block 
+            ul.catalog-page__block-list
+              -
+                var ddata = [
+                  {label: "Артикул", text: "SLTFM32520"},
+                  {label: "Количество в упаковке, шт", text: "50"},
+                  {label: "Количество в коробке, шт", text: "500"},
+                ]
+              - for (i = 0; i < 12; i++)
+                li.catalog-page__block-item(data-aos='fade-up' data-table-item='') 
+                  .catalog-page__block-top 
+                    .catalog-page__block-cell 
+                      .catalog-page__block-label 
+                        |Диаметр, мм
+                      .catalog-page__block-text
+                        |25×20
+                  .catalog-page__block-body(data-table-cell='')
+                    each item in ddata 
+                      .catalog-page__block-cell 
+                        .catalog-page__block-label 
+                          |#{item.label}
+                        .catalog-page__block-text
+                          |#{item.text}
+                    .catalog-page__block-cell
+                      .catalog-page__block-label.darken
+                        |Добавить в заказ,шт
+                      .catalog-page__block-input
+                        input.catalog-page__table-input(type="number" placeholder="Кол-во" data-table-input='')
+                        .catalog-page__table-caption(data-table-caption='')
+                          |
+                    .catalog-page__block-cell 
+                      .catalog-page__table-button(data-catalog-button='')
+                        .catalog-page__table-add 
+                          |Добавить
+                      .catalog-page__block-buttons 
+                        .catalog-page__block-btn
+                          .catalog-page__change-btn(data-catalog-change='')
+                            |Изменить
+                        .catalog-page__block-btn
+                          .catalog-page__change-btn(data-catalog-remove='')
+                            |Удалить
+    section.section 
+      .container 
+        +tech-docs
