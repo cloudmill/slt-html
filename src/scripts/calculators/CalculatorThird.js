@@ -24,7 +24,7 @@ export class CalculatorThird extends CalculatorAbstract {
   }
 
   getAmount() {
-    this.amount = Math.abs(Math.ceil(this.expansion / this.data.diameter));
+    this.amount = Math.ceil(Math.abs(this.expansion / this.data.diameter));
   }
 
   setValues() {
