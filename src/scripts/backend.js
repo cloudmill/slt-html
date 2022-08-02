@@ -407,42 +407,48 @@ function deleteBasket() {
                 console.log(r);
                 if (r.success == true) {
 
-                    $(document).find('[data-type=basket_count]').empty();
-                    $(document).find('[data-type=basket_count]').html(r.count);
+                    if (r.count < 1) {
+                        location.reload();
+                    }
 
-                    let countOrderPage = r.count;
+                    if (r.count > 0) {
+                        $(document).find('[data-type=basket_count]').empty();
+                        $(document).find('[data-type=basket_count]').html(r.count);
 
-                    $.ajax({
-                        method: "POST",
-                        url: window.location.href,
-                        data: {
-                            ajax: 1,
-                        },
-                        success: function (r) {
-                            $(document).find('[data-type=items-container-full]').empty();
-                            $(document).find('[data-type=items-container-full]').append($(r));
-                        },
-                        error: function (r) {
-                            console.debug(r);
-                        }
-                    });
+                        let countOrderPage = r.count;
 
-                    $.ajax({
-                        method: "POST",
-                        url: window.location.href,
-                        data: {
-                            ajax2: 1,
-                        },
-                        success: function (r) {
-                            let countOrder = '<h5 class="order-page__panel-title">Товарных позиций в заказе: ' + countOrderPage + '</h5>';
+                        $.ajax({
+                            method: "POST",
+                            url: window.location.href,
+                            data: {
+                                ajax: 1,
+                            },
+                            success: function (r) {
+                                $(document).find('[data-type=items-container-full]').empty();
+                                $(document).find('[data-type=items-container-full]').append($(r));
+                            },
+                            error: function (r) {
+                                console.debug(r);
+                            }
+                        });
 
-                            $(document).find('[data-type=order-page-count]').empty();
-                            $(document).find('[data-type=order-page-count]').append(countOrder);
-                        },
-                        error: function (r) {
-                            console.debug(r);
-                        }
-                    });
+                        $.ajax({
+                            method: "POST",
+                            url: window.location.href,
+                            data: {
+                                ajax2: 1,
+                            },
+                            success: function (r) {
+                                let countOrder = '<h5 class="order-page__panel-title">Товарных позиций в заказе: ' + countOrderPage + '</h5>';
+
+                                $(document).find('[data-type=order-page-count]').empty();
+                                $(document).find('[data-type=order-page-count]').append(countOrder);
+                            },
+                            error: function (r) {
+                                console.debug(r);
+                            }
+                        });
+                    }
                 }
             },
             error: function (r) {
