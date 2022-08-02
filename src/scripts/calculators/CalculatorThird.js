@@ -2,17 +2,13 @@ import { CalculatorAbstract } from "./CalculatorAbstract";
 
 // калькулятор на страницах calculator-3/calculator-4
 export class CalculatorThird extends CalculatorAbstract {
-  constructor() {
-    super();
-  }
-
   radioChangeHandler(item) {
     super.radioChangeHandler(item);
 
     if (item.checked) {
       if (item.getAttribute("data-calc-radio") === "diameter") {
-        const value = +item.value;
-        super.setElemValue(value, "[data-calc-value=compensSkill]");
+        this.compensSkill = +item.value;
+        super.setElemValue(this.compensSkill, "[data-calc-value=compensSkill]");
       }
     }
   }
@@ -20,15 +16,16 @@ export class CalculatorThird extends CalculatorAbstract {
   calculate() {
     super.calculate();
     super.getLinearExpansion();
-    this.getAmount()
+    this.getAmount();
+    this.pdfDownlaoder.checkIsDownloadable(this.compensSkill && this.expansion && this.amount)
   }
 
   getAmount() {
-    this.amount = Math.ceil(Math.abs(this.expansion / this.data.diameter));
+    this.amount = Math.ceil(Math.abs(this.expansion / this.formData.diameter));
   }
 
   setValues() {
     super.setElemValue(this.expansion, "[data-calc-value=expansion]");
-    super.setElemValue(this.amount, '[data-calc-value=amount]')
+    super.setElemValue(this.amount, "[data-calc-value=amount]");
   }
 }

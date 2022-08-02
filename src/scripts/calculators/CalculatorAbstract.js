@@ -1,8 +1,8 @@
-import html2pdf from 'html2pdf.js'
+import { PdfDownloader } from "./PdfDownloader";
 
 export class CalculatorAbstract {
   constructor() {
-    this.data = {
+    this.formData = {
       type: NaN,
       ratio: NaN,
       length: NaN,
@@ -12,7 +12,8 @@ export class CalculatorAbstract {
       compensatorLength: NaN,
     };
     this.sep = 1;
-    this.button = document.querySelector('[data-calc-download]')
+    // this.button = document.querySelector('[data-calc-download]')
+    this.pdfDownlaoder = new PdfDownloader(this);
 
     this.init();
   }
@@ -31,13 +32,13 @@ export class CalculatorAbstract {
       };
     });
 
-    this.downloadClickHandler()
+    // this.downloadClickHandler()
   }
 
   inputChangeHandler(item) {
     const property = item.getAttribute("data-calc-input");
 
-    this.data[property] = +item.value;
+    this.formData[property] = +item.value;
 
     this.calculate();
     this.setValues();
@@ -48,10 +49,10 @@ export class CalculatorAbstract {
     const ratio = item.getAttribute("data-calc-ratio");
 
     if (item.checked) {
-      this.data[property] = +item.value;
+      this.formData[property] = +item.value;
 
       if (ratio) {
-        this.data.ratio = +ratio;
+        this.formData.ratio = +ratio;
       }
     }
 
@@ -60,29 +61,29 @@ export class CalculatorAbstract {
   }
 
   downloadClickHandler() {
-    const pdf = document.querySelector('[data-pdf]')
-    const introduced = pdf.querySelectorAll('[data-pdf-introduced]')
-    const received = pdf.querySelectorAll('[data-pdf-received]')
+    const pdf = document.querySelector("[data-pdf]");
+    const introduced = pdf.querySelectorAll("[data-pdf-introduced]");
+    const received = pdf.querySelectorAll("[data-pdf-received]");
 
     this.button.onclick = () => {
-      this.setPdfFields(introduced, this.data)
-      this.setPdfFields(received, this)
-      
+      this.setPdfFields(introduced, this.formData);
+      this.setPdfFields(received, this);
+
       html2pdf()
         .from(pdf)
         .set({
-          filename: pdf.getAttribute('data-pdf')
+          filename: pdf.getAttribute("data-pdf"),
         })
         .save();
-    }
+    };
   }
 
   setPdfFields(items, data) {
-    items.forEach(item => {
-      const property = item.getAttribute('data-pdf-field')
+    items.forEach((item) => {
+      const property = item.getAttribute("data-pdf-field");
 
-      item.textContent = Math.round(data[property])
-    })
+      item.textContent = Math.round(data[property]);
+    });
   }
 
   calculate() {
@@ -90,21 +91,23 @@ export class CalculatorAbstract {
   }
 
   getTempDiff() {
-    const res = this.data.exploitation - this.data.mounting;
+    const res = this.formData.exploitation - this.formData.mounting;
     // return res ? res : NaN;
     return res;
   }
 
   getLinearExpansion() {
     this.expansion = Math.round(
-      this.data.ratio * (this.data.length / this.sep) * this.getTempDiff()
+      this.formData.ratio *
+        (this.formData.length / this.sep) *
+        this.getTempDiff()
     );
   }
 
   getLength() {
     this.length =
-      this.data.type *
-      Math.pow(Math.abs(this.data.diameter * this.expansion), 0.5);
+      this.formData.type *
+      Math.pow(Math.abs(this.formData.diameter * this.expansion), 0.5);
   }
 
   getMinWidth() {
@@ -114,14 +117,14 @@ export class CalculatorAbstract {
 
   getCompLength() {
     this.compLength =
-      (2 * Math.pow(this.data.compensatorLength / this.data.type, 2)) /
-      this.data.diameter /
-      this.data.ratio /
+      (2 * Math.pow(this.formData.compensatorLength / this.formData.type, 2)) /
+      this.formData.diameter /
+      this.formData.ratio /
       Math.abs(this.getTempDiff());
   }
 
   getAmount() {
-    this.amount = Math.ceil(this.data.length / this.compLength);
+    this.amount = Math.ceil(this.formData.length / this.compLength);
   }
 
   setValues() {}
@@ -140,9 +143,9 @@ export class CalculatorAbstract {
 
   checkIsDownloadable(boolean) {
     if (boolean) {
-      this.button.classList.remove('disabled')
+      this.button.classList.remove("disabled");
     } else {
-      this.button.classList.add('disabled')
+      this.button.classList.add("disabled");
     }
   }
 }

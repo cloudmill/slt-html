@@ -1,6 +1,6 @@
 mixin pdf-template 
   .calculator-page__hidden 
-    .calculator-page__pdf(data-pdf='Компенсационное колено')
+    .calculator-page__pdf(data-pdf=attributes.filename)
       .calculator-page__pdf-col
         -
           var fields = [
@@ -13,7 +13,7 @@ mixin pdf-template
         .calculator-page__pdf-title
           |Введенные значения
         ul.calculator-page__pdf-list
-          each item in fields
+          each item in attributes.data.introduced
             li.calculator-page__pdf-item
               .calculator-page__caption
                 |#{item.caption}
@@ -27,7 +27,7 @@ mixin pdf-template
         .calculator-page__pdf-title
           |Рассчитанные значения
         ul.calculator-page__pdf-list
-          each item in fields
+          each item in attributes.data.received
             li.calculator-page__pdf-item
               .calculator-page__caption
                 |#{item.caption}

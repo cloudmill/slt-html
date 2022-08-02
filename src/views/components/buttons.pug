@@ -45,3 +45,11 @@ mixin refresh-button
         block
     .button__icon
       +refresh-svg.button__svg
+
+mixin calculator-button
+  .button.button--download.button--wide--mobile.disabled(data-calc-download='')
+    span.button__text
+      span
+        |Скачать расчет в PDF
+    .button__icon
+      +download-svg.button__svg
