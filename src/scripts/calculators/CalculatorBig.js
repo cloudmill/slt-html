@@ -1,4 +1,5 @@
 import { PdfDownloader } from "./PdfDownloader";
+import { mediaQuery } from "../mediaQueries";
 
 // калькулятор на странице calculator-5
 export class CalculatorBig {
@@ -21,7 +22,16 @@ export class CalculatorBig {
     this.changeHandler();
     this.selectHandler();
     this.collectData();
-    this.collectFields();
+
+    if (mediaQuery.matches) {
+      const columns = document.querySelectorAll("[data-table-col]");
+
+      this.collectFields(columns);
+    } else {
+      const rows = document.querySelectorAll("[data-table-row]");
+
+      this.collectFields(rows);
+    }
   }
 
   collectData() {
@@ -48,14 +58,11 @@ export class CalculatorBig {
     });
   }
 
-  collectFields() {
-    const grid = document.querySelector("[data-table]");
-    const columns = grid.querySelectorAll("[data-table-col]");
-
-    for (let i = 1; i < columns.length; i++) {
+  collectFields(items) {
+    for (let i = 1; i < items.length; i++) {
       const arr = [];
       for (let j = 1; j < 10; j++) {
-        const cell = columns[i].querySelectorAll("[data-table-cell]");
+        const cell = items[i].querySelectorAll("[data-table-cell]");
         arr.push(cell[j]);
       }
       this.fields.push(arr);

@@ -146,16 +146,17 @@ block content
                       .calculator-page__grid-title
                         |#{cell}
             .calculator-page__container
-              .calculator-page__grid-mobile
+              .calculator-page__grid-mobile(data-table-mobile='')
                 .calculator-page__grid-heading 
                   .calculator-page__grid-caption
                     |Диаметр
-                .calculator-page__grid-item.calculator-page__grid-item--small
-                  .calculator-page__grid-title
-                each item in ['D20', 'D25', 'D32', 'D40', 'D50', 'D63', 'D75', 'D90', 'D110']
-                  .calculator-page__grid-item 
+                .calculator-page__grid-row(data-table-row='')
+                  .calculator-page__grid-item.calculator-page__grid-item--small
                     .calculator-page__grid-title
-                      |#{item}
+                  each item in ['D20', 'D25', 'D32', 'D40', 'D50', 'D63', 'D75', 'D90', 'D110']
+                    .calculator-page__grid-item
+                      .calculator-page__grid-title
+                        |#{item}
                 .calculator-page__grid-heading.calculator-page__grid-long
                   .tooltip.tooltip--absolute
                     .tooltip__icon 
@@ -165,13 +166,15 @@ block content
                   .calculator-page__gird-wrapper
                     .calculator-page__grid-caption
                       |Скорости V, м/с
-                - for (i = 0; i < 3; i++)
-                  .calculator-page__grid-item.calculator-page__grid-item--small
-                    .calculator-page__grid-title
-                      |SDR 11
-                  each item, j in ['73,7174', '47,2966', '28,9305', '18,3154', '11,7074', '7,2892', '5,2033', '3,7066', '2,4342']
-                    .calculator-page__grid-item(class=(j === 2 ? "active" : ""))
-                      |#{item}
+                each item in ['SDR 11', 'SDR 7,4', 'SDR 6', ]
+                  .calculator-page__grid-row(data-table-row='')
+                    .calculator-page__grid-item.calculator-page__grid-item--small(data-table-cell='')
+                      .calculator-page__grid-title
+                        |#{item}
+                    - for (i = 0; i < 9; i++)
+                      .calculator-page__grid-item(data-table-cell='')
+                        .calculator-page__grid-title
+                          |null
                 .calculator-page__grid-heading.calculator-page__grid-long
                   .tooltip.tooltip--absolute
                     .tooltip__icon 
@@ -180,14 +183,15 @@ block content
                       |м/м - метр водного столба на метр трубы
                   .calculator-page__grid-caption
                     |Потери i, #[br] м/м
-                - for (i = 0; i < 3; i++)
-                  .calculator-page__grid-item.calculator-page__grid-item--small
-                    .calculator-page__grid-title
-                      |SDR 11
-                  each item in ['73,7174', '47,2966', '28,9305', '18,3154', '11,7074', '7,2892', '5,2033', '3,7066', '2,4342']
-                    .calculator-page__grid-item 
+                each item in ['SDR 11', 'SDR 7,4', 'SDR 6', ]
+                  .calculator-page__grid-row(data-table-row='')
+                    .calculator-page__grid-item.calculator-page__grid-item--small(data-table-cell='')
                       .calculator-page__grid-title
-                        |#{item}
+                        |SDR 11
+                    - for (i = 0; i < 9; i++)
+                      .calculator-page__grid-item(data-table-cell='')
+                        .calculator-page__grid-title
+                          |null
     -
       var fields = {
         introduced: [

@@ -584,6 +584,10 @@
   &__grid-title {
     font-weight: 500;
   }
+  &__grid-row {
+    display: flex;
+    grid-column: span 10;
+  }
 
   &__br {
     @media (max-width: ($breakpoint - 1px)) {
