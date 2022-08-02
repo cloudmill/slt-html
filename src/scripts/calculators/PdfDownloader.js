@@ -1,7 +1,8 @@
 
 export class PdfDownloader {
-  constructor() {
+  constructor(calculator) {
     this.button = document.querySelector("[data-calc-download]");
+    this.calculator = calculator
 
     this.init();
   }
@@ -14,8 +15,8 @@ export class PdfDownloader {
     const received = pdf.querySelectorAll("[data-pdf-received]");
 
     this.button.onclick = () => {
-      this.setPdfFields(introduced, this.data);
-      this.setPdfFields(received, this);
+      this.setPdfFields(introduced, this.calculator.data);
+      this.setPdfFields(received, this.calculator);
 
       html2pdf()
         .from(pdf)
