@@ -2,14 +2,10 @@ import { CalculatorAbstract } from "./CalculatorAbstract";
 
 // калькулятора на странице calculate
 export class CalculatorFirst extends CalculatorAbstract {
-  constructor() {
-    super();
-  }
-
   calculate() {
     super.calculate();
     super.getLength();
-    super.checkIsDownloadable(this.expansion && this.length);
+    this.pdfDownlaoder.checkIsDownloadable(this.expansion && this.length);
   }
 
   setValues() {

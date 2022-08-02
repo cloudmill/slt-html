@@ -1,0 +1,34 @@
+mixin pdf-template 
+  .calculator-page__hidden 
+    .calculator-page__pdf(data-pdf=attributes.filename)
+      .calculator-page__pdf-col
+        -
+          var fields = [
+            {caption: 'Тип трубы', attr: 'type'},
+            {caption: 'Внешний диаметр трубы D, мм', attr: 'diameter'},
+            {caption: 'Длина участка компенсиции, м ', attr: 'length'},
+            {caption: 'Температура монтажа, °C', attr: 'mounting'},
+            {caption: 'Температура эксплуатации, °C', attr: 'exploitation'},
+          ]
+        .calculator-page__pdf-title
+          |Введенные значения
+        ul.calculator-page__pdf-list
+          each item in attributes.data.introduced
+            li.calculator-page__pdf-item
+              .calculator-page__caption
+                |#{item.caption}
+              .calculator-page__block-title(data-pdf-introduced='' data-pdf-field=item.attr)
+      .calculator-page__pdf-col
+        -
+          var fields = [
+            {caption: 'Линейное расширение, мм', attr: 'expansion'},
+            {caption: 'Длина плеча компенсатора, мм', attr: 'length'},
+          ]
+        .calculator-page__pdf-title
+          |Рассчитанные значения
+        ul.calculator-page__pdf-list
+          each item in attributes.data.received
+            li.calculator-page__pdf-item
+              .calculator-page__caption
+                |#{item.caption}
+              .calculator-page__block-title(data-pdf-received='' data-pdf-field=item.attr)

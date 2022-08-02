@@ -650,11 +650,13 @@
 											<div class="calculator-page__block-row">
 												<div class="calculator-page__block-col">
 													<div class="calculator-page__button">
-														<div class="button-wrapper"><a class="button button--download button--wide--mobile" href="#"><span class="button__text"><span>Скачать расчет в PDF</span></span>
+														<div class="button-wrapper">
+															<div class="button button--download button--wide--mobile disabled" data-calc-download=""><span class="button__text"><span>Скачать расчет в PDF</span></span>
 																<div class="button__icon"><svg class="button__svg" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 																		<path fill-rule="evenodd" clip-rule="evenodd" d="M16.2929 9.29289L13 12.5858V2H11V12.5858L7.70711 9.29289L6.29289 10.7071L12 16.4142L17.7071 10.7071L16.2929 9.29289ZM22 20V16H20V20H4V16H2V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20Z" fill="#04b2d1"></path>
 																	</svg></div>
-															</a></div>
+															</div>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -1102,6 +1104,52 @@
 							</form>
 						</div>
 					</section>
+					<div class="calculator-page__hidden">
+						<div class="calculator-page__pdf" data-pdf="Расчет удельных гидравлических потерь">
+							<div class="calculator-page__pdf-col">
+								<div class="calculator-page__pdf-title">Введенные значения</div>
+								<ul class="calculator-page__pdf-list">
+									<li class="calculator-page__pdf-item">
+										<div class="calculator-page__caption">Расход, л/с</div>
+										<div class="calculator-page__block-title" data-pdf-introduced="" data-pdf-field="rate"></div>
+									</li>
+									<li class="calculator-page__pdf-item">
+										<div class="calculator-page__caption">Температура, °C</div>
+										<div class="calculator-page__block-title" data-pdf-introduced="" data-pdf-field="temp"></div>
+									</li>
+									<li class="calculator-page__pdf-item">
+										<div class="calculator-page__caption">Приемлемый диаметр и SDR труб</div>
+										<div class="calculator-page__block-title" data-pdf-introduced="" data-pdf-field="diameter"></div>
+									</li>
+									<li class="calculator-page__pdf-item">
+										<div class="calculator-page__caption">Длина трубопровода, м</div>
+										<div class="calculator-page__block-title" data-pdf-introduced="" data-pdf-field="length"></div>
+									</li>
+									<li class="calculator-page__pdf-item">
+										<div class="calculator-page__caption">Процент, учитывающий местные потери</div>
+										<div class="calculator-page__block-title" data-pdf-introduced="" data-pdf-field="percent"></div>
+									</li>
+								</ul>
+							</div>
+							<div class="calculator-page__pdf-col">
+								<div class="calculator-page__pdf-title">Рассчитанные значения</div>
+								<ul class="calculator-page__pdf-list">
+									<li class="calculator-page__pdf-item">
+										<div class="calculator-page__caption">Удельные потери по длине трубопровода без учета местных потерь, м/м</div>
+										<div class="calculator-page__block-title" data-pdf-received="" data-pdf-field="specificLosses"></div>
+									</li>
+									<li class="calculator-page__pdf-item">
+										<div class="calculator-page__caption">Местные потери по длине трубопровода по «Примечанию» СП 40-102-2000, м/м</div>
+										<div class="calculator-page__block-title" data-pdf-received="" data-pdf-field="localLosses"></div>
+									</li>
+									<li class="calculator-page__pdf-item">
+										<div class="calculator-page__caption">Потери по длине трубопровода с учетом суммы местных потерь, м/м</div>
+										<div class="calculator-page__block-title" data-pdf-received="" data-pdf-field="lengthLosses"></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="test-table hidden" data-table-name="SDR11" data-calc-table="[[20,25,32,40,50,64,75,90,110],[1.9,2.3,2.9,3.7,4.6,5.8,6.8,8.2,10],[11,11,11,11,11,11,11,11,11],[20.3,25.3,32.3,40.3,50.4,63.6,75.6,90.6,110.4],[2.1,2.6,3.3,4,5,6.2,7.5,9.4,10.9]]">
 					<div class="test-col">

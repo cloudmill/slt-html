@@ -11,8 +11,11 @@ export class CalculatorSecond extends CalculatorAbstract {
     super.inputChangeHandler(item);
 
     if (item.getAttribute("data-calc-input") === "compensatorLength") {
-      const value = +item.value;
-      super.setElemValue(value, "[data-calc-value=compensatorLength]");
+      this.compensatorLength = +item.value;
+      super.setElemValue(
+        this.compensatorLength,
+        "[data-calc-value=compensatorLength]"
+      );
     }
   }
 
@@ -23,19 +26,27 @@ export class CalculatorSecond extends CalculatorAbstract {
     super.getMinWidth();
     super.getCompLength();
     super.getAmount();
+    this.pdfDownlaoder.checkIsDownloadable(
+      this.expansion &&
+        this.length &&
+        this.minWidth &&
+        this.compLength &&
+        this.amount &&
+        this.compensatorLength
+    );
   }
 
   setValues() {
     super.setElemValue(this.length, "[data-calc-value=length]");
-    super.setElemValue(this.length, "[data-calc-value=compLength]");
+    super.setElemValue(this.compLength, "[data-calc-value=compLength]");
     super.setElemValue(this.amount, "[data-calc-value=amount]");
     this.setMultipleValues(this.minWidth, "[data-calc-value=minWidth]");
   }
 
   setMultipleValues(value, selector) {
-    const elements = document.querySelectorAll(selector)
-    
-    elements.forEach(item => {
+    const elements = document.querySelectorAll(selector);
+
+    elements.forEach((item) => {
       const parent = item.closest("[data-calc-parent]");
 
       if (Math.abs(value)) {
@@ -44,6 +55,6 @@ export class CalculatorSecond extends CalculatorAbstract {
       } else {
         parent.classList.add("empty");
       }
-    })
+    });
   }
 }

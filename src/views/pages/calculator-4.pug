@@ -3,6 +3,7 @@ extends ../layouts/master
 include ../components/breadcrumbs
 include ../components/nav
 include ../components/form-components
+include ../components/pdf-template
 
 block content
   .calculator-page
@@ -115,5 +116,20 @@ block content
                       .calculator-page__block-col
                         .calculator-page__button
                           .button-wrapper
-                            +download-btn.button--wide--mobile
-                              |Скачать расчет в PDF
+                            +calculator-button
+    -
+      var fields = {
+        introduced: [
+          {caption: 'Тип трубы', attr: 'type'},
+          {caption: 'Внешний диаметр трубы D, мм', attr: 'diameter'},
+          {caption: 'Длина участка компенсиции, м ', attr: 'length'},
+          {caption: 'Температура монтажа, °C', attr: 'mounting'},
+          {caption: 'Температура эксплуатации, °C', attr: 'exploitation'},
+        ],
+        received: [
+          {caption: 'Линейное расширение, мм', attr: 'expansion'},
+          {caption: 'Количество компенсаторов на длину, шт', attr: 'amount'},
+          {caption: 'Компенсирующая способность изделия, мм', attr: 'compensSkill'},
+        ]
+      }
+    +pdf-template(data = fields filename = 'Сильфонный компенсатор')

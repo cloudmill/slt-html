@@ -5,6 +5,7 @@ include ../components/nav
 include ../components/form-components
 include ../components/select
 include ../components/calc-table
+include ../components/pdf-template
 
 block content
   -
@@ -115,8 +116,7 @@ block content
                   .calculator-page__block-col
                     .calculator-page__button
                       .button-wrapper
-                        +download-btn.button--wide--mobile
-                          |Скачать расчет в PDF
+                        +calculator-button
           .calculator-page__calculate-col 
             .calculator-page__grid(data-table='')
               .calculator-page__grid-heading 
@@ -145,13 +145,6 @@ block content
                     .calculator-page__grid-item(data-table-cell='')
                       .calculator-page__grid-title
                         |#{cell}
-              //- - for (i = 0; i < 9; i++)
-              //-   .calculator-page__grid-item 
-              //-     .calculator-page__grid-title
-              //-       |D20
-              //-   each item, j in ['73,7174', '96,1133', '118,4716', '6,24482', '12,13625', '20,52237', ]
-              //-     .calculator-page__grid-item(class=(i === 8 && j === 2 ? 'active' : ''))
-              //-       |#{item}
             .calculator-page__container
               .calculator-page__grid-mobile
                 .calculator-page__grid-heading 
@@ -195,4 +188,20 @@ block content
                     .calculator-page__grid-item 
                       .calculator-page__grid-title
                         |#{item}
+    -
+      var fields = {
+        introduced: [
+          {caption: 'Расход, л/с', attr: 'rate'},
+          {caption: 'Температура, °C', attr: 'temp'},
+          {caption: 'Приемлемый диаметр и SDR труб', attr: 'diameter'},
+          {caption: 'Длина трубопровода, м', attr: 'length'},
+          {caption: 'Процент, учитывающий местные потери', attr: 'percent'},
+        ],
+        received: [
+          {caption: 'Удельные потери по длине трубопровода без учета местных потерь, м/м', attr: 'specificLosses'},
+          {caption: 'Местные потери по длине трубопровода по «Примечанию» СП 40-102-2000, м/м', attr: 'localLosses'},
+          {caption: 'Потери по длине трубопровода с учетом суммы местных потерь, м/м', attr: 'lengthLosses'},
+        ]
+      }
+    +pdf-template(data = fields filename = 'Расчет удельных гидравлических потерь')
   +calc-table.hidden

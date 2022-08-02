@@ -1,3 +1,5 @@
+import { PdfDownloader } from "./PdfDownloader";
+
 // калькулятор на странице calculator-5
 export class CalculatorBig {
   constructor() {
@@ -10,6 +12,7 @@ export class CalculatorBig {
       length: NaN,
       percent: NaN,
     };
+    this.pdfDownlaoder = new PdfDownloader(this);
 
     this.init();
   }
@@ -105,6 +108,9 @@ export class CalculatorBig {
     this.getSpecificLosses();
     this.getLocalLosses();
     this.getLengthLosses();
+    this.pdfDownlaoder.checkIsDownloadable(
+      this.specificLosses && this.localLosses && this.lengthLosses
+    );
   }
 
   // Удельные потери
@@ -221,7 +227,8 @@ export class CalculatorBig {
   setElemValue(value, selector) {
     const element = document.querySelector(selector);
     if (value) {
-      const result = value.toFixed(4);
+      // const result = value.toFixed(4);
+      const result = Math.round(value);
 
       element.textContent = result;
     } else {

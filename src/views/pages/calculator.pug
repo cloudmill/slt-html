@@ -3,6 +3,7 @@ extends ../layouts/master
 include ../components/breadcrumbs
 include ../components/nav
 include ../components/form-components
+include ../components/pdf-template
 
 block content
   .calculator-page
@@ -108,42 +109,19 @@ block content
                       .calculator-page__block-col
                         .calculator-page__button
                           .button-wrapper
-                            .button.button--download.button--wide--mobile.disabled(data-calc-download='')
-                              span.button__text
-                                span
-                                  |Скачать расчет в PDF
-                              .button__icon
-                                +download-svg.button__svg
-    .calculator-page__hidden 
-      .calculator-page__pdf(data-pdf='')
-        .calculator-page__pdf-col
-          -
-            var fields = [
-              {caption: 'Тип трубы', attr: 'type'},
-              {caption: 'Внешний диаметр трубы D, мм', attr: 'diameter'},
-              {caption: 'Длина участка компенсиции, м ', attr: 'length'},
-              {caption: 'Температура монтажа, °C', attr: 'mounting'},
-              {caption: 'Температура эксплуатации, °C', attr: 'exploitation'},
-            ]
-          .calculator-page__pdf-title
-            |Введенные значения
-          ul.calculator-page__pdf-list
-            each item in fields
-              li.calculator-page__pdf-item
-                .calculator-page__caption
-                  |#{item.caption}
-                .calculator-page__block-title(data-pdf-introduced='' data-pdf-field=item.attr)
-        .calculator-page__pdf-col
-          -
-            var fields = [
-              {caption: 'Линейное расширение, мм', attr: 'expansion'},
-              {caption: 'Длина плеча компенсатора, мм', attr: 'length'},
-            ]
-          .calculator-page__pdf-title
-            |Рассчитанные значения
-          ul.calculator-page__pdf-list
-            each item in fields
-              li.calculator-page__pdf-item
-                .calculator-page__caption
-                  |#{item.caption}
-                .calculator-page__block-title(data-pdf-received='' data-pdf-field=item.attr)
+                            +calculator-button
+    -
+      var fields = {
+        introduced: [
+          {caption: 'Тип трубы', attr: 'type'},
+          {caption: 'Внешний диаметр трубы D, мм', attr: 'diameter'},
+          {caption: 'Длина участка компенсиции, м ', attr: 'length'},
+          {caption: 'Температура монтажа, °C', attr: 'mounting'},
+          {caption: 'Температура эксплуатации, °C', attr: 'exploitation'},
+        ],
+        received: [
+          {caption: 'Линейное расширение, мм', attr: 'expansion'},
+          {caption: 'Длина плеча компенсатора, мм', attr: 'length'},
+        ]
+      }
+    +pdf-template(data = fields filename = 'Компенсационное колено')
