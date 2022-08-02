@@ -70,6 +70,9 @@ export class CalculatorAbstract {
       
       html2pdf()
         .from(pdf)
+        .set({
+          filename: pdf.getAttribute('data-pdf')
+        })
         .save();
     }
   }
@@ -78,7 +81,7 @@ export class CalculatorAbstract {
     items.forEach(item => {
       const property = item.getAttribute('data-pdf-field')
 
-      item.textContent = data[property]
+      item.textContent = Math.round(data[property])
     })
   }
 
