@@ -396,6 +396,7 @@ function add2basket() {
             type = thisObj.attr("data-add"),
             letReq = thisObj.attr("data-let"),
             offerId = thisObj.attr("data-id-offer"),
+            basketId = thisObj.attr("data-id-basket"),
             par = thisObj.parents("[data-type=par]"),
             sib = par.siblings("[data-type=sib]"),
             count = sib.find("[data-type=count]").val(),
@@ -413,11 +414,17 @@ function add2basket() {
             thisObj.attr("data-let", "let")
         }
 
-        console.log(type);
-
         data['offer'] = offerId;
+
+        if (basketId) {
+            type = "change";
+            data['offer'] = basketId;
+        }
+
         data['count'] = count;
         data['type'] = type;
+
+        console.log(type);
 
         console.log("add2basket");
 
@@ -472,9 +479,9 @@ function deleteBasket() {
                     if (r.count > 0) {
                         $(document).find('[data-type=basket_count]').empty();
                         $(document).find('[data-type=basket_count]').html(r.count);
-    
+
                         let countOrderPage = r.count;
-    
+
                         $.ajax({
                             method: "POST",
                             url: window.location.href,
@@ -489,7 +496,7 @@ function deleteBasket() {
                                 console.debug(r);
                             }
                         });
-    
+
                         $.ajax({
                             method: "POST",
                             url: window.location.href,
@@ -498,7 +505,7 @@ function deleteBasket() {
                             },
                             success: function (r) {
                                 let countOrder = '<h5 class="order-page__panel-title">Товарных позиций в заказе: ' + countOrderPage + '</h5>';
-    
+
                                 $(document).find('[data-type=order-page-count]').empty();
                                 $(document).find('[data-type=order-page-count]').append(countOrder);
                             },
