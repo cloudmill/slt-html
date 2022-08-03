@@ -19,6 +19,7 @@ $(function () {
     searchHead();
     filterClickSec();
     mapModal();
+    filterObj();
 });
 
 function workModal() {
@@ -91,6 +92,63 @@ function filterChange() {
                 $(document).find('[data-type=items-container-full]').append($(r));
 
                 initMap();
+            },
+            error: function (r) {
+                console.debug(r);
+            }
+        });
+    });
+}
+
+function filterObj() {
+    $(document).on("change", "[data-type=js-filter-obj]", function (e) {
+        e.preventDefault();
+
+        let thisObj = $(this),
+            val = thisObj.val(),
+            location = [],
+            type = [],
+            category = [],
+            count = 0;
+
+        console.log("filter change click on " + val);
+
+        $(document).find("[data-objects-item]").each(function () {
+            if ($(this).hasClass("active")) {
+                let item = $(this).find("[data-type=js-filter-obj]"),
+                    code = item.attr("data-code"),
+                    val = item.val();
+
+                if (code == 'location') {
+                    location[count] = val;
+                }
+                if (code == 'type') {
+                    type[count] = val;
+                }
+                if (code == 'category') {
+                    category[count] = val;
+                }
+
+                count++
+            }
+        });
+
+        console.log(location);
+        console.log(type);
+        console.log(category);
+
+        $.ajax({
+            method: "POST",
+            url: window.location.href,
+            data: {
+                ajax: 1,
+                location: location,
+                type: type,
+                category: category
+            },
+            success: function (r) {
+                $(document).find('[data-type=items-container-full]').empty();
+                $(document).find('[data-type=items-container-full]').append($(r));
             },
             error: function (r) {
                 console.debug(r);
@@ -414,9 +472,9 @@ function deleteBasket() {
                     if (r.count > 0) {
                         $(document).find('[data-type=basket_count]').empty();
                         $(document).find('[data-type=basket_count]').html(r.count);
-
+    
                         let countOrderPage = r.count;
-
+    
                         $.ajax({
                             method: "POST",
                             url: window.location.href,
@@ -431,7 +489,7 @@ function deleteBasket() {
                                 console.debug(r);
                             }
                         });
-
+    
                         $.ajax({
                             method: "POST",
                             url: window.location.href,
@@ -440,7 +498,7 @@ function deleteBasket() {
                             },
                             success: function (r) {
                                 let countOrder = '<h5 class="order-page__panel-title">Товарных позиций в заказе: ' + countOrderPage + '</h5>';
-
+    
                                 $(document).find('[data-type=order-page-count]').empty();
                                 $(document).find('[data-type=order-page-count]').append(countOrder);
                             },
